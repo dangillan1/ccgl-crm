@@ -842,10 +842,15 @@ def main():
                 else:
                     report["orders_unmatched"] = report.get("orders_unmatched", 0) + 1
         if merge:
-            live = {o["id"] for o in orders}
+            live = {o["id"]: o for o in orders}
             for o in existing_orders:
                 if str(o.get("source", "")).startswith("CRM") and o["id"] not in live:
                     orders.append(o); report["crm_orders_preserved"] = report.get("crm_orders_preserved", 0) + 1
+                elif o.get("edited_in_crm") and o["id"] in live:
+                    # someone corrected this tracker order in the CRM: their version of the editable fields wins
+                    for f in ("date", "status", "total", "delivery_date", "owner", "mix", "special", "samples", "contact_name", "contact_email", "edited_in_crm", "edited_by", "edited_at"):
+                        if f in o: live[o["id"]][f] = o[f]
+                    report["crm_order_edits_kept"] = report.get("crm_order_edits_kept", 0) + 1
         report["orders_total"] = len(orders)
 
     # ---------------- 11a. Merge mode: carry over CRM-created contacts and CRM-owned contact fields
