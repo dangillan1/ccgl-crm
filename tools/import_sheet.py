@@ -220,6 +220,7 @@ def main():
     existing_leads    = load_json(os.path.join(DATA, "leads.json"), []) if merge else []
     existing_contacts = load_json(os.path.join(DATA, "contacts.json"), []) if merge else []
     existing_orders   = load_json(os.path.join(DATA, "orders.json"), []) if merge else []
+    existing_settings = load_json(os.path.join(DATA, "settings.json"), {}) if merge else {}
     by_key = {a["sheet_key"]: a for a in existing_accounts if a.get("sheet_key")}
     next_a = max([int(a["id"][1:]) for a in existing_accounts + existing_leads if a["id"][1:].isdigit()] + [0]) + 1
 
@@ -842,6 +843,10 @@ def main():
                 else:
                     report["orders_unmatched"] = report.get("orders_unmatched", 0) + 1
         if merge:
+            gone = set((existing_settings or {}).get("deleted_orders", []))
+            if gone:
+                before = len(orders); orders = [o for o in orders if o["id"] not in gone]
+                report["tracker_orders_deleted_in_crm"] = before - len(orders)
             live = {o["id"]: o for o in orders}
             for o in existing_orders:
                 if str(o.get("source", "")).startswith("CRM") and o["id"] not in live:
