@@ -308,7 +308,8 @@ async function loadAll(manual=false){ setSync('loading…'); try{
   S.accounts=r[0].data||[]; S.leads=r[1].data||[]; S.contacts=r[2].data||[]; S.orders=r[3].data||[]; S.settings=r[4].data||S.settings; S.users=r[5].data||S.users; S.insights=r[6].data||{assessments:[]};
   S.activities={}; await Promise.all(S.users.map(async u=>{ try{ S.activities[u.id]=(await GH.read(`data/activities/${u.id}.json`)).data||[]; }catch(_){ S.activities[u.id]=[]; } }));
   S.loadedAt=new Date(); index(); render(); if(manual) toast('Reloaded'); setSync(GH.pat||PREVIEW?'live':'read-only (no token)'); }catch(e){ setSync('error'); toast('Load failed: '+e.message,true); console.error(e); } }
-function setSync(t){ const cls=t==='live'?'live':t.startsWith('read')?'ro':''; $('#syncState').innerHTML=`<span class="status-dot ${cls}"></span>${esc(t)}${S.loadedAt?` · ${S.loadedAt.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:''}`; }
+function setSync(t){ const cls=t==='live'?'live':t.startsWith('read')?'ro':''; const el=$('#syncState'); el.innerHTML=`<span class="status-dot ${cls}"></span>${esc(t)}${S.loadedAt?` · ${S.loadedAt.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:''}`; el.style.cursor=cls==='ro'?'pointer':''; el.title=cls==='ro'?'Click to add your GitHub token':''; el.onclick=cls==='ro'?()=>promptPat():null;
+  const b=$('#banner'); if(!PREVIEW){ if(!GH.pat){ b.hidden=false; b.innerHTML=`<b>Read-only.</b> Nothing you do will save until you add the GitHub token Dan sent you. <button class="btn sm" id="bannerPat" style="margin-left:10px">Add token</button>`; $('#bannerPat').onclick=()=>promptPat(); } else b.hidden=true; } }
 
 /* ---------------- indexes ---------------- */
 let A={},L={},ALL={},C={},contactsByAcc={},ordersByAcc={},actsByAcc={};
