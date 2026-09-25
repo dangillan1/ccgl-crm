@@ -357,7 +357,9 @@ function go(view){ S.view=view; S.record=null; S.sel.clear(); location.hash='#/'
 function open(id){ if(!ALL[id]) return; S.record=id; location.hash='#/account/'+id; render(); window.scrollTo(0,0); }
 function routeFromHash(){ const h=location.hash.replace(/^#\/?/,''); const m=h.match(/^account\/(.+)$/); if(m&&ALL[m[1]]){ S.record=m[1]; } else if(h&&TITLES[h]){ S.view=h; S.record=null; } render(); }
 function renderNav(){ $('#nav').innerHTML=VIEWS.map(v=>{ if(v.grp) return `<div class="grp">${v.grp}</div>`; if(v.show&&!v.show()) return ''; const n=v.count?v.count():null; return `<a class="item ${S.view===v.id&&!S.record?'on':''}" data-view="${v.id}"><span>${v.label}</span>${n!=null?`<span class="cnt ${v.cls&&n?v.cls:''}">${n}</span>`:''}</a>`; }).join(''); $$('#nav .item').forEach(el=>el.onclick=()=>go(el.dataset.view)); }
-function render(){ renderNav(); const v=$('#view'); if(S.record){ $('#viewTitle').textContent=ALL[S.record]?.name||''; renderRecord(v,S.record); return; } $('#viewTitle').textContent=TITLES[S.view]||''; ({insights:renderInsights,active:renderActive,pipeline:renderPipeline,prospects:renderProspects,orders:renderOrders,tasks:renderTasks,people:renderPeople,emails:renderEmails,activity:renderActivityLog,settings:renderSettings}[S.view]||renderInsights)(v); }
+function render(){ renderNav(); const v=$('#view'); if(S.record){ $('#viewTitle').textContent=ALL[S.record]?.name||''; renderRecord(v,S.record); return; }
+  if(S.q.trim()&&['insights','tasks','activity','settings'].includes(S.view)){ $('#viewTitle').textContent='Search'; renderSearch(v); return; }
+  $('#viewTitle').textContent=TITLES[S.view]||''; ({insights:renderInsights,active:renderActive,pipeline:renderPipeline,prospects:renderProspects,orders:renderOrders,tasks:renderTasks,people:renderPeople,emails:renderEmails,activity:renderActivityLog,settings:renderSettings}[S.view]||renderInsights)(v); }
 
 /* ---------------- table helpers ---------------- */
 function sortRows(rows,key,def,getter){ const s=S.sort[key]||{col:def,dir:1}; const g=s.get||getter||((r,c)=>r[c]); return rows.slice().sort((a,b)=>{ const va=g(a,s.col),vb=g(b,s.col); if(va==null&&vb!=null) return 1; if(vb==null&&va!=null) return -1; return (typeof va==='number'&&typeof vb==='number'?va-vb:cmp(va,vb))*s.dir; }); }
@@ -377,6 +379,22 @@ function ownerFilterOptions(sel){ const owners=uniq([...S.accounts,...S.leads].m
 function bulkBar(){ if(!S.sel.size||!can('reassign')) return ''; const owners=uniq([...S.users.map(u=>u.name),...(S.settings.owners||[])]).filter(o=>o!=='Team').sort(); return `<div class="bulk"><b>${S.sel.size} selected</b><span>assign to</span><select id="bulkOwner"><option value="">choose…</option>${owners.map(o=>`<option>${esc(o)}</option>`).join('')}<option value="Unassigned">Unassigned</option></select><button class="btn sm" id="bulkGo" style="background:#fff;color:var(--navy)">Apply</button><button class="btn link sm" id="bulkClear" style="color:#cbd5e1">clear</button></div>`; }
 function bindBulk(v){ const go=$('#bulkGo',v); if(!go) return; go.onclick=async()=>{ const o=$('#bulkOwner',v).value; if(!o) return; const ids=[...S.sel]; await saveAccounts(accs=>{ for(const a of accs) if(ids.includes(a.id)){ a.owner=o; a.flags=(a.flags||[]).filter(f=>!['unassigned','shared-owner','owner-not-user'].includes(f)); } return accs; },`Reassign ${ids.length} account(s) → ${o}`); S.sel.clear(); }; $('#bulkClear',v).onclick=()=>{ S.sel.clear(); render(); }; }
 const accGetter=(a,col)=>({_nContacts:a._nContacts,_days:a._days??99999,_daysOrder:a._daysOrder??99999,_nOrders:a._nOrders,_orderTotal:a._orderTotal,_due:a._due??99999,_buyer:a._buyer?.name||'zzz',_finance:a._finance?.email||'zzz',_intake:a._intake?.email||'zzz',next_step_due:a.next_step_due||'zzzz'})[col]??a[col];
+
+/* ---------------- GLOBAL SEARCH (from pages that have no list of their own) ---------------- */
+function renderSearch(v){
+  const q=S.q.trim(), ql=q.toLowerCase();
+  const accs=S.accounts.filter(a=>matches(a,q)).sort((p,r)=>(r._orderTotal||0)-(p._orderTotal||0)||cmp(p.name,r.name));
+  const leads=S.leads.filter(l=>matches(l,q)).sort((p,r)=>cmp(p.name,r.name));
+  const people=S.contacts.filter(c=>(c.name||'').toLowerCase().includes(ql)||(c.email||'').toLowerCase().includes(ql)||(c.phone||'').includes(ql)||(c.role||'').toLowerCase().includes(ql));
+  const sec=(title,rows,rowFn)=>`<div class="section" style="margin-top:0"><h4>${title} <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">${rows.length}</span></h4>${rows.length?`<div class="list">${rows.slice(0,25).map(rowFn).join('')}${rows.length>25?`<div class="li muted" style="font-size:12px">+${rows.length-25} more — narrow the search</div>`:''}</div>`:'<div class="note" style="margin-bottom:8px">No matches.</div>'}</div>`;
+  v.innerHTML=`<p class="note" style="margin:0 0 12px">Results for <b>${esc(q)}</b> across the book, unclaimed leads and people. Clear the search box to go back to ${TITLES[S.view]}.</p>
+    <div class="grid2" style="align-items:start">
+      <div>${sec('Accounts',accs,a=>`<div class="li" data-open="${a.id}" style="cursor:pointer"><div class="grow"><div class="nm">${esc(a.name)} <span class="muted" style="font-weight:400">${esc(a.town||'')}</span></div><div class="em">${a.status==='Current'?'Active':'Prospect'}${a.stage&&a.status!=='Current'?' · '+esc(a.stage):''} · ${esc(a.owner||'Unassigned')}${a._nOrders?` · ${fmtMoney(a._orderTotal)} in 2026`:''}</div></div>${statusPill(a.status)}</div>`)}
+      ${sec('Unclaimed leads',leads,l=>`<div class="li" data-open="${l.id}" style="cursor:pointer"><div class="grow"><div class="nm">${esc(l.name)} <span class="muted" style="font-weight:400">${esc(l.town||'')}</span></div><div class="em">${esc(l.source)} · ${l._nContacts} people</div></div><span class="pill lead">Unclaimed</span></div>`)}</div>
+      <div>${sec('People',people,c=>{ const a=ALL[c.account_id]; return `<div class="li" ${a?`data-open="${a.id}" style="cursor:pointer"`:''}><div class="grow"><div class="nm">${esc(c.name)||'<span class="muted">(no name)</span>'} ${c.role?`<span class="muted" style="font-weight:400;font-size:12px">· ${esc(c.role)}</span>`:''}</div><div class="em">${esc(c.email||'')}${c.phone?' · '+esc(c.phone):''}${a?' · '+esc(a.name):' · <span class="pill warn">no company</span>'}</div></div></div>`; })}</div>
+    </div>`;
+  bindRows(v);
+}
 
 /* ---------------- INSIGHTS ---------------- */
 function opportunities(){
