@@ -9882,8 +9882,8 @@
   "claimed": true,
   "claimed_by": "matt",
   "claimed_at": "2026-09-25",
-  "next_step": "Visit thursday w/ samples",
-  "next_step_due": "2026-10-01",
-  "next_step_owner": "matt"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": ""
  }
 ]
