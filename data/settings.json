@@ -24,6 +24,7 @@
  "owners": [
   "Charley",
   "Joey",
+  "Matt",
   "Team"
  ],
  "activity_types": [
@@ -43,26 +44,27 @@
   "file": "CCGL Wholesale Contact List (2).xlsx",
   "report": {
    "master_rows": 357,
-   "new_accounts": 357,
-   "updated_accounts": 0,
+   "new_accounts": 0,
+   "updated_accounts": 357,
    "contacts_from_master": 430,
-   "leads_matched": 1956,
-   "leads_new_accounts": 160,
-   "contacts_added": 968,
-   "rogue_emails": 74,
-   "addresses_filled": 69,
-   "licenses_attached": 11,
-   "licenses_new_prospects": 13,
-   "phones_filled": 0,
-   "grades_filled": 57,
-   "tracker_new_accounts": 10,
+   "leads_matched": 2086,
+   "leads_new_accounts": 0,
+   "contacts_added": 1130,
+   "rogue_emails": 81,
+   "addresses_filled": 13,
+   "licenses_attached": 24,
+   "licenses_new_prospects": 0,
+   "phones_filled": 6,
+   "grades_filled": 0,
    "tracker_matched": 142,
-   "tracker_new_locations": 7,
+   "tracker_set_active": 15,
+   "tracker_locations_renamed": 1,
    "orders_matched": 318,
    "orders_total": 318,
+   "crm_contacts_preserved": 1,
    "empty_shells_dropped": 0,
-   "book_accounts": 367,
-   "pool_leads": 150
+   "book_accounts": 369,
+   "pool_leads": 149
   }
  }
 }

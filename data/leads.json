@@ -1000,7 +1000,9 @@
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "",
-  "tags": [],
+  "tags": [
+   "MSO"
+  ],
   "flags": [
    "unassigned"
   ],
@@ -3020,37 +3022,6 @@
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null
- },
- {
-  "id": "A0435",
-  "sheet_key": "",
-  "source": "Random Data 1926",
-  "name": "Pineapple Express",
-  "parent": "",
-  "town": "West Springfield",
-  "address": "64 Elm Circle",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "tracker-says-customer",
-   "ordered-but-not-current"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null,
-  "in_customer_tracker": true
  },
  {
   "id": "A0458",

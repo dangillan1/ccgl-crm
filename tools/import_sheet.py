@@ -51,7 +51,7 @@ SUFFIX_WORDS = {
     "llc", "lllc", "llp", "inc", "corp", "corporation", "co", "company", "ltd", "limited",
     "dispensary", "dispensaries", "cannabis", "canna", "the", "of", "massachusetts", "ma", "mass",
     "wellness", "holdings", "group", "medical", "recreational", "rec", "adult", "use", "retail",
-    "marijuana", "medicinals", "delivery", "only", "dba", "d", "b", "a", "market", "farms", "farm",
+    "marijuana", "medicinals", "delivery", "only", "dba", "d", "b", "a", "market", "farms", "farm", "bulk", "medical only",
 }
 GENERIC_TOKENS = SUFFIX_WORDS | {
     "green", "north", "south", "east", "west", "new", "street", "st", "road", "rd", "ave",
@@ -147,7 +147,7 @@ def name_variants(s):
     parts = [s] + re.split(r"\s*(?:/|\bd/?b/?a\b|\s-\s)\s*", s, flags=re.I)
     for p in parts:
         toks = tokens(p)
-        if toks:
+        if toks and not all(t in GENERIC_TOKENS or len(t) < 4 for t in toks) or (toks and p == s):
             out.add("".join(toks))
             if len(toks) > 1: out.add("".join(sorted(toks)))   # word-order-insensitive
             tt = strip_trailing_town(toks)
@@ -277,6 +277,8 @@ def main():
             for f in ("owner", "grade"):
                 cur = a.get(f, "")
                 if cur and cur != "Unassigned": sheet_fields.pop(f, None)
+            if a.get("in_customer_tracker") and a.get("status") == "Current": sheet_fields.pop("status", None)
+            if a.get("town") and not sheet_fields.get("town"): sheet_fields.pop("town", None)
             a.update(sheet_fields)
             a["flags"] = sorted(set([f for f in a.get("flags", []) if f not in ("unassigned","shared-owner","owner-not-user","missing-from-sheet")] + flags))
             report["updated_accounts"] += 1
@@ -339,7 +341,14 @@ def main():
         if c["email"]: contact_emails.setdefault(c["email"], []).append(c)
 
     def find_account(company, email=""):
-        """Return (account or None, match_type). Order: known email > email domain > exact > variant > fuzzy."""
+        """Return (account or None, match_type). Order: exact name > name variant > known email > email domain > fuzzy.
+        A company name that matches an account outright always wins — the same buyer can cover several
+        companies (Resinate's buyers also handle BeWell), so email is only a fallback."""
+        n = norm(company) if company else ""
+        if n and n in idx_exact: return idx_exact[n][0], "exact"
+        if company:
+            for v in name_variants(company):
+                if v in idx_variant: return idx_variant[v][0], "variant"
         # 0. this exact email is already on a contact that has an account
         if email and email in contact_emails:
             for ec in contact_emails[email]:
@@ -349,11 +358,6 @@ def main():
         if d and d in idx_domain and len(idx_domain[d]) == 1:
             return idx_domain[d][0], "domain"
         if not company: return None, ""
-        n = norm(company)
-        if n in idx_exact: return idx_exact[n][0], "exact"
-        # 2. any variant of the lead name equals any variant of an account name
-        for v in name_variants(company):
-            if v in idx_variant: return idx_variant[v][0], "variant"
         # 3. domain-looking company names ('bostonbudfactory') -> match against domain index
         if n in idx_domain and len(idx_domain[n]) == 1: return idx_domain[n][0], "domain-name"
         # 4. fuzzy: loose forms contain each other, min 6 chars, and share a distinctive token
@@ -387,6 +391,8 @@ def main():
         return [k for k, _ in sorted(hits.items(), key=lambda x: -x[1])][:3]
 
     def add_contact(account, name, email, phone, role, source):
+        """One contact row per (account, person). The same person may legitimately sit on several
+        accounts (a chain buyer covers every store), so email is only de-duplicated WITHIN an account."""
         if not email and name and account:
             for ec in contacts:
                 if ec["account_id"] == account["id"] and ec["name"].lower() == name.lower():
@@ -394,14 +400,23 @@ def main():
                     if not ec["role"] and role: ec["role"] = role
                     return None
         if email and email in contact_emails:
-            # enrich existing rather than duplicate
-            for ec in contact_emails[email]:
+            same = [ec for ec in contact_emails[email] if account and ec["account_id"] == account["id"]]
+            if same:                                    # already on this account -> enrich it
+                for ec in same:
+                    if not ec["name"] and name: ec["name"] = name
+                    if not ec["phone"] and phone: ec["phone"] = phone
+                    if not ec["role"] and role: ec["role"] = role
+                return None
+            if not account:                             # rogue email already known somewhere -> skip
+                return None
+            orphan = [ec for ec in contact_emails[email] if not ec["account_id"]]
+            if orphan:                                  # adopt a rogue row instead of duplicating it
+                ec = orphan[0]; ec["account_id"] = account["id"]; index_domain(account, email)
                 if not ec["name"] and name: ec["name"] = name
                 if not ec["phone"] and phone: ec["phone"] = phone
                 if not ec["role"] and role: ec["role"] = role
-                if account and not ec["account_id"]:
-                    ec["account_id"] = account["id"]; index_domain(account, email)
-            return None
+                return None
+            # known on another account: fall through and add a row for THIS account too
         c = {"id": cid(account["id"] if account else None, email, name), "account_id": account["id"] if account else None,
              "name": name, "email": email, "phone": phone, "role": role, "source": source, "primary": False}
         contacts.append(c)
@@ -414,7 +429,7 @@ def main():
 
     def looks_like_domain(name):
         n = name.strip().lower()
-        return (bool(re.fullmatch(r"[a-z0-9]+", n)) and len(n) >= 5) or n.endswith(".com")
+        return bool(re.search(r"\.(com|net|org|co|us|io|biz|life|shop)$", n))   # only a real domain, never a plain one-word name
 
     def sanitize_company(raw):
         """Return a usable company string or '' (meaning: rogue contact, no account)."""
@@ -432,7 +447,7 @@ def main():
         flags = ["unassigned"]
         if looks_like_domain(company):
             flags.append("name-from-domain")
-            if not company.lower().endswith(".com"): company = company.lower() + ".com"
+            company = company.lower()
         cands = dup_candidates(company)
         a = {
             "id": f"A{next_a:04d}", "sheet_key": "", "source": source,
@@ -645,7 +660,7 @@ def main():
         oxl = pd.ExcelFile(orders_path)
         lic_index = {}
         def index_license(a):
-            for l in re.findall(r"[A-Z]{2,4}\d{5,7}", (a.get("license_number") or "").upper()):
+            for l in re.findall(r"[A-Z]{2,4}\d{3,7}(?:-[A-Z])?", (a.get("license_number") or "").upper()):
                 lic_index.setdefault(l, a)
         for a in accounts: index_license(a)
 
@@ -682,9 +697,19 @@ def main():
                 lic = clean(r.get("License Number (s)", "")).upper()
                 b_email = split_emails(r.get("Buyer Email", "")); b_email = b_email[0] if b_email else ""
                 acc = None
-                for l in re.findall(r"[A-Z]{2,4}\d{5,7}", lic):
+                for l in re.findall(r"[A-Z]{2,4}\d{3,7}(?:-[A-Z])?", lic):
                     if l in lic_index: acc = lic_index[l]; break
                 matched_by_license = acc is not None
+                # A location row this import created earlier under the wrong company name (e.g. "BeWell Organics / Douglas"
+                # that is really Resinate Douglas): the tracker row that owns the license is the authority — adopt its name.
+                if acc is not None and acc.get("source") == "Customer Tracker" and norm_loose(acc["name"]) != norm_loose(name) \
+                        and not (name_variants(acc["name"]) & name_variants(name)):
+                    base_acc, _ = find_account(name)
+                    acc["name"] = base_acc["name"] if base_acc and norm_loose(base_acc["name"]) == norm_loose(name) else name
+                    acc["parent"] = (base_acc.get("parent") or base_acc["name"]) if base_acc else ""
+                    acc["flags"] = [f for f in acc.get("flags", []) if f != "possible-duplicate"]; acc["dup_candidates"] = []
+                    index_account(acc)
+                    report["tracker_locations_renamed"] = report.get("tracker_locations_renamed", 0) + 1
                 if not acc: acc, _ = find_by_town(name, town, b_email)
                 def _new_location(display_name, parent_name=""):
                     x = new_lead_account(display_name, "Customer Tracker", town=town)
@@ -712,32 +737,53 @@ def main():
                 if dn and not acc.get("delivery_notes"): acc["delivery_notes"] = dn
                 if acc["status"] != "Current" and "tracker-says-customer" not in acc["flags"]: acc["flags"].append("tracker-says-customer")
                 acc["in_customer_tracker"] = True
-                # buyer
-                b_name = clean(r.get("Buyer Name", "")); b_phone_raw = clean(r.get("Buyer Phone Number", "")); b_phone = parse_phone(b_phone_raw)
-                if b_name or b_email:
-                    c = add_contact(acc, b_name, b_email, b_phone, "Buyer", "Customer Tracker")
-                    if c is None and b_email:
-                        for ec in contact_emails.get(b_email, []):
+                # tracker row => this is an active account, whatever the Sheet's status column says
+                if acc["status"] != "Current":
+                    acc["status"] = "Current"; acc["stage"] = "Customer"
+                    acc["flags"] = [f for f in acc["flags"] if f not in ("tracker-says-customer", "ordered-but-not-current")]
+                    report["tracker_set_active"] = report.get("tracker_set_active", 0) + 1
+                if town and not acc.get("town"): acc["town"] = town
+                JUNK_SOURCES = ("Random Data",)
+                def better_name(ec, nm):
+                    """Tracker names beat guesses from the Random Data tabs and empty/one-token junk; Master/CRM names stay."""
+                    if not nm: return False
+                    cur = (ec.get("name") or "").strip()
+                    if not cur: return True
+                    if str(ec.get("source", "")).startswith(JUNK_SOURCES): return True
+                    if " " not in cur and len(cur) < 4: return True
+                    if re.fullmatch(r"(purchasing|inventory|general|store|retail|wholesale)?\s*(manager|buyer|owner|director|email|gm|contact|inventory|purchasing|accounting|ap|ar)s?", cur, re.I): return True   # a job title, not a person
+                    return False
+                def add_role(ec, role):
+                    """Roles are additive: the same person can be Buyer and Intake and Finance."""
+                    cur = [x.strip() for x in (ec.get("role") or "").split("/") if x.strip()]
+                    cur = [x for x in cur if x not in ("Billing", "AR", "Accounting", "Secondary")]  # weaker labels give way
+                    if role not in cur: cur.append(role)
+                    ec["role"] = " / ".join(cur)
+                def upsert(em, nm, ph, role):
+                    c = add_contact(acc, nm, em, ph, role, "Customer Tracker")
+                    if c is None:
+                        for ec in contact_emails.get(em, []) if em else [x for x in contacts if x["account_id"] == acc["id"] and x["name"].lower() == (nm or "").lower()]:
                             if ec["account_id"] == acc["id"]:
-                                if not ec["role"] or ec["role"] in ("", "Billing"): ec["role"] = "Buyer"
-                                if not ec["phone"] and b_phone: ec["phone"] = b_phone
-                                if not ec["name"] and b_name: ec["name"] = b_name
+                                add_role(ec, role)
+                                if not ec["phone"] and ph: ec["phone"] = ph
+                                if better_name(ec, nm): ec["name"] = nm; ec["source"] = "Customer Tracker"
+                # buyer(s): every email in the cell; names split on & , 'and' / newlines and paired by position when the counts match
+                b_emails = split_emails(r.get("Buyer Email", ""))
+                b_names = [x.strip(" .") for x in re.split(r"\s*(?:&|,|\band\b|\n|;|/)\s*", clean(r.get("Buyer Name", ""))) if x.strip(" .")]
+                b_phone = parse_phone(r.get("Buyer Phone Number", ""))
+                if not b_emails and b_names:
+                    upsert("", " ".join(b_names) if len(b_names) == 1 else b_names[0], b_phone, "Buyer")
+                for i, em in enumerate(b_emails):
+                    nm = b_names[i] if len(b_names) == len(b_emails) else (b_names[0] if i == 0 and b_names else "")
+                    upsert(em, nm, b_phone if i == 0 else "", "Buyer")
                 # intake
                 for em in split_emails(r.get("Intake Emails", "")):
-                    c = add_contact(acc, "", em, "", "Intake", "Customer Tracker")
-                    if c is None:
-                        for ec in contact_emails.get(em, []):
-                            if ec["account_id"] == acc["id"] and not ec["role"]: ec["role"] = "Intake"
+                    upsert(em, "", "", "Intake")
                 # finance
                 f_phone = parse_phone(r.get("Finance Phone Number", ""))
                 f_name = re.sub(r"[-–].*$", "", clean(r.get("Finance Phone Number", ""))).strip() if f_phone else ""
                 for i, em in enumerate(split_emails(r.get("Finance Contacts", ""))):
-                    c = add_contact(acc, f_name if i == 0 else "", em, f_phone if i == 0 else "", "Finance / AP", "Customer Tracker")
-                    if c is None:
-                        for ec in contact_emails.get(em, []):
-                            if ec["account_id"] == acc["id"]:
-                                if not ec["role"] or ec["role"] in ("", "Billing", "AR / Accounting"): ec["role"] = "Finance / AP"
-                                if not ec["phone"] and i == 0 and f_phone: ec["phone"] = f_phone
+                    upsert(em, f_name if i == 0 else "", f_phone if i == 0 else "", "Finance / AP")
 
         # ---- Order Tracker 2026
         ot = sheet(oxl, "Order Tracker 2026", header=0)
@@ -749,7 +795,7 @@ def main():
                 if not raw: continue
                 parts = re.split(r"\s*(?:\||\sI\s|\sl\s)\s*", raw, maxsplit=1)
                 name_part = clean(parts[0]); lic = clean(parts[1]).upper() if len(parts) > 1 else ""
-                licm = re.search(r"[A-Z]{2,4}\d{5,7}", lic or raw.upper())
+                licm = re.search(r"[A-Z]{2,4}\d{3,7}(?:-[A-Z])?", lic or raw.upper())
                 lic = licm.group(0) if licm else ""
                 contact_raw = clean(r.get("Contact", ""))
                 c_email = split_emails(contact_raw); c_email = c_email[0] if c_email else ""
@@ -770,7 +816,10 @@ def main():
                 total = r.get("Order Total:", None)
                 try: total = round(float(total), 2) if total is not None and not pd.isna(total) else None
                 except Exception: total = None
-                status = clean(r.get("Pending / Confirmed", "")) or "Confirmed"
+                status = clean(r.get("Pending / Confirmed", ""))
+                if not status: status = "Planned"          # blank in the tracker = placeholder, NOT a confirmed order
+                elif status.lower().startswith("conf"): status = "Confirmed"
+                elif status.lower().startswith("pend"): status = "Pending"
                 o = {
                     "id": "O" + hashlib.sha1(f"{date_of(r.get('Date',''))}|{raw}|{ridx}".encode()).hexdigest()[:8],
                     "date": date_of(r.get("Date", "")), "account_id": acc["id"] if acc else None, "account_raw": raw,
@@ -900,9 +949,10 @@ def main():
     # The Master (and tracker-verified locations, and anything a rep has claimed) is the book.
     # Everything else is the Prospects pool — kept separate until someone claims it.
     def is_book(a):
-        return a["source"] in ("Master", "Customer Tracker") or a.get("claimed")
+        return a["source"] in ("Master", "Customer Tracker") or a.get("claimed") or a.get("in_customer_tracker")
     book  = [a for a in accounts if is_book(a)]
     leads = [a for a in accounts if not is_book(a)]
+    for b in book: b["tags"] = [t for t in b.get("tags", []) if t != "Unprocessed Lead"]
     for l in leads:
         l["tags"] = [t for t in l.get("tags", []) if t != "Unprocessed Lead"]
         l["stage"] = ""; l["stage_entered"] = ""
