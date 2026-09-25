@@ -835,6 +835,25 @@ def main():
         if target is None: continue
         # same name but clearly different towns -> different locations, keep both
         if a.get("town") and target.get("town") and norm(a["town"]) != norm(target["town"]) and norm(a["town"]) not in norm(target["town"]) and norm(target["town"]) not in norm(a["town"]): continue
+        # An account created inside the CRM that now also appears in the Sheet: ADOPT it — keep the CRM record
+        # (its id is what activities, orders and contacts point at), take the Sheet's identity + Sheet-owned fields,
+        # and drop the freshly-created Master duplicate.
+        if str(a.get("source", "")).startswith("CRM") and target.get("source") == "Master":
+            for f in ("sheet_key", "sheet_row", "name", "town", "address", "license_type", "status", "last_contact", "next_contact", "notes"):
+                if target.get(f): a[f] = target[f]
+            a["source"] = "Master"
+            if (not a.get("owner") or a["owner"] == "Unassigned") and target.get("owner") not in (None, "", "Unassigned"): a["owner"] = target["owner"]
+            if not a.get("grade") and target.get("grade"): a["grade"] = target["grade"]
+            if not a.get("license_number") and target.get("license_number"): a["license_number"] = target["license_number"]
+            a["tags"] = sorted(set((a.get("tags") or []) + (target.get("tags") or [])))
+            a["flags"] = sorted(set(f for f in (a.get("flags") or []) + (target.get("flags") or []) if f != "unassigned" or a.get("owner") in (None, "", "Unassigned")))
+            for c in contacts:
+                if c["account_id"] == target["id"]: c["account_id"] = a["id"]
+            for o in orders:
+                if o["account_id"] == target["id"]: o["account_id"] = a["id"]
+            merged_into[target["id"]] = a["id"]
+            report["crm_accounts_adopted_by_sheet"] = report.get("crm_accounts_adopted_by_sheet", 0) + 1
+            continue
         # prefer keeping a Master account, else the earlier-created lead
         if target["source"] != "Master" and a["source"] == "Master": a, target = target, a
         for c in contacts:

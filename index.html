@@ -211,6 +211,7 @@ ol.steps{padding-left:20px;line-height:1.7;font-size:13px}
       <h2 id="viewTitle"></h2>
       <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" placeholder="Search accounts, people, emails…  ( / )"></div>
       <div class="sp"></div>
+      <button class="btn ghost sm" id="newAccountTop">+ New account</button>
       <button class="btn sm" id="newOrderTop">+ New order</button>
       <span class="note" id="syncState"><span class="status-dot"></span>loading…</span>
       <button class="btn ghost sm" id="reloadBtn" title="Reload from GitHub">Reload</button>
@@ -292,6 +293,7 @@ async function boot(){
   $('#gateForm').onsubmit=signIn; $('#signOut').onclick=()=>{ sessionStorage.removeItem(SESSION_KEY); location.hash=''; location.reload(); };
   $('#reloadBtn').onclick=()=>loadAll(true); $('#q').oninput=e=>{ S.q=e.target.value; if(S.record){ S.record=null; } render(); };
   $('#newOrderTop').onclick=()=>newOrderForm(S.record||null);
+  $('#newAccountTop').onclick=()=>newAccountForm();
   window.addEventListener('hashchange',routeFromHash);
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ if(!$('#modal').hidden) closeModal(); } if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){ e.preventDefault(); $('#q').focus(); } });
 }
@@ -366,7 +368,7 @@ function sortRows(rows,key,def,getter){ const s=S.sort[key]||{col:def,dir:1}; co
 function th(key,col,label,cls=''){ const s=S.sort[key]||{}; const on=s.col===col; return `<th class="${cls} ${on?'sorted':''}" data-sort="${col}" data-key="${key}">${label}<span class="arr">${on?(s.dir>0?'▲':'▼'):'↕'}</span></th>`; }
 function bindSort(el,key,getter){ $$('th[data-sort]',el).forEach(h=>h.onclick=()=>{ const col=h.dataset.sort; const cur=S.sort[key]||{}; S.sort[key]={col,dir:cur.col===col?-cur.dir:1,get:getter}; render(); }); }
 function bindRows(el){ $$('[data-open]',el).forEach(r=>r.onclick=e=>{ if(e.target.closest('a[href^="mailto"],a[href^="tel"],button,input,select')) return; e.preventDefault(); open(r.dataset.open); }); $$('[data-sel]',el).forEach(c=>c.onchange=()=>{ c.checked?S.sel.add(c.dataset.sel):S.sel.delete(c.dataset.sel); render(); }); }
-function bindFilters(el,key){ $$('[data-f]',el).forEach(s=>s[s.tagName==='INPUT'?'oninput':'onchange']=()=>{ (S.filters[key]||={})[s.dataset.f]=s.value; render(); }); const c=$('[data-clear]',el); if(c) c.onclick=()=>{ S.filters[key]={}; render(); }; }
+function bindFilters(el,key){ $$('[data-newacc]',el).forEach(b=>b.onclick=()=>newAccountForm(b.dataset.newacc)); $$('[data-f]',el).forEach(s=>s[s.tagName==='INPUT'?'oninput':'onchange']=()=>{ (S.filters[key]||={})[s.dataset.f]=s.value; render(); }); const c=$('[data-clear]',el); if(c) c.onclick=()=>{ S.filters[key]={}; render(); }; }
 const statusPill=s=>`<span class="pill ${ {Current:'cur',Prospect:'pro','Non-prospect':'non'}[s]||'uns' }">${esc(s==='Current'?'Active':s||'—')}</span>`;
 const gradePill=g=>g?`<span class="pill gr ${/^A/.test(g)?'a':''}">${esc(g)}</span>`:'<span class="muted">—</span>';
 const ownerCell=a=>{ const o=a.owner||'Unassigned'; if(o==='Unassigned') return `<span class="pill warn">Unassigned</span>`; if(!isUserName(o)&&o!=='Team') return `${esc(o)} <span class="pill warn" title="Not a CRM user">!</span>`; return esc(o); };
@@ -452,7 +454,7 @@ function renderActive(v){
       ${mode==='contacts'?`<td class="wrap">${contactCell(a._buyer)}</td><td class="wrap">${contactCell(a._finance)}</td><td class="wrap">${contactCell(a._intake)}</td><td class="wrap" style="max-width:220px;font-size:12px;${a.standing_requests?'color:var(--danger);font-weight:600':''}">${esc(a.standing_requests||'')}</td>`
       :`<td>${dueCell(a)}</td><td>${a._lastOrder?`${fmtDate(a._lastOrder)}<span class="sub">${a._daysOrder}d ago</span>`:'<span class="muted">—</span>'}</td><td class="tr">${a._nOrders||'<span class="muted">0</span>'}</td><td class="tr">${a._orderTotal?fmtMoney(a._orderTotal):'<span class="muted">—</span>'}</td><td class="tr">${a._nContacts}</td>`}
       <td class="wrap" style="max-width:200px">${nsCell(a)}</td></tr>`;
-  v.innerHTML=`<div class="toolbar">
+  v.innerHTML=`<div class="toolbar">${can('edit')?'<button class="btn sm" data-newacc="Current">+ New account</button>':''}
       <span class="chip ${mode==='contacts'?'on':''}" data-mode="contacts">Contacts</span><span class="chip ${mode==='orders'?'on':''}" data-mode="orders">Orders</span><span class="muted">·</span>
       <select data-f="owner">${ownerFilterOptions(f.owner)}</select>
       <select data-f="grade"><option value="">All grades</option>${grades.map(g=>`<option ${f.grade===g?'selected':''}>${g}</option>`).join('')}<option value="__none" ${f.grade==='__none'?'selected':''}>No grade</option></select>
@@ -479,7 +481,7 @@ function renderPipeline(v){
     body=`<div class="card tbl-wrap"><table><thead><tr>${can('reassign')?'<th class="nos"></th>':''}${th('pipeline','name','Account')}${th('pipeline','town','Town')}${th('pipeline','status','Sheet status')}${th('pipeline','stage','Stage')}${th('pipeline','grade','Grade')}${th('pipeline','owner','Owner')}${th('pipeline','_nContacts','People','tr')}${th('pipeline','_days','Last touch')}${th('pipeline','next_step_due','Next step')}<th class="nos">Tags</th></tr></thead>
       <tbody>${rows.length?rows.map(a=>`<tr class="row" data-open="${a.id}">${can('reassign')?`<td><input type="checkbox" class="chk" data-sel="${a.id}" ${S.sel.has(a.id)?'checked':''}></td>`:''}<td class="wrap"><b>${esc(a.name)}</b>${a.claimed?`<span class="sub">claimed by ${esc(userName(a.claimed_by))} ${fmtDate(a.claimed_at)}</span>`:''}</td><td>${esc(a.town||'')}</td><td>${statusPill(a.status)}</td><td><span class="pill stage">${esc(a.stage||'New')}</span></td><td>${gradePill(a.grade)}</td><td>${ownerCell(a)}</td><td class="tr">${a._nContacts}</td><td>${a._days==null?'<span class="muted">never</span>':`${a._days}d<span class="sub">${fmtDate(a._last)}</span>`}</td><td class="wrap" style="max-width:200px">${nsCell(a)}</td><td class="wrap">${tagPills(a)}</td></tr>`).join(''):'<tr><td colspan="11" class="empty">No prospects match.</td></tr>'}</tbody></table></div>`;
   }
-  v.innerHTML=`<div class="toolbar"><span class="chip ${mode==='table'?'on':''}" data-mode="table">Table</span><span class="chip ${mode==='board'?'on':''}" data-mode="board">Board</span><span class="muted">·</span>
+  v.innerHTML=`<div class="toolbar">${can('edit')?'<button class="btn sm" data-newacc="Prospect">+ New prospect</button>':''}<span class="chip ${mode==='table'?'on':''}" data-mode="table">Table</span><span class="chip ${mode==='board'?'on':''}" data-mode="board">Board</span><span class="muted">·</span>
       <select data-f="owner">${ownerFilterOptions(f.owner)}</select>
       <select data-f="status"><option value="">Prospect + Non-prospect</option>${['Prospect','Non-prospect','Unspecified'].map(s=>`<option ${f.status===s?'selected':''}>${s}</option>`).join('')}</select>
       <select data-f="stage"><option value="">All stages</option>${stages.map(s=>`<option ${f.stage===s?'selected':''}>${esc(s)}</option>`).join('')}</select>
@@ -497,7 +499,7 @@ function renderProspects(v){
   let rows=S.leads.filter(l=>(!f.src||l.source===f.src)&&(!f.tag||(l.tags||[]).includes(f.tag))&&(!f.flag||(f.flag==='dup'?(l.flags||[]).includes('possible-duplicate'):f.flag==='domain'?(l.flags||[]).includes('name-from-domain'):f.flag==='contacts'?l._nContacts>0:true))&&matches(l,S.q));
   rows=sortRows(rows,'prospects','name',accGetter);
   v.innerHTML=`<div class="alert info" style="margin-bottom:12px"><b>How this works.</b> These ${S.leads.length} companies came from the Random Data and CCC tabs and were deduped against the Master. They stay here until someone <b>claims</b> one — that moves it into Prospects under their name, stage New, and logs it. Nothing enters the book without a person choosing it.</div>
-    <div class="toolbar"><select data-f="src"><option value="">All sources</option>${srcs.map(s=>`<option ${f.src===s?'selected':''}>${esc(s)}</option>`).join('')}</select>
+    <div class="toolbar">${can('edit')||can('claim')?'<button class="btn sm" data-newacc="Lead">+ New lead</button>':''}<select data-f="src"><option value="">All sources</option>${srcs.map(s=>`<option ${f.src===s?'selected':''}>${esc(s)}</option>`).join('')}</select>
       <select data-f="tag"><option value="">All tags</option>${tags.map(t=>`<option ${f.tag===t?'selected':''}>${esc(t)}</option>`).join('')}</select>
       <select data-f="flag"><option value="">Any</option><option value="contacts" ${f.flag==='contacts'?'selected':''}>Has contacts</option><option value="dup" ${f.flag==='dup'?'selected':''}>Possible duplicate</option><option value="domain" ${f.flag==='domain'?'selected':''}>Name needed</option></select>
       ${Object.values(f).some(Boolean)?`<button class="btn link sm" data-clear>clear</button>`:''}<span class="meta">${rows.length} of ${S.leads.length}</span></div>
@@ -714,6 +716,38 @@ function newOrderForm(accId){
       if(o.status==='Confirmed'&&(L[id]||acc.status!=='Current')){ if(L[id]){ const moved={...acc,claimed:true,claimed_by:S.user.id,claimed_at:today(),status:'Current',stage:'Customer',owner:acc.owner&&acc.owner!=='Unassigned'?acc.owner:S.user.name,flags:(acc.flags||[]).filter(f=>f!=='unassigned'),tags:(acc.tags||[]).filter(t=>t!=='Unprocessed Lead')}; S.leads=await GH.update(F.leads,ls=>ls.filter(x=>x.id!==id),`First order — ${acc.name} leaves pool`); S.accounts=await GH.update(F.accounts,as=>[...as,moved],`First order — ${acc.name} → Active`); } else { S.accounts=await GH.update(F.accounts,as=>{ const x=as.find(y=>y.id===id); if(x){ x.status='Current'; x.stage='Customer'; x.flags=(x.flags||[]).filter(f=>!['ordered-but-not-current','tracker-says-customer'].includes(f)); } return as; },`First order — ${acc.name} → Active`); } }
       await appendActivity({account_id:id,type:'Order',note:`${o.status} order${o.total!=null?' '+fmtMoney(o.total):''} · ${o.mix}${o.special?' · '+o.special:''}`,date:o.date},`Order note — ${acc.name}`);
       index(); if(S.record!==id) open(id); else render(); toast('Order saved'); }); }; }
+function normName(x){ return String(x||'').toLowerCase().replace(/\b(llc|inc|corp|co|company|ltd|dispensary|cannabis|the)\b/g,'').replace(/[^a-z0-9]/g,''); }
+function newAccountForm(kind){
+  if(!(can('edit')||can('claim'))){ toast('Your role can\'t add accounts',true); return; }
+  kind=kind||'Prospect';
+  const owners=uniq([S.user.name,...S.users.map(u=>u.name),...(S.settings.owners||[])]).filter(o=>o!=='Team');
+  const m=modal('New account',`<div class="field"><label>Company name</label><input id="naName" placeholder="e.g. Harbor House Collective" autocomplete="off"></div><div id="naDup"></div>
+    <div class="grid2"><div class="field"><label>Town</label><input id="naTown"></div><div class="field"><label>License #</label><input id="naLic" placeholder="MR28…"></div>
+    <div class="field"><label>Where it goes</label><select id="naKind"><option value="Current" ${kind==='Current'?'selected':''}>Active Accounts (already buying)</option><option value="Prospect" ${kind==='Prospect'?'selected':''}>Prospects (working it)</option><option value="Lead" ${kind==='Lead'?'selected':''}>Unclaimed Leads (parked)</option></select></div>
+    <div class="field"><label>Owner</label><select id="naOwner">${owners.map(o=>`<option ${o===S.user.name&&['rep','manager'].includes(S.user.role)?'selected':''}>${esc(o)}</option>`).join('')}<option value="Unassigned">Unassigned</option></select></div>
+    <div class="field"><label>License type</label><select id="naType"><option>Dispensary</option><option>Production</option><option>Delivery</option><option>Other</option></select></div><div class="field"><label>Grade</label><select id="naGrade"><option value="">—</option>${(S.settings.grades||[]).map(g=>`<option>${g}</option>`).join('')}</select></div></div>
+    <div class="field"><label>Address</label><input id="naAddr"></div>
+    <div class="section" style="margin-top:6px"><h4>First contact <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">optional</span></h4><div class="grid2"><div class="field"><label>Name</label><input id="naCName"></div><div class="field"><label>Role</label><select id="naCRole"><option>Buyer</option><option>Owner</option><option>General Manager</option><option>Intake</option><option>Finance / AP</option><option>Other</option></select></div><div class="field"><label>Email</label><input id="naCEmail" type="email"></div><div class="field"><label>Phone</label><input id="naCPhone"></div></div></div>
+    <div class="field"><label>Notes</label><textarea id="naNotes" style="min-height:50px" placeholder="how you found them, what they said…"></textarea></div>`,
+    `<button class="btn ghost" data-close>Cancel</button><button class="btn" id="naSave">Create</button>`);
+  const nameIn=$('#naName',m), dupBox=$('#naDup',m);
+  nameIn.oninput=()=>{ const n=normName(nameIn.value); if(n.length<4){ dupBox.innerHTML=''; return; } const hits=[...S.accounts,...S.leads].filter(a=>{ const an=normName(a.name); return an&&(an===n||an.includes(n)||n.includes(an)); }).slice(0,4); dupBox.innerHTML=hits.length?`<div class="alert warn" style="margin:-6px 0 10px"><b>Already in the CRM?</b> ${hits.map(a=>`<a href="#" data-openx="${a.id}">${esc(a.name)}${a.town?' · '+esc(a.town):''}</a> <span class="muted">(${L[a.id]?'unclaimed lead':a.status==='Current'?'active':'prospect'})</span>`).join(' · ')}<br><span class="note">Different location of the same company? Fine — just put the town in.</span></div>`:''; $$('[data-openx]',dupBox).forEach(a=>a.onclick=e=>{ e.preventDefault(); closeModal(); open(a.dataset.openx); }); };
+  $('#naSave',m).onclick=()=>{
+    const name=nameIn.value.trim(); if(!name){ nameIn.focus(); return; }
+    const k=$('#naKind',m).value; const now=today();
+    const acc={id:uid('A'),sheet_key:'',source:`CRM (${S.user.name})`,name,parent:'',town:$('#naTown',m).value.trim(),address:$('#naAddr',m).value.trim(),license_type:$('#naType',m).value,status:k==='Current'?'Current':'Prospect',grade:$('#naGrade',m).value,owner:$('#naOwner',m).value||'Unassigned',last_contact:'',next_contact:'',notes:$('#naNotes',m).value.trim(),stage:k==='Current'?'Customer':'New',stage_entered:now,delivery_notes:'',standing_requests:'',license_number:$('#naLic',m).value.trim().toUpperCase(),tags:[],flags:[],dup_candidates:[],created:now,created_by:S.user.id};
+    if(acc.owner==='Unassigned') acc.flags.push('unassigned');
+    if(k!=='Lead'){ acc.claimed=true; acc.claimed_by=S.user.id; acc.claimed_at=now; }
+    const cn=$('#naCName',m).value.trim(), ce=$('#naCEmail',m).value.trim().toLowerCase(), cp=$('#naCPhone',m).value.trim(), cr=$('#naCRole',m).value;
+    closeModal();
+    guarded(async()=>{
+      if(k==='Lead') S.leads=await GH.update(F.leads,ls=>[...ls,acc],`New lead — ${name}`); else S.accounts=await GH.update(F.accounts,as=>[...as,acc],`New ${k==='Current'?'active account':'prospect'} — ${name}`);
+      if(cn||ce||cp) S.contacts=await GH.update(F.contacts,cs=>[...cs,{id:uid('C'),account_id:acc.id,name:cn,email:ce,phone:cp,role:cr,source:`CRM (${S.user.name})`,primary:true,created:now}],`Add person ${cn||ce} — ${name}`);
+      await appendActivity({account_id:acc.id,type:'Note',note:`Created as ${k==='Current'?'active account':k==='Lead'?'unclaimed lead':'prospect'}${acc.notes?' — '+acc.notes:''}`,date:now},`Created — ${name}`);
+      index(); open(acc.id); toast(`${name} created`); });
+  };
+  setTimeout(()=>nameIn.focus(),50);
+}
 function addContactForm(accId){ const m=modal('Add person',`<div class="grid2"><div class="field"><label>Name</label><input id="ncName"></div><div class="field"><label>Role</label><select id="ncRole"><option value="">—</option>${['Buyer','Intake','Finance / AP','Owner','General Manager','Inventory','Other'].map(r=>`<option>${r}</option>`).join('')}</select></div><div class="field"><label>Email</label><input id="ncEmail" type="email"></div><div class="field"><label>Phone</label><input id="ncPhone"></div></div>`,`<button class="btn ghost" data-close>Cancel</button><button class="btn" id="ncSave">Add</button>`);
   $('#ncSave',m).onclick=()=>{ const c={name:$('#ncName',m).value.trim(),role:$('#ncRole',m).value,email:$('#ncEmail',m).value.trim().toLowerCase(),phone:$('#ncPhone',m).value.trim()}; if(!c.name&&!c.email){ toast('Need a name or an email',true); return; } closeModal(); saveContacts(cs=>{ if(c.email&&cs.some(x=>x.email===c.email&&x.account_id===accId)) throw new Error('That email is already on this account.'); cs.push({id:uid('C'),account_id:accId,...c,source:`CRM (${S.user.name})`,primary:false,created:today()}); return cs; },`Add person ${c.name||c.email} — ${ALL[accId]?.name}`); }; }
 function editContact(id){ const c=C[id]; if(!c) return; const fromSheet=['Master','Customer Tracker'].includes(c.source); const m=modal('Edit person',`<div class="grid2"><div class="field"><label>Name</label><input id="ecName" value="${esc(c.name||'')}"></div><div class="field"><label>Role</label><input id="ecRole" value="${esc(c.role||'')}" list="roles"><datalist id="roles">${['Buyer','Intake','Finance / AP','Owner','General Manager','Inventory'].map(r=>`<option value="${r}">`).join('')}</datalist></div><div class="field"><label>Email</label><input id="ecEmail" value="${esc(c.email||'')}"></div><div class="field"><label>Phone</label><input id="ecPhone" value="${esc(c.phone||'')}"></div></div><p class="note">${fromSheet?'Name and email refresh from the Sheet / Tracker on re-import; role and phone stick.':'Added outside the Sheet — fully editable.'}</p>`,`<button class="btn ghost" data-close>Cancel</button>${!fromSheet?'<button class="btn danger" id="ecDel">Remove</button>':''}<button class="btn" id="ecSave">Save</button>`);
