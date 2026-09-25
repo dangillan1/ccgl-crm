@@ -313,34 +313,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0469",
-  "sheet_key": "",
-  "source": "Random Data 3",
-  "name": "B Leaf Wellness Centre",
-  "parent": "",
-  "town": "",
-  "address": "24 W. Main Street, Ware, MA 01082",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "C",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
   "id": "A0470",
   "sheet_key": "",
   "source": "Random Data 3",
@@ -435,35 +407,6 @@
   "parent": "",
   "town": "",
   "address": "",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "name-from-domain"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
-  "id": "A0384",
-  "sheet_key": "",
-  "source": "Random Data 31826",
-  "name": "bostonbudfactory.com",
-  "parent": "",
-  "town": "",
-  "address": "73 Sargeant St",
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "",
@@ -656,64 +599,6 @@
   "dup_candidates": [
    "A0375"
   ],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
-  "id": "A0416",
-  "sheet_key": "",
-  "source": "Random Data 31826",
-  "name": "cadellaquincy.com",
-  "parent": "",
-  "town": "",
-  "address": "",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "name-from-domain"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
-  "id": "A0369",
-  "sheet_key": "",
-  "source": "Random Data 31826",
-  "name": "cannabishealingllc.com",
-  "parent": "",
-  "town": "",
-  "address": "",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "name-from-domain"
-  ],
-  "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null
  },
@@ -988,36 +873,6 @@
   "parent": "",
   "town": "",
   "address": "1 West Street, Fall River, MA 02720",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [
-   "MSO"
-  ],
-  "flags": [
-   "unassigned"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
-  "id": "A0473",
-  "sheet_key": "",
-  "source": "Random Data 3",
-  "name": "Cultivate Holdings",
-  "parent": "",
-  "town": "",
-  "address": "1764 Main Street, Leicester, MA 01524",
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "",
@@ -1839,37 +1694,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0479",
-  "sheet_key": "",
-  "source": "Random Data 3",
-  "name": "Haverhill Stem LLC",
-  "parent": "",
-  "town": "",
-  "address": "124 Washington Street, Haverhill, MA 01832",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "possible-duplicate"
-  ],
-  "dup_candidates": [
-   "A0295"
-  ],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
   "id": "A0441",
   "sheet_key": "",
   "source": "Random Data 6",
@@ -2044,35 +1868,6 @@
   "dup_candidates": [
    "A0363"
   ],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
-  "id": "A0481",
-  "sheet_key": "",
-  "source": "Random Data 3",
-  "name": "honey.com",
-  "parent": "",
-  "town": "",
-  "address": "41 Strong Avenue, Northampton, MA 01060",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "name-from-domain"
-  ],
-  "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null
  },
@@ -2767,34 +2562,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0403",
-  "sheet_key": "",
-  "source": "Random Data 31826",
-  "name": "newdiafenway.co",
-  "parent": "",
-  "town": "",
-  "address": "8 Zoar St",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
   "id": "A0485",
   "sheet_key": "",
   "source": "Random Data 3",
@@ -3342,34 +3109,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0489",
-  "sheet_key": "",
-  "source": "Random Data 3",
-  "name": "Seed",
-  "parent": "",
-  "town": "",
-  "address": "401A Centre Street, Boston, MA 02130",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
   "id": "A0402",
   "sheet_key": "",
   "source": "Random Data 31826",
@@ -3423,37 +3162,6 @@
    "unassigned"
   ],
   "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
-  "id": "A0461",
-  "sheet_key": "",
-  "source": "Random Data 2",
-  "name": "Slang Inc DBA Bloom Brothers",
-  "parent": "",
-  "town": "",
-  "address": "2 Larch Street, Pittsfield, MA 01201",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "B",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "possible-duplicate"
-  ],
-  "dup_candidates": [
-   "A0206"
-  ],
   "created": "2026-09-25",
   "sheet_row": null
  },

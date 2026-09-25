@@ -8308,7 +8308,9 @@
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "",
-  "tags": [],
+  "tags": [
+   "MSO"
+  ],
   "flags": [
    "unassigned"
   ],

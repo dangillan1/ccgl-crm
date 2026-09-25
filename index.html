@@ -331,7 +331,9 @@ function index(){
     a._q3=os.filter(o=>{const d=daysSince(o.date); return d!=null&&d<90;}).reduce((s,o)=>s+(o.total||0),0);
     a._q2=os.filter(o=>{const d=daysSince(o.date); return d!=null&&d>=90&&d<180;}).reduce((s,o)=>s+(o.total||0),0);
     const roles=re=>(contactsByAcc[a.id]||[]).filter(c=>re.test(c.role||''));
-    a._buyer=roles(/buyer/i)[0]||(contactsByAcc[a.id]||[]).find(c=>c.primary)||null; a._finance=roles(/finance|\bap\b|\bar\b|billing|accounting|payable/i)[0]||null; a._intake=roles(/intake/i)[0]||null;
+    a._buyers=roles(/buyer/i); if(!a._buyers.length){ const p=(contactsByAcc[a.id]||[]).find(c=>c.primary); if(p) a._buyers=[p]; }
+    a._finances=roles(/finance|\bap\b|\bar\b|billing|accounting|payable/i); a._intakes=roles(/intake/i);
+    a._buyer=a._buyers[0]||null; a._finance=a._finances[0]||null; a._intake=a._intakes[0]||null;
     a._nsOver=!!(a.next_step&&a.next_step_due&&a.next_step_due<today());
   }
 }
@@ -376,6 +378,7 @@ const ownerCell=a=>{ const o=a.owner||'Unassigned'; if(o==='Unassigned') return 
 const tagPills=a=>(a.tags||[]).map(t=>`<span class="pill tag">${esc(t)}</span>`).join(' ');
 const dueCell=a=>{ if(a._nOrders===0) return '<span class="muted">no orders</span>'; if(a._due==null) return `<span class="muted">${a._daysOrder}d ago</span>`; if(a._due<0) return `<span style="color:${a._quiet?'var(--danger)':'var(--warn)'};font-weight:600">${-a._due}d late</span>`; return `<span style="color:${a._due<=7?'var(--warn)':'inherit'}">in ${a._due}d</span>`; };
 const contactCell=c=>c?`${esc(c.name)||'<span class="muted">—</span>'}${c.email?`<span class="sub"><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></span>`:''}`:'<span class="muted">—</span>';
+const contactsCell=l=>l&&l.length?l.map(c=>`<div style="margin-bottom:3px">${c.name?`${esc(c.name)}${c.phone?` <span class="muted">· ${esc(c.phone)}</span>`:''}<span class="sub">`:'<span style="font-size:12px">'}${c.email?`<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`:''}${!c.name&&c.phone?` <span class="muted">· ${esc(c.phone)}</span>`:''}</span></div>`).join(''):'<span class="muted">—</span>';
 const nsCell=a=>a.next_step?`<span style="${a._nsOver?'color:var(--danger)':''}">${esc(a.next_step)}</span>${a.next_step_due?`<span class="sub">${a._nsOver?'overdue · ':''}${fmtDate(a.next_step_due)}</span>`:''}`:'<span class="muted">—</span>';
 function matches(a,q){ if(!q) return true; q=q.toLowerCase(); if([a.name,a.town,a.parent,a.owner,a.notes,a.license_number,(a.tags||[]).join(' ')].some(x=>(x||'').toLowerCase().includes(q))) return true; return (contactsByAcc[a.id]||[]).some(c=>(c.name||'').toLowerCase().includes(q)||(c.email||'').toLowerCase().includes(q)||(c.phone||'').includes(q)); }
 function ownerFilterOptions(sel){ const owners=uniq([...S.accounts,...S.leads].map(a=>a.owner||'Unassigned')).sort(); return `<option value="">All owners</option>${owners.map(o=>`<option ${sel===o?'selected':''}>${esc(o)}</option>`).join('')}`; }
@@ -452,7 +455,7 @@ function renderActive(v){
     : `${th('active','name','Account')}${th('active','town','Town')}${th('active','grade','Grade')}${th('active','owner','Owner')}${th('active','_due','Reorder')}${th('active','_daysOrder','Last order')}${th('active','_nOrders','Orders','tr')}${th('active','_orderTotal','2026 $','tr')}${th('active','_nContacts','People','tr')}${th('active','next_step_due','Next step')}`;
   const row=a=>`<tr class="row" data-open="${a.id}">${can('reassign')?`<td><input type="checkbox" class="chk" data-sel="${a.id}" ${S.sel.has(a.id)?'checked':''}></td>`:''}
       <td class="wrap"><b>${esc(a.name)}</b>${a.parent&&a.parent!==a.name?`<span class="sub">${esc(a.parent)}</span>`:''}${a.license_number?`<span class="sub mono">#${esc(a.license_number.split(' / ')[0])}</span>`:''}</td><td>${esc(a.town||'')}</td><td>${gradePill(a.grade)}</td><td>${ownerCell(a)}</td>
-      ${mode==='contacts'?`<td class="wrap">${contactCell(a._buyer)}</td><td class="wrap">${contactCell(a._finance)}</td><td class="wrap">${contactCell(a._intake)}</td><td class="wrap" style="max-width:220px;font-size:12px;${a.standing_requests?'color:var(--danger);font-weight:600':''}">${esc(a.standing_requests||'')}</td>`
+      ${mode==='contacts'?`<td class="wrap">${contactsCell(a._buyers)}</td><td class="wrap">${contactsCell(a._finances)}</td><td class="wrap">${contactsCell(a._intakes)}</td><td class="wrap" style="max-width:220px;font-size:12px;${a.standing_requests?'color:var(--danger);font-weight:600':''}">${esc(a.standing_requests||'')}</td>`
       :`<td>${dueCell(a)}</td><td>${a._lastOrder?`${fmtDate(a._lastOrder)}<span class="sub">${a._daysOrder}d ago</span>`:'<span class="muted">—</span>'}</td><td class="tr">${a._nOrders||'<span class="muted">0</span>'}</td><td class="tr">${a._orderTotal?fmtMoney(a._orderTotal):'<span class="muted">—</span>'}</td><td class="tr">${a._nContacts}</td>`}
       <td class="wrap" style="max-width:200px">${nsCell(a)}</td></tr>`;
   v.innerHTML=`<div class="toolbar">${can('edit')?'<button class="btn sm" data-newacc="Current">+ New account</button>':''}

@@ -193,6 +193,99 @@ def sheet(xl, name, **kw):
             return df
     return None
 
+_RW = r"(?:buyer|purchasing|purchaser|manager|store manager|gm|general manager|owner|intake|finance|ap|a/p|accounting|accounts payable|ar|billing|receiving|inventory|controller|bookkeeper|ceo|coo|cfo|director of purchasing|ops|operations|inventory manager|purchasing manager|dir\.? [a-z]+|director(?: of)? [a-z]+|wholesale manager|sales|marketing)"
+NAME_ROLE_RE = re.compile(r"^(.*?)\s*(?:[-–—:]|\()\s*(" + _RW + r"(?:\s*/\s*" + _RW + r")*)\s*\)?\s*$", re.I)
+ROLE_CANON = {"ap": "Finance / AP", "a/p": "Finance / AP", "accounts payable": "Finance / AP", "accounting": "Finance / AP", "finance": "Finance / AP", "billing": "Finance / AP", "ar": "AR / Accounting",
+              "purchasing": "Buyer", "purchaser": "Buyer", "director of purchasing": "Buyer", "gm": "Manager", "general manager": "Manager", "store manager": "Manager", "receiving": "Intake", "inventory": "Intake",
+              "asm": "Assistant Manager", "assistant manager": "Assistant Manager", "asst. gm": "Assistant Manager", "asst gm": "Assistant Manager", "ops": "Operations", "operations": "Operations"}
+ROLE_UPPER = {"ceo": "CEO", "coo": "COO", "cfo": "CFO", "gm": "Manager", "ap": "Finance / AP"}
+def _tidy_name(n):
+    n = re.sub(r"\s+", " ", (n or "")).strip(" ,-–")
+    return n if re.search(r"\b[A-Za-z]\.$", n) else n.rstrip(" .")     # keep 'Eric H.' style initials
+def split_name_role(name):
+    """'Roger Williamson - Buyer' -> ('Roger Williamson', 'Buyer'); names without a role suffix pass through."""
+    name = _tidy_name(name)
+    m = NAME_ROLE_RE.match(name)
+    if not m or not m.group(1).strip(): return name, ""
+    parts = [x.strip().lower() for x in re.split(r"\s*/\s*", m.group(2)) if x.strip()]
+    return _tidy_name(m.group(1)), " / ".join(ROLE_CANON.get(x, ROLE_UPPER.get(x, x.title())) for x in parts)
+def dedupe_role(role):
+    out, seen = [], set()
+    for x in (role or "").split("/"):
+        x = x.strip()
+        if not x: continue
+        x = ROLE_UPPER.get(x.lower(), x)
+        for part in x.split(" / "):
+            if part.lower() not in seen: seen.add(part.lower()); out.append(part)
+    return " / ".join(out)
+
+# --- Customer Tracker people parsing: names, nicknames, roles, phones, and pairing names to emails
+NICKS = [("mike","michael"),("matt","matthew"),("josh","joshua"),("dan","daniel","danny"),("chris","christopher","christine"),("tony","anthony"),
+         ("jess","jessica"),("alex","alexander","alexandra","alexis"),("ben","benjamin"),("nick","nicholas"),("will","william","bill"),("dave","david"),
+         ("jeff","jeffrey"),("greg","gregory"),("rob","robert","bob","bobby"),("jim","james","jimmy"),("joe","joseph","joey"),("kate","katherine","kathryn","katie"),
+         ("liz","elizabeth"),("sam","samuel","samantha"),("steve","steven","stephen"),("tom","thomas"),("andy","andrew"),("ed","edward","eddie"),("ken","kenneth"),
+         ("rick","richard","rich"),("pat","patrick","patricia"),("manny","emmanuel"),("taba","tabasuri"),("meg","megan"),("becky","rebecca"),("jon","jonathan"),
+         ("gabe","gabriel"),("justin","just"),("jake","jacob"),("ann marie","annmarie"),("nate","nathan","nathaniel"),("mel","melissa"),("jacquie","jacqueline","jackie")]
+NICK_MAP = {}
+for grp in NICKS:
+    for n in grp: NICK_MAP[n] = set(grp)
+ROLE_WORDS = r"buyer|purchasing|purchaser|manager|store manager|asm|gm|general manager|owner|intake|finance|ap|a/p|accounting|accounts payable|ar|billing|receiving|inventory|controller|bookkeeper|ceo|coo|cfo|director of purchasing|ops|operations|asst\.? gm|assistant manager"
+def name_keys(name):
+    """lower-case keys a person can be recognised by: first name, nicknames, initial+lastname, first.last"""
+    n = re.sub(r"\(.*?\)", " ", name or "").lower()
+    toks = [t for t in re.findall(r"[a-z]+", n) if t not in ("aka",)]
+    if not toks: return set()
+    keys = set(NICK_MAP.get(toks[0], {toks[0]}))
+    if len(toks) >= 2 and len(toks[-1]) > 1:
+        last = "".join(toks[1:])
+        keys |= {toks[0][0] + last, toks[0] + "." + last, toks[0] + last, last}
+    elif len(toks) >= 2:
+        keys |= {toks[0] + toks[-1], toks[0] + "." + toks[-1]}          # 'Matt N.' -> mattn, matt.n
+    for m in re.findall(r"\((?:aka\s+)?([a-z]+)\)", (name or "").lower()):
+        if not re.fullmatch(ROLE_WORDS, m): keys |= NICK_MAP.get(m, {m})
+    return {k for k in keys if len(k) >= 2}
+def email_score(name, email):
+    """0 = no match; 3 = the address is the name ('mattn' for Matt N.); 2 = first segment is the name; 1 = looser"""
+    local = re.sub(r"[^a-z.]", "", (email or "").split("@")[0].lower())
+    if not local: return 0
+    plain = local.replace(".", ""); best = 0
+    for k in name_keys(name):
+        if len(k) < 3 and k != plain: continue
+        if plain == k: best = max(best, 3)
+        elif local.split(".")[0] == k: best = max(best, 2)
+        elif plain.startswith(k) or (len(k) >= 4 and k in plain): best = max(best, 1)
+    return best
+def email_matches(name, email): return email_score(name, email) > 0
+def parse_people(cell):
+    """'Albie C, Mike O, and Juan M' / 'Jess (Buyer/GM) Sinead (ASM)' / 'Emmanuel (Manny)' -> [{'name','roles'}]"""
+    v = re.sub(r"\s+", " ", cell or "").strip()
+    if not v: return []
+    v = re.sub(r"\)\s+(?=[A-Z])", ") | ", v)                      # 'Jess (…) Sinead (…)' -> two people
+    parts = [x.strip(" ,-–|") for x in re.split(r"\s*(?:&|,|\band\b|\n|;|\||/(?![^(]*\)))\s*", v)]
+    out = []
+    for part in parts:
+        if not part: continue
+        roles = []
+        for m in re.findall(r"\(([^)]*)\)", part):
+            for w in re.split(r"\s*/\s*", m):
+                w = w.strip().lower()
+                if re.fullmatch(ROLE_WORDS, w): roles.append(ROLE_CANON.get(w, ROLE_UPPER.get(w, w.title())))
+        nm = part
+        if all(re.fullmatch(ROLE_WORDS, w.strip().lower()) for m in re.findall(r"\(([^)]*)\)", part) for w in re.split(r"\s*/\s*", m)):
+            nm = re.sub(r"\s*\([^)]*\)", "", part).strip()             # drop pure-role parentheticals, keep nickname ones
+        nm, suf = split_name_role(nm)
+        if suf: roles.append(suf)
+        if nm and not re.fullmatch(ROLE_WORDS, nm.lower()): out.append({"name": nm, "roles": roles})
+    return out
+def parse_phone_pairs(cell):
+    """'Albie C. - 404-936-4618   Michael O. - 617-997-8542' -> [('Albie C.', '404-936-4618'), ...]; bare numbers get name ''"""
+    v = re.sub(r"[\u00a0\s]+", " ", cell or "").strip()
+    out = []
+    for m in re.finditer(r"(?:([A-Za-z][A-Za-z.' ]*?)\s*[-–:]\s*)?(\(?\d{3}\)?[\s.\-]*\d{3}[\s.\-]*\d{4}(?:\s*(?:ex|ext|x)\.?\s*\d+)?)", v):
+        ph = re.sub(r"\s+", " ", m.group(2)).strip()
+        out.append(((m.group(1) or "").strip(" .-"), ph))
+    return out
+
 def cid(account_id, email, name):
     """Deterministic contact id: stable across re-imports."""
     key = f"{account_id or 'none'}|{(email or '').lower().strip()}|{(name or '').lower().strip()}"
@@ -302,9 +395,10 @@ def main():
             cemail = email_of(r.get(f"CONTACT {slot} EMAIL", ""))
             cphone = clean(r.get(f"CONTACT {slot} PHONE", ""))
             if not (cname or cemail or cphone): continue
+            cname_clean, crole = split_name_role(cname)
             contacts.append({
-                "id": cid(a["id"], cemail, cname), "account_id": a["id"], "name": cname, "email": cemail,
-                "phone": cphone, "role": "", "source": "Master", "primary": slot == 1,
+                "id": cid(a["id"], cemail, cname), "account_id": a["id"], "name": cname_clean, "email": cemail,
+                "phone": cphone, "role": crole, "source": "Master", "primary": slot == 1,
                 "sheet_slot": slot,
             })
             report["contacts_from_master"] += 1
@@ -394,6 +488,8 @@ def main():
     def add_contact(account, name, email, phone, role, source):
         """One contact row per (account, person). The same person may legitimately sit on several
         accounts (a chain buyer covers every store), so email is only de-duplicated WITHIN an account."""
+        name, suffix_role = split_name_role(name)
+        if suffix_role and not role: role = suffix_role
         if not email and name and account:
             for ec in contacts:
                 if ec["account_id"] == account["id"] and ec["name"].lower() == name.lower():
@@ -418,7 +514,8 @@ def main():
                 if not ec["role"] and role: ec["role"] = role
                 return None
             # known on another account: fall through and add a row for THIS account too
-        c = {"id": cid(account["id"] if account else None, email, name), "account_id": account["id"] if account else None,
+        if not name and not email and not phone: return None
+        c = {"id": cid(account["id"] if account else None, email, name or phone), "account_id": account["id"] if account else None,
              "name": name, "email": email, "phone": phone, "role": role, "source": source, "primary": False}
         contacts.append(c)
         if email:
@@ -682,8 +779,8 @@ def main():
 
         def parse_phone(v):
             v = clean(v)
-            m = re.search(r"(\(?\d{3}\)?[\s.\-]?\d{3}[\s.\-]?\d{4})", v)
-            return m.group(1).strip() if m else ""
+            m = re.search(r"(\(?\d{3}\)?[\s.\-]*\d{3}[\s.\-]*\d{4}(?:\s*(?:ex|ext|x)\.?\s*\d+)?)", v.replace("\u00a0", " "))
+            return re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
 
         def split_emails(v):
             return [e.lower() for e in EMAIL_RE.findall(clean(v))]
@@ -746,19 +843,27 @@ def main():
                 if town and not acc.get("town"): acc["town"] = town
                 JUNK_SOURCES = ("Random Data",)
                 def better_name(ec, nm):
-                    """Tracker names beat guesses from the Random Data tabs and empty/one-token junk; Master/CRM names stay."""
+                    """Tracker names beat Random Data guesses, junk, job titles and 'Josh - Inventory Manager' style names;
+                    a fuller name already on file ('Devin Lightman' vs tracker 'Devin L.') and CRM-entered names stay."""
                     if not nm: return False
                     cur = (ec.get("name") or "").strip()
                     if not cur: return True
+                    if str(ec.get("source", "")).startswith("CRM"): return False
                     if str(ec.get("source", "")).startswith(JUNK_SOURCES): return True
                     if " " not in cur and len(cur) < 4: return True
                     if re.fullmatch(r"(purchasing|inventory|general|store|retail|wholesale)?\s*(manager|buyer|owner|director|email|gm|contact|inventory|purchasing|accounting|ap|ar)s?", cur, re.I): return True   # a job title, not a person
+                    if re.search(r"\s[-–(]\s*", cur) and not re.search(r"\s[-–(]\s*", nm): return True                 # 'Josh - Inventory Manager' -> 'Joshua St. John'
+                    ct, nt = re.findall(r"[a-z]+", cur.lower()), re.findall(r"[a-z]+", nm.lower())
+                    if ct and nt and len(nt) >= 2 and len(nt[-1]) == 1 and ct[0] == nt[0] and len(ct) >= 2 and ct[-1][0] == nt[-1]: return False   # tracker has just an initial
+                    if len(nt) > len(ct) and (ct[0] in name_keys(nm)): return True                                     # tracker is fuller
+                    if len(ct) == 1 and len(nt) >= 2: return True
                     return False
                 def add_role(ec, role):
                     """Roles are additive: the same person can be Buyer and Intake and Finance."""
                     cur = [x.strip() for x in (ec.get("role") or "").split("/") if x.strip()]
                     cur = [x for x in cur if x not in ("Billing", "AR", "Accounting", "Secondary")]  # weaker labels give way
-                    if role not in cur: cur.append(role)
+                    for part in [x.strip() for x in role.split("/") if x.strip()]:
+                        if part not in cur: cur.append(part)
                     ec["role"] = " / ".join(cur)
                 def upsert(em, nm, ph, role):
                     c = add_contact(acc, nm, em, ph, role, "Customer Tracker")
@@ -768,23 +873,84 @@ def main():
                                 add_role(ec, role)
                                 if not ec["phone"] and ph: ec["phone"] = ph
                                 if better_name(ec, nm): ec["name"] = nm; ec["source"] = "Customer Tracker"
-                # buyer(s): every email in the cell; names split on & , 'and' / newlines and paired by position when the counts match
-                b_emails = split_emails(r.get("Buyer Email", ""))
-                b_names = [x.strip(" .") for x in re.split(r"\s*(?:&|,|\band\b|\n|;|/)\s*", clean(r.get("Buyer Name", ""))) if x.strip(" .")]
-                b_phone = parse_phone(r.get("Buyer Phone Number", ""))
-                if not b_emails and b_names:
-                    upsert("", " ".join(b_names) if len(b_names) == 1 else b_names[0], b_phone, "Buyer")
-                for i, em in enumerate(b_emails):
-                    nm = b_names[i] if len(b_names) == len(b_emails) else (b_names[0] if i == 0 and b_names else "")
-                    upsert(em, nm, b_phone if i == 0 else "", "Buyer")
-                # intake
-                for em in split_emails(r.get("Intake Emails", "")):
-                    upsert(em, "", "", "Intake")
-                # finance
-                f_phone = parse_phone(r.get("Finance Phone Number", ""))
-                f_name = re.sub(r"[-–].*$", "", clean(r.get("Finance Phone Number", ""))).strip() if f_phone else ""
-                for i, em in enumerate(split_emails(r.get("Finance Contacts", ""))):
-                    upsert(em, f_name if i == 0 else "", f_phone if i == 0 else "", "Finance / AP")
+                # People on this row. Names are paired to emails by recognisable keys (first name, nickname,
+                # initial+lastname), then by first initial for what's left; a leftover name that matches someone
+                # already on the account just gets the role; anything else becomes a name-only contact.
+                def acc_contacts(): return [x for x in contacts if x["account_id"] == acc["id"]]
+                def find_on_account(nm):
+                    for x in acc_contacts():
+                        if x["name"] and (name_keys(x["name"]) & name_keys(nm)) and (x["name"].split()[0].lower() in name_keys(nm) or nm.split()[0].lower() in name_keys(x["name"])): return x
+                    return None
+                def contact_for_email(em):
+                    for x in contact_emails.get(em, []):
+                        if x["account_id"] == acc["id"]: return x
+                    return None
+                def set_phone(ec, ph):
+                    if not ph: return
+                    cur = ec.get("phone") or ""
+                    if re.sub(r"\D", "", cur)[-7:] == re.sub(r"\D", "", ph)[-7:]: return
+                    if cur and not str(ec.get("source", "")).startswith("CRM"): ec["phone_alt"] = cur      # tracker phone wins; keep the old one
+                    if not cur or not str(ec.get("source", "")).startswith("CRM"): ec["phone"] = ph
+                def place(cell_names, cell_emails, phone_cell, role):
+                    people = parse_people(cell_names)
+                    emails = [e for i, e in enumerate(cell_emails) if e not in cell_emails[:i]]
+                    taken = {}
+                    cands = sorted(((email_score(p["name"], e), i, j) for i, p in enumerate(people) for j, e in enumerate(emails)), key=lambda t: (-t[0], t[1], t[2]))
+                    for sc, i, j in cands:                                  # best matches first, so 'Matt N.' takes mattn@ before matt.dever@
+                        if sc == 0: break
+                        p, e = people[i], emails[j]
+                        if p.get("email") or e in taken: continue
+                        taken[e] = p; p["email"] = e
+                    for p in people:                                       # already on the account under one of these emails?
+                        if p.get("email"): continue
+                        ec = find_on_account(p["name"])
+                        if ec and ec.get("email") in emails and ec["email"] not in taken: taken[ec["email"]] = p; p["email"] = ec["email"]
+                    for p in people:
+                        if p.get("email"): continue
+                        if find_on_account(p["name"]): continue                      # already on the account under another email
+                        ini = p["name"][0].lower()
+                        for e in emails:
+                            if e not in taken and e.split("@")[0][:1].lower() == ini: taken[e] = p; p["email"] = e; break
+                    # phones: 'Name - number' pairs go to that person; a bare number goes to the first person / first email
+                    pairs = parse_phone_pairs(phone_cell)
+                    phone_for = {}
+                    for pn, ph in pairs:
+                        tgt = None
+                        if pn:                                             # 'Matt Dever - …' -> matt.dever@ first, then a named person, then a loose email match
+                            scored = sorted(((email_score(pn, e), j) for j, e in enumerate(emails)), key=lambda t: (-t[0], t[1]))
+                            if scored and scored[0][0] >= 2: tgt = emails[scored[0][1]]
+                            if tgt is None:
+                                for p in people:
+                                    if name_keys(p["name"]) & name_keys(pn): tgt = p.get("email") or ("name:" + p["name"]); break
+                            if tgt is None and scored and scored[0][0] > 0: tgt = emails[scored[0][1]]
+                        if tgt is None:
+                            tgt = (people[0].get("email") or ("name:" + people[0]["name"])) if people else (emails[0] if emails else None)
+                        if tgt and tgt not in phone_for: phone_for[tgt] = ph
+                        elif tgt is None:                                  # a phone with nobody to hang it on: keep it as its own row
+                            people.append({"name": pn, "roles": [], "email": ""}); phone_for["name:" + pn] = ph
+                    for e in emails:                                       # every email in the cell lands on the account
+                        p = taken.get(e)
+                        nm = p["name"] if p else ""
+                        r_ = " / ".join([role] + (p["roles"] if p else []))
+                        upsert(e, nm, phone_for.get(e, ""), r_)
+                        ec = contact_for_email(e)
+                        if ec and phone_for.get(e): set_phone(ec, phone_for[e])
+                    for p in people:                                       # names that never found an email
+                        if p.get("email"): continue
+                        ec = find_on_account(p["name"])
+                        r_ = " / ".join([role] + p["roles"])
+                        if ec:
+                            add_role(ec, r_); set_phone(ec, phone_for.get("name:" + p["name"], ""))
+                            if better_name(ec, p["name"]): ec["name"] = p["name"]; ec["source"] = "Customer Tracker"
+                        elif p["name"] or phone_for.get("name:" + p["name"]):
+                            upsert("", p["name"], phone_for.get("name:" + p["name"], ""), r_)
+                place(clean(r.get("Buyer Name", "")), split_emails(r.get("Buyer Email", "")), clean(r.get("Buyer Phone Number", "")), "Buyer")
+                place("", split_emails(r.get("Intake Emails", "")), "", "Intake")
+                place("", split_emails(r.get("Finance Contacts", "")), clean(r.get("Finance Phone Number", "")), "Finance / AP")
+                # intake cells sometimes carry 'Julia C. - jcrawford@…': give that name to the email if it has none
+                for m in re.finditer(r"([A-Z][A-Za-z.']+(?: [A-Z][A-Za-z.']*)?)\s*[-–:]\s*(" + EMAIL_RE.pattern + ")", clean(r.get("Intake Emails", "")) + " " + clean(r.get("Finance Contacts", ""))):
+                    ec = contact_for_email(m.group(2).lower())
+                    if ec and better_name(ec, m.group(1)): ec["name"] = m.group(1); ec["source"] = "Customer Tracker"
 
         # ---- Order Tracker 2026
         ot = sheet(oxl, "Order Tracker 2026", header=0)
@@ -859,6 +1025,49 @@ def main():
         report["orders_total"] = len(orders)
 
     # ---------------- 11a. Merge mode: carry over CRM-created contacts and CRM-owned contact fields
+    def dedupe_account_emails(contacts):
+        """one row per (account, email): union roles, keep the best name / phone"""
+        seen_ae, drop_ae = {}, set()
+        for c in contacts:
+            if not c.get("account_id") or not c.get("email"): continue
+            k = (c["account_id"], c["email"].lower())
+            if k not in seen_ae: seen_ae[k] = c; continue
+            t = seen_ae[k]
+            for part in [x.strip() for x in (c.get("role") or "").split("/") if x.strip()]:
+                if part.lower() not in (t.get("role") or "").lower(): t["role"] = ((t.get("role") or "") + " / " + part).strip(" /")
+            if not t.get("phone") and c.get("phone"): t["phone"] = c["phone"]
+            if len((c.get("name") or "").split()) > len((t.get("name") or "").split()) and not re.search(r"\s[-–(]", c["name"] or ""): t["name"] = c["name"]
+            if c.get("primary"): t["primary"] = True
+            if str(c.get("source", "")).startswith("CRM"): t["source"] = c["source"]
+            drop_ae.add(c["id"])
+        if drop_ae: report["duplicate_contact_rows_merged"] = report.get("duplicate_contact_rows_merged", 0) + len(drop_ae)
+        return [c for c in contacts if c["id"] not in drop_ae]
+    contacts = dedupe_account_emails(contacts)
+    # name-only rows ('Alex C.', 'Manny') that are the same person as an emailed row on the same account: fold them in
+    by_acc_c = {}
+    for c in contacts:
+        if c.get("account_id"): by_acc_c.setdefault(c["account_id"], []).append(c)
+    fold = set()
+    for aid, lst in by_acc_c.items():
+        for c in lst:
+            if c.get("email") or not c.get("name") or str(c.get("source", "")).startswith("CRM"): continue
+            ck = name_keys(c["name"]); first = re.findall(r"[a-z]+", c["name"].lower())
+            for t in lst:
+                if t is c or not t.get("email") or not t.get("name"): continue
+                tk = name_keys(t["name"]); tf = re.findall(r"[a-z]+", t["name"].lower())
+                if (ck & tk) and first and tf and (tf[0] in ck or first[0] in tk):
+                    for part in [x.strip() for x in (c.get("role") or "").split("/") if x.strip()]:
+                        if part.lower() not in (t.get("role") or "").lower(): t["role"] = ((t.get("role") or "") + " / " + part).strip(" /")
+                    if c.get("phone") and not t.get("phone"): t["phone"] = c["phone"]
+                    junk = str(t.get("source", "")).startswith("Random Data") or t["name"].lower() == re.sub(r"[^a-z]", "", t["email"].split("@")[0].lower())
+                    if (c.get("source") == "Customer Tracker" or junk) and len(c["name"].split()) >= len(t["name"].split()) and len(c["name"]) > len(t["name"]) and not re.search(r"\s[-–(]", c["name"]): t["name"] = c["name"]
+                    fold.add(c["id"]); report["name_only_rows_folded"] = report.get("name_only_rows_folded", 0) + 1
+                    break
+    contacts = [c for c in contacts if c["id"] not in fold]
+    for c in contacts:                           # hygiene: no role suffixes in names, no doubled roles, no stray whitespace
+        nm, rl = split_name_role(c.get("name", ""))
+        c["name"] = nm
+        c["role"] = dedupe_role((c.get("role") or "") + (" / " + rl if rl else ""))
     if merge and existing_contacts:
         live_ids = {c["id"] for c in contacts}
         acc_ids = {a["id"] for a in accounts}
@@ -885,8 +1094,9 @@ def main():
         target = None
         for em in emails:
             d = email_domain(em)
-            if d and d in idx_domain and len(idx_domain[d]) == 1 and idx_domain[d][0]["id"] != lid:
-                target = idx_domain[d][0]; break
+            others = [x for x in idx_domain.get(d, []) if x["id"] != lid and x["id"] not in merged_into] if d else []
+            if len(others) == 1:                                    # the domain belongs to exactly one other account -> same company
+                target = others[0]; break
         if target is None:
             for v in name_variants(a["name"]):
                 hits = [x for x in idx_variant.get(v, []) if x["id"] != lid and x["id"] not in merged_into]
@@ -926,6 +1136,7 @@ def main():
         merged_into[a["id"]] = target["id"]
         report["leads_merged_into_other"] = report.get("leads_merged_into_other", 0) + 1
     accounts = [x for x in accounts if x["id"] not in merged_into]
+    contacts = dedupe_account_emails(contacts)
     acc_by_id = {x["id"]: x for x in accounts}
     # recompute dup candidates now that the account set is final
     for a in accounts:
