@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "id": "Xmuh9wbqc6s5e",
+  "ts": "2026-09-25T18:07:09.924Z",
+  "account_id": "Amuh9w8nbbe0a",
+  "type": "Note",
+  "note": "Created as prospect — - Reached out through sales email\n- Opening in 30-45 day --> November(ish) 2026 opening\n- CA based retail\n- Asked if we are in PVTC --> replied we know them very well and are friendly, but have not been on shelves in quite some time\n- Other brands bringing on shelves --> Vanguarden, HHC, Breathe Free, Heirloom Collective",
+  "date": "2026-09-25"
+ },
+ {
+  "id": "Xmuh9y4xurdt0",
+  "ts": "2026-09-25T18:08:34.434Z",
+  "account_id": "Amuh9w8nbbe0a",
+  "type": "Task",
+  "note": "Done: Visit thursday w/ samples",
+  "date": "2026-09-25"
+ }
+]
