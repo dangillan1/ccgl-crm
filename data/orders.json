@@ -5025,12 +5025,12 @@
  },
  {
   "id": "O94170259",
-  "date": "2026-09-15",
+  "date": "2026-10-06",
   "account_id": "A0107",
   "account_raw": "Enlite Indian Orchard | MR284651",
   "license": "MR284651",
   "status": "Planned",
-  "contact_name": "Sarah Perrot",
+  "contact_name": "Sarah P",
   "contact_email": "sarah@enlitecannabis.com",
   "delivery_date": "",
   "total": null,
@@ -5038,7 +5038,10 @@
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 317
+  "row": 317,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-25"
  },
  {
   "id": "O6f458e29",
