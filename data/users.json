@@ -1,0 +1,26 @@
+[
+ {
+  "id": "dan",
+  "name": "Dan",
+  "role": "admin",
+  "pw_hash": ""
+ },
+ {
+  "id": "matt",
+  "name": "Matt",
+  "role": "manager",
+  "pw_hash": ""
+ },
+ {
+  "id": "joey",
+  "name": "Joey",
+  "role": "rep",
+  "pw_hash": ""
+ },
+ {
+  "id": "charley",
+  "name": "Charley",
+  "role": "ops",
+  "pw_hash": ""
+ }
+]

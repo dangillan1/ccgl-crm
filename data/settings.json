@@ -1,0 +1,68 @@
+{
+ "stages": [
+  "New",
+  "Intro Call",
+  "Sample Drop",
+  "Menu Setup",
+  "Launch Promo",
+  "First Reorder",
+  "Customer"
+ ],
+ "statuses": [
+  "Current",
+  "Prospect",
+  "Non-prospect",
+  "Unspecified"
+ ],
+ "grades": [
+  "A+",
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "owners": [
+  "Charley",
+  "Joey",
+  "Team"
+ ],
+ "activity_types": [
+  "Call",
+  "Visit",
+  "Text",
+  "Email",
+  "Note"
+ ],
+ "repo": {
+  "owner": "dangillan1",
+  "name": "ccgl-crm",
+  "branch": "main"
+ },
+ "last_import": {
+  "date": "2026-09-25",
+  "file": "CCGL Wholesale Contact List (2).xlsx",
+  "report": {
+   "master_rows": 357,
+   "new_accounts": 357,
+   "updated_accounts": 0,
+   "contacts_from_master": 430,
+   "leads_matched": 1956,
+   "leads_new_accounts": 160,
+   "contacts_added": 968,
+   "rogue_emails": 74,
+   "addresses_filled": 69,
+   "licenses_attached": 11,
+   "licenses_new_prospects": 13,
+   "phones_filled": 0,
+   "grades_filled": 57,
+   "tracker_new_accounts": 10,
+   "tracker_matched": 142,
+   "tracker_new_locations": 7,
+   "orders_matched": 318,
+   "orders_total": 318,
+   "empty_shells_dropped": 0,
+   "book_accounts": 367,
+   "pool_leads": 150
+  }
+ }
+}
