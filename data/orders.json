@@ -1,12 +1,12 @@
 [
  {
   "id": "O81ea8e34",
-  "date": "",
+  "date": "2026-03-18",
   "account_id": "A0435",
   "account_raw": "Pineapple Express I MD1306",
   "license": "MD1306",
   "status": "Confirmed",
-  "contact_name": "Kaily Hepburn",
+  "contact_name": "Kaily",
   "contact_email": "kaily@pineappleexpressma.com",
   "delivery_date": "",
   "total": 3087,
@@ -14,7 +14,10 @@
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 97
+  "row": 97,
+  "edited_in_crm": true,
+  "edited_by": "dan",
+  "edited_at": "2026-09-25"
  },
  {
   "id": "O1dfc6d97",
