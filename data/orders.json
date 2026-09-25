@@ -41,7 +41,7 @@
  },
  {
   "id": "O6eb2dbae",
-  "date": "",
+  "date": "2026-08-10",
   "account_id": "A0102",
   "account_raw": "Ember Gardens",
   "license": "",
@@ -51,10 +51,13 @@
   "delivery_date": "",
   "total": 4200,
   "owner": "Charley",
-  "mix": "",
+  "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 253
+  "row": 253,
+  "edited_in_crm": true,
+  "edited_by": "dan",
+  "edited_at": "2026-09-25"
  },
  {
   "id": "O032c9c8d",
