@@ -22,7 +22,7 @@ def money_k(x): x = x or 0; return f"${x/1000:,.0f}K" if abs(x) >= 10000 else f"
 NAVY, GREEN, RED, MUTED, LINE = "#14213D", "#2D6A4F", "#B42318", "#6B7280", "#E5E7EB"
 TEAL, BLUE, LEAF = "#2F8F8F", "#3080B0", "#80B040"          # the CCGL logo colours
 URL = CFG.get("crm_url", "https://dangillan1.github.io/ccgl-crm/")
-LOGO = CFG.get("logo_url", URL.rstrip("/") + "/logo-email.png")
+LOGO = "cid:ccgl-logo"                                        # embedded in the email itself (see --send); no remote image needed
 
 def row(cells, bold_first=True, muted_last=False):
     tds = []
@@ -50,9 +50,10 @@ kpis = [("Orders last week", f"{w['n']} · {money(w['total'])}", delta.strip() o
         ("Revenue at risk", money_k(rar["total"]), f"{len(rar['rows'])} accounts past their rhythm"),
         ("Past due in QuickBooks", money_k(y["qbo_past_due"]), f"{len(pdq)} accounts · {money_k(y['qbo_open'])} open")]
 kpi_html = "<table cellpadding='0' cellspacing='0' width='100%' style='border-collapse:separate;border-spacing:6px 0;margin:10px -6px 0'><tr>" + "".join(
-    f"<td width='25%' style='background:#F1F7F7;border-top:3px solid {TEAL};border-radius:0 0 8px 8px;padding:10px 12px;vertical-align:top'><div style='font-size:11px;color:{MUTED};text-transform:uppercase;letter-spacing:.04em'>{e(l)}</div><div style='font-size:20px;font-weight:700;color:{BLUE};margin:2px 0'>{e(v)}</div><div style='font-size:11px;color:{MUTED}'>{e(s)}</div></td>"
+    f"<td width='25%' bgcolor='#F1F7F7' style='background-color:#F1F7F7;border-top:3px solid {TEAL};border-radius:0 0 8px 8px;padding:10px 12px;vertical-align:top'><div style='font-size:11px;color:{MUTED};text-transform:uppercase;letter-spacing:.04em'>{e(l)}</div><div style='font-size:20px;font-weight:700;color:{BLUE};margin:2px 0'>{e(v)}</div><div style='font-size:11px;color:{MUTED}'>{e(s)}</div></td>"
     for l, v, s in kpis) + "</tr></table>"
 
+subject = f"CCGL Monday brief · {monday.strftime('%b %-d')}: {money_k(w['total'])} last week, {len(due)} due for reorder, {money_k(y['qbo_past_due'])} past due"
 # ---- sections
 due_html = table("".join(row([e(r["account"]), owner(r["owner"]), ("<b style='color:%s'>due now</b>" % RED) if r["due_in"] <= 0 else f"due in {r['due_in']}d", money(r["ytd"])]) for r in due)) if due else "<div style='color:%s;font-size:13px'>Nobody on rhythm this week.</div>" % MUTED
 risk_html = table("".join(row([e(r["account"]), owner(r["owner"]), f"<span style='color:{RED}'>{r['days_since']}d</span> since last" + (f" · usually {r['avg_gap']}d" if r["avg_gap"] else ""), money(r["ytd"])]) for r in rar["rows"][:8]))
@@ -79,15 +80,17 @@ if rc["orders_without_invoice"] or rc["blank_totals_fillable"]: house.append(f"Q
 house_html = "<ul style='margin:6px 0 0 18px;padding:0;font-size:13px'>" + "".join(f"<li style='margin:3px 0'>{e(h)}</li>" for h in house) + "</ul>" if house else ""
 
 body = f"""
-<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;max-width:680px;margin:0 auto;color:#111827">
-  <table cellpadding='0' cellspacing='0' width='100%' style="background:{TEAL};background-image:linear-gradient(90deg,{TEAL},{BLUE});border-radius:8px 8px 0 0;border-collapse:collapse"><tr>
-    <td width='72' style='padding:12px 0 12px 16px;vertical-align:middle'><img src="{LOGO}" width='56' height='56' alt='Cape Cod Grow Lab' style='display:block;border-radius:50%;background:#fff;padding:3px'></td>
-    <td style='padding:12px 16px;vertical-align:middle;color:#fff'>
-      <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.9">Cape Cod Grow Lab · Wholesale</div>
-      <div style="font-size:20px;font-weight:700;margin-top:2px">Monday brief — week of {monday.strftime('%B %-d')}</div>
-      <div style="font-size:12px;opacity:.9;margin-top:2px">From the CCGL CRM and QuickBooks as of {TODAY.strftime('%A, %B %-d')}</div>
+<table cellpadding='0' cellspacing='0' width='100%' bgcolor='#F3F4F6' style='background-color:#F3F4F6;border-collapse:collapse'><tr><td align='center' style='padding:16px 8px'>
+<table cellpadding='0' cellspacing='0' width='100%' bgcolor='#FFFFFF' style="max-width:680px;background-color:#FFFFFF;border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#111827"><tr><td bgcolor='#FFFFFF' style='background-color:#FFFFFF;color:#111827'>
+<div style="color:#111827">
+  <table cellpadding='0' cellspacing='0' width='100%' bgcolor="{TEAL}" style="background-color:{TEAL};border-radius:8px 8px 0 0;border-collapse:collapse"><tr>
+    <td width='72' bgcolor="{TEAL}" style='padding:12px 0 12px 16px;vertical-align:middle;background-color:{TEAL}'><img src="{LOGO}" width='56' height='56' alt='Cape Cod Grow Lab' style='display:block;border-radius:50%;background:#ffffff;padding:3px'></td>
+    <td bgcolor="{TEAL}" style='padding:12px 16px;vertical-align:middle;color:#ffffff;background-color:{TEAL}'>
+      <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E6F4F4">Cape Cod Grow Lab · Wholesale</div>
+      <div style="font-size:20px;font-weight:700;margin-top:2px;color:#ffffff">Monday brief — week of {monday.strftime('%B %-d')}</div>
+      <div style="font-size:12px;margin-top:2px;color:#E6F4F4">From the CCGL CRM and QuickBooks as of {TODAY.strftime('%A, %B %-d')}</div>
     </td></tr></table>
-  <div style="height:4px;background:{LEAF}"></div>
+  <table cellpadding='0' cellspacing='0' width='100%' style="border-collapse:collapse"><tr><td bgcolor="{LEAF}" style="height:4px;background-color:{LEAF};font-size:0;line-height:0">&nbsp;</td></tr></table>
   <div style="padding:4px 18px 18px;border:1px solid {LINE};border-top:none;border-radius:0 0 8px 8px">
     {kpi_html}
     {section("This week's reorder calls", due_html, "On their usual rhythm — call before they run out.")}
@@ -102,8 +105,11 @@ body = f"""
       <div style="margin-top:8px;color:{TEAL};font-weight:600">Cape Cod Grow Lab · Wholesale · Brewster, MA</div>
     </div>
   </div>
-</div>"""
-subject = f"CCGL Monday brief · {monday.strftime('%b %-d')}: {money_k(w['total'])} last week, {len(due)} due for reorder, {money_k(y['qbo_past_due'])} past due"
+</div>
+</td></tr></table></td></tr></table>"""
+HEAD = "<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width'><meta name='color-scheme' content='light only'><meta name='supported-color-schemes' content='light only'><style>:root{color-scheme:light only;supported-color-schemes:light only}body{margin:0;padding:0;background:#F3F4F6}td{color:#111827}</style><title>" + e(subject) + "</title></head><body bgcolor='#F3F4F6' style='margin:0;padding:0;background-color:#F3F4F6'>"
+full_html = HEAD + body + "</body></html>"""
+
 text = "\n".join([
     f"CCGL Wholesale — Monday brief, week of {monday.strftime('%B %-d, %Y')}",
     "", f"Orders last week: {w['n']} / {money(w['total'])}{delta}", f"Due for reorder this week: {len(due)} accounts ({money(due_total)} of 2026 revenue)",
@@ -113,7 +119,36 @@ text = "\n".join([
     ["", "COLLECTIONS"] + [f"  {r['account']} — {money(r['past_due'])} past due, oldest {r['oldest_days']}d, owes {money(r['owes'])}" for r in pdq[:8]] +
     ["", "WHERE TO FOCUS"] + [f"  [{x['priority'].upper()}] {x['headline']}\n    {x['assessment']}\n    Do: {x['action']}" for x in top_ins] +
     ["", "HOUSEKEEPING"] + [f"  - {h}" for h in house] + ["", f"Open the CRM: {URL}"])
-json.dump({"subject": subject, "to": CFG["to"], "cc": CFG.get("cc", []), "html": body, "text": text}, open(os.path.join(OUT, "weekly_email.json"), "w"), indent=1, ensure_ascii=False)
-open(os.path.join(OUT, "weekly_email.html"), "w").write("<!doctype html><meta charset='utf-8'><title>" + e(subject) + "</title><body style='margin:0;padding:16px;background:#F3F4F6'>" + body + "</body>")
+json.dump({"subject": subject, "to": CFG["to"], "cc": CFG.get("cc", []), "html": full_html, "text": text}, open(os.path.join(OUT, "weekly_email.json"), "w"), indent=1, ensure_ascii=False)
+open(os.path.join(OUT, "weekly_email.html"), "w").write(full_html)
 open(os.path.join(OUT, "weekly_email.txt"), "w").write(text)
 print("SUBJECT:", subject); print("TO:", ", ".join(CFG["to"])); print("written tools/out/weekly_email.{json,html,txt}")
+
+# ---- --send : deliver it ourselves over Gmail SMTP as "CCGL CRM Weekly Update", logo embedded.
+# Credentials live OUTSIDE the repo in ~/.ccgl_crm_smtp.json: {"user": "…@gmail.com", "app_password": "…"} (tools/smtp_setup.py writes it).
+if "--send" in sys.argv:
+    import smtplib, ssl
+    from email.mime.multipart import MIMEMultipart
+    from email.mime.text import MIMEText
+    from email.mime.image import MIMEImage
+    from email.utils import formataddr, formatdate, make_msgid
+    cred_path = os.path.expanduser("~/.ccgl_crm_smtp.json")
+    if not os.path.exists(cred_path): sys.exit("no ~/.ccgl_crm_smtp.json — run python3 tools/smtp_setup.py once on this Mac")
+    cred = json.load(open(cred_path))
+    to = CFG["to"]; cc = CFG.get("cc", [])
+    if "--to" in sys.argv:                                    # test send: --to someone@example.com (overrides the list, no cc)
+        to = [sys.argv[sys.argv.index("--to") + 1]]; cc = []
+    msg = MIMEMultipart("related")
+    msg["Subject"] = subject; msg["From"] = formataddr((CFG.get("from_name", "CCGL CRM Weekly Update"), cred["user"]))
+    msg["To"] = ", ".join(to)
+    if cc: msg["Cc"] = ", ".join(cc)
+    msg["Date"] = formatdate(localtime=True); msg["Message-ID"] = make_msgid(domain="capecodgrowlab.com")
+    if CFG.get("reply_to"): msg["Reply-To"] = CFG["reply_to"]
+    alt = MIMEMultipart("alternative"); alt.attach(MIMEText(text, "plain", "utf-8")); alt.attach(MIMEText(full_html, "html", "utf-8")); msg.attach(alt)
+    logo_path = os.path.join(ROOT, "logo-email.png")
+    if os.path.exists(logo_path):
+        img = MIMEImage(open(logo_path, "rb").read(), _subtype="png"); img.add_header("Content-ID", "<ccgl-logo>"); img.add_header("Content-Disposition", "inline", filename="ccgl-logo.png"); msg.attach(img)
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context()) as smtp:
+        smtp.login(cred["user"], cred["app_password"])
+        smtp.sendmail(cred["user"], to + cc, msg.as_string())
+    print("SENT as", msg["From"], "to", ", ".join(to + cc))

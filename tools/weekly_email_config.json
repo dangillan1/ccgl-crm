@@ -1,6 +1,13 @@
 {
- "to": ["dan@capecodgrowlab.com", "matt@capecodgrowlab.com", "charley.h@capecodgrowlab.com", "joey.estrella@capecodgrowlab.com"],
+ "to": [
+  "dan@capecodgrowlab.com",
+  "matt@capecodgrowlab.com",
+  "charley.h@capecodgrowlab.com",
+  "joey.estrella@capecodgrowlab.com"
+ ],
  "cc": [],
  "crm_url": "https://dangillan1.github.io/ccgl-crm/",
- "max_assessments": 6
+ "max_assessments": 6,
+ "from_name": "CCGL CRM Weekly Update",
+ "reply_to": "dan@capecodgrowlab.com"
 }

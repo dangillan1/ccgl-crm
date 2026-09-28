@@ -173,8 +173,10 @@ the keychain, creating the Cowork task from `tools/monday_task_prompt.md`, and a
 QuickBooks and Gmail tools. Only ONE Mac should have the Cowork task enabled, or two briefs go out.
 
 The Cowork task runs while the Cowork app is open on that Mac with the folder connected; if the app was
-closed at 7:00 it runs at next launch. The email goes from the Mac mini's Gmail (dgmacminiai1@gmail.com) to
-the addresses in `weekly_email_config.json`. Logs: `tools/out/sync.log` and `/tmp/ccgl-crm-monday-*.log`.
+closed at 7:00 it runs at next launch. The email is sent by `weekly_email.py --send` over Gmail SMTP as "CCGL CRM Weekly Update" (the Mac mini's
+dgmacminiai1@gmail.com, app password stored once with `tools/smtp_setup.py` in `~/.ccgl_crm_smtp.json`, never in
+the repo) to the addresses in `weekly_email_config.json`; the logo is embedded and the HTML declares light-only
+colour scheme so dark-mode mail apps leave it alone. Logs: `tools/out/sync.log` and `/tmp/ccgl-crm-monday-*.log`.
 If the 7:00 leg fails, the task emails Dan alone with what broke and the site simply keeps last week's data.
 
 ### Cutover
