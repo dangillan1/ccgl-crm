@@ -371,7 +371,7 @@ def main():
             for f in ("owner", "grade"):
                 cur = a.get(f, "")
                 if cur and cur != "Unassigned": sheet_fields.pop(f, None)
-            if a.get("in_customer_tracker") and a.get("status") == "Current": sheet_fields.pop("status", None)
+            if (a.get("in_customer_tracker") or a.get("in_qbo")) and a.get("status") == "Current": sheet_fields.pop("status", None)   # tracker / QBO say customer: the Sheet can't demote
             if a.get("town") and not sheet_fields.get("town"): sheet_fields.pop("town", None)
             a.update(sheet_fields)
             a["flags"] = sorted(set([f for f in a.get("flags", []) if f not in ("unassigned","shared-owner","owner-not-user","missing-from-sheet")] + flags))

@@ -1,0 +1,67 @@
+{
+ "_readme": "QuickBooks customer -> CRM account. Only exceptions live here; everything else is matched by name and ship-to town in build_qbo.py. A value can be one account id, or a list of ids (chain-level customer: each invoice goes to the location whose town matches the ship-to address; if none matches it is split evenly across the list). Run `python tools/build_qbo.py` after editing.",
+ "EMBR (Kur Retail)": "A0511",
+ "EMBR (Northampton)": "A0105",
+ "Fyre Ants (Apical)": "A0121",
+ "Surfs Up": "A0304",
+ "Zen Leaf": [
+  "A0356",
+  "A0357"
+ ],
+ "Zen Leaf Plymouth": "A0356",
+ "Seaside Joint Ventures Inc.": "A0283",
+ "SunnyDayz": "A0299",
+ "Low Key, LLC": "A0205",
+ "Low Key West Roxbury": "A0205",
+ "Lowkey West Roxbury": "A0205",
+ "Thrive Quincy": "A0329",
+ "Thrive Middleborough": "A0328",
+ "Thrive Beverly": "A0327",
+ "Capeway Cannabis - Bourne": "A0071",
+ "Capeway Cannabis, LLC": "A0071",
+ "Health Circle, Inc.": "A0155",
+ "Health Circle Rockland": "A0154",
+ "Pioneer Valley Trading Co.": [
+  "A0249",
+  "A0250"
+ ],
+ "Pioneer Valley Trading Southwick": "A0250",
+ "Fresh Connection": [
+  "A0119",
+  "A0118"
+ ],
+ "Fresh Connection Cambridge": "A0118",
+ "New Dia": "A0230",
+ "New Dia Fenway": "A0230",
+ "New Leaf - 2nd St": "A0233",
+ "New Leaf - S Main St.": "A0234",
+ "Resinate, Inc.": [
+  "A0515",
+  "A0265",
+  "A0266"
+ ],
+ "Ascend Wellness": [
+  "A0017",
+  "A0018",
+  "A0016"
+ ],
+ "Insa": "A0180",
+ "Cal Verde Naturals": "A0052",
+ "Cape Cod Cannabis": "A0070",
+ "LTT Trading Co": "AQBO0001",
+ "Alternative Compassion Services": [
+  "A0003",
+  "A0004"
+ ],
+ "The Old Bank LLC dba The Piping Plover": "A0251",
+ "Pioneer Cannabis Co.": "A0248",
+ "Dris Corp": "A0097",
+ "Mello": "A0215",
+ "The Goods": "A0315",
+ "Frozen 4 Corporation d/b/a South Shore Buds": "A0293",
+ "Verdant Reparative Inc. DBA Apex Noire Inc": "A0009",
+ "Budega, Inc. d/b/a Herbwell Cannabis": "A0161",
+ "Holistic Health Group DBA Suncrafted": "A0298",
+ "Sweetgrass Botanicals": "A0365",
+ "Roslindale Cannabis Co": "A0075"
+}

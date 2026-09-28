@@ -3308,36 +3308,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0365",
-  "sheet_key": "",
-  "source": "Random Data 31826",
-  "name": "sweetgrassbotanicalslee.com",
-  "parent": "",
-  "town": "",
-  "address": "635 Laurel St Lee MA 01238",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "B",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "name-from-domain",
-   "ordered-but-not-current"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
   "id": "A0464",
   "sheet_key": "",
   "source": "Random Data 2",

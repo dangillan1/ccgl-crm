@@ -114,6 +114,33 @@ Accounts are matched by name+town, contacts by (account, email, name), so IDs ar
 the team logged in the CRM is lost. Rows that vanished from the Sheet are kept and flagged
 `missing-from-sheet`.
 
+## QuickBooks feed (read-only)
+
+`data/qbo.json` carries what QuickBooks knows that the tracker doesn't: invoices, open balances, due dates.
+The app shows it as **Invoiced / Owes** columns on Active Accounts, a red *Owes $X · past due* line on the
+account page (everyone sees it — check before a reorder or delivery), a QuickBooks card with the invoice
+list, and on Insights a *Past due* list plus a *QuickBooks vs Order Tracker* reconciliation (orders with no
+invoice, invoices with no order, tracker totals that differ from the invoice, blank totals QBO can fill).
+
+Nothing in the app talks to QuickBooks and no QBO credential exists in the repo: Claude pulls the data
+through Dan's QBO connection and writes two raw files, then `tools/build_qbo.py` turns them into the feed.
+
+```
+tools/qbo_raw/invoices_2026.json   one row per invoice (id, doc, date, due, total, balance, customer, ship-to town)
+tools/qbo_raw/customers.json       one row per customer (id, name, all-time balance)
+tools/qbo_map.json                 QBO customer name -> CRM account id; only the exceptions (chains, spellings)
+tools/build_qbo.py                 -> data/qbo.json (+ flips invoiced prospects to Active, creates AQBO… accounts)
+```
+
+How an invoice lands on an account: `qbo_map.json` first; otherwise name match, and where a name covers
+several locations the invoice's ship-to town picks the store (Ascend Wellness → Newton, Resinate Inc. →
+Douglas). No town match → split evenly across the chain's locations and flagged *split*. A QBO customer
+with no CRM account at all shows up under *QBO customers not in the CRM* on Insights — add it to
+`qbo_map.json` (or create the account) and rebuild.
+
+**Refresh** (ask Claude, or weekly): re-pull invoices + customers → `python tools/build_qbo.py` → commit and
+push. `--merge` re-imports keep `in_qbo` accounts Active.
+
 ### Cutover
 
 When you trust the CRM: stop editing the Sheet, run one last `--merge`, and in `index.html` change
@@ -141,4 +168,5 @@ When you trust the CRM: stop editing the Sheet, run one last `--merge`, and in `
 3. Weighted prioritisation in Insights (grade × staleness × stage × $) and per-rep daily queue
 4. Manager view: activity volume by rep, pipeline movement, new accounts won, weekly roll-up
 5. AI assessments regenerated automatically on import (API key in Settings)
-6. Cutover: Sheet retired
+6. ✅ QuickBooks feed: invoiced $, open balance / past due on every account, tracker reconciliation (Sep 28)
+7. Cutover: Sheet retired

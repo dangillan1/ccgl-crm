@@ -1,0 +1,537 @@
+[
+ {
+  "id": "449",
+  "name": "Ack Natural",
+  "balance": 0.0
+ },
+ {
+  "id": "357",
+  "name": "Alternative Compassion Services",
+  "balance": 0.0
+ },
+ {
+  "id": "361",
+  "name": "Apex Noire",
+  "balance": 4925
+ },
+ {
+  "id": "487",
+  "name": "Ascend Wellness",
+  "balance": 6640
+ },
+ {
+  "id": "528",
+  "name": "Ascend Wellness Boston",
+  "balance": 6345
+ },
+ {
+  "id": "529",
+  "name": "Ascend Wellness New Bedford",
+  "balance": 7233.85
+ },
+ {
+  "id": "444",
+  "name": "BOUTIQ",
+  "balance": 0.0
+ },
+ {
+  "id": "415",
+  "name": "BeWell Organic Medicine",
+  "balance": 0.0
+ },
+ {
+  "id": "512",
+  "name": "Bliss",
+  "balance": 0.0
+ },
+ {
+  "id": "502",
+  "name": "Blossom Flower",
+  "balance": 0.0
+ },
+ {
+  "id": "522",
+  "name": "BoomX",
+  "balance": 2750.5
+ },
+ {
+  "id": "489",
+  "name": "Botera Brockton",
+  "balance": 3413.46
+ },
+ {
+  "id": "488",
+  "name": "Botera Franklin",
+  "balance": 3045.17
+ },
+ {
+  "id": "490",
+  "name": "Botera Taunton",
+  "balance": 0.0
+ },
+ {
+  "id": "453",
+  "name": "Bountiful Framingham",
+  "balance": 0.0
+ },
+ {
+  "id": "438",
+  "name": "Bountiful Rowley",
+  "balance": 0.0
+ },
+ {
+  "id": "520",
+  "name": "Bud Barn",
+  "balance": 0.0
+ },
+ {
+  "id": "389",
+  "name": "CNA Amesbury",
+  "balance": -477.5
+ },
+ {
+  "id": "390",
+  "name": "CNA Haverhill",
+  "balance": 0.0
+ },
+ {
+  "id": "521",
+  "name": "Cal Verde Naturals",
+  "balance": 0.0
+ },
+ {
+  "id": "416",
+  "name": "CannaBarn",
+  "balance": 3300
+ },
+ {
+  "id": "508",
+  "name": "Cannabis Connection",
+  "balance": 0.0
+ },
+ {
+  "id": "509",
+  "name": "Cannabis Connection West Springfield",
+  "balance": 0.0
+ },
+ {
+  "id": "459",
+  "name": "Cannabis Healing",
+  "balance": 4700
+ },
+ {
+  "id": "443",
+  "name": "Cape Cod Cannabis",
+  "balance": 0.0
+ },
+ {
+  "id": "533",
+  "name": "Capeway Cannabis - Bourne",
+  "balance": 6190
+ },
+ {
+  "id": "352",
+  "name": "Capeway Cannabis, LLC",
+  "balance": 4100
+ },
+ {
+  "id": "",
+  "name": "Dris Corp",
+  "balance": -180
+ },
+ {
+  "id": "469",
+  "name": "EMBR (Kur Retail)",
+  "balance": 0.0
+ },
+ {
+  "id": "479",
+  "name": "EMBR (Northampton)",
+  "balance": 3280
+ },
+ {
+  "id": "358",
+  "name": "Eastern Cannabis Co.",
+  "balance": 8480.25
+ },
+ {
+  "id": "484",
+  "name": "Elysian",
+  "balance": 6425.25
+ },
+ {
+  "id": "272",
+  "name": "Ember Gardens Cape Cod LLC",
+  "balance": 0.0
+ },
+ {
+  "id": "304",
+  "name": "Emerald Grove, Inc.",
+  "balance": 0.0
+ },
+ {
+  "id": "452",
+  "name": "Enlite Indian Orchard",
+  "balance": -109.64
+ },
+ {
+  "id": "451",
+  "name": "Enlite Northampton",
+  "balance": 4825
+ },
+ {
+  "id": "401",
+  "name": "Firebrand",
+  "balance": 0.0
+ },
+ {
+  "id": "483",
+  "name": "Firehouse",
+  "balance": 5452.5
+ },
+ {
+  "id": "353",
+  "name": "Flower & Soul, Inc.",
+  "balance": 0.0
+ },
+ {
+  "id": "503",
+  "name": "Fresh Connection",
+  "balance": 0.0
+ },
+ {
+  "id": "517",
+  "name": "Fresh Connection Cambridge",
+  "balance": 0.0
+ },
+ {
+  "id": "460",
+  "name": "Fyre Ants (Apical)",
+  "balance": 3792.36
+ },
+ {
+  "id": "482",
+  "name": "Great Barrington Dispensary",
+  "balance": 0.0
+ },
+ {
+  "id": "493",
+  "name": "Greene Street Cannabis",
+  "balance": 0.0
+ },
+ {
+  "id": "379",
+  "name": "Greensoul Organics",
+  "balance": 0.0
+ },
+ {
+  "id": "328",
+  "name": "Harbor House Collective LLC",
+  "balance": 29916.5
+ },
+ {
+  "id": "370",
+  "name": "Healing Center",
+  "balance": 0.0
+ },
+ {
+  "id": "535",
+  "name": "Health Circle Rockland",
+  "balance": 1997.81
+ },
+ {
+  "id": "360",
+  "name": "Health Circle, Inc.",
+  "balance": 1997.81
+ },
+ {
+  "id": "348",
+  "name": "Hennep",
+  "balance": 0.0
+ },
+ {
+  "id": "448",
+  "name": "House Premium",
+  "balance": 0.0
+ },
+ {
+  "id": "501",
+  "name": "Insa",
+  "balance": 0.0
+ },
+ {
+  "id": "430",
+  "name": "Kush Groove Brockton",
+  "balance": -102
+ },
+ {
+  "id": "429",
+  "name": "Kush Groove Cambridge",
+  "balance": -58.5
+ },
+ {
+  "id": "486",
+  "name": "LTT Trading Co",
+  "balance": 0.0
+ },
+ {
+  "id": "515",
+  "name": "Lazy River Dracut",
+  "balance": 0.0
+ },
+ {
+  "id": "516",
+  "name": "Lazy River Tewksbury",
+  "balance": 0.0
+ },
+ {
+  "id": "402",
+  "name": "Local Cannabis Company",
+  "balance": 0.0
+ },
+ {
+  "id": "478",
+  "name": "Low Key West Roxbury",
+  "balance": 0.0
+ },
+ {
+  "id": "374",
+  "name": "Low Key, LLC",
+  "balance": 0.0
+ },
+ {
+  "id": "477",
+  "name": "Lowkey West Roxbury",
+  "balance": 3775
+ },
+ {
+  "id": "495",
+  "name": "Major Bloom",
+  "balance": 0.0
+ },
+ {
+  "id": "462",
+  "name": "Medicine Man",
+  "balance": 0.0
+ },
+ {
+  "id": "347",
+  "name": "New Dia",
+  "balance": 0.0
+ },
+ {
+  "id": "391",
+  "name": "New Dia Fenway",
+  "balance": 4180
+ },
+ {
+  "id": "480",
+  "name": "New Leaf - 2nd St",
+  "balance": 0.0
+ },
+ {
+  "id": "461",
+  "name": "New Leaf - S Main St.",
+  "balance": 0.0
+ },
+ {
+  "id": "463",
+  "name": "Peak Cannabis Co",
+  "balance": -70.17
+ },
+ {
+  "id": "405",
+  "name": "Pineapple Express, LLC",
+  "balance": 0.0
+ },
+ {
+  "id": "447",
+  "name": "Pinnacle Dispensary",
+  "balance": -100
+ },
+ {
+  "id": "277",
+  "name": "Pioneer Cannabis Co.",
+  "balance": 0.0
+ },
+ {
+  "id": "316",
+  "name": "Pioneer Valley Trading Co.",
+  "balance": 0.0
+ },
+ {
+  "id": "411",
+  "name": "Pioneer Valley Trading Southwick",
+  "balance": -5950
+ },
+ {
+  "id": "496",
+  "name": "Potency",
+  "balance": 0.0
+ },
+ {
+  "id": "437",
+  "name": "Prolific",
+  "balance": 3100
+ },
+ {
+  "id": "492",
+  "name": "Quincy Cannabis",
+  "balance": 0.0
+ },
+ {
+  "id": "497",
+  "name": "RISE Dracut",
+  "balance": 0.0
+ },
+ {
+  "id": "498",
+  "name": "RISE Maynard",
+  "balance": 0.0
+ },
+ {
+  "id": "413",
+  "name": "Resinate Worcester",
+  "balance": 0.0
+ },
+ {
+  "id": "385",
+  "name": "Resinate, Inc.",
+  "balance": 0.0
+ },
+ {
+  "id": "376",
+  "name": "Reverie 73 Beverly",
+  "balance": 5916
+ },
+ {
+  "id": "375",
+  "name": "Reverie 73 Gloucester",
+  "balance": 2238
+ },
+ {
+  "id": "354",
+  "name": "Reverie 73 Lowell",
+  "balance": 5026
+ },
+ {
+  "id": "494",
+  "name": "Roadtrip",
+  "balance": 0.0
+ },
+ {
+  "id": "475",
+  "name": "Roslindale Cannabis Co",
+  "balance": 0.0
+ },
+ {
+  "id": "279",
+  "name": "Seaside Joint Ventures Inc.",
+  "balance": -75
+ },
+ {
+  "id": "456",
+  "name": "Silver Therapeutics Palmer",
+  "balance": -750
+ },
+ {
+  "id": "457",
+  "name": "Silver Therapeutics Roslindale",
+  "balance": 0.0
+ },
+ {
+  "id": "458",
+  "name": "Silver Therapeutics Williamstown",
+  "balance": -842.75
+ },
+ {
+  "id": "341",
+  "name": "Stem Haverhill",
+  "balance": 0.0
+ },
+ {
+  "id": "511",
+  "name": "Stories Cannabis",
+  "balance": 0.0
+ },
+ {
+  "id": "293",
+  "name": "Sublime Cannabis Co.",
+  "balance": 0.0
+ },
+ {
+  "id": "100000011",
+  "name": "SunnyDayz",
+  "balance": 0.0
+ },
+ {
+  "id": "491",
+  "name": "Surfs Up",
+  "balance": 6012.25
+ },
+ {
+  "id": "407",
+  "name": "Sweetgrass Botanicals",
+  "balance": -500
+ },
+ {
+  "id": "397",
+  "name": "The Agriculturalist",
+  "balance": 0.0
+ },
+ {
+  "id": "298",
+  "name": "The Old Bank LLC dba The Piping Plover",
+  "balance": 0.0
+ },
+ {
+  "id": "526",
+  "name": "The Vault - Webster",
+  "balance": 0.0
+ },
+ {
+  "id": "527",
+  "name": "The Vault - Worcester",
+  "balance": 0.0
+ },
+ {
+  "id": "467",
+  "name": "Thrive Beverly",
+  "balance": 0.0
+ },
+ {
+  "id": "465",
+  "name": "Thrive Middleborough",
+  "balance": 0.0
+ },
+ {
+  "id": "466",
+  "name": "Thrive Quincy",
+  "balance": 0.0
+ },
+ {
+  "id": "481",
+  "name": "Trinity Naturals",
+  "balance": 0.0
+ },
+ {
+  "id": "510",
+  "name": "Uma Flowers",
+  "balance": 0.0
+ },
+ {
+  "id": "519",
+  "name": "Uma Flowers - Waltham",
+  "balance": 0.0
+ },
+ {
+  "id": "434",
+  "name": "Zen Leaf",
+  "balance": 7485.25
+ },
+ {
+  "id": "435",
+  "name": "Zen Leaf Plymouth",
+  "balance": 3980
+ }
+]

@@ -82,7 +82,8 @@
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0003",
@@ -108,7 +109,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 4,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0004",
@@ -262,7 +264,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 10,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0010",
@@ -446,7 +449,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 18,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0018",
@@ -472,7 +476,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 19,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0016",
@@ -500,7 +505,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 17,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0019",
@@ -967,7 +973,8 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 37,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0037",
@@ -1023,7 +1030,8 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "(same group as Stories Dispensary & Uma Flowers)",
-  "sheet_row": 39
+  "sheet_row": 39,
+  "in_qbo": true
  },
  {
   "id": "A0509",
@@ -1054,7 +1062,8 @@
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0039",
@@ -1082,7 +1091,8 @@
   "next_contact": "2026-08-10",
   "notes": "Jamie no longer there - emailed back & forth 1/5 plan to visit Anthony C. in Jan.",
   "sheet_row": 40,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0040",
@@ -1108,7 +1118,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 41,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0041",
@@ -1134,7 +1145,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 42,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0042",
@@ -1160,7 +1172,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 43,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0043",
@@ -1186,7 +1199,8 @@
   "next_contact": "2026-08-10",
   "notes": "Co-located location",
   "sheet_row": 44,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0044",
@@ -1212,7 +1226,8 @@
   "next_contact": "2026-08-10",
   "notes": "Rowley soon to have med license - big for North Shore competition",
   "sheet_row": 45,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0045",
@@ -1238,7 +1253,8 @@
   "next_contact": "2026-08-10",
   "notes": "Prepping reorder for 1/12 week or after",
   "sheet_row": 46,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0046",
@@ -1264,7 +1280,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 47,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0047",
@@ -1440,14 +1457,13 @@
   "sheet_key": "calverdenaturals|belmont",
   "source": "Master",
   "parent": "",
-  "stage": "New",
+  "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "MR283258",
   "tags": [],
   "flags": [
-   "ordered-but-not-current",
    "unassigned"
   ],
   "created": "2026-09-25",
@@ -1455,13 +1471,14 @@
   "town": "Belmont",
   "address": "1010 Pleasant St. Ste A",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "C",
   "owner": "Unassigned",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 53
+  "sheet_row": 53,
+  "in_qbo": true
  },
  {
   "id": "A0053",
@@ -1673,7 +1690,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 62,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0062",
@@ -1699,7 +1717,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 63,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0063",
@@ -1725,7 +1744,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 64,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0064",
@@ -1778,7 +1798,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 66,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0066",
@@ -1920,27 +1941,26 @@
   "sheet_key": "capecodcannabis|wellfleet",
   "source": "Master",
   "parent": "",
-  "stage": "New",
+  "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "MR282685",
   "tags": [],
-  "flags": [
-   "ordered-but-not-current"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Cape Cod Cannabis",
   "town": "Wellfleet",
   "address": "1446 US-6",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "",
   "owner": "Joey",
   "last_contact": "2026-05-05",
   "next_contact": "2026-05-19",
   "notes": "",
-  "sheet_row": 71
+  "sheet_row": 71,
+  "in_qbo": true
  },
  {
   "id": "A0071",
@@ -1970,7 +1990,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 72,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0072",
@@ -2077,7 +2098,8 @@
   "next_contact": "2026-08-10",
   "notes": "Reorder incoming for 1/12 week",
   "sheet_row": 76,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0076",
@@ -2130,7 +2152,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 78,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0078",
@@ -2156,7 +2179,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 79,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0079",
@@ -2690,7 +2714,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 99,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0099",
@@ -2766,7 +2791,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 102,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0102",
@@ -2844,7 +2870,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 105,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0105",
@@ -2872,7 +2899,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 106,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0511",
@@ -2908,7 +2936,8 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0512",
@@ -2972,7 +3001,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 107,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0107",
@@ -2998,7 +3028,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 108,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0108",
@@ -3024,7 +3055,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 109,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0109",
@@ -3213,7 +3245,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 116,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0116",
@@ -3239,7 +3272,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 117,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0117",
@@ -3265,7 +3299,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 118,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0118",
@@ -3291,7 +3326,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 119,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0119",
@@ -3317,7 +3353,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 120,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0120",
@@ -3371,7 +3408,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 122,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0122",
@@ -3602,7 +3640,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 131,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0132",
@@ -4006,7 +4045,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 136,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0146",
@@ -4032,7 +4072,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 147,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0147",
@@ -4087,7 +4128,8 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 149,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0149",
@@ -4256,7 +4298,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 154,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0155",
@@ -4282,7 +4325,8 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 156,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0154",
@@ -4308,7 +4352,8 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 155,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0156",
@@ -4398,27 +4443,26 @@
   "sheet_key": "hennep|franklin",
   "source": "Master",
   "parent": "Hennep",
-  "stage": "New",
+  "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "MP281766",
   "tags": [],
-  "flags": [
-   "ordered-but-not-current"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Hennep",
   "town": "Franklin",
   "address": "164 Grove St",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "",
   "owner": "Joey",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 161
+  "sheet_row": 161,
+  "in_qbo": true
  },
  {
   "id": "A0159",
@@ -4444,7 +4488,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 160,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0161",
@@ -4794,7 +4839,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 174,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0174",
@@ -4960,7 +5006,7 @@
   "sheet_key": "insa|easthampton",
   "source": "Master",
   "parent": "INSA",
-  "stage": "New",
+  "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
@@ -4972,13 +5018,14 @@
   "town": "Easthampton",
   "address": "122 Pleasant St Suite 144",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "",
   "owner": "Joey",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 181
+  "sheet_row": 181,
+  "in_qbo": true
  },
  {
   "id": "A0181",
@@ -5317,7 +5364,8 @@
   "next_contact": "2026-08-07",
   "notes": "",
   "sheet_row": 194,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0194",
@@ -5343,7 +5391,8 @@
   "next_contact": "2026-08-07",
   "notes": "",
   "sheet_row": 195,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0195",
@@ -5369,7 +5418,8 @@
   "next_contact": "2026-08-07",
   "notes": "",
   "sheet_row": 196,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0196",
@@ -5385,7 +5435,7 @@
   "flags": [],
   "created": "2026-09-25",
   "name": "Lazy River - Tewksbury",
-  "town": "",
+  "town": "Tewksbury",
   "address": "",
   "license_type": "Dispensary",
   "status": "Current",
@@ -5394,7 +5444,8 @@
   "last_contact": "2026-07-24",
   "next_contact": "2026-08-07",
   "notes": "",
-  "sheet_row": 197
+  "sheet_row": 197,
+  "in_qbo": true
  },
  {
   "id": "A0197",
@@ -5555,7 +5606,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 203,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0203",
@@ -5635,7 +5687,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 206,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0206",
@@ -5662,7 +5715,8 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 207
+  "sheet_row": 207,
+  "in_qbo": true
  },
  {
   "id": "A0207",
@@ -5910,7 +5964,8 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 215,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0215",
@@ -6338,7 +6393,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 231,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0231",
@@ -6418,7 +6474,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 234,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0234",
@@ -6443,7 +6500,8 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 235
+  "sheet_row": 235,
+  "in_qbo": true
  },
  {
   "id": "A0235",
@@ -6747,7 +6805,8 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0245",
@@ -6828,7 +6887,8 @@
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0247",
@@ -6854,7 +6914,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 248,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0248",
@@ -6880,7 +6941,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 249,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0250",
@@ -6908,7 +6970,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 251,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0249",
@@ -6936,7 +6999,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 250,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0251",
@@ -6964,7 +7028,8 @@
   "next_contact": "2026-01-19",
   "notes": "",
   "sheet_row": 252,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0252",
@@ -7016,7 +7081,8 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 254
+  "sheet_row": 254,
+  "in_qbo": true
  },
  {
   "id": "A0254",
@@ -7067,7 +7133,8 @@
   "next_contact": "2026-08-07",
   "notes": "",
   "sheet_row": 256,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0256",
@@ -7149,7 +7216,8 @@
   "next_contact": "2026-08-10",
   "notes": "Selling to Thrive Quincy and Pinnacle also Elysian soon",
   "sheet_row": 259,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0259",
@@ -7336,7 +7404,8 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0265",
@@ -7390,7 +7459,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 267,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0267",
@@ -7443,7 +7513,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 269,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0269",
@@ -7469,7 +7540,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 270,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0270",
@@ -7495,7 +7567,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 271,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0271",
@@ -7549,7 +7622,8 @@
   "next_contact": "2025-10-06",
   "notes": "",
   "sheet_row": 274,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0272",
@@ -7575,7 +7649,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 273,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0274",
@@ -7626,7 +7701,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 276,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0276",
@@ -7838,7 +7914,8 @@
   "next_contact": "2026-08-04",
   "notes": "",
   "sheet_row": 284,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0516",
@@ -7873,7 +7950,8 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0284",
@@ -7899,7 +7977,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 285,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0285",
@@ -7925,7 +8004,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 286,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0286",
@@ -8188,7 +8268,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 296,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0296",
@@ -8215,7 +8296,8 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 297
+  "sheet_row": 297,
+  "in_qbo": true
  },
  {
   "id": "A0297",
@@ -8241,7 +8323,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 298,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0298",
@@ -8296,7 +8379,8 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 300,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0300",
@@ -8434,7 +8518,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 305,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0305",
@@ -8601,7 +8686,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 310,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0310",
@@ -8896,7 +8982,8 @@
   "next_contact": "2026-04-16",
   "notes": "",
   "sheet_row": 321,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0321",
@@ -8924,7 +9011,8 @@
   "next_contact": "2026-04-16",
   "notes": "",
   "sheet_row": 322,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0322",
@@ -9087,7 +9175,8 @@
   "next_contact": "2026-08-10",
   "notes": "Vertically integrated; push for Recip's hard",
   "sheet_row": 328,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0328",
@@ -9113,7 +9202,8 @@
   "next_contact": "2026-08-10",
   "notes": "Vertically integrated; push for Recip's hard",
   "sheet_row": 329,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0329",
@@ -9139,7 +9229,8 @@
   "next_contact": "2026-08-10",
   "notes": "Vertically integrated; push for Recip's hard",
   "sheet_row": 330,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0330",
@@ -9267,7 +9358,8 @@
   "next_contact": "2026-08-07",
   "notes": "Visited in person 1/9/26 spoke with Nick new GM/Inventory - planning reorder for 2026",
   "sheet_row": 335,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0335",
@@ -9376,7 +9468,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 339,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0339",
@@ -9404,7 +9497,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 340,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0340",
@@ -9862,7 +9956,8 @@
   "next_contact": "2026-08-10",
   "notes": "Affiliated with Verano",
   "sheet_row": 357,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0357",
@@ -9888,6 +9983,73 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 358,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
+ },
+ {
+  "id": "AQBO0001",
+  "sheet_key": "",
+  "source": "CRM (QBO)",
+  "parent": "LTT Trading Co",
+  "stage": "Customer",
+  "stage_entered": "2026-09-28",
+  "delivery_notes": "",
+  "standing_requests": "",
+  "license_number": "",
+  "tags": [
+   "From QBO",
+   "Not in Master Sheet"
+  ],
+  "flags": [
+   "not-in-master"
+  ],
+  "created": "2026-09-28",
+  "name": "LTT Trading Co",
+  "town": "Worcester",
+  "address": "64 Beacon St B108",
+  "license_type": "",
+  "status": "Current",
+  "grade": "",
+  "owner": "Unassigned",
+  "last_contact": "",
+  "next_contact": "",
+  "claimed": true,
+  "claimed_by": "dan",
+  "claimed_at": "2026-09-28",
+  "in_qbo": true
+ },
+ {
+  "id": "A0365",
+  "sheet_key": "",
+  "source": "Random Data 31826",
+  "name": "Sweetgrass Botanicals",
+  "parent": "",
+  "town": "Lee",
+  "address": "635 Laurel St Lee MA 01238",
+  "license_type": "Dispensary",
+  "status": "Current",
+  "grade": "B",
+  "owner": "Unassigned",
+  "last_contact": "",
+  "next_contact": "",
+  "notes": "",
+  "stage": "Customer",
+  "stage_entered": "",
+  "delivery_notes": "",
+  "standing_requests": "",
+  "license_number": "",
+  "tags": [
+   "From QBO"
+  ],
+  "flags": [
+   "name-from-domain"
+  ],
+  "dup_candidates": [],
+  "created": "2026-09-25",
+  "sheet_row": null,
+  "claimed": true,
+  "claimed_by": "dan",
+  "claimed_at": "2026-09-28",
+  "in_qbo": true
  }
 ]
