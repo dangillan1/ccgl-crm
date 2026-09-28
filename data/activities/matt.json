@@ -14,5 +14,57 @@
   "type": "Task",
   "note": "Done: Visit thursday w/ samples",
   "date": "2026-09-25"
+ },
+ {
+  "id": "Xmuhhj00sn0bk",
+  "ts": "2026-09-25T21:40:45.148Z",
+  "account_id": "Amuhhix393x1p",
+  "type": "Note",
+  "note": "Created as prospect — - Reached out to MG via work cell\n- Interested in doing larger volume every month - I told them it would need to be large contracted quantities for us to allocate inventory towards that\n- Menu isn't that great",
+  "date": "2026-09-25"
+ },
+ {
+  "id": "Xmuhhjvct2lfu",
+  "ts": "2026-09-25T21:41:25.757Z",
+  "account_id": "Amuhhix393x1p",
+  "type": "Task",
+  "note": "Next step: Schedule sample drop off (due Sep 28, 26)",
+  "date": "2026-09-25"
+ },
+ {
+  "id": "Xmuhhl8286fuw",
+  "ts": "2026-09-25T21:42:28.880Z",
+  "account_id": "Amuhhix393x1p",
+  "type": "Call",
+  "note": "Spoke to buyer - operate multiple shops around the state.  Asked how may LBS we do a months and willing to purchase it all.  I told them it would have to be at a very high price due to our market demand and current client base.",
+  "date": "2026-09-24",
+  "contact_id": "Cmuhhiyth14qe"
+ },
+ {
+  "id": "Xmuhhm1p5s62j",
+  "ts": "2026-09-25T21:43:07.289Z",
+  "account_id": "Amuhhix393x1p",
+  "type": "Email",
+  "note": "Menu sent w/ 1st time buyer incentives and COD discounts (after 1st order - not stacked)",
+  "date": "2026-09-25",
+  "contact_id": "Cmuhhiyth14qe"
+ },
+ {
+  "id": "Xmuhhvv5n9i1l",
+  "ts": "2026-09-25T21:50:45.371Z",
+  "account_id": "A0052",
+  "type": "Email",
+  "note": "Reached out to Emma to reconnect - asked for feedback and anything we could have done better from a product and service standpoint",
+  "date": "2026-09-25",
+  "contact_id": "Ce5e1df80"
+ },
+ {
+  "id": "Xmulk6yh8jt8r",
+  "ts": "2026-09-28T18:06:26.828Z",
+  "account_id": "A0435",
+  "type": "Email",
+  "note": "Reached out to Kaily to confirm pop-up date and check in about new order",
+  "date": "2026-09-24",
+  "contact_id": "C948b6757"
  }
 ]
