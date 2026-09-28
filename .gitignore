@@ -6,3 +6,4 @@ __pycache__/
 tools/out/*.json
 tools/out/*.txt
 tools/out/sync.log
+tools/out/weekly_email.html

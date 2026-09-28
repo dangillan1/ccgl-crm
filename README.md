@@ -55,11 +55,12 @@ Reading works without a token (the Pages site serves the JSON); only saving need
 | Dan     | admin   | everything, plus users/passwords                                    |
 | Matt    | manager | edit, reassign owners (incl. bulk), merge duplicates, settings      |
 | Joey    | rep     | edit accounts/people, log activity, move pipeline stages            |
-| Charley | ops     | read everything; edit Delivery Notes                                |
+| Charley | ops     | read everything; orders, people, delivery notes                     |
+| Drew    | viewer  | Active Accounts and Orders 2026 only, read-only                      |
 
 Reps see *Today* scoped to their own book. Manager/admin see the whole book plus ownership and
-duplicate cleanup queues. Add or rename users in `data/users.json` (set `pw_hash` to `""` for a new
-user — they'll set a password at first sign-in). Reset a password from Settings (admin).
+duplicate cleanup queues. Add users from Settings (admin) — pick a name and role; they set their own PIN at first sign-in. Reset a
+password from Settings too.
 
 ## How the app is organised
 

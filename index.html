@@ -283,8 +283,11 @@ const ROLE={
   manager:{edit:1,people:1,reassign:1,merge:1,settings:1,users:0,log:1,order:1,claim:1,delivery:1,stage:1},
   rep:    {edit:1,people:1,reassign:0,merge:0,settings:0,users:0,log:1,order:1,claim:1,delivery:1,stage:1},
   ops:    {edit:0,people:1,reassign:0,merge:0,settings:0,users:0,log:1,order:1,claim:0,delivery:1,stage:0},
+  viewer: {edit:0,people:0,reassign:0,merge:0,settings:0,users:0,log:0,order:0,claim:0,delivery:0,stage:0,views:['active','orders']},
 };
 const can=k=>!!(ROLE[S.user?.role]||{})[k];
+const allowedView=v=>{ const r=ROLE[S.user?.role]||{}; return !r.views||r.views.includes(v); };
+const homeView=()=>{ const r=ROLE[S.user?.role]||{}; return r.views?r.views[0]:'insights'; };
 
 /* ---------------- boot ---------------- */
 async function boot(){
@@ -298,13 +301,14 @@ async function boot(){
   $('#reloadBtn').onclick=()=>loadAll(true); $('#q').oninput=e=>{ S.q=e.target.value; if(S.record){ S.record=null; } render(); };
   $('#newOrderTop').onclick=()=>newOrderForm(S.record||null);
   $('#newAccountTop').onclick=()=>newAccountForm();
-  window.addEventListener('hashchange',routeFromHash);
+  window.addEventListener('hashchange',()=>{ if(S.user) routeFromHash(); });
   document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ if(!$('#modal').hidden) closeModal(); } if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)){ e.preventDefault(); $('#q').focus(); } });
 }
 async function signIn(e){ e.preventDefault(); $('#gErr').textContent=''; const id=$('#gUser').value, pw=$('#gPw').value; const u=S.users.find(x=>x.id===id); if(!u) return;
   if(u.pw_hash&&!PREVIEW){ if(await hashPw(id,pw)!==u.pw_hash){ $('#gErr').textContent='Wrong password.'; return; } }
   S.user=u; sessionStorage.setItem(SESSION_KEY,id); await enter(); if(!u.pw_hash&&!PREVIEW) setTimeout(()=>promptSetPassword(true),400); }
-async function enter(){ $('#gate').hidden=true; $('#app').hidden=false; $('#uName').textContent=S.user.name; $('#uRole').textContent=S.user.role; S.readOnly=PREVIEW;
+async function enter(){ $('#gate').hidden=true; $('#app').hidden=false; $('#uName').textContent=S.user.name; $('#uRole').textContent=S.user.role; S.readOnly=PREVIEW; if(!allowedView(S.view)) S.view=homeView();
+  $('#newAccountTop').hidden=!can('edit'); $('#newOrderTop').hidden=!can('order');
   if(PREVIEW){ const b=$('#banner'); b.hidden=false; b.innerHTML='<b>Preview.</b> Read-only snapshot of the import — nothing here is saved. The live app runs from GitHub Pages.'; }
   await loadAll(); routeFromHash(); }
 async function loadAll(manual=false){ setSync('loading…'); try{
@@ -367,10 +371,10 @@ const VIEWS=[
   {id:'settings',label:'Settings',show:()=>can('settings')},
 ];
 const TITLES={insights:'Insights',active:'Active Accounts',pipeline:'Prospects',prospects:'Unclaimed Leads',orders:'Orders 2026',tasks:'Tasks',people:'People',emails:'Email List',activity:'Activity Log',settings:'Settings'};
-function go(view){ S.view=view; S.record=null; S.sel.clear(); location.hash='#/'+view; render(); }
+function go(view){ if(!allowedView(view)) view=homeView(); S.view=view; S.record=null; S.sel.clear(); location.hash='#/'+view; render(); }
 function open(id){ if(!ALL[id]) return; S.record=id; location.hash='#/account/'+id; render(); window.scrollTo(0,0); }
-function routeFromHash(){ const h=location.hash.replace(/^#\/?/,''); const m=h.match(/^account\/(.+)$/); if(m&&ALL[m[1]]){ S.record=m[1]; } else if(h&&TITLES[h]){ S.view=h; S.record=null; } render(); }
-function renderNav(){ $('#nav').innerHTML=VIEWS.map(v=>{ if(v.grp) return `<div class="grp">${v.grp}</div>`; if(v.show&&!v.show()) return ''; const n=v.count?v.count():null; return `<a class="item ${S.view===v.id&&!S.record?'on':''}" data-view="${v.id}"><span>${v.label}</span>${n!=null?`<span class="cnt ${v.cls&&n?v.cls:''}">${n}</span>`:''}</a>`; }).join(''); $$('#nav .item').forEach(el=>el.onclick=()=>go(el.dataset.view)); }
+function routeFromHash(){ const h=location.hash.replace(/^#\/?/,''); const m=h.match(/^account\/(.+)$/); if(m&&ALL[m[1]]){ S.record=m[1]; } else if(h&&TITLES[h]){ S.view=h; S.record=null; } if(!allowedView(S.view)) S.view=homeView(); render(); }
+function renderNav(){ const vis=VIEWS.filter(v=>v.grp||(allowedView(v.id)&&(!v.show||v.show()))); const groups=vis.filter((v,i)=>v.grp&&vis[i+1]&&!vis[i+1].grp); $('#nav').innerHTML=vis.map(v=>{ if(v.grp) return groups.includes(v)?`<div class="grp">${v.grp}</div>`:''; const n=v.count?v.count():null; return `<a class="item ${S.view===v.id&&!S.record?'on':''}" data-view="${v.id}"><span>${v.label}</span>${n!=null?`<span class="cnt ${v.cls&&n?v.cls:''}">${n}</span>`:''}</a>`; }).join(''); $$('#nav .item').forEach(el=>el.onclick=()=>go(el.dataset.view)); }
 function render(){ renderNav(); const v=$('#view'); if(S.record){ $('#viewTitle').textContent=ALL[S.record]?.name||''; renderRecord(v,S.record); return; }
   if(S.q.trim()&&['insights','tasks','activity','settings'].includes(S.view)){ $('#viewTitle').textContent='Search'; renderSearch(v); return; }
   $('#viewTitle').textContent=TITLES[S.view]||''; ({insights:renderInsights,active:renderActive,pipeline:renderPipeline,prospects:renderProspects,orders:renderOrders,tasks:renderTasks,people:renderPeople,emails:renderEmails,activity:renderActivityLog,settings:renderSettings}[S.view]||renderInsights)(v); }
@@ -399,8 +403,9 @@ const accGetter=(a,col)=>({_invoiced:a._invoiced||0,_owes:a._owes||0,_nContacts:
 /* ---------------- GLOBAL SEARCH (from pages that have no list of their own) ---------------- */
 function renderSearch(v){
   const q=S.q.trim(), ql=q.toLowerCase();
-  const accs=S.accounts.filter(a=>matches(a,q)).sort((p,r)=>(r._orderTotal||0)-(p._orderTotal||0)||cmp(p.name,r.name));
-  const leads=S.leads.filter(l=>matches(l,q)).sort((p,r)=>cmp(p.name,r.name));
+  const limited=!!(ROLE[S.user?.role]||{}).views;
+  const accs=S.accounts.filter(a=>matches(a,q)&&(!limited||a.status==='Current')).sort((p,r)=>(r._orderTotal||0)-(p._orderTotal||0)||cmp(p.name,r.name));
+  const leads=limited?[]:S.leads.filter(l=>matches(l,q)).sort((p,r)=>cmp(p.name,r.name));
   const people=S.contacts.filter(c=>(c.name||'').toLowerCase().includes(ql)||(c.email||'').toLowerCase().includes(ql)||(c.phone||'').includes(ql)||(c.role||'').toLowerCase().includes(ql));
   const sec=(title,rows,rowFn)=>`<div class="section" style="margin-top:0"><h4>${title} <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">${rows.length}</span></h4>${rows.length?`<div class="list">${rows.slice(0,25).map(rowFn).join('')}${rows.length>25?`<div class="li muted" style="font-size:12px">+${rows.length-25} more — narrow the search</div>`:''}</div>`:'<div class="note" style="margin-bottom:8px">No matches.</div>'}</div>`;
   v.innerHTML=`<p class="note" style="margin:0 0 12px">Results for <b>${esc(q)}</b> across the book, unclaimed leads and people. Clear the search box to go back to ${TITLES[S.view]}.</p>
@@ -649,11 +654,14 @@ function renderSettings(v){
   const st=S.settings, li=st.last_import||{};
   v.innerHTML=`<div class="grid2" style="align-items:start"><div class="card" style="padding:18px"><h4 class="section" style="margin-top:0">GitHub connection</h4><p class="note">Repo <code>${esc(GH.repo().owner)}/${esc(GH.repo().name)}</code> · ${GH.pat?'<span class="pill cur">token saved in this browser</span>':'<span class="pill warn">no token — read-only</span>'}</p><div style="display:flex;gap:8px;margin-top:8px"><button class="btn sm" id="setPat">${GH.pat?'Replace token':'Add token'}</button>${GH.pat?'<button class="btn ghost sm" id="clearPat">Remove</button>':''}</div>
       <h4 class="section">Your password</h4><button class="btn ghost sm" id="chgPw">Change my password</button>
-      ${can('users')?`<h4 class="section">Users</h4><div class="list">${S.users.map(u=>`<div class="li"><div class="grow"><span class="nm">${esc(u.name)}</span> <span class="muted" style="font-size:12px">· ${esc(u.role)}${u.pw_hash?'':' · <span style="color:var(--warn)">no password yet</span>'}</span></div><button class="btn ghost sm" data-resetpw="${u.id}">Reset password</button></div>`).join('')}</div><p class="note">admin: everything · manager: edit, reassign, merge, settings · rep: work accounts, log, claim, orders · ops: read, orders, delivery notes.</p>`:''}</div>
+      ${can('users')?`<h4 class="section">Users</h4><div class="list">${S.users.map(u=>`<div class="li"><div class="grow"><span class="nm">${esc(u.name)}</span> <span class="muted" style="font-size:12px">· ${esc(u.role)}${u.pw_hash?'':' · <span style="color:var(--warn)">no password yet</span>'}</span></div><button class="btn ghost sm" data-resetpw="${u.id}">Reset password</button></div>`).join('')}</div>
+      <div class="row" style="margin-top:10px;align-items:flex-end"><div class="field" style="flex:2"><label>Add a user</label><input id="nuName" placeholder="First name"></div><div class="field" style="flex:2"><label>Role</label><select id="nuRole">${['viewer','ops','rep','manager','admin'].map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><button class="btn sm" id="nuAdd">Add</button></div>
+      <p class="note">admin: everything · manager: edit, reassign, merge, settings · rep: work accounts, log, claim, orders · ops: read, orders, people, delivery notes · viewer: Active Accounts and Orders only, read-only. New users set their own PIN the first time they sign in.</p>`:''}</div>
     <div><div class="card" style="padding:18px"><h4 class="section" style="margin-top:0">Prospect stages</h4><p class="note">One per line, in order.</p><textarea id="stagesTa" ${can('settings')?'':'disabled'} style="width:100%;min-height:150px;font-family:var(--mono);font-size:12.5px">${esc((st.stages||[]).join('\n'))}</textarea>
       <h4 class="section">Owner names</h4><input id="ownersIn" ${can('settings')?'':'disabled'} style="width:100%;border:1px solid #d1d5db;border-radius:6px;padding:8px" value="${esc((st.owners||[]).join(', '))}">${can('settings')?'<div style="margin-top:10px"><button class="btn sm" id="saveSettings">Save settings</button></div>':''}</div>
       <div class="card" style="padding:18px;margin-top:14px"><h4 class="section" style="margin-top:0">Sheet + Order Tracker import</h4><p class="note">Last import <b>${esc(li.date||'—')}</b> from <code>${esc(li.file||'—')}</code>${li.report?` · ${li.report.master_rows} Master rows · ${li.report.pool_leads??''} unclaimed leads · ${li.report.orders_total??''} orders`:''}</p><p class="note">Refresh: export both as .xlsx, then <code>python tools/import_sheet.py "Contact List.xlsx" --orders "Order Tracker.xlsx" --merge</code> and push. Sheet-owned fields refresh; everything the CRM owns (owner, grade, stage, next steps, delivery notes, activities, claims, CRM-entered orders) is kept.</p></div></div></div>`;
   $('#setPat',v).onclick=()=>promptPat(); const cp=$('#clearPat',v); if(cp) cp.onclick=()=>{ GH.pat=''; toast('Token removed'); loadAll(); }; $('#chgPw',v).onclick=()=>promptSetPassword(false);
+  const nu=$('#nuAdd',v); if(nu) nu.onclick=async()=>{ const name=$('#nuName',v).value.trim(); const role=$('#nuRole',v).value; if(!name){ toast('Type a name',true); return; } const id=name.toLowerCase().replace(/[^a-z0-9]/g,''); if(S.users.some(u=>u.id===id)){ toast(`${name} already exists`,true); return; } await saveUsers(us=>[...us,{id,name,role,pw_hash:''}],`Add user ${name} (${role})`); toast(`${name} added — they pick a PIN at first sign-in`); };
   $$('[data-resetpw]',v).forEach(b=>b.onclick=async()=>{ const id=b.dataset.resetpw; if(!confirm(`Reset ${userName(id)}'s password?`)) return; await saveUsers(us=>{ const u=us.find(x=>x.id===id); if(u) u.pw_hash=''; return us; },`Reset password for ${id}`); });
   const ss=$('#saveSettings',v); if(ss) ss.onclick=async()=>{ const stages=$('#stagesTa',v).value.split('\n').map(s=>s.trim()).filter(Boolean); const owners=$('#ownersIn',v).value.split(',').map(s=>s.trim()).filter(Boolean); await saveSettings(s=>({...s,stages,owners}),'Update stages/owners'); };
 }
@@ -854,7 +862,8 @@ async function mergeAccounts(fromId,intoId){ const from=ALL[fromId],into=ALL[int
 /* ---------------- preview self-test (console only) ---------------- */
 async function selfTest(){
   const errs=[]; const oe=console.error; console.error=(...a)=>{ errs.push(a.map(String).join(' ')); oe(...a); }; window.addEventListener('error',e=>errs.push('window: '+e.message));
-  try{ for(const u of ['matt','joey','charley']){ S.user=S.users.find(x=>x.id===u); await enter(); const r={};
+  try{ const vw=S.users.find(x=>x.role==='viewer'); if(vw){ S.user=vw; await enter(); S.view='insights'; go('insights'); console.log('SELFTEST-viewer '+JSON.stringify({landed:S.view,nav:$$('#nav .item').map(a=>a.dataset.view),newBtns:[$('#newAccountTop').hidden,$('#newOrderTop').hidden],actbar:(()=>{ const a=S.accounts.find(x=>x.status==='Current'); S.record=a.id; render(); const n=$$('#view .actbar .btn, #view [data-saveedit], #view [data-addc], #view [data-editc], #view [data-editorder], #view [data-editact]').length; S.record=null; return n; })()})); }
+    for(const u of ['matt','joey','charley']){ S.user=S.users.find(x=>x.id===u); await enter(); const r={};
       for(const vw of ['insights','active','pipeline','prospects','orders','tasks','people','emails','activity','settings']){ S.view=vw; S.record=null; S.q=''; render(); r[vw]={rows:$$('#view tbody tr, #view .opp .li, #view .ins-card, #view .list .li').length,nav:!!$$('#nav .item').find(a=>a.dataset.view===vw)}; }
       const apex=S.accounts.find(a=>a.name==='Apex Noire'); if(apex){ S.record=apex.id; render(); r.record={title:$('#view h2')?.textContent,alerts:$$('#view .alert').length,actbar:$$('#view .actbar .btn, #view .actbar select').length,key:$$('#view .key-contacts .kc').length,timeline:$$('#view .timeline .tl').length,people:$$('#view .rec-left .list .li').length}; }
       const lead=S.leads[0]; if(lead){ S.record=lead.id; render(); r.leadRecord={title:$('#view h2')?.textContent,claimBtn:$$('#view [data-claim]').length}; }
