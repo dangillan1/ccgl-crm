@@ -5215,20 +5215,23 @@
  },
  {
   "id": "O39e04e01",
-  "date": "2026-09-21",
+  "date": "2026-09-28",
   "account_id": "A0118",
   "account_raw": "Fresh Connection Cambridge | MR284113",
   "license": "MR284113",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Will Seagaard",
   "contact_email": "will@freshconnectionboston.com",
   "delivery_date": "",
-  "total": null,
+  "total": 4130,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 318
+  "row": 318,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-28"
  },
  {
   "id": "Oe6819bbe",
