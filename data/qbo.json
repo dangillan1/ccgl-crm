@@ -4945,7 +4945,7 @@
    "customers": [
     "Cannabis Healing"
    ],
-   "open_alltime": 4700
+   "open_alltime": 4700.0
   },
   "A0356": {
    "invoiced_2026": 15030.0,
@@ -4959,7 +4959,7 @@
    "customers": [
     "Zen Leaf Plymouth"
    ],
-   "open_alltime": 3980
+   "open_alltime": 3980.0
   },
   "A0357": {
    "invoiced_2026": 22935.25,
@@ -5015,7 +5015,7 @@
    "customers": [
     "Reverie 73 Beverly"
    ],
-   "open_alltime": 5916
+   "open_alltime": 5916.0
   },
   "A0266": {
    "invoiced_2026": 32140.97,
@@ -5072,7 +5072,7 @@
     "Capeway Cannabis - Bourne",
     "Capeway Cannabis, LLC"
    ],
-   "open_alltime": 10290
+   "open_alltime": 10290.0
   },
   "A0017": {
    "invoiced_2026": 10103.75,
@@ -5086,7 +5086,7 @@
    "customers": [
     "Ascend Wellness Boston"
    ],
-   "open_alltime": 6345
+   "open_alltime": 6345.0
   },
   "A0297": {
    "invoiced_2026": 58508.44,
@@ -5156,7 +5156,7 @@
    "customers": [
     "CannaBarn"
    ],
-   "open_alltime": 3300
+   "open_alltime": 3300.0
   },
   "A0275": {
    "invoiced_2026": 19756.16,
@@ -5184,7 +5184,7 @@
    "customers": [
     "Ascend Wellness"
    ],
-   "open_alltime": 6640
+   "open_alltime": 6640.0
   },
   "A0018": {
    "invoiced_2026": 7233.85,
@@ -5226,7 +5226,7 @@
    "customers": [
     "Apex Noire"
    ],
-   "open_alltime": 4925
+   "open_alltime": 4925.0
   },
   "A0269": {
    "invoiced_2026": 23719.22,
@@ -5240,7 +5240,7 @@
    "customers": [
     "Reverie 73 Gloucester"
    ],
-   "open_alltime": 2238
+   "open_alltime": 2238.0
   },
   "A0270": {
    "invoiced_2026": 29752.95,
@@ -5254,7 +5254,7 @@
    "customers": [
     "Reverie 73 Lowell"
    ],
-   "open_alltime": 5026
+   "open_alltime": 5026.0
   },
   "A0154": {
    "invoiced_2026": 1997.81,
@@ -5366,7 +5366,7 @@
    "customers": [
     "EMBR (Northampton)"
    ],
-   "open_alltime": 3280
+   "open_alltime": 3280.0
   },
   "A0121": {
    "invoiced_2026": 49157.5,
@@ -5522,7 +5522,7 @@
    "customers": [
     "Pinnacle Dispensary"
    ],
-   "open_alltime": -100
+   "open_alltime": -100.0
   },
   "A0255": {
    "invoiced_2026": 10702.5,
@@ -5536,7 +5536,7 @@
    "customers": [
     "Prolific"
    ],
-   "open_alltime": 3100
+   "open_alltime": 3100.0
   },
   "A0070": {
    "invoiced_2026": 3570.0,
@@ -5578,7 +5578,7 @@
    "customers": [
     "Seaside Joint Ventures Inc."
    ],
-   "open_alltime": -75
+   "open_alltime": -75.0
   },
   "A0202": {
    "invoiced_2026": 7392.5,
@@ -5620,7 +5620,7 @@
    "customers": [
     "Enlite Northampton"
    ],
-   "open_alltime": 4825
+   "open_alltime": 4825.0
   },
   "A0107": {
    "invoiced_2026": 17220.0,
@@ -5996,7 +5996,7 @@
    "customers": [
     "Kush Groove Brockton"
    ],
-   "open_alltime": -102
+   "open_alltime": -102.0
   },
   "A0253": {
    "invoiced_2026": 3633.75,
@@ -6108,7 +6108,7 @@
    "customers": [
     "Pioneer Valley Trading Southwick"
    ],
-   "open_alltime": -5950
+   "open_alltime": -5950.0
   },
   "A0115": {
    "invoiced_2026": 16843.28,
@@ -6150,7 +6150,7 @@
    "customers": [
     "Silver Therapeutics Palmer"
    ],
-   "open_alltime": -750
+   "open_alltime": -750.0
   },
   "A0516": {
    "invoiced_2026": 17243.0,
@@ -6206,7 +6206,7 @@
    "customers": [
     "Sweetgrass Botanicals"
    ],
-   "open_alltime": -500
+   "open_alltime": -500.0
   },
   "A0043": {
    "invoiced_2026": 5962.5,

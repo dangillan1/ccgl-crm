@@ -5,137 +5,145 @@
    "account": "A0515",
    "priority": "critical",
    "kind": "risk",
-   "headline": "Resinate Douglas — $48K, unowned, 59 days quiet",
-   "assessment": "Six confirmed bulk orders in 2026, $48K, reordering every ~37 days — and nothing since July 28, three weeks past their rhythm. Last-90-day spend fell from $37K to $8K. Worcester (Joey, $26K, ordered Sept 11) is healthy; Douglas has no owner at all. Note: the Sheet had this store filed under BeWell — Resinate owns BeWell and the same buyers cover both, which is why it looked like a BeWell problem. BeWell Merrimac itself has one order this year.",
-   "action": "Matt: give Douglas to Joey since he already has the Resinate relationship. Joey: one call to the Resinate buyers covers Douglas and Northampton (licensed, zero orders) — ask what changed on the Douglas bulk lots and quote the next one."
-  },
-  {
-   "account": "A0511",
-   "priority": "critical",
-   "kind": "coverage",
-   "headline": "$64K chain with no owner",
-   "assessment": "Springfield ($36K) and Northampton ($28K) together are a top-5 relationship, reordering roughly every 10 weeks, last order 37 days ago. Both locations are Unassigned. A chain this size with no named rep is the biggest coverage gap in the book.",
-   "action": "Matt: assign both locations to one owner. Owner: one call covers the chain — confirm the next order date and whether Worcester (licensed, zero orders) is a real third location to open."
+   "headline": "Resinate Douglas — $48,201 account, 62 days quiet, still has no owner",
+   "assessment": "#3 account in 2026 ($48,201 across 6 orders, reordering every ~37 days) is now 62 days since the last order — 25 days past its normal cycle. Last-90-day spend is $8,162 against $36,838 the prior period, the steepest fade in the book. It is still Unassigned, so nobody owns the call. Resinate Worcester (Joey, $26,325, 17 days since last on a ~33-day cadence) is healthy — this is a Douglas problem, not a Resinate problem.",
+   "action": "Matt: assign Douglas to Joey today. Joey: call the Douglas buyer this week, find out what changed on the bulk orders, and quote the next one."
   },
   {
    "account": "A0283",
-   "priority": "high",
+   "priority": "critical",
    "kind": "risk",
-   "headline": "A+ account 22 days past its reorder",
-   "assessment": "Eight orders, $38K, a tight 27-day cadence — and 49 days since the last one. Bulk & finished goods. This is Joey's account and it's the largest at-risk revenue he owns.",
-   "action": "Joey: call this week, not email. Lead with a restock offer on whatever they bought most in August."
-  },
-  {
-   "account": "A0009",
-   "priority": "high",
-   "kind": "due",
-   "headline": "Due for reorder in 3 days",
-   "assessment": "Four orders averaging $5.3K on a 33-day rhythm; last order 30 days ago. Standing instruction: always include Lysah in Finance. Buyer is Nate Hall.",
-   "action": "Joey: text Nate today with a menu — beat the reorder rather than chase it. Copy Lysah on the invoice."
-  },
-  {
-   "account": "A0270",
-   "priority": "high",
-   "kind": "due",
-   "headline": "Chain due this week — one call covers three stores",
-   "assessment": "Lowell and Gloucester are both due within 7 days (38-day rhythm, last order 31 days ago); Beverly ordered 10 days ago. Lowell's last-90-day spend is a third of the prior quarter — worth asking why. $82K across the three locations in 2026.",
-   "action": "Joey: one call to the buyer for the chain — confirm Lowell and Gloucester reorders, and ask what shifted in Lowell."
-  },
-  {
-   "account": "A0118",
-   "priority": "high",
-   "kind": "risk",
-   "headline": "34 days past reorder — the Sept 21 line was a placeholder",
-   "assessment": "Four confirmed orders, $15K, a 36-day rhythm — and nothing since July 17. The tracker has a Sept 21 row for this store with no total and no status; that's a planned order, not a real one. Somerville is the same story: one real order in April, then a placeholder.",
-   "action": "Joey: confirm whether the Sept 21 order actually happened. If it did, log it with the total; if not, this is a win-back call today."
+   "headline": "Seaside Orleans — A+ account at $37,863, 52 days quiet on a 27-day cadence",
+   "assessment": "#4 account in 2026 with 8 orders and a 27-day reorder rhythm is now 52 days out — almost two cycles missed. Last-90-day spend fell to $7,750 from $18,340. An A+ Cape account going silent is the most expensive gap on the list after Douglas.",
+   "action": "Joey: call or visit Seaside this week, find out whether they switched suppliers or are just slow on the fall order, and get a date on the next PO. Log the reason as a note either way."
   },
   {
    "account": "A0116",
    "priority": "high",
    "kind": "risk",
-   "headline": "#5 customer, 12 days past its rhythm",
-   "assessment": "Six confirmed orders, $36K, reordering every ~32 days — last real order Aug 12. The Sept 24 row in the tracker is a placeholder with no total. Graded B; this is A-tier revenue.",
-   "action": "Joey: same as Fresh Connection — did the Sept 24 order ship? Log it or call. Matt: regrade to A."
+   "headline": "Firehouse Hyde Park — top-5 account ($36,221) 47 days quiet and $5,452 just went past due",
+   "assessment": "Six orders and $36,221 in 2026 on a ~32-day cadence, now 47 days since the last one. The entire $5,452 balance tipped past due 3 days ago, and a Planned placeholder dated 9/24 is sitting in the tracker with no total. Quiet plus past due on a top-5 account is the combination that turns into a lost account.",
+   "action": "Joey: call Firehouse this week — confirm the 9/24 order is real and get a delivery date. Dan: make sure the $5,452 is paid or scheduled before Charley loads it."
   },
   {
-   "account": null,
+   "account": "A0511",
    "priority": "high",
-   "kind": "hygiene",
-   "headline": "57 'Active' accounts have no 2026 orders",
-   "assessment": "The Sheet marks 138 accounts Current, but 57 of them haven't ordered this year. They inflate the active count and hide the real base (~80 accounts driving $1.18M).",
-   "action": "Matt: work the 'Active, no 2026 orders' list — move each to Pipeline or Non-prospect. A clean Active list is what makes the reorder alerts trustworthy."
+   "kind": "coverage",
+   "headline": "Embr/Fyre Ants chain — $87,499 across 4 locations, no owner, $7,072 went past due yesterday",
+   "assessment": "Springfield ($35,744, #6 account, 40 days since last on a ~73-day cadence), Fyre Ants Easthampton ($23,845), Embr/Fyre Ants Worcester ($16,255 — one order, then 194 days of silence) and Northampton ($11,655) are all Unassigned: $87,499 of 2026 revenue with no rep. Easthampton ($3,792) and Northampton ($3,280) each went past due in the last day. This is the largest coverage gap in the book.",
+   "action": "Matt: assign all four locations to one owner this week. Dan: chase the $7,072 past due before the next Springfield delivery. Owner: one call to the chain buyer — confirm the next Springfield date and ask whether Worcester was a one-off."
   },
   {
-   "account": null,
+   "account": "A0118",
    "priority": "high",
-   "kind": "hygiene",
-   "headline": "197 accounts unassigned after Allen",
-   "assessment": "Every account Allen owned is now Unassigned, alongside the ones that were never assigned. Joey owns 161. Until the book is split, quiet-customer alerts have nobody to land on.",
-   "action": "Matt: bulk-assign from Active Accounts (select → assign). Start with the 15 unassigned accounts that ordered in 2026."
+   "kind": "risk",
+   "headline": "Fresh Connection Cambridge — $19,538, 73 days quiet, double its 36-day cadence",
+   "assessment": "73 days since the last order against a 36-day rhythm; last-90-day spend is $4,575 vs $12,816 the prior period. A Pending placeholder dated today (9/28) is in the tracker with no total, so something is in motion but nothing is confirmed. Fresh Connection Somerville ordered once ($2,146), went 172 days silent, and also has a Planned placeholder from 9/21.",
+   "action": "Joey: confirm the 9/28 Cambridge order with a total today and get it on Charley's route this week; while you have the buyer, ask for the Somerville reorder."
+  },
+  {
+   "account": "A0195",
+   "priority": "high",
+   "kind": "risk",
+   "headline": "Lazy River Dracut — $19,504, 42 days quiet on a 22-day cadence",
+   "assessment": "This account reorders roughly every 22 days and is now 42 days out — nearly two missed cycles on a $19,504 grade-B account. Short-cadence accounts disappear fastest when they go quiet, because they have already found somewhere else to fill the gap.",
+   "action": "Joey: call Dracut this week and get the next order dated; if they have slowed for a reason, log it as a note so the team knows."
+  },
+  {
+   "account": "A0098",
+   "priority": "high",
+   "kind": "due",
+   "headline": "Eastern Cannabis Malden — #1 account ($61,602) due for reorder in 7 days",
+   "assessment": "The biggest account in the book: $61,602 across 10 orders on a ~27-day cadence, 20 days since the last one and due again in 7 days. It is healthy today; the point is to keep it that way — the #1 account should never appear on the at-risk list.",
+   "action": "Joey: get the next PO in before Friday so it lands on next week's route. Charley: hold a Malden delivery slot for the week of 10/5."
+  },
+  {
+   "account": "A0009",
+   "priority": "high",
+   "kind": "due",
+   "headline": "Apex Noire Boston — $21,220 account due for reorder today",
+   "assessment": "$21,220 in 2026 on a ~33-day cadence and the reorder window is now (due in 0 days). It is the only account on this week's list that is already at its date, so it is the first call of the week.",
+   "action": "Joey: call Apex Noire today and get the order in this week."
+  },
+  {
+   "account": "A0148",
+   "priority": "high",
+   "kind": "ar",
+   "headline": "Harbor House Chelsea — $13,116 past due on a $29,916 open balance, the largest in the book",
+   "assessment": "Harbor House owes $29,916 in total, $13,116 of it past due (oldest invoice 3 days over). That single balance is 27% of all past-due money ($48,225) and 19% of everything open in QuickBooks ($161,214). The account is owned by 'Team', which means nobody in particular.",
+   "action": "Dan: confirm payment status before any further Chelsea delivery. Charley: check with Dan before loading Harbor House. Matt: put a single owner on the account."
+  },
+  {
+   "account": "A0269",
+   "priority": "medium",
+   "kind": "due",
+   "headline": "Reverie 73 Gloucester + Lowell — $46,031 due for reorder in 4 days, Gloucester fading",
+   "assessment": "Gloucester ($20,978) and Lowell ($25,053) are both due in 4 days on a ~38-day cadence. Gloucester is on the fading list: $5,515 in the last 90 days vs $15,463 the prior period, 34 days since its last order. Beverly ($35,647, 9 orders, 13 days since last) is healthy, so the buyer relationship is intact — Gloucester's volume is what dropped.",
+   "action": "Joey: one call to the Reverie buyer covers both locations this week; on Gloucester, ask why volume dropped by two-thirds and what brings it back."
+  },
+  {
+   "account": "A0320",
+   "priority": "medium",
+   "kind": "coverage",
+   "headline": "The Vault Webster + Worcester — $27,721 due for reorder in 3 days with nobody assigned",
+   "assessment": "Webster ($13,282) and Worcester ($14,439) are both due in 3 days on a ~42-day cadence, and both are Unassigned. Worcester is also rising — $9,190 in the last 90 days vs $5,249 before. That is $27,721 of 2026 revenue hitting its reorder window this week with no rep on the call.",
+   "action": "Matt: assign both Vault locations today so the call happens before the window closes. Owner: call by Wednesday and get both orders dated."
+  },
+  {
+   "account": "A0018",
+   "priority": "medium",
+   "kind": "ar",
+   "headline": "Five past-due invoices ($18,809) sitting on accounts that are due to reorder this week",
+   "assessment": "Ascend New Bedford ($3,984 past due, owes $7,234), Ascend Newton ($3,875, owes $6,640), Ascend Boston ($3,025, owes $6,345), Enlite Northampton ($4,825 — 25 days over, the oldest on the list) and Prolific Allston ($3,100) add up to $18,809 past due, all 16–25 days old. Enlite and Prolific are due for reorder in 5 days, New Bedford is 34 days since last on a 20-day cadence, and all of them have Planned or Pending placeholder rows (9/15 and 9/21) waiting in the tracker.",
+   "action": "Dan: confirm status on all five before Charley ships the next orders. Joey: mention the balance on each reorder call — get the payment and the PO in the same conversation."
+  },
+  {
+   "account": "A0046",
+   "priority": "medium",
+   "kind": "protect",
+   "headline": "Bud Barn Winchendon — spend up 4x to $15,775, due for reorder in 5 days",
+   "assessment": "Bud Barn did $15,775 in the last 90 days against $3,638 the prior period — the fastest riser in the book — and is due again in 5 days on a ~36-day cadence ($19,413 YTD). Other risers worth a check-in this week: Zenleaf Sharon ($12,535 vs $3,675), Surf's Up Dorchester ($17,620 vs $9,562, 7 days since last) and Elysian Quincy ($11,125 vs $4,362).",
+   "action": "Joey: call Bud Barn before Friday, lock the next order and ask for a standing order or a wider SKU set while they are growing. Matt: review the four risers for anything that should become a bigger commitment."
   },
   {
    "account": "A0071",
    "priority": "medium",
-   "kind": "rising",
-   "headline": "Growing fast, graded C",
-   "assessment": "$28K in 2026, eight orders, and the last 90 days nearly doubled the prior quarter ($18K vs $9.5K). Still graded C and Unassigned — the grade is stale and the account has no owner.",
-   "action": "Matt: regrade to A or B and assign an owner. Owner: ask what's driving the growth and whether Bourne (second license, tracked separately) is ready to order."
-  },
-  {
-   "account": "A0297",
-   "priority": "medium",
-   "kind": "rising",
-   "headline": "Momentum account — expand the menu",
-   "assessment": "#2 customer at $50K. Last 90 days ($27K) more than doubled the prior quarter. Ordered yesterday. Healthy 27-day cadence.",
-   "action": "Joey: on the next visit, ask what they'd add if it were on the menu — this is where a new SKU lands first."
-  },
-  {
-   "account": "A0098",
-   "priority": "medium",
-   "kind": "protect",
-   "headline": "#1 customer, healthy — protect it",
-   "assessment": "$62K, ten orders, 27-day rhythm, last order 17 days ago. Nothing is wrong. That's exactly when accounts get taken for granted.",
-   "action": "Joey: schedule a visit before the next reorder (~10 days) — check menu placement and in-store visibility rather than waiting for the order."
-  },
-  {
-   "account": "A0258",
-   "priority": "medium",
-   "kind": "winback",
-   "headline": "Graded A, silent since April",
-   "assessment": "Two orders, $12K, then nothing for 162 days. Unassigned. Either they churned or they're buying elsewhere; at Grade A the Sheet still thinks this is a priority account.",
-   "action": "Owner: one honest call — 'we haven't heard from you since April, what happened?' Then regrade or reactivate."
+   "kind": "coverage",
+   "headline": "Capeway Carver — a rising top-10 account ($27,677) with no owner; 49 active accounts unassigned",
+   "assessment": "Capeway Carver is #9 in 2026 ($27,677, 8 orders, 13 days since last) and rising — $18,165 in the last 90 days vs $9,512 before — yet it is Unassigned. So are Bliss Cannabis Lunenburg ($18,497) and Healing Center Fitchburg ($9,835, up from $6,301). In total 49 active accounts have no owner.",
+   "action": "Matt: assign Capeway, Bliss and Healing Center this week — a top-10 account should not be unowned — then work down the rest of the 49."
   },
   {
    "account": "A0063",
    "priority": "medium",
    "kind": "winback",
-   "headline": "Both locations went dark on the same day",
-   "assessment": "Westfield and West Springfield each ordered twice ($18K combined), last on May 27, then nothing for 121 days. Same-day stop across two stores is a decision, not drift — price, a competitor, or a buyer change.",
-   "action": "Joey: find out which. If it's price, bring the tier discount; if it's a new buyer, start over with samples."
+   "headline": "Cannabis Connection Westfield + West Springfield — $18,080 of A-grade business, 124 days silent, orders pencilled for today",
+   "assessment": "Both locations are grade A on a ~47-day cadence and both have gone 124 days without an order: Westfield ($9,761) and West Springfield ($8,319) did $0 in the last 90 days against $18,080 the prior period. Both have placeholder rows dated today, 9/28 (Westfield Pending, West Springfield Planned), so a win-back is already in motion but unconfirmed.",
+   "action": "Joey: turn both 9/28 placeholders into confirmed orders with totals this week. Charley: plan a western-MA run once they are in."
   },
   {
-   "account": null,
+   "account": "A0258",
    "priority": "medium",
-   "kind": "hygiene",
-   "headline": "11 tracker rows are placeholders, not orders",
-   "assessment": "The bottom of the Order Tracker has 11 rows with a date and a store but no total and a blank status — Enlite (2), Fresh Connection (2), Ascend (2), Firehouse, Road Trip, Trinity, Thrive, Apex. The CRM now shows these as Planned and leaves them out of revenue and reorder math.",
-   "action": "Whoever owns the tracker: when one of these ships, fill in the total and mark it Confirmed; if it fell through, delete the row. The CRM picks it up on the next refresh."
-  },
-  {
-   "account": null,
-   "priority": "medium",
-   "kind": "pipeline",
-   "headline": "19 new CCC licensees, none claimed",
-   "assessment": "13 are in the Prospects pool and 6 already sit in the book. New licenses are the one lead source with a known open date — they're building menus right now.",
-   "action": "Joey: claim five this week, intro call each, sample drop for any that bite."
-  },
-  {
-   "account": "A0193",
-   "priority": "low",
    "kind": "winback",
-   "headline": "Big first order, never came back",
-   "assessment": "One $9.9K order in March on the January 15%-off COD promo, then 192 days of silence. Graded A. Classic promo buyer — the discount got the order, the product didn't get the reorder.",
-   "action": "Joey: reopen with a visit and samples of what's moving now; don't lead with a discount."
+   "headline": "Four former regulars worth $41,711 have had nothing in 4–6 months — Quincy Cannabis first",
+   "assessment": "Quincy Cannabis Co (grade A, $12,120, ~44-day cadence) is 165 days out and Unassigned. House Premium Tyngsboro (A, $8,613, 168 days), Kush Groove Brockton (A, $9,925, 195 days) and Boutiq East Boston (C, $11,053, 123 days) are Joey's. Together that is $41,711 of 2026 revenue that has produced nothing since spring.",
+   "action": "Matt: assign Quincy. Joey: one win-back call each this week — Quincy and Kush Groove first, and log the outcome even if it is a no."
+  },
+  {
+   "account": null,
+   "priority": "low",
+   "kind": "pipeline",
+   "headline": "Pipeline: 2 open next steps (1 due today), 4 new prospects, nothing past New — and Joey's calls aren't being logged",
+   "assessment": "Open next steps: CastleLeaf Brighton 'Schedule sample drop off' is due today (9/28, Matt) and Haven Southwick has a Thursday 10/1 visit with samples (Matt). Four prospects were added last week, but the pipeline has nothing past New, with 213 prospects and 138 unclaimed leads behind them. Activity last 7 days: Joey logged 8 orders and no calls, visits or notes; Matt logged 1 call, 3 emails, 2 notes and 2 tasks.",
+   "action": "Matt: close the CastleLeaf step today and move Haven and CastleLeaf past New after Thursday's visit. Joey: log calls and visits, not just orders — the at-risk list cannot tell a call from silence."
+  },
+  {
+   "account": null,
+   "priority": "low",
+   "kind": "hygiene",
+   "headline": "Hygiene: 15 placeholder order rows with no total, 63 blank tracker totals QuickBooks can fill",
+   "assessment": "15 placeholder rows are still Planned or Pending without a total, including two from July (Thrive Beverly 7/20, Trinity Naturals Chelsea 7/27) that are either real orders missing a number or should be deleted. QuickBooks reconciliation: 287 orders paired with an invoice, 18 orders with no invoice, 32 invoices with no tracker order, 63 blank tracker totals fillable from QuickBooks and 96 where the two amounts differ. Every QuickBooks customer is mapped (0 unmapped).",
+   "action": "Charley: give each placeholder a total or delete it — start with the July rows. Dan: fill the 63 blank totals from QuickBooks and look at the 32 invoices with no matching order."
   }
  ]
 }
