@@ -75,5 +75,13 @@
   "note": "Called shop & reached out to info@websterlakecannabis.com - setting up samples drop off for 10/2",
   "date": "2026-09-28",
   "contact_id": null
+ },
+ {
+  "id": "Xmulqpqk5qmpn",
+  "ts": "2026-09-28T21:09:00.725Z",
+  "account_id": "A0347",
+  "type": "Task",
+  "note": "Next step: Send IG DM - \"How do we get samples to the team?\" (due Sep 29, 26)",
+  "date": "2026-09-28"
  }
 ]
