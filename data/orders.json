@@ -5344,13 +5344,16 @@
   "status": "Confirmed",
   "contact_name": "Rob Catania",
   "contact_email": "rob@sublimecannabis.co",
-  "delivery_date": "2026-10-02",
+  "delivery_date": "2026-09-29",
   "total": 5125,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 314
+  "row": 314,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-28"
  },
  {
   "id": "O8414a254",
