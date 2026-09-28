@@ -15634,5 +15634,16 @@
   "source": "CRM (Matt)",
   "primary": true,
   "created": "2026-09-25"
+ },
+ {
+  "id": "Cmultim3elvuy",
+  "account_id": "Amultik1baa7p",
+  "name": "Nathan Frim",
+  "email": "nate@kapnoscannaco.com",
+  "phone": "",
+  "role": "General Manager",
+  "source": "CRM (Joey)",
+  "primary": true,
+  "created": "2026-09-28"
  }
 ]
