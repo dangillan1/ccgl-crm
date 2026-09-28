@@ -9714,7 +9714,10 @@
   "last_contact": "2026-05-10",
   "next_contact": "2026-05-24",
   "notes": "",
-  "sheet_row": 348
+  "sheet_row": 348,
+  "next_step": "Send IG DM - \"How do we get samples to the team?\"",
+  "next_step_due": "2026-09-29",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0348",
