@@ -62,5 +62,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $5,975 · Sep 24, 26",
   "date": "2026-09-24"
+ },
+ {
+  "id": "Xmultin9w3x9r",
+  "ts": "2026-09-28T22:27:28.724Z",
+  "account_id": "Amultik1baa7p",
+  "type": "Note",
+  "note": "Created as prospect — Nathan reached out to us via email about carrying us in their newly built-out retail store located in Sharon Massachusetts.",
+  "date": "2026-09-28"
  }
 ]
