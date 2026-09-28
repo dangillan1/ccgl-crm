@@ -10094,7 +10094,7 @@
   "name": "Kapnos Cannabis Co.",
   "parent": "",
   "town": "Sharon",
-  "address": "",
+  "address": "2 Merchant Street",
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "C",
@@ -10114,6 +10114,9 @@
   "created_by": "joey",
   "claimed": true,
   "claimed_by": "joey",
-  "claimed_at": "2026-09-28"
+  "claimed_at": "2026-09-28",
+  "crm_edits": {
+   "address": "2026-09-28"
+  }
  }
 ]
