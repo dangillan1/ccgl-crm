@@ -372,6 +372,7 @@ def main():
                 cur = a.get(f, "")
                 if cur and cur != "Unassigned": sheet_fields.pop(f, None)
             if (a.get("in_customer_tracker") or a.get("in_qbo")) and a.get("status") == "Current": sheet_fields.pop("status", None)   # tracker / QBO say customer: the Sheet can't demote
+            for f in list(a.get("crm_edits") or {}): sheet_fields.pop(f, None)                                       # fields edited in the CRM stay as edited
             if a.get("town") and not sheet_fields.get("town"): sheet_fields.pop("town", None)
             a.update(sheet_fields)
             a["flags"] = sorted(set([f for f in a.get("flags", []) if f not in ("unassigned","shared-owner","owner-not-user","missing-from-sheet")] + flags))
@@ -742,7 +743,7 @@ def main():
             seen_lic.add((company.lower(), lic))
             acc, _ = find_account(company)
             if acc:
-                if lic and not acc.get("license_number"): acc["license_number"] = lic
+                if lic and not acc.get("license_number") and "license_number" not in (acc.get("crm_edits") or {}): acc["license_number"] = lic
                 if "New License 2026" not in acc["tags"]: acc["tags"].append("New License 2026")
                 report["licenses_attached"] += 1
             else:
@@ -826,7 +827,8 @@ def main():
                     acc = _new_location(base, acc.get("parent") or base)
                     report["tracker_new_locations"] = report.get("tracker_new_locations", 0) + 1
                 report["tracker_matched"] = report.get("tracker_matched", 0) + 1
-                if lic and not acc.get("license_number"): acc["license_number"] = lic
+                if "license_number" in (acc.get("crm_edits") or {}): pass                                   # edited in the CRM: leave it
+                elif lic and not acc.get("license_number"): acc["license_number"] = lic
                 elif lic and lic not in (acc.get("license_number") or ""): acc["license_number"] = (acc["license_number"] + " / " + lic).strip(" /")
                 index_license(acc)
                 sr = clean(r.get("Consistent Requests", ""))
