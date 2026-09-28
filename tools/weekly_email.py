@@ -125,15 +125,18 @@ open(os.path.join(OUT, "weekly_email.txt"), "w").write(text)
 print("SUBJECT:", subject); print("TO:", ", ".join(CFG["to"])); print("written tools/out/weekly_email.{json,html,txt}")
 
 # ---- --send : deliver it ourselves over Gmail SMTP as "CCGL CRM Weekly Update", logo embedded.
-# Credentials live OUTSIDE the repo in ~/.ccgl_crm_smtp.json: {"user": "…@gmail.com", "app_password": "…"} (tools/smtp_setup.py writes it).
+# Credentials live OUTSIDE the repo: {"user": "…@gmail.com", "app_password": "…"} (tools/smtp_setup.py writes it) — either in
+# ~/.ccgl_crm_smtp.json on the Mac, or in .ccgl_crm_smtp.json one level ABOVE the repo folder (the scheduled Cowork run's
+# sandbox has its own home and can only see the connected folder, so copy the file there once; git never sees it).
 if "--send" in sys.argv:
     import smtplib, ssl
     from email.mime.multipart import MIMEMultipart
     from email.mime.text import MIMEText
     from email.mime.image import MIMEImage
     from email.utils import formataddr, formatdate, make_msgid
-    cred_path = os.path.expanduser("~/.ccgl_crm_smtp.json")
-    if not os.path.exists(cred_path): sys.exit("no ~/.ccgl_crm_smtp.json — run python3 tools/smtp_setup.py once on this Mac")
+    cred_paths = [os.path.expanduser("~/.ccgl_crm_smtp.json"), os.path.join(os.path.dirname(ROOT), ".ccgl_crm_smtp.json")]
+    cred_path = next((c for c in cred_paths if os.path.exists(c)), None)
+    if not cred_path: sys.exit("no .ccgl_crm_smtp.json in ~ or next to the repo — run python3 tools/smtp_setup.py once on this Mac, then: cp ~/.ccgl_crm_smtp.json " + cred_paths[1])
     cred = json.load(open(cred_path))
     to = CFG["to"]; cc = CFG.get("cc", [])
     if "--to" in sys.argv:                                    # test send: --to someone@example.com (overrides the list, no cc)
