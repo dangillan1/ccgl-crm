@@ -138,8 +138,40 @@ Douglas). No town match → split evenly across the chain's locations and flagge
 with no CRM account at all shows up under *QBO customers not in the CRM* on Insights — add it to
 `qbo_map.json` (or create the account) and rebuild.
 
-**Refresh** (ask Claude, or weekly): re-pull invoices + customers → `python tools/build_qbo.py` → commit and
-push. `--merge` re-imports keep `in_qbo` accounts Active.
+**Refresh:** every Sunday evening (see below), or ask Claude any time. `--merge` re-imports keep `in_qbo`
+accounts Active.
+
+## Monday-morning refresh + Monday brief
+
+Three legs, all on the Mac that holds this repo (the Mac mini):
+
+| When (Mon) | What                                   | Runs as                                            |
+|------------|----------------------------------------|----------------------------------------------------|
+| 6:45 AM    | `git pull` — the team's week of saves  | launchd `com.ccgl.crm.monday-pull`                 |
+| 7:00 AM    | QBO pull → `build_qbo.py` → assessments → `weekly_email.py` → email the team | Cowork scheduled task `ccgl-monday-refresh` |
+| 7:45 AM    | commit + `git pull` + `git push`       | launchd `com.ccgl.crm.monday-push`                 |
+
+```
+tools/qbo_ingest.py          normalise the two QuickBooks query results into tools/qbo_raw/
+tools/weekly_facts.py        the week's numbers (what the assessments and the email are written from)
+tools/assessments.json       the AI assessments, rewritten each Monday; make_insights.py validates -> data/insights.json
+tools/weekly_email.py        builds the Monday brief -> tools/out/weekly_email.{json,html,txt}
+tools/weekly_email_config.json  recipients + CRM link (edit here to add/remove people)
+tools/monday_sync.sh         the pull / push legs;  tools/launchd/*.plist schedule them
+```
+
+One-time install of the git legs (on the Mac mini, in Terminal):
+
+```bash
+cd "/Users/dangillan/Documents/Claude/Projects/CCGL Wholesale/ccgl-crm"
+cp tools/launchd/com.ccgl.crm.monday-pull.plist tools/launchd/com.ccgl.crm.monday-push.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.ccgl.crm.monday-pull.plist ~/Library/LaunchAgents/com.ccgl.crm.monday-push.plist
+```
+
+The Cowork task runs while the Cowork app is open on that Mac with this folder connected; if the app was
+closed at 7:00 it runs at next launch. The email goes from the Mac mini's Gmail (dgmacminiai1@gmail.com) to
+the addresses in `weekly_email_config.json`. Logs: `tools/out/sync.log` and `/tmp/ccgl-crm-monday-*.log`.
+If the 7:00 leg fails, the task emails Dan alone with what broke and the site simply keeps last week's data.
 
 ### Cutover
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-25",
+ "generated": "2026-09-28",
  "assessments": [
   {
    "account": "A0515",
@@ -42,6 +42,38 @@
    "action": "Joey: one call to the buyer for the chain — confirm Lowell and Gloucester reorders, and ask what shifted in Lowell."
   },
   {
+   "account": "A0118",
+   "priority": "high",
+   "kind": "risk",
+   "headline": "34 days past reorder — the Sept 21 line was a placeholder",
+   "assessment": "Four confirmed orders, $15K, a 36-day rhythm — and nothing since July 17. The tracker has a Sept 21 row for this store with no total and no status; that's a planned order, not a real one. Somerville is the same story: one real order in April, then a placeholder.",
+   "action": "Joey: confirm whether the Sept 21 order actually happened. If it did, log it with the total; if not, this is a win-back call today."
+  },
+  {
+   "account": "A0116",
+   "priority": "high",
+   "kind": "risk",
+   "headline": "#5 customer, 12 days past its rhythm",
+   "assessment": "Six confirmed orders, $36K, reordering every ~32 days — last real order Aug 12. The Sept 24 row in the tracker is a placeholder with no total. Graded B; this is A-tier revenue.",
+   "action": "Joey: same as Fresh Connection — did the Sept 24 order ship? Log it or call. Matt: regrade to A."
+  },
+  {
+   "account": null,
+   "priority": "high",
+   "kind": "hygiene",
+   "headline": "57 'Active' accounts have no 2026 orders",
+   "assessment": "The Sheet marks 138 accounts Current, but 57 of them haven't ordered this year. They inflate the active count and hide the real base (~80 accounts driving $1.18M).",
+   "action": "Matt: work the 'Active, no 2026 orders' list — move each to Pipeline or Non-prospect. A clean Active list is what makes the reorder alerts trustworthy."
+  },
+  {
+   "account": null,
+   "priority": "high",
+   "kind": "hygiene",
+   "headline": "197 accounts unassigned after Allen",
+   "assessment": "Every account Allen owned is now Unassigned, alongside the ones that were never assigned. Joey owns 161. Until the book is split, quiet-customer alerts have nobody to land on.",
+   "action": "Matt: bulk-assign from Active Accounts (select → assign). Start with the 15 unassigned accounts that ordered in 2026."
+  },
+  {
    "account": "A0071",
    "priority": "medium",
    "kind": "rising",
@@ -82,30 +114,6 @@
    "action": "Joey: find out which. If it's price, bring the tier discount; if it's a new buyer, start over with samples."
   },
   {
-   "account": "A0193",
-   "priority": "low",
-   "kind": "winback",
-   "headline": "Big first order, never came back",
-   "assessment": "One $9.9K order in March on the January 15%-off COD promo, then 192 days of silence. Graded A. Classic promo buyer — the discount got the order, the product didn't get the reorder.",
-   "action": "Joey: reopen with a visit and samples of what's moving now; don't lead with a discount."
-  },
-  {
-   "account": "A0118",
-   "priority": "high",
-   "kind": "risk",
-   "headline": "34 days past reorder — the Sept 21 line was a placeholder",
-   "assessment": "Four confirmed orders, $15K, a 36-day rhythm — and nothing since July 17. The tracker has a Sept 21 row for this store with no total and no status; that's a planned order, not a real one. Somerville is the same story: one real order in April, then a placeholder.",
-   "action": "Joey: confirm whether the Sept 21 order actually happened. If it did, log it with the total; if not, this is a win-back call today."
-  },
-  {
-   "account": "A0116",
-   "priority": "high",
-   "kind": "risk",
-   "headline": "#5 customer, 12 days past its rhythm",
-   "assessment": "Six confirmed orders, $36K, reordering every ~32 days — last real order Aug 12. The Sept 24 row in the tracker is a placeholder with no total. Graded B; this is A-tier revenue.",
-   "action": "Joey: same as Fresh Connection — did the Sept 24 order ship? Log it or call. Matt: regrade to A."
-  },
-  {
    "account": null,
    "priority": "medium",
    "kind": "hygiene",
@@ -115,27 +123,19 @@
   },
   {
    "account": null,
-   "priority": "high",
-   "kind": "hygiene",
-   "headline": "57 'Active' accounts have no 2026 orders",
-   "assessment": "The Sheet marks 138 accounts Current, but 57 of them haven't ordered this year. They inflate the active count and hide the real base (~80 accounts driving $1.18M).",
-   "action": "Matt: work the 'Active, no 2026 orders' list — move each to Pipeline or Non-prospect. A clean Active list is what makes the reorder alerts trustworthy."
-  },
-  {
-   "account": null,
-   "priority": "high",
-   "kind": "hygiene",
-   "headline": "197 accounts unassigned after Allen",
-   "assessment": "Every account Allen owned is now Unassigned, alongside the ones that were never assigned. Joey owns 161. Until the book is split, quiet-customer alerts have nobody to land on.",
-   "action": "Matt: bulk-assign from Active Accounts (select → assign). Start with the 15 unassigned accounts that ordered in 2026."
-  },
-  {
-   "account": null,
    "priority": "medium",
    "kind": "pipeline",
    "headline": "19 new CCC licensees, none claimed",
    "assessment": "13 are in the Prospects pool and 6 already sit in the book. New licenses are the one lead source with a known open date — they're building menus right now.",
    "action": "Joey: claim five this week, intro call each, sample drop for any that bite."
+  },
+  {
+   "account": "A0193",
+   "priority": "low",
+   "kind": "winback",
+   "headline": "Big first order, never came back",
+   "assessment": "One $9.9K order in March on the January 15%-off COD promo, then 192 days of silence. Graded A. Classic promo buyer — the discount got the order, the product didn't get the reorder.",
+   "action": "Joey: reopen with a visit and samples of what's moving now; don't lead with a discount."
   }
  ]
 }

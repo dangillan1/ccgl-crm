@@ -469,7 +469,7 @@ function renderInsights(v){
       <div>${qboRecon()}${opp(O.pastdue,8)}${opp(O.risk)}${opp(O.due)}${opp(O.unassigned,6)}${opp(O.rising,6)}${opp(O.fading,6)}${opp(O.pipeline,6)}${opp(O.licenses,6)}${opp(O.once,6)}${opp(O.noorders,6)}</div>
     </div>`;
   $$('[data-ins]',v).forEach(c=>c.onclick=()=>{ S.filters.ins=c.dataset.ins; render(); });
-  $$('[data-more]',v).forEach(el=>el.onclick=e=>{ e.stopPropagation(); S.expand[el.dataset.more]=!S.expand[el.dataset.more]; render(); });
+  $$('[data-more]',v).forEach(el=>el.onclick=e=>{ e.preventDefault(); e.stopPropagation(); S.expand[el.dataset.more]=!S.expand[el.dataset.more]; const y=window.scrollY; render(); window.scrollTo(0,y); });
   $$('details[data-rec]',v).forEach(d=>d.ontoggle=()=>{ S.recOpen[d.dataset.rec]=d.open; });
   bindRows(v);
 }
