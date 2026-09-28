@@ -157,18 +157,22 @@ tools/weekly_facts.py        the week's numbers (what the assessments and the em
 tools/assessments.json       the AI assessments, rewritten each Monday; make_insights.py validates -> data/insights.json
 tools/weekly_email.py        builds the Monday brief -> tools/out/weekly_email.{json,html,txt}
 tools/weekly_email_config.json  recipients + CRM link (edit here to add/remove people)
-tools/monday_sync.sh         the pull / push legs;  tools/launchd/*.plist schedule them
+tools/monday_sync.sh         the pull / push legs;  tools/install_mini.sh installs them (launchd) on the Mac that runs this
+tools/monday_task_prompt.md  the Cowork task's instructions (create the task from this file on the Mac that runs it)
 ```
 
-One-time install of the git legs (on the Mac mini, in Terminal):
+One-time setup on the Mac that will run it (works for any username — paths come from $HOME):
 
 ```bash
-cd "/Users/dangillan/Documents/Claude/Projects/CCGL Wholesale/ccgl-crm"
-cp tools/launchd/com.ccgl.crm.monday-pull.plist tools/launchd/com.ccgl.crm.monday-push.plist ~/Library/LaunchAgents/
-launchctl load ~/Library/LaunchAgents/com.ccgl.crm.monday-pull.plist ~/Library/LaunchAgents/com.ccgl.crm.monday-push.plist
+curl -fsSL https://raw.githubusercontent.com/dangillan1/ccgl-crm/main/tools/install_mini.sh | bash
 ```
 
-The Cowork task runs while the Cowork app is open on that Mac with this folder connected; if the app was
+It clones the repo to `~/Documents/Claude/Projects/CCGL Wholesale/ccgl-crm`, installs the 6:45 / 7:45 launchd
+jobs, test-runs the pull, and prints the remaining by-hand steps: one `git push` to store the GitHub token in
+the keychain, creating the Cowork task from `tools/monday_task_prompt.md`, and a first *Run now* to approve the
+QuickBooks and Gmail tools. Only ONE Mac should have the Cowork task enabled, or two briefs go out.
+
+The Cowork task runs while the Cowork app is open on that Mac with the folder connected; if the app was
 closed at 7:00 it runs at next launch. The email goes from the Mac mini's Gmail (dgmacminiai1@gmail.com) to
 the addresses in `weekly_email_config.json`. Logs: `tools/out/sync.log` and `/tmp/ccgl-crm-monday-*.log`.
 If the 7:00 leg fails, the task emails Dan alone with what broke and the site simply keeps last week's data.
