@@ -142,5 +142,13 @@
   "type": "Order",
   "note": "Confirmed order $4,500 · Finished Goods · cc Lysah Hebron on all invoices.",
   "date": "2026-09-29"
+ },
+ {
+  "id": "Xmun5herpyv7j",
+  "ts": "2026-09-29T20:50:12.613Z",
+  "account_id": "A0009",
+  "type": "Order",
+  "note": "Order updated: Confirmed $4,250 · Sep 29, 26",
+  "date": "2026-09-29"
  }
 ]
