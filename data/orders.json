@@ -5324,7 +5324,7 @@
   "account_id": "A0247",
   "account_raw": "Pinnacle Cannabis | MR285037",
   "license": "MR285037",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Sean Wetzonis",
   "contact_email": "quincy@pinnaclecannabis.co",
   "delivery_date": "2026-10-01",
@@ -5333,7 +5333,10 @@
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 313
+  "row": 313,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  },
  {
   "id": "Of22d9a11",
