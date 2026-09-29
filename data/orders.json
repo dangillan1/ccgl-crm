@@ -5209,12 +5209,15 @@
   "contact_name": "Maura Doyle",
   "contact_email": "maura@pioneercannabiscompany.com",
   "delivery_date": "2026-09-25",
-  "total": 3875,
+  "total": 3840,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 309
+  "row": 309,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  },
  {
   "id": "O39e04e01",
