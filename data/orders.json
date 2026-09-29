@@ -4998,13 +4998,16 @@
   "status": "Pending",
   "contact_name": "Eric Lawrence",
   "contact_email": "elawrence@prolificcannabis.com",
-  "delivery_date": "",
-  "total": 3025,
+  "delivery_date": "2026-10-01",
+  "total": 3000,
   "owner": "Joey",
   "mix": "Bulk & FG",
   "special": "",
   "samples": false,
-  "row": 311
+  "row": 311,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  },
  {
   "id": "Oc89861d1",
