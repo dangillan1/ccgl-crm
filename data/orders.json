@@ -5155,15 +5155,18 @@
   "account_raw": "Boterra Taunton MR282958",
   "license": "MR282958",
   "status": "Confirmed",
-  "contact_name": "Matt Behymer",
+  "contact_name": "Matthew B",
   "contact_email": "mbehymer@boterama.com",
   "delivery_date": "2026-10-01",
-  "total": 2675,
+  "total": 3750,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 306
+  "row": 306,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  },
  {
   "id": "O6bfbd639",
