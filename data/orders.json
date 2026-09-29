@@ -5485,12 +5485,15 @@
   "contact_name": "Nate Hall",
   "contact_email": "nate@apexnoire.com",
   "delivery_date": "2026-10-01",
-  "total": 4500,
+  "total": 4250,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "cc Lysah Hebron on all invoices.",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  }
 ]
