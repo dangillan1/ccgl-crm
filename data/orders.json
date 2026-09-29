@@ -5384,13 +5384,16 @@
   "status": "Planned",
   "contact_name": "Emiliano Duran",
   "contact_email": "emiliano@shopfirehouse.com",
-  "delivery_date": "",
-  "total": null,
-  "owner": "",
-  "mix": "",
+  "delivery_date": "2026-10-01",
+  "total": 7155,
+  "owner": "Joey",
+  "mix": "Finished Goods",
   "special": "",
   "samples": false,
-  "row": 320
+  "row": 320,
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  },
  {
   "id": "Odc7c80af",
