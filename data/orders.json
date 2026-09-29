@@ -5460,16 +5460,19 @@
   "account_id": "A0250",
   "account_raw": "Pioneer Valley Trading Co",
   "license": "MR285301",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Joey S.",
   "contact_email": "joey@pioneervalleytradingco.com",
   "delivery_date": "2026-10-01",
-  "total": 9955.25,
+  "total": 6855.25,
   "owner": "Joey",
   "mix": "Finished Goods",
-  "special": "Sep Promo Alchemy Live Sugar",
+  "special": "Sep Promo Alchemy Live Sugar / overpayment credit",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-09-29"
  }
 ]
