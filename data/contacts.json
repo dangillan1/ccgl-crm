@@ -15645,5 +15645,16 @@
   "source": "CRM (Joey)",
   "primary": true,
   "created": "2026-09-28"
+ },
+ {
+  "id": "Cmuqzv9lnxet2",
+  "account_id": "A0118",
+  "name": "Inventory",
+  "role": "Inventory",
+  "email": "cambridge.inventory@shopfreshconnection.com",
+  "phone": "",
+  "source": "CRM (Charley)",
+  "primary": false,
+  "created": "2026-10-02"
  }
 ]
