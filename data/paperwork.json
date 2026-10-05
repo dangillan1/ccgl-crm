@@ -25,6 +25,19 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-05",
    "history": []
+  },
+  "w9": {
+   "expires": "2050-10-05",
+   "file": {
+    "path": "accounts/A0195/w9/2026-10-05_muvkerie0zns.pdf",
+    "sha": "95882e2560bca553ad5e52c122d7b02e1d2cf391",
+    "name": "W-9 - Lazy River - Dracut (Dracut).pdf",
+    "size": 140394,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-05",
+   "history": []
   }
  }
 }
