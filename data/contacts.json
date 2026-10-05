@@ -15656,5 +15656,16 @@
   "source": "CRM (Charley)",
   "primary": false,
   "created": "2026-10-02"
+ },
+ {
+  "id": "Cmuvkj486ceya",
+  "account_id": "A0195",
+  "name": "James Barquerizo",
+  "role": "Intake",
+  "email": "jbaquerizo@lazyriverproducts.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-10-05"
  }
 ]
