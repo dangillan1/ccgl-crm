@@ -15,8 +15,9 @@ case "${1:-}" in
     git pull --no-rebase >> "$LOG" 2>&1 || echo "PULL FAILED" >> "$LOG" ;;
   push)
     git add -A >> "$LOG" 2>&1
-    if git diff --cached --quiet; then echo "nothing to commit" >> "$LOG"; exit 0; fi
-    git commit -m "Monday refresh $(date '+%Y-%m-%d'): QuickBooks feed + assessments" >> "$LOG" 2>&1
+    # commit only if something changed, but always carry on to pull + push, so a commit left behind by an earlier failed push still goes up
+    if git diff --cached --quiet; then echo "nothing to commit" >> "$LOG"
+    else git commit -m "Monday refresh $(date '+%Y-%m-%d'): QuickBooks feed + assessments" >> "$LOG" 2>&1; fi
     if ! git pull --no-rebase >> "$LOG" 2>&1; then
       # a data file the team touched during the run collided: keep GitHub's copy of anything conflicted, then retry
       for f in $(git diff --name-only --diff-filter=U); do git checkout --theirs -- "$f"; git add "$f"; echo "conflict on $f -> kept GitHub's copy" >> "$LOG"; done
