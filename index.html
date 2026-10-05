@@ -412,9 +412,10 @@ const isUserName=n=>S.users.some(u=>u.name.toLowerCase()===String(n||'').toLower
 const mine=a=>(a.owner||'').toLowerCase()===S.user?.name.toLowerCase();
 
 /* ---------------- onboarding paperwork (CCC license · ST-4 · W-9) ----------------
+   A CCC license expires and is tracked by date. An ST-4 and a W-9 do not expire: one on file is all that's asked (expires:false below).
    Status, dates and file names live in data/paperwork.json in this repo. The files themselves go to a
    separate PRIVATE repo through the same token — never into this repo, which GitHub Pages serves publicly. */
-const DOCS=[{id:'ccc',label:'CCC License',ask:'CCC license'},{id:'st4',label:'ST-4',ask:'ST-4'},{id:'w9',label:'W-9',ask:'W-9'}];
+const DOCS=[{id:'ccc',label:'CCC License',ask:'CCC license',expires:true},{id:'st4',label:'ST-4',ask:'ST-4',expires:false},{id:'w9',label:'W-9',ask:'W-9',expires:false}];
 const DOC=byId(DOCS);
 const PROFILE_FIELDS=[
   {id:'town',label:'Town',input:'edTown',ok:a=>!!a.town},
@@ -438,14 +439,21 @@ const daysUntil=s=>{ const n=dayNum(s); return n==null?null:n-dayNum(localDay())
 const pwAcc=(pw,id)=>(pw[id]&&typeof pw[id]==='object'&&!Array.isArray(pw[id]))?pw[id]:(pw[id]={});
 const pwRec=x=>(x&&typeof x==='object'&&!Array.isArray(x))?x:null;
 const pwHist=x=>Array.isArray(x&&x.history)?x.history.filter(h=>h&&typeof h==='object'):[];
+const docDated=type=>!DOC[type]||DOC[type].expires!==false;   // does this form carry an expiration date?
+// the same questions asked of a raw record (used when saving and merging, where the data has just been re-read)
+const recHas=(type,r)=>!!(r&&(r.file||(docDated(type)&&r.expires)));
+const recCurrent=(type,r)=>!!(r&&r.file)&&(!docDated(type)||(dayNum(r.expires)!=null&&r.expires>=localDay()));
+const recRank=(type,r)=>!r?'':docDated(type)?(r.file?(dayNum(r.expires)!=null?r.expires:'0000-00-01'):(r.expires?'0000-00-00':'')):(r.file?'1'+String(r.uploaded_at||''):'');   // higher = the one to keep as current
 const fmtSize=n=>!n?'':n<1048576?Math.max(1,Math.round(n/1024))+' KB':(n/1048576).toFixed(1)+' MB';
-// one document on one account -> where it stands. complete = file on record + a date that hasn't passed. renew = date passed or inside the warning window.
+// one document on one account -> where it stands. complete = file on record (+ for a CCC license, a date that hasn't passed). renew = date passed or inside the warning window.
 function docState(accId,type){   // a date that isn't a clean YYYY-MM-DD counts as no date
-  const d=pwRec((pwRec(S.paperwork[accId])||{})[type]); const file=(d&&d.file&&typeof d.file==='object'&&d.file.path)?d.file:null; const exp=(d&&/^\d{4}-\d{2}-\d{2}$/.test(d.expires||''))?d.expires:''; const days=exp?daysUntil(exp):null; const warn=pwCfg().warn_days;
+  const d=pwRec((pwRec(S.paperwork[accId])||{})[type]); const file=(d&&d.file&&typeof d.file==='object'&&d.file.path)?d.file:null; 
+  if(!docDated(type)) return {type,d,file,exp:'',days:null,state:file?'ok':'missing',complete:!!file,renew:false,dated:false};   // no expiration: any date left on an older record is ignored
+  const exp=(d&&/^\d{4}-\d{2}-\d{2}$/.test(d.expires||''))?d.expires:''; const days=exp?daysUntil(exp):null; const warn=pwCfg().warn_days;
   let state; if(exp&&days!=null&&days<0) state='expired'; else if(!file) state=exp?'nofile':'missing'; else if(!exp||days==null) state='nodate'; else if(days<=warn) state='expiring'; else state='ok';
-  return {type,d,file,exp,days,state,complete:!!file&&!!exp&&days!=null&&days>=0,renew:!!exp&&days!=null&&days<=warn};
+  return {type,d,file,exp,days,state,complete:!!file&&!!exp&&days!=null&&days>=0,renew:!!exp&&days!=null&&days<=warn,dated:true};
 }
-function docWord(s){ return {missing:'Missing',nofile:'File missing',nodate:'No exp. date',expired:'Expired',expiring:s.days===0?'Expires today':`Expires in ${s.days}d`,ok:'Current'}[s.state]; }
+function docWord(s){ return {missing:'Missing',nofile:'File missing',nodate:'No exp. date',expired:'Expired',expiring:s.days===0?'Expires today':`Expires in ${s.days}d`,ok:s.dated===false?'On file':'Current'}[s.state]; }
 function docPill(s,required=true){ const cls={missing:required?'miss':'uns',nofile:'warn',nodate:'warn',expired:'exp',expiring:'warn',ok:'cur'}[s.state]; return `<span class="pill ${cls}">${docWord(s)}</span>`; }
 function docPhrase(s){ const n=DOC[s.type].label; switch(s.state){
   case 'expired': return `${n} expired ${fmtDate(s.exp)}`;
@@ -546,7 +554,7 @@ function opportunities(){
     pipeline:{title:'Prospects closest to first order',sub:'by stage, then recency',rows:S.accounts.filter(a=>a.status!=='Current'&&a.stage&&a.stage!=='New'&&scope(a)).sort((p,q)=>(stIdx(q.stage)-stIdx(p.stage))||cmp(q._last,p._last)).map(a=>({a,amt:a.stage,why:a._last?`last touch ${fmtDate(a._last)}`:'no touch yet'}))},
     licenses:{title:'New CCC licenses',sub:'in the book or the pool, not yet customers',rows:[...S.accounts.filter(a=>a.status!=='Current'),...S.leads].filter(a=>(a.tags||[]).includes('New License 2026')).map(a=>({a,amt:a.license_number?'#'+a.license_number:'',why:L[a.id]?'unclaimed — claim it':(a.owner||'Unassigned')}))},
     once:{title:'One order, then silence',sub:'single 2026 order, 45+ days ago',rows:cur.filter(a=>scope(a)&&a._nOrders===1&&a._daysOrder>=45).sort((p,q)=>q._orderTotal-p._orderTotal).map(a=>({a,amt:fmtMoney(a._orderTotal),why:`${a._daysOrder}d ago`}))},
-    paperwork:{title:'Paperwork expiring or expired',sub:`CCC license, ST-4 or W-9 — past its date or within ${pwCfg().warn_days} days`,rows:pwTasks().filter(t=>scope(t.a)).map(t=>({a:t.a,amt:t.doc.label,why:t.s.days<0?`expired ${fmtDate(t.due)} · ${-t.s.days}d ago`:`expires ${fmtDate(t.due)} · ${t.s.days===0?'today':'in '+t.s.days+'d'}`}))},
+    paperwork:{title:'CCC licenses expiring or expired',sub:`past their date or within ${pwCfg().warn_days} days — get the renewed license`,rows:pwTasks().filter(t=>scope(t.a)).map(t=>({a:t.a,amt:t.doc.label,why:t.s.days<0?`expired ${fmtDate(t.due)} · ${-t.s.days}d ago`:`expires ${fmtDate(t.due)} · ${t.s.days===0?'today':'in '+t.s.days+'d'}`}))},
     pastdue:{title:'Past due in QuickBooks',sub:'open invoices past their due date',rows:cur.filter(a=>a._pastDue>0).sort((p,q)=>q._pastDue-p._pastDue).map(a=>({a,amt:fmtMoney(a._pastDue),why:`oldest ${a._pastDueDays}d · owes ${fmtMoney(a._owes)} total`}))},
     noorders:{title:'"Active" with no 2026 orders',sub:'Sheet says Current — probably a Prospect',rows:cur.filter(a=>scope(a)&&a._nOrders===0).sort((p,q)=>cmp(p.name,q.name)).map(a=>({a,amt:'',why:a._last?`last touch ${fmtDate(a._last)}`:'no contact on record'}))},
   };
@@ -704,8 +712,8 @@ function renderTasks(v){
   const groups={overdue:'Overdue',today:'Today',upcoming:'Upcoming',nodate:'No date'};
   const line=(r,k)=>{ const a=r.a; return `<div class="li" data-open="${a.id}" style="cursor:pointer"><div class="grow"><div><b>${esc(r.text)}</b>${r.k==='pw'?' <span class="pill tag">Paperwork</span>':''}</div><div class="em">${esc(a.name)}${a.town?' · '+esc(a.town):''} · ${L[a.id]?'<span class="pill lead">Unclaimed lead</span>':statusPill(a.status)} ${a.stage&&a.status!=='Current'&&!L[a.id]?`<span class="pill stage">${esc(a.stage)}</span>`:''} · ${esc(r.who)}${r.k==='pw'?` · ${r.t.s.days<0?`expired ${-r.t.s.days}d ago`:r.t.s.days===0?'expires today':`expires in ${r.t.s.days}d`}`:''}</div></div><div style="font-size:12.5px;${k==='overdue'?'color:var(--danger);font-weight:600':''}">${r.due?fmtDate(r.due):''}</div>${r.k==='ns'?(can('log')?`<button class="btn ghost sm" data-done="${a.id}">Done</button>`:''):(can('docs')?`<button class="btn ghost sm" data-pwup="${r.t.doc.id}" data-acc="${a.id}">Upload new</button>`:'')}</div>`; };
   v.innerHTML=`<div class="toolbar">${can('reassign')?`<span class="chip ${scope==='mine'?'on':''}" data-scope="mine">Mine</span><span class="chip ${scope==='all'?'on':''}" data-scope="all">Everyone</span><span class="muted">·</span>`:''}${[['all','All'],['ns','Next steps'],['pw','Paperwork']].map(([k,l])=>`<span class="chip ${kind===k?'on':''}" data-kind="${k}">${l}</span>`).join('')}<span class="meta">${ns.length} open next step${ns.length===1?'':'s'} · ${pw.length} paperwork renewal${pw.length===1?'':'s'}</span></div>
-    ${Object.entries(groups).map(([k,l])=>{ const g=rows.filter(r=>r.bucket===k); if(!g.length) return ''; return `<div class="section" style="margin-top:6px"><h4>${l} <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">${g.length}</span></h4><div class="list">${g.map(r=>line(r,k)).join('')}</div></div>`; }).join('')||`<div class="card empty">${kind==='pw'?`No paperwork is expired or within ${pwCfg().warn_days} days of its date.`:'No open next steps. Set one from any account page.'}</div>`}
-    ${pw.length&&kind!=='ns'?`<p class="note" style="margin-top:10px">Paperwork tasks clear themselves when the renewed document is uploaded with its new date.</p>`:''}`;
+    ${Object.entries(groups).map(([k,l])=>{ const g=rows.filter(r=>r.bucket===k); if(!g.length) return ''; return `<div class="section" style="margin-top:6px"><h4>${l} <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">${g.length}</span></h4><div class="list">${g.map(r=>line(r,k)).join('')}</div></div>`; }).join('')||`<div class="card empty">${kind==='pw'?`No CCC license is expired or within ${pwCfg().warn_days} days of its date.`:'No open next steps. Set one from any account page.'}</div>`}
+    ${pw.length&&kind!=='ns'?`<p class="note" style="margin-top:10px">A paperwork task clears itself when the renewed license is uploaded with its new date.</p>`:''}`;
   $$('[data-scope]',v).forEach(c=>c.onclick=()=>{ (S.filters.tasks||={}).scope=c.dataset.scope; render(); });
   $$('[data-kind]',v).forEach(c=>c.onclick=()=>{ (S.filters.tasks||={}).kind=c.dataset.kind; render(); });
   $$('[data-done]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); completeNextStep(b.dataset.done); });
@@ -891,15 +899,15 @@ function pwCard(a){ if(!a._pw) return ''; const cd=can('docs'), req=a.status==='
   const fileBtns=(f,key)=>cd&&f?`<button class="btn ghost xs" data-pwdl="${key}">Download</button>${docViewable(f)?`<button class="btn ghost xs" data-pwview="${key}">View</button>`:''}`:'';
   return `<div class="card pw" id="pwCard"><h4>Onboarding paperwork</h4>${DOCS.map(t=>{ const s=a._pw[t.id], d=s.d, hist=pwHist(d);
     return `<div class="doc" data-doc="${t.id}"><div class="top"><span class="nm">${t.label}</span>${docPill(s,req)}</div>
-      <div class="det">${s.exp?`${s.state==='expired'?'Expired':'Expires'} <b style="color:${s.state==='expired'?'var(--danger)':'var(--ink)'}">${fmtDate(s.exp)}</b>`:s.file?'No expiration date set':'Nothing on file yet'}${s.file?` · ${esc(s.file.name)} <span class="muted">${fmtSize(s.file.size)}</span>`:''}${d&&d.uploaded_at?`<br>${s.file?'Uploaded':'Updated'} ${esc(fmtDate(d.uploaded_at))}${d.uploaded_by?' by '+esc(userName(d.uploaded_by)):''}`:''}${d&&d.note?`<br>${esc(d.note)}`:''}</div>
-      ${cd?`<div class="acts">${fileBtns(s.file,t.id)}<button class="btn ${s.file?'ghost':''} xs" data-pwup="${t.id}">${s.file?'Replace':'Upload'}</button><button class="btn link xs" data-pwedit="${t.id}">${d&&(d.file||d.expires)?'edit':'set date only'}</button></div>`:''}
-      ${hist.length?`<details><summary>Previous versions (${hist.length})</summary>${hist.map((h,i)=>`<div class="det">${h.file&&h.file.path?esc(h.file.name||'file'):'(no file)'}${h.expires?` · exp. ${esc(fmtDate(h.expires))}`:''}${h.uploaded_at?` · uploaded ${esc(fmtDate(h.uploaded_at))}`:''}${h.removed?' · removed':''} ${h.file&&h.file.path&&cd?`<button class="btn link xs" data-pwdl="${t.id}|${i}">download</button>`:''}</div>`).join('')}</details>`:''}</div>`; }).join('')}
+      <div class="det">${[!s.dated?(s.file?'':'Nothing on file yet'):s.exp?`${s.state==='expired'?'Expired':'Expires'} <b style="color:${s.state==='expired'?'var(--danger)':'var(--ink)'}">${fmtDate(s.exp)}</b>`:s.file?'No expiration date set':'Nothing on file yet',s.file?`${esc(s.file.name)} <span class="muted">${fmtSize(s.file.size)}</span>`:''].filter(Boolean).join(' · ')}${d&&d.uploaded_at&&(s.dated||s.file)?`<br>${s.file?'Uploaded':'Updated'} ${esc(fmtDate(d.uploaded_at))}${d.uploaded_by?' by '+esc(userName(d.uploaded_by)):''}`:''}${d&&d.note?`<br>${esc(d.note)}`:''}</div>
+      ${cd?`<div class="acts">${fileBtns(s.file,t.id)}<button class="btn ${s.file?'ghost':''} xs" data-pwup="${t.id}">${s.file?'Replace':'Upload'}</button>${s.dated||s.file?`<button class="btn link xs" data-pwedit="${t.id}">${recHas(t.id,d)?'edit':'set date only'}</button>`:''}</div>`:''}
+      ${hist.length?`<details><summary>Previous versions (${hist.length})</summary>${hist.map((h,i)=>`<div class="det">${h.file&&h.file.path?esc(h.file.name||'file'):'(no file)'}${h.expires&&s.dated?` · exp. ${esc(fmtDate(h.expires))}`:''}${h.uploaded_at?` · uploaded ${esc(fmtDate(h.uploaded_at))}`:''}${h.removed?' · removed':''} ${h.file&&h.file.path&&cd?`<button class="btn link xs" data-pwdl="${t.id}|${i}">download</button>`:''}</div>`).join('')}</details>`:''}</div>`; }).join('')}
     <p class="note" style="margin-top:10px">Files are kept in the private file store, never on the public site.${req?'':' Required once this account is Active.'}</p></div>`; }
 // wires every paperwork control inside el. Buttons carry data-acc when they sit outside an account page (Tasks, Paperwork view).
 function bindPaperwork(el,id){
-  // the download name carries the expiration date, so a current and a previous version never collide in a Downloads folder
-  const dated=(f,exp)=>f&&dayNum(exp)!=null?{...f,name:String(f.name||'document').replace(/(\.[A-Za-z0-9]{1,5})?$/,x=>` - exp ${exp}${x||''}`)}:f;
-  const pick=(key,accId)=>{ const [type,i]=String(key).split('|'); const d=pwRec((pwRec(S.paperwork[accId])||{})[type]); const r=i==null?d:pwHist(d)[+i]; return r?dated(r.file,r.expires):null; };
+  // the download name carries a date (expiration for a CCC license, filing date for the others), so a current and a previous version never collide in a Downloads folder
+  const stamp=(type,r)=>docDated(type)?(dayNum(r.expires)!=null?` - exp ${r.expires}`:''):(dayNum(r.uploaded_at)!=null?` - filed ${r.uploaded_at}`:'');
+  const pick=(key,accId)=>{ const [type,i]=String(key).split('|'); const d=pwRec((pwRec(S.paperwork[accId])||{})[type]); const r=i==null?d:pwHist(d)[+i]; if(!r||!r.file) return null; const tag=stamp(type,r); return tag?{...r.file,name:String(r.file.name||'document').replace(/(\.[A-Za-z0-9]{1,5})?$/,x=>tag+(x||''))}:r.file; };
   $$('[data-pwup]',el).forEach(b=>b.onclick=e=>{ e.preventDefault(); e.stopPropagation(); pwUploadForm(b.dataset.acc||id,b.dataset.pwup); });
   $$('[data-pwedit]',el).forEach(b=>b.onclick=e=>{ e.preventDefault(); e.stopPropagation(); pwEditForm(b.dataset.acc||id,b.dataset.pwedit); });
   $$('[data-pwdl]',el).forEach(b=>b.onclick=e=>{ e.preventDefault(); e.stopPropagation(); pwDownload(pick(b.dataset.pwdl,b.dataset.acc||id)); });
@@ -913,8 +921,8 @@ async function savePaperwork(mutate,msg){ await guarded(async()=>{ S.paperwork=p
 // newest version becomes current; whatever was there moves to the top of that document's history
 // ids in fillOnly (chain siblings) are skipped when, in the freshly read data, they already hold their own current form
 function pwSet(pw,ids,type,rec,fillOnly=[]){ pw=pwObj(pw); const now=localDay(); for(const id of ids){ const acc=pwAcc(pw,id); const old=pwRec(acc[type]);
-    if(fillOnly.includes(id)&&old&&old.file&&dayNum(old.expires)!=null&&old.expires>=now) continue;
-    const history=[...pwHist(old)]; if(old&&(old.file||old.expires)){ const {history:_h,...prev}=old; history.unshift({...prev,replaced_at:now,replaced_by:S.user.id}); }
+    if(fillOnly.includes(id)&&recCurrent(type,old)) continue;
+    const history=[...pwHist(old)]; if(recHas(type,old)){ const {history:_h,...prev}=old; history.unshift({...prev,replaced_at:now,replaced_by:S.user.id}); }
     acc[type]={...rec,file:{...rec.file},history}; } return pw; }
 function pwError(e,errEl){ const msg=(e&&(e.name==='TimeoutError'||e.name==='AbortError'))?'TIMEOUT':(e&&e.message||String(e));
   if(msg==='NO_PAT'||msg==='BAD_PAT'){ GH.pat=''; closeModal(); promptPat(); return; }
@@ -943,12 +951,12 @@ function pwUploadForm(accId,type){ const a=A[accId], t=DOC[type]; if(!a||!t||!ca
   const sibs=chain.filter(x=>!(x._pw&&x._pw[type].complete)), have=chain.length-sibs.length;
   let file=null, stored=null;
   const m=modal(`${cur&&cur.file?'Replace':'Upload'} ${t.label} — ${a.name}`,`<label class="drop" id="pwDrop"><input type="file" id="pwFile" accept="application/pdf,image/*,.pdf,.png,.jpg,.jpeg,.heic,.doc,.docx" hidden><span id="pwDropTxt"><b>Choose a file</b> or drop it here<br><span class="note">PDF or photo, up to ${Math.round(PW_MAX/1048576)} MB. It is filed under a standard name; your file's own name stays private.</span></span></label>
-    <div class="field" style="margin:14px 0 6px"><label for="pwExp">Expiration date</label><input id="pwExp" type="date"></div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px">${[1,2,3].map(n=>`<span class="chip" data-plus="${n}">${n} year${n>1?'s':''} from today</span>`).join('')}</div>
-    <p class="note" style="margin:0 0 12px">If the form has no printed expiration, set the date you want it refreshed by.</p>
-    <div class="field" style="margin-bottom:4px"><label for="pwNote">Note (optional)</label><input id="pwNote" maxlength="200" placeholder="e.g. provisional license, final expected in March"></div>
+    ${t.expires?`<div class="field" style="margin:14px 0 6px"><label for="pwExp">Expiration date</label><input id="pwExp" type="date"></div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:12px">${[1,2,3].map(n=>`<span class="chip" data-plus="${n}">${n} year${n>1?'s':''} from today</span>`).join('')}</div>`
+    :`<p class="note" style="margin:12px 0">No expiration date to enter: the ${t.label} doesn't expire. One on file completes it.</p>`}
+    <div class="field" style="margin-bottom:4px"><label for="pwNote">Note (optional)</label><input id="pwNote" maxlength="200" placeholder="${t.expires?'e.g. provisional license, final expected in March':'e.g. covers all three locations'}"></div>
     <p class="note" style="margin:0 0 12px">Notes sit with the rest of the account data, not in the private file store. Keep tax IDs out of them.</p>
-    ${sibs.length?`<label class="optrow"><input type="checkbox" id="pwSibs" class="chk"><span>Also file this for the ${sibs.length===1?'other':sibs.length+' other'} ${esc(a.parent)} location${sibs.length>1?'s':''} without a current ${t.label} <span class="muted">(${sibs.map(x=>esc(x.town||x.name)).join(', ')})${have?` · ${have} already ${have>1?'have their':'has its'} own`:''}</span></span></label>`:''}
+    ${sibs.length?`<label class="optrow"><input type="checkbox" id="pwSibs" class="chk"><span>Also file this for the ${sibs.length===1?'other':sibs.length+' other'} ${esc(a.parent)} location${sibs.length>1?'s':''} without ${t.expires?'a current '+t.label:'a '+t.label+' on file'} <span class="muted">(${sibs.map(x=>esc(x.town||x.name)).join(', ')})${have?` · ${have} already ${have>1?'have their':'has its'} own`:''}</span></span></label>`:''}
     <div class="err" id="pwErr"></div>`,`<button class="btn ghost" data-close>Cancel</button><button class="btn" id="pwSave">Upload</button>`);
   const drop=$('#pwDrop',m), err=$('#pwErr',m);
   const setFile=f=>{ if(!f) return; file=f; drop.classList.add('has'); $('#pwDropTxt',m).innerHTML=`<b>${esc(f.name)}</b> · ${fmtSize(f.size)||'0 KB'}<br><span class="note">click to choose a different file</span>`; err.textContent=''; };
@@ -956,36 +964,37 @@ function pwUploadForm(accId,type){ const a=A[accId], t=DOC[type]; if(!a||!t||!ca
   drop.ondragover=e=>{ e.preventDefault(); drop.classList.add('over'); }; drop.ondragleave=()=>drop.classList.remove('over');
   drop.ondrop=e=>{ e.preventDefault(); drop.classList.remove('over'); setFile(e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0]); };
   $$('[data-plus]',m).forEach(c=>c.onclick=()=>{ const d=new Date(); d.setFullYear(d.getFullYear()+(+c.dataset.plus)); $('#pwExp',m).value=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; });
-  $('#pwSave',m).onclick=async()=>{ err.textContent=''; const exp=$('#pwExp',m).value, note=$('#pwNote',m).value.trim();
+  $('#pwSave',m).onclick=async()=>{ err.textContent=''; const exp=t.expires?$('#pwExp',m).value:'', note=$('#pwNote',m).value.trim();
     if(!file){ err.textContent='Choose the file first.'; return; } if(!file.size){ err.textContent='That file is empty.'; return; }
     if(file.size>PW_MAX){ err.textContent=`That file is ${fmtSize(file.size)} — the limit is ${Math.round(PW_MAX/1048576)} MB. Save it as a smaller PDF and try again.`; return; }
-    if(!exp){ err.textContent='Set the expiration date.'; return; }
-    const d=daysUntil(exp); if(d==null){ err.textContent='That date doesn\'t look right.'; return; }
-    if(d<0&&!confirm('That expiration date has already passed, so this will show as Expired. Save it anyway?')) return;
+    if(t.expires){ if(!exp){ err.textContent='Set the expiration date.'; return; }
+      const d=daysUntil(exp); if(d==null){ err.textContent='That date doesn\'t look right.'; return; }
+      if(d<0&&!confirm('That expiration date has already passed, so this will show as Expired. Save it anyway?')) return; }
     const also=$('#pwSibs',m)&&$('#pwSibs',m).checked?sibs.map(x=>x.id):[];
     // the name the file is kept and downloaded under is generated: the original file name never leaves the private store
     const ext=(((/\.([A-Za-z0-9]{1,5})$/.exec(file.name)||[])[1])||({'application/pdf':'pdf','image/png':'png','image/jpeg':'jpg'})[file.type]||'bin').toLowerCase();
-    const nice=`${t.label} - ${also.length?a.parent.trim():a.name+(a.town?' ('+a.town+')':'')}`.replace(/[\/\\:*?"<>|\u0000-\u001f]+/g,'-').replace(/\s+/g,' ').trim().slice(0,120)+'.'+ext;
+    const where=a.town&&!a.name.toLowerCase().includes(a.town.toLowerCase())?' ('+a.town+')':'';   // skip the town when the account name already says it
+    const nice=`${t.label} - ${also.length?a.parent.trim():a.name+where}`.replace(/[\/\\:*?"<>|\u0000-\u001f]+/g,'-').replace(/\s+/g,' ').trim().slice(0,120)+'.'+ext;
     const btn=$('#pwSave',m), closers=$$('[data-close]',m); const busy=on=>{ if(on) m.dataset.busy='1'; else delete m.dataset.busy; btn.disabled=on; btn.textContent=on?'Uploading…':'Upload'; closers.forEach(b=>b.disabled=on); };
     busy(true);   // the dialog can't be closed mid-upload, so "cancel" can never leave a half-saved document behind
     try{ if(!stored||stored.file!==file){ const path=`accounts/${accId}/${type}/${localDay()}_${uid('')}.${ext}`; const sha=await GH.docsPut(path,await fileB64(file),`[${S.user.id}] ${t.label} — ${a.name}${a.town?' ('+a.town+')':''} · original file: ${file.name}`); stored={file,path,sha}; }   // a retry after a failed save reuses the upload instead of storing a second copy
-      const rec={expires:exp,file:{path:stored.path,sha:stored.sha,name:nice,size:file.size,type:file.type||''},uploaded_by:S.user.id,uploaded_at:localDay()}; if(note) rec.note=note;
+      const rec={file:{path:stored.path,sha:stored.sha,name:nice,size:file.size,type:file.type||''},uploaded_by:S.user.id,uploaded_at:localDay()}; if(t.expires) rec.expires=exp; if(note) rec.note=note;
       S.paperwork=pwObj(await GH.update(F.paperwork,pw=>pwSet(pw,[accId,...also],type,rec,also),`${t.label} on file — ${a.name}${also.length?` (+${also.length} location${also.length>1?'s':''})`:''}`));
       const n=also.filter(id=>{ const r=pwRec((pwRec(S.paperwork[id])||{})[type]); return r&&r.file&&r.file.path===stored.path; }).length;
-      try{ await appendActivity({account_id:accId,type:'Doc',note:`${t.label} ${cur&&cur.file?'replaced':'uploaded'} — expires ${fmtDate(exp)}`,date:localDay()},`Paperwork note — ${a.name}`); }catch(_){ /* the file and its record are saved; the timeline note is a nicety */ }
+      try{ await appendActivity({account_id:accId,type:'Doc',note:`${t.label} ${cur&&cur.file?'replaced':'uploaded'}${t.expires?` — expires ${fmtDate(exp)}`:''}`,date:localDay()},`Paperwork note — ${a.name}`); }catch(_){ /* the file and its record are saved; the timeline note is a nicety */ }
       busy(false); closeModal(); index(); render(); toast(`${t.label} saved${n?` for ${n+1} locations`:''}`);
     }catch(e){ busy(false); pwError(e,err); } };
 }
-function pwEditForm(accId,type){ const a=A[accId], t=DOC[type]; if(!a||!t||!can('docs')) return; const cur=pwRec((pwRec(S.paperwork[accId])||{})[type])||{}; const has=!!(cur.file||cur.expires);
-  const m=modal(`${t.label} — ${a.name}`,`<div class="field"><label for="pwExp">Expiration date</label><input id="pwExp" type="date" value="${esc(dayNum(cur.expires)!=null?cur.expires:'')}"></div>
+function pwEditForm(accId,type){ const a=A[accId], t=DOC[type]; if(!a||!t||!can('docs')) return; const cur=pwRec((pwRec(S.paperwork[accId])||{})[type])||{}; const has=recHas(type,cur); if(!t.expires&&!cur.file) return;   // nothing to edit on a form with no date and no file
+  const m=modal(`${t.label} — ${a.name}`,`${t.expires?`<div class="field"><label for="pwExp">Expiration date</label><input id="pwExp" type="date" value="${esc(dayNum(cur.expires)!=null?cur.expires:'')}"></div>`:''}
     <p class="note" style="margin:0 0 12px">${cur.file?`File on record: <b>${esc(cur.file.name||'file')}</b>. To swap the file itself, use Replace.`:'No file on record — this saves the date only. The profile stays incomplete until the file is uploaded.'}</p>
     <div class="field"><label for="pwNote">Note (optional)</label><input id="pwNote" maxlength="200" value="${esc(cur.note||'')}"></div><div class="err" id="pwErr"></div>`,
     `${has?'<button class="btn ghost" id="pwRemove" style="margin-right:auto;color:var(--danger)">Remove from profile</button>':''}<button class="btn ghost" data-close>Cancel</button><button class="btn" id="pwSave">Save</button>`);
-  $('#pwSave',m).onclick=()=>{ const exp=$('#pwExp',m).value, note=$('#pwNote',m).value.trim(), err=$('#pwErr',m);
-    if(!exp&&!cur.file){ err.textContent='Set a date, or use Upload to add the file.'; return; } if(!exp){ err.textContent='Set the expiration date.'; return; } if(dayNum(exp)==null){ err.textContent='That date doesn\'t look right.'; return; } closeModal();
-    savePaperwork(pw=>{ pw=pwObj(pw); const acc=pwAcc(pw,accId); const x=pwRec(acc[type])||(acc[type]={}); x.expires=exp; if(note) x.note=note; else delete x.note; if(!x.uploaded_at){ x.uploaded_at=localDay(); x.uploaded_by=S.user.id; } x.edited_at=localDay(); x.edited_by=S.user.id; return pw; },`${t.label} expiration — ${a.name}`); };
+  $('#pwSave',m).onclick=()=>{ const exp=t.expires?$('#pwExp',m).value:'', note=$('#pwNote',m).value.trim(), err=$('#pwErr',m);
+    if(t.expires){ if(!exp&&!cur.file){ err.textContent='Set a date, or use Upload to add the file.'; return; } if(!exp){ err.textContent='Set the expiration date.'; return; } if(dayNum(exp)==null){ err.textContent='That date doesn\'t look right.'; return; } } closeModal();
+    savePaperwork(pw=>{ pw=pwObj(pw); const acc=pwAcc(pw,accId); const x=pwRec(acc[type])||(acc[type]={}); if(t.expires) x.expires=exp; else delete x.expires; if(note) x.note=note; else delete x.note; if(!x.uploaded_at){ x.uploaded_at=localDay(); x.uploaded_by=S.user.id; } x.edited_at=localDay(); x.edited_by=S.user.id; return pw; },`${t.label} expiration — ${a.name}`); };
   const rm=$('#pwRemove',m); if(rm) rm.onclick=()=>{ if(!confirm(`Remove the ${t.label} from ${a.name}? It moves to Previous versions and the profile goes back to incomplete. The file itself stays in the file store.`)) return; closeModal();
-    savePaperwork(pw=>{ pw=pwObj(pw); const acc=pwAcc(pw,accId); const old=pwRec(acc[type]); if(old){ const {history:_h,...prev}=old; acc[type]={history:(prev.file||prev.expires)?[{...prev,removed:true,replaced_at:localDay(),replaced_by:S.user.id},...pwHist(old)]:pwHist(old)}; } return pw; },`Remove ${t.label} — ${a.name}`); };
+    savePaperwork(pw=>{ pw=pwObj(pw); const acc=pwAcc(pw,accId); const old=pwRec(acc[type]); if(old){ const {history:_h,...prev}=old; acc[type]={history:recHas(type,prev)?[{...prev,removed:true,replaced_at:localDay(),replaced_by:S.user.id},...pwHist(old)]:pwHist(old)}; } return pw; },`Remove ${t.label} — ${a.name}`); };
 }
 function saveBlob(blob,name){ const url=URL.createObjectURL(blob); const l=document.createElement('a'); l.href=url; l.download=name||'document'; document.body.appendChild(l); l.click(); l.remove(); setTimeout(()=>URL.revokeObjectURL(url),60000); }
 // view=true shows a PDF or image inside the app (no pop-up, which browsers block after a network wait); anything else is saved to the device
@@ -1004,7 +1013,7 @@ function renderPaperwork(v){
   const base=S.accounts.filter(a=>a._pw&&(scope==='all'||(scope==='active'?a.status==='Current':a.status!=='Current')));
   const st=a=>DOCS.map(t=>a._pw[t.id]);
   const test={attention:a=>st(a).some(s=>!s.complete||s.renew),expired:a=>st(a).some(s=>s.state==='expired'),expiring:a=>st(a).some(s=>s.renew&&s.state!=='expired'),missing:a=>st(a).some(s=>!s.file),complete:a=>st(a).every(s=>s.complete),incomplete:a=>!a._complete,profile_ok:a=>a._complete};
-  const urgency=s=>s.exp&&s.days!=null?s.days:s.state==='nodate'?100000:s.state==='nofile'?150000:200000;   // sorts: expired, expiring, current, then the gaps
+  const urgency=s=>s.exp&&s.days!=null?s.days:s.state==='ok'?50000:s.state==='nodate'?100000:s.state==='nofile'?150000:200000;   // sorts: expired, expiring, current / on file, then the gaps
   const getter=(a,col)=>DOC[col]?urgency(a._pw[col]):col==='_profile'?a._profile.done/a._profile.total:accGetter(a,col);
   let rows=base.filter(a=>(!f.owner||(a.owner||'Unassigned')===f.owner)&&(!f.status||(test[f.status]&&test[f.status](a)))&&matches(a,S.q));
   rows=sortRows(rows,'paperwork','name',getter);
@@ -1012,8 +1021,8 @@ function renderPaperwork(v){
   const cell=(a,t)=>{ const s=a._pw[t.id]; return `<td><div class="pwcell">${docPill(s,a.status==='Current')}${s.file&&cd?`<button class="btn link xs" data-pwdl="${t.id}" data-acc="${a.id}" title="Download ${esc(s.file.name)}">download</button>`:''}</div>${s.exp?`<span class="sub">${s.state==='expired'?'expired':'exp.'} ${fmtDate(s.exp)}</span>`:''}</td>`; };
   const opt=(val,label)=>`<option value="${val}" ${f.status===val?'selected':''}>${label}</option>`;
   v.innerHTML=`<div class="kpis">
-      <div class="card kpi"><div class="l">Paperwork complete</div><div class="v">${base.filter(test.complete).length}<span class="muted" style="font-size:14px;font-weight:500"> of ${base.length}</span></div><div class="d">accounts with all three current</div></div>
-      <div class="card kpi"><div class="l">Expired</div><div class="v" style="color:${n(s=>s.state==='expired')?'var(--danger)':'inherit'}">${n(s=>s.state==='expired')}</div><div class="d">documents past their date</div></div>
+      <div class="card kpi"><div class="l">Paperwork complete</div><div class="v">${base.filter(test.complete).length}<span class="muted" style="font-size:14px;font-weight:500"> of ${base.length}</span></div><div class="d">accounts with all three in order</div></div>
+      <div class="card kpi"><div class="l">Expired</div><div class="v" style="color:${n(s=>s.state==='expired')?'var(--danger)':'inherit'}">${n(s=>s.state==='expired')}</div><div class="d">CCC licenses past their date</div></div>
       <div class="card kpi"><div class="l">Expiring in ${warn} days</div><div class="v" style="color:${n(s=>s.renew&&s.state!=='expired')?'var(--warn)':'inherit'}">${n(s=>s.renew&&s.state!=='expired')}</div><div class="d">renewals to request now</div></div>
       <div class="card kpi"><div class="l">Not on file</div><div class="v">${n(s=>!s.file)}</div><div class="d">documents still to collect</div></div>
       <div class="card kpi"><div class="l">Profiles complete</div><div class="v">${base.filter(a=>a._complete).length}<span class="muted" style="font-size:14px;font-weight:500"> of ${base.length}</span></div><div class="d">every field and form in place</div></div>
@@ -1025,23 +1034,23 @@ function renderPaperwork(v){
       <span class="meta">${rows.length} of ${base.length} accounts</span><button class="btn ghost sm" id="pwCsv">Export CSV</button></div>
     <div class="card tbl-wrap"><table><thead><tr>${th('paperwork','name','Account')}${th('paperwork','town','Town')}${th('paperwork','owner','Owner')}${DOCS.map(t=>th('paperwork',t.id,t.label)).join('')}${th('paperwork','_profile','Profile')}</tr></thead>
       <tbody>${rows.length?rows.map(a=>`<tr class="row" data-open="${a.id}"><td class="wrap"><b>${esc(a.name)}</b>${a.license_number?`<span class="sub mono">#${esc(a.license_number.split(' / ')[0])}</span>`:''}</td><td>${esc(a.town||'')}</td><td>${ownerCell(a)}</td>${DOCS.map(t=>cell(a,t)).join('')}<td>${profilePill(a)}</td></tr>`).join(''):'<tr><td colspan="7" class="empty">No accounts match.</td></tr>'}</tbody></table></div>
-    <p class="note" style="margin-top:8px">Open an account to upload or replace a document. Renewal tasks appear in Tasks ${warn} days before a date and go to the account's owner. Files are kept in the private file store, never on the public site.</p>`;
+    <p class="note" style="margin-top:8px">Open an account to upload or replace a document. A CCC license gets a renewal task in Tasks ${warn} days before it expires, assigned to the account's owner. An ST-4 and a W-9 don't expire: one on file is enough. Files are kept in the private file store, never on the public site.</p>`;
   $$('[data-scope]',v).forEach(c=>c.onclick=()=>{ (S.filters.paperwork||={}).scope=c.dataset.scope; render(); });
   $('#pwCsv',v).onclick=()=>pwExportCsv(rows);
   bindFilters(v,'paperwork'); bindSort(v,'paperwork',getter); bindRows(v); bindPaperwork(v,null);
 }
 function pwExportCsv(rows){ const q=x=>{ let s=String(x??''); if(/^[=+\-@\t\r]/.test(s)) s="'"+s; return '"'+s.replace(/"/g,'""')+'"'; };
-  const head=['Account','Town','Owner','Status','License #',...DOCS.flatMap(t=>[t.label+' status',t.label+' expires',t.label+' file']),'Profile','Still needed'];
-  const body=rows.map(a=>[a.name,a.town,a.owner||'Unassigned',a.status==='Current'?'Active':a.status,a.license_number,...DOCS.flatMap(t=>{ const s=a._pw[t.id]; return [docWord(s),s.exp,s.file?s.file.name:'']; }),`${a._profile.done}/${a._profile.total}`,a._profile.missing.map(i=>i.label).join('; ')]);
+  const head=['Account','Town','Owner','Status','License #',...DOCS.flatMap(t=>t.expires?[t.label+' status',t.label+' expires',t.label+' file']:[t.label+' status',t.label+' file']),'Profile','Still needed'];
+  const body=rows.map(a=>[a.name,a.town,a.owner||'Unassigned',a.status==='Current'?'Active':a.status,a.license_number,...DOCS.flatMap(t=>{ const s=a._pw[t.id]; return t.expires?[docWord(s),s.exp,s.file?s.file.name:'']:[docWord(s),s.file?s.file.name:'']; }),`${a._profile.done}/${a._profile.total}`,a._profile.missing.map(i=>i.label).join('; ')]);
   saveBlob(new Blob(['\ufeff'+[head,...body].map(r=>r.map(q).join(',')).join('\r\n')],{type:'text/csv'}),`ccgl-paperwork-${localDay()}.csv`); toast(`Exported ${rows.length} accounts`); }
 function pwSettingsCard(){ const c=pwCfg(), r=GH.docsRepo(), cs=can('settings');
   return `<div class="card" style="padding:18px;margin-top:14px" id="pwSettings"><h4 class="section" style="margin-top:0">Onboarding paperwork</h4>
     <p class="note">File store: private repo <code>${esc(r.owner)}/${esc(r.name)}</code> <span id="pwStoreState"></span></p>
     <div style="display:flex;gap:10px;align-items:center;margin:8px 0 14px"><button class="btn ghost sm" id="pwTest">Test connection</button><button class="btn link sm" id="pwHelp">Setup steps</button></div>
-    <div class="grid2"><div class="field"><label for="pwWarn">Warn this many days before a date</label><input id="pwWarn" type="number" min="0" max="365" value="${c.warn_days}" ${cs?'':'disabled'}></div>
+    <div class="grid2"><div class="field"><label for="pwWarn">Warn this many days before a CCC license expires</label><input id="pwWarn" type="number" min="0" max="365" value="${c.warn_days}" ${cs?'':'disabled'}></div>
       <div class="field"><label for="pwFallback">Renewal tasks on unassigned accounts go to</label><select id="pwFallback" ${cs?'':'disabled'}>${S.users.filter(u=>u.role!=='viewer').map(u=>`<option value="${esc(u.id)}" ${u.id===(pwFallback()||{}).id?'selected':''}>${esc(u.name)}</option>`).join('')}</select></div></div>
     <div class="caplabel">A profile is complete when it has</div><div class="checkgrid">${PROFILE_FIELDS.map(f=>`<label><input type="checkbox" class="chk" data-pwreq="${f.id}" ${c.required.includes(f.id)?'checked':''} ${cs?'':'disabled'}>${f.label}</label>`).join('')}</div>
-    <p class="note" style="margin:8px 0 12px">…plus the CCC license, ST-4 and W-9, which are always required: on file, with a date that hasn't passed.</p>
+    <p class="note" style="margin:8px 0 12px">…plus the three forms, which are always required: a CCC license on file that hasn't expired, and an ST-4 and a W-9 on file (those two don't expire).</p>
     ${cs?'<button class="btn sm" id="pwSaveCfg">Save paperwork settings</button>':''}</div>`; }
 function bindPwSettings(v){ const st=$('#pwStoreState',v); if(!st) return;
   $('#pwHelp',v).onclick=()=>pwSetupHelp();
@@ -1157,11 +1166,10 @@ function editContact(id){ const c=C[id]; if(!c) return; const fromSheet=['Master
 async function mergeAccounts(fromId,intoId){ const from=ALL[fromId],into=ALL[intoId]; if(!from||!into) return; if(!confirm(`Merge "${from.name}" into "${into.name}"? People, orders, tags, license and notes move over; "${from.name}" is removed.`)) return;
   await guarded(async()=>{ S.contacts=await GH.update(F.contacts,cs=>{ for(const c of cs) if(c.account_id===fromId) c.account_id=intoId; return cs; },`Merge people ${from.name} → ${into.name}`);
     S.orders=await GH.update(F.orders,os=>{ for(const o of os) if(o.account_id===fromId) o.account_id=intoId; return os; },`Merge orders ${from.name} → ${into.name}`);
-    // paperwork follows the merge: for each form the better one stays current (a file with the later date), the other goes to Previous versions
+    // paperwork follows the merge: for each form the better one stays current (a file with the later expiration; for ST-4 / W-9 the later filing), the other goes to Previous versions
     if(pwRec(pwObj((await GH.read(F.paperwork,true)).data)[fromId])) S.paperwork=pwObj(await GH.update(F.paperwork,pw=>{ pw=pwObj(pw); const src=pwRec(pw[fromId]); if(!src) return pw; const dst=pwAcc(pw,intoId);
-      const rank=x=>!x?'':x.file?(dayNum(x.expires)!=null?x.expires:'0000-00-01'):(x.expires?'0000-00-00':'');
-      for(const k of Object.keys(src)){ const s=pwRec(src[k]); if(!s) continue; const d=pwRec(dst[k]); const [win,lose]=(!d||rank(s)>rank(d))?[s,d]:[d,s]; const {history:_w,...wcur}=win; const lcur=lose?(({history:_l,...r})=>r)(lose):null;
-        dst[k]={...wcur,history:[...(lcur&&(lcur.file||lcur.expires)?[{...lcur,replaced_at:localDay(),replaced_by:S.user.id}]:[]),...pwHist(win),...pwHist(lose)]}; }
+      for(const k of Object.keys(src)){ const s=pwRec(src[k]); if(!s||(!recHas(k,s)&&!pwHist(s).length)) continue; const d=pwRec(dst[k]); const [win,lose]=(!d||recRank(k,s)>recRank(k,d))?[s,d]:[d,s]; const {history:_w,...wcur}=win; const lcur=lose?(({history:_l,...r})=>r)(lose):null;
+        dst[k]={...wcur,history:[...(recHas(k,lcur)?[{...lcur,replaced_at:localDay(),replaced_by:S.user.id}]:[]),...pwHist(win),...pwHist(lose)]}; }
       delete pw[fromId]; return pw; },`Merge paperwork ${from.name} → ${into.name}`));
     const fromCopy={...from};
     const enrich=t=>{ t.tags=uniq([...(t.tags||[]),...(fromCopy.tags||[])]); if(!t.address&&fromCopy.address) t.address=fromCopy.address; if(!t.license_number&&fromCopy.license_number) t.license_number=fromCopy.license_number; if(fromCopy.delivery_notes) t.delivery_notes=[t.delivery_notes,fromCopy.delivery_notes].filter(Boolean).join('\n'); t.merged_from=[...(t.merged_from||[]),{id:fromCopy.id,name:fromCopy.name,source:fromCopy.source,date:today()}]; };

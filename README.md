@@ -82,8 +82,8 @@ Unclaimed Leads list until a person claims it.
   logs it. Domain-named leads ask for the real company name when claimed.
 - **Orders 2026** — every order; **+ New order** (also in the top bar and on every account page).
   A confirmed first order moves a Prospect — or an unclaimed lead — to Active automatically.
-- **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus paperwork
-  renewals (a CCC license, ST-4 or W-9 that is past its date or inside the warning window).
+- **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus CCC license
+  renewals (a license that is past its date or inside the warning window).
 - **Paperwork** — every active account against the three required forms: status, expiration date,
   download, profile completeness. Filter by owner / expired / expiring / missing; export to CSV.
 - **People / Email List** — the directory. Email List hides generic inboxes (accounting@, info@,
@@ -96,19 +96,24 @@ Unclaimed Leads list until a person claims it.
 
 ## Onboarding paperwork (CCC license · ST-4 · W-9)
 
-Every active customer needs all three on file, each with an expiration date. On the account page:
+Every active customer needs all three on file. A CCC license expires, so it carries an expiration date.
+An ST-4 and a W-9 do not expire: one on file is all that's asked, and no date is entered. On the account page:
 
-- **Onboarding paperwork** — one row per form: status, expiration date, file name, who uploaded it and
-  when. **Upload / Replace**, **Download**, **View** (PDFs and photos open inside the app), **edit** to
-  correct the date. Replacing keeps the old file under *Previous versions*. For a W-9 or ST-4 on a chain
+- **Onboarding paperwork** — one row per form: status, file name, who uploaded it and when, and for the
+  CCC license its expiration date. **Upload / Replace**, **Download**, **View** (PDFs and photos open
+  inside the app), **edit** to correct the license date or add a note. Replacing keeps the old file under *Previous versions*. For a W-9 or ST-4 on a chain
   account, one tick files it for every location of that chain.
 - **Profile checklist** — a profile reads **Incomplete** until every required field (Town, Address,
-  License #, License type, Owner, Grade, Buyer / Finance / Intake contact) is filled in *and* all three
-  forms are on file with a date that hasn't passed. Which fields count is set under Settings.
-- **Warnings and tasks** — 60 days before a date (Settings) the form turns amber, the account page
-  shows an alert, and a *Get updated …* task appears in Tasks for the account's owner (unassigned
-  accounts go to Matt; change that in Settings). Past its date it turns red and the task is Overdue.
-  The task clears itself when the renewed document is uploaded.
+  License #, License type, Owner, Grade, Buyer / Finance / Intake contact) is filled in *and* the CCC
+  license is on file and unexpired *and* an ST-4 and a W-9 are on file. Which fields count is set under
+  Settings.
+- **Warnings and tasks** — CCC license only. 60 days before it expires (Settings) the license turns
+  amber, the account page shows an alert, and a *Get updated CCC license* task appears in Tasks for the
+  account's owner (unassigned accounts go to Matt; change that in Settings). Past its date it turns red
+  and the task is Overdue. The task clears itself when the renewed license is uploaded.
+
+To make another form expiring (or not), change its `expires:` flag in the `DOCS` list near the top of
+the paperwork code in `index.html`. Dates left on ST-4 / W-9 records from before this rule are ignored.
 
 **Where the files live.** Not here. This repo is public and GitHub Pages serves everything in it, and
 W-9s and ST-4s carry tax IDs. The files go to a second, **private** repo — `dangillan1/ccgl-crm-docs` —
@@ -120,7 +125,8 @@ date, who uploaded it and when, the file's size and type, where it sits in the p
 if one was typed, and a generated label such as `W-9 - Harbor House (Chelsea).pdf`. The name the
 file had on the uploader's computer is never written here (it is kept in the private store's commit
 message), so a scan called `W9 EIN 12-3456789.pdf` leaks nothing. Notes are public: keep tax IDs out
-of them. Downloads are named with the label plus the expiration date.
+of them. Downloads are named with the label plus a date: the expiration date for a CCC license, the
+filing date for an ST-4 or W-9.
 
 Before **every** upload the app asks GitHub about the file store and refuses to send anything unless
 it is a different repo from this one, private, and has GitHub Pages switched off.
@@ -255,7 +261,7 @@ When you trust the CRM: stop editing the Sheet, run one last `--merge`, and in `
 
 1. ✅ Book / leads split, record pages, claim → prospect → first order flow, orders, tasks, Insights v1
 2. Onboarding checklist per stage (intro call → sample drop → menu setup → launch promo → first reorder)
-   ✅ Onboarding paperwork (CCC license / ST-4 / W-9), expiration warnings, profile completeness (Oct 5)
+   ✅ Onboarding paperwork (CCC license / ST-4 / W-9), CCC expiration warnings, profile completeness (Oct 5)
 3. Weighted prioritisation in Insights (grade × staleness × stage × $) and per-rep daily queue
 4. Manager view: activity volume by rep, pipeline movement, new accounts won, weekly roll-up
 5. AI assessments regenerated automatically on import (API key in Settings)
