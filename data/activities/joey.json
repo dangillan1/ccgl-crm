@@ -190,5 +190,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods",
   "date": "2026-10-05"
+ },
+ {
+  "id": "Xmuvkc32su4u5",
+  "ts": "2026-10-05T18:08:07.828Z",
+  "account_id": "A0195",
+  "type": "Doc",
+  "note": "CCC License uploaded — expires Nov 29, 26",
+  "date": "2026-10-05"
  }
 ]
