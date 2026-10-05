@@ -12,7 +12,8 @@ data/contacts.json      one row per person, role-tagged Buyer / Intake / Finance
 data/orders.json        one row per 2026 order (318 from Order Tracker + any entered in the CRM)
 data/insights.json      AI assessments shown on the Insights tab (regenerated at each import)
 data/users.json         who can sign in + password hashes
-data/settings.json      pipeline stages, owner names, last-import report
+data/settings.json      pipeline stages, owner names, last-import report, paperwork settings
+data/paperwork.json     onboarding paperwork per account — dates, status and a generated file label (the files are NOT in this repo)
 data/activities/*.json  one file per user — calls / visits / notes / claims / stage moves / next steps
 tools/import_sheet.py   import / re-import from the Google Sheet + Order Tracker exports
 tools/make_insights.py  assembles data/insights.json
@@ -38,7 +39,7 @@ Pick your name. **Any password works until you set one** — you're prompted to 
 Saving anything (including your password) needs the GitHub token:
 
 1. github.com/settings/personal-access-tokens/new → name `CCGL CRM`
-2. Repository access → *Only select repositories* → `ccgl-crm`
+2. Repository access → *Only select repositories* → `ccgl-crm` and `ccgl-crm-docs` (the private paperwork file store, see below)
 3. Permissions → Repository → **Contents: Read and write**
 4. Generate, copy `github_pat_…`, paste into the app when asked (also under Settings).
 
@@ -57,6 +58,8 @@ Reading works without a token (the Pages site serves the JSON); only saving need
 | Joey    | rep     | edit accounts/people, log activity, move pipeline stages            |
 | Charley | ops     | read everything; orders, people, delivery notes                     |
 | Drew    | viewer  | Active Accounts and Orders 2026 only, read-only                      |
+
+Everyone except viewers can upload, replace, view and download onboarding paperwork.
 
 Reps see *Today* scoped to their own book. Manager/admin see the whole book plus ownership and
 duplicate cleanup queues. Add users from Settings (admin) — pick a name and role; they set their own PIN at first sign-in. Reset a
@@ -79,14 +82,62 @@ Unclaimed Leads list until a person claims it.
   logs it. Domain-named leads ask for the real company name when claimed.
 - **Orders 2026** — every order; **+ New order** (also in the top bar and on every account page).
   A confirmed first order moves a Prospect — or an unclaimed lead — to Active automatically.
-- **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's.
+- **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus paperwork
+  renewals (a CCC license, ST-4 or W-9 that is past its date or inside the warning window).
+- **Paperwork** — every active account against the three required forms: status, expiration date,
+  download, profile completeness. Filter by owner / expired / expiring / missing; export to CSV.
 - **People / Email List** — the directory. Email List hides generic inboxes (accounting@, info@,
   orders@ …) and personal domains by default; the *Finance* role chip does the opposite.
 - **Account page** — action bar (Log call / visit / text / email / note · + New order · Set next
-  step · Move stage · Claim), standing note in red (editable), key contacts by role, about, delivery
-  notes, people, edit — and a timeline of activities and orders newest-first with the composer on top.
+  step · Move stage · Claim), standing note in red (editable), key contacts by role, profile checklist,
+  onboarding paperwork, about, delivery notes, people, edit — and a timeline of activities and orders newest-first with the composer on top.
 - **Activity Log** — everything logged plus the GitHub commit history (every save is a commit
   tagged `[user]`).
+
+## Onboarding paperwork (CCC license · ST-4 · W-9)
+
+Every active customer needs all three on file, each with an expiration date. On the account page:
+
+- **Onboarding paperwork** — one row per form: status, expiration date, file name, who uploaded it and
+  when. **Upload / Replace**, **Download**, **View** (PDFs and photos open inside the app), **edit** to
+  correct the date. Replacing keeps the old file under *Previous versions*. For a W-9 or ST-4 on a chain
+  account, one tick files it for every location of that chain.
+- **Profile checklist** — a profile reads **Incomplete** until every required field (Town, Address,
+  License #, License type, Owner, Grade, Buyer / Finance / Intake contact) is filled in *and* all three
+  forms are on file with a date that hasn't passed. Which fields count is set under Settings.
+- **Warnings and tasks** — 60 days before a date (Settings) the form turns amber, the account page
+  shows an alert, and a *Get updated …* task appears in Tasks for the account's owner (unassigned
+  accounts go to Matt; change that in Settings). Past its date it turns red and the task is Overdue.
+  The task clears itself when the renewed document is uploaded.
+
+**Where the files live.** Not here. This repo is public and GitHub Pages serves everything in it, and
+W-9s and ST-4s carry tax IDs. The files go to a second, **private** repo — `dangillan1/ccgl-crm-docs` —
+through the same token, as `accounts/<account id>/<form>/<date>_<id>.<ext>`. Nothing is ever deleted
+from it by the app.
+
+`data/paperwork.json` in this repo is public like the rest of the data. Per form it holds the expiration
+date, who uploaded it and when, the file's size and type, where it sits in the private store, the note
+if one was typed, and a generated label such as `W-9 - Harbor House (Chelsea).pdf`. The name the
+file had on the uploader's computer is never written here (it is kept in the private store's commit
+message), so a scan called `W9 EIN 12-3456789.pdf` leaks nothing. Notes are public: keep tax IDs out
+of them. Downloads are named with the label plus the expiration date.
+
+Before **every** upload the app asks GitHub about the file store and refuses to send anything unless
+it is a different repo from this one, private, and has GitHub Pages switched off.
+
+One-time setup (Dan):
+
+1. github.com/new → name `ccgl-crm-docs` → **Private** → tick *Add a README file* → Create repository.
+2. github.com/settings/personal-access-tokens → the `CCGL CRM` token → Edit → Repository access:
+   *Only select repositories* with both `ccgl-crm` and `ccgl-crm-docs` ticked → Permissions →
+   **Contents: Read and write** → Update. Check it still says *Only select repositories* before saving;
+   the edit form has been reported to flip to *All repositories*.
+3. In the CRM: Settings → Onboarding paperwork → **Test connection** → *reachable · private*. Then upload
+   one document to confirm the token can also write.
+
+Anyone holding the team token can read the file store, so treat the token like a key to the filing
+cabinet: if it leaks, replace it. Viewers have no token and see status only, never the files.
+To use a different store, add `"docs_repo": {"owner": "...", "name": "..."}` to `data/settings.json`.
 
 ## Parallel run: who owns which fields
 
@@ -204,6 +255,7 @@ When you trust the CRM: stop editing the Sheet, run one last `--merge`, and in `
 
 1. ✅ Book / leads split, record pages, claim → prospect → first order flow, orders, tasks, Insights v1
 2. Onboarding checklist per stage (intro call → sample drop → menu setup → launch promo → first reorder)
+   ✅ Onboarding paperwork (CCC license / ST-4 / W-9), expiration warnings, profile completeness (Oct 5)
 3. Weighted prioritisation in Insights (grade × staleness × stage × $) and per-rep daily queue
 4. Manager view: activity volume by rep, pipeline movement, new accounts won, weekly roll-up
 5. AI assessments regenerated automatically on import (API key in Settings)
