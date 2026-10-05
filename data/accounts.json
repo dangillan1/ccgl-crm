@@ -10113,5 +10113,40 @@
   "crm_edits": {
    "address": "2026-09-28"
   }
+ },
+ {
+  "id": "A0503",
+  "sheet_key": "",
+  "source": "CCC New Licenses",
+  "name": "J-Bam, Inc.",
+  "parent": "",
+  "town": "Pittsfield",
+  "address": "",
+  "license_type": "Dispensary",
+  "status": "Current",
+  "grade": "",
+  "owner": "Unassigned",
+  "last_contact": "",
+  "next_contact": "",
+  "notes": "",
+  "stage": "Customer",
+  "stage_entered": "",
+  "delivery_notes": "",
+  "standing_requests": "",
+  "license_number": "MRN285505",
+  "tags": [
+   "From QBO",
+   "New License 2026"
+  ],
+  "flags": [
+   "order-license-mismatch"
+  ],
+  "dup_candidates": [],
+  "created": "2026-09-25",
+  "sheet_row": null,
+  "claimed": true,
+  "claimed_by": "dan",
+  "claimed_at": "2026-10-05",
+  "in_qbo": true
  }
 ]

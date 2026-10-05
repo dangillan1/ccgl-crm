@@ -3,6 +3,427 @@
     {
       "AllowOnlineAffirmPayment": false,
       "sparse": true,
+      "Id": "7692",
+      "DocNumber": "1768",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "509",
+        "name": "Cannabis Connection West Springfield"
+      },
+      "BillAddr": {
+        "Id": "3040"
+      },
+      "ShipAddr": {
+        "Id": "3040",
+        "Line1": "1102 Riverdale St",
+        "Line2": "Unit 2",
+        "City": "West Springfield",
+        "CountrySubDivisionCode": "MA",
+        "PostalCode": "01089"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 5494.86,
+      "Balance": 0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7690",
+      "DocNumber": "1767",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "361",
+        "name": "Apex Noire"
+      },
+      "BillAddr": {
+        "Id": "981"
+      },
+      "ShipAddr": {
+        "Id": "3735",
+        "Line1": "Apex Noire",
+        "Line2": "150 State St",
+        "Line3": "Boston, MA  02109"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 4250.0,
+      "Balance": 4250.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7689",
+      "DocNumber": "1766",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "316",
+        "name": "Pioneer Valley Trading Co."
+      },
+      "BillAddr": {
+        "Id": "1609"
+      },
+      "ShipAddr": {
+        "Id": "3734",
+        "Line1": "Pioneer Valley Trading Co.",
+        "Line2": "475 Southampton Road",
+        "Line3": "Westfield, MA  01085",
+        "Line4": "United States"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-10-30",
+      "TotalAmt": 4452.5,
+      "Balance": 0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7687",
+      "DocNumber": "1765",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "411",
+        "name": "Pioneer Valley Trading Southwick"
+      },
+      "BillAddr": {
+        "Id": "1498"
+      },
+      "ShipAddr": {
+        "Id": "3732",
+        "Line1": "Pioneer Valley Trading Southwick",
+        "Line2": "660 College Highway",
+        "Line3": "Southwick, MA  01077"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 6855.25,
+      "Balance": 905.25
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7686",
+      "DocNumber": "1764",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "517",
+        "name": "Fresh Connection Cambridge"
+      },
+      "BillAddr": {
+        "Id": "3161"
+      },
+      "ShipAddr": {
+        "Id": "3731",
+        "Line1": "Fresh Connection Cambridge",
+        "Line2": "966 Cambridge St",
+        "Line3": "Cambridge, MA  02141"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 4075.0,
+      "Balance": 4075.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7685",
+      "DocNumber": "1763",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "488",
+        "name": "Botera Franklin"
+      },
+      "BillAddr": {
+        "Id": "2748"
+      },
+      "ShipAddr": {
+        "Id": "3730",
+        "Line1": "Botera Franklin",
+        "Line2": "1256 W Central St",
+        "Line3": "Suite 6",
+        "Line4": "Franklin, MA  02038"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 4430.0,
+      "Balance": 4430.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7684",
+      "DocNumber": "1762",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "489",
+        "name": "Botera Brockton"
+      },
+      "BillAddr": {
+        "Id": "2749"
+      },
+      "ShipAddr": {
+        "Id": "3729",
+        "Line1": "Botera Brockton",
+        "Line2": "747 Centre St.",
+        "Line3": "Brockton, MA  02302"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 2800.0,
+      "Balance": 2800.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7681",
+      "DocNumber": "1761",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "490",
+        "name": "Botera Taunton"
+      },
+      "BillAddr": {
+        "Id": "2750"
+      },
+      "ShipAddr": {
+        "Id": "3727",
+        "Line1": "Botera Taunton",
+        "Line2": "297 Broadway",
+        "Line3": "Taunton, MA  02780"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 3750.0,
+      "Balance": 3750.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7675",
+      "DocNumber": "1760",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "483",
+        "name": "Firehouse"
+      },
+      "BillAddr": {
+        "Id": "2520"
+      },
+      "ShipAddr": {
+        "Id": "3725",
+        "Line1": "Firehouse",
+        "Line2": "883 Hyde Park",
+        "Line3": "Hyde Park, MA  02136"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-15",
+      "TotalAmt": 6880.25,
+      "Balance": 6880.25
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7673",
+      "DocNumber": "1758",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "402",
+        "name": "Local Cannabis Company"
+      },
+      "BillAddr": {
+        "Id": "1698"
+      },
+      "ShipAddr": {
+        "Id": "3723",
+        "Line1": "Local Cannabis Company",
+        "Line2": "16 New Ocean St",
+        "Line3": "Swampscott, MA  01907"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 3640.0,
+      "Balance": 3640.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7672",
+      "DocNumber": "1757",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "447",
+        "name": "Pinnacle Dispensary"
+      },
+      "BillAddr": {
+        "Id": "1876"
+      },
+      "ShipAddr": {
+        "Id": "3722",
+        "Line1": "Pinnacle Dispensary",
+        "Line2": "15 Liberty St",
+        "Line3": "Quincy, MA  02169"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-01",
+      "TotalAmt": 3475.0,
+      "Balance": 3375.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7671",
+      "DocNumber": "1756",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000021",
+        "name": "J-BAM"
+      },
+      "BillAddr": {
+        "Id": "3700"
+      },
+      "ShipAddr": {
+        "Id": "3721",
+        "Line1": "J-BAM",
+        "Line2": "71 Downing Parkway ",
+        "Line3": "Building A",
+        "Line4": "Pittsfield, MA  01201"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-10-30",
+      "TotalAmt": 12152.25,
+      "Balance": 12152.25
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7670",
+      "DocNumber": "1755",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "437",
+        "name": "Prolific"
+      },
+      "BillAddr": {
+        "Id": "1742"
+      },
+      "ShipAddr": {
+        "Id": "3720",
+        "Line1": "Prolific",
+        "Line2": "116 Harvard Ave",
+        "Line3": "Boston, MA  02134"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-10-30",
+      "TotalAmt": 3000.0,
+      "Balance": 3000.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7669",
+      "DocNumber": "1754",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "453",
+        "name": "Bountiful Framingham"
+      },
+      "BillAddr": {
+        "Id": "1929"
+      },
+      "ShipAddr": {
+        "Id": "3719",
+        "Line1": "Bountiful Framingham",
+        "Line2": "315 Worcester Rd",
+        "Line3": "Framingham, MA  01701"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-10-30",
+      "TotalAmt": 7915.42,
+      "Balance": 7915.42
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7668",
+      "DocNumber": "1753",
+      "TxnDate": "2026-09-30",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "438",
+        "name": "Bountiful Rowley"
+      },
+      "BillAddr": {
+        "Id": "1973"
+      },
+      "ShipAddr": {
+        "Id": "3718",
+        "Line1": "Bountiful Rowley",
+        "Line2": "300 Newburyport Turnpike",
+        "Line3": "Rowley, MA  01969"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-10-30",
+      "TotalAmt": 5660.42,
+      "Balance": 5660.42
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7667",
+      "DocNumber": "1752",
+      "TxnDate": "2026-09-29",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "293",
+        "name": "Sublime Cannabis Co."
+      },
+      "BillAddr": {
+        "Id": "596"
+      },
+      "ShipAddr": {
+        "Id": "3717",
+        "Line1": "Sublime Cannabis Co.",
+        "Line2": "800 Falmouth Rd STE 102A",
+        "Line3": "Mashpee, 02649"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-10-29",
+      "TotalAmt": 5377.72,
+      "Balance": 0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
       "Id": "7631",
       "DocNumber": "1748",
       "TxnDate": "2026-09-28",
@@ -24,7 +445,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-28",
       "TotalAmt": 4180.0,
-      "Balance": 4180.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -102,7 +523,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-24",
       "TotalAmt": 6165.25,
-      "Balance": 6012.25
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -178,9 +599,9 @@
         "Line3": "Boston, MA  02128"
       },
       "FreeFormAddress": true,
-      "DueDate": "2026-10-23",
-      "TotalAmt": 4700.0,
-      "Balance": 4700.0
+      "DueDate": "2026-10-30",
+      "TotalAmt": 4400.0,
+      "Balance": 4400.0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -778,8 +1199,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-10-01",
-      "TotalAmt": 2540.0,
-      "Balance": 2480.0
+      "TotalAmt": 2480.0,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -804,8 +1225,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-10-01",
-      "TotalAmt": 5565.0,
-      "Balance": 5475.0
+      "TotalAmt": 5475.0,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -910,7 +1331,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-01",
       "TotalAmt": 3630.0,
-      "Balance": 3045.17
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -936,7 +1357,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-01",
       "TotalAmt": 3630.0,
-      "Balance": 3413.46
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1170,7 +1591,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-25",
       "TotalAmt": 13116.5,
-      "Balance": 13116.5
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1509,7 +1930,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-12",
       "TotalAmt": 3100.0,
-      "Balance": 3100.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -8377,6 +8798,6 @@
     }
   ],
   "startPosition": 1,
-  "maxResults": 321,
-  "totalCount": 321
+  "maxResults": 337,
+  "totalCount": 337
 }

@@ -17,7 +17,7 @@
  {
   "id": "361",
   "name": "Apex Noire",
-  "balance": 4925.0
+  "balance": 9175.0
  },
  {
   "id": "487",
@@ -67,17 +67,17 @@
  {
   "id": "489",
   "name": "Botera Brockton",
-  "balance": 3413.46
+  "balance": 2800.0
  },
  {
   "id": "488",
   "name": "Botera Franklin",
-  "balance": 3045.17
+  "balance": 4430.0
  },
  {
   "id": "490",
   "name": "Botera Taunton",
-  "balance": 0.0
+  "balance": 3750.0
  },
  {
   "id": "446",
@@ -87,12 +87,12 @@
  {
   "id": "453",
   "name": "Bountiful Framingham",
-  "balance": 0.0
+  "balance": 7915.42
  },
  {
   "id": "438",
   "name": "Bountiful Rowley",
-  "balance": 0.0
+  "balance": 5660.42
  },
  {
   "id": "520",
@@ -157,7 +157,7 @@
  {
   "id": "459",
   "name": "Cannabis Healing",
-  "balance": 4700.0
+  "balance": 4400.0
  },
  {
   "id": "443",
@@ -267,7 +267,7 @@
  {
   "id": "483",
   "name": "Firehouse",
-  "balance": 5452.5
+  "balance": 12332.75
  },
  {
   "id": "353",
@@ -282,7 +282,7 @@
  {
   "id": "517",
   "name": "Fresh Connection Cambridge",
-  "balance": 0.0
+  "balance": 4075.0
  },
  {
   "id": "300",
@@ -352,7 +352,7 @@
  {
   "id": "328",
   "name": "Harbor House Collective LLC",
-  "balance": 29916.5
+  "balance": 16800.0
  },
  {
   "id": "398",
@@ -432,7 +432,7 @@
  {
   "id": "100000021",
   "name": "J-BAM",
-  "balance": 0.0
+  "balance": 12152.25
  },
  {
   "id": "440",
@@ -477,7 +477,7 @@
  {
   "id": "402",
   "name": "Local Cannabis Company",
-  "balance": 0.0
+  "balance": 3640.0
  },
  {
   "id": "478",
@@ -542,7 +542,7 @@
  {
   "id": "391",
   "name": "New Dia Fenway",
-  "balance": 4180.0
+  "balance": 0.0
  },
  {
   "id": "319",
@@ -582,7 +582,7 @@
  {
   "id": "447",
   "name": "Pinnacle Dispensary",
-  "balance": -100.0
+  "balance": 3375.0
  },
  {
   "id": "277",
@@ -597,7 +597,7 @@
  {
   "id": "411",
   "name": "Pioneer Valley Trading Southwick",
-  "balance": -5950.0
+  "balance": 905.25
  },
  {
   "id": "496",
@@ -607,7 +607,7 @@
  {
   "id": "437",
   "name": "Prolific",
-  "balance": 3100.0
+  "balance": 3000.0
  },
  {
   "id": "492",
@@ -657,7 +657,7 @@
  {
   "id": "375",
   "name": "Reverie 73 Gloucester",
-  "balance": 2238.0
+  "balance": -242.0
  },
  {
   "id": "359",
@@ -667,7 +667,7 @@
  {
   "id": "354",
   "name": "Reverie 73 Lowell",
-  "balance": 5026.0
+  "balance": -449.0
  },
  {
   "id": "494",
@@ -737,7 +737,7 @@
  {
   "id": "491",
   "name": "Surfs Up",
-  "balance": 6012.25
+  "balance": 0.0
  },
  {
   "id": "407",

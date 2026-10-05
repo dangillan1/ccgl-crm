@@ -1,178 +1,1043 @@
 {
   "Customer": [
-    {"Balance": 0.0, "sparse": true, "Id": "400", "DisplayName": "27 Broom Street, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "449", "DisplayName": "Ack Natural"},
-    {"Balance": 0.0, "sparse": true, "Id": "357", "DisplayName": "Alternative Compassion Services"},
-    {"Balance": 4925.0, "sparse": true, "Id": "361", "DisplayName": "Apex Noire"},
-    {"Balance": 6640.0, "sparse": true, "Id": "487", "DisplayName": "Ascend Wellness"},
-    {"Balance": 6345.0, "sparse": true, "Id": "528", "DisplayName": "Ascend Wellness Boston"},
-    {"Balance": 7233.85, "sparse": true, "Id": "529", "DisplayName": "Ascend Wellness New Bedford"},
-    {"Balance": 0.0, "sparse": true, "Id": "415", "DisplayName": "BeWell Organic Medicine"},
-    {"Balance": 0.0, "sparse": true, "Id": "410", "DisplayName": "Black Stone Valley"},
-    {"Balance": 0.0, "sparse": true, "Id": "512", "DisplayName": "Bliss"},
-    {"Balance": 0.0, "sparse": true, "Id": "502", "DisplayName": "Blossom Flower"},
-    {"Balance": 2750.5, "sparse": true, "Id": "522", "DisplayName": "BoomX"},
-    {"Balance": 3413.46, "sparse": true, "Id": "489", "DisplayName": "Botera Brockton"},
-    {"Balance": 3045.17, "sparse": true, "Id": "488", "DisplayName": "Botera Franklin"},
-    {"Balance": 0.0, "sparse": true, "Id": "490", "DisplayName": "Botera Taunton"},
-    {"Balance": 0.0, "sparse": true, "Id": "446", "DisplayName": "Bountiful Farms, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "453", "DisplayName": "Bountiful Framingham"},
-    {"Balance": 0.0, "sparse": true, "Id": "438", "DisplayName": "Bountiful Rowley"},
-    {"Balance": 0.0, "sparse": true, "Id": "444", "DisplayName": "BOUTIQ"},
-    {"Balance": 0.0, "sparse": true, "Id": "520", "DisplayName": "Bud Barn"},
-    {"Balance": 0.0, "sparse": true, "Id": "412", "DisplayName": "Bud's Goods & Provisions - Abington"},
-    {"Balance": 0.0, "sparse": true, "Id": "340", "DisplayName": "Bud's Goods & Provisions Corp"},
-    {"Balance": 0.0, "sparse": true, "Id": "371", "DisplayName": "Budega, Inc. d/b/a Herbwell Cannabis"},
-    {"Balance": 0.0, "sparse": true, "Id": "521", "DisplayName": "Cal Verde Naturals"},
-    {"Balance": 0.0, "sparse": true, "Id": "332", "DisplayName": "Calyx Peak of MA, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "369", "DisplayName": "CANA Craft Cannabis"},
-    {"Balance": 3300.0, "sparse": true, "Id": "416", "DisplayName": "CannaBarn"},
-    {"Balance": 0.0, "sparse": true, "Id": "508", "DisplayName": "Cannabis Connection"},
-    {"Balance": 0.0, "sparse": true, "Id": "509", "DisplayName": "Cannabis Connection West Springfield"},
-    {"Balance": 4700.0, "sparse": true, "Id": "459", "DisplayName": "Cannabis Healing"},
-    {"Balance": 0.0, "sparse": true, "Id": "443", "DisplayName": "Cape Cod Cannabis"},
-    {"Balance": 6190.0, "sparse": true, "Id": "533", "DisplayName": "Capeway Cannabis - Bourne"},
-    {"Balance": 4100.0, "sparse": true, "Id": "352", "DisplayName": "Capeway Cannabis, LLC"},
-    {"Balance": -477.5, "sparse": true, "Id": "389", "DisplayName": "CNA Amesbury"},
-    {"Balance": 0.0, "sparse": true, "Id": "390", "DisplayName": "CNA Haverhill"},
-    {"Balance": 0.0, "sparse": true, "Id": "386", "DisplayName": "Coastal Cultivars, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "428", "DisplayName": "Comm Ave Canna"},
-    {"Balance": 0.0, "sparse": true, "Id": "377", "DisplayName": "Community Care Collective, Inc."},
-    {"Balance": -180.0, "sparse": true, "Id": "380", "DisplayName": "Dris Corp"},
-    {"Balance": 8480.25, "sparse": true, "Id": "358", "DisplayName": "Eastern Cannabis Co."},
-    {"Balance": 6425.25, "sparse": true, "Id": "484", "DisplayName": "Elysian"},
-    {"Balance": 0.0, "sparse": true, "Id": "272", "DisplayName": "Ember Gardens Cape Cod LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "469", "DisplayName": "EMBR (Kur Retail)"},
-    {"Balance": 3280.0, "sparse": true, "Id": "479", "DisplayName": "EMBR (Northampton)"},
-    {"Balance": 0.0, "sparse": true, "Id": "304", "DisplayName": "Emerald Grove, Inc."},
-    {"Balance": -109.64, "sparse": true, "Id": "452", "DisplayName": "Enlite Indian Orchard"},
-    {"Balance": 4825.0, "sparse": true, "Id": "451", "DisplayName": "Enlite Northampton"},
-    {"Balance": 0.0, "sparse": true, "Id": "500", "DisplayName": "Eskar Arlington"},
-    {"Balance": 0.0, "sparse": true, "Id": "499", "DisplayName": "Eskar Northbridge"},
-    {"Balance": 0.0, "sparse": true, "Id": "408", "DisplayName": "Farnsworth Fine Cannabis Company"},
-    {"Balance": 0.0, "sparse": true, "Id": "318", "DisplayName": "FFD Enterprises MA, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "409", "DisplayName": "Fine Fettle"},
-    {"Balance": 0.0, "sparse": true, "Id": "401", "DisplayName": "Firebrand"},
-    {"Balance": 5452.5, "sparse": true, "Id": "483", "DisplayName": "Firehouse"},
-    {"Balance": 0.0, "sparse": true, "Id": "353", "DisplayName": "Flower & Soul, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "503", "DisplayName": "Fresh Connection"},
-    {"Balance": 0.0, "sparse": true, "Id": "517", "DisplayName": "Fresh Connection Cambridge"},
-    {"Balance": 0.0, "sparse": true, "Id": "300", "DisplayName": "Frozen 4 Corporation d/b/a South Shore Buds"},
-    {"Balance": 0.0, "sparse": true, "Id": "382", "DisplayName": "Full Harvest Moonz"},
-    {"Balance": 0.0, "sparse": true, "Id": "381", "DisplayName": "Full Harvest Moonz, Inc."},
-    {"Balance": 3792.36, "sparse": true, "Id": "460", "DisplayName": "Fyre Ants (Apical)"},
-    {"Balance": 0.0, "sparse": true, "Id": "368", "DisplayName": "Ganesh Wellness Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "100000001", "DisplayName": "Good Nature Wareham"},
-    {"Balance": 0.0, "sparse": true, "Id": "441", "DisplayName": "Grass Appeal, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "482", "DisplayName": "Great Barrington Dispensary"},
-    {"Balance": 0.0, "sparse": true, "Id": "399", "DisplayName": "Green Choice Dispensary, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "388", "DisplayName": "Green N' Go"},
-    {"Balance": 0.0, "sparse": true, "Id": "493", "DisplayName": "Greene Street Cannabis"},
-    {"Balance": 0.0, "sparse": true, "Id": "379", "DisplayName": "Greensoul Organics"},
-    {"Balance": 29916.5, "sparse": true, "Id": "328", "DisplayName": "Harbor House Collective LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "398", "DisplayName": "Haven Provincetown"},
-    {"Balance": 0.0, "sparse": true, "Id": "343", "DisplayName": "Haverhill Stem LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "395", "DisplayName": "HAVN Extracts"},
-    {"Balance": 0.0, "sparse": true, "Id": "370", "DisplayName": "Healing Center"},
-    {"Balance": 1997.81, "sparse": true, "Id": "535", "DisplayName": "Health Circle Rockland"},
-    {"Balance": 1997.81, "sparse": true, "Id": "360", "DisplayName": "Health Circle, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "348", "DisplayName": "Hennep"},
-    {"Balance": 0.0, "sparse": true, "Id": "372", "DisplayName": "Herbwell"},
-    {"Balance": 0.0, "sparse": true, "Id": "392", "DisplayName": "High Hawk Farm LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "387", "DisplayName": "High Hawk Farm, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "394", "DisplayName": "Himalayan High"},
-    {"Balance": 0.0, "sparse": true, "Id": "373", "DisplayName": "Holistic Health Group DBA Suncrafted"},
-    {"Balance": 0.0, "sparse": true, "Id": "301", "DisplayName": "Home Grown 617 d/b/a Yamba Market"},
-    {"Balance": 0.0, "sparse": true, "Id": "448", "DisplayName": "House Premium"},
-    {"Balance": 0.0, "sparse": true, "Id": "406", "DisplayName": "Ideal Craft Cannabis, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "501", "DisplayName": "Insa"},
-    {"Balance": 0.0, "sparse": true, "Id": "100000021", "DisplayName": "J-BAM"},
-    {"Balance": 0.0, "sparse": true, "Id": "440", "DisplayName": "KG Collective Brockton"},
-    {"Balance": 0.0, "sparse": true, "Id": "439", "DisplayName": "KG Collective Cambridge"},
-    {"Balance": 0.0, "sparse": true, "Id": "436", "DisplayName": "Kosa Cannabis"},
-    {"Balance": -102.0, "sparse": true, "Id": "430", "DisplayName": "Kush Groove Brockton"},
-    {"Balance": -58.5, "sparse": true, "Id": "429", "DisplayName": "Kush Groove Cambridge"},
-    {"Balance": 0.0, "sparse": true, "Id": "515", "DisplayName": "Lazy River Dracut"},
-    {"Balance": 0.0, "sparse": true, "Id": "516", "DisplayName": "Lazy River Tewksbury"},
-    {"Balance": 0.0, "sparse": true, "Id": "402", "DisplayName": "Local Cannabis Company"},
-    {"Balance": 0.0, "sparse": true, "Id": "478", "DisplayName": "Low Key West Roxbury"},
-    {"Balance": 0.0, "sparse": true, "Id": "374", "DisplayName": "Low Key, LLC"},
-    {"Balance": 3775.0, "sparse": true, "Id": "477", "DisplayName": "Lowkey West Roxbury"},
-    {"Balance": 0.0, "sparse": true, "Id": "486", "DisplayName": "LTT Trading Co"},
-    {"Balance": 0.0, "sparse": true, "Id": "495", "DisplayName": "Major Bloom"},
-    {"Balance": 0.0, "sparse": true, "Id": "445", "DisplayName": "Mass Green Retail"},
-    {"Balance": 0.0, "sparse": true, "Id": "472", "DisplayName": "Mayflower Boston"},
-    {"Balance": 0.0, "sparse": true, "Id": "471", "DisplayName": "Mayflower Lowell"},
-    {"Balance": 0.0, "sparse": true, "Id": "426", "DisplayName": "Mayflower Medicinals"},
-    {"Balance": 0.0, "sparse": true, "Id": "473", "DisplayName": "Mayflower Worcester"},
-    {"Balance": 0.0, "sparse": true, "Id": "462", "DisplayName": "Medicine Man"},
-    {"Balance": 0.0, "sparse": true, "Id": "454", "DisplayName": "Mello"},
-    {"Balance": 0.0, "sparse": true, "Id": "347", "DisplayName": "New Dia"},
-    {"Balance": 4180.0, "sparse": true, "Id": "391", "DisplayName": "New Dia Fenway"},
-    {"Balance": 0.0, "sparse": true, "Id": "319", "DisplayName": "New England Treatment Access, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "480", "DisplayName": "New Leaf - 2nd St"},
-    {"Balance": 0.0, "sparse": true, "Id": "461", "DisplayName": "New Leaf - S Main St."},
-    {"Balance": 0.0, "sparse": true, "Id": "314", "DisplayName": "Nova Farms, LLC"},
-    {"Balance": -70.17, "sparse": true, "Id": "463", "DisplayName": "Peak Cannabis Co"},
-    {"Balance": 0.0, "sparse": true, "Id": "476", "DisplayName": "Perpetual"},
-    {"Balance": 0.0, "sparse": true, "Id": "405", "DisplayName": "Pineapple Express, LLC"},
-    {"Balance": -100.0, "sparse": true, "Id": "447", "DisplayName": "Pinnacle Dispensary"},
-    {"Balance": 0.0, "sparse": true, "Id": "277", "DisplayName": "Pioneer Cannabis Co."},
-    {"Balance": 0.0, "sparse": true, "Id": "316", "DisplayName": "Pioneer Valley Trading Co."},
-    {"Balance": -5950.0, "sparse": true, "Id": "411", "DisplayName": "Pioneer Valley Trading Southwick"},
-    {"Balance": 0.0, "sparse": true, "Id": "496", "DisplayName": "Potency"},
-    {"Balance": 3100.0, "sparse": true, "Id": "437", "DisplayName": "Prolific"},
-    {"Balance": 0.0, "sparse": true, "Id": "492", "DisplayName": "Quincy Cannabis"},
-    {"Balance": 0.0, "sparse": true, "Id": "378", "DisplayName": "Rasta Rootz, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "322", "DisplayName": "Regenerative LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "414", "DisplayName": "Resinate Northampton"},
-    {"Balance": 0.0, "sparse": true, "Id": "413", "DisplayName": "Resinate Worcester"},
-    {"Balance": 0.0, "sparse": true, "Id": "385", "DisplayName": "Resinate, Inc."},
-    {"Balance": 5916.0, "sparse": true, "Id": "376", "DisplayName": "Reverie 73 Beverly"},
-    {"Balance": 2238.0, "sparse": true, "Id": "375", "DisplayName": "Reverie 73 Gloucester"},
-    {"Balance": 0.0, "sparse": true, "Id": "359", "DisplayName": "Reverie 73 LLC"},
-    {"Balance": 5026.0, "sparse": true, "Id": "354", "DisplayName": "Reverie 73 Lowell"},
-    {"Balance": 0.0, "sparse": true, "Id": "497", "DisplayName": "RISE Dracut"},
-    {"Balance": 0.0, "sparse": true, "Id": "498", "DisplayName": "RISE Maynard"},
-    {"Balance": 0.0, "sparse": true, "Id": "494", "DisplayName": "Roadtrip"},
-    {"Balance": 0.0, "sparse": true, "Id": "311", "DisplayName": "Rolling Releaf, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "475", "DisplayName": "Roslindale Cannabis Co"},
-    {"Balance": -75.0, "sparse": true, "Id": "279", "DisplayName": "Seaside Joint Ventures Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "455", "DisplayName": "Silver Therapeutics"},
-    {"Balance": -750.0, "sparse": true, "Id": "456", "DisplayName": "Silver Therapeutics Palmer"},
-    {"Balance": 0.0, "sparse": true, "Id": "457", "DisplayName": "Silver Therapeutics Roslindale"},
-    {"Balance": -842.75, "sparse": true, "Id": "458", "DisplayName": "Silver Therapeutics Williamstown"},
-    {"Balance": 0.0, "sparse": true, "Id": "286", "DisplayName": "Starbird Cannabis"},
-    {"Balance": 0.0, "sparse": true, "Id": "341", "DisplayName": "Stem Haverhill"},
-    {"Balance": 0.0, "sparse": true, "Id": "511", "DisplayName": "Stories Cannabis"},
-    {"Balance": 0.0, "sparse": true, "Id": "293", "DisplayName": "Sublime Cannabis Co."},
-    {"Balance": 0.0, "sparse": true, "Id": "100000011", "DisplayName": "SunnyDayz"},
-    {"Balance": 6012.25, "sparse": true, "Id": "491", "DisplayName": "Surfs Up"},
-    {"Balance": -500.0, "sparse": true, "Id": "407", "DisplayName": "Sweetgrass Botanicals"},
-    {"Balance": 0.0, "sparse": true, "Id": "404", "DisplayName": "Sweetgrass Solventless"},
-    {"Balance": 0.0, "sparse": true, "Id": "323", "DisplayName": "Temescal Wellness of Massachusetts, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "427", "DisplayName": "Temescal Worcester"},
-    {"Balance": 0.0, "sparse": true, "Id": "397", "DisplayName": "The Agriculturalist"},
-    {"Balance": 0.0, "sparse": true, "Id": "280", "DisplayName": "The Goods"},
-    {"Balance": 0.0, "sparse": true, "Id": "403", "DisplayName": "The Grateful Mind"},
-    {"Balance": 0.0, "sparse": true, "Id": "396", "DisplayName": "The Grateful Mind, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "278", "DisplayName": "The Haven Center"},
-    {"Balance": 0.0, "sparse": true, "Id": "326", "DisplayName": "The Heirloom Collective, Inc."},
-    {"Balance": 0.0, "sparse": true, "Id": "298", "DisplayName": "The Old Bank LLC dba The Piping Plover"},
-    {"Balance": 0.0, "sparse": true, "Id": "470", "DisplayName": "The Pass"},
-    {"Balance": 0.0, "sparse": true, "Id": "526", "DisplayName": "The Vault - Webster"},
-    {"Balance": 0.0, "sparse": true, "Id": "527", "DisplayName": "The Vault - Worcester"},
-    {"Balance": 0.0, "sparse": true, "Id": "467", "DisplayName": "Thrive Beverly"},
-    {"Balance": 0.0, "sparse": true, "Id": "465", "DisplayName": "Thrive Middleborough"},
-    {"Balance": 0.0, "sparse": true, "Id": "466", "DisplayName": "Thrive Quincy"},
-    {"Balance": 0.0, "sparse": true, "Id": "481", "DisplayName": "Trinity Naturals"},
-    {"Balance": 0.0, "sparse": true, "Id": "510", "DisplayName": "Uma Flowers"},
-    {"Balance": 0.0, "sparse": true, "Id": "519", "DisplayName": "Uma Flowers - Waltham"},
-    {"Balance": 0.0, "sparse": true, "Id": "315", "DisplayName": "United Cultivation, LLC"},
-    {"Balance": 0.0, "sparse": true, "Id": "384", "DisplayName": "Verdant Reparative Inc. DBA Apex Noire Inc"},
-    {"Balance": 0.0, "sparse": true, "Id": "355", "DisplayName": "Yamba Boutique"},
-    {"Balance": 7485.25, "sparse": true, "Id": "434", "DisplayName": "Zen Leaf"},
-    {"Balance": 3980.0, "sparse": true, "Id": "435", "DisplayName": "Zen Leaf Plymouth"}
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "400",
+      "DisplayName": "27 Broom Street, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "449",
+      "DisplayName": "Ack Natural"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "357",
+      "DisplayName": "Alternative Compassion Services"
+    },
+    {
+      "Balance": 9175.0,
+      "sparse": true,
+      "Id": "361",
+      "DisplayName": "Apex Noire"
+    },
+    {
+      "Balance": 6640.0,
+      "sparse": true,
+      "Id": "487",
+      "DisplayName": "Ascend Wellness"
+    },
+    {
+      "Balance": 6345.0,
+      "sparse": true,
+      "Id": "528",
+      "DisplayName": "Ascend Wellness Boston"
+    },
+    {
+      "Balance": 7233.85,
+      "sparse": true,
+      "Id": "529",
+      "DisplayName": "Ascend Wellness New Bedford"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "415",
+      "DisplayName": "BeWell Organic Medicine"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "410",
+      "DisplayName": "Black Stone Valley"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "512",
+      "DisplayName": "Bliss"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "502",
+      "DisplayName": "Blossom Flower"
+    },
+    {
+      "Balance": 2750.5,
+      "sparse": true,
+      "Id": "522",
+      "DisplayName": "BoomX"
+    },
+    {
+      "Balance": 2800.0,
+      "sparse": true,
+      "Id": "489",
+      "DisplayName": "Botera Brockton"
+    },
+    {
+      "Balance": 4430.0,
+      "sparse": true,
+      "Id": "488",
+      "DisplayName": "Botera Franklin"
+    },
+    {
+      "Balance": 3750.0,
+      "sparse": true,
+      "Id": "490",
+      "DisplayName": "Botera Taunton"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "446",
+      "DisplayName": "Bountiful Farms, Inc."
+    },
+    {
+      "Balance": 7915.42,
+      "sparse": true,
+      "Id": "453",
+      "DisplayName": "Bountiful Framingham"
+    },
+    {
+      "Balance": 5660.42,
+      "sparse": true,
+      "Id": "438",
+      "DisplayName": "Bountiful Rowley"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "444",
+      "DisplayName": "BOUTIQ"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "520",
+      "DisplayName": "Bud Barn"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "412",
+      "DisplayName": "Bud's Goods & Provisions - Abington"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "340",
+      "DisplayName": "Bud's Goods & Provisions Corp"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "371",
+      "DisplayName": "Budega, Inc. d/b/a Herbwell Cannabis"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "521",
+      "DisplayName": "Cal Verde Naturals"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "332",
+      "DisplayName": "Calyx Peak of MA, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "369",
+      "DisplayName": "CANA Craft Cannabis"
+    },
+    {
+      "Balance": 3300.0,
+      "sparse": true,
+      "Id": "416",
+      "DisplayName": "CannaBarn"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "508",
+      "DisplayName": "Cannabis Connection"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "509",
+      "DisplayName": "Cannabis Connection West Springfield"
+    },
+    {
+      "Balance": 4400.0,
+      "sparse": true,
+      "Id": "459",
+      "DisplayName": "Cannabis Healing"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "443",
+      "DisplayName": "Cape Cod Cannabis"
+    },
+    {
+      "Balance": 6190.0,
+      "sparse": true,
+      "Id": "533",
+      "DisplayName": "Capeway Cannabis - Bourne"
+    },
+    {
+      "Balance": 4100.0,
+      "sparse": true,
+      "Id": "352",
+      "DisplayName": "Capeway Cannabis, LLC"
+    },
+    {
+      "Balance": -477.5,
+      "sparse": true,
+      "Id": "389",
+      "DisplayName": "CNA Amesbury"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "390",
+      "DisplayName": "CNA Haverhill"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "386",
+      "DisplayName": "Coastal Cultivars, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "428",
+      "DisplayName": "Comm Ave Canna"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "377",
+      "DisplayName": "Community Care Collective, Inc."
+    },
+    {
+      "Balance": -180.0,
+      "sparse": true,
+      "Id": "380",
+      "DisplayName": "Dris Corp"
+    },
+    {
+      "Balance": 8480.25,
+      "sparse": true,
+      "Id": "358",
+      "DisplayName": "Eastern Cannabis Co."
+    },
+    {
+      "Balance": 6425.25,
+      "sparse": true,
+      "Id": "484",
+      "DisplayName": "Elysian"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "272",
+      "DisplayName": "Ember Gardens Cape Cod LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "469",
+      "DisplayName": "EMBR (Kur Retail)"
+    },
+    {
+      "Balance": 3280.0,
+      "sparse": true,
+      "Id": "479",
+      "DisplayName": "EMBR (Northampton)"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "304",
+      "DisplayName": "Emerald Grove, Inc."
+    },
+    {
+      "Balance": -109.64,
+      "sparse": true,
+      "Id": "452",
+      "DisplayName": "Enlite Indian Orchard"
+    },
+    {
+      "Balance": 4825.0,
+      "sparse": true,
+      "Id": "451",
+      "DisplayName": "Enlite Northampton"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "500",
+      "DisplayName": "Eskar Arlington"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "499",
+      "DisplayName": "Eskar Northbridge"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "408",
+      "DisplayName": "Farnsworth Fine Cannabis Company"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "318",
+      "DisplayName": "FFD Enterprises MA, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "409",
+      "DisplayName": "Fine Fettle"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "401",
+      "DisplayName": "Firebrand"
+    },
+    {
+      "Balance": 12332.75,
+      "sparse": true,
+      "Id": "483",
+      "DisplayName": "Firehouse"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "353",
+      "DisplayName": "Flower & Soul, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "503",
+      "DisplayName": "Fresh Connection"
+    },
+    {
+      "Balance": 4075.0,
+      "sparse": true,
+      "Id": "517",
+      "DisplayName": "Fresh Connection Cambridge"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "300",
+      "DisplayName": "Frozen 4 Corporation d/b/a South Shore Buds"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "382",
+      "DisplayName": "Full Harvest Moonz"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "381",
+      "DisplayName": "Full Harvest Moonz, Inc."
+    },
+    {
+      "Balance": 3792.36,
+      "sparse": true,
+      "Id": "460",
+      "DisplayName": "Fyre Ants (Apical)"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "368",
+      "DisplayName": "Ganesh Wellness Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "100000001",
+      "DisplayName": "Good Nature Wareham"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "441",
+      "DisplayName": "Grass Appeal, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "482",
+      "DisplayName": "Great Barrington Dispensary"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "399",
+      "DisplayName": "Green Choice Dispensary, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "388",
+      "DisplayName": "Green N' Go"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "493",
+      "DisplayName": "Greene Street Cannabis"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "379",
+      "DisplayName": "Greensoul Organics"
+    },
+    {
+      "Balance": 16800.0,
+      "sparse": true,
+      "Id": "328",
+      "DisplayName": "Harbor House Collective LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "398",
+      "DisplayName": "Haven Provincetown"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "343",
+      "DisplayName": "Haverhill Stem LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "395",
+      "DisplayName": "HAVN Extracts"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "370",
+      "DisplayName": "Healing Center"
+    },
+    {
+      "Balance": 1997.81,
+      "sparse": true,
+      "Id": "535",
+      "DisplayName": "Health Circle Rockland"
+    },
+    {
+      "Balance": 1997.81,
+      "sparse": true,
+      "Id": "360",
+      "DisplayName": "Health Circle, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "348",
+      "DisplayName": "Hennep"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "372",
+      "DisplayName": "Herbwell"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "392",
+      "DisplayName": "High Hawk Farm LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "387",
+      "DisplayName": "High Hawk Farm, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "394",
+      "DisplayName": "Himalayan High"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "373",
+      "DisplayName": "Holistic Health Group DBA Suncrafted"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "301",
+      "DisplayName": "Home Grown 617 d/b/a Yamba Market"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "448",
+      "DisplayName": "House Premium"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "406",
+      "DisplayName": "Ideal Craft Cannabis, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "501",
+      "DisplayName": "Insa"
+    },
+    {
+      "Balance": 12152.25,
+      "sparse": true,
+      "Id": "100000021",
+      "DisplayName": "J-BAM"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "440",
+      "DisplayName": "KG Collective Brockton"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "439",
+      "DisplayName": "KG Collective Cambridge"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "436",
+      "DisplayName": "Kosa Cannabis"
+    },
+    {
+      "Balance": -102.0,
+      "sparse": true,
+      "Id": "430",
+      "DisplayName": "Kush Groove Brockton"
+    },
+    {
+      "Balance": -58.5,
+      "sparse": true,
+      "Id": "429",
+      "DisplayName": "Kush Groove Cambridge"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "515",
+      "DisplayName": "Lazy River Dracut"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "516",
+      "DisplayName": "Lazy River Tewksbury"
+    },
+    {
+      "Balance": 3640.0,
+      "sparse": true,
+      "Id": "402",
+      "DisplayName": "Local Cannabis Company"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "478",
+      "DisplayName": "Low Key West Roxbury"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "374",
+      "DisplayName": "Low Key, LLC"
+    },
+    {
+      "Balance": 3775.0,
+      "sparse": true,
+      "Id": "477",
+      "DisplayName": "Lowkey West Roxbury"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "486",
+      "DisplayName": "LTT Trading Co"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "495",
+      "DisplayName": "Major Bloom"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "445",
+      "DisplayName": "Mass Green Retail"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "472",
+      "DisplayName": "Mayflower Boston"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "471",
+      "DisplayName": "Mayflower Lowell"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "426",
+      "DisplayName": "Mayflower Medicinals"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "473",
+      "DisplayName": "Mayflower Worcester"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "462",
+      "DisplayName": "Medicine Man"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "454",
+      "DisplayName": "Mello"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "347",
+      "DisplayName": "New Dia"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "391",
+      "DisplayName": "New Dia Fenway"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "319",
+      "DisplayName": "New England Treatment Access, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "480",
+      "DisplayName": "New Leaf - 2nd St"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "461",
+      "DisplayName": "New Leaf - S Main St."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "314",
+      "DisplayName": "Nova Farms, LLC"
+    },
+    {
+      "Balance": -70.17,
+      "sparse": true,
+      "Id": "463",
+      "DisplayName": "Peak Cannabis Co"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "476",
+      "DisplayName": "Perpetual"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "405",
+      "DisplayName": "Pineapple Express, LLC"
+    },
+    {
+      "Balance": 3375.0,
+      "sparse": true,
+      "Id": "447",
+      "DisplayName": "Pinnacle Dispensary"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "277",
+      "DisplayName": "Pioneer Cannabis Co."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "316",
+      "DisplayName": "Pioneer Valley Trading Co."
+    },
+    {
+      "Balance": 905.25,
+      "sparse": true,
+      "Id": "411",
+      "DisplayName": "Pioneer Valley Trading Southwick"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "496",
+      "DisplayName": "Potency"
+    },
+    {
+      "Balance": 3000.0,
+      "sparse": true,
+      "Id": "437",
+      "DisplayName": "Prolific"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "492",
+      "DisplayName": "Quincy Cannabis"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "378",
+      "DisplayName": "Rasta Rootz, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "322",
+      "DisplayName": "Regenerative LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "414",
+      "DisplayName": "Resinate Northampton"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "413",
+      "DisplayName": "Resinate Worcester"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "385",
+      "DisplayName": "Resinate, Inc."
+    },
+    {
+      "Balance": 5916.0,
+      "sparse": true,
+      "Id": "376",
+      "DisplayName": "Reverie 73 Beverly"
+    },
+    {
+      "Balance": -242.0,
+      "sparse": true,
+      "Id": "375",
+      "DisplayName": "Reverie 73 Gloucester"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "359",
+      "DisplayName": "Reverie 73 LLC"
+    },
+    {
+      "Balance": -449.0,
+      "sparse": true,
+      "Id": "354",
+      "DisplayName": "Reverie 73 Lowell"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "497",
+      "DisplayName": "RISE Dracut"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "498",
+      "DisplayName": "RISE Maynard"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "494",
+      "DisplayName": "Roadtrip"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "311",
+      "DisplayName": "Rolling Releaf, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "475",
+      "DisplayName": "Roslindale Cannabis Co"
+    },
+    {
+      "Balance": -75.0,
+      "sparse": true,
+      "Id": "279",
+      "DisplayName": "Seaside Joint Ventures Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "455",
+      "DisplayName": "Silver Therapeutics"
+    },
+    {
+      "Balance": -750.0,
+      "sparse": true,
+      "Id": "456",
+      "DisplayName": "Silver Therapeutics Palmer"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "457",
+      "DisplayName": "Silver Therapeutics Roslindale"
+    },
+    {
+      "Balance": -842.75,
+      "sparse": true,
+      "Id": "458",
+      "DisplayName": "Silver Therapeutics Williamstown"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "286",
+      "DisplayName": "Starbird Cannabis"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "341",
+      "DisplayName": "Stem Haverhill"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "511",
+      "DisplayName": "Stories Cannabis"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "293",
+      "DisplayName": "Sublime Cannabis Co."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "100000011",
+      "DisplayName": "SunnyDayz"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "491",
+      "DisplayName": "Surfs Up"
+    },
+    {
+      "Balance": -500.0,
+      "sparse": true,
+      "Id": "407",
+      "DisplayName": "Sweetgrass Botanicals"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "404",
+      "DisplayName": "Sweetgrass Solventless"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "323",
+      "DisplayName": "Temescal Wellness of Massachusetts, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "427",
+      "DisplayName": "Temescal Worcester"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "397",
+      "DisplayName": "The Agriculturalist"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "280",
+      "DisplayName": "The Goods"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "403",
+      "DisplayName": "The Grateful Mind"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "396",
+      "DisplayName": "The Grateful Mind, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "278",
+      "DisplayName": "The Haven Center"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "326",
+      "DisplayName": "The Heirloom Collective, Inc."
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "298",
+      "DisplayName": "The Old Bank LLC dba The Piping Plover"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "470",
+      "DisplayName": "The Pass"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "526",
+      "DisplayName": "The Vault - Webster"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "527",
+      "DisplayName": "The Vault - Worcester"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "467",
+      "DisplayName": "Thrive Beverly"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "465",
+      "DisplayName": "Thrive Middleborough"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "466",
+      "DisplayName": "Thrive Quincy"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "481",
+      "DisplayName": "Trinity Naturals"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "510",
+      "DisplayName": "Uma Flowers"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "519",
+      "DisplayName": "Uma Flowers - Waltham"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "315",
+      "DisplayName": "United Cultivation, LLC"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "384",
+      "DisplayName": "Verdant Reparative Inc. DBA Apex Noire Inc"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "355",
+      "DisplayName": "Yamba Boutique"
+    },
+    {
+      "Balance": 7485.25,
+      "sparse": true,
+      "Id": "434",
+      "DisplayName": "Zen Leaf"
+    },
+    {
+      "Balance": 3980.0,
+      "sparse": true,
+      "Id": "435",
+      "DisplayName": "Zen Leaf Plymouth"
+    }
   ],
   "startPosition": 1,
   "maxResults": 173
