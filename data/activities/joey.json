@@ -174,5 +174,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $3,750 · Sep 21, 26",
   "date": "2026-09-21"
+ },
+ {
+  "id": "Xmuvecchpj79v",
+  "ts": "2026-10-05T15:20:22.333Z",
+  "account_id": "A0321",
+  "type": "Order",
+  "note": "Planned order · Finished Goods",
+  "date": "2026-10-05"
  }
 ]
