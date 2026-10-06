@@ -5555,5 +5555,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omux2g9hiler8",
+  "date": "2026-10-06",
+  "account_id": "A0283",
+  "account_raw": "Seaside",
+  "license": "MR284549",
+  "status": "Planned",
+  "contact_name": "Spencer Knowles",
+  "contact_email": "spencer@seasidecannabis.com",
+  "delivery_date": "",
+  "total": 6350,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
