@@ -214,5 +214,13 @@
   "type": "Doc",
   "note": "W-9 uploaded — expires Oct 5, 50",
   "date": "2026-10-05"
+ },
+ {
+  "id": "Xmux2f7pq2tjw",
+  "ts": "2026-10-06T19:22:13.070Z",
+  "account_id": "A0297",
+  "type": "Order",
+  "note": "Planned order $6,000 · Finished Goods",
+  "date": "2026-10-06"
  }
 ]
