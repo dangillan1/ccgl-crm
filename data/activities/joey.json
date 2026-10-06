@@ -222,5 +222,13 @@
   "type": "Order",
   "note": "Planned order $6,000 · Finished Goods",
   "date": "2026-10-06"
+ },
+ {
+  "id": "Xmux2gcga7no9",
+  "ts": "2026-10-06T19:23:05.866Z",
+  "account_id": "A0283",
+  "type": "Order",
+  "note": "Planned order $6,350 · Finished Goods",
+  "date": "2026-10-06"
  }
 ]
