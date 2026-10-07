@@ -117,5 +117,13 @@
   "note": "Spoke w/ Rachel (buyer/inventory) - dropping samples off on 10/8 @4pm",
   "date": "2026-10-07",
   "contact_id": "Cedd7ae56"
+ },
+ {
+  "id": "Xmuylfjey40w8",
+  "ts": "2026-10-07T21:02:07.114Z",
+  "account_id": "A0175",
+  "type": "Task",
+  "note": "Next step: Drop off samples (due Oct 8, 26)",
+  "date": "2026-10-07"
  }
 ]
