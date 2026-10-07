@@ -4882,11 +4882,12 @@
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "",
-  "owner": "Joey",
+  "owner": "Matt",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 176
+  "sheet_row": 176,
+  "crm_edits": {}
  },
  {
   "id": "A0176",
