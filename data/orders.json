@@ -5565,16 +5565,19 @@
   "account_id": "A0283",
   "account_raw": "Seaside",
   "license": "MR284549",
-  "status": "Planned",
+  "status": "Confirmed",
   "contact_name": "Spencer Knowles",
   "contact_email": "spencer@seasidecannabis.com",
-  "delivery_date": "",
-  "total": 6350,
+  "delivery_date": "2026-10-20",
+  "total": 4625,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-09"
  }
 ]
