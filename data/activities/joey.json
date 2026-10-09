@@ -270,5 +270,13 @@
   "type": "Order",
   "note": "Confirmed order $3,120 · Finished Goods",
   "date": "2026-10-09"
+ },
+ {
+  "id": "Xmv1d396jxblx",
+  "ts": "2026-10-09T19:31:55.579Z",
+  "account_id": "A0506",
+  "type": "Claim",
+  "note": "Claimed from Unclaimed Leads (CCC New Licenses)",
+  "date": "2026-10-09"
  }
 ]
