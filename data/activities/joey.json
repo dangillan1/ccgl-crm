@@ -246,5 +246,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $4,625 · Oct 6, 26",
   "date": "2026-10-06"
+ },
+ {
+  "id": "Xmv1c9o7a2piq",
+  "ts": "2026-10-09T19:08:55.366Z",
+  "account_id": "A0268",
+  "type": "Order",
+  "note": "Confirmed order $4,165 · Finished Goods",
+  "date": "2026-10-09"
  }
 ]
