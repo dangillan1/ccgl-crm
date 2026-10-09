@@ -5579,5 +5579,23 @@
   "edited_in_crm": true,
   "edited_by": "joey",
   "edited_at": "2026-10-09"
+ },
+ {
+  "id": "Omv1c9n3rtyvz",
+  "date": "2026-10-09",
+  "account_id": "A0268",
+  "account_raw": "Reverie 73",
+  "license": "MR282952",
+  "status": "Confirmed",
+  "contact_name": "Corey Kennedy",
+  "contact_email": "ckennedy@reverie73.com",
+  "delivery_date": "2026-10-14",
+  "total": 4165,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
