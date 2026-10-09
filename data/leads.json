@@ -3796,41 +3796,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0506",
-  "sheet_key": "",
-  "source": "CCC New Licenses",
-  "name": "Xhale New England Dispensary, LLC",
-  "parent": "",
-  "town": "Boston",
-  "address": "888 Morton Street",
-  "license_type": "Marijuana Retailer",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "New store - opened August 2026",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "MR284479",
-  "tags": [
-   "New License 2026"
-  ],
-  "flags": [
-   "unassigned"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null,
-  "crm_edits": {
-   "town": "2026-10-09",
-   "address": "2026-10-09",
-   "notes": "2026-10-09"
-  }
- },
- {
   "id": "A0404",
   "sheet_key": "",
   "source": "Random Data 31826",
