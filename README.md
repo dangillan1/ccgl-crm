@@ -54,8 +54,8 @@ Reading works without a token (the Pages site serves the JSON); only saving need
 | User    | Role    | Can                                                                 |
 |---------|---------|---------------------------------------------------------------------|
 | Dan     | admin   | everything, plus users/passwords                                    |
-| Matt    | manager | edit, reassign owners (incl. bulk), merge duplicates, settings      |
-| Joey    | rep     | edit accounts/people, log activity, move pipeline stages            |
+| Matt    | manager | edit, set owners (incl. bulk), change status, merge duplicates, settings |
+| Joey    | rep     | edit accounts/people, set owners (incl. bulk), log activity, move stages, mark prospects Active |
 | Charley | ops     | read everything; orders, people, delivery notes                     |
 | Drew    | viewer  | Active Accounts and Orders 2026 only, read-only                      |
 
@@ -90,7 +90,8 @@ Unclaimed Leads list until a person claims it.
 - **People / Email List** — the directory. Email List hides generic inboxes (accounting@, info@,
   orders@ …) and personal domains by default; the *Finance* role chip does the opposite.
 - **Account page** — action bar (Log call / visit / text / email / note · + New order · Set next
-  step · Move stage · Claim), standing note in red (editable), key contacts by role (one person can hold several roles: the add / edit person
+  step · Mark Active (prospects; asks to confirm, moves the account to Active Accounts and stage Customer) · Move stage · Claim),
+  standing note in red (editable), key contacts by role (one person can hold several roles: the add / edit person
   forms use tick boxes, and adding an email that is already on the account offers to add the roles to that person), profile checklist,
   onboarding paperwork, about, delivery notes, people, edit — and a timeline of activities and orders newest-first with the composer on top.
 - **Activity Log** — everything logged plus the GitHub commit history (every save is a commit
@@ -159,7 +160,8 @@ Until cutover, the Google Sheet and the Order Tracker stay the place you edit th
 
 The CRM owns everything else and keeps it across re-imports: **owner, grade** (seeded from the Sheet,
 then yours), **stage, tags, standing notes and delivery notes** (seeded from the tracker, then yours —
-edit them on the account page), activities, and any people added inside the CRM. Master-sheet accounts show name/address/status read-only in the app for
+edit them on the account page), activities, any people added inside the CRM, and **status once it has been changed in the CRM**
+(Mark Active, the Status field, or a stage move to Customer; recorded in `crm_edits`). Master-sheet accounts show name/address/status read-only in the app for
 this reason; lead accounts (not in the Sheet) are fully editable.
 
 ### Re-import
