@@ -60,7 +60,7 @@
   "name": "ACK Natural",
   "parent": "",
   "town": "Nantucket",
-  "address": "",
+  "address": "17-19 Spearhead Drive",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
@@ -77,13 +77,17 @@
    "Not in Master Sheet"
   ],
   "flags": [
-   "not-in-master"
+   "not-in-master",
+   "unassigned"
   ],
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "address": "2026-10-14"
+  }
  },
  {
   "id": "A0003",
