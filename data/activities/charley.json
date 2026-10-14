@@ -79,5 +79,14 @@
   "note": "Charley Emailed buyer",
   "date": "2026-10-14",
   "contact_id": "C10d625b9"
+ },
+ {
+  "id": "Xmv8l7xl05aff",
+  "ts": "2026-10-14T20:53:53.988Z",
+  "account_id": "A0340",
+  "type": "Call",
+  "note": "Charley Emailed buyer",
+  "date": "2026-10-14",
+  "contact_id": "Cd1d38244"
  }
 ]
