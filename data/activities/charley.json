@@ -34,5 +34,14 @@
   "note": "Charley Called store - will call again tomorrow morning when buyer is in",
   "date": "2026-10-14",
   "contact_id": null
+ },
+ {
+  "id": "Xmv8kaxmhmidw",
+  "ts": "2026-10-14T20:28:14.393Z",
+  "account_id": "A0186",
+  "type": "Call",
+  "note": "Charley Called store - will call again tomorrow morning when buyer is in",
+  "date": "2026-10-14",
+  "contact_id": null
  }
 ]
