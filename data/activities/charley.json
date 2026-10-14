@@ -70,5 +70,14 @@
   "note": "Charley called and texted tom",
   "date": "2026-10-14",
   "contact_id": "Cb51e0448"
+ },
+ {
+  "id": "Xmv8l7kiwonc7",
+  "ts": "2026-10-14T20:53:37.064Z",
+  "account_id": "A0341",
+  "type": "Call",
+  "note": "Charley Emailed buyer",
+  "date": "2026-10-14",
+  "contact_id": "C10d625b9"
  }
 ]
