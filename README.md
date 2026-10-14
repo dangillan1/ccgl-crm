@@ -8,7 +8,7 @@ GitHub API with a Personal Access Token that lives only in your browser.
 index.html              the app (no build step, no external dependencies)
 data/accounts.json      THE BOOK — Master sheet accounts + tracker-verified locations + claimed leads (367)
 data/leads.json         UNCLAIMED LEADS — deduped companies from Random Data / CCC tabs, not yet claimed (150)
-data/contacts.json      one row per person, role-tagged Buyer / Intake / Finance where known (1,398)
+data/contacts.json      one row per person; `role` is free text and may hold several roles, comma-separated ("Buyer, Finance / AP") (1,398)
 data/orders.json        one row per 2026 order (318 from Order Tracker + any entered in the CRM)
 data/insights.json      AI assessments shown on the Insights tab (regenerated at each import)
 data/users.json         who can sign in + password hashes
@@ -89,7 +89,8 @@ Unclaimed Leads list until a person claims it.
 - **People / Email List** — the directory. Email List hides generic inboxes (accounting@, info@,
   orders@ …) and personal domains by default; the *Finance* role chip does the opposite.
 - **Account page** — action bar (Log call / visit / text / email / note · + New order · Set next
-  step · Move stage · Claim), standing note in red (editable), key contacts by role, profile checklist,
+  step · Move stage · Claim), standing note in red (editable), key contacts by role (one person can hold several roles: the add / edit person
+  forms use tick boxes, and adding an email that is already on the account offers to add the roles to that person), profile checklist,
   onboarding paperwork, about, delivery notes, people, edit — and a timeline of activities and orders newest-first with the composer on top.
 - **Activity Log** — everything logged plus the GitHub commit history (every save is a commit
   tagged `[user]`).
