@@ -6109,21 +6109,20 @@
   "standing_requests": "",
   "license_number": "",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Native Sun",
   "town": "North Attleboro",
   "address": "1320 S Washington St",
   "license_type": "Dispensary",
   "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
+  "grade": "B",
+  "owner": "Joey",
   "last_contact": "2026-01-05",
   "next_contact": "2026-01-19",
   "notes": "",
-  "sheet_row": 221
+  "sheet_row": 221,
+  "crm_edits": {}
  },
  {
   "id": "A0221",
