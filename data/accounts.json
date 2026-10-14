@@ -6135,21 +6135,20 @@
   "standing_requests": "",
   "license_number": "",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Native Sun",
   "town": "South Boston",
   "address": "583 E 1st St",
   "license_type": "Dispensary",
   "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
+  "grade": "C",
+  "owner": "Joey",
   "last_contact": "2026-01-05",
   "next_contact": "2026-01-19",
   "notes": "",
-  "sheet_row": 222
+  "sheet_row": 222,
+  "crm_edits": {}
  },
  {
   "id": "A0222",
