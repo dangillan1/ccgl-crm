@@ -6083,9 +6083,7 @@
   "standing_requests": "",
   "license_number": "",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Native Sun",
   "town": "Hudson",
@@ -6093,11 +6091,12 @@
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "B",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-01-05",
   "next_contact": "2026-01-19",
   "notes": "",
-  "sheet_row": 220
+  "sheet_row": 220,
+  "crm_edits": {}
  },
  {
   "id": "A0220",
