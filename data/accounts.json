@@ -1954,13 +1954,14 @@
   "address": "1446 US-6",
   "license_type": "Dispensary",
   "status": "Current",
-  "grade": "",
+  "grade": "C",
   "owner": "Joey",
   "last_contact": "2026-05-05",
   "next_contact": "2026-05-19",
   "notes": "",
   "sheet_row": 71,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0071",
