@@ -294,5 +294,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $5,150 · Oct 6, 26",
   "date": "2026-10-06"
+ },
+ {
+  "id": "Xmv8840n0tw0g",
+  "ts": "2026-10-14T14:46:56.316Z",
+  "account_id": "A0036",
+  "type": "Doc",
+  "note": "CCC License uploaded — expires Jan 26, 27",
+  "date": "2026-10-14"
  }
 ]
