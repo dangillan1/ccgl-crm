@@ -93,5 +93,21 @@
    "uploaded_at": "2026-10-14",
    "history": []
   }
+ },
+ "A0508": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0508/ccc/2026-10-14_mv8egl1c60q7.pdf",
+    "sha": "6519024b07b324381f769f53d6ce02155c5e6f0f",
+    "name": "CCC License - ACK Natural (Nantucket).pdf",
+    "size": 3923142,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-14",
+   "expires": "2025-12-05",
+   "note": "EXPIRED - Emailed Doug Leighton 10/14/2026",
+   "history": []
+  }
  }
 }
