@@ -54,5 +54,20 @@
    "expires": "2027-01-26",
    "history": []
   }
+ },
+ "A0070": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0070/ccc/2026-10-14_mv8854opfhau.pdf",
+    "sha": "68f1e7dc5997544b3a18c33d3cf07c01a9017e4d",
+    "name": "CCC License - Cape Cod Cannabis (Wellfleet).pdf",
+    "size": 3895238,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-14",
+   "expires": "2027-07-11",
+   "history": []
+  }
  }
 }
