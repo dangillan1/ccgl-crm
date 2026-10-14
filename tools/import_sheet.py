@@ -19,7 +19,8 @@ With    --merge : parallel-run re-import. Refreshes Sheet-owned fields on
                   are seeded from the Sheet but CRM-owned afterwards (only
                   filled when the CRM value is blank/Unassigned). CRM-only
                   fields (stage, delivery_notes, license_number, tags, flags)
-                  and CRM-created contacts are preserved. New Sheet rows are
+                  and CRM-created contacts are preserved; people removed in the
+                  CRM (settings.removed_contacts) stay removed. New Sheet rows are
                   added; rows missing from the Sheet are kept and flagged.
 
 Tab handling (by name, so tab order changes don't break it):
@@ -1083,6 +1084,14 @@ def main():
             if c["id"] not in live_ids and str(c.get("source", "")).startswith("CRM") and (c.get("account_id") in acc_ids or not c.get("account_id")):
                 contacts.append(c)
                 report["crm_contacts_preserved"] = report.get("crm_contacts_preserved", 0) + 1
+    if merge:                                     # people removed inside the CRM stay removed (settings.removed_contacts, written by the app)
+        removed = (existing_settings or {}).get("removed_contacts", []) or []
+        gone_ids = {r.get("id") for r in removed if r.get("id")}
+        gone_pairs = {(r.get("account_id"), (r.get("email") or "").lower().strip()) for r in removed if (r.get("email") or "").strip()}
+        if gone_ids or gone_pairs:
+            before = len(contacts)
+            contacts = [c for c in contacts if c["id"] not in gone_ids and (c.get("account_id"), (c.get("email") or "").lower().strip()) not in gone_pairs]
+            report["contacts_removed_in_crm"] = before - len(contacts)
 
     # ---------------- 11b. Lead-vs-lead merge: leads that resolve to another (earlier) lead by variant/domain
     lead_ids = [a["id"] for a in accounts if a["source"] != "Master"]
