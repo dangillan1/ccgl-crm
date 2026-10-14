@@ -39,5 +39,20 @@
    "uploaded_at": "2026-10-05",
    "history": []
   }
+ },
+ "A0036": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0036/ccc/2026-10-14_mv883wk7fsa2.pdf",
+    "sha": "93d1cb5346c86937feea1a342d44dcb3b16f4ffa",
+    "name": "CCC License - BeWell Organics (Merrimac).pdf",
+    "size": 3825992,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-14",
+   "expires": "2027-01-26",
+   "history": []
+  }
  }
 }
