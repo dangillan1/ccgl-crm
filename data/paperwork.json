@@ -80,6 +80,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-14",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0070/w9/2026-10-14_mv885slvdsyp.pdf",
+    "sha": "9dadd264b438efecda7f0c5baffff1d65414d507",
+    "name": "W-9 - Cape Cod Cannabis (Wellfleet).pdf",
+    "size": 125037,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-14",
+   "history": []
   }
  }
 }
