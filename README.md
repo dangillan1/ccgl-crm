@@ -55,15 +55,16 @@ Reading works without a token (the Pages site serves the JSON); only saving need
 |---------|---------|---------------------------------------------------------------------|
 | Dan     | admin   | everything, plus users/passwords                                    |
 | Matt    | manager | edit, set owners (incl. bulk), change status, merge duplicates, settings |
-| Joey    | rep     | edit accounts/people, set owners (incl. bulk), log activity, move stages, mark prospects Active |
-| Charley | ops     | read everything; orders, people, delivery notes                     |
+| Joey    | rep     | edit accounts/people, set owners, log activity, claim leads, move stages, orders — Insights scoped to their own book |
+| Charley | ops     | the same powers as rep, across every account (fulfillment); owner never defaults to self |
 | Drew    | viewer  | Active Accounts and Orders 2026 only, read-only                      |
 
 Everyone except viewers can upload, replace, view and download onboarding paperwork.
 
 Reps see *Today* scoped to their own book. Manager/admin see the whole book plus ownership and
 duplicate cleanup queues. Add users from Settings (admin) — pick a name and role; they set their own PIN at first sign-in. Reset a
-password from Settings too.
+password from Settings too. The admin can change anyone's permission level from the dropdown next to their name in Settings
+(not their own, and never the last admin); it applies when that person next signs in or reloads.
 
 ## How the app is organised
 
