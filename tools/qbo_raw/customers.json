@@ -17,12 +17,12 @@
  {
   "id": "361",
   "name": "Apex Noire",
-  "balance": 9175.0
+  "balance": 4250.0
  },
  {
   "id": "487",
   "name": "Ascend Wellness",
-  "balance": 6640.0
+  "balance": 3875.0
  },
  {
   "id": "528",
@@ -32,7 +32,7 @@
  {
   "id": "529",
   "name": "Ascend Wellness New Bedford",
-  "balance": 7233.85
+  "balance": 3983.85
  },
  {
   "id": "444",
@@ -232,7 +232,7 @@
  {
   "id": "451",
   "name": "Enlite Northampton",
-  "balance": 4825.0
+  "balance": 0.0
  },
  {
   "id": "500",
@@ -267,7 +267,7 @@
  {
   "id": "483",
   "name": "Firehouse",
-  "balance": 12332.75
+  "balance": 6880.25
  },
  {
   "id": "353",
@@ -282,7 +282,7 @@
  {
   "id": "517",
   "name": "Fresh Connection Cambridge",
-  "balance": 4075.0
+  "balance": 0.0
  },
  {
   "id": "300",
@@ -535,6 +535,21 @@
   "balance": 0.0
  },
  {
+  "id": "100000051",
+  "name": "Native Sun Hudson",
+  "balance": 0.0
+ },
+ {
+  "id": "100000041",
+  "name": "Native Sun North Attleboro",
+  "balance": 0.0
+ },
+ {
+  "id": "100000061",
+  "name": "Native Sun South Boston",
+  "balance": 0.0
+ },
+ {
   "id": "347",
   "name": "New Dia",
   "balance": 0.0
@@ -597,7 +612,7 @@
  {
   "id": "411",
   "name": "Pioneer Valley Trading Southwick",
-  "balance": 905.25
+  "balance": 0.0
  },
  {
   "id": "496",
@@ -652,12 +667,12 @@
  {
   "id": "376",
   "name": "Reverie 73 Beverly",
-  "balance": 5916.0
+  "balance": 10081.0
  },
  {
   "id": "375",
   "name": "Reverie 73 Gloucester",
-  "balance": -242.0
+  "balance": 3098.0
  },
  {
   "id": "359",
@@ -667,7 +682,7 @@
  {
   "id": "354",
   "name": "Reverie 73 Lowell",
-  "balance": -449.0
+  "balance": 2706.0
  },
  {
   "id": "494",
@@ -687,7 +702,7 @@
  {
   "id": "279",
   "name": "Seaside Joint Ventures Inc.",
-  "balance": -75.0
+  "balance": 4550.0
  },
  {
   "id": "455",
@@ -857,11 +872,16 @@
  {
   "id": "434",
   "name": "Zen Leaf",
-  "balance": 7485.25
+  "balance": 0.0
  },
  {
   "id": "435",
   "name": "Zen Leaf Plymouth",
-  "balance": 3980.0
+  "balance": 0.0
+ },
+ {
+  "id": "100000031",
+  "name": "reLeaf Alternative Mansfield",
+  "balance": 0.0
  }
 ]

@@ -4,63 +4,54 @@
   "town": "Douglas",
   "priority": "critical",
   "kind": "risk",
-  "headline": "Resinate Douglas — $48,201 account is now 69 days quiet and still has no owner",
-  "assessment": "The #3 account of 2026 ($48,201 over 6 orders, normally every ~37 days) is 69 days since its last order, up from 62 at last Monday's brief, and it is still Unassigned. It is the largest line in the $246,543 revenue-at-risk list, and last-90-day spend is $8,162 against $36,838 the period before, the steepest fade in the book. Resinate Worcester (Joey, $26,325, 24 days since last on a ~33-day cycle) is on pace, so this is a Douglas problem.",
-  "action": "Matt: assign Douglas to Joey today. Joey: call the Douglas buyer by Wednesday, find out what changed on the bulk orders, and quote the next one before Friday."
- },
- {
-  "account": "Seaside",
-  "town": "Orleans",
-  "priority": "critical",
-  "kind": "risk",
-  "headline": "Seaside Orleans — A+ account at $37,863 is 59 days silent on a 27-day cycle",
-  "assessment": "Seaside ($37,863 in 2026 over 8 orders, grade A+) normally reorders every ~27 days and is now 59 days out, more than twice its normal gap. Last-90-day spend is $7,750 against $18,340 the period before. It was 52 days at last Monday's brief, so another week has gone by without an order from a top-five account.",
-  "action": "Joey: get to Orleans in person this week, find out who is buying and what replaced us, and leave with an order. Matt: if there is no order by Friday, call the owner yourself."
+  "headline": "Resinate Douglas — $48,201 account is 78 days quiet, still has no owner, and the Worcester store is due today",
+  "assessment": "The #3 account of 2026 ($48,201 over 6 orders, normally every ~37 days) is now 78 days since its last order — up from 69 at the last brief — and it is still Unassigned. It is the largest line in the $255,813 revenue-at-risk list and the steepest fade in the book: $8,162 in the last 90 days against $36,838 the period before. Resinate Worcester ($26,325, Joey) is due for its ~33-day reorder today, so there is a natural reason to be on the phone with Resinate this week.",
+  "action": "Matt: assign Douglas to Joey today. Joey: call Worcester for the reorder that is due today, then use the same call to find out what changed at Douglas and get the next bulk order quoted before Friday."
  },
  {
   "account": "Eastern Cannabis Co.",
   "town": "Malden",
-  "priority": "high",
-  "kind": "due",
-  "headline": "Eastern Cannabis Malden — #1 account ($61,602) is due for its reorder today",
-  "assessment": "Eastern is the largest account of 2026 at $61,602 across 10 orders and reorders every ~27 days. It is exactly 27 days since the last order, so the reorder is due today. In a week where only 4 orders came in, this is the single call most likely to put a large order on the board.",
-  "action": "Joey: call the Malden buyer today and book the order. Charley: hold a delivery slot for Malden this week."
- },
- {
-  "account": null,
-  "town": null,
-  "priority": "high",
-  "kind": "risk",
-  "headline": "Orders fell to 4 ($21,286) last week from 13 ($68,388) the week before",
-  "assessment": "The tracker shows 4 orders worth $21,286 in the last 7 days against 13 worth $68,388 the prior week, a drop of more than two thirds in both count and dollars. All four came on 9/28 and 9/29; nothing is logged after that. The activity log shows no calls or visits last week (Joey: 12 order entries and 1 note; Matt: 1 email and 3 tasks). Five accounts that have done $129,956 between them in 2026 are due this week, so the volume is there to recover.",
-  "action": "Joey: if orders were taken after 9/29 and not entered, enter them today; then work the five due-this-week accounts in order of size. Matt: review the week with Joey this morning and set a call target for each day."
- },
- {
-  "account": "Lazy River - Dracut",
-  "town": "Dracut",
-  "priority": "high",
-  "kind": "risk",
-  "headline": "Lazy River Dracut — $19,504 account is 49 days out on a 22-day cycle",
-  "assessment": "Lazy River Dracut ($19,504 in 2026, grade B) is one of the fastest reorderers in the book at ~22 days and is now 49 days since its last order, more than twice its normal gap. It was 42 days at last Monday's brief. It is the third-largest line on the revenue-at-risk list.",
-  "action": "Joey: call Dracut today, check what is left on the shelf from the last delivery, and book a delivery for this week. Charley: hold a slot on the north route for it."
+  "priority": "critical",
+  "kind": "protect",
+  "headline": "Eastern Cannabis Malden — #1 account ($61,602) is 36 days out on a ~27-day cycle, nine days past due for its reorder",
+  "assessment": "Eastern Cannabis is the biggest account of 2026 at $61,602 over 10 orders and normally reorders every ~27 days. It was flagged as due at the last brief and is now 36 days since its last order with nothing on the books. At its pace a missed cycle is roughly a $6,000 order, and there is no activity logged against it in the last 7 days.",
+  "action": "Joey: call the Malden buyer today and get the order placed or a delivery date on the calendar. Matt: if there is no order by Wednesday, call the owner yourself."
  },
  {
   "account": "Harbor House",
   "town": "Chelsea",
   "priority": "high",
   "kind": "ar",
-  "headline": "Harbor House Chelsea — $16,800 past due, the largest past-due balance, and owned by 'Team'",
-  "assessment": "Harbor House owes $16,800 and all of it is now past due, the oldest invoice by 3 days. That is a quarter of the $67,044 past due across the book and the largest single line on the list. The account is assigned to 'Team', so no one person is responsible for the call.",
-  "action": "Dan: confirm today whether a payment is in transit and send a statement if not. Matt: put one name on this account. Charley: check with Dan before the next Chelsea delivery."
+  "headline": "Harbor House Chelsea — $16,800 past due, the largest past-due balance, and the account is owned by 'Team'",
+  "assessment": "Harbor House owes $16,800, all of it past due with the oldest invoice 12 days late. That is 37% of the $45,827 past due across the book and the single biggest balance in QuickBooks. It is also one of the 50 active accounts with no named owner, so nobody is chasing it.",
+  "action": "Dan: call Harbor House about the $16,800 before anything else ships to Chelsea. Charley: hold the next delivery until Dan clears it. Matt: give the account a named owner."
+ },
+ {
+  "account": "Lazy River - Dracut",
+  "town": "Dracut",
+  "priority": "high",
+  "kind": "risk",
+  "headline": "Lazy River Dracut — $19,504 account is 58 days out on a 22-day cycle, nearly three missed reorders",
+  "assessment": "Lazy River Dracut ($19,504 in 2026, grade B, Joey) normally reorders every ~22 days and is now 58 days since its last order, up from 49 at the last brief. That is close to three missed cycles and the second-largest line in the revenue-at-risk list. Nothing has been logged against the account in the last 7 days.",
+  "action": "Joey: get to Dracut in person this week, find out what replaced us on the shelf, and leave with an order. Matt: check in with Joey on Friday on what he found."
  },
  {
   "account": "Ascend Wellness",
   "town": "New Bedford",
   "priority": "high",
   "kind": "ar",
-  "headline": "Ascend Wellness — $16,899 past due across three stores, up to 23 days late",
-  "assessment": "New Bedford ($7,234), Newton ($6,640) and Boston ($3,025 of $6,345 owed) are all past due, the oldest invoice by 23 days, up from 16 last Monday. New Bedford is also 41 days since its last order on a ~20-day cycle, and Newton ($16,226 in 2026) is due for reorder in 4 days. Both stores have 'Planned' order rows dated 9/21 with no confirmation, so new product may be about to go out against an unpaid balance.",
-  "action": "Dan: send Ascend AP a statement for all three stores today and get a payment date. Joey: confirm whether the 9/21 Newton and New Bedford orders are real. Charley: check with Dan before delivering any new Ascend order."
+  "headline": "Ascend Wellness — $10,884 past due across three stores, 32 days late, and New Bedford has gone quiet",
+  "assessment": "Ascend New Bedford ($3,984), Newton ($3,875) and Boston ($3,025 of $6,345 owed) are all past due with the oldest invoices 32 days late — $10,884 in total, $14,204 owed. New Bedford is also in the revenue-at-risk list: $7,234 in 2026, 50 days since its last order on a ~20-day cycle. The 'Planned' Newton and New Bedford order rows dated 9/21 were never confirmed.",
+  "action": "Dan: call Ascend's AP about the three 32-day invoices this week. Joey: do not take another Ascend order until the $10,884 is cleared, and confirm or delete the two 9/21 planned rows."
+ },
+ {
+  "account": "Bliss Cannabis",
+  "town": "Lunenburg",
+  "priority": "high",
+  "kind": "coverage",
+  "headline": "Bliss Lunenburg — A-grade $18,497 account is 65 days quiet with no owner",
+  "assessment": "Bliss Cannabis ($18,497 in 2026, grade A) normally reorders every ~39 days and is now 65 days since its last order. It is the third-largest line in the revenue-at-risk list and one of the 50 active accounts with no owner, so nobody has called. An A-grade account with no rep is the easiest fix in the book.",
+  "action": "Matt: assign Bliss to Joey today. Joey: call the Lunenburg buyer this week and get the next order quoted."
  },
  {
   "account": "Embr/Fyre Ants",
@@ -68,97 +59,106 @@
   "priority": "high",
   "kind": "coverage",
   "headline": "Embr/Fyre Ants group — $87,499 of 2026 revenue with no owner and $7,072 past due",
-  "assessment": "Springfield ($35,744), Easthampton ($23,845), Worcester ($16,255) and Northampton ($11,655) are all Unassigned. Easthampton ($3,792) and Northampton ($3,280) are both 8 days past due, and Worcester has not ordered in 201 days after a single $16,255 order. Springfield is 47 days since last on a ~73-day cycle, so there is time to get in front of the next order.",
-  "action": "Matt: assign the four locations to one rep today. Dan: chase the $7,072 past due this week. Joey: ask the group buyer about Worcester on the first call."
+  "assessment": "The four Embr/Fyre Ants locations — Springfield ($35,744, 56 days since last on a ~73-day cycle), Fyre Ants Easthampton ($23,845), Worcester ($16,255, one order then 210 days of silence) and Northampton ($11,655) — add up to $87,499 in 2026 and all four are Unassigned. Easthampton ($3,792) and Northampton ($3,280) are both 17 days past due. This group was flagged at the last brief and nothing has changed.",
+  "action": "Matt: take the Embr/Fyre Ants group yourself or assign it to Joey this week. Dan: chase the $7,072 past due at Easthampton and Northampton before the next Springfield order ships."
  },
  {
-  "account": "Enlite",
-  "town": "Northampton",
+  "account": null,
+  "town": null,
   "priority": "high",
-  "kind": "ar",
-  "headline": "Enlite Northampton — $4,825 past due for 32 days, with an Indian Orchard order planned for 10/6",
-  "assessment": "Enlite Northampton owes $4,825 and it is 32 days past due, the oldest on the past-due list (it was 25 days last Monday). The tracker has a 'Planned' Northampton row dated 9/15 that was never confirmed and a 'Planned' Indian Orchard row for 10/6, so the group may receive new product tomorrow while the old balance is open.",
-  "action": "Dan: call Enlite AP today for a payment date. Charley: check with Dan before the 10/6 Indian Orchard delivery. Joey: confirm or delete the 9/15 Northampton row."
+  "kind": "risk",
+  "headline": "Orders: 3 last week ($10,725), all three Reverie 73 stores — revenue at risk is up to $255,813",
+  "assessment": "Only 3 orders came in last week for $10,725 (prior week 2 for $9,775), and all three were Reverie 73 — Beverly $4,165, Gloucester $3,440, Lowell $3,120 — on 10/9. Revenue at risk rose to $255,813 from $246,543 at the last brief. Activity logged in the last 7 days: Joey 3 orders, 2 claims, 4 docs; Matt 2 calls, 1 task.",
+  "action": "Joey: work the revenue-at-risk list top down this week — Resinate, Lazy River, Bliss, Healing Center — and log every call. Matt: review the list with Joey Monday and split the unassigned names."
  },
  {
-  "account": "Apex Noire",
-  "town": "Boston",
-  "priority": "medium",
-  "kind": "ar",
-  "headline": "Apex Noire ($4,925) and Firehouse ($5,452) are past due while still ordering",
-  "assessment": "Apex Noire ordered $4,250 on 9/29 and now owes $9,175, of which $4,925 is past due (5 days late). Firehouse, the #4 account at $43,376, owes $12,333 with $5,452 past due (10 days late) and last ordered 11 days ago. Both are good accounts buying on schedule; the risk is the balance growing with each delivery.",
-  "action": "Dan: confirm payment status on both this week. Joey: ask for payment on your next call with each buyer. Charley: check with Dan before the next delivery to either."
- },
- {
-  "account": "Roadtrip Dispensary",
-  "town": "Salisbury",
-  "priority": "medium",
+  "account": "Capeway Cannabis",
+  "town": "Carver",
+  "priority": "high",
   "kind": "due",
-  "headline": "Roadtrip Salisbury ($20,928) and LowKey West Roxbury ($14,055) are both due in 3 days",
-  "assessment": "Roadtrip reorders every ~43 days and has a 'Planned' row dated 9/24 that is still unconfirmed, so an order may already be in motion. LowKey is due on its ~58-day cycle but is fading ($3,775 last 90 days against $10,280 before) and has $3,775 that is 10 days past due. Ember Gardens Boston ($17,144, every ~46 days) is due in 4 days and sits with Charley.",
-  "action": "Joey: confirm the 9/24 Roadtrip order and put the total in the tracker; call LowKey and ask for the $3,775 with the reorder. Charley: place the Ember Gardens Boston order this week."
+  "headline": "Capeway Carver ($27,677) is due in 7 days and Piping Plover Wellfleet ($8,340) tomorrow — neither has an owner",
+  "assessment": "Capeway Cannabis Carver is the #10 account of 2026 ($27,677 over 8 orders, ~36-day cycle) and is 29 days since its last order, due in 7 days. Piping Plover Wellfleet ($8,340, ~66-day cycle) is due tomorrow. Both are Unassigned, so no one is scheduled to call either of them this week.",
+  "action": "Matt: assign both to Joey today. Joey: call Piping Plover tomorrow and Capeway by Friday to lock in the reorders before the cycle slips."
+ },
+ {
+  "account": "Healing Center",
+  "town": "Fitchburg",
+  "priority": "medium",
+  "kind": "risk",
+  "headline": "Healing Center Fitchburg — $16,136 account was growing ($9,835 vs $6,301) and is now 69 days quiet",
+  "assessment": "Healing Center ($16,136 in 2026, grade B) is in both lists this week: rising on a 90-day view ($9,835 vs $6,301 the period before) and 69 days since its last order on a ~43-day cycle. It is Unassigned. A growing account that stops ordering is worth a call before it turns into a fade.",
+  "action": "Matt: assign Fitchburg to Joey. Joey: call this week, confirm what they want next, and get it on a delivery."
+ },
+ {
+  "account": "LowKey",
+  "town": "West Roxbury",
+  "priority": "medium",
+  "kind": "ar",
+  "headline": "Four Joey accounts past due before the next delivery: LowKey $3,775, Cannabarn $3,300, Health Circle $3,996",
+  "assessment": "LowKey West Roxbury owes $3,775 (19 days late), Cannabarn Abington $3,300 (14 days), and Health Circle Rockland and Marshfield $1,998 each (14 days) — $11,071 past due across four Joey accounts. All four are still ordering, so this is collections hygiene rather than a risk, but it should be checked before the next truck goes out.",
+  "action": "Dan: send the four reminders this week. Charley: check the balance before the next LowKey, Cannabarn or Health Circle delivery and flag Dan if it is still open."
  },
  {
   "account": "Sublime Cannabis",
   "town": "Mashpee",
   "priority": "medium",
   "kind": "protect",
-  "headline": "Sublime Mashpee — #2 account ($50,731) is up to $23,325 from $16,578; protect it",
-  "assessment": "Sublime has placed 9 orders for $50,731 in 2026 and its last-90-day spend is $23,325 against $16,578 the period before. It ordered 11 days ago on a ~27-day cycle, so the next order is about two weeks out. Reverie 73 Beverly ($35,647, 9 orders) is on the same path at $15,146 against $10,725 and is 20 days into a ~31-day cycle.",
-  "action": "Joey: visit Mashpee before the next order and pitch one added SKU; do the same at Reverie Beverly next week. Charley: keep both on their regular route days."
- },
- {
-  "account": "Capeway Cannabis",
-  "town": "Carver",
-  "priority": "medium",
-  "kind": "coverage",
-  "headline": "50 active accounts have no owner — including Capeway Carver ($27,677, nearly doubled)",
-  "assessment": "Unassigned active accounts rose to 50 from 49 last week. Capeway Carver ($27,677 in 2026, 8 orders) is at $18,165 for the last 90 days against $9,512 before, and three more unassigned accounts are growing or sizeable: The Vault Worcester ($9,190 vs $5,249), Healing Center Fitchburg ($9,835 vs $6,301) and Bliss Cannabis Lunenburg ($18,497 in 2026). Rising accounts with no owner are the easiest revenue in the book to lose.",
-  "action": "Matt: assign Capeway Carver, The Vault Worcester, Healing Center and Bliss this week, then work down the rest of the unassigned list by 2026 revenue."
+  "headline": "Sublime Mashpee — #2 account ($55,881) is up to $28,475 from $16,578; protect the cadence",
+  "assessment": "Sublime Cannabis is the #2 account of 2026 at $55,881 over 10 orders and the fastest riser in dollars: $28,475 in the last 90 days against $16,578 the period before. It is 8 days since its last order on a ~25-day cycle, so it is on pace. Seaside Orleans ($42,488, 9 orders) also came back with an order 8 days ago after being flagged as 59 days silent at the last brief.",
+  "action": "Joey: book Sublime's next order for the week of 10/26 now and ask what else they would take at this volume. Charley: keep Sublime and Seaside at the front of the delivery queue."
  },
  {
   "account": "Zenleaf",
   "town": "Sharon",
   "priority": "medium",
   "kind": "rising",
-  "headline": "Zenleaf Sharon is up 3.4x ($12,535 vs $3,675); Elysian and Bud Barn are climbing too",
-  "assessment": "Zenleaf Sharon's last-90-day spend is $12,535 against $3,675 the period before. Elysian Quincy is at $11,125 against $4,362 and Bud Barn Winchendon at $12,350 against $7,063. All three are Joey's accounts and all three are buying more without being asked, which is the right moment to widen what they carry.",
-  "action": "Joey: visit or call all three this week, ask what is selling through fastest, and add one product to each next order."
+  "headline": "Rising: Zenleaf Sharon 3.4x ($12,535 vs $3,675), Bud Barn Winchendon $12,350 vs $7,063",
+  "assessment": "Zenleaf Sharon is up to $12,535 in the last 90 days from $3,675 the period before, and Bud Barn Winchendon to $12,350 from $7,063 — both Joey accounts. These are the two biggest growth stories in the book after Sublime and worth a deliberate expansion conversation rather than waiting for the next reorder.",
+  "action": "Joey: visit Sharon and Winchendon this week with the full line and ask for a standing order. Matt: note both as expansion targets for the Q4 plan."
  },
  {
-  "account": "Quincy Cannabis Co",
-  "town": "Quincy",
+  "account": "The Vault",
+  "town": "Worcester",
+  "priority": "medium",
+  "kind": "coverage",
+  "headline": "The Vault Worcester ($9,190 vs $5,249) and Webster ($8,033 vs $5,249) are rising with no owner and two unconfirmed 10/5 orders",
+  "assessment": "Both Vault stores are in the rising list — Worcester $9,190 and Webster $8,033 in the last 90 days against $5,249 each the period before — and both are Unassigned. Each has a 'Planned' order row dated 10/5 that was never confirmed, so either two orders went out untracked or two reorders were missed.",
+  "action": "Matt: assign both Vault stores to Joey. Joey: confirm whether the 10/5 orders shipped and update the two rows; if they did not, call both stores this week."
+ },
+ {
+  "account": "Roadtrip Dispensary",
+  "town": "Salisbury",
   "priority": "medium",
   "kind": "winback",
-  "headline": "Six A-grade accounts silent 130+ days — $50,950 of prior business to win back",
-  "assessment": "Quincy Cannabis Co ($12,120, 172 days), Kush Groove Brockton ($9,925, 202 days), House Premium Tyngsboro ($8,613, 175 days), Cannabis Connection West Springfield ($8,319, 131 days), UMA Flowers Pepperell ($6,441, 173 days) and Pioneer Valley Trading Westfield ($5,532, 167 days) are all grade A and none has ordered in over four months. Two of them have a sister store that ordered on 9/28: Cannabis Connection Westfield ($6,105) and Pioneer Valley Trading Southwick ($6,855). Those buyers are active with us; the second door just is not being asked for.",
-  "action": "Joey: on your next call with the Cannabis Connection and Pioneer Valley buyers, ask for West Springfield and Westfield by name; call Kush Groove and House Premium this week. Matt: assign Quincy Cannabis Co, UMA Flowers and PVT Westfield, which have no owner."
+  "headline": "Roadtrip Salisbury is fading — $5,210 vs $12,478 and 49 days since its last order",
+  "assessment": "Roadtrip Dispensary (Joey) spent $5,210 in the last 90 days against $12,478 the period before and is 49 days since its last order. It was listed as due at the last brief and the 'Planned' row dated 9/24 was never confirmed. Reverie 73 Gloucester is also on the fading list ($6,405 vs $13,000) but ordered 5 days ago, so it is holding.",
+  "action": "Joey: call Salisbury this week, find out why the 9/24 order did not happen, and confirm or delete that row."
  },
  {
-  "account": "Cape Cod Cannabis",
-  "town": "Wellfleet",
+  "account": "Kush Groove",
+  "town": "Cambridge",
   "priority": "medium",
   "kind": "winback",
-  "headline": "Cape Cod Cannabis Wellfleet — one $3,570 order, then 60 days of silence",
-  "assessment": "Wellfleet placed a single $3,570 order and has not reordered in 60 days, the most recent of the one-and-done accounts and the easiest to recover. Cal Verde Naturals Belmont ($4,739, 138 days) is in the same position with no owner. Fresh Connection Somerville ($2,146, 179 days) has a 'Planned' row dated 9/21 that was never confirmed, while Fresh Connection Cambridge ordered $4,075 on 9/28.",
-  "action": "Joey: call Wellfleet this week and ask how the first order sold; ask the Fresh Connection buyer about Somerville and confirm or delete the 9/21 row. Matt: assign Cal Verde Naturals."
+  "headline": "Five A-grade accounts silent 124–211 days — $51,477 of prior business to win back",
+  "assessment": "Kush Groove Cambridge ($12,500, 124 days, ~79-day cycle), Quincy Cannabis ($12,120, 181 days, ~44-day cycle, Unassigned), Kush Groove Brockton ($9,925, 211 days), House Premium Tyngsboro ($8,613, 184 days, ~48-day cycle) and Cannabis Connection West Springfield ($8,319, 140 days, ~47-day cycle) are all grade A and add up to $51,477 of 2026 business that has stopped. Boutiq East Boston ($11,053, 139 days, grade C) is in the same bucket. Cannabis Connection's 'Planned' row from 9/28 was never confirmed.",
+  "action": "Joey: pick two of the five for in-person win-back visits this week, starting with Kush Groove Cambridge and Quincy. Matt: assign Quincy an owner."
  },
  {
-  "account": "CastleLeaf",
-  "town": "Brighton",
+  "account": null,
+  "town": null,
   "priority": "medium",
   "kind": "pipeline",
-  "headline": "Pipeline: three sample drop-offs are overdue and nothing has moved past 'New'",
-  "assessment": "All three open next steps are overdue: scheduling the CastleLeaf sample drop-off (due 9/28, Matt), the Haven Southwick visit with samples (due 10/2, Matt) and the Webster Lake sample drop (due 10/2, Unassigned). Four new names came in over the last 7 days (LTT Trading Co, Sweetgrass Botanicals, Kapnos Cannabis Co. and J-Bam, Inc.), but no prospect has moved past the 'New' stage.",
-  "action": "Matt: complete or re-date the CastleLeaf and Haven Southwick steps today and put an owner on Webster Lake. Joey: move at least one prospect to Intro Call this week and log it."
+  "headline": "Pipeline: four sample drop-offs are overdue, nothing has moved past 'New', and 50 active accounts have no owner",
+  "assessment": "Four next steps are overdue — Haven Southwick (visit with samples, due 10/2, Matt), Ignited Culture Swansea (drop off samples, due 10/8, Matt), Webster Lake (drop off samples, due 10/2, Unassigned) and CastleLeaf Brighton (schedule sample drop-off, due 9/28, Matt) — and no prospect has moved past 'New'. There are 216 prospects, 136 unclaimed leads and 50 active accounts with no owner. Only one new prospect was added last week (Xhale New England Dispensary, entered twice).",
+  "action": "Matt: do the Haven, Ignited Culture and CastleLeaf sample drops this week and move each to the next stage. Matt: assign Webster Lake and the top unassigned accounts (Capeway, Bliss, Healing Center, Embr/Fyre Ants) to Joey."
  },
  {
   "account": null,
   "town": null,
   "priority": "low",
   "kind": "hygiene",
-  "headline": "Housekeeping: 9 'Planned' order rows, 63 blank totals, 103 tracker/QuickBooks amount mismatches",
-  "assessment": "Nine order rows are still marked 'Planned', two of them from July (Thrive Beverly 7/20 and Trinity Naturals Chelsea 7/27). The tracker totals $1,214,916 for 2026 against $1,604,687 invoiced in QuickBooks: 63 tracker rows have blank totals that QuickBooks can fill, 103 amounts differ, 33 invoices have no matching order and 10 orders have no invoice. Every QuickBooks customer is mapped. J-Bam, Inc. (Pittsfield) was added as an Active account from a QuickBooks invoice and has no owner.",
-  "action": "Joey: confirm or delete the nine Planned rows this week. Dan: fill the 63 blank totals from QuickBooks and review the 10 orders with no invoice. Matt: assign J-Bam."
+  "headline": "Housekeeping: 11 'Planned' order rows, 63 blank totals, 106 tracker/QuickBooks amount mismatches, duplicate Xhale prospect",
+  "assessment": "The tracker has 11 'Planned' placeholder rows (Thrive Beverly 7/20, Trinity Naturals 7/27, Enlite Northampton 9/15 and Indian Orchard 10/6, Fresh Connection Somerville 9/21, Ascend Newton and New Bedford 9/21, Roadtrip 9/24, Cannabis Connection 9/28, The Vault Worcester and Webster 10/5), 63 blank order totals that QuickBooks can fill, 106 orders where the tracker and invoice amounts differ, 10 orders with no invoice and 33 invoices with no order. All 107 QuickBooks customers are mapped. Xhale New England Dispensary was entered twice as a prospect.",
+  "action": "Joey: confirm or delete the 11 planned rows by Friday. Dan: fill the 63 blank totals from QuickBooks and merge the duplicate Xhale prospect."
  }
 ]

@@ -19,13 +19,13 @@
       "DisplayName": "Alternative Compassion Services"
     },
     {
-      "Balance": 9175.0,
+      "Balance": 4250.0,
       "sparse": true,
       "Id": "361",
       "DisplayName": "Apex Noire"
     },
     {
-      "Balance": 6640.0,
+      "Balance": 3875.0,
       "sparse": true,
       "Id": "487",
       "DisplayName": "Ascend Wellness"
@@ -37,7 +37,7 @@
       "DisplayName": "Ascend Wellness Boston"
     },
     {
-      "Balance": 7233.85,
+      "Balance": 3983.85,
       "sparse": true,
       "Id": "529",
       "DisplayName": "Ascend Wellness New Bedford"
@@ -277,7 +277,7 @@
       "DisplayName": "Enlite Indian Orchard"
     },
     {
-      "Balance": 4825.0,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "451",
       "DisplayName": "Enlite Northampton"
@@ -319,7 +319,7 @@
       "DisplayName": "Firebrand"
     },
     {
-      "Balance": 12332.75,
+      "Balance": 6880.25,
       "sparse": true,
       "Id": "483",
       "DisplayName": "Firehouse"
@@ -337,7 +337,7 @@
       "DisplayName": "Fresh Connection"
     },
     {
-      "Balance": 4075.0,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "517",
       "DisplayName": "Fresh Connection Cambridge"
@@ -645,6 +645,24 @@
     {
       "Balance": 0.0,
       "sparse": true,
+      "Id": "100000051",
+      "DisplayName": "Native Sun Hudson"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "100000041",
+      "DisplayName": "Native Sun North Attleboro"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
+      "Id": "100000061",
+      "DisplayName": "Native Sun South Boston"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
       "Id": "347",
       "DisplayName": "New Dia"
     },
@@ -715,7 +733,7 @@
       "DisplayName": "Pioneer Valley Trading Co."
     },
     {
-      "Balance": 905.25,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "411",
       "DisplayName": "Pioneer Valley Trading Southwick"
@@ -753,6 +771,12 @@
     {
       "Balance": 0.0,
       "sparse": true,
+      "Id": "100000031",
+      "DisplayName": "reLeaf Alternative Mansfield"
+    },
+    {
+      "Balance": 0.0,
+      "sparse": true,
       "Id": "414",
       "DisplayName": "Resinate Northampton"
     },
@@ -769,13 +793,13 @@
       "DisplayName": "Resinate, Inc."
     },
     {
-      "Balance": 5916.0,
+      "Balance": 10081.0,
       "sparse": true,
       "Id": "376",
       "DisplayName": "Reverie 73 Beverly"
     },
     {
-      "Balance": -242.0,
+      "Balance": 3098.0,
       "sparse": true,
       "Id": "375",
       "DisplayName": "Reverie 73 Gloucester"
@@ -787,7 +811,7 @@
       "DisplayName": "Reverie 73 LLC"
     },
     {
-      "Balance": -449.0,
+      "Balance": 2706.0,
       "sparse": true,
       "Id": "354",
       "DisplayName": "Reverie 73 Lowell"
@@ -823,7 +847,7 @@
       "DisplayName": "Roslindale Cannabis Co"
     },
     {
-      "Balance": -75.0,
+      "Balance": 4550.0,
       "sparse": true,
       "Id": "279",
       "DisplayName": "Seaside Joint Ventures Inc."
@@ -1027,18 +1051,18 @@
       "DisplayName": "Yamba Boutique"
     },
     {
-      "Balance": 7485.25,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "434",
       "DisplayName": "Zen Leaf"
     },
     {
-      "Balance": 3980.0,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "435",
       "DisplayName": "Zen Leaf Plymouth"
     }
   ],
   "startPosition": 1,
-  "maxResults": 173
+  "maxResults": 177
 }

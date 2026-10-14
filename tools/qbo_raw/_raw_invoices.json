@@ -3,6 +3,136 @@
     {
       "AllowOnlineAffirmPayment": false,
       "sparse": true,
+      "Id": "7803",
+      "DocNumber": "1773",
+      "TxnDate": "2026-10-14",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "354",
+        "name": "Reverie 73 Lowell"
+      },
+      "BillAddr": {
+        "Id": "2074"
+      },
+      "ShipAddr": {
+        "Id": "3766",
+        "Line1": "Reverie 73 Lowell",
+        "Line2": "1148 Bridge St",
+        "Line3": "Lowell, Ma  01850"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-13",
+      "TotalAmt": 3155.0,
+      "Balance": 2706.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7802",
+      "DocNumber": "1772",
+      "TxnDate": "2026-10-14",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "375",
+        "name": "Reverie 73 Gloucester"
+      },
+      "BillAddr": {
+        "Id": "1049"
+      },
+      "ShipAddr": {
+        "Id": "3765",
+        "Line1": "Reverie 73 Gloucester",
+        "Line2": "73 Essex Ave",
+        "Line3": "Gloucester, MA  01930"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-13",
+      "TotalAmt": 3340.0,
+      "Balance": 3098.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7801",
+      "DocNumber": "1771",
+      "TxnDate": "2026-10-14",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "376",
+        "name": "Reverie 73 Beverly"
+      },
+      "BillAddr": {
+        "Id": "1052"
+      },
+      "ShipAddr": {
+        "Id": "3764",
+        "Line1": "Reverie 73 Beverly",
+        "Line2": "350 Rantoul St",
+        "Line3": "Beverly, MA  01915"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-13",
+      "TotalAmt": 4165.0,
+      "Balance": 4165.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7720",
+      "DocNumber": "1770",
+      "TxnDate": "2026-10-13",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "293",
+        "name": "Sublime Cannabis Co."
+      },
+      "BillAddr": {
+        "Id": "596"
+      },
+      "ShipAddr": {
+        "Id": "3761",
+        "Line1": "Sublime Cannabis Co.",
+        "Line2": "800 Falmouth Rd STE 102A",
+        "Line3": "Mashpee, 02649"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-12",
+      "TotalAmt": 4635.0,
+      "Balance": 0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7719",
+      "DocNumber": "1769",
+      "TxnDate": "2026-10-13",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "279",
+        "name": "Seaside Joint Ventures Inc."
+      },
+      "BillAddr": {
+        "Id": "516"
+      },
+      "ShipAddr": {
+        "Id": "3760",
+        "Line1": "Seaside Joint Ventures Inc.",
+        "Line2": "14 Lots Hollow Road",
+        "Line3": "Orleans, MA  02653"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-12",
+      "TotalAmt": 4625.0,
+      "Balance": 4625.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
       "Id": "7692",
       "DocNumber": "1768",
       "TxnDate": "2026-09-30",
@@ -105,7 +235,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-11-01",
       "TotalAmt": 6855.25,
-      "Balance": 905.25
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -130,8 +260,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-11-01",
-      "TotalAmt": 4075.0,
-      "Balance": 4075.0
+      "TotalAmt": 3667.5,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -627,7 +757,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-23",
       "TotalAmt": 3980.0,
-      "Balance": 3980.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -654,7 +784,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-23",
       "TotalAmt": 7485.25,
-      "Balance": 7485.25
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1096,7 +1226,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-01",
       "TotalAmt": 2765.0,
-      "Balance": 2765.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1122,7 +1252,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-30",
       "TotalAmt": 3250.0,
-      "Balance": 3250.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1174,7 +1304,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-30",
       "TotalAmt": 4925.0,
-      "Balance": 4925.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1539,7 +1669,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-25",
       "TotalAmt": 5452.5,
-      "Balance": 5452.5
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2373,7 +2503,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-03",
       "TotalAmt": 4825.0,
-      "Balance": 4825.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -8798,6 +8928,6 @@
     }
   ],
   "startPosition": 1,
-  "maxResults": 337,
-  "totalCount": 337
+  "maxResults": 342,
+  "totalCount": 342
 }
