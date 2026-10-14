@@ -68,6 +68,18 @@
    "uploaded_at": "2026-10-14",
    "expires": "2027-07-11",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0070/st4/2026-10-14_mv885ioa1x9v.pdf",
+    "sha": "eaf88bc448b95b282b124257f989b77d1b9c5ba4",
+    "name": "ST-4 - Cape Cod Cannabis (Wellfleet).pdf",
+    "size": 513599,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-14",
+   "history": []
   }
  }
 }
