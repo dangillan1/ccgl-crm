@@ -4,8 +4,8 @@
 #   monday_sync.sh push   — Mon 7:45 AM (com.ccgl.crm.monday-push): commit + publish what the 7:00 AM task wrote
 #   monday_sync.sh queue  — on demand (com.ccgl.crm.sync-request): the Cowork task cannot run git from its
 #                           sandbox, so it drops an empty file named `pull` or `push` into tools/out/requests/;
-#                           launchd watches that folder and runs this leg, which serves the request and deletes
-#                           the file. This is what lets a manual re-run of the task work on any day of the week.
+#                           launchd runs this leg every 20 s; it serves the request and deletes the file
+#                           (QueueDirectories does not fire on the mini, so it polls). This is what lets a manual re-run of the task work on any day of the week.
 # Logs to tools/out/sync.log. Safe to run by hand any time.
 set -u
 REPO="$(cd "$(dirname "$0")/.." && pwd)"

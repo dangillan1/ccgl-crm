@@ -4,7 +4,7 @@
 # Safe to re-run. Does: clone the repo into ~/Documents/Claude/Projects/CCGL Wholesale/ccgl-crm (if missing),
 # set git to never open an editor and to remember the GitHub token in the keychain, install the three launchd
 # jobs for THIS user's path (Mon 6:45 AM pull, Mon 7:45 AM push, and the on-demand pull/push queue the Cowork
-# task uses — see tools/monday_sync.sh), and print what's left to do by hand.
+# task uses, polled every 20 s — see tools/monday_sync.sh), and print what's left to do by hand.
 set -e
 BASE="$HOME/Documents/Claude/Projects/CCGL Wholesale"
 REPO="$BASE/ccgl-crm"
@@ -46,7 +46,7 @@ PLIST
 }
 install_job com.ccgl.crm.monday-pull  pull  ccgl-crm-monday-pull  "<key>StartCalendarInterval</key><dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>6</integer><key>Minute</key><integer>45</integer></dict>"
 install_job com.ccgl.crm.monday-push  push  ccgl-crm-monday-push  "<key>StartCalendarInterval</key><dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>7</integer><key>Minute</key><integer>45</integer></dict>"
-install_job com.ccgl.crm.sync-request queue ccgl-crm-sync-request "<key>QueueDirectories</key><array><string>$REPO/tools/out/requests</string></array>"
+install_job com.ccgl.crm.sync-request queue ccgl-crm-sync-request "<key>StartInterval</key><integer>20</integer>"
 
 echo "== 3/4 test the pull leg"
 bash "$REPO/tools/monday_sync.sh" pull
