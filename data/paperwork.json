@@ -120,6 +120,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-14",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0508/w9/2026-10-14_mv8eh9qg26uc.pdf",
+    "sha": "733490dd5a31a725593bed1c883b34f584077ca9",
+    "name": "W-9 - ACK Natural (Nantucket).pdf",
+    "size": 201824,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-14",
+   "history": []
   }
  }
 }
