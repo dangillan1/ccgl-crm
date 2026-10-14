@@ -25,5 +25,14 @@
   "note": "Charley Emailed buyer",
   "date": "2026-10-14",
   "contact_id": "C22a7c8cc"
+ },
+ {
+  "id": "Xmv8kaw5z7bje",
+  "ts": "2026-10-14T20:28:12.503Z",
+  "account_id": "A0186",
+  "type": "Call",
+  "note": "Charley Called store - will call again tomorrow morning when buyer is in",
+  "date": "2026-10-14",
+  "contact_id": null
  }
 ]
