@@ -395,7 +395,7 @@ function index(){
   for(const a of [...S.accounts,...S.leads]){
     const acts=actsByAcc[a.id]||[]; const lt=acts.find(x=>['Call','Visit','Text','Email','Note'].includes(x.type))?.date;
     a._last=[a.last_contact,lt].filter(Boolean).sort().pop()||''; a._days=daysSince(a._last); a._nContacts=(contactsByAcc[a.id]||[]).length;
-    const os=(ordersByAcc[a.id]||[]).filter(o=>!/pend|plan/i.test(o.status||'')); a._nOrders=os.length; a._orderTotal=os.reduce((t,o)=>t+(o.total||0),0); a._lastOrder=os[0]?.date||''; a._daysOrder=daysSince(a._lastOrder); a._pending=(ordersByAcc[a.id]||[]).filter(o=>/pend|plan/i.test(o.status||'')).length;
+    const os=(ordersByAcc[a.id]||[]).filter(o=>!/pend|plan/i.test(o.status||'')); a._nOrders=os.length; a._orderTotal=os.reduce((t,o)=>t+(o.total||0),0); a._lastOrder=os[0]?.date||''; a._lastOrderTotal=typeof os[0]?.total==='number'?os[0].total:null; a._daysOrder=daysSince(a._lastOrder); a._pending=(ordersByAcc[a.id]||[]).filter(o=>/pend|plan/i.test(o.status||'')).length;
     const ds=os.map(o=>o.date).filter(Boolean).sort(); const gaps=[]; for(let i=1;i<ds.length;i++){ const g=(new Date(ds[i])-new Date(ds[i-1]))/864e5; if(g>0) gaps.push(g); }
     a._avgGap=gaps.length?Math.round(gaps.reduce((x,y)=>x+y,0)/gaps.length):null;
     a._due=a._avgGap&&a._daysOrder!=null? a._avgGap-a._daysOrder : null;   // +n = due in n days, -n = n days late
@@ -611,6 +611,7 @@ function renderInsights(v){
 }
 
 /* ---------------- ACTIVE ACCOUNTS ---------------- */
+const lastOrderCell=a=>a._lastOrder?`${fmtDate(a._lastOrder)}<span class="sub">${a._lastOrderTotal!=null?fmtMoney(a._lastOrderTotal)+' · ':''}${a._daysOrder}d ago</span>`:'<span class="muted">—</span>';
 function renderActive(v){
   const f=S.filters.active||={}; const mode=f.mode||'contacts';
   const all=S.accounts.filter(a=>a.status==='Current');
@@ -618,12 +619,12 @@ function renderActive(v){
   rows=sortRows(rows,'active','name',accGetter);
   const grades=S.settings.grades||['A+','A','B','C','D'];
   const cols= mode==='contacts'
-    ? `${th('active','name','Account')}${th('active','town','Town')}${th('active','grade','Grade')}${th('active','owner','Owner')}${th('active','_profile','Profile')}${th('active','_buyer','Buyer')}${th('active','_finance','Finance / AP')}${th('active','_intake','Intake')}<th class="nos">Standing note</th>${th('active','next_step_due','Next step')}`
+    ? `${th('active','name','Account')}${th('active','town','Town')}${th('active','grade','Grade')}${th('active','owner','Owner')}${th('active','_profile','Profile')}${th('active','_buyer','Buyer')}${th('active','_finance','Finance / AP')}${th('active','_intake','Intake')}<th class="nos">Standing note</th>${th('active','_daysOrder','Last order')}${th('active','next_step_due','Next step')}`
     : `${th('active','name','Account')}${th('active','town','Town')}${th('active','grade','Grade')}${th('active','owner','Owner')}${th('active','_profile','Profile')}${th('active','_due','Reorder')}${th('active','_daysOrder','Last order')}${th('active','_nOrders','Orders','tr')}${th('active','_orderTotal','2026 $','tr')}${th('active','_invoiced','Invoiced','tr')}${th('active','_owes','Owes','tr')}${th('active','next_step_due','Next step')}`;
   const row=a=>`<tr class="row" data-open="${a.id}">${can('reassign')?`<td><input type="checkbox" class="chk" data-sel="${a.id}" ${S.sel.has(a.id)?'checked':''}></td>`:''}
       <td class="wrap"><b>${esc(a.name)}</b>${a.parent&&a.parent!==a.name?`<span class="sub">${esc(a.parent)}</span>`:''}${a.license_number?`<span class="sub mono">#${esc(a.license_number.split(' / ')[0])}</span>`:''}</td><td>${esc(a.town||'')}</td><td>${gradePill(a.grade)}</td><td>${ownerCell(a)}</td><td>${profilePill(a)}</td>
-      ${mode==='contacts'?`<td class="wrap">${contactsCell(a._buyers)}</td><td class="wrap">${contactsCell(a._finances)}</td><td class="wrap">${contactsCell(a._intakes)}</td><td class="wrap" style="max-width:220px;font-size:12px;${a.standing_requests?'color:var(--danger);font-weight:600':''}">${esc(a.standing_requests||'')}</td>`
-      :`<td>${dueCell(a)}</td><td>${a._lastOrder?`${fmtDate(a._lastOrder)}<span class="sub">${a._daysOrder}d ago</span>`:'<span class="muted">—</span>'}</td><td class="tr">${a._nOrders||'<span class="muted">0</span>'}</td><td class="tr">${a._orderTotal?fmtMoney(a._orderTotal):'<span class="muted">—</span>'}</td><td class="tr">${a._invoiced?fmtMoney(a._invoiced):'<span class="muted">—</span>'}</td><td class="tr">${owesCell(a)}</td>`}
+      ${mode==='contacts'?`<td class="wrap">${contactsCell(a._buyers)}</td><td class="wrap">${contactsCell(a._finances)}</td><td class="wrap">${contactsCell(a._intakes)}</td><td class="wrap" style="max-width:220px;font-size:12px;${a.standing_requests?'color:var(--danger);font-weight:600':''}">${esc(a.standing_requests||'')}</td><td style="white-space:nowrap">${lastOrderCell(a)}</td>`
+      :`<td>${dueCell(a)}</td><td style="white-space:nowrap">${lastOrderCell(a)}</td><td class="tr">${a._nOrders||'<span class="muted">0</span>'}</td><td class="tr">${a._orderTotal?fmtMoney(a._orderTotal):'<span class="muted">—</span>'}</td><td class="tr">${a._invoiced?fmtMoney(a._invoiced):'<span class="muted">—</span>'}</td><td class="tr">${owesCell(a)}</td>`}
       <td class="wrap" style="max-width:200px">${nsCell(a)}</td></tr>`;
   v.innerHTML=`<div class="toolbar">${can('edit')?'<button class="btn sm" data-newacc="Current">+ New account</button>':''}
       <span class="chip ${mode==='contacts'?'on':''}" data-mode="contacts">Contacts</span><span class="chip ${mode==='orders'?'on':''}" data-mode="orders">Orders</span><span class="muted">·</span>
@@ -633,7 +634,7 @@ function renderActive(v){
       <select data-f="profile"><option value="">Any profile</option><option value="incomplete" ${f.profile==='incomplete'?'selected':''}>Profile incomplete</option><option value="complete" ${f.profile==='complete'?'selected':''}>Profile complete</option></select>
       ${[f.owner,f.grade,f.health,f.profile].some(Boolean)?`<button class="btn link sm" data-clear>clear</button>`:''}
       <span class="meta">${rows.length} of ${all.length} active accounts · ${fmtMoney(rows.reduce((t,a)=>t+a._orderTotal,0))} in 2026</span></div>
-    ${bulkBar()}<div class="card tbl-wrap"><table><thead><tr>${can('reassign')?'<th class="nos"></th>':''}${cols}</tr></thead><tbody>${rows.length?rows.map(row).join(''):'<tr><td colspan="13" class="empty">No accounts match.</td></tr>'}</tbody></table></div>
+    ${bulkBar()}<div class="card tbl-wrap"><table><thead><tr>${can('reassign')?'<th class="nos"></th>':''}${cols}</tr></thead><tbody>${rows.length?rows.map(row).join(''):'<tr><td colspan="14" class="empty">No accounts match.</td></tr>'}</tbody></table></div>
     <p class="note" style="margin-top:8px">Contacts view = the Customer Tracker: buyer, finance and intake per location. Orders view = reorder rhythm from the 2026 order log.</p>`;
   $$('[data-mode]',v).forEach(c=>c.onclick=()=>{ (S.filters.active||={}).mode=c.dataset.mode; render(); });
   bindFilters(v,'active'); bindSort(v,'active',accGetter); bindRows(v); bindBulk(v);

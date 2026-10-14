@@ -74,8 +74,9 @@ Unclaimed Leads list until a person claims it.
   due for reorder this week, unowned revenue, rising / fading accounts, pipeline closest to first
   order, new CCC licenses, one-and-done, "Active" with no 2026 orders.
 - **Active Accounts** — Master accounts with status Current. *Contacts* view shows the Customer
-  Tracker per location (Buyer / Finance / Intake / standing note); *Orders* view shows reorder
-  rhythm, last order, 2026 $. Managers can multi-select and bulk-assign owners.
+  Tracker per location (Buyer / Finance / Intake / standing note) plus the last order (date, amount,
+  days ago); *Orders* view shows reorder rhythm, last order, 2026 $. Managers can multi-select and
+  bulk-assign owners.
 - **Prospects** — Master accounts not yet active (Sheet status Prospect / Non-prospect), with stages
   (table or drag-and-drop board).
 - **Unclaimed Leads** — the pool. **Claim** moves one into Prospects under your name at stage New and
