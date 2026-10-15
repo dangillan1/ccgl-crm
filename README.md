@@ -9,7 +9,8 @@ index.html              the app (no build step, no external dependencies)
 data/accounts.json      THE BOOK — Master sheet accounts + tracker-verified locations + claimed leads (367)
 data/leads.json         UNCLAIMED LEADS — deduped companies from Random Data / CCC tabs, not yet claimed (150)
 data/contacts.json      one row per person; `role` is free text and may hold several roles, comma-separated ("Buyer, Finance / AP") (1,398)
-data/orders.json        one row per 2026 order (318 from Order Tracker + any entered in the CRM)
+data/orders.json        one row per 2026 order: tracker rows, CRM-entered orders, and orders created from QuickBooks invoices; confirmed orders carry
+                        their QuickBooks invoice (`invoice`, `qbo_id`, `invoiced_total`, `invoice_date`) with the tracker's own values kept beside (`tracker_total`, `tracker_date`)
 data/insights.json      AI assessments shown on the Insights tab (regenerated at each import)
 data/users.json         who can sign in + password hashes
 data/settings.json      pipeline stages, owner names, last-import report, paperwork settings
@@ -158,7 +159,8 @@ Until cutover, the Google Sheet and the Order Tracker stay the place you edit th
 |------------------------------|----------------------------------------------------------------------------|
 | Sheet — main tab             | name, town, address, license type, status, last/next contact, notes, contact people 1–3 |
 | Order Tracker — Customer Tracker | buyer / intake / finance contacts, license numbers                      |
-| Order Tracker — Order Tracker 2026 | orders (rebuilt in full)                                              |
+| Order Tracker — Order Tracker 2026 | orders (rebuilt in full), except that orders reconciled to QuickBooks keep their invoiced date, amount and location |
+| QuickBooks (weekly, tools/qbo_sync.py) | the confirmed order list: date, amount and location of every invoiced order; orders created for invoices never logged (source QBO); "no invoice" flags |
 
 The CRM owns everything else and keeps it across re-imports: **owner, grade** (seeded from the Sheet,
 then yours), **stage, tags, standing notes and delivery notes** (seeded from the tracker, then yours —
