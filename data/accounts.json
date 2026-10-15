@@ -7355,11 +7355,11 @@
   "name": "Resinate",
   "parent": "Resinate",
   "town": "Douglas",
-  "address": "",
+  "address": "120 Gilboa St",
   "license_type": "Dispensary",
   "status": "Current",
-  "grade": "",
-  "owner": "Unassigned",
+  "grade": "A",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -7382,7 +7382,10 @@
   "created": "2026-09-25",
   "sheet_row": null,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "address": "2026-10-15"
+  }
  },
  {
   "id": "A0265",
