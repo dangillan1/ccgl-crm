@@ -20,7 +20,9 @@ With    --merge : parallel-run re-import. Refreshes Sheet-owned fields on
                   filled when the CRM value is blank/Unassigned). CRM-only
                   fields (stage, delivery_notes, license_number, tags, flags)
                   and CRM-created contacts are preserved; people removed in the
-                  CRM (settings.removed_contacts) stay removed. New Sheet rows are
+                  CRM (settings.removed_contacts) stay removed. Orders reconciled to
+                  QuickBooks (qbo_id) keep their invoiced date, amount and location,
+                  and orders created from invoices (source QBO) are kept. New Sheet rows are
                   added; rows missing from the Sheet are kept and flagged.
 
 Tab handling (by name, so tab order changes don't break it):
@@ -1018,12 +1020,15 @@ def main():
                 report["tracker_orders_deleted_in_crm"] = before - len(orders)
             live = {o["id"]: o for o in orders}
             for o in existing_orders:
-                if str(o.get("source", "")).startswith("CRM") and o["id"] not in live:
+                if (str(o.get("source", "")).startswith("CRM") or o.get("source") == "QBO") and o["id"] not in live:
                     orders.append(o); report["crm_orders_preserved"] = report.get("crm_orders_preserved", 0) + 1
-                elif o.get("edited_in_crm") and o["id"] in live:
-                    # someone corrected this tracker order in the CRM: their version of the editable fields wins
-                    for f in ("date", "status", "total", "delivery_date", "owner", "mix", "special", "samples", "contact_name", "contact_email", "edited_in_crm", "edited_by", "edited_at"):
+                elif (o.get("edited_in_crm") or o.get("qbo_id")) and o["id"] in live:
+                    # someone corrected this tracker order in the CRM, or it was reconciled to a QuickBooks invoice: that version wins
+                    # (account_id too: a chain order booked on one store but invoiced to a sister store stays on the invoiced store)
+                    for f in ("date", "status", "total", "delivery_date", "owner", "mix", "special", "samples", "contact_name", "contact_email", "edited_in_crm", "edited_by", "edited_at",
+                              "invoice", "qbo_id", "invoice_date", "invoiced_total", "tracker_total", "tracker_date", "tracker_account_id", "reconciled_at", "review", "note"):
                         if f in o: live[o["id"]][f] = o[f]
+                    if o.get("qbo_id") and o.get("account_id"): live[o["id"]]["account_id"] = o["account_id"]
                     report["crm_order_edits_kept"] = report.get("crm_order_edits_kept", 0) + 1
         report["orders_total"] = len(orders)
 

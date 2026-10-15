@@ -169,7 +169,17 @@ def pair_check(o, best):
     elif abs(best["amount"] - o["total"]) > max(0.02 * o["total"], 10):
         amount_differs.append({"order_id": o["id"], "account_id": o["account_id"], "date": o["date"], "tracker_total": o["total"], "invoice": best["doc"], "invoice_date": best["date"], "invoiced": best["amount"]})
 conf = [o for o in orders if re.match(r"conf", o.get("status") or "", re.I) and o.get("account_id") and d(o.get("date"))]
+# orders already reconciled to an invoice (tools/qbo_sync.py stamps qbo_id) pair by that link; the heuristic below is for the rest
+inv_by_id = {}
+for r in resolved: inv_by_id.setdefault(r["id"], r)
+linked = set()
+for o in conf:
+    r = inv_by_id.get(o.get("qbo_id"))
+    if r and r["id"] not in used:
+        used.add(r["id"]); linked.add(o["id"]); matched_pairs += 1
+        if not r["split"]: pair_check(o, {**r, "amount": r["total"]})
 for o in sorted(conf, key=lambda o: o["date"]):
+    if o["id"] in linked: continue
     od = d(o["date"]); best = None
     for r in inv_by_acc.get(o["account_id"], []):
         if r["id"] in used: continue
@@ -207,7 +217,7 @@ for o in sorted(orders_without_invoice, key=lambda o: o["date"]):
         chain_pairs.append({"order_id": o["order_id"], "order_account": o["account_id"], "invoice": best["doc"], "invoice_account": best["account_id"], "date": o["date"], "total": best["amount"]})
 orders_without_invoice = list(left_orders.values())
 invoices_without_order = [{"invoice_id": r["id"], "doc": r["doc"], "account_id": r["account_id"], "date": r["date"], "total": r["amount"], "customer": r["customer"]}
-                          for lst in inv_by_acc.values() for r in lst if r["id"] not in used]
+                          for lst in inv_by_acc.values() for r in lst if r["id"] not in used and r["amount"]]      # a $0 invoice is not a missing order
 report_recon = {"matched": matched_pairs, "orders_without_invoice": orders_without_invoice, "invoices_without_order": invoices_without_order,
                 "orders_total_from_qbo": orders_total_from_qbo, "amount_differs": amount_differs, "chain_pairs": chain_pairs}
 
