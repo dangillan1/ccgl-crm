@@ -147,6 +147,18 @@
    "uploaded_at": "2026-10-15",
    "expires": "2026-11-17",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0045/st4/2026-10-15_mv9vnsft938p.pdf",
+    "sha": "5a6c517c46fb70c606636ea090ceed194ef1de71",
+    "name": "ST-4 - Boutiq (East Boston).pdf",
+    "size": 335316,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
