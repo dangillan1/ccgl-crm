@@ -478,5 +478,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods",
   "date": "2026-10-13"
+ },
+ {
+  "id": "Xmv9x6n7cdj8i",
+  "ts": "2026-10-15T19:16:35.448Z",
+  "account_id": "A0098",
+  "type": "Order",
+  "note": "Pending order $7,930 · Finished Goods · $6k spending promo - 1 case Sticky Candy live sugar",
+  "date": "2026-10-15"
  }
 ]
