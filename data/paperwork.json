@@ -159,6 +159,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-15",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0045/w9/2026-10-15_mv9vobh7nld4.pdf",
+    "sha": "696901f099962ce7beab667c8db2237ca7a9ffee",
+    "name": "W-9 - Boutiq (East Boston).pdf",
+    "size": 260739,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
