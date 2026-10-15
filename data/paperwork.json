@@ -211,5 +211,20 @@
    "uploaded_at": "2026-10-15",
    "history": []
   }
+ },
+ "A0146": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0146/ccc/2026-10-15_mv9vt7bqpy9d.pdf",
+    "sha": "13600320f67218e06c07e2a68c846851a9f00f93",
+    "name": "CCC License - GreenSoul Organics (Cambridge).pdf",
+    "size": 3905606,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "expires": "2026-11-11",
+   "history": []
+  }
  }
 }
