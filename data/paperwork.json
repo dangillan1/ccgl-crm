@@ -289,5 +289,19 @@
    "uploaded_at": "2026-10-15",
    "history": []
   }
+ },
+ "AQBO0001": {
+  "w9": {
+   "file": {
+    "path": "accounts/AQBO0001/w9/2026-10-15_mv9wnss7r8wc.pdf",
+    "sha": "f72ac80eb3b7e41b15223286d17bdf9f95b71d5a",
+    "name": "W-9 - LTT Trading Co (Worcester).pdf",
+    "size": 181251,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
+  }
  }
 }
