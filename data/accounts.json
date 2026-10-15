@@ -10019,7 +10019,7 @@
   "name": "LTT Trading Co",
   "town": "Worcester",
   "address": "64 Beacon St B108",
-  "license_type": "",
+  "license_type": "Production",
   "status": "Current",
   "grade": "C",
   "owner": "Joey",
@@ -10031,7 +10031,8 @@
   "in_qbo": true,
   "crm_edits": {
    "license_number": "2026-10-15",
-   "notes": "2026-10-15"
+   "notes": "2026-10-15",
+   "license_type": "2026-10-15"
   },
   "notes": "Bulk-only biomass vendor"
  },
