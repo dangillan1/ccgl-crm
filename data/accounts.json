@@ -2816,13 +2816,14 @@
   "address": "297 Newbury St",
   "license_type": "Dispensary",
   "status": "Current",
-  "grade": "",
+  "grade": "A+",
   "owner": "Charley",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 103,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "crm_edits": {}
  },
  {
   "id": "A0103",
