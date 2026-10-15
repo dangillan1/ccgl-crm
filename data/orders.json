@@ -19171,5 +19171,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omv9x8n11dul7",
+  "date": "2026-10-13",
+  "account_id": "A0266",
+  "account_raw": "Resinate",
+  "license": "MR281249",
+  "status": "Planned",
+  "contact_name": "",
+  "contact_email": "",
+  "delivery_date": "",
+  "total": 5530,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
