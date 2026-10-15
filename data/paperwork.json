@@ -237,6 +237,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-15",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0146/w9/2026-10-15_mv9vtog9coig.pdf",
+    "sha": "14059f0ed0647813b335ed105b85611d970709c8",
+    "name": "W-9 - GreenSoul Organics (Cambridge).pdf",
+    "size": 1225973,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
