@@ -396,7 +396,7 @@ function index(){
   for(const a of [...S.accounts,...S.leads]){
     const acts=actsByAcc[a.id]||[]; const lt=acts.find(x=>['Call','Visit','Text','Email','Note'].includes(x.type))?.date;
     a._last=[a.last_contact,lt].filter(Boolean).sort().pop()||''; a._days=daysSince(a._last); a._nContacts=(contactsByAcc[a.id]||[]).length;
-    const os=(ordersByAcc[a.id]||[]).filter(o=>!/pend|plan/i.test(o.status||'')); a._nOrders=os.length; a._orderTotal=os.reduce((t,o)=>t+(o.total||0),0); a._lastOrder=os[0]?.date||''; a._lastOrderTotal=typeof os[0]?.total==='number'?os[0].total:null; a._daysOrder=daysSince(a._lastOrder); a._pending=(ordersByAcc[a.id]||[]).filter(o=>/pend|plan/i.test(o.status||'')).length;
+    const os=(ordersByAcc[a.id]||[]).filter(o=>!/pend|plan/i.test(o.status||'')); a._nOrders=os.length; a._orderTotal=os.reduce((t,o)=>t+(o.total||0),0); a._lastOrder=os[0]?.date||''; const lastDay=os.filter(o=>o.date===a._lastOrder); a._lastOrderN=lastDay.length; a._lastOrderTotal=lastDay.some(o=>typeof o.total==='number')?lastDay.reduce((t,o)=>t+(typeof o.total==='number'?o.total:0),0):null; a._lastOrderInv=lastDay.map(o=>o.invoice).filter(Boolean); a._daysOrder=daysSince(a._lastOrder); a._pending=(ordersByAcc[a.id]||[]).filter(o=>/pend|plan/i.test(o.status||'')).length;
     const ds=os.map(o=>o.date).filter(Boolean).sort(); const gaps=[]; for(let i=1;i<ds.length;i++){ const g=(new Date(ds[i])-new Date(ds[i-1]))/864e5; if(g>0) gaps.push(g); }
     a._avgGap=gaps.length?Math.round(gaps.reduce((x,y)=>x+y,0)/gaps.length):null;
     a._due=a._avgGap&&a._daysOrder!=null? a._avgGap-a._daysOrder : null;   // +n = due in n days, -n = n days late
@@ -612,7 +612,8 @@ function renderInsights(v){
 }
 
 /* ---------------- ACTIVE ACCOUNTS ---------------- */
-const lastOrderCell=a=>a._lastOrder?`${fmtDate(a._lastOrder)}<span class="sub">${a._lastOrderTotal!=null?fmtMoney(a._lastOrderTotal)+' · ':''}${a._daysOrder}d ago</span>`:'<span class="muted">—</span>';
+// the most recent day with completed orders: when two invoices land the same day (bulk + finished goods, say) the amounts add up and both invoice numbers show
+const lastOrderCell=a=>a._lastOrder?`${fmtDate(a._lastOrder)}<span class="sub">${a._lastOrderTotal!=null?fmtMoney(a._lastOrderTotal)+(a._lastOrderN>1?` (${a._lastOrderN} orders)`:'')+' · ':''}${a._daysOrder}d ago</span>${(a._lastOrderInv||[]).length?`<span class="sub mono" title="QuickBooks invoice${a._lastOrderInv.length>1?'s':''}">${a._lastOrderInv.map(x=>'#'+esc(x)).join(' + ')}</span>`:''}`:'<span class="muted">—</span>';
 function renderActive(v){
   const f=S.filters.active||={}; const mode=f.mode||'contacts';
   const all=S.accounts.filter(a=>a.status==='Current');
