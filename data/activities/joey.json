@@ -454,5 +454,13 @@
   "type": "Doc",
   "note": "W-9 uploaded",
   "date": "2026-10-15"
+ },
+ {
+  "id": "Xmv9x0ok1gc27",
+  "ts": "2026-10-15T19:11:57.265Z",
+  "account_id": "A0219",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · 15% First-Time Buyer",
+  "date": "2026-10-13"
  }
 ]
