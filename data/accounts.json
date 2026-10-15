@@ -6776,7 +6776,7 @@
  },
  {
   "id": "A0514",
-  "sheet_key": "",
+  "sheet_key": "peakcollective|greatbarrington",
   "source": "Customer Tracker",
   "name": "Peak Cannabis",
   "parent": "",
@@ -6784,8 +6784,8 @@
   "address": "325 Stockbridge Rd",
   "license_type": "Dispensary",
   "status": "Current",
-  "grade": "",
-  "owner": "Unassigned",
+  "grade": "C",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -6794,45 +6794,21 @@
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "MR285297",
-  "tags": [
-   "Not in Master Sheet"
-  ],
-  "flags": [
-   "not-in-master",
-   "possible-duplicate"
-  ],
-  "dup_candidates": [
-   "A0245"
-  ],
+  "tags": [],
+  "flags": [],
+  "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
   "in_customer_tracker": true,
-  "in_qbo": true
- },
- {
-  "id": "A0245",
-  "sheet_key": "peakcollective|greatbarrington",
-  "source": "Master",
-  "parent": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [],
-  "created": "2026-09-25",
-  "name": "Peak Collective",
-  "town": "Great Barrington",
-  "address": "",
-  "license_type": "Dispensary",
-  "status": "Current",
-  "grade": "C",
-  "owner": "Joey",
-  "last_contact": "2026-07-27",
-  "next_contact": "2026-08-10",
-  "notes": "",
-  "sheet_row": 246
+  "in_qbo": true,
+  "merged_from": [
+   {
+    "id": "A0245",
+    "name": "Peak Collective",
+    "source": "Master",
+    "date": "2026-10-15"
+   }
+  ]
  },
  {
   "id": "A0246",
@@ -10331,5 +10307,39 @@
   "claimed": true,
   "claimed_by": "charley",
   "claimed_at": "2026-10-15"
+ },
+ {
+  "id": "AQBO0002",
+  "sheet_key": "",
+  "source": "CRM (QBO)",
+  "parent": "New England Treatment Access",
+  "stage": "New",
+  "stage_entered": "2026-10-15",
+  "delivery_notes": "",
+  "standing_requests": "",
+  "license_number": "",
+  "tags": [
+   "From QBO",
+   "Not in Master Sheet",
+   "Bulk"
+  ],
+  "flags": [
+   "not-in-master"
+  ],
+  "created": "2026-10-15",
+  "name": "New England Treatment Access",
+  "town": "Franklin",
+  "address": "5 Forge Pkwy",
+  "license_type": "Production",
+  "status": "Prospect",
+  "grade": "",
+  "owner": "Unassigned",
+  "last_contact": "",
+  "next_contact": "",
+  "claimed": true,
+  "claimed_by": "dan",
+  "claimed_at": "2026-10-15",
+  "in_qbo": true,
+  "notes": "NETA's Franklin processing facility — bought bulk trim once (Dec 2024, QuickBooks invoice #1031). Not the Northampton dispensary (that one is still an unclaimed lead)."
  }
 ]

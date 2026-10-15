@@ -8474,19 +8474,8 @@
   "primary": false
  },
  {
-  "id": "C28e17046",
-  "account_id": "A0245",
-  "name": "Collin Mallory",
-  "email": "",
-  "phone": "",
-  "role": "",
-  "source": "Master",
-  "primary": true,
-  "sheet_slot": 1
- },
- {
   "id": "Cb3d83f5c",
-  "account_id": "A0245",
+  "account_id": "A0514",
   "name": "Chris Lynch",
   "email": "clynch@peakcannabisco.com",
   "phone": "",
