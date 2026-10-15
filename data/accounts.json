@@ -10007,7 +10007,7 @@
   "stage_entered": "2026-09-28",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "N/A",
   "tags": [
    "From QBO",
    "Not in Master Sheet"
@@ -10021,14 +10021,19 @@
   "address": "64 Beacon St B108",
   "license_type": "",
   "status": "Current",
-  "grade": "",
-  "owner": "Unassigned",
+  "grade": "C",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "claimed": true,
   "claimed_by": "dan",
   "claimed_at": "2026-09-28",
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "license_number": "2026-10-15",
+   "notes": "2026-10-15"
+  },
+  "notes": "Bulk-only biomass vendor"
  },
  {
   "id": "A0365",
