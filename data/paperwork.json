@@ -186,6 +186,18 @@
    "uploaded_at": "2026-10-15",
    "expires": "2027-02-20",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0061/st4/2026-10-15_mv9vs1sz4xbj.pdf",
+    "sha": "4b35c7dcf8772009c05078e8ea84c76d95818773",
+    "name": "ST-4 - Cannabarn (Abington).pdf",
+    "size": 140170,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
