@@ -17,6 +17,8 @@ What it does
   4. Invoices with no order become orders (source QBO). Confirmed orders with nothing invoiced after 21 days are flagged
      review = "no-invoice"; the flag clears the moment an invoice turns up.
   5. Nothing is ever deleted here. Orders deleted in the CRM (settings.deleted_orders) are not recreated.
+  6. Orders linked to an invoice that is not in this feed — the 2024-2025 history loaded by tools/qbo_history.py — are
+     left exactly as they are: never re-paired, never flagged.
 """
 import json, os, re, sys, datetime as dt
 from collections import defaultdict
@@ -70,6 +72,7 @@ def run(apply=False, forced_links=None, quiet=False):
     pairs = []
     for o in orders:
         if o["id"] in link or not o.get("account_id") or not d(o.get("date")): continue
+        if o.get("qbo_id"): continue                                   # linked to an invoice outside this feed (order history from before 2026): leave it alone
         od = d(o["date"]); seen = set(); t = money(o)
         cands = [(i, True) for i in inv_by_acc.get(o["account_id"], [])] + [(i, False) for i in inv_by_fam.get(family(o["account_id"]), []) if o["account_id"] not in i["accounts"]]
         for i, same in cands:
@@ -104,7 +107,7 @@ def run(apply=False, forced_links=None, quiet=False):
             if o.get("qbo_id") == iid and not changes: continue      # already reconciled and unchanged
             plan.append({"action": act, "order_id": o["id"], "account": aname(loc), "order_date": o.get("date"), "tracker_total": t, "invoice": i["doc"], "invoice_id": iid, "invoice_date": i["date"], "invoice_total": i["total"],
                          "moved_from": aname(o["account_id"]) if loc != o["account_id"] else "", "was_status": o.get("status")})
-        elif is_conf(o) and o.get("account_id") and d(o.get("date")) and (dt.date.today() - d(o["date"])).days >= REVIEW_AFTER_DAYS and o.get("review") != "no-invoice":
+        elif is_conf(o) and not o.get("qbo_id") and o.get("account_id") and d(o.get("date")) and (dt.date.today() - d(o["date"])).days >= REVIEW_AFTER_DAYS and o.get("review") != "no-invoice":
             plan.append({"action": "REVIEW: no invoice", "order_id": o["id"], "account": aname(o["account_id"]), "order_date": o["date"], "tracker_total": money(o), "invoice": "", "invoice_id": "", "invoice_date": "", "invoice_total": None, "moved_from": "", "was_status": o.get("status")})
     for i in invoices:
         if i["id"] in used_i or i["total"] == 0 or ("Oqbo" + i["id"]) in deleted: continue

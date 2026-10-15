@@ -15,6 +15,10 @@ text) for these two queries:
 
 Writes tools/qbo_raw/invoices_2026.json and tools/qbo_raw/customers.json. Refuses to overwrite a file
 with fewer rows than 80% of the previous one, so a partial pull can't wipe the feed.
+
+  python3 tools/qbo_ingest.py invoices <file> --out invoices_pre2026.json
+normalises a different invoice pull (the one-off history pull, TxnDate < '2026-01-01') into that file instead,
+leaving the weekly feed alone.
 """
 import json, os, re, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +43,7 @@ def guard(path, n):
     if old and n < 0.8 * old: sys.exit(f"refusing to write {os.path.basename(path)}: {n} rows vs {old} before — partial pull?")
 
 kind, path = sys.argv[1], sys.argv[2]
+out_name = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else None
 d = load_blob(path)
 if kind == "invoices":
     inv = d.get("Invoice") or d.get("QueryResponse", {}).get("Invoice") or []
@@ -47,8 +52,8 @@ if kind == "invoices":
         town, ship = ship_town(i.get("ShipAddr") or {})
         out.append({"id": i["Id"], "doc": i.get("DocNumber", ""), "date": i["TxnDate"], "due": i.get("DueDate", ""), "total": i["TotalAmt"], "balance": i["Balance"],
                     "customer_id": i["CustomerRef"]["value"], "customer": i["CustomerRef"]["name"], "ship_town": town, "ship": ship})
-    p = os.path.join(RAW, "invoices_2026.json"); guard(p, len(out))
-    json.dump(out, open(p, "w"), indent=1); print(f"invoices_2026.json: {len(out)} invoices, ${sum(o['total'] for o in out):,.0f}")
+    p = os.path.join(RAW, out_name or "invoices_2026.json"); guard(p, len(out))
+    json.dump(out, open(p, "w"), indent=1); print(f"{os.path.basename(p)}: {len(out)} invoices, ${sum(o['total'] for o in out):,.0f}")
 elif kind == "customers":
     cust = d.get("Customer") or d.get("QueryResponse", {}).get("Customer") or []
     out = sorted([{"id": c["Id"], "name": c["DisplayName"], "balance": c.get("Balance", 0.0)} for c in cust], key=lambda c: c["name"])

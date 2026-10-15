@@ -21,6 +21,9 @@ Output data/qbo.json:
   generated, invoices[] (with account_id / split), accounts{id: {invoiced_2026, n, open, past_due, oldest_due_days,
   last_invoice, first_invoice, split_share}}, unmapped[], recon{orders_without_invoice[], invoices_without_order[],
   orders_total_from_qbo[]}, totals{}
+
+The reconciliation covers the feed's year only: orders dated before it come from tools/qbo_history.py (invoices from
+before the 2026 Order Tracker) and already carry their invoice.
 """
 import json, os, re, sys, datetime
 from collections import defaultdict
@@ -34,17 +37,14 @@ def load(p, d=None):
     except FileNotFoundError: return d
 
 invoices = load(os.path.join(RAW, "invoices_2026.json")) or sys.exit("no tools/qbo_raw/invoices_2026.json")
+FEED_START = min(i["date"] for i in invoices)[:4] + "-01-01"      # the feed is one year; orders before it (tools/qbo_history.py) are not reconciled here
 customers = load(os.path.join(RAW, "customers.json"), [])
 cmap = {k: v for k, v in (load(os.path.join(ROOT, "tools", "qbo_map.json")) or {}).items() if not k.startswith("_")}
 accounts = load(os.path.join(DATA, "accounts.json"))
 orders = load(os.path.join(DATA, "orders.json"), [])
 acc = {a["id"]: a for a in accounts}
 
-STOP = {"llc", "inc", "co", "corp", "company", "the", "of", "ma", "dba", "d/b/a", "cannabis", "dispensary", "wellness", "organics",
-        "organic", "medicine", "collective", "naturals", "retail", "and", "&"}
-def tok(s): return {t for t in re.findall(r"[a-z0-9]+", (s or "").lower().replace("&", " and ")) if t not in STOP}
-def norm(s): return re.sub(r"[^a-z0-9]", "", (s or "").lower())
-def same_town(a, b): a, b = norm(a), norm(b); return bool(a and b) and (a == b or a in b or b in a)
+from qbo_resolve import Resolver, tok, norm, same_town     # the customer -> account matcher, shared with qbo_history.py
 
 # ---- 1. new accounts named in the map but not yet in the CRM (id starts with AQBO)
 new_defs = {"AQBO0001": {"name": "LTT Trading Co", "town": "Worcester", "address": "64 Beacon St B108"}}
@@ -59,54 +59,13 @@ for aid, d in new_defs.items():
 
 # ---- 2. resolve each invoice to an account (unclaimed leads count too: an invoiced lead is a customer)
 leads = load(os.path.join(DATA, "leads.json"), [])
-TOWN_NAMES = sorted({a["town"].strip() for a in accounts + leads if a.get("town")} | {"Boston", "Worcester", "Springfield", "Indian Orchard", "New Bedford"}, key=len, reverse=True)
-_town_re = re.compile(r"\b(" + "|".join(re.escape(t) for t in TOWN_NAMES if t) + r")\b", re.I)
-def strip_towns(s): return _town_re.sub(" ", s or "")
-def name_tok(s): return tok(strip_towns(s)) or tok(s)                     # name without the town words (unless that leaves nothing)
-by_family = defaultdict(list)
-for a in accounts + leads:
-    for t in name_tok(a["name"]) | (tok(a.get("parent", "")) - {""}): by_family[t].append(a)
-
-def candidates(customer):
-    qn = name_tok(customer)
-    if not qn: return []
-    scored = []
-    for a in {x["id"]: x for t in qn for x in by_family.get(t, [])}.values():
-        an = name_tok(a["name"]) or name_tok(a.get("parent", "")); inter = qn & an
-        if not inter: continue
-        scored.append((len(inter) / len(qn | an), a))
-    scored.sort(key=lambda x: -x[0])
-    if not scored or scored[0][0] < 0.34: return []
-    LEGAL = {"llc", "inc", "co", "corp", "company", "the", "of", "ma", "dba"}
-    raw = lambda x: {t for t in re.findall(r"[a-z0-9]+", (x or "").lower()) if t not in LEGAL}
-    exact = [a for s, a in scored if raw(a["name"]) == raw(customer)]        # 'Peak Cannabis Co' -> 'Peak Cannabis', not 'Peak Collective'
-    if len(exact) == 1: return exact
-    best = scored[0][0]
-    return [a for s, a in scored if s >= best - 1e-9]                      # the family: same name, several towns
-
-def acc_town(a): return a.get("town") or next((t for t in TOWN_NAMES if t and re.search(r"\b" + re.escape(t) + r"\b", a["name"], re.I)), "")
-def pick(cands, customer, ship_town):
-    """one account, or a list to split across"""
-    if len(cands) == 1: return cands[0], False
-    if ship_town:
-        hit = [a for a in cands if same_town(acc_town(a), ship_town)]
-        if len(hit) == 1: return hit[0], False
-    towns_in_name = [a for a in cands if acc_town(a) and norm(acc_town(a)) in norm(customer)]
-    if len(towns_in_name) == 1: return towns_in_name[0], False
-    return cands, True
+R = Resolver(accounts, leads, cmap)
+acc_town = R.acc_town
 
 resolved, unmapped = [], defaultdict(lambda: {"n": 0, "total": 0.0, "open": 0.0, "ship_towns": set()})
 for inv in invoices:
-    cust = inv["customer"]; target = None; split = False
-    if cust in cmap:
-        v = cmap[cust]; ids = v if isinstance(v, list) else [v]
-        lead_by_id = {l["id"]: l for l in leads}
-        missing = [i for i in ids if i not in acc and i not in lead_by_id]
-        if missing: sys.exit(f"qbo_map.json: {cust} -> unknown account id(s) {missing}")
-        target, split = pick([acc.get(i) or lead_by_id[i] for i in ids], cust, inv.get("ship_town"))
-    else:
-        c = candidates(cust)
-        if c: target, split = pick(c, cust, inv.get("ship_town"))
+    cust = inv["customer"]
+    target, split = R.resolve(cust, inv.get("ship_town"))
     if target is None:
         u = unmapped[cust]; u["n"] += 1; u["total"] += inv["total"]; u["open"] += inv["balance"]; u["ship_towns"].add(inv.get("ship_town") or "")
         continue
@@ -168,7 +127,7 @@ def pair_check(o, best):
         orders_total_from_qbo.append({"order_id": o["id"], "account_id": o["account_id"], "date": o["date"], "invoice": best["doc"], "invoice_date": best["date"], "total": best["amount"]})
     elif abs(best["amount"] - o["total"]) > max(0.02 * o["total"], 10):
         amount_differs.append({"order_id": o["id"], "account_id": o["account_id"], "date": o["date"], "tracker_total": o["total"], "invoice": best["doc"], "invoice_date": best["date"], "invoiced": best["amount"]})
-conf = [o for o in orders if re.match(r"conf", o.get("status") or "", re.I) and o.get("account_id") and d(o.get("date"))]
+conf = [o for o in orders if re.match(r"conf", o.get("status") or "", re.I) and o.get("account_id") and d(o.get("date")) and o["date"] >= FEED_START]
 # orders already reconciled to an invoice (tools/qbo_sync.py stamps qbo_id) pair by that link; the heuristic below is for the rest
 inv_by_id = {}
 for r in resolved: inv_by_id.setdefault(r["id"], r)
