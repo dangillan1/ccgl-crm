@@ -542,5 +542,13 @@
   "type": "Order",
   "note": "Planned order $5,530 · Finished Goods · 10% COD",
   "date": "2026-10-13"
+ },
+ {
+  "id": "Xmv9xht2k7pj6",
+  "ts": "2026-10-15T19:25:16.268Z",
+  "account_id": "A0515",
+  "type": "Order",
+  "note": "Planned order $5,104 · Bulk",
+  "date": "2026-10-13"
  }
 ]
