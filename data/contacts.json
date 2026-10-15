@@ -9262,17 +9262,6 @@
   "primary": false
  },
  {
-  "id": "C51d8f197",
-  "account_id": "A0266",
-  "name": "Alex Cinieri",
-  "email": "acinieri@iresinate.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Master",
-  "primary": true,
-  "sheet_slot": 1
- },
- {
   "id": "C59322062",
   "account_id": "A0266",
   "name": "",
