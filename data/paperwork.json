@@ -276,6 +276,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-15",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0104/st4/2026-10-15_mv9wahvf0gfs.pdf",
+    "sha": "84c9ce669e2f40cac51dfe4aa7c4fcd55f142aa4",
+    "name": "ST-4 - Ember Gardens (Orleans).pdf",
+    "size": 196565,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
