@@ -494,5 +494,13 @@
   "type": "Order",
   "note": "Planned order $5,530 · Finished Goods",
   "date": "2026-10-13"
+ },
+ {
+  "id": "Xmv9x93as40op",
+  "ts": "2026-10-15T19:18:29.620Z",
+  "account_id": "A0266",
+  "type": "Order",
+  "note": "Order updated: Planned $5,530 · Oct 13, 26",
+  "date": "2026-10-13"
  }
 ]
