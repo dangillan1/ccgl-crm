@@ -9,7 +9,8 @@ index.html              the app (no build step, no external dependencies)
 data/accounts.json      THE BOOK — Master sheet accounts + tracker-verified locations + claimed leads (367)
 data/leads.json         UNCLAIMED LEADS — deduped companies from Random Data / CCC tabs, not yet claimed (150)
 data/contacts.json      one row per person; `role` is free text and may hold several roles, comma-separated ("Buyer, Finance / AP") (1,398)
-data/orders.json        one row per 2026 order: tracker rows, CRM-entered orders, and orders created from QuickBooks invoices; confirmed orders carry
+data/orders.json        one row per order, back to the first wholesale invoice (Aug 23, 2024): 2026 = tracker rows, CRM-entered orders and orders
+                        created from QuickBooks invoices; 2024-25 = one order per QuickBooks invoice (source QBO, tools/qbo_history.py). Confirmed orders carry
                         their QuickBooks invoice (`invoice`, `qbo_id`, `invoiced_total`, `invoice_date`) with the tracker's own values kept beside (`tracker_total`, `tracker_date`)
 data/insights.json      AI assessments shown on the Insights tab (regenerated at each import)
 data/users.json         who can sign in + password hashes
@@ -73,18 +74,27 @@ password from Settings too. The admin can change anyone's permission level from 
 Unclaimed Leads list until a person claims it.
 
 - **Insights** (home) — AI assessments (written at import) plus live ranked lists: revenue at risk,
-  due for reorder this week, unowned revenue, rising / fading accounts, pipeline closest to first
-  order, new CCC licenses, one-and-done, "Active" with no 2026 orders.
+  due for reorder this week, unowned revenue, rising / fading accounts, lapsed customers (ordered
+  before, nothing in 180+ days — the win-back list), pipeline closest to first order, new CCC
+  licenses, one-and-done, "Active" accounts that have never ordered.
 - **Active Accounts** — Master accounts with status Current. *Contacts* view shows the Customer
   Tracker per location (Buyer / Finance / Intake / standing note) plus the last order (date, amount,
-  days ago); *Orders* view shows reorder rhythm, last order, 2026 $. Managers can multi-select and
-  bulk-assign owners.
+  days ago, invoice numbers — from the whole history, so a 2025 customer shows its 2025 order);
+  *Orders* view shows reorder rhythm, last order, and this year's order count and $. Reorder rhythm =
+  the median gap between the last 8 orders, ignoring any pause longer than 180 days; an account with
+  nothing in 180+ days reads *lapsed*. Health filter: quiet / due / on rhythm / no orders this year /
+  lapsed / never ordered. Managers can multi-select and bulk-assign owners.
 - **Prospects** — Master accounts not yet active (Sheet status Prospect / Non-prospect), with stages
   (table or drag-and-drop board).
 - **Unclaimed Leads** — the pool. **Claim** moves one into Prospects under your name at stage New and
   logs it. Domain-named leads ask for the real company name when claimed.
-- **Orders 2026** — every order; **+ New order** (also in the top bar and on every account page).
-  A confirmed first order moves a Prospect — or an unclaimed lead — to Active automatically.
+- **Orders** — every order since Aug 2024, with year chips (this year by default · 2025 · 2024 · All
+  years); the KPI cards follow the year. **+ New order** (also in the top bar and on every account
+  page). A confirmed first order moves a Prospect — or an unclaimed lead — to Active automatically.
+  Pre-2026 orders all come from QuickBooks invoices (the Order Tracker started in 2026); a chain-level
+  invoice with no ship-to address sits on the store that customer usually ships to and carries a
+  *location?* pill until someone moves it with Edit. An account that is still listed as a Prospect but
+  has invoices shows a *Former customer* pill on its page; its status is not changed.
 - **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus CCC license
   renewals (a license that is past its date or inside the warning window).
 - **Paperwork** — every active account against the three required forms: status, expiration date,
@@ -161,6 +171,7 @@ Until cutover, the Google Sheet and the Order Tracker stay the place you edit th
 | Order Tracker — Customer Tracker | buyer / intake / finance contacts, license numbers                      |
 | Order Tracker — Order Tracker 2026 | orders (rebuilt in full), except that orders reconciled to QuickBooks keep their invoiced date, amount and location |
 | QuickBooks (weekly, tools/qbo_sync.py) | the confirmed order list: date, amount and location of every invoiced order; orders created for invoices never logged (source QBO); "no invoice" flags |
+| QuickBooks (one-off, tools/qbo_history.py) | the 2024-25 order history: one order per invoice before 2026-01-01 (source QBO); re-runnable, never duplicates, never touches statuses |
 
 The CRM owns everything else and keeps it across re-imports: **owner, grade** (seeded from the Sheet,
 then yours), **stage, tags, standing notes and delivery notes** (seeded from the tracker, then yours —
@@ -194,9 +205,12 @@ through Dan's QBO connection and writes two raw files, then `tools/build_qbo.py`
 
 ```
 tools/qbo_raw/invoices_2026.json   one row per invoice (id, doc, date, due, total, balance, customer, ship-to town)
+tools/qbo_raw/invoices_pre2026.json the same for every invoice before 2026 (one-off pull, Aug 2024 – Dec 2025; qbo_ingest.py --out)
 tools/qbo_raw/customers.json       one row per customer (id, name, all-time balance)
 tools/qbo_map.json                 QBO customer name -> CRM account id; only the exceptions (chains, spellings)
-tools/build_qbo.py                 -> data/qbo.json (+ flips invoiced prospects to Active, creates AQBO… accounts)
+tools/qbo_resolve.py               the customer -> account matcher (shared by build_qbo.py and qbo_history.py)
+tools/build_qbo.py                 -> data/qbo.json (+ flips invoiced prospects to Active, creates AQBO… accounts); reconciles the feed's year only
+tools/qbo_history.py               -> data/orders.json: adds an order for every pre-2026 invoice not already there (plan by default, --apply to write)
 ```
 
 How an invoice lands on an account: `qbo_map.json` first; otherwise name match, and where a name covers
