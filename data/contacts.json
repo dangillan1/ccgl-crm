@@ -15649,5 +15649,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-10-15"
+ },
+ {
+  "id": "Cmv9xdr9gpg2t",
+  "account_id": "A0515",
+  "name": "Peter Decaro",
+  "role": "Buyer, Finance / AP, Owner",
+  "email": "pdecaro@iresinate.com",
+  "phone": "508-864-8150",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-10-15"
  }
 ]
