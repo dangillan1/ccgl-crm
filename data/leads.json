@@ -114,35 +114,6 @@
   "sheet_row": null
  },
  {
-  "id": "A0395",
-  "sheet_key": "",
-  "source": "Random Data 31826",
-  "name": "altaialternative.com",
-  "parent": "",
-  "town": "",
-  "address": "267 Amherst Rd",
-  "license_type": "Dispensary",
-  "status": "Prospect",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "",
-  "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
-  "license_number": "",
-  "tags": [],
-  "flags": [
-   "unassigned",
-   "name-from-domain"
-  ],
-  "dup_candidates": [],
-  "created": "2026-09-25",
-  "sheet_row": null
- },
- {
   "id": "A0388",
   "sheet_key": "",
   "source": "Random Data 31826",
