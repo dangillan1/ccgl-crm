@@ -19153,5 +19153,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omv9x6kxsu8kq",
+  "date": "2026-10-15",
+  "account_id": "A0098",
+  "account_raw": "Eastern Cannabis Co.",
+  "license": "MR282696",
+  "status": "Pending",
+  "contact_name": "Phil Mateescu",
+  "contact_email": "pmateescu@easterncannabisco.com",
+  "delivery_date": "2026-10-22",
+  "total": 7930,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "$6k spending promo - 1 case Sticky Candy live sugar",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
