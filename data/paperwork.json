@@ -172,5 +172,20 @@
    "uploaded_at": "2026-10-15",
    "history": []
   }
+ },
+ "A0061": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0061/ccc/2026-10-15_mv9vrcuibluc.pdf",
+    "sha": "e77d6c4c8c898a86f0df9a1481333422dd8c8ffd",
+    "name": "CCC License - Cannabarn (Abington).pdf",
+    "size": 3903830,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "expires": "2027-02-20",
+   "history": []
+  }
  }
 }
