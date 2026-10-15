@@ -518,5 +518,13 @@
   "type": "Order",
   "note": "Order updated: Planned $5,530 · Oct 13, 26",
   "date": "2026-10-13"
+ },
+ {
+  "id": "Xmv9xd66ywwy9",
+  "ts": "2026-10-15T19:21:39.994Z",
+  "account_id": "A0515",
+  "type": "Edit",
+  "note": "Removed Alex Cinieri (Buyer) · acinieri@iresinate.com",
+  "date": "2026-10-15"
  }
 ]
