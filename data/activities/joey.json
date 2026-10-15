@@ -534,5 +534,13 @@
   "type": "Edit",
   "note": "Removed Alex Cinieri (Buyer) · acinieri@iresinate.com",
   "date": "2026-10-15"
+ },
+ {
+  "id": "Xmv9xh3pt6yor",
+  "ts": "2026-10-15T19:24:43.409Z",
+  "account_id": "A0265",
+  "type": "Order",
+  "note": "Planned order $5,530 · Finished Goods · 10% COD",
+  "date": "2026-10-13"
  }
 ]
