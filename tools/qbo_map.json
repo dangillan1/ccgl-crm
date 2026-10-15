@@ -1,5 +1,5 @@
 {
- "_readme": "QuickBooks customer -> CRM account. Only exceptions live here; everything else is matched by name and ship-to town in build_qbo.py. A value can be one account id, or a list of ids (chain-level customer: each invoice goes to the location whose town matches the ship-to address; if none matches it is split evenly across the list). Run `python tools/build_qbo.py` after editing.",
+ "_readme": "QuickBooks customer -> CRM account. Only exceptions live here; everything else is matched by name and ship-to town in build_qbo.py. A value can be one account id, or a list of ids (chain-level customer: each invoice goes to the location whose town matches the ship-to address; if none matches it is split evenly across the list). Run `python tools/build_qbo.py` after editing. A value of null means: ignore this customer on purpose (a store that closed; its invoices stay out of the CRM).",
  "EMBR (Kur Retail)": "A0511",
  "EMBR (Northampton)": "A0105",
  "Fyre Ants (Apical)": "A0121",
@@ -87,5 +87,10 @@
  "The Haven Center": [
   "A0149",
   "A0150"
- ]
+ ],
+ "27 Broom Street, LLC": "A0165",
+ "New England Treatment Access, LLC": "AQBO0002",
+ "Calyx Peak of MA, Inc.": "A0514",
+ "Home Grown 617 d/b/a Yamba Market": null,
+ "Yamba Boutique": null
 }

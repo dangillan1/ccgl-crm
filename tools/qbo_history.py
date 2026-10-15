@@ -16,8 +16,8 @@ Rules
     invoices, 2024-2026); if there is no such evidence, the location with the most orders already; and it is flagged
     review = "location" so the team can move it (Edit order) — the Orders page shows a "location?" pill.
   - Safe to re-run: an invoice already in orders.json (by qbo_id) or deleted in the CRM (settings.deleted_orders) is
-    skipped; $0 invoices are not orders; a customer with no CRM account is reported, never invented; an unclaimed lead
-    is never promoted from here. Account statuses are not touched — a Prospect with 2025 orders is a former customer,
+    skipped; $0 invoices are not orders; a customer with no CRM account is reported, never invented; a customer mapped
+    to null in qbo_map.json (a store that closed) is skipped quietly; an unclaimed lead is never promoted from here. Account statuses are not touched — a Prospect with 2025 orders is a former customer,
     and the app says so on its page.
 """
 import json, os, sys, datetime as dt
@@ -65,6 +65,7 @@ def run(apply=False):
         if inv["total"] == 0: skipped["zero"].append(inv["doc"]); continue
         if inv["id"] in have or ("Oqbo" + inv["id"]) in have: skipped["already"].append(inv["doc"]); continue
         if ("Oqbo" + inv["id"]) in deleted: skipped["deleted"].append(inv["doc"]); continue
+        if R.ignored(inv["customer"]): skipped["ignored (closed business, null in qbo_map.json)"].append(inv["doc"]); continue
         if target is None or (not split and target["id"] in lead_ids):
             u = unmapped[inv["customer"]]; u["n"] += 1; u["total"] += inv["total"]; u["ship_towns"].add(inv.get("ship_town") or "")
             if target is not None: u["lead"] = target["name"]

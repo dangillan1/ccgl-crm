@@ -7,6 +7,8 @@ tools/qbo_history.py (invoices from before the 2026 Order Tracker).
   2. Otherwise a name match against every book account and unclaimed lead; several locations -> the ship-to
      town decides; still ambiguous -> split.
   3. No match -> None (the caller lists it as unmapped).
+  A customer mapped to null in qbo_map.json is deliberately ignored (a business that closed, say): resolve() returns
+  (None, False) and ignored(name) is True, so callers can keep it out of the unmapped list.
 
     from qbo_resolve import Resolver
     r = Resolver(accounts, leads, cmap)
@@ -63,7 +65,10 @@ class Resolver:
         if len(towns_in_name) == 1: return towns_in_name[0], False
         return cands, True
 
+    def ignored(self, customer): return customer in self.cmap and self.cmap[customer] is None
+
     def resolve(self, customer, ship_town=""):
+        if self.ignored(customer): return None, False
         if customer in self.cmap:
             v = self.cmap[customer]; ids = v if isinstance(v, list) else [v]
             missing = [i for i in ids if i not in self.acc and i not in self.lead_by_id]

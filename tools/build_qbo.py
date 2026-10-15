@@ -65,6 +65,7 @@ acc_town = R.acc_town
 resolved, unmapped = [], defaultdict(lambda: {"n": 0, "total": 0.0, "open": 0.0, "ship_towns": set()})
 for inv in invoices:
     cust = inv["customer"]
+    if R.ignored(cust): continue                                            # null in qbo_map.json: a closed business, deliberately left out
     target, split = R.resolve(cust, inv.get("ship_town"))
     if target is None:
         u = unmapped[cust]; u["n"] += 1; u["total"] += inv["total"]; u["open"] += inv["balance"]; u["ship_towns"].add(inv.get("ship_town") or "")
