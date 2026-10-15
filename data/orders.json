@@ -19135,5 +19135,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omv9x21l8mgrx",
+  "date": "2026-10-13",
+  "account_id": "A0221",
+  "account_raw": "Native Sun",
+  "license": "",
+  "status": "Planned",
+  "contact_name": "Chris Ashe",
+  "contact_email": "chris@nativesunwellness.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
