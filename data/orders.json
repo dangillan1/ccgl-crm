@@ -19179,8 +19179,8 @@
   "account_raw": "Resinate",
   "license": "MR281249",
   "status": "Planned",
-  "contact_name": "",
-  "contact_email": "",
+  "contact_name": "Jared Fontana",
+  "contact_email": "jfontana@iresinate.com",
   "delivery_date": "",
   "total": 5530,
   "owner": "Joey",
@@ -19188,6 +19188,9 @@
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-15"
  }
 ]
