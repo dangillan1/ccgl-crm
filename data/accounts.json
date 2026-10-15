@@ -10110,7 +10110,7 @@
   "parent": "",
   "town": "Pittsfield",
   "address": "71 Downing Pkwy BLDG A",
-  "license_type": "Dispensary",
+  "license_type": "Production",
   "status": "Current",
   "grade": "B",
   "owner": "Joey",
@@ -10121,7 +10121,7 @@
   "stage_entered": "",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "MRN285505",
+  "license_number": "MP282172",
   "tags": [
    "From QBO",
    "New License 2026"
@@ -10137,7 +10137,9 @@
   "claimed_at": "2026-10-05",
   "in_qbo": true,
   "crm_edits": {
-   "address": "2026-10-15"
+   "address": "2026-10-15",
+   "license_number": "2026-10-15",
+   "license_type": "2026-10-15"
   }
  },
  {
