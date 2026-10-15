@@ -198,6 +198,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-15",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0061/w9/2026-10-15_mv9vsa107qj2.pdf",
+    "sha": "f549ce0dc6e6200a309441aff409f3230413fa51",
+    "name": "W-9 - Cannabarn (Abington).pdf",
+    "size": 1225649,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
