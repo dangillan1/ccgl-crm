@@ -19192,5 +19192,23 @@
   "edited_in_crm": true,
   "edited_by": "joey",
   "edited_at": "2026-10-15"
+ },
+ {
+  "id": "Omv9xh1p0xce0",
+  "date": "2026-10-13",
+  "account_id": "A0265",
+  "account_raw": "Resinate",
+  "license": "MTC/RMD4121",
+  "status": "Planned",
+  "contact_name": "Peter Decaro",
+  "contact_email": "pdecaro@iresinate.com",
+  "delivery_date": "",
+  "total": 5530,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "10% COD",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
