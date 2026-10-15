@@ -88,5 +88,13 @@
   "note": "Charley Emailed buyer",
   "date": "2026-10-14",
   "contact_id": "Cd1d38244"
+ },
+ {
+  "id": "Xmv9huk3wprp4",
+  "ts": "2026-10-15T12:07:17.324Z",
+  "account_id": "A0395",
+  "type": "Claim",
+  "note": "Claimed from Unclaimed Leads (Random Data 31826)",
+  "date": "2026-10-15"
  }
 ]
