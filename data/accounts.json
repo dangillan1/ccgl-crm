@@ -10109,11 +10109,11 @@
   "name": "J-Bam, Inc.",
   "parent": "",
   "town": "Pittsfield",
-  "address": "",
+  "address": "71 Downing Pkwy BLDG A",
   "license_type": "Dispensary",
   "status": "Current",
-  "grade": "",
-  "owner": "Unassigned",
+  "grade": "B",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -10135,7 +10135,10 @@
   "claimed": true,
   "claimed_by": "dan",
   "claimed_at": "2026-10-05",
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "address": "2026-10-15"
+  }
  },
  {
   "id": "A0506",
