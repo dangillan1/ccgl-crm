@@ -85,6 +85,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-10-15"
+  },
+  {
+   "id": "C0d8bcdcb",
+   "account_id": "A0515",
+   "email": "acinieri@iresinate.com",
+   "name": "Alex Cinieri",
+   "source": "Order Tracker 2026",
+   "removed_by": "joey",
+   "removed_at": "2026-10-15"
   }
  ]
 }
