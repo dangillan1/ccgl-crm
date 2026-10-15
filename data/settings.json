@@ -75,5 +75,16 @@
   "O58d4c90a",
   "O951b4ddd",
   "Oa4f7727b"
+ ],
+ "removed_contacts": [
+  {
+   "id": "C51d8f197",
+   "account_id": "A0266",
+   "email": "acinieri@iresinate.com",
+   "name": "Alex Cinieri",
+   "source": "Master",
+   "removed_by": "joey",
+   "removed_at": "2026-10-15"
+  }
  ]
 }
