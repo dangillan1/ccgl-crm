@@ -264,6 +264,18 @@
    "uploaded_at": "2026-10-15",
    "expires": "2026-10-15",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0104/w9/2026-10-15_mv9wa5oyd26v.pdf",
+    "sha": "d3bd6e3d7a62c5a370fdb7cb17273f1c266648d9",
+    "name": "W-9 - Ember Gardens (Orleans).pdf",
+    "size": 213062,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-15",
+   "history": []
   }
  }
 }
