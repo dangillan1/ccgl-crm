@@ -550,5 +550,13 @@
   "type": "Order",
   "note": "Planned order $5,104 · Bulk",
   "date": "2026-10-13"
+ },
+ {
+  "id": "Xmvbahci910ik",
+  "ts": "2026-10-16T18:16:35.985Z",
+  "account_id": "A0040",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · HOLD 1X CASE LION'S BREATH 3.5G & 14G",
+  "date": "2026-10-16"
  }
 ]
