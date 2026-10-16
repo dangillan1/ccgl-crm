@@ -19228,5 +19228,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvbahashdzz7",
+  "date": "2026-10-16",
+  "account_id": "A0040",
+  "account_raw": "Botera",
+  "license": "MR282669",
+  "status": "Planned",
+  "contact_name": "Matthew B",
+  "contact_email": "mbehymer@boterama.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "HOLD 1X CASE LION'S BREATH 3.5G & 14G",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
