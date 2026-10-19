@@ -4216,9 +4216,9 @@
   "claimed": true,
   "claimed_by": "matt",
   "claimed_at": "2026-09-25",
-  "next_step": "",
-  "next_step_due": "",
-  "next_step_owner": ""
+  "next_step": "Follow up on license inspection date",
+  "next_step_due": "2026-10-26",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0151",
