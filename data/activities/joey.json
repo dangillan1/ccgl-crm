@@ -614,5 +614,13 @@
   "type": "Doc",
   "note": "CCC License replaced — expires Oct 15, 27",
   "date": "2026-10-19"
+ },
+ {
+  "id": "Xmvfi0qft8skm",
+  "ts": "2026-10-19T16:58:42.521Z",
+  "account_id": "A0173",
+  "type": "Order",
+  "note": "Pending order $5,700 · Finished Goods · 5% Net14 planned",
+  "date": "2026-10-19"
  }
 ]
