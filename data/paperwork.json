@@ -303,5 +303,20 @@
    "uploaded_at": "2026-10-15",
    "history": []
   }
+ },
+ "A0009": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0009/ccc/2026-10-19_mvf9oxnacke5.pdf",
+    "sha": "de0c51a84f02732d0319e262a40e8d782f4be41d",
+    "name": "CCC License - Apex Noire (Boston).pdf",
+    "size": 3905569,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-19",
+   "expires": "2026-11-30",
+   "history": []
+  }
  }
 }
