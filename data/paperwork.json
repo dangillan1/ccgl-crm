@@ -254,16 +254,31 @@
  "A0104": {
   "ccc": {
    "file": {
-    "path": "accounts/A0104/ccc/2026-10-15_mv9w95kwayrx.pdf",
-    "sha": "c16316defb9a6f9d4fe53867dba31e74dbec75e6",
+    "path": "accounts/A0104/ccc/2026-10-19_mvf9qxj7dm2u.pdf",
+    "sha": "b3ad86499ef2618aea147f7d8e9f7cdc6e82dd5a",
     "name": "CCC License - Ember Gardens (Orleans).pdf",
-    "size": 3923610,
+    "size": 3907473,
     "type": "application/pdf"
    },
    "uploaded_by": "joey",
-   "uploaded_at": "2026-10-15",
-   "expires": "2026-10-15",
-   "history": []
+   "uploaded_at": "2026-10-19",
+   "expires": "2027-10-15",
+   "history": [
+    {
+     "file": {
+      "path": "accounts/A0104/ccc/2026-10-15_mv9w95kwayrx.pdf",
+      "sha": "c16316defb9a6f9d4fe53867dba31e74dbec75e6",
+      "name": "CCC License - Ember Gardens (Orleans).pdf",
+      "size": 3923610,
+      "type": "application/pdf"
+     },
+     "uploaded_by": "joey",
+     "uploaded_at": "2026-10-15",
+     "expires": "2026-10-15",
+     "replaced_at": "2026-10-19",
+     "replaced_by": "joey"
+    }
+   ]
   },
   "w9": {
    "file": {
