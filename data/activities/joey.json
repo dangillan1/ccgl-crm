@@ -622,5 +622,13 @@
   "type": "Order",
   "note": "Pending order $5,700 · Finished Goods · 5% Net14 planned",
   "date": "2026-10-19"
+ },
+ {
+  "id": "Xmvfi5n7zcfvv",
+  "ts": "2026-10-19T17:02:31.631Z",
+  "account_id": "Amvfi5km0ssmp",
+  "type": "Note",
+  "note": "Created as prospect",
+  "date": "2026-10-19"
  }
 ]
