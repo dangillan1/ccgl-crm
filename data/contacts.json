@@ -15650,5 +15650,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-10-15"
+ },
+ {
+  "id": "Cmvfi5m59j8dy",
+  "account_id": "Amvfi5km0ssmp",
+  "name": "Derek D'Ambrosio",
+  "email": "derekd@ervaherb.com",
+  "phone": "1 617-602-0134",
+  "role": "Buyer, Intake",
+  "source": "CRM (Joey)",
+  "primary": true,
+  "created": "2026-10-19"
  }
 ]
