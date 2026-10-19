@@ -317,6 +317,18 @@
    "uploaded_at": "2026-10-19",
    "expires": "2026-11-30",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0009/st4/2026-10-19_mvf9pavzztvy.pdf",
+    "sha": "f6f85cb4e8a5d584f9109457e847187f2551cb63",
+    "name": "ST-4 - Apex Noire (Boston).pdf",
+    "size": 1676924,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-19",
+   "history": []
   }
  }
 }
