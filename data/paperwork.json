@@ -329,6 +329,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-10-19",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0009/w9/2026-10-19_mvf9pm0nw3vo.pdf",
+    "sha": "66902f5df6ff236c37ca97a1cadb1aeea6d00276",
+    "name": "W-9 - Apex Noire (Boston).pdf",
+    "size": 158932,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-19",
+   "history": []
   }
  }
 }
