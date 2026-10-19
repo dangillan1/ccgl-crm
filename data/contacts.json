@@ -15661,5 +15661,16 @@
   "source": "CRM (Joey)",
   "primary": true,
   "created": "2026-10-19"
+ },
+ {
+  "id": "Cmvfk5txvekht",
+  "account_id": "A0173",
+  "name": "P Paquette",
+  "role": "Intake, Inventory",
+  "email": "ppaquette@housepremiumcannabis.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-10-19"
  }
 ]
