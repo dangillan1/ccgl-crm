@@ -574,5 +574,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods · HOLD 1X CASE LION'S BREATH 3.5G & 14G",
   "date": "2026-10-16"
+ },
+ {
+  "id": "Xmvf9o99e9dhc",
+  "ts": "2026-10-19T13:05:03.458Z",
+  "account_id": "A0009",
+  "type": "Edit",
+  "note": "Removed Megan · megan@apexnoire.com",
+  "date": "2026-10-19"
  }
 ]
