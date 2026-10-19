@@ -96,5 +96,13 @@
   "type": "Claim",
   "note": "Claimed from Unclaimed Leads (Random Data 31826)",
   "date": "2026-10-15"
+ },
+ {
+  "id": "Xmvfplfnxipmr",
+  "ts": "2026-10-19T20:30:45.645Z",
+  "account_id": "A0251",
+  "type": "Order",
+  "note": "Confirmed order $2,760 · Finished Goods · Same Day",
+  "date": "2026-10-19"
  }
 ]
