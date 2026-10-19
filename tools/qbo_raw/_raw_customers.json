@@ -25,7 +25,7 @@
       "DisplayName": "Apex Noire"
     },
     {
-      "Balance": 3875.0,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "487",
       "DisplayName": "Ascend Wellness"
@@ -37,7 +37,7 @@
       "DisplayName": "Ascend Wellness Boston"
     },
     {
-      "Balance": 3983.85,
+      "Balance": 0.0,
       "sparse": true,
       "Id": "529",
       "DisplayName": "Ascend Wellness New Bedford"
@@ -157,7 +157,7 @@
       "DisplayName": "CANA Craft Cannabis"
     },
     {
-      "Balance": 3300.0,
+      "Balance": 1800.0,
       "sparse": true,
       "Id": "416",
       "DisplayName": "CannaBarn"

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15",
+ "generated": "2026-10-19",
  "invoices": [
   {
    "id": "7803",
@@ -667,14 +667,14 @@
    "date": "2026-08-31",
    "due": "2026-09-30",
    "total": 3300.0,
-   "balance": 3300.0,
+   "balance": 1800.0,
    "customer": "CannaBarn",
    "ship_town": "Abington",
    "account_id": "A0061",
    "share": 1.0,
    "split": false,
    "amount": 3300.0,
-   "open": 3300.0
+   "open": 1800.0
   },
   {
    "id": "7419",
@@ -1207,14 +1207,14 @@
    "date": "2026-08-13",
    "due": "2026-09-12",
    "total": 3983.85,
-   "balance": 3983.85,
+   "balance": 0,
    "customer": "Ascend Wellness New Bedford",
    "ship_town": "New Bedford",
    "account_id": "A0018",
    "share": 1.0,
    "split": false,
    "amount": 3983.85,
-   "open": 3983.85
+   "open": 0.0
   },
   {
    "id": "7285",
@@ -1222,14 +1222,14 @@
    "date": "2026-08-13",
    "due": "2026-09-12",
    "total": 3875.0,
-   "balance": 3875.0,
+   "balance": 0,
    "customer": "Ascend Wellness",
    "ship_town": "Newton",
    "account_id": "A0016",
    "share": 1.0,
    "split": false,
    "amount": 3875.0,
-   "open": 3875.0
+   "open": 0.0
   },
   {
    "id": "7282",
@@ -5163,146 +5163,19 @@
   }
  ],
  "accounts": {
-  "A0108": {
-   "invoiced_2026": 15302.96,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-07-30",
-   "first_invoice": "2026-01-07",
-   "split_share": 0.0,
-   "customers": [
-    "Enlite Northampton"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0071": {
-   "invoiced_2026": 33842.25,
+  "A0270": {
+   "invoiced_2026": 32817.95,
    "n": 8.0,
-   "open": 10290.0,
+   "open": 2706.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-09-17",
-   "first_invoice": "2026-01-07",
+   "last_invoice": "2026-10-14",
+   "first_invoice": "2026-01-20",
    "split_share": 0.0,
    "customers": [
-    "Capeway Cannabis - Bourne",
-    "Capeway Cannabis, LLC"
+    "Reverie 73 Lowell"
    ],
-   "open_alltime": 10290.0
-  },
-  "A0009": {
-   "invoiced_2026": 31833.0,
-   "n": 6.0,
-   "open": 4250.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-01-07",
-   "split_share": 0.0,
-   "customers": [
-    "Apex Noire"
-   ],
-   "open_alltime": 4250.0
-  },
-  "A0194": {
-   "invoiced_2026": 18511.5,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-06-17",
-   "first_invoice": "2026-01-07",
-   "split_share": 0.0,
-   "customers": [
-    "Kush Groove Cambridge"
-   ],
-   "open_alltime": -58.5
-  },
-  "A0104": {
-   "invoiced_2026": 49941.95,
-   "n": 15.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-24",
-   "first_invoice": "2026-01-08",
-   "split_share": 0.0,
-   "customers": [
-    "Ember Gardens Cape Cod LLC"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0173": {
-   "invoiced_2026": 29929.98,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-23",
-   "first_invoice": "2026-01-13",
-   "split_share": 0.0,
-   "customers": [
-    "House Premium"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0297": {
-   "invoiced_2026": 68521.16,
-   "n": 12.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-10-13",
-   "first_invoice": "2026-01-14",
-   "split_share": 0.0,
-   "customers": [
-    "Sublime Cannabis Co."
-   ],
-   "open_alltime": 0.0
-  },
-  "A0516": {
-   "invoiced_2026": 17243.0,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-27",
-   "first_invoice": "2026-01-16",
-   "split_share": 0.0,
-   "customers": [
-    "Silver Therapeutics Roslindale"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0284": {
-   "invoiced_2026": 14100.0,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-27",
-   "first_invoice": "2026-01-16",
-   "split_share": 0.0,
-   "customers": [
-    "Silver Therapeutics Palmer"
-   ],
-   "open_alltime": -750.0
-  },
-  "A0285": {
-   "invoiced_2026": 9825.0,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-27",
-   "first_invoice": "2026-01-16",
-   "split_share": 0.0,
-   "customers": [
-    "Silver Therapeutics Williamstown"
-   ],
-   "open_alltime": -842.75
+   "open_alltime": 2706.0
   },
   "A0269": {
    "invoiced_2026": 26999.22,
@@ -5332,201 +5205,19 @@
    ],
    "open_alltime": 10081.0
   },
-  "A0270": {
-   "invoiced_2026": 32817.95,
-   "n": 8.0,
-   "open": 2706.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-10-14",
-   "first_invoice": "2026-01-20",
-   "split_share": 0.0,
-   "customers": [
-    "Reverie 73 Lowell"
-   ],
-   "open_alltime": 2706.0
-  },
-  "A0098": {
-   "invoiced_2026": 74326.83,
-   "n": 10.0,
-   "open": 8480.25,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-01-20",
-   "split_share": 0.0,
-   "customers": [
-    "Eastern Cannabis Co."
-   ],
-   "open_alltime": 8480.25
-  },
-  "A0511": {
-   "invoiced_2026": 47850.62,
-   "n": 4.0,
+  "A0297": {
+   "invoiced_2026": 68521.16,
+   "n": 12.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-08-27",
-   "first_invoice": "2026-01-20",
+   "last_invoice": "2026-10-13",
+   "first_invoice": "2026-01-14",
    "split_share": 0.0,
    "customers": [
-    "EMBR (Kur Retail)"
+    "Sublime Cannabis Co."
    ],
    "open_alltime": 0.0
-  },
-  "A0121": {
-   "invoiced_2026": 49157.5,
-   "n": 6.0,
-   "open": 3792.36,
-   "past_due": 3792.36,
-   "oldest_due_days": 18,
-   "last_invoice": "2026-08-28",
-   "first_invoice": "2026-01-20",
-   "split_share": 0.0,
-   "customers": [
-    "Fyre Ants (Apical)"
-   ],
-   "open_alltime": 3792.36
-  },
-  "A0105": {
-   "invoiced_2026": 17515.0,
-   "n": 4.0,
-   "open": 3280.0,
-   "past_due": 3280.0,
-   "oldest_due_days": 18,
-   "last_invoice": "2026-08-28",
-   "first_invoice": "2026-01-20",
-   "split_share": 0.0,
-   "customers": [
-    "EMBR (Northampton)"
-   ],
-   "open_alltime": 3280.0
-  },
-  "A0508": {
-   "invoiced_2026": 1488.75,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-05-06",
-   "first_invoice": "2026-01-22",
-   "split_share": 0.0,
-   "customers": [
-    "Ack Natural"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0334": {
-   "invoiced_2026": 8383.01,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-10",
-   "first_invoice": "2026-01-27",
-   "split_share": 0.0,
-   "customers": [
-    "Trinity Naturals"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0107": {
-   "invoiced_2026": 17220.0,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-07-30",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Enlite Indian Orchard"
-   ],
-   "open_alltime": -109.64
-  },
-  "A0515": {
-   "invoiced_2026": 87674.75,
-   "n": 7.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-07-30",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Resinate, Inc."
-   ],
-   "open_alltime": 0.0
-  },
-  "A0214": {
-   "invoiced_2026": 5801.5,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-09",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Medicine Man"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0266": {
-   "invoiced_2026": 32140.97,
-   "n": 8.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-17",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Resinate Worcester"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0130": {
-   "invoiced_2026": 13505.45,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Great Barrington Dispensary"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0045": {
-   "invoiced_2026": 12505.45,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-05-29",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "BOUTIQ"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0365": {
-   "invoiced_2026": 2500.0,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-06",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Sweetgrass Botanicals"
-   ],
-   "open_alltime": -500.0
   },
   "A0283": {
    "invoiced_2026": 53814.5,
@@ -5542,215 +5233,33 @@
    ],
    "open_alltime": 4550.0
   },
-  "A0061": {
-   "invoiced_2026": 13050.0,
-   "n": 4.0,
-   "open": 3300.0,
-   "past_due": 3300.0,
-   "oldest_due_days": 15,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "CannaBarn"
-   ],
-   "open_alltime": 3300.0
-  },
-  "A0101": {
-   "invoiced_2026": 19122.43,
-   "n": 4.0,
-   "open": 6425.25,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-24",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "Elysian"
-   ],
-   "open_alltime": 6425.25
-  },
-  "A0117": {
-   "invoiced_2026": 10648.3,
+  "A0062": {
+   "invoiced_2026": 12440.14,
    "n": 3.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-09-03",
-   "first_invoice": "2026-01-30",
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-04-15",
    "split_share": 0.0,
    "customers": [
-    "Flower & Soul, Inc."
+    "Cannabis Connection West Springfield"
    ],
    "open_alltime": 0.0
   },
-  "A0075": {
-   "invoiced_2026": 6883.75,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-24",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "Roslindale Cannabis Co"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0234": {
-   "invoiced_2026": 3250.0,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-01-30",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "New Leaf - S Main St."
-   ],
-   "open_alltime": 0.0
-  },
-  "A0233": {
-   "invoiced_2026": 2773.02,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-01-30",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "New Leaf - 2nd St"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0115": {
-   "invoiced_2026": 16843.28,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-27",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "Firebrand"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0295": {
-   "invoiced_2026": 3500.0,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-01-30",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "Stem Haverhill"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0003": {
-   "invoiced_2026": 3625.0,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-01-30",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "Alternative Compassion Services"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0065": {
-   "invoiced_2026": 23284.16,
-   "n": 7.0,
-   "open": 4400.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "Cannabis Healing"
-   ],
-   "open_alltime": 4400.0
-  },
-  "A0043": {
-   "invoiced_2026": 13877.92,
-   "n": 2.0,
-   "open": 7915.42,
+  "A0009": {
+   "invoiced_2026": 31833.0,
+   "n": 6.0,
+   "open": 4250.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-09-30",
-   "first_invoice": "2026-02-06",
+   "first_invoice": "2026-01-07",
    "split_share": 0.0,
    "customers": [
-    "Bountiful Framingham"
+    "Apex Noire"
    ],
-   "open_alltime": 7915.42
-  },
-  "A0044": {
-   "invoiced_2026": 8610.42,
-   "n": 2.0,
-   "open": 5660.42,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-02-06",
-   "split_share": 0.0,
-   "customers": [
-    "Bountiful Rowley"
-   ],
-   "open_alltime": 5660.42
-  },
-  "A0077": {
-   "invoiced_2026": 3927.5,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-23",
-   "first_invoice": "2026-02-23",
-   "split_share": 0.0,
-   "customers": [
-    "CNA Amesbury"
-   ],
-   "open_alltime": -477.5
-  },
-  "A0078": {
-   "invoiced_2026": 5207.5,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-23",
-   "first_invoice": "2026-02-23",
-   "split_share": 0.0,
-   "customers": [
-    "CNA Haverhill"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0248": {
-   "invoiced_2026": 9432.0,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-25",
-   "first_invoice": "2026-02-25",
-   "split_share": 0.0,
-   "customers": [
-    "Pioneer Cannabis Co."
-   ],
-   "open_alltime": 0.0
+   "open_alltime": 4250.0
   },
   "A0249": {
    "invoiced_2026": 17711.75,
@@ -5763,34 +5272,6 @@
    "split_share": 0.0,
    "customers": [
     "Pioneer Valley Trading Co."
-   ],
-   "open_alltime": 0.0
-  },
-  "A0202": {
-   "invoiced_2026": 11032.5,
-   "n": 3.0,
-   "open": 3640.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-02-27",
-   "split_share": 0.0,
-   "customers": [
-    "Local Cannabis Company"
-   ],
-   "open_alltime": 3640.0
-  },
-  "AQBO0001": {
-   "invoiced_2026": 13347.77,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-02-27",
-   "first_invoice": "2026-02-27",
-   "split_share": 0.0,
-   "customers": [
-    "LTT Trading Co"
    ],
    "open_alltime": 0.0
   },
@@ -5808,59 +5289,18 @@
    ],
    "open_alltime": 0.0
   },
-  "A0247": {
-   "invoiced_2026": 17641.25,
-   "n": 3.0,
-   "open": 3375.0,
+  "A0118": {
+   "invoiced_2026": 20940.52,
+   "n": 4.5,
+   "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-09-30",
-   "first_invoice": "2026-02-27",
-   "split_share": 0.0,
+   "first_invoice": "2026-04-08",
+   "split_share": 1073.2,
    "customers": [
-    "Pinnacle Dispensary"
-   ],
-   "open_alltime": 3375.0
-  },
-  "A0016": {
-   "invoiced_2026": 17641.44,
-   "n": 5.0,
-   "open": 3875.0,
-   "past_due": 3875.0,
-   "oldest_due_days": 33,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-03-03",
-   "split_share": 0.0,
-   "customers": [
-    "Ascend Wellness"
-   ],
-   "open_alltime": 3875.0
-  },
-  "A0304": {
-   "invoiced_2026": 29757.99,
-   "n": 7.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-24",
-   "first_invoice": "2026-03-06",
-   "split_share": 0.0,
-   "customers": [
-    "Surfs Up"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0258": {
-   "invoiced_2026": 12270.3,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-30",
-   "first_invoice": "2026-03-09",
-   "split_share": 0.0,
-   "customers": [
-    "Quincy Cannabis"
+    "Fresh Connection",
+    "Fresh Connection Cambridge"
    ],
    "open_alltime": 0.0
   },
@@ -5906,20 +5346,6 @@
    ],
    "open_alltime": 3750.0
   },
-  "A0356": {
-   "invoiced_2026": 15030.0,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-03-11",
-   "split_share": 0.0,
-   "customers": [
-    "Zen Leaf Plymouth"
-   ],
-   "open_alltime": 0.0
-  },
   "A0116": {
    "invoiced_2026": 42152.05,
    "n": 7.0,
@@ -5933,6 +5359,203 @@
     "Firehouse"
    ],
    "open_alltime": 6880.25
+  },
+  "A0202": {
+   "invoiced_2026": 11032.5,
+   "n": 3.0,
+   "open": 3640.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-02-27",
+   "split_share": 0.0,
+   "customers": [
+    "Local Cannabis Company"
+   ],
+   "open_alltime": 3640.0
+  },
+  "A0247": {
+   "invoiced_2026": 17641.25,
+   "n": 3.0,
+   "open": 3375.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-02-27",
+   "split_share": 0.0,
+   "customers": [
+    "Pinnacle Dispensary"
+   ],
+   "open_alltime": 3375.0
+  },
+  "A0503": {
+   "invoiced_2026": 12152.25,
+   "n": 1.0,
+   "open": 12152.25,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-09-30",
+   "split_share": 0.0,
+   "customers": [
+    "J-BAM"
+   ],
+   "open_alltime": 12152.25
+  },
+  "A0255": {
+   "invoiced_2026": 13702.5,
+   "n": 4.0,
+   "open": 3000.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-04-20",
+   "split_share": 0.0,
+   "customers": [
+    "Prolific"
+   ],
+   "open_alltime": 3000.0
+  },
+  "A0043": {
+   "invoiced_2026": 13877.92,
+   "n": 2.0,
+   "open": 7915.42,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-02-06",
+   "split_share": 0.0,
+   "customers": [
+    "Bountiful Framingham"
+   ],
+   "open_alltime": 7915.42
+  },
+  "A0044": {
+   "invoiced_2026": 8610.42,
+   "n": 2.0,
+   "open": 5660.42,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-30",
+   "first_invoice": "2026-02-06",
+   "split_share": 0.0,
+   "customers": [
+    "Bountiful Rowley"
+   ],
+   "open_alltime": 5660.42
+  },
+  "A0230": {
+   "invoiced_2026": 8890.0,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-28",
+   "first_invoice": "2026-08-19",
+   "split_share": 0.0,
+   "customers": [
+    "New Dia",
+    "New Dia Fenway"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0248": {
+   "invoiced_2026": 9432.0,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-25",
+   "first_invoice": "2026-02-25",
+   "split_share": 0.0,
+   "customers": [
+    "Pioneer Cannabis Co."
+   ],
+   "open_alltime": 0.0
+  },
+  "A0101": {
+   "invoiced_2026": 19122.43,
+   "n": 4.0,
+   "open": 6425.25,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-24",
+   "first_invoice": "2026-01-30",
+   "split_share": 0.0,
+   "customers": [
+    "Elysian"
+   ],
+   "open_alltime": 6425.25
+  },
+  "A0304": {
+   "invoiced_2026": 29757.99,
+   "n": 7.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-24",
+   "first_invoice": "2026-03-06",
+   "split_share": 0.0,
+   "customers": [
+    "Surfs Up"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0104": {
+   "invoiced_2026": 49941.95,
+   "n": 15.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-24",
+   "first_invoice": "2026-01-08",
+   "split_share": 0.0,
+   "customers": [
+    "Ember Gardens Cape Cod LLC"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0146": {
+   "invoiced_2026": 4335.0,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-23",
+   "first_invoice": "2026-09-23",
+   "split_share": 0.0,
+   "customers": [
+    "Greensoul Organics"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0065": {
+   "invoiced_2026": 23284.16,
+   "n": 7.0,
+   "open": 4400.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-23",
+   "first_invoice": "2026-01-30",
+   "split_share": 0.0,
+   "customers": [
+    "Cannabis Healing"
+   ],
+   "open_alltime": 4400.0
+  },
+  "A0356": {
+   "invoiced_2026": 15030.0,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-23",
+   "first_invoice": "2026-03-11",
+   "split_share": 0.0,
+   "customers": [
+    "Zen Leaf Plymouth"
+   ],
+   "open_alltime": 0.0
   },
   "A0357": {
    "invoiced_2026": 22935.25,
@@ -5948,6 +5571,161 @@
    ],
    "open_alltime": 0.0
   },
+  "A0098": {
+   "invoiced_2026": 74326.83,
+   "n": 10.0,
+   "open": 8480.25,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-23",
+   "first_invoice": "2026-01-20",
+   "split_share": 0.0,
+   "customers": [
+    "Eastern Cannabis Co."
+   ],
+   "open_alltime": 8480.25
+  },
+  "A0299": {
+   "invoiced_2026": 3271.75,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-23",
+   "first_invoice": "2026-09-23",
+   "split_share": 0.0,
+   "customers": [
+    "SunnyDayz"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0266": {
+   "invoiced_2026": 32140.97,
+   "n": 8.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-17",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Resinate Worcester"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0036": {
+   "invoiced_2026": 3694.5,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-17",
+   "first_invoice": "2026-09-17",
+   "split_share": 0.0,
+   "customers": [
+    "BeWell Organic Medicine"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0039": {
+   "invoiced_2026": 4259.35,
+   "n": 2.0,
+   "open": 2750.5,
+   "past_due": 2750.5,
+   "oldest_due_days": 2,
+   "last_invoice": "2026-09-17",
+   "first_invoice": "2026-06-05",
+   "split_share": 0.0,
+   "customers": [
+    "BoomX"
+   ],
+   "open_alltime": 2750.5
+  },
+  "A0071": {
+   "invoiced_2026": 33842.25,
+   "n": 8.0,
+   "open": 10290.0,
+   "past_due": 10290.0,
+   "oldest_due_days": 2,
+   "last_invoice": "2026-09-17",
+   "first_invoice": "2026-01-07",
+   "split_share": 0.0,
+   "customers": [
+    "Capeway Cannabis - Bourne",
+    "Capeway Cannabis, LLC"
+   ],
+   "open_alltime": 10290.0
+  },
+  "A0017": {
+   "invoiced_2026": 10103.75,
+   "n": 3.0,
+   "open": 6345.0,
+   "past_due": 6345.0,
+   "oldest_due_days": 37,
+   "last_invoice": "2026-09-16",
+   "first_invoice": "2026-06-12",
+   "split_share": 0.0,
+   "customers": [
+    "Ascend Wellness Boston"
+   ],
+   "open_alltime": 6345.0
+  },
+  "A0117": {
+   "invoiced_2026": 10648.3,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-03",
+   "first_invoice": "2026-01-30",
+   "split_share": 0.0,
+   "customers": [
+    "Flower & Soul, Inc."
+   ],
+   "open_alltime": 0.0
+  },
+  "A0148": {
+   "invoiced_2026": 34041.5,
+   "n": 4.0,
+   "open": 16800.0,
+   "past_due": 16800.0,
+   "oldest_due_days": 17,
+   "last_invoice": "2026-09-02",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "Harbor House Collective LLC"
+   ],
+   "open_alltime": 16800.0
+  },
+  "A0046": {
+   "invoiced_2026": 17966.11,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "Bud Barn"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0061": {
+   "invoiced_2026": 13050.0,
+   "n": 4.0,
+   "open": 1800.0,
+   "past_due": 1800.0,
+   "oldest_due_days": 19,
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-01-30",
+   "split_share": 0.0,
+   "customers": [
+    "CannaBarn"
+   ],
+   "open_alltime": 1800.0
+  },
   "A0275": {
    "invoiced_2026": 19756.16,
    "n": 5.0,
@@ -5962,33 +5740,634 @@
    ],
    "open_alltime": 0.0
   },
-  "A0206": {
-   "invoiced_2026": 3017.6,
-   "n": 1.0,
+  "A0016": {
+   "invoiced_2026": 17641.44,
+   "n": 5.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-03-16",
-   "first_invoice": "2026-03-16",
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-03-03",
    "split_share": 0.0,
    "customers": [
-    "Major Bloom"
+    "Ascend Wellness"
    ],
    "open_alltime": 0.0
   },
-  "A0135": {
-   "invoiced_2026": 2613.91,
+  "A0018": {
+   "invoiced_2026": 7233.85,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-08-13",
+   "split_share": 0.0,
+   "customers": [
+    "Ascend Wellness New Bedford"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0130": {
+   "invoiced_2026": 13505.45,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Great Barrington Dispensary"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0154": {
+   "invoiced_2026": 1997.81,
+   "n": 1.0,
+   "open": 1997.81,
+   "past_due": 1997.81,
+   "oldest_due_days": 19,
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-08-31",
+   "split_share": 0.0,
+   "customers": [
+    "Health Circle Rockland"
+   ],
+   "open_alltime": 1997.81
+  },
+  "A0155": {
+   "invoiced_2026": 1997.81,
+   "n": 1.0,
+   "open": 1997.81,
+   "past_due": 1997.81,
+   "oldest_due_days": 19,
+   "last_invoice": "2026-08-31",
+   "first_invoice": "2026-08-31",
+   "split_share": 0.0,
+   "customers": [
+    "Health Circle, Inc."
+   ],
+   "open_alltime": 1997.81
+  },
+  "A0321": {
+   "invoiced_2026": 11465.03,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-28",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "The Vault - Worcester"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0320": {
+   "invoiced_2026": 14874.53,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-28",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "The Vault - Webster"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0105": {
+   "invoiced_2026": 17515.0,
+   "n": 4.0,
+   "open": 3280.0,
+   "past_due": 3280.0,
+   "oldest_due_days": 22,
+   "last_invoice": "2026-08-28",
+   "first_invoice": "2026-01-20",
+   "split_share": 0.0,
+   "customers": [
+    "EMBR (Northampton)"
+   ],
+   "open_alltime": 3280.0
+  },
+  "A0121": {
+   "invoiced_2026": 49157.5,
+   "n": 6.0,
+   "open": 3792.36,
+   "past_due": 3792.36,
+   "oldest_due_days": 22,
+   "last_invoice": "2026-08-28",
+   "first_invoice": "2026-01-20",
+   "split_share": 0.0,
+   "customers": [
+    "Fyre Ants (Apical)"
+   ],
+   "open_alltime": 3792.36
+  },
+  "A0511": {
+   "invoiced_2026": 47850.62,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-27",
+   "first_invoice": "2026-01-20",
+   "split_share": 0.0,
+   "customers": [
+    "EMBR (Kur Retail)"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0205": {
+   "invoiced_2026": 13952.55,
+   "n": 3.0,
+   "open": 3775.0,
+   "past_due": 3775.0,
+   "oldest_due_days": 24,
+   "last_invoice": "2026-08-26",
+   "first_invoice": "2026-04-21",
+   "split_share": 0.0,
+   "customers": [
+    "Low Key West Roxbury",
+    "Low Key, LLC",
+    "Lowkey West Roxbury"
+   ],
+   "open_alltime": 3775.0
+  },
+  "A0196": {
+   "invoiced_2026": 8065.77,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-18",
+   "first_invoice": "2026-04-30",
+   "split_share": 0.0,
+   "customers": [
+    "Lazy River Tewksbury"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0195": {
+   "invoiced_2026": 10445.68,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-18",
+   "first_invoice": "2026-04-30",
+   "split_share": 0.0,
+   "customers": [
+    "Lazy River Dracut"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0153": {
+   "invoiced_2026": 14208.9,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-17",
+   "first_invoice": "2026-05-18",
+   "split_share": 0.0,
+   "customers": [
+    "Healing Center"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0339": {
+   "invoiced_2026": 8393.3,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-13",
+   "first_invoice": "2026-05-14",
+   "split_share": 0.0,
+   "customers": [
+    "Uma Flowers - Waltham"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0038": {
+   "invoiced_2026": 10268.23,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-13",
+   "first_invoice": "2026-04-28",
+   "split_share": 0.0,
+   "customers": [
+    "Bliss"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0296": {
+   "invoiced_2026": 8018.85,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-13",
+   "first_invoice": "2026-04-28",
+   "split_share": 0.0,
+   "customers": [
+    "Stories Cannabis"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0070": {
+   "invoiced_2026": 3570.0,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-03-20",
-   "first_invoice": "2026-03-20",
+   "last_invoice": "2026-08-11",
+   "first_invoice": "2026-08-11",
    "split_share": 0.0,
    "customers": [
-    "Greene Street Cannabis"
+    "Cape Cod Cannabis"
    ],
    "open_alltime": 0.0
+  },
+  "A0251": {
+   "invoiced_2026": 10311.0,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-08-11",
+   "first_invoice": "2026-04-07",
+   "split_share": 0.0,
+   "customers": [
+    "The Old Bank LLC dba The Piping Plover"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0515": {
+   "invoiced_2026": 87674.75,
+   "n": 7.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-30",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Resinate, Inc."
+   ],
+   "open_alltime": 0.0
+  },
+  "A0108": {
+   "invoiced_2026": 15302.96,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-30",
+   "first_invoice": "2026-01-07",
+   "split_share": 0.0,
+   "customers": [
+    "Enlite Northampton"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0107": {
+   "invoiced_2026": 17220.0,
+   "n": 4.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-30",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Enlite Indian Orchard"
+   ],
+   "open_alltime": -109.64
+  },
+  "A0160": {
+   "invoiced_2026": 8475.0,
+   "n": 2.5,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-23",
+   "first_invoice": "2026-03-27",
+   "split_share": 1375.0,
+   "customers": [
+    "Hennep"
+   ]
+  },
+  "A0159": {
+   "invoiced_2026": 1375.0,
+   "n": 0.5,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-23",
+   "first_invoice": "2026-07-23",
+   "split_share": 1375.0,
+   "customers": [
+    "Hennep"
+   ]
+  },
+  "A0328": {
+   "invoiced_2026": 7945.0,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-22",
+   "first_invoice": "2026-04-15",
+   "split_share": 0.0,
+   "customers": [
+    "Thrive Middleborough"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0329": {
+   "invoiced_2026": 6900.0,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-07-22",
+   "first_invoice": "2026-04-15",
+   "split_share": 0.0,
+   "customers": [
+    "Thrive Quincy"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0514": {
+   "invoiced_2026": 6202.5,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-06-30",
+   "first_invoice": "2026-03-31",
+   "split_share": 0.0,
+   "customers": [
+    "Peak Cannabis Co"
+   ],
+   "open_alltime": -70.17
+  },
+  "A0194": {
+   "invoiced_2026": 18511.5,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-06-17",
+   "first_invoice": "2026-01-07",
+   "split_share": 0.0,
+   "customers": [
+    "Kush Groove Cambridge"
+   ],
+   "open_alltime": -58.5
+  },
+  "A0045": {
+   "invoiced_2026": 12505.45,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-05-29",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "BOUTIQ"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0063": {
+   "invoiced_2026": 8771.53,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-05-28",
+   "first_invoice": "2026-04-15",
+   "split_share": 0.0,
+   "customers": [
+    "Cannabis Connection"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0052": {
+   "invoiced_2026": 4738.42,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-05-28",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "Cal Verde Naturals"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0508": {
+   "invoiced_2026": 1488.75,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-05-06",
+   "first_invoice": "2026-01-22",
+   "split_share": 0.0,
+   "customers": [
+    "Ack Natural"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0106": {
+   "invoiced_2026": 2400.0,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-30",
+   "first_invoice": "2026-04-30",
+   "split_share": 0.0,
+   "customers": [
+    "Emerald Grove, Inc."
+   ],
+   "open_alltime": 0.0
+  },
+  "A0258": {
+   "invoiced_2026": 12270.3,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-30",
+   "first_invoice": "2026-03-09",
+   "split_share": 0.0,
+   "customers": [
+    "Quincy Cannabis"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0338": {
+   "invoiced_2026": 5945.32,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-28",
+   "first_invoice": "2026-04-28",
+   "split_share": 0.0,
+   "customers": [
+    "Uma Flowers"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0075": {
+   "invoiced_2026": 6883.75,
+   "n": 2.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-24",
+   "first_invoice": "2026-01-30",
+   "split_share": 0.0,
+   "customers": [
+    "Roslindale Cannabis Co"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0173": {
+   "invoiced_2026": 29929.98,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-23",
+   "first_invoice": "2026-01-13",
+   "split_share": 0.0,
+   "customers": [
+    "House Premium"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0119": {
+   "invoiced_2026": 3219.45,
+   "n": 1.5,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-15",
+   "first_invoice": "2026-04-08",
+   "split_share": 1073.2,
+   "customers": [
+    "Fresh Connection"
+   ]
+  },
+  "A0327": {
+   "invoiced_2026": 2750.0,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-15",
+   "first_invoice": "2026-04-15",
+   "split_share": 0.0,
+   "customers": [
+    "Thrive Beverly"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0334": {
+   "invoiced_2026": 8383.01,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-10",
+   "first_invoice": "2026-01-27",
+   "split_share": 0.0,
+   "customers": [
+    "Trinity Naturals"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0214": {
+   "invoiced_2026": 5801.5,
+   "n": 3.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-09",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Medicine Man"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0309": {
+   "invoiced_2026": 3050.5,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-04-08",
+   "first_invoice": "2026-04-08",
+   "split_share": 0.0,
+   "customers": [
+    "The Agriculturalist"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0180": {
+   "invoiced_2026": 8245.0,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-03-31",
+   "first_invoice": "2026-03-31",
+   "split_share": 0.0,
+   "customers": [
+    "Insa"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0509": {
+   "invoiced_2026": 1785.0,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-03-31",
+   "first_invoice": "2026-03-31",
+   "split_share": 0.0,
+   "customers": [
+    "Blossom Flower"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0193": {
+   "invoiced_2026": 9823.0,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-03-26",
+   "first_invoice": "2026-03-26",
+   "split_share": 0.0,
+   "customers": [
+    "Kush Groove Brockton"
+   ],
+   "open_alltime": -102.0
   },
   "A0253": {
    "invoiced_2026": 3633.75,
@@ -6046,580 +6425,201 @@
    ],
    "open_alltime": 0.0
   },
-  "A0193": {
-   "invoiced_2026": 9823.0,
+  "A0135": {
+   "invoiced_2026": 2613.91,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-03-26",
-   "first_invoice": "2026-03-26",
+   "last_invoice": "2026-03-20",
+   "first_invoice": "2026-03-20",
    "split_share": 0.0,
    "customers": [
-    "Kush Groove Brockton"
+    "Greene Street Cannabis"
    ],
-   "open_alltime": -102.0
+   "open_alltime": 0.0
   },
-  "A0160": {
-   "invoiced_2026": 8475.0,
-   "n": 2.5,
+  "A0206": {
+   "invoiced_2026": 3017.6,
+   "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-07-23",
-   "first_invoice": "2026-03-27",
-   "split_share": 1375.0,
+   "last_invoice": "2026-03-16",
+   "first_invoice": "2026-03-16",
+   "split_share": 0.0,
    "customers": [
-    "Hennep"
-   ]
+    "Major Bloom"
+   ],
+   "open_alltime": 0.0
   },
-  "A0514": {
-   "invoiced_2026": 6202.5,
+  "AQBO0001": {
+   "invoiced_2026": 13347.77,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-02-27",
+   "first_invoice": "2026-02-27",
+   "split_share": 0.0,
+   "customers": [
+    "LTT Trading Co"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0115": {
+   "invoiced_2026": 16843.28,
    "n": 2.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-06-30",
-   "first_invoice": "2026-03-31",
+   "last_invoice": "2026-02-27",
+   "first_invoice": "2026-01-30",
    "split_share": 0.0,
    "customers": [
-    "Peak Cannabis Co"
-   ],
-   "open_alltime": -70.17
-  },
-  "A0180": {
-   "invoiced_2026": 8245.0,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-03-31",
-   "first_invoice": "2026-03-31",
-   "split_share": 0.0,
-   "customers": [
-    "Insa"
+    "Firebrand"
    ],
    "open_alltime": 0.0
   },
-  "A0509": {
-   "invoiced_2026": 1785.0,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-03-31",
-   "first_invoice": "2026-03-31",
-   "split_share": 0.0,
-   "customers": [
-    "Blossom Flower"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0251": {
-   "invoiced_2026": 10311.0,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-11",
-   "first_invoice": "2026-04-07",
-   "split_share": 0.0,
-   "customers": [
-    "The Old Bank LLC dba The Piping Plover"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0119": {
-   "invoiced_2026": 3219.45,
-   "n": 1.5,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-15",
-   "first_invoice": "2026-04-08",
-   "split_share": 1073.2,
-   "customers": [
-    "Fresh Connection"
-   ]
-  },
-  "A0118": {
-   "invoiced_2026": 20940.52,
-   "n": 4.5,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-04-08",
-   "split_share": 1073.2,
-   "customers": [
-    "Fresh Connection",
-    "Fresh Connection Cambridge"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0309": {
-   "invoiced_2026": 3050.5,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-08",
-   "first_invoice": "2026-04-08",
-   "split_share": 0.0,
-   "customers": [
-    "The Agriculturalist"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0062": {
-   "invoiced_2026": 12440.14,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-04-15",
-   "split_share": 0.0,
-   "customers": [
-    "Cannabis Connection West Springfield"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0063": {
-   "invoiced_2026": 8771.53,
+  "A0285": {
+   "invoiced_2026": 9825.0,
    "n": 2.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-05-28",
-   "first_invoice": "2026-04-15",
+   "last_invoice": "2026-02-27",
+   "first_invoice": "2026-01-16",
    "split_share": 0.0,
    "customers": [
-    "Cannabis Connection"
+    "Silver Therapeutics Williamstown"
    ],
-   "open_alltime": 0.0
+   "open_alltime": -842.75
   },
-  "A0329": {
-   "invoiced_2026": 6900.0,
+  "A0284": {
+   "invoiced_2026": 14100.0,
    "n": 2.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-07-22",
-   "first_invoice": "2026-04-15",
+   "last_invoice": "2026-02-27",
+   "first_invoice": "2026-01-16",
    "split_share": 0.0,
    "customers": [
-    "Thrive Quincy"
+    "Silver Therapeutics Palmer"
    ],
-   "open_alltime": 0.0
+   "open_alltime": -750.0
   },
-  "A0328": {
-   "invoiced_2026": 7945.0,
+  "A0516": {
+   "invoiced_2026": 17243.0,
    "n": 2.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-07-22",
-   "first_invoice": "2026-04-15",
+   "last_invoice": "2026-02-27",
+   "first_invoice": "2026-01-16",
    "split_share": 0.0,
    "customers": [
-    "Thrive Middleborough"
+    "Silver Therapeutics Roslindale"
    ],
    "open_alltime": 0.0
   },
-  "A0327": {
-   "invoiced_2026": 2750.0,
+  "A0077": {
+   "invoiced_2026": 3927.5,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-04-15",
-   "first_invoice": "2026-04-15",
+   "last_invoice": "2026-02-23",
+   "first_invoice": "2026-02-23",
    "split_share": 0.0,
    "customers": [
-    "Thrive Beverly"
+    "CNA Amesbury"
+   ],
+   "open_alltime": -477.5
+  },
+  "A0078": {
+   "invoiced_2026": 5207.5,
+   "n": 1.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-02-23",
+   "first_invoice": "2026-02-23",
+   "split_share": 0.0,
+   "customers": [
+    "CNA Haverhill"
    ],
    "open_alltime": 0.0
   },
-  "A0255": {
-   "invoiced_2026": 13702.5,
-   "n": 4.0,
-   "open": 3000.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-04-20",
-   "split_share": 0.0,
-   "customers": [
-    "Prolific"
-   ],
-   "open_alltime": 3000.0
-  },
-  "A0205": {
-   "invoiced_2026": 13952.55,
-   "n": 3.0,
-   "open": 3775.0,
-   "past_due": 3775.0,
-   "oldest_due_days": 20,
-   "last_invoice": "2026-08-26",
-   "first_invoice": "2026-04-21",
-   "split_share": 0.0,
-   "customers": [
-    "Low Key West Roxbury",
-    "Low Key, LLC",
-    "Lowkey West Roxbury"
-   ],
-   "open_alltime": 3775.0
-  },
-  "A0038": {
-   "invoiced_2026": 10268.23,
+  "A0365": {
+   "invoiced_2026": 2500.0,
    "n": 2.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-08-13",
-   "first_invoice": "2026-04-28",
+   "last_invoice": "2026-02-06",
+   "first_invoice": "2026-01-28",
    "split_share": 0.0,
    "customers": [
-    "Bliss"
+    "Sweetgrass Botanicals"
    ],
-   "open_alltime": 0.0
+   "open_alltime": -500.0
   },
-  "A0338": {
-   "invoiced_2026": 5945.32,
+  "A0234": {
+   "invoiced_2026": 3250.0,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-04-28",
-   "first_invoice": "2026-04-28",
+   "last_invoice": "2026-01-30",
+   "first_invoice": "2026-01-30",
    "split_share": 0.0,
    "customers": [
-    "Uma Flowers"
+    "New Leaf - S Main St."
    ],
    "open_alltime": 0.0
   },
-  "A0296": {
-   "invoiced_2026": 8018.85,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-13",
-   "first_invoice": "2026-04-28",
-   "split_share": 0.0,
-   "customers": [
-    "Stories Cannabis"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0106": {
-   "invoiced_2026": 2400.0,
+  "A0233": {
+   "invoiced_2026": 2773.02,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-04-30",
-   "first_invoice": "2026-04-30",
+   "last_invoice": "2026-01-30",
+   "first_invoice": "2026-01-30",
    "split_share": 0.0,
    "customers": [
-    "Emerald Grove, Inc."
+    "New Leaf - 2nd St"
    ],
    "open_alltime": 0.0
   },
-  "A0196": {
-   "invoiced_2026": 8065.77,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-18",
-   "first_invoice": "2026-04-30",
-   "split_share": 0.0,
-   "customers": [
-    "Lazy River Tewksbury"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0195": {
-   "invoiced_2026": 10445.68,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-18",
-   "first_invoice": "2026-04-30",
-   "split_share": 0.0,
-   "customers": [
-    "Lazy River Dracut"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0339": {
-   "invoiced_2026": 8393.3,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-13",
-   "first_invoice": "2026-05-14",
-   "split_share": 0.0,
-   "customers": [
-    "Uma Flowers - Waltham"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0153": {
-   "invoiced_2026": 14208.9,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-17",
-   "first_invoice": "2026-05-18",
-   "split_share": 0.0,
-   "customers": [
-    "Healing Center"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0148": {
-   "invoiced_2026": 34041.5,
-   "n": 4.0,
-   "open": 16800.0,
-   "past_due": 16800.0,
-   "oldest_due_days": 13,
-   "last_invoice": "2026-09-02",
-   "first_invoice": "2026-05-28",
-   "split_share": 0.0,
-   "customers": [
-    "Harbor House Collective LLC"
-   ],
-   "open_alltime": 16800.0
-  },
-  "A0321": {
-   "invoiced_2026": 11465.03,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-28",
-   "first_invoice": "2026-05-28",
-   "split_share": 0.0,
-   "customers": [
-    "The Vault - Worcester"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0320": {
-   "invoiced_2026": 14874.53,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-28",
-   "first_invoice": "2026-05-28",
-   "split_share": 0.0,
-   "customers": [
-    "The Vault - Webster"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0052": {
-   "invoiced_2026": 4738.42,
+  "A0295": {
+   "invoiced_2026": 3500.0,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-05-28",
-   "first_invoice": "2026-05-28",
+   "last_invoice": "2026-01-30",
+   "first_invoice": "2026-01-30",
    "split_share": 0.0,
    "customers": [
-    "Cal Verde Naturals"
+    "Stem Haverhill"
    ],
    "open_alltime": 0.0
   },
-  "A0046": {
-   "invoiced_2026": 17966.11,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-05-28",
-   "split_share": 0.0,
-   "customers": [
-    "Bud Barn"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0039": {
-   "invoiced_2026": 4259.35,
-   "n": 2.0,
-   "open": 2750.5,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-17",
-   "first_invoice": "2026-06-05",
-   "split_share": 0.0,
-   "customers": [
-    "BoomX"
-   ],
-   "open_alltime": 2750.5
-  },
-  "A0017": {
-   "invoiced_2026": 10103.75,
-   "n": 3.0,
-   "open": 6345.0,
-   "past_due": 3025.0,
-   "oldest_due_days": 33,
-   "last_invoice": "2026-09-16",
-   "first_invoice": "2026-06-12",
-   "split_share": 0.0,
-   "customers": [
-    "Ascend Wellness Boston"
-   ],
-   "open_alltime": 6345.0
-  },
-  "A0159": {
-   "invoiced_2026": 1375.0,
-   "n": 0.5,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-07-23",
-   "first_invoice": "2026-07-23",
-   "split_share": 1375.0,
-   "customers": [
-    "Hennep"
-   ]
-  },
-  "A0070": {
-   "invoiced_2026": 3570.0,
+  "A0003": {
+   "invoiced_2026": 3625.0,
    "n": 1.0,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
-   "last_invoice": "2026-08-11",
-   "first_invoice": "2026-08-11",
+   "last_invoice": "2026-01-30",
+   "first_invoice": "2026-01-30",
    "split_share": 0.0,
    "customers": [
-    "Cape Cod Cannabis"
+    "Alternative Compassion Services"
    ],
    "open_alltime": 0.0
-  },
-  "A0018": {
-   "invoiced_2026": 7233.85,
-   "n": 2.0,
-   "open": 3983.85,
-   "past_due": 3983.85,
-   "oldest_due_days": 33,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-08-13",
-   "split_share": 0.0,
-   "customers": [
-    "Ascend Wellness New Bedford"
-   ],
-   "open_alltime": 3983.85
-  },
-  "A0230": {
-   "invoiced_2026": 8890.0,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-28",
-   "first_invoice": "2026-08-19",
-   "split_share": 0.0,
-   "customers": [
-    "New Dia",
-    "New Dia Fenway"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0154": {
-   "invoiced_2026": 1997.81,
-   "n": 1.0,
-   "open": 1997.81,
-   "past_due": 1997.81,
-   "oldest_due_days": 15,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-08-31",
-   "split_share": 0.0,
-   "customers": [
-    "Health Circle Rockland"
-   ],
-   "open_alltime": 1997.81
-  },
-  "A0155": {
-   "invoiced_2026": 1997.81,
-   "n": 1.0,
-   "open": 1997.81,
-   "past_due": 1997.81,
-   "oldest_due_days": 15,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-08-31",
-   "split_share": 0.0,
-   "customers": [
-    "Health Circle, Inc."
-   ],
-   "open_alltime": 1997.81
-  },
-  "A0036": {
-   "invoiced_2026": 3694.5,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-17",
-   "first_invoice": "2026-09-17",
-   "split_share": 0.0,
-   "customers": [
-    "BeWell Organic Medicine"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0146": {
-   "invoiced_2026": 4335.0,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-09-23",
-   "split_share": 0.0,
-   "customers": [
-    "Greensoul Organics"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0299": {
-   "invoiced_2026": 3271.75,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-09-23",
-   "split_share": 0.0,
-   "customers": [
-    "SunnyDayz"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0503": {
-   "invoiced_2026": 12152.25,
-   "n": 1.0,
-   "open": 12152.25,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-09-30",
-   "split_share": 0.0,
-   "customers": [
-    "J-BAM"
-   ],
-   "open_alltime": 12152.25
   }
  },
  "unmapped": [],
@@ -6633,8 +6633,8 @@
  },
  "totals": {
   "invoiced_2026": 1624199.19,
-  "open": 159856.17,
-  "past_due": 45826.83,
+  "open": 150497.32,
+  "past_due": 52828.48,
   "invoices": 342,
   "customers": 107,
   "mapped_customers": 107,

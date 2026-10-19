@@ -1174,7 +1174,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-30",
       "TotalAmt": 3300.0,
-      "Balance": 3300.0
+      "Balance": 1800.0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2112,7 +2112,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-12",
       "TotalAmt": 3983.85,
-      "Balance": 3983.85
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2138,7 +2138,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-12",
       "TotalAmt": 3875.0,
-      "Balance": 3875.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
