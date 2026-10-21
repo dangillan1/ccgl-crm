@@ -384,5 +384,20 @@
    "uploaded_at": "2026-10-21",
    "history": []
   }
+ },
+ "A0219": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0219/ccc/2026-10-21_mviism0r4r1p.pdf",
+    "sha": "b2a9756f77b37d647371c5a3dc85e40e637d55c3",
+    "name": "CCC License - Native Sun (Hudson).pdf",
+    "size": 3905582,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-21",
+   "expires": "2027-08-14",
+   "history": []
+  }
  }
 }
