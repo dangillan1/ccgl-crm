@@ -19225,7 +19225,7 @@
  },
  {
   "id": "Omv9xhrmllftt",
-  "date": "2026-10-13",
+  "date": "2026-10-21",
   "account_id": "A0515",
   "account_raw": "Resinate",
   "license": "MTC1345/RMD1345-P/MC281259",
@@ -19233,13 +19233,16 @@
   "contact_name": "Peter Decaro",
   "contact_email": "pdecaro@iresinate.com",
   "delivery_date": "",
-  "total": 5104,
+  "total": 4052.5,
   "owner": "Joey",
   "mix": "Bulk",
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-21"
  },
  {
   "id": "Omvbahashdzz7",
