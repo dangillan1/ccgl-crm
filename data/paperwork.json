@@ -371,6 +371,18 @@
    "uploaded_at": "2026-10-21",
    "expires": "2027-07-25",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0221/w9/2026-10-21_mviiqtla8g7f.pdf",
+    "sha": "f039072e3733c8cef2ee4075e4f03827da3ccdc9",
+    "name": "W-9 - Native Sun (South Boston).pdf",
+    "size": 71352,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-21",
+   "history": []
   }
  }
 }
