@@ -801,5 +801,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $3,793 · Oct 21, 26",
   "date": "2026-10-21"
+ },
+ {
+  "id": "Xmviiqc1n6vs5",
+  "ts": "2026-10-21T19:41:55.451Z",
+  "account_id": "A0221",
+  "type": "Doc",
+  "note": "CCC License uploaded — expires Jul 25, 27",
+  "date": "2026-10-21"
  }
 ]
