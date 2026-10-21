@@ -19292,7 +19292,7 @@
   "account_id": "A0173",
   "account_raw": "House Premium Cannabis",
   "license": "MR284969",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Adele Marschetti",
   "contact_email": "amarchetti@housepremiumcannabis.com",
   "delivery_date": "",
@@ -19302,7 +19302,10 @@
   "special": "5% Net14 planned",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-21"
  },
  {
   "id": "Omvfplddyg5yb",
