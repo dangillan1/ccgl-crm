@@ -6085,7 +6085,7 @@
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR281800",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
@@ -6100,7 +6100,9 @@
   "next_contact": "2026-01-19",
   "notes": "",
   "sheet_row": 220,
-  "crm_edits": {}
+  "crm_edits": {
+   "license_number": "2026-10-21"
+  }
  },
  {
   "id": "A0220",
