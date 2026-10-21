@@ -398,6 +398,18 @@
    "uploaded_at": "2026-10-21",
    "expires": "2027-08-14",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0219/w9/2026-10-21_mviit0tonqqp.pdf",
+    "sha": "3ae033f8bcfa4f83859f25cde5c71d4507f51cf3",
+    "name": "W-9 - Native Sun (Hudson).pdf",
+    "size": 70711,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-21",
+   "history": []
   }
  }
 }
