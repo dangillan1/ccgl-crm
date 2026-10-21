@@ -19183,15 +19183,15 @@
  },
  {
   "id": "Omv9x8n11dul7",
-  "date": "2026-10-13",
+  "date": "2026-10-21",
   "account_id": "A0266",
   "account_raw": "Resinate",
   "license": "MR281249",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Peter Decaro",
   "contact_email": "pdecaro@iresinate.com",
   "delivery_date": "",
-  "total": 5530,
+  "total": 4717.5,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
@@ -19200,7 +19200,7 @@
   "created_by": "joey",
   "edited_in_crm": true,
   "edited_by": "joey",
-  "edited_at": "2026-10-15"
+  "edited_at": "2026-10-21"
  },
  {
   "id": "Omv9xh1p0xce0",
