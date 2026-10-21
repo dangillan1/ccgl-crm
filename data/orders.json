@@ -19357,5 +19357,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvi8adk0y3xn",
+  "date": "2026-10-21",
+  "account_id": "A0063",
+  "account_raw": "Cannabis Connection",
+  "license": "MR281362",
+  "status": "Pending",
+  "contact_name": "Torre Cioffi",
+  "contact_email": "tcioffi@roadtripdispensary.com",
+  "delivery_date": "",
+  "total": 5315,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
