@@ -357,5 +357,20 @@
    "uploaded_at": "2026-10-19",
    "history": []
   }
+ },
+ "A0221": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0221/ccc/2026-10-21_mviiq7qct2jx.pdf",
+    "sha": "e393a9230f628b88f635683fc291b68426fd118e",
+    "name": "CCC License - Native Sun (South Boston).pdf",
+    "size": 3905742,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-10-21",
+   "expires": "2027-07-25",
+   "history": []
+  }
  }
 }
