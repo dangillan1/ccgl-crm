@@ -19615,5 +19615,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvlf0vvopi9z",
+  "date": "2026-10-23",
+  "account_id": "A0269",
+  "account_raw": "Reverie 73",
+  "license": "MR282315",
+  "status": "Planned",
+  "contact_name": "Corey Kennedy",
+  "contact_email": "ckennedy@reverie73.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
