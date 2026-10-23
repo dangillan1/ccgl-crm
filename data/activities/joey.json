@@ -865,5 +865,13 @@
   "type": "Stage",
   "note": "Prospect → Active",
   "date": "2026-10-23"
+ },
+ {
+  "id": "Xmvl3txi764m0",
+  "ts": "2026-10-23T15:08:07.519Z",
+  "account_id": "A0195",
+  "type": "Edit",
+  "note": "Removed Amarchetti · amarchetti@lazyriverproducts.com",
+  "date": "2026-10-23"
  }
 ]
