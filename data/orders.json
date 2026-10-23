@@ -18382,10 +18382,10 @@
   "account_id": "A0275",
   "account_raw": "Road Trip | MR282740",
   "license": "MR282740",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Torre Cioffi",
   "contact_email": "tcioffi@roadtripdispensary.com",
-  "delivery_date": "",
+  "delivery_date": "2026-11-03",
   "total": 8725,
   "owner": "Joey",
   "mix": "Finished Goods",
@@ -18394,7 +18394,7 @@
   "row": 321,
   "edited_in_crm": true,
   "edited_by": "joey",
-  "edited_at": "2026-10-21"
+  "edited_at": "2026-10-23"
  },
  {
   "id": "Oad0c50ce",
