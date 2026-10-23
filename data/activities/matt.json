@@ -191,5 +191,14 @@
   "note": "Texted COO - offering BOGO on old product (LCS 1/8s on shelf)",
   "date": "2026-10-16",
   "contact_id": "Ce5e1df80"
+ },
+ {
+  "id": "Xmvl5ty6o4skt",
+  "ts": "2026-10-23T16:04:07.632Z",
+  "account_id": "A0052",
+  "type": "Visit",
+  "note": "Stopped by shop - spoke to staff.  They all spoke very highly of the product and want us back on the shleves",
+  "date": "2026-10-22",
+  "contact_id": null
  }
 ]
