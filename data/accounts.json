@@ -2888,9 +2888,7 @@
   "standing_requests": "",
   "license_number": "MR283720",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Embr/Fyre Ants",
   "town": "Northampton",
@@ -2898,13 +2896,14 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "A+",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 106,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0511",
