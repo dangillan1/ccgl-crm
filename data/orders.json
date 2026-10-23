@@ -19397,17 +19397,20 @@
   "account_id": "A0009",
   "account_raw": "Apex Noire",
   "license": "MR282752",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Nate Hall",
   "contact_email": "nate@apexnoire.com",
-  "delivery_date": "",
+  "delivery_date": "2026-10-28",
   "total": 4580,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-23"
  },
  {
   "id": "Omvl1bpp49kcb",
