@@ -905,5 +905,13 @@
   "type": "Order",
   "note": "Order updated: Pending $5,315 · Oct 21, 26",
   "date": "2026-10-21"
+ },
+ {
+  "id": "Xmvlbgfq69ljn",
+  "ts": "2026-10-23T18:41:34.878Z",
+  "account_id": "Amvl1fzydti30",
+  "type": "Order",
+  "note": "Order updated: Planned · Oct 21, 26",
+  "date": "2026-10-21"
  }
 ]
