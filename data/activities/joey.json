@@ -841,5 +841,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods",
   "date": "2026-10-21"
+ },
+ {
+  "id": "Xmvl1g39n3bdg",
+  "ts": "2026-10-23T14:01:22.571Z",
+  "account_id": "Amvl1fzydti30",
+  "type": "Note",
+  "note": "Created as active account",
+  "date": "2026-10-23"
  }
 ]
