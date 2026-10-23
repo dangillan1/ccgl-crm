@@ -19430,7 +19430,7 @@
   "account_id": "Amvl1fzydti30",
   "account_raw": "Capeway Cannabis",
   "license": "MR285074",
-  "status": "Confirmed",
+  "status": "Planned",
   "contact_name": "Elliot Hough",
   "contact_email": "ehough@capewaycannabis.com",
   "delivery_date": "",
@@ -19440,6 +19440,9 @@
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-23"
  }
 ]
