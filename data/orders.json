@@ -19462,5 +19462,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvlbmwssrxex",
+  "date": "2026-10-07",
+  "account_id": "A0196",
+  "account_raw": "Lazy River - Tewksbury",
+  "license": "",
+  "status": "Confirmed",
+  "contact_name": "Jayce Bauer",
+  "contact_email": "jbauer@lazyriverproducts.com",
+  "delivery_date": "2026-10-23",
+  "total": 3062.5,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
