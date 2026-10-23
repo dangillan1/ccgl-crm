@@ -200,5 +200,14 @@
   "note": "Stopped by shop - spoke to staff.  They all spoke very highly of the product and want us back on the shleves",
   "date": "2026-10-22",
   "contact_id": null
+ },
+ {
+  "id": "Xmvl5uj4dy5dn",
+  "ts": "2026-10-23T16:04:34.765Z",
+  "account_id": "A0052",
+  "type": "Email",
+  "note": "Sent follow up email from visit.  Added menu, expressed how we'd like to work together again.  Offered tour and new samples",
+  "date": "2026-10-23",
+  "contact_id": "C64b5635b"
  }
 ]
