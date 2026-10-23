@@ -913,5 +913,13 @@
   "type": "Order",
   "note": "Order updated: Planned · Oct 21, 26",
   "date": "2026-10-21"
+ },
+ {
+  "id": "Xmvlbgw5ipppu",
+  "ts": "2026-10-23T18:41:56.166Z",
+  "account_id": "A0173",
+  "type": "Order",
+  "note": "Order updated: Confirmed $5,700 · Oct 19, 26",
+  "date": "2026-10-19"
  }
 ]
