@@ -19420,5 +19420,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvl1gpnclthk",
+  "date": "2026-10-21",
+  "account_id": "Amvl1fzydti30",
+  "account_raw": "Capeway Cannabis",
+  "license": "MR285074",
+  "status": "Confirmed",
+  "contact_name": "Elliot Hough",
+  "contact_email": "ehough@capewaycannabis.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
