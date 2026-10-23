@@ -889,5 +889,13 @@
   "type": "Edit",
   "note": "Removed Mia Kirsch (Buyer) · mia.kirsch@thevaultma.com",
   "date": "2026-10-23"
+ },
+ {
+  "id": "Xmvlbf8llfgyt",
+  "ts": "2026-10-23T18:40:38.985Z",
+  "account_id": "A0275",
+  "type": "Order",
+  "note": "Order updated: Confirmed $8,725 · Oct 21, 26",
+  "date": "2026-10-21"
  }
 ]
