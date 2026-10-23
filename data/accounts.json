@@ -6108,8 +6108,8 @@
   "sheet_key": "nativesun|northattleboro",
   "source": "Master",
   "parent": "Native Sun",
-  "stage": "New",
-  "stage_entered": "2026-09-25",
+  "stage": "Customer",
+  "stage_entered": "2026-10-23",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "",
@@ -6120,14 +6120,16 @@
   "town": "North Attleboro",
   "address": "1320 S Washington St",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "B",
   "owner": "Joey",
   "last_contact": "2026-01-05",
   "next_contact": "2026-01-19",
   "notes": "",
   "sheet_row": 221,
-  "crm_edits": {}
+  "crm_edits": {
+   "status": "2026-10-23"
+  }
  },
  {
   "id": "A0221",
