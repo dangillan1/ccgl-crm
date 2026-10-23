@@ -19579,5 +19579,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvle5twm4ngg",
+  "date": "2026-10-23",
+  "account_id": "A0250",
+  "account_raw": "Pioneer Valley Trading Co",
+  "license": "MR285301",
+  "status": "Planned",
+  "contact_name": "Joey S.",
+  "contact_email": "joey@pioneervalleytradingco.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
