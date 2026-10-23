@@ -19651,5 +19651,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvli91l5nxdu",
+  "date": "2026-10-23",
+  "account_id": "A0101",
+  "account_raw": "Elysian",
+  "license": "MR285090",
+  "status": "Planned",
+  "contact_name": "Devin Lightman",
+  "contact_email": "dlightman@myflowersoul.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
