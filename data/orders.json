@@ -19543,5 +19543,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvld9t3qe098",
+  "date": "2026-10-23",
+  "account_id": "A0116",
+  "account_raw": "Firehouse",
+  "license": "MR284535",
+  "status": "Planned",
+  "contact_name": "Emiliano Duran",
+  "contact_email": "emiliano@shopfirehouse.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
