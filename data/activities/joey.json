@@ -833,5 +833,13 @@
   "type": "Doc",
   "note": "W-9 uploaded",
   "date": "2026-10-21"
+ },
+ {
+  "id": "Xmvl1bsgvhhcb",
+  "ts": "2026-10-23T13:58:01.951Z",
+  "account_id": "A0071",
+  "type": "Order",
+  "note": "Planned order · Finished Goods",
+  "date": "2026-10-21"
  }
 ]
