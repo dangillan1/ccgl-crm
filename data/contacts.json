@@ -15685,5 +15685,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-10-23"
+ },
+ {
+  "id": "Cmvl4inbu42op",
+  "account_id": "A0195",
+  "name": "Inventory Team",
+  "role": "Inventory",
+  "email": "dracut-inventory-team@lazyriverproducts.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-10-23"
  }
 ]
