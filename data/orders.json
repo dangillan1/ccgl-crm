@@ -19561,5 +19561,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvldd013u17e",
+  "date": "2026-10-23",
+  "account_id": "A0304",
+  "account_raw": "Surf's Up",
+  "license": "MR285057",
+  "status": "Planned",
+  "contact_name": "Nathan Schaeffer",
+  "contact_email": "nschaeffer@surfsupcannabis.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
