@@ -15683,5 +15683,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-10-21"
+ },
+ {
+  "id": "Cmvl1g1ye3szq",
+  "account_id": "Amvl1fzydti30",
+  "name": "Elliot Hough",
+  "email": "ehough@capewaycannabis.com",
+  "phone": "774-836-4239",
+  "role": "Buyer, Finance / AP, Intake",
+  "source": "CRM (Joey)",
+  "primary": true,
+  "created": "2026-10-23"
  }
 ]
