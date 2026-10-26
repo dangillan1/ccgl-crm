@@ -273,5 +273,13 @@
   "note": "Called store - spoke w/ Anna.  Left a message for the buyers.  Stopping by with samples on 10/27",
   "date": "2026-10-26",
   "contact_id": null
+ },
+ {
+  "id": "Xmvpltwueyv6t",
+  "ts": "2026-10-26T18:43:04.455Z",
+  "account_id": "A0051",
+  "type": "Task",
+  "note": "Next step: Drop samples (due Oct 27, 26)",
+  "date": "2026-10-26"
  }
 ]
