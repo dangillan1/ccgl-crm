@@ -19284,10 +19284,10 @@
   "account_id": "A0515",
   "account_raw": "Resinate",
   "license": "MTC1345/RMD1345-P/MC281259",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Peter Decaro",
   "contact_email": "pdecaro@iresinate.com",
-  "delivery_date": "",
+  "delivery_date": "2026-10-28",
   "total": 5104,
   "owner": "Joey",
   "mix": "Bulk",
@@ -19297,7 +19297,7 @@
   "created_by": "joey",
   "edited_in_crm": true,
   "edited_by": "joey",
-  "edited_at": "2026-10-21"
+  "edited_at": "2026-10-26"
  },
  {
   "id": "Omvbahashdzz7",
