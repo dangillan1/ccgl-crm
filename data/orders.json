@@ -19415,10 +19415,10 @@
   "account_id": "A0036",
   "account_raw": "BeWell Organics",
   "license": "MR284729",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Peter Decaro",
   "contact_email": "pdecaro@iresinate.com",
-  "delivery_date": "",
+  "delivery_date": "2026-10-28",
   "total": 4052.5,
   "owner": "Joey",
   "mix": "Finished Goods",
@@ -19428,7 +19428,7 @@
   "created_by": "joey",
   "edited_in_crm": true,
   "edited_by": "joey",
-  "edited_at": "2026-10-21"
+  "edited_at": "2026-10-26"
  },
  {
   "id": "Omvi8adk0y3xn",
