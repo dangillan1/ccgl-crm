@@ -19738,16 +19738,19 @@
   "account_id": "A0101",
   "account_raw": "Elysian",
   "license": "MR285090",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Devin Lightman",
   "contact_email": "dlightman@myflowersoul.com",
-  "delivery_date": "",
-  "total": null,
+  "delivery_date": "2026-10-28",
+  "total": 5677.5,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-26"
  }
 ]
