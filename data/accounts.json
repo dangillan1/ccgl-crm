@@ -1453,7 +1453,10 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 52
+  "sheet_row": 52,
+  "next_step": "Drop samples",
+  "next_step_due": "2026-10-27",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0052",
