@@ -261,9 +261,11 @@
   "ts": "2026-10-26T18:37:13.391Z",
   "account_id": "A0435",
   "type": "Text",
-  "note": "",
+  "note": "Connected via text -sent menu over",
   "date": "2026-10-26",
-  "contact_id": null
+  "contact_id": "C948b6757",
+  "edited_at": "2026-10-26",
+  "edited_by": "matt"
  },
  {
   "id": "Xmvpltoay18an",
