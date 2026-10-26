@@ -339,5 +339,14 @@
   "note": "Reached out looking to reconnect",
   "date": "2026-10-26",
   "contact_id": "Cc03225e1"
+ },
+ {
+  "id": "Xmvpmbcf6lxeq",
+  "ts": "2026-10-26T18:56:37.794Z",
+  "account_id": "A0034",
+  "type": "Call",
+  "note": "Called store - good to drop off samples in the afternoon 1-4pm",
+  "date": "2026-10-26",
+  "contact_id": null
  }
 ]
