@@ -4948,7 +4948,10 @@
   "last_contact": "2026-04-02",
   "next_contact": "2026-04-16",
   "notes": "Spoke with Steve G end of 2025 - talked about shaking up menu but no replies yet",
-  "sheet_row": 178
+  "sheet_row": 178,
+  "next_step": "Schedule tour of Grow Lab and Ember Gardens for their Sandwich Staff",
+  "next_step_due": "2026-10-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0178",
