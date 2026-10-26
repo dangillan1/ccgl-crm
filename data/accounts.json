@@ -6102,7 +6102,8 @@
   "sheet_row": 220,
   "crm_edits": {
    "license_number": "2026-10-21"
-  }
+  },
+  "in_qbo": true
  },
  {
   "id": "A0220",
@@ -6130,7 +6131,8 @@
   "sheet_row": 221,
   "crm_edits": {
    "status": "2026-10-23"
-  }
+  },
+  "in_qbo": true
  },
  {
   "id": "A0221",
@@ -6158,7 +6160,8 @@
   "sheet_row": 222,
   "crm_edits": {
    "license_number": "2026-10-21"
-  }
+  },
+  "in_qbo": true
  },
  {
   "id": "A0222",
@@ -7419,7 +7422,8 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 266,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "in_qbo": true
  },
  {
   "id": "A0266",

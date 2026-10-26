@@ -3,6 +3,267 @@
     {
       "AllowOnlineAffirmPayment": false,
       "sparse": true,
+      "Id": "7904",
+      "DocNumber": "1782",
+      "TxnDate": "2026-10-27",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "526",
+        "name": "The Vault - Webster"
+      },
+      "BillAddr": {
+        "Id": "3264"
+      },
+      "ShipAddr": {
+        "Id": "3806",
+        "Line1": "The Vault - Webster",
+        "Line2": "78 Worcester Rd",
+        "Line3": "Webster, MA  01570"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-26",
+      "TotalAmt": 5987.75,
+      "Balance": 5987.75
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7905",
+      "DocNumber": "1783",
+      "TxnDate": "2026-10-23",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "527",
+        "name": "The Vault - Worcester"
+      },
+      "BillAddr": {
+        "Id": "3266"
+      },
+      "ShipAddr": {
+        "Id": "3807",
+        "Line1": "The Vault - Worcester",
+        "Line2": "17 Mountain St. E",
+        "Line3": "Worcester, MA  01606"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-22",
+      "TotalAmt": 7787.75,
+      "Balance": 7787.75
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7903",
+      "DocNumber": "1781",
+      "TxnDate": "2026-10-23",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000061",
+        "name": "Native Sun South Boston"
+      },
+      "BillAddr": {
+        "Id": "3771"
+      },
+      "ShipAddr": {
+        "Id": "3805",
+        "Line1": "Native Sun South Boston",
+        "Line2": "538 E First St",
+        "Line3": "Boston, MA  02127"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-22",
+      "TotalAmt": 1861.62,
+      "Balance": 1861.62
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7902",
+      "DocNumber": "1780",
+      "TxnDate": "2026-10-23",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000051",
+        "name": "Native Sun Hudson"
+      },
+      "BillAddr": {
+        "Id": "3769"
+      },
+      "ShipAddr": {
+        "Id": "3804",
+        "Line1": "Native Sun Hudson",
+        "Line2": "37 Coolidge St",
+        "Line3": "Hudson, MA  01749"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-22",
+      "TotalAmt": 2748.62,
+      "Balance": 2748.62
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7901",
+      "DocNumber": "1779",
+      "TxnDate": "2026-10-23",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000041",
+        "name": "Native Sun North Attleboro"
+      },
+      "BillAddr": {
+        "Id": "3767"
+      },
+      "ShipAddr": {
+        "Id": "3803",
+        "Line1": "Native Sun North Attleboro",
+        "Line2": "1320 S Washington St",
+        "Line3": "North Attleboro, MA  02760"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-22",
+      "TotalAmt": 3792.98,
+      "Balance": 3792.98
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7900",
+      "DocNumber": "1778",
+      "TxnDate": "2026-10-23",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "516",
+        "name": "Lazy River Tewksbury"
+      },
+      "BillAddr": {
+        "Id": "3154"
+      },
+      "ShipAddr": {
+        "Id": "3802",
+        "Line1": "Lazy River Tewksbury",
+        "Line2": "553 Main St",
+        "Line3": "#2",
+        "Line4": "Tewksbury, MA  01876"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-22",
+      "TotalAmt": 3062.5,
+      "Balance": 3062.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7899",
+      "DocNumber": "1777",
+      "TxnDate": "2026-10-23",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "515",
+        "name": "Lazy River Dracut"
+      },
+      "BillAddr": {
+        "Id": "3156"
+      },
+      "ShipAddr": {
+        "Id": "3801",
+        "Line1": "Lazy River Dracut",
+        "Line2": "149 Broadway Rd",
+        "Line3": "Dracut, Ma  01826"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-22",
+      "TotalAmt": 2887.5,
+      "Balance": 2887.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7865",
+      "DocNumber": "1776",
+      "TxnDate": "2026-10-22",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "298",
+        "name": "The Old Bank LLC dba The Piping Plover"
+      },
+      "BillAddr": {
+        "Id": "653"
+      },
+      "ShipAddr": {
+        "Id": "3800",
+        "Line1": "The Old Bank LLC dba The Piping Plover",
+        "Line2": "10 Main St",
+        "Line3": "Wellfleet, MA  02667"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-21",
+      "TotalAmt": 2484.0,
+      "Balance": 0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7851",
+      "DocNumber": "1775",
+      "TxnDate": "2026-10-22",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "448",
+        "name": "House Premium"
+      },
+      "BillAddr": {
+        "Id": "1887"
+      },
+      "ShipAddr": {
+        "Id": "3793",
+        "Line1": "House Premium",
+        "Line2": "405 Middlesex Rd Suite 400",
+        "Line3": "Tyngsborough, MA  01879"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-21",
+      "TotalAmt": 5500.3,
+      "Balance": 5500.3
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "7850",
+      "DocNumber": "1774",
+      "TxnDate": "2026-10-22",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "358",
+        "name": "Eastern Cannabis Co."
+      },
+      "BillAddr": {
+        "Id": "971"
+      },
+      "ShipAddr": {
+        "Id": "3792",
+        "Line1": "Eastern Cannabis Co.",
+        "Line2": "7 Linehurst Rd",
+        "Line3": "Malden, MA  02148"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-11-21",
+      "TotalAmt": 7995.0,
+      "Balance": 7995.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
       "Id": "7803",
       "DocNumber": "1773",
       "TxnDate": "2026-10-14",
@@ -810,7 +1071,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-23",
       "TotalAmt": 8480.25,
-      "Balance": 8480.25
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -862,7 +1123,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-21",
       "TotalAmt": 6325.0,
-      "Balance": 5916.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -900,7 +1161,7 @@
       "Line": [],
       "CustomerRef": {
         "value": "415",
-        "name": "BeWell Organic Medicine"
+        "name": "Resinate Merrimac"
       },
       "BillAddr": {
         "Id": "1568"
@@ -940,7 +1201,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-17",
       "TotalAmt": 2750.5,
-      "Balance": 2750.5
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -966,7 +1227,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-17",
       "TotalAmt": 4100.0,
-      "Balance": 4100.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -992,7 +1253,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-17",
       "TotalAmt": 6190.0,
-      "Balance": 6190.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1018,7 +1279,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-16",
       "TotalAmt": 3320.0,
-      "Balance": 3320.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1096,7 +1357,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-02",
       "TotalAmt": 4205.0,
-      "Balance": 4205.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1122,7 +1383,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-10-02",
       "TotalAmt": 12595.0,
-      "Balance": 12595.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1565,7 +1826,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-27",
       "TotalAmt": 3280.0,
-      "Balance": 3280.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1591,7 +1852,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-27",
       "TotalAmt": 5740.0,
-      "Balance": 3792.36
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2086,7 +2347,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-12",
       "TotalAmt": 3275.0,
-      "Balance": 3025.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -8928,6 +9189,6 @@
     }
   ],
   "startPosition": 1,
-  "maxResults": 342,
-  "totalCount": 342
+  "maxResults": 352,
+  "totalCount": 352
 }

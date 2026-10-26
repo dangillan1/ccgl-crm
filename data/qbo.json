@@ -1,6 +1,156 @@
 {
- "generated": "2026-10-19",
+ "generated": "2026-10-26",
  "invoices": [
+  {
+   "id": "7904",
+   "doc": "1782",
+   "date": "2026-10-27",
+   "due": "2026-11-26",
+   "total": 5987.75,
+   "balance": 5987.75,
+   "customer": "The Vault - Webster",
+   "ship_town": "Webster",
+   "account_id": "A0320",
+   "share": 1.0,
+   "split": false,
+   "amount": 5987.75,
+   "open": 5987.75
+  },
+  {
+   "id": "7905",
+   "doc": "1783",
+   "date": "2026-10-23",
+   "due": "2026-11-22",
+   "total": 7787.75,
+   "balance": 7787.75,
+   "customer": "The Vault - Worcester",
+   "ship_town": "Worcester",
+   "account_id": "A0321",
+   "share": 1.0,
+   "split": false,
+   "amount": 7787.75,
+   "open": 7787.75
+  },
+  {
+   "id": "7903",
+   "doc": "1781",
+   "date": "2026-10-23",
+   "due": "2026-11-22",
+   "total": 1861.62,
+   "balance": 1861.62,
+   "customer": "Native Sun South Boston",
+   "ship_town": "Boston",
+   "account_id": "A0221",
+   "share": 1.0,
+   "split": false,
+   "amount": 1861.62,
+   "open": 1861.62
+  },
+  {
+   "id": "7902",
+   "doc": "1780",
+   "date": "2026-10-23",
+   "due": "2026-11-22",
+   "total": 2748.62,
+   "balance": 2748.62,
+   "customer": "Native Sun Hudson",
+   "ship_town": "Hudson",
+   "account_id": "A0219",
+   "share": 1.0,
+   "split": false,
+   "amount": 2748.62,
+   "open": 2748.62
+  },
+  {
+   "id": "7901",
+   "doc": "1779",
+   "date": "2026-10-23",
+   "due": "2026-11-22",
+   "total": 3792.98,
+   "balance": 3792.98,
+   "customer": "Native Sun North Attleboro",
+   "ship_town": "North Attleboro",
+   "account_id": "A0220",
+   "share": 1.0,
+   "split": false,
+   "amount": 3792.98,
+   "open": 3792.98
+  },
+  {
+   "id": "7900",
+   "doc": "1778",
+   "date": "2026-10-23",
+   "due": "2026-11-22",
+   "total": 3062.5,
+   "balance": 3062.5,
+   "customer": "Lazy River Tewksbury",
+   "ship_town": "Tewksbury",
+   "account_id": "A0196",
+   "share": 1.0,
+   "split": false,
+   "amount": 3062.5,
+   "open": 3062.5
+  },
+  {
+   "id": "7899",
+   "doc": "1777",
+   "date": "2026-10-23",
+   "due": "2026-11-22",
+   "total": 2887.5,
+   "balance": 2887.5,
+   "customer": "Lazy River Dracut",
+   "ship_town": "Dracut",
+   "account_id": "A0195",
+   "share": 1.0,
+   "split": false,
+   "amount": 2887.5,
+   "open": 2887.5
+  },
+  {
+   "id": "7865",
+   "doc": "1776",
+   "date": "2026-10-22",
+   "due": "2026-11-21",
+   "total": 2484.0,
+   "balance": 0,
+   "customer": "The Old Bank LLC dba The Piping Plover",
+   "ship_town": "Wellfleet",
+   "account_id": "A0251",
+   "share": 1.0,
+   "split": false,
+   "amount": 2484.0,
+   "open": 0.0
+  },
+  {
+   "id": "7851",
+   "doc": "1775",
+   "date": "2026-10-22",
+   "due": "2026-11-21",
+   "total": 5500.3,
+   "balance": 5500.3,
+   "customer": "House Premium",
+   "ship_town": "Tyngsborough",
+   "account_id": "A0173",
+   "share": 1.0,
+   "split": false,
+   "amount": 5500.3,
+   "open": 5500.3
+  },
+  {
+   "id": "7850",
+   "doc": "1774",
+   "date": "2026-10-22",
+   "due": "2026-11-21",
+   "total": 7995.0,
+   "balance": 7995.0,
+   "customer": "Eastern Cannabis Co.",
+   "ship_town": "Malden",
+   "account_id": "A0098",
+   "share": 1.0,
+   "split": false,
+   "amount": 7995.0,
+   "open": 7995.0
+  },
   {
    "id": "7803",
    "doc": "1773",
@@ -457,14 +607,14 @@
    "date": "2026-09-23",
    "due": "2026-10-23",
    "total": 8480.25,
-   "balance": 8480.25,
+   "balance": 0,
    "customer": "Eastern Cannabis Co.",
    "ship_town": "Malden",
    "account_id": "A0098",
    "share": 1.0,
    "split": false,
    "amount": 8480.25,
-   "open": 8480.25
+   "open": 0.0
   },
   {
    "id": "7616",
@@ -487,14 +637,14 @@
    "date": "2026-09-21",
    "due": "2026-10-21",
    "total": 6325.0,
-   "balance": 5916.0,
+   "balance": 0,
    "customer": "Reverie 73 Beverly",
    "ship_town": "Beverly",
    "account_id": "A0268",
    "share": 1.0,
    "split": false,
    "amount": 6325.0,
-   "open": 5916.0
+   "open": 0.0
   },
   {
    "id": "7567",
@@ -518,12 +668,42 @@
    "due": "2026-10-17",
    "total": 3694.5,
    "balance": 0,
-   "customer": "BeWell Organic Medicine",
+   "customer": "Resinate Merrimac",
    "ship_town": "Merrimac",
-   "account_id": "A0036",
-   "share": 1.0,
-   "split": false,
-   "amount": 3694.5,
+   "account_id": "A0515",
+   "share": 0.3333333333333333,
+   "split": true,
+   "amount": 1231.5,
+   "open": 0.0
+  },
+  {
+   "id": "7566",
+   "doc": "1734",
+   "date": "2026-09-17",
+   "due": "2026-10-17",
+   "total": 3694.5,
+   "balance": 0,
+   "customer": "Resinate Merrimac",
+   "ship_town": "Merrimac",
+   "account_id": "A0265",
+   "share": 0.3333333333333333,
+   "split": true,
+   "amount": 1231.5,
+   "open": 0.0
+  },
+  {
+   "id": "7566",
+   "doc": "1734",
+   "date": "2026-09-17",
+   "due": "2026-10-17",
+   "total": 3694.5,
+   "balance": 0,
+   "customer": "Resinate Merrimac",
+   "ship_town": "Merrimac",
+   "account_id": "A0266",
+   "share": 0.3333333333333333,
+   "split": true,
+   "amount": 1231.5,
    "open": 0.0
   },
   {
@@ -532,14 +712,14 @@
    "date": "2026-09-17",
    "due": "2026-10-17",
    "total": 2750.5,
-   "balance": 2750.5,
+   "balance": 0,
    "customer": "BoomX",
    "ship_town": "Shirley",
    "account_id": "A0039",
    "share": 1.0,
    "split": false,
    "amount": 2750.5,
-   "open": 2750.5
+   "open": 0.0
   },
   {
    "id": "7564",
@@ -547,14 +727,14 @@
    "date": "2026-09-17",
    "due": "2026-10-17",
    "total": 4100.0,
-   "balance": 4100.0,
+   "balance": 0,
    "customer": "Capeway Cannabis, LLC",
    "ship_town": "Carver",
    "account_id": "A0071",
    "share": 1.0,
    "split": false,
    "amount": 4100.0,
-   "open": 4100.0
+   "open": 0.0
   },
   {
    "id": "7563",
@@ -562,14 +742,14 @@
    "date": "2026-09-17",
    "due": "2026-10-17",
    "total": 6190.0,
-   "balance": 6190.0,
+   "balance": 0,
    "customer": "Capeway Cannabis - Bourne",
    "ship_town": "Bourne",
    "account_id": "A0071",
    "share": 1.0,
    "split": false,
    "amount": 6190.0,
-   "open": 6190.0
+   "open": 0.0
   },
   {
    "id": "7558",
@@ -577,14 +757,14 @@
    "date": "2026-09-16",
    "due": "2026-10-16",
    "total": 3320.0,
-   "balance": 3320.0,
+   "balance": 0,
    "customer": "Ascend Wellness Boston",
    "ship_town": "Boston",
    "account_id": "A0017",
    "share": 1.0,
    "split": false,
    "amount": 3320.0,
-   "open": 3320.0
+   "open": 0.0
   },
   {
    "id": "7552",
@@ -622,14 +802,14 @@
    "date": "2026-09-02",
    "due": "2026-10-02",
    "total": 4205.0,
-   "balance": 4205.0,
+   "balance": 0,
    "customer": "Harbor House Collective LLC",
    "ship_town": "Chelsea",
    "account_id": "A0148",
    "share": 1.0,
    "split": false,
    "amount": 4205.0,
-   "open": 4205.0
+   "open": 0.0
   },
   {
    "id": "7424",
@@ -637,14 +817,14 @@
    "date": "2026-09-02",
    "due": "2026-10-02",
    "total": 12595.0,
-   "balance": 12595.0,
+   "balance": 0,
    "customer": "Harbor House Collective LLC",
    "ship_town": "Chelsea",
    "account_id": "A0148",
    "share": 1.0,
    "split": false,
    "amount": 12595.0,
-   "open": 12595.0
+   "open": 0.0
   },
   {
    "id": "7421",
@@ -892,14 +1072,14 @@
    "date": "2026-08-28",
    "due": "2026-09-27",
    "total": 3280.0,
-   "balance": 3280.0,
+   "balance": 0,
    "customer": "EMBR (Northampton)",
    "ship_town": "Northampton",
    "account_id": "A0105",
    "share": 1.0,
    "split": false,
    "amount": 3280.0,
-   "open": 3280.0
+   "open": 0.0
   },
   {
    "id": "7394",
@@ -907,14 +1087,14 @@
    "date": "2026-08-28",
    "due": "2026-09-27",
    "total": 5740.0,
-   "balance": 3792.36,
+   "balance": 0,
    "customer": "Fyre Ants (Apical)",
    "ship_town": "",
    "account_id": "A0121",
    "share": 1.0,
    "split": false,
    "amount": 5740.0,
-   "open": 3792.36
+   "open": 0.0
   },
   {
    "id": "7393",
@@ -1192,14 +1372,14 @@
    "date": "2026-08-13",
    "due": "2026-09-12",
    "total": 3275.0,
-   "balance": 3025.0,
+   "balance": 0,
    "customer": "Ascend Wellness Boston",
    "ship_town": "Boston",
    "account_id": "A0017",
    "share": 1.0,
    "split": false,
    "amount": 3275.0,
-   "open": 3025.0
+   "open": 0.0
   },
   {
    "id": "7286",
@@ -5163,6 +5343,146 @@
   }
  ],
  "accounts": {
+  "A0320": {
+   "invoiced_2026": 20862.28,
+   "n": 4.0,
+   "open": 5987.75,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-27",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "The Vault - Webster"
+   ],
+   "open_alltime": 5987.75
+  },
+  "A0321": {
+   "invoiced_2026": 19252.78,
+   "n": 4.0,
+   "open": 7787.75,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-23",
+   "first_invoice": "2026-05-28",
+   "split_share": 0.0,
+   "customers": [
+    "The Vault - Worcester"
+   ],
+   "open_alltime": 7787.75
+  },
+  "A0221": {
+   "invoiced_2026": 1861.62,
+   "n": 1.0,
+   "open": 1861.62,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-23",
+   "first_invoice": "2026-10-23",
+   "split_share": 0.0,
+   "customers": [
+    "Native Sun South Boston"
+   ],
+   "open_alltime": 1861.62
+  },
+  "A0219": {
+   "invoiced_2026": 2748.62,
+   "n": 1.0,
+   "open": 2748.62,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-23",
+   "first_invoice": "2026-10-23",
+   "split_share": 0.0,
+   "customers": [
+    "Native Sun Hudson"
+   ],
+   "open_alltime": 2748.62
+  },
+  "A0220": {
+   "invoiced_2026": 3792.98,
+   "n": 1.0,
+   "open": 3792.98,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-23",
+   "first_invoice": "2026-10-23",
+   "split_share": 0.0,
+   "customers": [
+    "Native Sun North Attleboro"
+   ],
+   "open_alltime": 3792.98
+  },
+  "A0196": {
+   "invoiced_2026": 11128.27,
+   "n": 4.0,
+   "open": 3062.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-23",
+   "first_invoice": "2026-04-30",
+   "split_share": 0.0,
+   "customers": [
+    "Lazy River Tewksbury"
+   ],
+   "open_alltime": 3062.5
+  },
+  "A0195": {
+   "invoiced_2026": 13333.18,
+   "n": 4.0,
+   "open": 2887.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-23",
+   "first_invoice": "2026-04-30",
+   "split_share": 0.0,
+   "customers": [
+    "Lazy River Dracut"
+   ],
+   "open_alltime": 2887.5
+  },
+  "A0251": {
+   "invoiced_2026": 12795.0,
+   "n": 5.0,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-22",
+   "first_invoice": "2026-04-07",
+   "split_share": 0.0,
+   "customers": [
+    "The Old Bank LLC dba The Piping Plover"
+   ],
+   "open_alltime": 0.0
+  },
+  "A0173": {
+   "invoiced_2026": 35430.28,
+   "n": 4.0,
+   "open": 5500.3,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-22",
+   "first_invoice": "2026-01-13",
+   "split_share": 0.0,
+   "customers": [
+    "House Premium"
+   ],
+   "open_alltime": 5500.3
+  },
+  "A0098": {
+   "invoiced_2026": 82321.83,
+   "n": 11.0,
+   "open": 7995.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-22",
+   "first_invoice": "2026-01-20",
+   "split_share": 0.0,
+   "customers": [
+    "Eastern Cannabis Co."
+   ],
+   "open_alltime": 7995.0
+  },
   "A0270": {
    "invoiced_2026": 32817.95,
    "n": 8.0,
@@ -5194,7 +5514,7 @@
   "A0268": {
    "invoiced_2026": 43703.3,
    "n": 10.0,
-   "open": 10081.0,
+   "open": 4165.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-14",
@@ -5203,7 +5523,7 @@
    "customers": [
     "Reverie 73 Beverly"
    ],
-   "open_alltime": 10081.0
+   "open_alltime": 4165.0
   },
   "A0297": {
    "invoiced_2026": 68521.16,
@@ -5477,8 +5797,8 @@
    "invoiced_2026": 19122.43,
    "n": 4.0,
    "open": 6425.25,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
+   "past_due": 6425.25,
+   "oldest_due_days": 2,
    "last_invoice": "2026-09-24",
    "first_invoice": "2026-01-30",
    "split_share": 0.0,
@@ -5571,20 +5891,6 @@
    ],
    "open_alltime": 0.0
   },
-  "A0098": {
-   "invoiced_2026": 74326.83,
-   "n": 10.0,
-   "open": 8480.25,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-01-20",
-   "split_share": 0.0,
-   "customers": [
-    "Eastern Cannabis Co."
-   ],
-   "open_alltime": 8480.25
-  },
   "A0299": {
    "invoiced_2026": 3271.75,
    "n": 1.0,
@@ -5600,53 +5906,68 @@
    "open_alltime": 0.0
   },
   "A0266": {
-   "invoiced_2026": 32140.97,
-   "n": 8.0,
+   "invoiced_2026": 33372.47,
+   "n": 8.33,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-09-17",
    "first_invoice": "2026-01-28",
-   "split_share": 0.0,
+   "split_share": 1231.5,
    "customers": [
+    "Resinate Merrimac",
     "Resinate Worcester"
    ],
    "open_alltime": 0.0
   },
-  "A0036": {
-   "invoiced_2026": 3694.5,
-   "n": 1.0,
+  "A0515": {
+   "invoiced_2026": 88906.25,
+   "n": 7.33,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-09-17",
+   "first_invoice": "2026-01-28",
+   "split_share": 1231.5,
+   "customers": [
+    "Resinate Merrimac",
+    "Resinate, Inc."
+   ],
+   "open_alltime": 0.0
+  },
+  "A0265": {
+   "invoiced_2026": 1231.5,
+   "n": 0.33,
    "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-09-17",
    "first_invoice": "2026-09-17",
-   "split_share": 0.0,
+   "split_share": 1231.5,
    "customers": [
-    "BeWell Organic Medicine"
-   ],
-   "open_alltime": 0.0
+    "Resinate Merrimac"
+   ]
   },
   "A0039": {
    "invoiced_2026": 4259.35,
    "n": 2.0,
-   "open": 2750.5,
-   "past_due": 2750.5,
-   "oldest_due_days": 2,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-09-17",
    "first_invoice": "2026-06-05",
    "split_share": 0.0,
    "customers": [
     "BoomX"
    ],
-   "open_alltime": 2750.5
+   "open_alltime": 0.0
   },
   "A0071": {
    "invoiced_2026": 33842.25,
    "n": 8.0,
-   "open": 10290.0,
-   "past_due": 10290.0,
-   "oldest_due_days": 2,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-09-17",
    "first_invoice": "2026-01-07",
    "split_share": 0.0,
@@ -5654,21 +5975,21 @@
     "Capeway Cannabis - Bourne",
     "Capeway Cannabis, LLC"
    ],
-   "open_alltime": 10290.0
+   "open_alltime": 0.0
   },
   "A0017": {
    "invoiced_2026": 10103.75,
    "n": 3.0,
-   "open": 6345.0,
-   "past_due": 6345.0,
-   "oldest_due_days": 37,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-09-16",
    "first_invoice": "2026-06-12",
    "split_share": 0.0,
    "customers": [
     "Ascend Wellness Boston"
    ],
-   "open_alltime": 6345.0
+   "open_alltime": 0.0
   },
   "A0117": {
    "invoiced_2026": 10648.3,
@@ -5687,16 +6008,16 @@
   "A0148": {
    "invoiced_2026": 34041.5,
    "n": 4.0,
-   "open": 16800.0,
-   "past_due": 16800.0,
-   "oldest_due_days": 17,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-09-02",
    "first_invoice": "2026-05-28",
    "split_share": 0.0,
    "customers": [
     "Harbor House Collective LLC"
    ],
-   "open_alltime": 16800.0
+   "open_alltime": 0.0
   },
   "A0046": {
    "invoiced_2026": 17966.11,
@@ -5717,7 +6038,7 @@
    "n": 4.0,
    "open": 1800.0,
    "past_due": 1800.0,
-   "oldest_due_days": 19,
+   "oldest_due_days": 26,
    "last_invoice": "2026-08-31",
    "first_invoice": "2026-01-30",
    "split_share": 0.0,
@@ -5787,7 +6108,7 @@
    "n": 1.0,
    "open": 1997.81,
    "past_due": 1997.81,
-   "oldest_due_days": 19,
+   "oldest_due_days": 26,
    "last_invoice": "2026-08-31",
    "first_invoice": "2026-08-31",
    "split_share": 0.0,
@@ -5801,7 +6122,7 @@
    "n": 1.0,
    "open": 1997.81,
    "past_due": 1997.81,
-   "oldest_due_days": 19,
+   "oldest_due_days": 26,
    "last_invoice": "2026-08-31",
    "first_invoice": "2026-08-31",
    "split_share": 0.0,
@@ -5810,61 +6131,33 @@
    ],
    "open_alltime": 1997.81
   },
-  "A0321": {
-   "invoiced_2026": 11465.03,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-28",
-   "first_invoice": "2026-05-28",
-   "split_share": 0.0,
-   "customers": [
-    "The Vault - Worcester"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0320": {
-   "invoiced_2026": 14874.53,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-28",
-   "first_invoice": "2026-05-28",
-   "split_share": 0.0,
-   "customers": [
-    "The Vault - Webster"
-   ],
-   "open_alltime": 0.0
-  },
   "A0105": {
    "invoiced_2026": 17515.0,
    "n": 4.0,
-   "open": 3280.0,
-   "past_due": 3280.0,
-   "oldest_due_days": 22,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-08-28",
    "first_invoice": "2026-01-20",
    "split_share": 0.0,
    "customers": [
     "EMBR (Northampton)"
    ],
-   "open_alltime": 3280.0
+   "open_alltime": 0.0
   },
   "A0121": {
    "invoiced_2026": 49157.5,
    "n": 6.0,
-   "open": 3792.36,
-   "past_due": 3792.36,
-   "oldest_due_days": 22,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-08-28",
    "first_invoice": "2026-01-20",
    "split_share": 0.0,
    "customers": [
     "Fyre Ants (Apical)"
    ],
-   "open_alltime": 3792.36
+   "open_alltime": 0.0
   },
   "A0511": {
    "invoiced_2026": 47850.62,
@@ -5885,7 +6178,7 @@
    "n": 3.0,
    "open": 3775.0,
    "past_due": 3775.0,
-   "oldest_due_days": 24,
+   "oldest_due_days": 31,
    "last_invoice": "2026-08-26",
    "first_invoice": "2026-04-21",
    "split_share": 0.0,
@@ -5895,34 +6188,6 @@
     "Lowkey West Roxbury"
    ],
    "open_alltime": 3775.0
-  },
-  "A0196": {
-   "invoiced_2026": 8065.77,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-18",
-   "first_invoice": "2026-04-30",
-   "split_share": 0.0,
-   "customers": [
-    "Lazy River Tewksbury"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0195": {
-   "invoiced_2026": 10445.68,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-18",
-   "first_invoice": "2026-04-30",
-   "split_share": 0.0,
-   "customers": [
-    "Lazy River Dracut"
-   ],
-   "open_alltime": 0.0
   },
   "A0153": {
    "invoiced_2026": 14208.9,
@@ -5991,34 +6256,6 @@
    "split_share": 0.0,
    "customers": [
     "Cape Cod Cannabis"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0251": {
-   "invoiced_2026": 10311.0,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-11",
-   "first_invoice": "2026-04-07",
-   "split_share": 0.0,
-   "customers": [
-    "The Old Bank LLC dba The Piping Plover"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0515": {
-   "invoiced_2026": 87674.75,
-   "n": 7.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-07-30",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "Resinate, Inc."
    ],
    "open_alltime": 0.0
   },
@@ -6241,20 +6478,6 @@
    "split_share": 0.0,
    "customers": [
     "Roslindale Cannabis Co"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0173": {
-   "invoiced_2026": 29929.98,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-04-23",
-   "first_invoice": "2026-01-13",
-   "split_share": 0.0,
-   "customers": [
-    "House Premium"
    ],
    "open_alltime": 0.0
   },
@@ -6624,20 +6847,39 @@
  },
  "unmapped": [],
  "recon": {
-  "matched": 341,
-  "orders_without_invoice": [],
+  "matched": 351,
+  "orders_without_invoice": [
+   {
+    "order_id": "Odc7c80af",
+    "account_id": "A0275",
+    "date": "2026-10-21",
+    "total": 8725
+   },
+   {
+    "order_id": "Omvi8adk0y3xn",
+    "account_id": "A0063",
+    "date": "2026-10-21",
+    "total": 5315
+   },
+   {
+    "order_id": "Omvicvbxdm287",
+    "account_id": "A0009",
+    "date": "2026-10-21",
+    "total": 4580
+   }
+  ],
   "invoices_without_order": [],
   "orders_total_from_qbo": [],
   "amount_differs": [],
   "chain_pairs": []
  },
  "totals": {
-  "invoiced_2026": 1624199.19,
-  "open": 150497.32,
-  "past_due": 52828.48,
-  "invoices": 342,
-  "customers": 107,
-  "mapped_customers": 107,
+  "invoiced_2026": 1668307.21,
+  "open": 134467.23,
+  "past_due": 15995.87,
+  "invoices": 352,
+  "customers": 110,
+  "mapped_customers": 110,
   "unmapped_customers": 0
  }
 }

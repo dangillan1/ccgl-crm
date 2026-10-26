@@ -27,7 +27,7 @@
  {
   "id": "528",
   "name": "Ascend Wellness Boston",
-  "balance": 6345.0
+  "balance": 0.0
  },
  {
   "id": "529",
@@ -37,11 +37,6 @@
  {
   "id": "444",
   "name": "BOUTIQ",
-  "balance": 0.0
- },
- {
-  "id": "415",
-  "name": "BeWell Organic Medicine",
   "balance": 0.0
  },
  {
@@ -62,7 +57,7 @@
  {
   "id": "522",
   "name": "BoomX",
-  "balance": 2750.5
+  "balance": 0.0
  },
  {
   "id": "489",
@@ -167,12 +162,12 @@
  {
   "id": "533",
   "name": "Capeway Cannabis - Bourne",
-  "balance": 6190.0
+  "balance": 0.0
  },
  {
   "id": "352",
   "name": "Capeway Cannabis, LLC",
-  "balance": 4100.0
+  "balance": 0.0
  },
  {
   "id": "386",
@@ -202,12 +197,17 @@
  {
   "id": "479",
   "name": "EMBR (Northampton)",
-  "balance": 3280.0
+  "balance": 0.0
  },
  {
   "id": "358",
   "name": "Eastern Cannabis Co.",
-  "balance": 8480.25
+  "balance": 7995.0
+ },
+ {
+  "id": "100000071",
+  "name": "Eddie's Flower Dispensary",
+  "balance": 0.0
  },
  {
   "id": "484",
@@ -302,7 +302,7 @@
  {
   "id": "460",
   "name": "Fyre Ants (Apical)",
-  "balance": 3792.36
+  "balance": 0.0
  },
  {
   "id": "368",
@@ -352,7 +352,7 @@
  {
   "id": "328",
   "name": "Harbor House Collective LLC",
-  "balance": 16800.0
+  "balance": 0.0
  },
  {
   "id": "398",
@@ -417,7 +417,7 @@
  {
   "id": "448",
   "name": "House Premium",
-  "balance": 0.0
+  "balance": 5500.3
  },
  {
   "id": "406",
@@ -467,12 +467,12 @@
  {
   "id": "515",
   "name": "Lazy River Dracut",
-  "balance": 0.0
+  "balance": 2887.5
  },
  {
   "id": "516",
   "name": "Lazy River Tewksbury",
-  "balance": 0.0
+  "balance": 3062.5
  },
  {
   "id": "402",
@@ -537,17 +537,17 @@
  {
   "id": "100000051",
   "name": "Native Sun Hudson",
-  "balance": 0.0
+  "balance": 2748.62
  },
  {
   "id": "100000041",
   "name": "Native Sun North Attleboro",
-  "balance": 0.0
+  "balance": 3792.98
  },
  {
   "id": "100000061",
   "name": "Native Sun South Boston",
-  "balance": 0.0
+  "balance": 1861.62
  },
  {
   "id": "347",
@@ -650,6 +650,11 @@
   "balance": 0.0
  },
  {
+  "id": "415",
+  "name": "Resinate Merrimac",
+  "balance": 0.0
+ },
+ {
   "id": "414",
   "name": "Resinate Northampton",
   "balance": 0.0
@@ -667,7 +672,7 @@
  {
   "id": "376",
   "name": "Reverie 73 Beverly",
-  "balance": 10081.0
+  "balance": 4165.0
  },
  {
   "id": "375",
@@ -817,12 +822,12 @@
  {
   "id": "526",
   "name": "The Vault - Webster",
-  "balance": 0.0
+  "balance": 5987.75
  },
  {
   "id": "527",
   "name": "The Vault - Worcester",
-  "balance": 0.0
+  "balance": 7787.75
  },
  {
   "id": "467",
