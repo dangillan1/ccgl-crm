@@ -1057,5 +1057,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods",
   "date": "2026-10-23"
+ },
+ {
+  "id": "Xmvpcljjllei9",
+  "ts": "2026-10-26T14:24:37.425Z",
+  "account_id": "A0266",
+  "type": "Order",
+  "note": "Order updated: Confirmed $4,718 · Oct 21, 26",
+  "date": "2026-10-21"
  }
 ]
