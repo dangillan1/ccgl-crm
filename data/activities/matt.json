@@ -246,5 +246,14 @@
   "type": "Task",
   "note": "Next step: Schedule tour of Grow Lab and Ember Gardens for their Sandwich Staff (due Oct 30, 26)",
   "date": "2026-10-26"
+ },
+ {
+  "id": "Xmvplm3dpagdr",
+  "ts": "2026-10-26T18:36:59.677Z",
+  "account_id": "A0435",
+  "type": "Call",
+  "note": "Reached out regarding new pop-up date",
+  "date": "2026-10-23",
+  "contact_id": "C948b6757"
  }
 ]
