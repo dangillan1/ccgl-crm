@@ -296,8 +296,10 @@
   "ts": "2026-10-26T18:46:52.209Z",
   "account_id": "A0339",
   "type": "Text",
-  "note": "",
+  "note": "Reached out about reorder",
   "date": "2026-10-06",
-  "contact_id": "Cc03225e1"
+  "contact_id": "Cc03225e1",
+  "edited_at": "2026-10-26",
+  "edited_by": "matt"
  }
 ]
