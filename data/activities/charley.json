@@ -112,5 +112,13 @@
   "type": "Note",
   "note": "Created as active account",
   "date": "2026-10-27"
+ },
+ {
+  "id": "Xmvr4bkcf7hzd",
+  "ts": "2026-10-27T20:08:27.327Z",
+  "account_id": "Amvr4a0jdq24k",
+  "type": "Order",
+  "note": "Confirmed order $2,768 · Finished Goods · 10% off and promos to win customer back",
+  "date": "2026-10-27"
  }
 ]
