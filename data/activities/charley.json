@@ -104,5 +104,13 @@
   "type": "Order",
   "note": "Confirmed order $2,760 · Finished Goods · Same Day",
   "date": "2026-10-19"
+ },
+ {
+  "id": "Xmvr4a3zfzsp7",
+  "ts": "2026-10-27T20:07:19.467Z",
+  "account_id": "Amvr4a0jdq24k",
+  "type": "Note",
+  "note": "Created as active account",
+  "date": "2026-10-27"
  }
 ]
