@@ -120,5 +120,13 @@
   "type": "Order",
   "note": "Confirmed order $2,768 · Finished Goods · 10% off and promos to win customer back",
   "date": "2026-10-27"
+ },
+ {
+  "id": "Xmvr4efywxqzd",
+  "ts": "2026-10-27T20:10:41.624Z",
+  "account_id": "A0104",
+  "type": "Order",
+  "note": "Confirmed order $4,166 · Finished Goods",
+  "date": "2026-10-27"
  }
 ]
