@@ -19761,5 +19761,23 @@
   "edited_in_crm": true,
   "edited_by": "joey",
   "edited_at": "2026-10-26"
+ },
+ {
+  "id": "Omvr4bi950k02",
+  "date": "2026-10-27",
+  "account_id": "Amvr4a0jdq24k",
+  "account_raw": "Roslindale Cannabis Co",
+  "license": "MR281755",
+  "status": "Confirmed",
+  "contact_name": "",
+  "contact_email": "",
+  "delivery_date": "2026-11-02",
+  "total": 2768,
+  "owner": "Charley",
+  "mix": "Finished Goods",
+  "special": "10% off and promos to win customer back",
+  "samples": true,
+  "source": "CRM",
+  "created_by": "charley"
  }
 ]
