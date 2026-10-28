@@ -19804,16 +19804,19 @@
   "account_id": "A0146",
   "account_raw": "GreenSoul Organics",
   "license": "MR284855",
-  "status": "Planned",
+  "status": "Confirmed",
   "contact_name": "Kate Hastleton",
   "contact_email": "kate@smokegreensoul.com",
-  "delivery_date": "",
-  "total": 3200,
+  "delivery_date": "2026-11-02",
+  "total": 3425,
   "owner": "Joey",
-  "mix": "Finished Goods",
-  "special": "",
+  "mix": "Bulk & FG",
+  "special": "50/50 COD 2nd payment - Terms Agreement 2/3",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-10-28"
  }
 ]
