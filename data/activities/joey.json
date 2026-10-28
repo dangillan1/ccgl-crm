@@ -1185,5 +1185,13 @@
   "type": "Order",
   "note": "Confirmed order $2,430 · Finished Goods",
   "date": "2026-10-28"
+ },
+ {
+  "id": "Xmvslkav8mhk7",
+  "ts": "2026-10-28T20:58:54.596Z",
+  "account_id": "A0017",
+  "type": "Order",
+  "note": "Order updated: Pending $2,430 · Oct 28, 26",
+  "date": "2026-10-28"
  }
 ]
