@@ -19797,5 +19797,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "charley"
+ },
+ {
+  "id": "Omvse2g0tz0gn",
+  "date": "2026-10-28",
+  "account_id": "A0146",
+  "account_raw": "GreenSoul Organics",
+  "license": "MR284855",
+  "status": "Planned",
+  "contact_name": "Kate Hastleton",
+  "contact_email": "kate@smokegreensoul.com",
+  "delivery_date": "",
+  "total": 3200,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
