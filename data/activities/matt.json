@@ -367,8 +367,10 @@
   "ts": "2026-10-29T17:25:48.790Z",
   "account_id": "A0192",
   "type": "Call",
-  "note": "",
+  "note": "Clinton location now open\nPart of buyer group with Matt Behymer - wants same pricing\nHad to clearance all our products after 45 days\nNeeds product to move in 45 days\nAll samples through METRC",
   "date": "2026-10-28",
-  "contact_id": "C42a52cf4"
+  "contact_id": "C42a52cf4",
+  "edited_at": "2026-10-29",
+  "edited_by": "matt"
  }
 ]
