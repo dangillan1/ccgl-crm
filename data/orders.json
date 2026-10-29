@@ -19834,19 +19834,19 @@
   "account_id": "A0017",
   "account_raw": "Ascend Wellness",
   "license": "MR282077",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Roger Williamson",
   "contact_email": "rwilliamson@awholdings.com",
   "delivery_date": "2026-11-02",
   "total": 2430,
   "owner": "Joey",
   "mix": "Finished Goods",
-  "special": "",
+  "special": "SCHEDULE VIA CALENDAR LINK",
   "samples": false,
   "source": "CRM",
   "created_by": "joey",
   "edited_in_crm": true,
   "edited_by": "joey",
-  "edited_at": "2026-10-28"
+  "edited_at": "2026-10-29"
  }
 ]
