@@ -350,5 +350,14 @@
   "note": "Called store - good to drop off samples in the afternoon 1-4pm",
   "date": "2026-10-26",
   "contact_id": null
+ },
+ {
+  "id": "Xmvtqaair0dqi",
+  "ts": "2026-10-29T15:58:51.843Z",
+  "account_id": "A0070",
+  "type": "Call",
+  "note": "",
+  "date": "2026-10-29",
+  "contact_id": "C69d1590c"
  }
 ]
