@@ -356,8 +356,10 @@
   "ts": "2026-10-29T15:58:51.843Z",
   "account_id": "A0070",
   "type": "Call",
-  "note": "",
+  "note": "- Wants to lock in pricing with us\n- Trifecta, COD = $13.75 (not sure if that's true)\n- Online presence/menu assets need work\n- Ounces move very well for them\n- Order landed 8/15 - (3) SKUs sitting on the shelf still - 10/29",
   "date": "2026-10-29",
-  "contact_id": "C69d1590c"
+  "contact_id": "C69d1590c",
+  "edited_at": "2026-10-29",
+  "edited_by": "matt"
  }
 ]
