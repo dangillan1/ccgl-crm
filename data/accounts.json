@@ -5204,21 +5204,26 @@
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR285223",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
   "name": "Joint Operations",
-  "town": "",
-  "address": "",
+  "town": "Worcester",
+  "address": "142 Southbridge Street",
   "license_type": "Dispensary",
   "status": "Prospect",
-  "grade": "",
+  "grade": "A",
   "owner": "Joey",
   "last_contact": "2026-04-29",
   "next_contact": "2026-05-13",
   "notes": "",
-  "sheet_row": 191
+  "sheet_row": 191,
+  "crm_edits": {
+   "town": "2026-10-30",
+   "address": "2026-10-30",
+   "license_number": "2026-10-30"
+  }
  },
  {
   "id": "A0187",
