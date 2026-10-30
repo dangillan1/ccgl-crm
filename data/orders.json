@@ -19851,5 +19851,23 @@
   "edited_in_crm": true,
   "edited_by": "joey",
   "edited_at": "2026-10-29"
+ },
+ {
+  "id": "Omvval2svud8b",
+  "date": "2026-10-30",
+  "account_id": "A0297",
+  "account_raw": "Sublime Cannabis",
+  "license": "MR284871",
+  "status": "Confirmed",
+  "contact_name": "Rob Catania",
+  "contact_email": "rob@sublimecannabis.co",
+  "delivery_date": "2026-11-03",
+  "total": 6300,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
