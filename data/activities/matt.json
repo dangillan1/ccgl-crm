@@ -372,5 +372,14 @@
   "contact_id": "C42a52cf4",
   "edited_at": "2026-10-29",
   "edited_by": "matt"
+ },
+ {
+  "id": "Xmvuz78nkpfqd",
+  "ts": "2026-10-30T12:56:12.177Z",
+  "account_id": "A0192",
+  "type": "Email",
+  "note": "",
+  "date": "2026-10-30",
+  "contact_id": "C42a52cf4"
  }
 ]
