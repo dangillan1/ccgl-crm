@@ -137,16 +137,31 @@
  "A0045": {
   "ccc": {
    "file": {
-    "path": "accounts/A0045/ccc/2026-10-15_mv9vnee01x4d.pdf",
-    "sha": "5dc23ea633234115a6b181fdca836c563825c56f",
+    "path": "accounts/A0045/ccc/2026-10-30_mvv9yvvr6apj.pdf",
+    "sha": "5a290171c63f1dbacfc3a558d5bf7cc97179c8c4",
     "name": "CCC License - Boutiq (East Boston).pdf",
-    "size": 3923607,
+    "size": 1373639,
     "type": "application/pdf"
    },
    "uploaded_by": "joey",
-   "uploaded_at": "2026-10-15",
-   "expires": "2026-11-17",
-   "history": []
+   "uploaded_at": "2026-10-30",
+   "expires": "2027-11-17",
+   "history": [
+    {
+     "file": {
+      "path": "accounts/A0045/ccc/2026-10-15_mv9vnee01x4d.pdf",
+      "sha": "5dc23ea633234115a6b181fdca836c563825c56f",
+      "name": "CCC License - Boutiq (East Boston).pdf",
+      "size": 3923607,
+      "type": "application/pdf"
+     },
+     "uploaded_by": "joey",
+     "uploaded_at": "2026-10-15",
+     "expires": "2026-11-17",
+     "replaced_at": "2026-10-30",
+     "replaced_by": "joey"
+    }
+   ]
   },
   "st4": {
    "file": {
