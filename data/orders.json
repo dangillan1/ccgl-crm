@@ -19869,5 +19869,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omvvbal4rka1a",
+  "date": "2026-10-30",
+  "account_id": "A0189",
+  "account_raw": "Joint Operations",
+  "license": "",
+  "status": "Pending",
+  "contact_name": "Jill Roberts",
+  "contact_email": "jillroberts@jointoperations.com",
+  "delivery_date": "",
+  "total": 1721.25,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "15% first-time buyer",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
