@@ -5231,8 +5231,8 @@
   "sheet_key": "jointoperations|gardiner",
   "source": "Master",
   "parent": "Joint Operations",
-  "stage": "New",
-  "stage_entered": "2026-09-25",
+  "stage": "Customer",
+  "stage_entered": "2026-10-30",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "",
@@ -5243,13 +5243,16 @@
   "town": "Gardiner",
   "address": "320 W Broadway",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "A",
   "owner": "Joey",
   "last_contact": "2026-04-29",
   "next_contact": "2026-05-13",
   "notes": "",
-  "sheet_row": 188
+  "sheet_row": 188,
+  "crm_edits": {
+   "status": "2026-10-30"
+  }
  },
  {
   "id": "A0188",
