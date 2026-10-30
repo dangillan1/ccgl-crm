@@ -1281,5 +1281,13 @@
   "type": "Stage",
   "note": "Prospect → Active",
   "date": "2026-10-30"
+ },
+ {
+  "id": "Xmvvau6koxzao",
+  "ts": "2026-10-30T18:21:58.344Z",
+  "account_id": "A0187",
+  "type": "Edit",
+  "note": "Removed Lizzy Miller · lizzymiller@jointoperations.com",
+  "date": "2026-10-30"
  }
 ]
