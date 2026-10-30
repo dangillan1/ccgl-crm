@@ -1249,5 +1249,13 @@
   "type": "Order",
   "note": "Confirmed order $6,300 · Finished Goods",
   "date": "2026-10-30"
+ },
+ {
+  "id": "Xmvvap86e9ils",
+  "ts": "2026-10-30T18:18:07.142Z",
+  "account_id": "A0188",
+  "type": "Stage",
+  "note": "Prospect → Active",
+  "date": "2026-10-30"
  }
 ]
