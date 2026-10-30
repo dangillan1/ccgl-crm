@@ -1305,5 +1305,13 @@
   "type": "Order",
   "note": "Pending order $1,721 · Finished Goods · 15% first-time buyer",
   "date": "2026-10-30"
+ },
+ {
+  "id": "Xmvvbbcw2dll1",
+  "ts": "2026-10-30T18:35:19.682Z",
+  "account_id": "A0188",
+  "type": "Order",
+  "note": "Pending order $2,359 · Finished Goods · 15% first-time buyer",
+  "date": "2026-10-30"
  }
 ]
