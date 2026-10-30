@@ -1273,5 +1273,13 @@
   "type": "Stage",
   "note": "Prospect → Active",
   "date": "2026-10-30"
+ },
+ {
+  "id": "Xmvvasbvtupr0",
+  "ts": "2026-10-30T18:20:31.913Z",
+  "account_id": "A0189",
+  "type": "Stage",
+  "note": "Prospect → Active",
+  "date": "2026-10-30"
  }
 ]
