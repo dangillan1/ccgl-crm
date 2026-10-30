@@ -5200,8 +5200,8 @@
   "sheet_key": "jointoperations|",
   "source": "Master",
   "parent": "Joint Operations",
-  "stage": "New",
-  "stage_entered": "2026-09-25",
+  "stage": "Customer",
+  "stage_entered": "2026-10-30",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "MR285223",
@@ -5212,7 +5212,7 @@
   "town": "Worcester",
   "address": "142 Southbridge Street",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "A",
   "owner": "Joey",
   "last_contact": "2026-04-29",
@@ -5222,7 +5222,8 @@
   "crm_edits": {
    "town": "2026-10-30",
    "address": "2026-10-30",
-   "license_number": "2026-10-30"
+   "license_number": "2026-10-30",
+   "status": "2026-10-30"
   }
  },
  {
