@@ -148,6 +148,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-10-30"
+  },
+  {
+   "id": "C81745540",
+   "account_id": "A0187",
+   "email": "lizzymiller@jointoperations.com",
+   "name": "Lizzy Miller",
+   "source": "Random Data 31826",
+   "removed_by": "joey",
+   "removed_at": "2026-10-30"
   }
  ]
 }
