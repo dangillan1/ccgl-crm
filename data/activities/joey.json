@@ -1233,5 +1233,13 @@
   "type": "Edit",
   "note": "Removed Emily Robinson (Buyer) · emily@primetimecap.com",
   "date": "2026-10-30"
+ },
+ {
+  "id": "Xmvv9yz9h7lp3",
+  "ts": "2026-10-30T17:57:42.533Z",
+  "account_id": "A0045",
+  "type": "Doc",
+  "note": "CCC License replaced — expires Nov 17, 27",
+  "date": "2026-10-30"
  }
 ]
