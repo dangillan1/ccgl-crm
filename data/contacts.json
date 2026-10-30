@@ -1579,17 +1579,6 @@
   "primary": false
  },
  {
-  "id": "Cf79479a7",
-  "account_id": "A0045",
-  "name": "Emily Robinson",
-  "email": "emily@primetimecap.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Master",
-  "primary": true,
-  "sheet_slot": 1
- },
- {
   "id": "C1da1991e",
   "account_id": "A0045",
   "name": "",
