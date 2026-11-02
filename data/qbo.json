@@ -280,41 +280,11 @@
    "balance": 4052.5,
    "customer": "Resinate Merrimac",
    "ship_town": "Merrimac",
-   "account_id": "A0515",
-   "share": 0.3333333333333333,
-   "split": true,
-   "amount": 1350.83,
-   "open": 1350.83
-  },
-  {
-   "id": "7919",
-   "doc": "1788",
-   "date": "2026-10-28",
-   "due": "2026-11-27",
-   "total": 4052.5,
-   "balance": 4052.5,
-   "customer": "Resinate Merrimac",
-   "ship_town": "Merrimac",
-   "account_id": "A0265",
-   "share": 0.3333333333333333,
-   "split": true,
-   "amount": 1350.83,
-   "open": 1350.83
-  },
-  {
-   "id": "7919",
-   "doc": "1788",
-   "date": "2026-10-28",
-   "due": "2026-11-27",
-   "total": 4052.5,
-   "balance": 4052.5,
-   "customer": "Resinate Merrimac",
-   "ship_town": "Merrimac",
-   "account_id": "A0266",
-   "share": 0.3333333333333333,
-   "split": true,
-   "amount": 1350.83,
-   "open": 1350.83
+   "account_id": "A0036",
+   "share": 1.0,
+   "split": false,
+   "amount": 4052.5,
+   "open": 4052.5
   },
   {
    "id": "7918",
@@ -1045,40 +1015,10 @@
    "balance": 0,
    "customer": "Resinate Merrimac",
    "ship_town": "Merrimac",
-   "account_id": "A0515",
-   "share": 0.3333333333333333,
-   "split": true,
-   "amount": 1231.5,
-   "open": 0.0
-  },
-  {
-   "id": "7566",
-   "doc": "1734",
-   "date": "2026-09-17",
-   "due": "2026-10-17",
-   "total": 3694.5,
-   "balance": 0,
-   "customer": "Resinate Merrimac",
-   "ship_town": "Merrimac",
-   "account_id": "A0265",
-   "share": 0.3333333333333333,
-   "split": true,
-   "amount": 1231.5,
-   "open": 0.0
-  },
-  {
-   "id": "7566",
-   "doc": "1734",
-   "date": "2026-09-17",
-   "due": "2026-10-17",
-   "total": 3694.5,
-   "balance": 0,
-   "customer": "Resinate Merrimac",
-   "ship_town": "Merrimac",
-   "account_id": "A0266",
-   "share": 0.3333333333333333,
-   "split": true,
-   "amount": 1231.5,
+   "account_id": "A0036",
+   "share": 1.0,
+   "split": false,
+   "amount": 3694.5,
    "open": 0.0
   },
   {
@@ -5957,50 +5897,33 @@
    ],
    "open_alltime": 12103.0
   },
-  "A0515": {
-   "invoiced_2026": 95361.08,
-   "n": 8.67,
-   "open": 6454.83,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-10-28",
-   "first_invoice": "2026-01-28",
-   "split_share": 2582.33,
-   "customers": [
-    "Resinate Merrimac",
-    "Resinate, Inc."
-   ],
-   "open_alltime": 5104.0
-  },
-  "A0265": {
-   "invoiced_2026": 6459.83,
-   "n": 1.67,
-   "open": 5228.33,
+  "A0036": {
+   "invoiced_2026": 7747.0,
+   "n": 2.0,
+   "open": 4052.5,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-28",
    "first_invoice": "2026-09-17",
-   "split_share": 2582.33,
+   "split_share": 0.0,
    "customers": [
-    "Resinate Merrimac",
-    "Resinate Northampton"
+    "Resinate Merrimac"
    ],
-   "open_alltime": 3877.5
+   "open_alltime": 4052.5
   },
-  "A0266": {
-   "invoiced_2026": 39440.8,
-   "n": 9.67,
-   "open": 6068.33,
+  "A0265": {
+   "invoiced_2026": 3877.5,
+   "n": 1.0,
+   "open": 3877.5,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-28",
-   "first_invoice": "2026-01-28",
-   "split_share": 2582.33,
+   "first_invoice": "2026-10-28",
+   "split_share": 0.0,
    "customers": [
-    "Resinate Merrimac",
-    "Resinate Worcester"
+    "Resinate Northampton"
    ],
-   "open_alltime": 4717.5
+   "open_alltime": 3877.5
   },
   "A0009": {
    "invoiced_2026": 36413.0,
@@ -6015,6 +5938,34 @@
     "Apex Noire"
    ],
    "open_alltime": 8830.0
+  },
+  "A0515": {
+   "invoiced_2026": 92778.75,
+   "n": 8.0,
+   "open": 5104.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-27",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Resinate, Inc."
+   ],
+   "open_alltime": 5104.0
+  },
+  "A0266": {
+   "invoiced_2026": 36858.47,
+   "n": 9.0,
+   "open": 4717.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-27",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "Resinate Worcester"
+   ],
+   "open_alltime": 4717.5
   },
   "A0320": {
    "invoiced_2026": 20862.28,
@@ -7225,14 +7176,7 @@
  "unmapped": [],
  "recon": {
   "matched": 374,
-  "orders_without_invoice": [
-   {
-    "order_id": "Omvi831mafp32",
-    "account_id": "A0036",
-    "date": "2026-10-21",
-    "total": 4052.5
-   }
-  ],
+  "orders_without_invoice": [],
   "invoices_without_order": [],
   "orders_total_from_qbo": [],
   "amount_differs": [],

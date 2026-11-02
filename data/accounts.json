@@ -983,7 +983,7 @@
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
-  "name": "BeWell Organics",
+  "name": "Resinate",
   "town": "Merrimac",
   "address": "17 Broad St",
   "license_type": "Dispensary",
@@ -992,10 +992,13 @@
   "owner": "Joey",
   "last_contact": "",
   "next_contact": "1900-01-14",
-  "notes": "",
+  "notes": "Formerly \"BeWell Organics\" (Master sheet); QuickBooks customer renamed Resinate Merrimac 2026-10-26.",
   "sheet_row": 37,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "name": "2026-11-02"
+  }
  },
  {
   "id": "A0037",

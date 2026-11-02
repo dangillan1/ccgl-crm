@@ -109,9 +109,9 @@
    "account": "A0515",
    "priority": "medium",
    "kind": "protect",
-   "headline": "Resinate Douglas — still #1 at $100,526 but fading ($12,851 vs $71,377); a new Merrimac invoice was split three ways",
-   "assessment": "Resinate Douglas is the #1 account of 2026 at $100,526 over 10 orders and ordered 5 days ago, so it is not quiet — but recent spend of $12,851 against $71,377 in the prior period says the big early-year orders have not repeated. Resinate as a chain ordered four times last week (Douglas $5,104 and $4,052, Worcester $4,718, Northampton $3,878). The $4,052 line is QuickBooks invoice 1788 to 'Resinate Merrimac', a store the CRM does not have, so build_qbo split it evenly across Douglas, Northampton and Worcester and qbo_sync filed the order under Douglas.",
-   "action": "Joey: ask Resinate whether the Merrimac store is a standing fourth location and what Douglas's volume looks like through year end. Dan: add a Resinate / Merrimac account and map 'Resinate Merrimac' to it in tools/qbo_map.json so the $4,052 stops being split."
+   "headline": "Resinate Douglas — still #1 at $100,526 but fading ($12,851 vs $71,377)",
+   "assessment": "Resinate Douglas is the #1 account of 2026 at $100,526 over 10 orders and ordered 5 days ago, so it is not quiet — but recent spend of $12,851 against $71,377 in the prior period says the big early-year orders have not repeated. Resinate as a chain ordered four times last week (Douglas $5,104 and $4,052, Worcester $4,718, Northampton $3,878). (The $4,052 and $3,694 Merrimac invoices now sit on Resinate / Merrimac — the store formerly listed as BeWell Organics — fixed Monday midday, so Douglas's own figures are a little lower than this morning's brief.)",
+   "action": "Joey: ask Resinate what Douglas's volume looks like through year end, and whether Merrimac (the old BeWell store) is now a standing fourth location worth a monthly order."
   },
   {
    "account": "A0115",
