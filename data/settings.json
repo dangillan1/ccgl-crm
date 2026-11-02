@@ -186,6 +186,15 @@
    "source": "Customer Tracker",
    "removed_by": "charley",
    "removed_at": "2026-11-02"
+  },
+  {
+   "id": "C3ff8006f",
+   "account_id": "A0036",
+   "email": "acinieri@iresinate.com",
+   "name": "",
+   "source": "Order Tracker 2026",
+   "removed_by": "joey",
+   "removed_at": "2026-11-02"
   }
  ]
 }
