@@ -500,8 +500,8 @@
   "sheet_row": 18,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Joey to call by EOW",
-  "next_step_due": "2026-11-06",
+  "next_step": "In-person visit by EOM",
+  "next_step_due": "2026-11-27",
   "next_step_owner": "joey"
  },
  {
