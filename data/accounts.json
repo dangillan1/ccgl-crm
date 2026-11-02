@@ -988,16 +988,17 @@
   "address": "17 Broad St",
   "license_type": "Dispensary",
   "status": "Current",
-  "grade": "D",
+  "grade": "A",
   "owner": "Joey",
   "last_contact": "",
   "next_contact": "1900-01-14",
-  "notes": "Formerly \"BeWell Organics\" (Master sheet); QuickBooks customer renamed Resinate Merrimac 2026-10-26.",
+  "notes": "",
   "sheet_row": 37,
   "in_customer_tracker": true,
   "in_qbo": true,
   "crm_edits": {
-   "name": "2026-11-02"
+   "name": "2026-11-02",
+   "notes": "2026-11-02"
   }
  },
  {
