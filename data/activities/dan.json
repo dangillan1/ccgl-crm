@@ -46,5 +46,13 @@
   "type": "Note",
   "note": "Order deleted: no date (Planned)",
   "date": "2026-09-25"
+ },
+ {
+  "id": "Xmvzeeho1p45t",
+  "ts": "2026-11-02T15:12:49.393Z",
+  "account_id": "A0205",
+  "type": "Note",
+  "note": "Payment terms: Net 30 → Terms TBD · 38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them",
+  "date": "2026-11-02"
  }
 ]
