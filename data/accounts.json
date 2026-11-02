@@ -268,7 +268,25 @@
   "notes": "",
   "sheet_row": 10,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "terms": {
+   "plan": "tbd",
+   "step": null,
+   "label": "",
+   "since": "2026-11-02",
+   "reason": "Keep an eye on them - good lately after regrouping in 2026 but keep an eye on them",
+   "set_by": "dan",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "by": "dan",
+     "plan": "tbd",
+     "step": null,
+     "label": "Terms TBD",
+     "reason": "Keep an eye on them - good lately after regrouping in 2026 but keep an eye on them"
+    }
+   ]
+  }
  },
  {
   "id": "A0010",
