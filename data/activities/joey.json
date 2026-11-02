@@ -1361,5 +1361,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 1 person (Buyer, Finance / AP, Intake)",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzr4js8b3my",
+  "ts": "2026-11-02T21:09:00.584Z",
+  "account_id": "A0356",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · November $5k flower/pre-roll offer",
+  "date": "2026-11-02"
  }
 ]
