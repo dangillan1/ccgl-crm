@@ -1140,23 +1140,12 @@
   "sheet_slot": 3
  },
  {
-  "id": "C76e933ea",
-  "account_id": "A0036",
-  "name": "",
-  "email": "",
-  "phone": "978-979-4833",
-  "role": "",
-  "source": "Master",
-  "primary": true,
-  "sheet_slot": 1
- },
- {
   "id": "C3a7e8bb9",
   "account_id": "A0036",
-  "name": "",
+  "name": "Jared Fontana",
   "email": "jfontana@iresinate.com",
-  "phone": "",
-  "role": "Buyer / Intake / Finance / AP",
+  "phone": "774-239-1215",
+  "role": "Buyer / Intake / Finance / AP / Wholesale",
   "source": "Customer Tracker",
   "primary": false
  },
@@ -1183,10 +1172,10 @@
  {
   "id": "Ca0dcab02",
   "account_id": "A0036",
-  "name": "",
+  "name": "Sammone Ricuarte",
   "email": "sricaurte@iresinate.com",
   "phone": "",
-  "role": "Buyer / Intake / Finance / AP",
+  "role": "Marketing",
   "source": "Customer Tracker",
   "primary": false
  },
