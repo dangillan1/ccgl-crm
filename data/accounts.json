@@ -2124,8 +2124,8 @@
   "parent": "",
   "stage": "",
   "stage_entered": "",
-  "delivery_notes": "",
-  "standing_requests": "",
+  "delivery_notes": "Calendly link for delivery: https://docs.google.com/spreadsheets/d/1c2WJT_0KhsONLlgyC55rUSGmvQQ5rbZIsZSyrR4z0OI/edit?gid=0#gid=0",
+  "standing_requests": "Invoice & COAs sent 24 hours before delivery - https://docs.google.com/document/d/1-s2xrP01QXBlH8VdI8RtVGEUACZgBUyqIPkiOmKkveQ/edit?usp=sharing",
   "license_number": "MR283074",
   "tags": [],
   "flags": [],
@@ -2145,7 +2145,15 @@
   "in_qbo": true,
   "crm_edits": {
    "license_number": "2026-11-02"
-  }
+  },
+  "merged_from": [
+   {
+    "id": "A0516",
+    "name": "Silver Therapeutics · Roslindale",
+    "source": "Customer Tracker",
+    "date": "2026-11-02"
+   }
+  ]
  },
  {
   "id": "A0076",
@@ -8001,42 +8009,6 @@
   "next_contact": "2026-08-04",
   "notes": "",
   "sheet_row": 284,
-  "in_customer_tracker": true,
-  "in_qbo": true
- },
- {
-  "id": "A0516",
-  "sheet_key": "",
-  "source": "Customer Tracker",
-  "name": "Silver Therapeutics",
-  "parent": "Silver Therapeutics",
-  "town": "Roslindale",
-  "address": "238 Main Street, Williamstown, MA 01267",
-  "license_type": "Dispensary",
-  "status": "Current",
-  "grade": "",
-  "owner": "Unassigned",
-  "last_contact": "",
-  "next_contact": "",
-  "notes": "",
-  "stage": "Customer",
-  "stage_entered": "2026-09-25",
-  "delivery_notes": "Calendly link for delivery: https://docs.google.com/spreadsheets/d/1c2WJT_0KhsONLlgyC55rUSGmvQQ5rbZIsZSyrR4z0OI/edit?gid=0#gid=0",
-  "standing_requests": "Invoice & COAs sent 24 hours before delivery - https://docs.google.com/document/d/1-s2xrP01QXBlH8VdI8RtVGEUACZgBUyqIPkiOmKkveQ/edit?usp=sharing",
-  "license_number": "MR283074",
-  "tags": [
-   "Not in Master Sheet"
-  ],
-  "flags": [
-   "not-in-master",
-   "possible-duplicate"
-  ],
-  "dup_candidates": [
-   "A0284",
-   "A0285"
-  ],
-  "created": "2026-09-25",
-  "sheet_row": null,
   "in_customer_tracker": true,
   "in_qbo": true
  },
