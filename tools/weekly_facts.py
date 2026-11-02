@@ -97,6 +97,13 @@ def terms_row(a):
     return {"account": nm(a), "owner": a.get("owner"), "plan": plan, "step": step, "label": lab, "since": t.get("since"), "reason": t.get("reason"), "flag": t.get("flag"),
             "set_by": t.get("set_by"), "owes": q.get("open_alltime", q.get("open")) or 0, "past_due": q.get("past_due") or 0}
 facts["special_terms"] = sorted([terms_row(a) for a in accounts if (a.get("terms") or {}).get("plan") in ("cod", "makeup", "custom", "tbd")], key=lambda r: (0 if r["flag"] else 1, r["plan"], -r["owes"]))
+# contacts confirmed (tools/contacts_sync.py has the rule; same as ccState in the app)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import contacts_sync
+cc = contacts_sync.states(accounts, contacts, settings); cc_days = contacts_sync.cfg(settings)["days"]
+cc_rows = sorted([(a, cc[a["id"]]) for a in cur if cc[a["id"]]["state"] != "confirmed"], key=lambda t: (contacts_sync.ORDER[t[1]["state"]], -stats.get(t[0]["id"], {}).get("total", 0)))
+facts["contacts_confirmed"] = {"active": len(cur), "days": cc_days, **{k: sum(1 for a in cur if cc[a["id"]]["state"] == k) for k in contacts_sync.ORDER},
+                               "rows": [{"account": nm(a), "owner": a.get("owner"), "state": s["state"], "label": s["label"], "why": contacts_sync.why(s, lambda i: uname.get(i, i)), "ytd": stats.get(a["id"], {}).get("total", 0)} for a, s in cc_rows[:10]],
+                               "auto_tasks": sum(1 for a in cur if re.match(r"^Confirm contacts", a.get("next_step") or ""))}
 facts["placeholders"] = [{"account": nm(ALL[o["account_id"]]) if o["account_id"] in ALL else o.get("account_raw"), "date": o.get("date"), "status": o.get("status")} for o in orders if re.match(r"pend|plan", o.get("status") or "", re.I)]
 
 if "--json" in sys.argv:
@@ -125,6 +132,8 @@ print("NEW PROSPECTS LAST 7d:", ", ".join(facts["new_prospects_last_7d"]) or "no
 print("OPEN NEXT STEPS:"); [print(f"   {'OVERDUE ' if s['overdue'] else ''}{s['account']:40s} {s['step']}  (due {s['due']})  {s['owner']}") for s in facts["open_next_steps"]]
 print("PIPELINE BY STAGE:", facts["pipeline_by_stage"] or "nothing past New")
 rc = facts["recon"]; print(f"\nQBO vs TRACKER: {rc['matched']} paired · {rc['orders_without_invoice']} orders w/o invoice · {rc['invoices_without_order']} invoices w/o order · {rc['amount_differs']} amounts differ · {rc['blank_totals_fillable']} blank totals fillable · unmapped: {rc['unmapped'] or 'none'}")
+ccf = facts["contacts_confirmed"]; print(f"\nCONTACTS CONFIRMED: {ccf['confirmed']} of {ccf['active']} active (every {ccf['days']}d) · to confirm: {ccf['never']} never, {ccf['changed']} changed, {ccf['expired']} expired, {ccf['review']} flagged · {ccf['missing']} missing a Buyer / Finance / Intake contact · {ccf['auto_tasks']} open 'Confirm contacts' next steps")
+for r_ in ccf["rows"]: print(f"   {r_['account']:40s} {r_['label']:34s} {r_['why']}  {r_['owner']}  {money(r_['ytd'])}")
 print(f"\nSPECIAL TERMS ({len(facts['special_terms'])} accounts not on Net 30):")
 for r_ in facts["special_terms"]: print(f"   {r_['account']:40s} {r_['label']:22s} since {r_['since'] or '?'}  {r_['owner']}  owes {money(r_['owes'])}{(' · %s past due' % money(r_['past_due'])) if r_['past_due'] else ''}{(' · ' + r_['reason']) if r_['reason'] else ''}{(' · NEEDS A DECISION: ' + r_['flag']) if r_['flag'] else ''}")
 print("PLACEHOLDER ROWS:", ", ".join(f"{p['account']} {p['date']} ({p['status']})" for p in facts["placeholders"]) or "none")

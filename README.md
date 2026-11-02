@@ -21,6 +21,7 @@ tools/import_sheet.py   import / re-import from the Google Sheet + Order Tracker
 tools/make_insights.py  assembles data/insights.json
 tools/make_preview.py   builds preview.html (read-only, data inlined) for opening from disk
 tools/terms_sync.py     payment terms: stamps orders, walks each make-up path forward from QuickBooks (called by qbo_sync.py --apply)
+tools/contacts_sync.py  contacts confirmed: 'Confirm contacts' next steps for sign-offs that are missing, stale or flagged (called by qbo_sync.py --apply)
 ```
 
 ## Deploy (one time)
@@ -111,6 +112,19 @@ Unclaimed Leads list until a person claims it.
   the profile and in the Monday brief instead, and someone advances or restarts the path by hand. COD,
   custom and TBD terms never change by themselves. Stored on the account as
   `terms: {plan, step, label, since, reason, set_by, flag, late, history}`; no `terms` key = Net 30.
+- **Contacts confirmed** — a sign-off that an account's people are current. Once Buyer, Finance / AP and
+  Intake each have a contact with an email or phone (a name is not required — AP is often a shared mailbox),
+  anyone who can edit people presses **Confirm contacts** in the People card; the CRM records who and when
+  and notes it on the timeline. The confirmation stands until the people on the account change (compared
+  live against what was confirmed), until 180 days pass (Settings → *Contacts are reconfirmed every*), or
+  until someone presses **Needs review** with a reason. State shows as a pill in the page header, in the
+  People card, as a required item on the profile checklist, in a *Contacts* column of Active Accounts
+  (filter *Contacts to confirm*, with the sub-states), in a *Contacts not confirmed* list and KPI on
+  Insights, under *Contacts* on Tasks, and as a Housekeeping line in the Monday brief. The Monday refresh
+  (`tools/contacts_sync.py`) puts a *Confirm contacts* next step on the owner's plate for sign-offs that are
+  missing, stale or flagged — at most 10 new ones per owner per week, biggest accounts first, never over a
+  next step someone typed — and clears it once the account is confirmed. Stored on the account as
+  `contacts_confirmed: {at, by, n, people}` and `contacts_review: {at, by, reason}`.
 - **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus CCC license
   renewals (a license that is past its date or inside the warning window).
 - **Paperwork** — every active account against the three required forms: status, expiration date,

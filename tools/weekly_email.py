@@ -82,6 +82,10 @@ if ns: house.append(f"{len(ns)} overdue next step{'s' if len(ns) != 1 else ''}: 
 if F["placeholders"]: house.append(f"{len(F['placeholders'])} placeholder order rows still need a total or a delete: " + ", ".join(f"{p['account'].split(' / ')[0]} {p['date'][5:] if p['date'] else ''}".strip() for p in F["placeholders"][:6]))
 lp = F.get("lapsed") or {}
 if lp.get("n"): house.append(f"{lp['n']} former customers have gone 180+ days without an order (win-back list on Insights) — biggest: " + ", ".join(f"{r['account'].split(' / ')[0]} ({money_k(r['lifetime'])} lifetime, last {r['last']})" for r in lp["rows"][:4]))
+ccf = F.get("contacts_confirmed")
+if ccf and ccf["active"]:
+    todo = ccf["active"] - ccf["confirmed"]
+    house.append(f"Contacts confirmed on {ccf['confirmed']} of {ccf['active']} active accounts" + (f" — {todo} to go ({ccf['missing']} still missing a Buyer / Finance / Intake contact" + (f", {ccf['changed']} changed since sign-off" if ccf['changed'] else "") + (f", {ccf['expired']} older than {ccf['days']} days" if ccf['expired'] else "") + (f", {ccf['review']} flagged for review" if ccf['review'] else "") + "); biggest: " + ", ".join(r["account"].split(" / ")[0] for r in ccf["rows"][:4]) if todo else " — all signed off"))
 rc = F["recon"]
 if rc["orders_without_invoice"] or rc["blank_totals_fillable"]: house.append(f"QuickBooks check: {rc['orders_without_invoice']} orders with no invoice yet, {rc['blank_totals_fillable']} blank tracker totals QuickBooks can fill, {rc['amount_differs']} where the tracker total differs from the invoice")
 house_html = "<ul style='margin:6px 0 0 18px;padding:0;font-size:13px'>" + "".join(f"<li style='margin:3px 0'>{e(h)}</li>" for h in house) + "</ul>" if house else ""

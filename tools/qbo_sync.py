@@ -18,7 +18,8 @@ What it does
      review = "no-invoice"; the flag clears the moment an invoice turns up.
   5. Nothing is ever deleted here. Orders deleted in the CRM (settings.deleted_orders) are not recreated.
   5b. After applying, tools/terms_sync.py runs: orders on accounts with special payment terms get stamped with them, and
-     make-up paths advance when QuickBooks shows the step's invoice paid on time (see that file).
+     make-up paths advance when QuickBooks shows the step's invoice paid on time (see that file). Then tools/contacts_sync.py
+     puts "Confirm contacts" next steps on accounts whose contact sign-off is missing, stale or flagged.
   6. Orders linked to an invoice that is not in this feed — the 2024-2025 history loaded by tools/qbo_history.py — are
      left exactly as they are: never re-paired, never flagged.
 """
@@ -151,6 +152,11 @@ def run(apply=False, forced_links=None, quiet=False):
         terms_sync.run(apply=True, quiet=quiet)
     except Exception as e:
         print("terms_sync skipped:", e)
+    try:                                                   # contacts confirmed: next steps for sign-offs that are missing, stale or flagged (tools/contacts_sync.py)
+        import contacts_sync
+        contacts_sync.run(apply=True, quiet=quiet)
+    except Exception as e:
+        print("contacts_sync skipped:", e)
     return plan
 
 if __name__ == "__main__":
