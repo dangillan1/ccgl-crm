@@ -1321,5 +1321,13 @@
   "type": "Order",
   "note": "Pending order $3,421 · Finished Goods · 15% first-time buyer",
   "date": "2026-10-30"
+ },
+ {
+  "id": "Xmvzft8pchagg",
+  "ts": "2026-11-02T15:52:17.232Z",
+  "account_id": "A0075",
+  "type": "Edit",
+  "note": "Removed Polly · polly@agtherapeutics.com",
+  "date": "2026-11-02"
  }
 ]
