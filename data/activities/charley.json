@@ -160,5 +160,14 @@
   "type": "Edit",
   "note": "Removed Mitch (Buyer) · mitch@roslindaledispensary.com",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzlsjthhjk4",
+  "ts": "2026-11-02T18:39:42.678Z",
+  "account_id": "A0106",
+  "type": "Email",
+  "note": "Charley Emailed buyer menu and to check in",
+  "date": "2026-11-02",
+  "contact_id": null
  }
 ]
