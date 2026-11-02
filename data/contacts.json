@@ -2751,17 +2751,6 @@
   "primary": false
  },
  {
-  "id": "Cc8067402",
-  "account_id": "A0075",
-  "name": "Polly",
-  "email": "polly@agtherapeutics.com",
-  "phone": "",
-  "role": "",
-  "source": "Master",
-  "primary": false,
-  "sheet_slot": 2
- },
- {
   "id": "C91e0eed9",
   "account_id": "A0076",
   "name": "",
