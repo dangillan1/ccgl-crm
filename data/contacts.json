@@ -1151,16 +1151,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C3ff8006f",
-  "account_id": "A0036",
-  "name": "",
-  "email": "acinieri@iresinate.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Order Tracker 2026",
-  "primary": false
- },
- {
   "id": "C3a7e8bb9",
   "account_id": "A0036",
   "name": "",
