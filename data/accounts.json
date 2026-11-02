@@ -2126,7 +2126,7 @@
   "stage_entered": "",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "MR281755",
+  "license_number": "MR283074",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
@@ -2143,7 +2143,9 @@
   "sheet_row": 76,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {
+   "license_number": "2026-11-02"
+  }
  },
  {
   "id": "A0076",
