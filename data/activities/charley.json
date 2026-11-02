@@ -169,5 +169,14 @@
   "note": "Charley Emailed buyer menu and to check in",
   "date": "2026-11-02",
   "contact_id": null
+ },
+ {
+  "id": "Xmvzlt5s65hb9",
+  "ts": "2026-11-02T18:40:11.142Z",
+  "account_id": "A0354",
+  "type": "Text",
+  "note": "Charley called and texted buyer to check in about november",
+  "date": "2026-11-02",
+  "contact_id": null
  }
 ]
