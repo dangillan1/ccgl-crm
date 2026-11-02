@@ -99,7 +99,8 @@ Unclaimed Leads list until a person claims it.
 - **Payment terms** — every account is Net 30 unless its profile says otherwise. Admins and managers set
   terms on the account page (*Payment terms* card): **Net 30**, **COD — no terms** (cash before or at
   delivery), the **make-up path** (order 1 COD → order 2 half at delivery / half Net 30 → order 3 full
-  Net 30, then standard terms again) or **custom** (free text: Net 15, 50% deposit…), with an effective
+  Net 30, then standard terms again), **custom** (free text: Net 15, 50% deposit…) or **Terms TBD** (not
+  decided yet — check with Dan before the next order), with an effective
   date and a reason; every change is kept in the card's history and logged on the timeline. Anything
   other than Net 30 shows as a pill in the page header, a red/amber alert at the top of the profile, a
   pill in the Active Accounts and Orders tables (filter *Not on Net 30*), a notice on the New order form,
@@ -107,8 +108,8 @@ Unclaimed Leads list until a person claims it.
   is stamped with them (`terms` on the order) so delivery day knows what to collect. The make-up path
   moves on its own only when QuickBooks shows the step's invoice paid on time (`tools/terms_sync.py`, run
   by the Monday refresh); an invoice that goes past due during a step sets a *needs a decision* flag on
-  the profile and in the Monday brief instead, and someone advances or restarts the path by hand. COD and
-  custom terms never change by themselves. Stored on the account as
+  the profile and in the Monday brief instead, and someone advances or restarts the path by hand. COD,
+  custom and TBD terms never change by themselves. Stored on the account as
   `terms: {plan, step, label, since, reason, set_by, flag, late, history}`; no `terms` key = Net 30.
 - **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus CCC license
   renewals (a license that is past its date or inside the warning window).

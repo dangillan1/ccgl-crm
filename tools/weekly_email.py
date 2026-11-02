@@ -60,7 +60,7 @@ risk_html = table("".join(row([e(r["account"]), owner(r["owner"]), f"<span style
 pd_html = table("".join(row([e(r["account"]), owner(r["owner"]), f"oldest {r['oldest_days']}d · owes {money(r['owes'])}", f"<b style='color:{RED}'>{money(r['past_due'])}</b>"]) for r in pdq[:8])) if pdq else "<div style='color:%s;font-size:13px'>Nothing past due.</div>" % MUTED
 terms = F.get("special_terms") or []
 def terms_cell(r):
-    col = RED if r["plan"] == "cod" else "#B45309" if r["plan"] == "makeup" else "#3730A3"
+    col = RED if r["plan"] == "cod" else "#B45309" if r["plan"] == "makeup" else BLUE if r["plan"] == "tbd" else "#3730A3"
     return f"<b style='color:{col}'>{e(r['label'])}</b>" + (f"<br><span style='color:{RED};font-size:12px'>Needs a decision: {e(r['flag'])}</span>" if r.get("flag") else "")
 terms_html = table("".join(row([e(r["account"]), owner(r["owner"]), terms_cell(r), (f"since {datetime.date.fromisoformat(r['since']).strftime('%b %-d')}" if r.get("since") else "") + (f" · {e(r['reason'])}" if r.get("reason") else "") + (f"<br>owes {money(r['owes'])}" + (f" · <b style='color:{RED}'>{money(r['past_due'])} past due</b>" if r["past_due"] else "") if r["owes"] else "")], muted_last=True) for r in terms)) if terms else ""
 top_ins = [x for x in INS.get("assessments", []) if x["priority"] in ("critical", "high")][:CFG.get("max_assessments", 6)]
@@ -103,7 +103,7 @@ body = f"""
     {section("This week's reorder calls", due_html, "On their usual rhythm — call before they run out.")}
     {section("Revenue at risk", risk_html, "Past 1.5× their reorder rhythm. Biggest first.")}
     {section("Collections", pd_html, "Past due in QuickBooks. Check before the next delivery.")}
-    {section("Payment terms", terms_html, "Not on standard Net 30. COD = collect at delivery; make-up path = COD, then half/half, then a Net 30 trial — each step clears when its invoice is paid on time.") if terms else ""}
+    {section("Payment terms", terms_html, "Not on standard Net 30. COD = collect at delivery; make-up path = COD, then half/half, then a Net 30 trial — each step clears when its invoice is paid on time; TBD = not decided yet, check with Dan first.") if terms else ""}
     {section("Where to focus", ins_html or "<div style='color:%s;font-size:13px'>No assessments this week.</div>" % MUTED)}
     {section("Last week", last_html)}
     {section("Housekeeping", house_html) if house else ""}

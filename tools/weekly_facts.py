@@ -92,11 +92,11 @@ facts["recon"] = {"matched": r.get("matched"), "orders_without_invoice": len(r.g
 STEP_SHORT = {1: "COD", 2: "50 / 50", 3: "Net 30 trial"}
 def terms_row(a):
     t = a.get("terms") or {}; plan = t.get("plan"); step = min(3, max(1, int(t.get("step") or 1))) if plan == "makeup" else None
-    lab = (f"Make-up {step}/3 · {STEP_SHORT[step]}" if plan == "makeup" else (t.get("label") or "Custom terms") if plan == "custom" else "COD")
+    lab = (f"Make-up {step}/3 · {STEP_SHORT[step]}" if plan == "makeup" else (t.get("label") or "Custom terms") if plan == "custom" else "Terms TBD" if plan == "tbd" else "COD")
     q = qa.get(a["id"], {})
     return {"account": nm(a), "owner": a.get("owner"), "plan": plan, "step": step, "label": lab, "since": t.get("since"), "reason": t.get("reason"), "flag": t.get("flag"),
             "set_by": t.get("set_by"), "owes": q.get("open_alltime", q.get("open")) or 0, "past_due": q.get("past_due") or 0}
-facts["special_terms"] = sorted([terms_row(a) for a in accounts if (a.get("terms") or {}).get("plan") in ("cod", "makeup", "custom")], key=lambda r: (0 if r["flag"] else 1, r["plan"], -r["owes"]))
+facts["special_terms"] = sorted([terms_row(a) for a in accounts if (a.get("terms") or {}).get("plan") in ("cod", "makeup", "custom", "tbd")], key=lambda r: (0 if r["flag"] else 1, r["plan"], -r["owes"]))
 facts["placeholders"] = [{"account": nm(ALL[o["account_id"]]) if o["account_id"] in ALL else o.get("account_raw"), "date": o.get("date"), "status": o.get("status")} for o in orders if re.match(r"pend|plan", o.get("status") or "", re.I)]
 
 if "--json" in sys.argv:

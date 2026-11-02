@@ -8,7 +8,7 @@ Runs after tools/build_qbo.py and tools/qbo_sync.py --apply (qbo_sync calls it i
 this week's invoices, balances and due dates in data/qbo.json.
 
 Terms live on the account (data/accounts.json, key "terms"); no key means standard Net 30:
-  {"plan": "net30" | "cod" | "makeup" | "custom", "step": 1-3 (make-up only), "label": "Net 15" (custom only),
+  {"plan": "net30" | "cod" | "makeup" | "custom" | "tbd", "step": 1-3 (make-up only), "label": "Net 15" (custom only),
    "since": "YYYY-MM-DD", "reason": "...", "set_by": "dan" | "qbo-sync", "flag": "...", "late": ["1750"], "history": [...]}
 
 What moves on its own — only the make-up path (COD -> half/half -> Net 30 trial -> standard Net 30):
@@ -19,7 +19,7 @@ What moves on its own — only the make-up path (COD -> half/half -> Net 30 tria
   * An invoice seen open past its due date goes into terms.late and sets terms.flag. Nothing advances after that: the
     profile, the Insights list and the Monday brief show the flag, and someone decides in the CRM (restart at COD, or
     advance by hand). Any change made in the app clears flag and late.
-  * COD and custom terms never change on their own.
+  * COD, custom and "Terms TBD" (not decided yet) never change on their own.
 """
 import json, os, re, sys, datetime as dt
 
@@ -27,7 +27,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 TODAY = dt.date.today().isoformat()
 STEP_SHORT = {1: "COD", 2: "50 / 50", 3: "Net 30 trial"}
-PLAN_LABEL = {"net30": "Net 30", "cod": "COD — no terms", "makeup": "Make-up path", "custom": "Custom"}
+PLAN_LABEL = {"net30": "Net 30", "cod": "COD — no terms", "makeup": "Make-up path", "custom": "Custom", "tbd": "Terms TBD"}
+SPECIAL = ("cod", "makeup", "custom", "tbd")                     # everything that is not plain Net 30
 
 def load(p, d=None):
     try: return json.load(open(p))
@@ -37,10 +38,10 @@ def step_of(t): return min(3, max(1, int(t.get("step") or 1)))
 def label(plan, step=None, custom=""):
     if plan == "makeup": return f"Make-up {step}/3 · {STEP_SHORT[step]}"
     if plan == "custom": return custom or "Custom terms"
-    return "COD" if plan == "cod" else "Net 30"
+    return "COD" if plan == "cod" else "Terms TBD" if plan == "tbd" else "Net 30"
 def short(a):
     t = a.get("terms") or {}; p = t.get("plan")
-    return label(p, step_of(t) if p == "makeup" else None, t.get("label")) if p in ("cod", "makeup", "custom") else "Net 30"
+    return label(p, step_of(t) if p == "makeup" else None, t.get("label")) if p in SPECIAL else "Net 30"
 def nm(a): return f"{a['name']} / {a.get('town') or '—'}"
 
 def run(apply=False, quiet=False):
@@ -52,7 +53,7 @@ def run(apply=False, quiet=False):
     changes = []; orders_dirty = False
     for a in accounts:
         t = a.get("terms") or {}; plan = t.get("plan")
-        if plan not in ("cod", "makeup", "custom"): continue
+        if plan not in SPECIAL: continue
         step = step_of(t) if plan == "makeup" else None
         since = t.get("since") or ""
         stamp = {"plan": plan, "step": step, "label": label(plan, step, t.get("label"))}
