@@ -94,7 +94,10 @@
    "people": [
     "Doug Leighton|doug@acknat.com|(508) 901-5225|Intake, Buyer / Finance / AP"
    ]
-  }
+  },
+  "next_step": "Joey to Call",
+  "next_step_due": "2026-11-03",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0003",
