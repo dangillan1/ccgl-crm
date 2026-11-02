@@ -311,7 +311,10 @@
     "Terrance Salvant|tsalvant@apexnoire.com||Inventory, Asst. Manager",
     "Tito Jackson|tito@apexnoire.com|Phone:+1 7815073987|Owner, Billing"
    ]
-  }
+  },
+  "next_step": "Joey to followup 2wks after order",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0010",
