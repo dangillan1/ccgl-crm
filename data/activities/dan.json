@@ -126,5 +126,13 @@
   "type": "Task",
   "note": "Next step: Joey to followup 2wks after order (due Nov 16, 26)",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzqk49uap8a",
+  "ts": "2026-11-02T20:53:07.362Z",
+  "account_id": "A0017",
+  "type": "Task",
+  "note": "Next step: Joey to call by EOW (due Nov 6, 26)",
+  "date": "2026-11-02"
  }
 ]
