@@ -2741,16 +2741,6 @@
   "primary": false
  },
  {
-  "id": "C483d6eb3",
-  "account_id": "A0075",
-  "name": "Mitch",
-  "email": "mitch@roslindaledispensary.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C91e0eed9",
   "account_id": "A0076",
   "name": "",
