@@ -440,6 +440,18 @@
    "uploaded_at": "2026-11-02",
    "expires": "2026-08-02",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/Amvr4a0jdq24k/st4/2026-11-02_mvzff05ocxiv.pdf",
+    "sha": "b7417b27e86f0a9a2219c8c48509ab3cf66746f7",
+    "name": "ST-4 - Roslindale Cannabis Co.pdf",
+    "size": 195348,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-02",
+   "history": []
   }
  }
 }
