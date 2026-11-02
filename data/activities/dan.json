@@ -86,5 +86,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 1 person (Buyer, Finance / AP, Intake)",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzq72ucpfej",
+  "ts": "2026-11-02T20:42:58.980Z",
+  "account_id": "A0508",
+  "type": "Task",
+  "note": "Next step: Joey to Call (due Nov 3, 26)",
+  "date": "2026-11-02"
  }
 ]
