@@ -86,6 +86,14 @@
   "in_qbo": true,
   "crm_edits": {
    "address": "2026-10-14"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-02",
+   "by": "dan",
+   "n": 1,
+   "people": [
+    "Doug Leighton|doug@acknat.com|(508) 901-5225|Intake, Buyer / Finance / AP"
+   ]
   }
  },
  {
