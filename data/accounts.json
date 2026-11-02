@@ -4454,13 +4454,14 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Joey",
+  "owner": "Charley",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 155,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0156",
