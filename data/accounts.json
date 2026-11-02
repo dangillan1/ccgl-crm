@@ -2130,7 +2130,7 @@
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
-  "name": "City Farm - Roslindale",
+  "name": "Silver Therapeutics Boston",
   "town": "Roslindale",
   "address": "721 American Legion Hwy",
   "license_type": "Dispensary",
@@ -2139,12 +2139,13 @@
   "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
-  "notes": "Reorder incoming for 1/12 week",
+  "notes": "Formerly listed as \"City Farm - Roslindale\" (Master sheet); renamed to the CCC name. Reorder incoming for 1/12 week",
   "sheet_row": 76,
   "in_customer_tracker": true,
   "in_qbo": true,
   "crm_edits": {
-   "license_number": "2026-11-02"
+   "license_number": "2026-11-02",
+   "name": "2026-11-02"
   },
   "merged_from": [
    {
