@@ -5714,7 +5714,25 @@
   "notes": "",
   "sheet_row": 206,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "terms": {
+   "plan": "tbd",
+   "step": null,
+   "label": "",
+   "since": "2026-11-02",
+   "reason": "38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them",
+   "set_by": "dan",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "by": "dan",
+     "plan": "tbd",
+     "step": null,
+     "label": "Terms TBD",
+     "reason": "38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them"
+    }
+   ]
+  }
  },
  {
   "id": "A0206",
