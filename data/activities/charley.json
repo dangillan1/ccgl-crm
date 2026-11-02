@@ -152,5 +152,13 @@
   "type": "Doc",
   "note": "W-9 uploaded",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzfvurvcobl",
+  "ts": "2026-11-02T15:54:19.147Z",
+  "account_id": "A0075",
+  "type": "Edit",
+  "note": "Removed Mitch (Buyer) · mitch@roslindaledispensary.com",
+  "date": "2026-11-02"
  }
 ]
