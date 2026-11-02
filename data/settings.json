@@ -175,6 +175,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-11-02"
+  },
+  {
+   "id": "C483d6eb3",
+   "account_id": "A0075",
+   "email": "mitch@roslindaledispensary.com",
+   "name": "Mitch",
+   "source": "Customer Tracker",
+   "removed_by": "charley",
+   "removed_at": "2026-11-02"
   }
  ]
 }
