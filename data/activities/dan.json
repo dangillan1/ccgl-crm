@@ -110,5 +110,13 @@
   "type": "Task",
   "note": "Next step: Joey to followup with Tasha/New Contact - Boutiq? Oleg? (due Nov 27, 26)",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzqc5z7lamp",
+  "ts": "2026-11-02T20:46:56.323Z",
+  "account_id": "A0009",
+  "type": "Task",
+  "note": "Next step: Joey to followup 2wks after order (due Nov 16, 26)",
+  "date": "2026-11-02"
  }
 ]
