@@ -2030,7 +2030,7 @@
   "stage_entered": "",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "MR285074 / MR282446",
+  "license_number": "MR282446",
   "tags": [
    "New License 2026"
   ],
@@ -2049,7 +2049,9 @@
   "sheet_row": 72,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {
+   "license_number": "2026-11-02"
+  }
  },
  {
   "id": "A0072",
