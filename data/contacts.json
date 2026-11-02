@@ -15656,5 +15656,16 @@
   "source": "CRM (Charley)",
   "primary": true,
   "created": "2026-10-27"
+ },
+ {
+  "id": "Cmvzg20ifilnw",
+  "account_id": "A0075",
+  "name": "Austin Pitzer",
+  "role": "Buyer, Intake",
+  "email": "austin@silverthera.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-02"
  }
 ]
