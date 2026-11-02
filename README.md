@@ -125,8 +125,13 @@ Unclaimed Leads list until a person claims it.
   missing, stale or flagged — at most 10 new ones per owner per week, biggest accounts first, never over a
   next step someone typed — and clears it once the account is confirmed. Stored on the account as
   `contacts_confirmed: {at, by, n, people}` and `contacts_review: {at, by, reason}`.
-- **Tasks** — open next steps grouped Overdue / Today / Upcoming, mine or everyone's — plus CCC license
-  renewals (a license that is past its date or inside the warning window).
+- **Tasks** — three views of the same items: **List** (Overdue / Today / Upcoming / No date), **Week** (Mon–Sun
+  columns with buyer, phone, owes/terms flags — the cheat sheet; *Print week* puts it on one landscape page) and
+  **Month**. A person filter (Everyone / each user, with their open and overdue counts / Unassigned) and on-off
+  chips for what to show: next steps, reorders due (on the day an account's rhythm says it's due), requested
+  delivery dates, CCC renewals, contacts to confirm. Next steps drag to another day in Week and Month, have
+  +1d / +1w / Mon / Done / Edit buttons, can be added from a day's **+**, and managers can tick several in the
+  List and reassign or move them at once. View, person and chips are remembered per browser.
 - **Paperwork** — every active account against the three required forms: status, expiration date,
   download, profile completeness. Filter by owner / expired / expiring / missing; export to CSV.
 - **People / Email List** — the directory. Email List hides generic inboxes (accounting@, info@,

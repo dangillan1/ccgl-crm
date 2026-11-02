@@ -185,6 +185,23 @@ ol.steps{padding-left:20px;line-height:1.7;font-size:13px}
 .mk-steps .st b{display:block;font-size:12px;color:var(--ink);margin-bottom:2px}
 .mk-steps .st.done{border-color:#bbf7d0;background:var(--ok-bg);color:#14532d}.mk-steps .st.done b{color:var(--ok)}
 .mk-steps .st.now{border-color:#fcd34d;background:var(--warn-bg);color:#78350f}.mk-steps .st.now b{color:var(--warn)}
+/* tasks: week + month grids, cards, print sheet */
+.tk-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13.5px;margin:2px 0 8px}.tk-head .tk-legend{margin-left:auto}
+.tk-legend{display:flex;gap:10px;font-size:11.5px;color:var(--muted);flex-wrap:wrap;align-items:center}.tk-dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px;background:#9ca3af}
+.tk-wrap{overflow:auto;padding-bottom:6px}.tk-grid7{display:grid;grid-template-columns:repeat(7,minmax(128px,1fr));gap:6px;min-width:900px}
+.tk-dow{margin-bottom:4px}.tk-dow div{font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.04em;padding:0 4px}
+.tk-day{background:#fff;border:1px solid var(--line);border-radius:8px;min-height:120px;padding:6px;transition:background .1s}.tk-month .tk-day{min-height:92px}
+.tk-day.today{border-color:var(--accent);box-shadow:0 0 0 2px rgba(45,106,79,.14)}.tk-day.other{background:#fafbfc}.tk-day.other .dh{color:#9ca3af}.tk-day.over{background:var(--ok-bg);border-color:#86efac}
+.tk-day .dh{font-size:11.5px;font-weight:700;color:#4b5563;display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}.tk-day .dh a{text-decoration:none;font-size:15px;line-height:1;color:var(--accent);padding:0 3px}
+.tk-card{border-left:3px solid #9ca3af;background:#f9fafb;border-radius:6px;padding:5px 7px;margin-bottom:5px;font-size:12px;cursor:pointer;line-height:1.35}.tk-card b{display:block;font-size:12.5px}.tk-card .acts{display:flex;gap:3px;flex-wrap:wrap;margin-top:4px}
+.tk-chip{display:block;border-left:3px solid #9ca3af;background:#f3f4f6;border-radius:4px;padding:2px 5px;margin-bottom:3px;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.tk-more{display:block;font-size:11px;color:var(--accent);font-weight:600;text-decoration:none;padding:2px 5px}
+.tk-strip{display:flex;gap:6px;flex-wrap:wrap;align-items:flex-start;margin:0 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}.tk-strip>b,.tk-strip summary{flex:0 0 100%;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:#4b5563;cursor:pointer}.tk-strip .tk-stripbody{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tk-strip .tk-card{flex:0 0 220px;margin:0}.tk-strip.late{background:#fff7f7;border-color:#fecaca}
+.tk-ns{border-left-color:var(--info)}.tk-re{border-left-color:var(--warn)}.tk-dl{border-left-color:var(--accent)}.tk-pw{border-left-color:#7c3aed}.tk-cc{border-left-color:#db2777}
+.tk-dot.tk-ns{background:var(--info)}.tk-dot.tk-re{background:var(--warn)}.tk-dot.tk-dl{background:var(--accent)}.tk-dot.tk-pw{background:#7c3aed}.tk-dot.tk-cc{background:#db2777}
+.tk-card.late,.tk-chip.late{background:var(--danger-bg)}.tk-card.done,.tk-chip.done{opacity:.6}
+.pill.tk-ns{background:var(--info-bg);color:var(--info)}.pill.tk-re{background:var(--warn-bg);color:var(--warn)}.pill.tk-dl{background:var(--ok-bg);color:var(--ok)}.pill.tk-pw{background:#f5f3ff;color:#5b21b6}.pill.tk-cc{background:#fdf2f8;color:#9d174d}
+@media print{ body.print-week aside,body.print-week .topbar,body.print-week #banner,body.print-week .tk-noprint,body.print-week #toast,body.print-week #modal{display:none!important} body.print-week #app{display:block} body.print-week .content{padding:0} body.print-week .tk-wrap{overflow:visible} body.print-week .tk-grid7{min-width:0;grid-template-columns:repeat(7,1fr);gap:4px} body.print-week .tk-day{min-height:0;page-break-inside:avoid;font-size:10.5px} body.print-week .tk-card{font-size:10.5px;padding:3px 5px;page-break-inside:avoid} body.print-week .tk-card b{font-size:11px} body.print-week .tk-head{font-size:13px} @page{size:landscape;margin:8mm} }
 .terms-hist{font-size:12px;color:var(--muted);margin-top:8px}.terms-hist summary{cursor:pointer;font-weight:600}.terms-hist div{padding:4px 0;border-top:1px solid var(--line-2)}
 .pw .doc{padding:10px 0;border-bottom:1px solid var(--line-2)}
 .pw .doc:first-of-type{padding-top:2px}
@@ -820,27 +837,133 @@ function renderOrders(v){
   $$('[data-editorder]',v).forEach(b=>b.onclick=e=>{ e.preventDefault(); e.stopPropagation(); editOrderForm(b.dataset.editorder); });
 }
 
-/* ---------------- TASKS ---------------- */
+/* ---------------- TASKS — list · week · month, for any person ----------------
+   One item model for everything with a date or a to-do: next steps (the single slot on each account or lead), reorders coming due on
+   rhythm, requested delivery dates on orders, CCC renewals and contacts to confirm. Next steps drag to another day, nudge with
+   +1d / +1w / Mon, can be added from an empty day and (managers) reassigned or moved in bulk. The week grid prints on one landscape page. */
+const TK={ns:{label:'Next steps',cls:'tk-ns'},reorder:{label:'Reorders due',cls:'tk-re'},delivery:{label:'Deliveries',cls:'tk-dl'},pw:{label:'Paperwork',cls:'tk-pw'},cc:{label:'Contacts',cls:'tk-cc'}};
+const TK_PREF='ccgl_crm_tasks';
+const isoDay=n=>new Date(n*864e5).toISOString().slice(0,10);
+const addDays=(s,n)=>isoDay(dayNum(s)+n);
+const mondayOf=s=>isoDay(dayNum(s)-((dayNum(s)+3)%7));          // day 0 (1970-01-01) was a Thursday
+const nextMonday=s=>addDays(mondayOf(s),7);
+const DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+const fmtDay=s=>{ const t=new Date(s+'T00:00:00'); return isNaN(t)?s:t.toLocaleDateString(undefined,{month:'short',day:'numeric'}); };
+const userByName=n=>S.users.find(u=>u.name.toLowerCase()===String(n||'').toLowerCase()&&u.role!=='viewer');
+function tkPrefs(){ const f=S.filters.tasks||={}; if(!f._loaded){ f._loaded=true; try{ const p=JSON.parse(localStorage.getItem(TK_PREF)||'{}'); for(const k of ['mode','kinds','person']) if(p[k]!=null&&f[k]==null) f[k]=p[k]; }catch(_){} }
+  if(!['list','week','month'].includes(f.mode)) f.mode='list'; if(!Array.isArray(f.kinds)) f.kinds=Object.keys(TK); if(!f.person||(f.person!=='all'&&f.person!=='unassigned'&&!S.users.some(u=>u.id===f.person))) f.person=can('reassign')?'all':S.user.id;
+  if(!isISO(f.week)) f.week=mondayOf(today()); if(!/^\d{4}-\d{2}$/.test(f.month||'')) f.month=today().slice(0,7); return f; }
+function tkSave(){ const f=S.filters.tasks||{}; try{ localStorage.setItem(TK_PREF,JSON.stringify({mode:f.mode,kinds:f.kinds,person:f.person})); }catch(_){} }
+function taskItems(f){
+  const items=[]; const uid=n=>{ const u=userByName(n); return u?u.id:'unassigned'; };
+  const push=x=>{ x.bucket=!x.due?'nodate':x.due<today()?(x.k==='delivery'?'done':'overdue'):x.due===today()?'today':'upcoming'; x.whoName=x.who==='unassigned'?(x.ownerLabel&&x.ownerLabel!=='Unassigned'?x.ownerLabel:'Unassigned'):userName(x.who); items.push(x); };
+  if(f.kinds.includes('ns')) for(const a of [...S.accounts,...S.leads]) if(a.next_step) push({k:'ns',id:'ns:'+a.id,a,text:a.next_step,due:isISO(a.next_step_due)?a.next_step_due:'',who:a.next_step_owner||uid(a.owner),ownerLabel:a.owner,auto:/^Confirm contacts/.test(a.next_step)});
+  if(f.kinds.includes('reorder')) for(const a of S.accounts) if(a.status==='Current'&&a._nOrdersAll>=2&&a._due!=null&&!a._lapsed&&a._due>=-14&&a._due<=60) push({k:'reorder',id:'re:'+a.id,a,text:`Reorder due${a._due<0?` · ${-a._due}d late`:a._due===0?' · today':''}`,due:addDays(today(),a._due),who:uid(a.owner),ownerLabel:a.owner,sub:`every ~${a._avgGap}d · last ${fmtDate(a._lastOrder)}${a._lastOrderTotal!=null?' '+fmtMoney(a._lastOrderTotal):''}`});
+  if(f.kinds.includes('delivery')) for(const o of S.orders){ if(!isISO(o.delivery_date)||/plan/i.test(o.status||'')) continue; const a=ALL[o.account_id]; if(!a) continue; const dn=dayNum(o.delivery_date)-dayNum(today()); if(dn<-30||dn>90) continue; push({k:'delivery',id:'dl:'+o.id,a,o,text:`Delivery${o.total!=null?' · '+fmtMoney(o.total):''}${o.mix?' · '+o.mix:''}`,due:o.delivery_date,who:uid(o.owner),ownerLabel:o.owner,sub:[o.terms&&o.terms.label,o.special].filter(Boolean).join(' · ')}); }
+  if(f.kinds.includes('pw')) for(const t of pwTasks()) push({k:'pw',id:'pw:'+t.a.id+':'+t.doc.id,a:t.a,t,text:t.text,due:t.due,who:t.owner?t.owner.id:'unassigned',ownerLabel:t.a.owner,sub:t.s.days<0?`expired ${-t.s.days}d ago`:t.s.days===0?'expires today':`expires in ${t.s.days}d`});
+  if(f.kinds.includes('cc')) for(const a of S.accounts) if(a.status==='Current'&&a._cc&&a._cc.state!=='confirmed'&&!/^Confirm contacts/.test(a.next_step||'')){ const o=pwOwner(a); push({k:'cc',id:'cc:'+a.id,a,text:a._cc.label,due:a._cc.state==='expired'?a._cc.due:'',who:o?o.id:'unassigned',ownerLabel:a.owner,sub:ccWhy(a)}); }
+  return items;
+}
+const tkPill=x=>`<span class="pill ${TK[x.k].cls}">${TK[x.k].label.replace(/s$/,'').replace('Reorders due','Reorder').replace('Contact','Contacts')}</span>`;
+const tkFlags=a=>`${a._pastDue>0?` <span class="pill warn" title="${fmtMoney(a._pastDue)} past due · owes ${fmtMoney(a._owes)}">owes ${fmtMoney(a._owes)}</span>`:''}${termsPill(a)}`;
+const tkBuyer=a=>a._buyer?`${esc(a._buyer.name||a._buyer.email||'')}${a._buyer.phone?` · <a href="tel:${esc(a._buyer.phone)}">${esc(a._buyer.phone)}</a>`:''}`:'';
+// the buttons a task gets, by kind; next steps also drag
+function tkActs(x){ const a=x.a; if(x.k==='ns') return can('log')?`<button class="btn ghost xs" data-nsdone="${a.id}" title="Mark done">Done</button><button class="btn ghost xs" data-nsmove="${a.id}|1" title="Push one day">+1d</button><button class="btn ghost xs" data-nsmove="${a.id}|7" title="Push one week">+1w</button><button class="btn ghost xs" data-nsmove="${a.id}|mon" title="Move to next Monday">Mon</button><button class="btn link xs" data-nsedit="${a.id}">Edit</button>`:'';
+  if(x.k==='reorder') return can('order')?`<button class="btn ghost xs" data-neworder="${a.id}">New order</button>`:'';
+  if(x.k==='delivery') return can('order')?`<button class="btn ghost xs" data-editorder="${x.o.id}">Edit order</button>`:'';
+  if(x.k==='pw') return can('docs')?`<button class="btn ghost xs" data-pwup="${x.t.doc.id}" data-acc="${a.id}">Upload new</button>`:'';
+  if(x.k==='cc') return can('people')?(a._cc.ready?`<button class="btn ghost xs" data-cctask="${a.id}">Confirm</button>`:`<button class="btn ghost xs" data-ccadd="${a.id}|${esc(a._cc.missing[0])}">Add ${esc(a._cc.missing[0])}</button>`):''; return ''; }
+function tkCard(x,full=true){ const a=x.a; const late=x.bucket==='overdue'; return `<div class="tk-card ${TK[x.k].cls} ${late?'late':''} ${x.bucket==='done'?'done':''}" data-open="${a.id}" ${x.k==='ns'&&can('log')?`draggable="true" data-dragns="${a.id}"`:''} title="${esc(x.text)} — ${esc(a.name)}">
+    <b>${esc(x.text)}</b><div>${esc(a.name)}${a.town?` <span class="muted">· ${esc(a.town)}</span>`:''}${late&&x.due?` <span style="color:var(--danger);font-weight:600">· ${fmtDay(x.due)}</span>`:''}</div>
+    ${full?`${(x.k==='ns'||x.k==='reorder')&&a._buyer?`<div class="muted">${tkBuyer(a)}</div>`:''}${x.sub?`<div class="muted">${esc(x.sub)}</div>`:''}<div class="muted">${esc(x.whoName)}${tkFlags(a)}</div><div class="acts tk-noprint">${tkActs(x)}</div>`:''}</div>`; }
 function renderTasks(v){
-  const f=S.filters.tasks||={}; const scope=f.scope||(can('reassign')?'all':'mine'); const kind=f.kind||'all';
-  const ns=[...S.accounts,...S.leads].filter(a=>a.next_step&&(scope==='all'||mine(a)||(a.next_step_owner&&a.next_step_owner===S.user.id)))
-    .map(a=>({k:'ns',a,text:a.next_step,due:a.next_step_due||'',who:a.next_step_owner?userName(a.next_step_owner):(a.owner||'Unassigned'),bucket:!a.next_step_due?'nodate':a.next_step_due<today()?'overdue':a.next_step_due===today()?'today':'upcoming'}));
-  const pw=pwTasks().filter(t=>scope==='all'||(t.owner&&t.owner.id===S.user.id))
-    .map(t=>({k:'pw',a:t.a,t,text:t.text,due:t.due,who:t.owner?t.owner.name:'Unassigned',bucket:t.s.days<0?'overdue':t.s.days===0?'today':'upcoming'}));
-  const cc=(kind==='pw'||kind==='ns')?[]:S.accounts.filter(a=>a.status==='Current'&&a._cc&&a._cc.state!=='confirmed'&&!/^Confirm contacts/.test(a.next_step||'')&&(scope==='all'||mine(a)||(pwOwner(a)&&pwOwner(a).id===S.user.id)))
-    .map(a=>({k:'cc',a,text:a._cc.label,due:a._cc.state==='expired'?a._cc.due:'',who:a.owner&&a.owner!=='Unassigned'?a.owner:(pwOwner(a)?pwOwner(a).name:'Unassigned'),bucket:a._cc.state==='expired'?'overdue':'nodate'}));
-  const rows=[...(kind==='pw'||kind==='cc'?[]:ns),...(kind==='ns'||kind==='cc'?[]:pw),...cc].sort((p,q)=>cmp(p.due||'9999',q.due||'9999')||cmp(p.a.name,q.a.name));
-  const groups={overdue:'Overdue',today:'Today',upcoming:'Upcoming',nodate:'No date'};
-  const line=(r,k)=>{ const a=r.a; return `<div class="li" data-open="${a.id}" style="cursor:pointer"><div class="grow"><div><b>${esc(r.text)}</b>${r.k==='pw'?' <span class="pill tag">Paperwork</span>':r.k==='cc'?' <span class="pill tag">Contacts</span>':''}</div><div class="em">${esc(a.name)}${a.town?' · '+esc(a.town):''} · ${L[a.id]?'<span class="pill lead">Unclaimed lead</span>':statusPill(a.status)} ${a.stage&&a.status!=='Current'&&!L[a.id]?`<span class="pill stage">${esc(a.stage)}</span>`:''} · ${esc(r.who)}${r.k==='pw'?` · ${r.t.s.days<0?`expired ${-r.t.s.days}d ago`:r.t.s.days===0?'expires today':`expires in ${r.t.s.days}d`}`:r.k==='cc'?` · ${esc(ccWhy(a))}`:''}</div></div><div style="font-size:12.5px;${k==='overdue'?'color:var(--danger);font-weight:600':''}">${r.due?fmtDate(r.due):''}</div>${r.k==='ns'?(can('log')?`<button class="btn ghost sm" data-done="${a.id}">Done</button>`:''):r.k==='cc'?(can('people')?(a._cc.ready?`<button class="btn ghost sm" data-cctask="${a.id}">Confirm</button>`:`<button class="btn ghost sm" data-ccadd="${a.id}|${esc(a._cc.missing[0])}">Add ${esc(a._cc.missing[0])}</button>`):''):(can('docs')?`<button class="btn ghost sm" data-pwup="${r.t.doc.id}" data-acc="${a.id}">Upload new</button>`:'')}</div>`; };
-  v.innerHTML=`<div class="toolbar">${can('reassign')?`<span class="chip ${scope==='mine'?'on':''}" data-scope="mine">Mine</span><span class="chip ${scope==='all'?'on':''}" data-scope="all">Everyone</span><span class="muted">·</span>`:''}${[['all','All'],['ns','Next steps'],['pw','Paperwork'],['cc','Contacts']].map(([k,l])=>`<span class="chip ${kind===k?'on':''}" data-kind="${k}">${l}</span>`).join('')}<span class="meta">${ns.length} open next step${ns.length===1?'':'s'} · ${pw.length} paperwork renewal${pw.length===1?'':'s'} · ${cc.length} contacts to confirm</span></div>
-    ${Object.entries(groups).map(([k,l])=>{ const g=rows.filter(r=>r.bucket===k); if(!g.length) return ''; return `<div class="section" style="margin-top:6px"><h4>${l} <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">${g.length}</span></h4><div class="list">${g.map(r=>line(r,k)).join('')}</div></div>`; }).join('')||`<div class="card empty">${kind==='pw'?`No CCC license is expired or within ${pwCfg().warn_days} days of its date.`:kind==='cc'?'Every active account has its contacts confirmed.':'No open next steps. Set one from any account page.'}</div>`}
-    ${pw.length&&kind!=='ns'?`<p class="note" style="margin-top:10px">A paperwork task clears itself when the renewed license is uploaded with its new date.</p>`:''}`;
-  $$('[data-scope]',v).forEach(c=>c.onclick=()=>{ (S.filters.tasks||={}).scope=c.dataset.scope; render(); });
-  $$('[data-kind]',v).forEach(c=>c.onclick=()=>{ (S.filters.tasks||={}).kind=c.dataset.kind; render(); });
-  $$('[data-done]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); completeNextStep(b.dataset.done); });
+  const f=tkPrefs(); const items=taskItems(f);
+  const sel=items.filter(x=>(f.person==='all'||x.who===f.person)&&(!f.q||matches(x.a,f.q)||x.text.toLowerCase().includes(f.q.toLowerCase())));
+  const load={}; for(const x of items){ const l=load[x.who]||={ns:0,late:0,all:0}; l.all++; if(x.k==='ns'){ l.ns++; if(x.bucket==='overdue') l.late++; } }
+  const who=[['all','Everyone'],...S.users.filter(u=>u.role!=='viewer').map(u=>[u.id,u.name]),['unassigned','Unassigned']].map(([id,n])=>{ const l=load[id]; const c=id==='all'?items.filter(x=>x.k==='ns').length:(l?l.ns:0); const late=id==='all'?items.filter(x=>x.k==='ns'&&x.bucket==='overdue').length:(l?l.late:0); return `<option value="${id}" ${f.person===id?'selected':''}>${esc(n)} — ${c} next step${c===1?'':'s'}${late?` · ${late} late`:''}</option>`; }).join('');
+  const nsSel=sel.filter(x=>x.k==='ns'), lateSel=sel.filter(x=>x.bucket==='overdue');
+  const nav=f.mode==='week'?`<span class="muted">·</span><button class="btn ghost sm" data-tknav="-7">‹ Prev</button><button class="btn ghost sm" data-tknav="0">This week</button><button class="btn ghost sm" data-tknav="7">Next ›</button><button class="btn sm tk-noprint" data-tkprint title="One landscape page: the week for the person selected">Print week</button>`
+    :f.mode==='month'?`<span class="muted">·</span><button class="btn ghost sm" data-tkmnav="-1">‹ Prev</button><button class="btn ghost sm" data-tkmnav="0">This month</button><button class="btn ghost sm" data-tkmnav="1">Next ›</button>`:'';
+  v.innerHTML=`<div class="toolbar tk-noprint">${['list','week','month'].map(m=>`<span class="chip ${f.mode===m?'on':''}" data-tkmode="${m}">${m[0].toUpperCase()+m.slice(1)}</span>`).join('')}<span class="muted">·</span>
+      <select data-tkperson title="Whose tasks">${who}</select>
+      ${Object.entries(TK).map(([k,t])=>`<span class="chip ${f.kinds.includes(k)?'on':''}" data-tkkind="${k}" title="Show / hide">${t.label}</span>`).join('')}
+      <input type="search" data-tkq placeholder="filter…" value="${esc(f.q||'')}" style="width:130px">${nav}
+      ${can('log')?`<button class="btn sm" data-tkadd="${today()}">+ Next step</button>`:''}
+      <span class="meta">${sel.length} item${sel.length===1?'':'s'} · ${nsSel.length} next step${nsSel.length===1?'':'s'} · <span style="${lateSel.length?'color:var(--danger);font-weight:600':''}">${lateSel.length} overdue</span></span></div>
+    ${f.mode==='list'?tkList(sel,f):f.mode==='week'?tkWeek(sel,f):tkMonth(sel,f)}
+    <p class="note tk-noprint" style="margin-top:10px">Next steps drag to another day in Week and Month; +1d / +1w / Mon nudge them; <b>+</b> on a day adds one. Reorders appear on the day an account's rhythm says it's due; deliveries on the requested date; a paperwork task clears itself when the renewed license is uploaded; a contacts task clears when someone confirms.</p>`;
+  bindTasks(v,f);
+}
+function tkList(sel,f){
+  const groups={overdue:'Overdue',today:'Today',upcoming:'Upcoming',nodate:'No date'}; const rows=sel.slice().sort((p,q)=>cmp(p.due||'9999',q.due||'9999')||cmp(p.a.name,q.a.name));
+  const bulk=can('reassign')&&S.sel.size?`<div class="card tk-noprint" style="padding:10px 14px;margin:8px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap"><b>${S.sel.size} next step${S.sel.size===1?'':'s'} selected</b>
+      <select id="tkBulkWho"><option value="">Reassign to…</option>${S.users.filter(u=>u.role!=='viewer').map(u=>`<option value="${u.id}">${esc(u.name)}</option>`).join('')}</select><button class="btn sm" data-tkbulk="who">Reassign</button>
+      <span class="muted">·</span><input type="date" id="tkBulkDate"><button class="btn sm" data-tkbulk="date">Move to date</button><button class="btn ghost sm" data-tkbulk="7">+1 week</button><button class="btn ghost sm" data-tkbulk="mon">Next Monday</button>
+      <button class="btn link sm" data-tkbulk="clear">Clear</button></div>`:'';
+  const line=(x,k)=>{ const a=x.a; return `<div class="li" data-open="${a.id}" style="cursor:pointer">${can('reassign')?`<input type="checkbox" class="chk" ${x.k==='ns'?`data-sel="${a.id}" ${S.sel.has(a.id)?'checked':''}`:'disabled style="visibility:hidden"'}>`:''}<div class="grow"><div><b>${esc(x.text)}</b> ${tkPill(x)}${x.auto?' <span class="muted" style="font-size:11px">auto</span>':''}</div><div class="em">${esc(a.name)}${a.town?' · '+esc(a.town):''} · ${L[a.id]?'<span class="pill lead">Unclaimed lead</span>':statusPill(a.status)} · ${esc(x.whoName)}${x.sub?` · ${esc(x.sub)}`:''}${tkFlags(a)}</div></div><div style="font-size:12.5px;white-space:nowrap;${k==='overdue'?'color:var(--danger);font-weight:600':''}">${x.due?fmtDate(x.due):''}</div><div class="acts tk-noprint" style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end;max-width:260px">${tkActs(x)}</div></div>`; };
+  return bulk+(Object.entries(groups).map(([k,l])=>{ const g=rows.filter(r=>r.bucket===k); if(!g.length) return ''; return `<div class="section" style="margin-top:6px"><h4>${l} <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">${g.length}</span></h4><div class="list">${g.map(r=>line(r,k)).join('')}</div></div>`; }).join('')||`<div class="card empty">Nothing here for ${f.person==='all'?'anyone':f.person==='unassigned'?'unassigned accounts':esc(userName(f.person))} with these filters.</div>`);
+}
+function tkWeek(sel,f){
+  const days=[...Array(7)].map((_,i)=>addDays(f.week,i)); const end=days[6]; const inWeek=sel.filter(x=>x.due&&x.due>=f.week&&x.due<=end);
+  const before=sel.filter(x=>x.due&&x.due<f.week&&x.bucket==='overdue'); const nodate=sel.filter(x=>!x.due);
+  const whoLabel=f.person==='all'?'Everyone':f.person==='unassigned'?'Unassigned':userName(f.person);
+  const col=d=>{ const g=inWeek.filter(x=>x.due===d).sort((p,q)=>cmp(p.k,q.k)||cmp(p.a.name,q.a.name)); return `<div class="tk-day ${d===today()?'today':''}" data-day="${d}"><div class="dh"><span>${DOW[(dayNum(d)+3)%7]} ${fmtDay(d)}</span>${can('log')?`<a href="#" class="tk-noprint" data-tkadd="${d}" title="Add a next step on this day">+</a>`:''}</div>${g.map(x=>tkCard(x,true)).join('')||'<div class="muted" style="font-size:11px">—</div>'}</div>`; };
+  return `<div id="weekSheet"><div class="tk-head"><b>Week of ${fmtDay(f.week)} – ${fmtDay(end)}</b> · ${esc(whoLabel)} <span class="muted">· ${inWeek.length} item${inWeek.length===1?'':'s'}${before.length?` · <span style="color:var(--danger)">${before.length} overdue from before</span>`:''}</span><span class="tk-legend">${Object.entries(TK).filter(([k])=>f.kinds.includes(k)).map(([k,t])=>`<span><i class="tk-dot ${t.cls}"></i>${t.label}</span>`).join('')}</span></div>
+    ${before.length?`<details class="tk-strip late" ${before.length<=8?'open':''}><summary><b>Overdue from before this week (${before.length})</b> <span class="muted tk-noprint" style="font-size:11.5px">· click to ${before.length<=8?'fold':'show'}</span></summary><div class="tk-stripbody">${before.sort((p,q)=>cmp(p.due,q.due)).map(x=>tkCard(x,false)).join('')}</div></details>`:''}
+    <div class="tk-wrap"><div class="tk-grid7">${days.map(col).join('')}</div></div>
+    ${nodate.length?`<div class="tk-strip tk-noprint"><b>No date (${nodate.length})</b>${nodate.slice(0,12).map(x=>tkCard(x,false)).join('')}${nodate.length>12?`<span class="muted" style="font-size:12px">+${nodate.length-12} more in List</span>`:''}</div>`:''}</div>`;
+}
+function tkMonth(sel,f){
+  const first=f.month+'-01'; const start=mondayOf(first); const nextM=isoDay(dayNum(first)+32).slice(0,7)+'-01'; const last=addDays(nextM,-1); const end=addDays(mondayOf(last),6);
+  const days=[]; for(let d=start; d<=end; d=addDays(d,1)) days.push(d);
+  const title=new Date(first+'T00:00:00').toLocaleDateString(undefined,{month:'long',year:'numeric'});
+  const cell=d=>{ const g=sel.filter(x=>x.due===d).sort((p,q)=>cmp(p.k,q.k)||cmp(p.a.name,q.a.name)); const other=!d.startsWith(f.month); const max=4;
+    return `<div class="tk-day ${d===today()?'today':''} ${other?'other':''}" data-day="${d}"><div class="dh"><span>${d.slice(8).replace(/^0/,'')}</span>${can('log')&&!other?`<a href="#" data-tkadd="${d}" title="Add a next step on this day">+</a>`:''}</div>${g.slice(0,max).map(x=>`<div class="tk-chip ${TK[x.k].cls} ${x.bucket==='overdue'?'late':''} ${x.bucket==='done'?'done':''}" data-open="${x.a.id}" ${x.k==='ns'&&can('log')?`draggable="true" data-dragns="${x.a.id}"`:''} title="${esc(x.text)} — ${esc(x.a.name)}${x.a.town?' · '+esc(x.a.town):''} · ${esc(x.whoName)}">${esc(x.a.name)}: ${esc(x.text)}</div>`).join('')}${g.length>max?`<a href="#" class="tk-more" data-gotoweek="${d}">+${g.length-max} more</a>`:''}</div>`; };
+  return `<div class="tk-month"><div class="tk-head"><b>${esc(title)}</b> <span class="muted">· ${sel.filter(x=>x.due&&x.due.startsWith(f.month)).length} items this month</span><span class="tk-legend">${Object.entries(TK).filter(([k])=>f.kinds.includes(k)).map(([k,t])=>`<span><i class="tk-dot ${t.cls}"></i>${t.label}</span>`).join('')}</span></div>
+    <div class="tk-wrap"><div class="tk-grid7 tk-dow">${DOW.map(d=>`<div>${d}</div>`).join('')}</div><div class="tk-grid7">${days.map(cell).join('')}</div></div></div>`;
+}
+function bindTasks(v,f){
+  $$('[data-tkmode]',v).forEach(c=>c.onclick=()=>{ f.mode=c.dataset.tkmode; tkSave(); render(); });
+  const ps=$('[data-tkperson]',v); if(ps) ps.onchange=()=>{ f.person=ps.value; S.sel.clear(); tkSave(); render(); };
+  $$('[data-tkkind]',v).forEach(c=>c.onclick=()=>{ const k=c.dataset.tkkind; f.kinds=f.kinds.includes(k)?f.kinds.filter(x=>x!==k):[...f.kinds,k]; tkSave(); render(); });
+  const q=$('[data-tkq]',v); if(q){ let t; q.oninput=()=>{ clearTimeout(t); t=setTimeout(()=>{ f.q=q.value.trim(); const y=window.scrollY; render(); window.scrollTo(0,y); const q2=$('[data-tkq]'); if(q2){ q2.focus(); q2.setSelectionRange(q2.value.length,q2.value.length); } },250); }; }
+  $$('[data-tknav]',v).forEach(b=>b.onclick=()=>{ const n=+b.dataset.tknav; f.week=n?addDays(f.week,n):mondayOf(today()); render(); });
+  $$('[data-tkmnav]',v).forEach(b=>b.onclick=()=>{ const n=+b.dataset.tkmnav; if(!n) f.month=today().slice(0,7); else { const d=new Date(f.month+'-15T00:00:00'); d.setMonth(d.getMonth()+n); f.month=d.toISOString().slice(0,7); } render(); });
+  $$('[data-gotoweek]',v).forEach(a=>a.onclick=e=>{ e.preventDefault(); e.stopPropagation(); f.week=mondayOf(a.dataset.gotoweek); f.mode='week'; tkSave(); render(); });
+  $$('[data-tkadd]',v).forEach(a=>a.onclick=e=>{ e.preventDefault(); e.stopPropagation(); quickAddStep(a.dataset.tkadd); });
+  const pr=$('[data-tkprint]',v); if(pr) pr.onclick=()=>{ $$('#weekSheet details',v).forEach(d=>d.open=true); document.body.classList.add('print-week'); const off=()=>document.body.classList.remove('print-week'); window.addEventListener('afterprint',off,{once:true}); setTimeout(off,4000); window.print(); };
+  $$('[data-nsdone]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); completeNextStep(b.dataset.nsdone); });
+  $$('[data-nsedit]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); nextStepForm(b.dataset.nsedit); });
+  $$('[data-nsmove]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); const [id,how]=b.dataset.nsmove.split('|'); const a=ALL[id]; if(!a) return; const base=isISO(a.next_step_due)?a.next_step_due:today(); const due=how==='mon'?nextMonday(base):addDays(base,+how); rescheduleNextStep(id,due,how==='mon'?'to next Monday':`+${how}d`); });
+  $$('[data-neworder]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); newOrderForm(b.dataset.neworder); });
+  $$('[data-editorder]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); editOrderForm(b.dataset.editorder); });
   $$('[data-cctask]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); confirmContacts(b.dataset.cctask); }); $$('[data-ccadd]',v).forEach(b=>b.onclick=e=>{ e.stopPropagation(); const [id,role]=b.dataset.ccadd.split('|'); addContactForm(id,role); });
+  $$('[data-tkbulk]',v).forEach(b=>b.onclick=()=>bulkNextSteps(b.dataset.tkbulk,v));
+  // drag a next step onto another day (week + month)
+  if(can('log')){ $$('[data-dragns]',v).forEach(el=>{ el.ondragstart=e=>{ e.dataTransfer.setData('text/plain',el.dataset.dragns); e.dataTransfer.effectAllowed='move'; el.style.opacity=.5; }; el.ondragend=()=>el.style.opacity=1; });
+    $$('[data-day]',v).forEach(cell=>{ cell.ondragover=e=>{ e.preventDefault(); cell.classList.add('over'); }; cell.ondragleave=()=>cell.classList.remove('over'); cell.ondrop=e=>{ e.preventDefault(); cell.classList.remove('over'); const id=e.dataTransfer.getData('text/plain'); if(id&&ALL[id]) rescheduleNextStep(id,cell.dataset.day,'dragged'); }; }); }
   bindRows(v); bindPaperwork(v,null);
 }
+async function rescheduleNextStep(id,due,why){ const a=ALL[id]; if(!a||!a.next_step||!can('log')||!isISO(due)||due===a.next_step_due) return;
+  await guarded(async()=>{ const t=a.next_step,o=a.next_step_owner||''; const msg=`Next step ${why||'moved'} → ${due} — ${a.name}`; if(L[id]) S.leads=await GH.update(F.leads,ls=>setNextStepFields(ls,id,t,due,o),msg); else S.accounts=await GH.update(F.accounts,as=>setNextStepFields(as,id,t,due,o),msg); index(); render(); toast(`${a.name}: moved to ${fmtDate(due)}`); }); }
+// managers: reassign or move every ticked next step at once (one commit per file)
+async function bulkNextSteps(how,v){ if(!can('reassign')) return; if(how==='clear'){ S.sel.clear(); render(); return; } const ids=[...S.sel].filter(id=>ALL[id]&&ALL[id].next_step); if(!ids.length) return;
+  let who=null,date=null,label='';
+  if(how==='who'){ who=$('#tkBulkWho',v).value; if(!who){ toast('Pick a person first',true); return; } label=`reassign ${ids.length} next step${ids.length===1?'':'s'} → ${userName(who)}`; }
+  else if(how==='date'){ date=$('#tkBulkDate',v).value; if(!isISO(date)){ toast('Pick a date first',true); return; } label=`move ${ids.length} next step${ids.length===1?'':'s'} → ${date}`; }
+  else label=`move ${ids.length} next step${ids.length===1?'':'s'} ${how==='mon'?'to next Monday':'+1 week'}`;
+  const apply=list=>{ for(const x of list) if(ids.includes(x.id)&&x.next_step){ if(who) x.next_step_owner=who; else { const base=isISO(x.next_step_due)?x.next_step_due:today(); x.next_step_due=date||(how==='mon'?nextMonday(base):addDays(base,7)); } } return list; };
+  await guarded(async()=>{ if(ids.some(id=>A[id])) S.accounts=await GH.update(F.accounts,apply,`Bulk: ${label}`); if(ids.some(id=>L[id])) S.leads=await GH.update(F.leads,apply,`Bulk: ${label}`); S.sel.clear(); index(); render(); toast(`Done — ${label}`); }); }
+// add a next step from a day on the calendar: pick the account, type the step, due that day
+function quickAddStep(day){ if(!can('log')) return; const opts=[...S.accounts,...S.leads].slice().sort((p,q)=>cmp(p.name,q.name)).map(a=>`<option value="${esc(a.name)}${a.town?' · '+esc(a.town):''}" data-id="${a.id}">`).join('');
+  const m=modal('Next step — '+fmtDate(day),`<div class="field"><label>Account</label><input id="qaAcc" list="qaList" placeholder="start typing a name…" autocomplete="off"><datalist id="qaList">${opts}</datalist><div class="note" id="qaCur" hidden></div></div>
+    <div class="field"><label>What's next</label><input id="qaText" placeholder="e.g. Drop samples, follow up on menu placement"></div>
+    <div class="grid2"><div class="field"><label>Due</label><input id="qaDue" type="date" value="${esc(day)}"></div><div class="field"><label>Owner</label><select id="qaOwner">${S.users.filter(u=>u.role!=='viewer').map(u=>`<option value="${u.id}" ${S.user.id===u.id?'selected':''}>${esc(u.name)}</option>`).join('')}</select></div></div>`,
+    `<button class="btn ghost" data-close>Cancel</button><button class="btn" id="qaSave">Save</button>`);
+  const find=()=>{ const val=$('#qaAcc',m).value.trim().toLowerCase(); if(!val) return null; const o=[...$$('#qaList option',m)].find(x=>x.value.toLowerCase()===val); if(o) return ALL[o.dataset.id]; const hits=[...S.accounts,...S.leads].filter(a=>a.name.toLowerCase()===val||(a.name+' · '+(a.town||'')).toLowerCase()===val); return hits.length===1?hits[0]:null; };
+  $('#qaAcc',m).onchange=()=>{ const a=find(); const c=$('#qaCur',m); if(a&&a.next_step){ c.innerHTML=`<b>${esc(a.name)}</b> already has a next step — <i>${esc(a.next_step)}</i>${a.next_step_due?` (due ${fmtDate(a.next_step_due)})`:''}. Saving replaces it.`; c.hidden=false; } else c.hidden=true; };
+  $('#qaSave',m).onclick=()=>{ const a=find(); if(!a){ toast('Pick an account from the list',true); return; } const t=$('#qaText',m).value.trim(); if(!t){ toast('Type the next step',true); return; } const d=$('#qaDue',m).value||day, o=$('#qaOwner',m).value; closeModal();
+    guarded(async()=>{ if(L[a.id]) S.leads=await GH.update(F.leads,ls=>setNextStepFields(ls,a.id,t,d,o),`Next step — ${a.name}`); else S.accounts=await GH.update(F.accounts,as=>setNextStepFields(as,a.id,t,d,o),`Next step — ${a.name}`); await appendActivity({account_id:a.id,type:'Task',note:`Next step: ${t}${d?' (due '+fmtDate(d)+')':''}`,date:today()},`Task note — ${a.name}`); index(); render(); toast('Next step saved'); }); }; }
 
 /* ---------------- PEOPLE ---------------- */
 function renderPeople(v){
@@ -1381,9 +1504,11 @@ async function selfTest(){
         x.contacts_confirmed.at='2026-01-01'; index(); o.expired=[x._cc.state,x._cc.due]; x.contacts_review={at:today(),by:'matt',reason:'t'}; index(); o.review=x._cc.state; render(); o.reviewBlock=$$('#view #ccBlock .pill.warn').length;
         x.contacts_confirmed=keep[0]; x.contacts_review=keep[1]; if(!keep[0]) delete x.contacts_confirmed; if(!keep[1]) delete x.contacts_review; index(); S.record=null;
         S.view='active'; (S.filters.active||={}).mode='contacts'; S.filters.active.cc='open'; render(); o.activeOpen=[$$('#view tbody tr').length,$$('#view thead th').length]; S.filters.active.cc='confirmed'; render(); o.activeConfirmed=$$('#view tbody tr').length; S.filters.active.cc=''; S.filters.active.mode='contacts';
-        S.view='tasks'; (S.filters.tasks||={}).kind='cc'; S.filters.tasks.scope='all'; render(); o.tasks=$$('#view .list .li').length; S.filters.tasks={}; S.view='insights'; render(); o.kpi=$$('#view [data-ccgo]').length; o.opp=opportunities().contacts.rows.length; S.view='settings'; render(); o.settings=[!!$('#ccDays'),!!$('#ccAuto'),!!$('#ccPerWeek')]; S.view='insights'; return o; })();
+        S.view='tasks'; S.filters.tasks={_loaded:true,mode:'list',kinds:['cc'],person:'all'}; render(); o.tasks=$$('#view .list .li').length; S.filters.tasks={}; S.view='insights'; render(); o.kpi=$$('#view [data-ccgo]').length; o.opp=opportunities().contacts.rows.length; S.view='settings'; render(); o.settings=[!!$('#ccDays'),!!$('#ccAuto'),!!$('#ccPerWeek')]; S.view='insights'; return o; })();
       console.log('SELFTEST-'+u+'-terms '+JSON.stringify(r.terms));
-      console.log('SELFTEST-'+u+'-cc '+JSON.stringify(r.cc)); }
+      r.tk=(()=>{ const o={}; S.view='tasks'; S.filters.tasks={_loaded:true,mode:'list',kinds:Object.keys(TK),person:'all'}; render(); o.list=[$$('#view .list .li').length,$$('#view [data-tkperson] option').length,$$('#view [data-tkkind].on').length,$$('#view [data-nsmove]').length]; S.filters.tasks.mode='week'; render(); o.week=[$$('#view #weekSheet .tk-day').length,$$('#view #weekSheet .tk-card').length,$$('#view [data-tkprint]').length,$$('#view [data-dragns]').length]; S.filters.tasks.mode='month'; render(); o.month=[$$('#view .tk-month .tk-day').length,$$('#view .tk-chip').length]; S.filters.tasks.person=S.user.id; render(); o.mine=$$('#view .tk-chip').length; quickAddStep(today()); o.quick=[!!$('#qaAcc'),$$('#qaList option').length>300]; closeModal(); S.filters.tasks={}; S.view='insights'; return o; })();
+      console.log('SELFTEST-'+u+'-cc '+JSON.stringify(r.cc));
+      console.log('SELFTEST-'+u+'-tasks '+JSON.stringify(r.tk)); }
   }catch(e){ errs.push('selftest exception: '+(e.stack||e.message)); }
   console.log('SELFTEST-ERRORS '+JSON.stringify(errs)); console.error=oe;
   S.user=null; S.view='insights'; S.record=null; S.filters={}; sessionStorage.removeItem(SESSION_KEY); location.hash=''; $('#app').hidden=true; $('#gate').hidden=false;
