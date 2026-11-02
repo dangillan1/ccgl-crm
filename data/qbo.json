@@ -100,7 +100,7 @@
    "balance": 5287.5,
    "customer": "Capeway Cannabis - Bourne",
    "ship_town": "Bourne",
-   "account_id": "A0071",
+   "account_id": "Amvl1fzydti30",
    "share": 1.0,
    "split": false,
    "amount": 5287.5,
@@ -1060,7 +1060,7 @@
    "balance": 0,
    "customer": "Capeway Cannabis - Bourne",
    "ship_town": "Bourne",
-   "account_id": "A0071",
+   "account_id": "Amvl1fzydti30",
    "share": 1.0,
    "split": false,
    "amount": 6190.0,
@@ -1900,7 +1900,7 @@
    "balance": 0,
    "customer": "Capeway Cannabis - Bourne",
    "ship_town": "Bourne",
-   "account_id": "A0071",
+   "account_id": "Amvl1fzydti30",
    "share": 1.0,
    "split": false,
    "amount": 5125.0,
@@ -5729,19 +5729,32 @@
    "open_alltime": 3152.5
   },
   "A0071": {
-   "invoiced_2026": 41679.75,
-   "n": 10.0,
-   "open": 7837.5,
+   "invoiced_2026": 25077.25,
+   "n": 7.0,
+   "open": 2550.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-29",
    "first_invoice": "2026-01-07",
    "split_share": 0.0,
    "customers": [
-    "Capeway Cannabis - Bourne",
     "Capeway Cannabis, LLC"
    ],
-   "open_alltime": 7837.5
+   "open_alltime": 2550.0
+  },
+  "Amvl1fzydti30": {
+   "invoiced_2026": 16602.5,
+   "n": 3.0,
+   "open": 5287.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-10-29",
+   "first_invoice": "2026-07-30",
+   "split_share": 0.0,
+   "customers": [
+    "Capeway Cannabis - Bourne"
+   ],
+   "open_alltime": 5287.5
   },
   "A0275": {
    "invoiced_2026": 25681.16,
