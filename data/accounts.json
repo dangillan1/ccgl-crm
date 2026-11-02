@@ -4224,9 +4224,7 @@
   "standing_requests": "",
   "license_number": "MR281308 MC281502",
   "tags": [],
-  "flags": [
-   "shared-owner"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Harbor House",
   "town": "Chelsea",
@@ -4234,13 +4232,14 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Team",
+  "owner": "Charley",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 149,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0149",
