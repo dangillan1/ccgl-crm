@@ -452,6 +452,18 @@
    "uploaded_by": "charley",
    "uploaded_at": "2026-11-02",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/Amvr4a0jdq24k/w9/2026-11-02_mvzff9jlbpvk.pdf",
+    "sha": "8e942ae895f27cc116af51c8d971d156a09232cb",
+    "name": "W-9 - Roslindale Cannabis Co.pdf",
+    "size": 193536,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-02",
+   "history": []
   }
  }
 }
