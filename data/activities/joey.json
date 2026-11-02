@@ -1369,5 +1369,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods · November $5k flower/pre-roll offer",
   "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzr4zwof9gu",
+  "ts": "2026-11-02T21:09:21.480Z",
+  "account_id": "A0357",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · November $5k flower/pre-roll offer",
+  "date": "2026-11-02"
  }
 ]
