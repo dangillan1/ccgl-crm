@@ -426,5 +426,44 @@
    "uploaded_at": "2026-10-21",
    "history": []
   }
+ },
+ "Amvr4a0jdq24k": {
+  "ccc": {
+   "file": {
+    "path": "accounts/Amvr4a0jdq24k/ccc/2026-11-02_mvzfdfcbin2s.pdf",
+    "sha": "358194937573659c548ccf8b04fc49641ad9b329",
+    "name": "CCC License - Roslindale Cannabis Co.pdf",
+    "size": 1318980,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-02",
+   "expires": "2026-08-02",
+   "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/Amvr4a0jdq24k/st4/2026-11-02_mvzff05ocxiv.pdf",
+    "sha": "b7417b27e86f0a9a2219c8c48509ab3cf66746f7",
+    "name": "ST-4 - Roslindale Cannabis Co.pdf",
+    "size": 195348,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-02",
+   "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/Amvr4a0jdq24k/w9/2026-11-02_mvzff9jlbpvk.pdf",
+    "sha": "8e942ae895f27cc116af51c8d971d156a09232cb",
+    "name": "W-9 - Roslindale Cannabis Co.pdf",
+    "size": 193536,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-02",
+   "history": []
+  }
  }
 }

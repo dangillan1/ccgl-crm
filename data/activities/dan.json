@@ -46,5 +46,37 @@
   "type": "Note",
   "note": "Order deleted: no date (Planned)",
   "date": "2026-09-25"
+ },
+ {
+  "id": "Xmvzeeho1p45t",
+  "ts": "2026-11-02T15:12:49.393Z",
+  "account_id": "A0205",
+  "type": "Note",
+  "note": "Payment terms: Net 30 → Terms TBD · 38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them",
+  "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzefvumgodc",
+  "ts": "2026-11-02T15:13:54.430Z",
+  "account_id": "A0146",
+  "type": "Note",
+  "note": "Payment terms: Net 30 → Make-up 2/3 · 50 / 50 · Today's order should be 50/50 - emailed team to check in on 50% COD today",
+  "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzejhuovug0",
+  "ts": "2026-11-02T15:16:42.912Z",
+  "account_id": "A0065",
+  "type": "Note",
+  "note": "Payment terms: Net 30 → Terms TBD · Latest invoice is late - keep an eye on. If difficult to collect then they lose terms for indefinite future.",
+  "date": "2026-11-02"
+ },
+ {
+  "id": "Xmvzelz47f7ch",
+  "ts": "2026-11-02T15:18:38.599Z",
+  "account_id": "A0009",
+  "type": "Note",
+  "note": "Payment terms: Net 30 → Terms TBD · Keep an eye on them - good lately after regrouping in 2026 but keep an eye on them",
+  "date": "2026-11-02"
  }
 ]

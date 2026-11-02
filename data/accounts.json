@@ -268,7 +268,25 @@
   "notes": "",
   "sheet_row": 10,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "terms": {
+   "plan": "tbd",
+   "step": null,
+   "label": "",
+   "since": "2026-11-02",
+   "reason": "Keep an eye on them - good lately after regrouping in 2026 but keep an eye on them",
+   "set_by": "dan",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "by": "dan",
+     "plan": "tbd",
+     "step": null,
+     "label": "Terms TBD",
+     "reason": "Keep an eye on them - good lately after regrouping in 2026 but keep an eye on them"
+    }
+   ]
+  }
  },
  {
   "id": "A0010",
@@ -1806,7 +1824,25 @@
   "notes": "",
   "sheet_row": 66,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "terms": {
+   "plan": "tbd",
+   "step": null,
+   "label": "",
+   "since": "2026-11-02",
+   "reason": "Latest invoice is late - keep an eye on. If difficult to collect then they lose terms for indefinite future.",
+   "set_by": "dan",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "by": "dan",
+     "plan": "tbd",
+     "step": null,
+     "label": "Terms TBD",
+     "reason": "Latest invoice is late - keep an eye on. If difficult to collect then they lose terms for indefinite future."
+    }
+   ]
+  }
  },
  {
   "id": "A0066",
@@ -4081,7 +4117,25 @@
   "notes": "",
   "sheet_row": 147,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "terms": {
+   "plan": "makeup",
+   "step": 2,
+   "label": "",
+   "since": "2026-11-02",
+   "reason": "Today's order should be 50/50 - emailed team to check in on 50% COD today",
+   "set_by": "dan",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "by": "dan",
+     "plan": "makeup",
+     "step": 2,
+     "label": "Make-up 2/3 · 50 / 50",
+     "reason": "Today's order should be 50/50 - emailed team to check in on 50% COD today"
+    }
+   ]
+  }
  },
  {
   "id": "A0147",
@@ -5714,7 +5768,25 @@
   "notes": "",
   "sheet_row": 206,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "terms": {
+   "plan": "tbd",
+   "step": null,
+   "label": "",
+   "since": "2026-11-02",
+   "reason": "38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them",
+   "set_by": "dan",
+   "history": [
+    {
+     "date": "2026-11-02",
+     "by": "dan",
+     "plan": "tbd",
+     "step": null,
+     "label": "Terms TBD",
+     "reason": "38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them"
+    }
+   ]
+  }
  },
  {
   "id": "A0206",
