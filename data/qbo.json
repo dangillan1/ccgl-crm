@@ -175,7 +175,7 @@
    "balance": 2768.08,
    "customer": "Roslindale Cannabis Co",
    "ship_town": "Roslindale",
-   "account_id": "A0075",
+   "account_id": "Amvr4a0jdq24k",
    "share": 1.0,
    "split": false,
    "amount": 2768.08,
@@ -3580,7 +3580,7 @@
    "balance": 0,
    "customer": "Roslindale Cannabis Co",
    "ship_town": "Roslindale",
-   "account_id": "A0075",
+   "account_id": "Amvr4a0jdq24k",
    "share": 1.0,
    "split": false,
    "amount": 3915.0,
@@ -5200,7 +5200,7 @@
    "balance": 0,
    "customer": "Roslindale Cannabis Co",
    "ship_town": "Roslindale",
-   "account_id": "A0075",
+   "account_id": "Amvr4a0jdq24k",
    "share": 1.0,
    "split": false,
    "amount": 2968.75,
@@ -5859,7 +5859,7 @@
    ],
    "open_alltime": 7979.39
   },
-  "A0075": {
+  "Amvr4a0jdq24k": {
    "invoiced_2026": 9651.83,
    "n": 3.0,
    "open": 2768.08,
@@ -7231,12 +7231,6 @@
     "account_id": "A0036",
     "date": "2026-10-21",
     "total": 4052.5
-   },
-   {
-    "order_id": "Omvr4bi950k02",
-    "account_id": "Amvr4a0jdq24k",
-    "date": "2026-10-27",
-    "total": 2768
    }
   ],
   "invoices_without_order": [],
