@@ -17,6 +17,8 @@ What it does
   4. Invoices with no order become orders (source QBO). Confirmed orders with nothing invoiced after 21 days are flagged
      review = "no-invoice"; the flag clears the moment an invoice turns up.
   5. Nothing is ever deleted here. Orders deleted in the CRM (settings.deleted_orders) are not recreated.
+  5b. After applying, tools/terms_sync.py runs: orders on accounts with special payment terms get stamped with them, and
+     make-up paths advance when QuickBooks shows the step's invoice paid on time (see that file).
   6. Orders linked to an invoice that is not in this feed — the 2024-2025 history loaded by tools/qbo_history.py — are
      left exactly as they are: never re-paired, never flagged.
 """
@@ -144,6 +146,11 @@ def run(apply=False, forced_links=None, quiet=False):
             o.pop("review", None)
     json.dump(orders, open(os.path.join(DATA, "orders.json"), "w"), indent=1)
     if not quiet: print(f"orders.json written: {len(orders)} orders ({n_new} created from invoices)")
+    try:                                                   # payment terms: stamp new orders, walk make-up paths forward (tools/terms_sync.py)
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import terms_sync
+        terms_sync.run(apply=True, quiet=quiet)
+    except Exception as e:
+        print("terms_sync skipped:", e)
     return plan
 
 if __name__ == "__main__":

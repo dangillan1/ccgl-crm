@@ -88,6 +88,15 @@ facts["pipeline_by_stage"] = dict(stages)
 r = qbo.get("recon", {})
 facts["recon"] = {"matched": r.get("matched"), "orders_without_invoice": len(r.get("orders_without_invoice", [])), "invoices_without_order": len(r.get("invoices_without_order", [])),
                   "amount_differs": len(r.get("amount_differs", [])), "blank_totals_fillable": len(r.get("orders_total_from_qbo", [])), "unmapped": [u["customer"] for u in qbo.get("unmapped", [])]}
+# payment terms: every account is Net 30 unless accounts.json says otherwise (set on the profile; tools/terms_sync.py walks the make-up path)
+STEP_SHORT = {1: "COD", 2: "50 / 50", 3: "Net 30 trial"}
+def terms_row(a):
+    t = a.get("terms") or {}; plan = t.get("plan"); step = min(3, max(1, int(t.get("step") or 1))) if plan == "makeup" else None
+    lab = (f"Make-up {step}/3 · {STEP_SHORT[step]}" if plan == "makeup" else (t.get("label") or "Custom terms") if plan == "custom" else "COD")
+    q = qa.get(a["id"], {})
+    return {"account": nm(a), "owner": a.get("owner"), "plan": plan, "step": step, "label": lab, "since": t.get("since"), "reason": t.get("reason"), "flag": t.get("flag"),
+            "set_by": t.get("set_by"), "owes": q.get("open_alltime", q.get("open")) or 0, "past_due": q.get("past_due") or 0}
+facts["special_terms"] = sorted([terms_row(a) for a in accounts if (a.get("terms") or {}).get("plan") in ("cod", "makeup", "custom")], key=lambda r: (0 if r["flag"] else 1, r["plan"], -r["owes"]))
 facts["placeholders"] = [{"account": nm(ALL[o["account_id"]]) if o["account_id"] in ALL else o.get("account_raw"), "date": o.get("date"), "status": o.get("status")} for o in orders if re.match(r"pend|plan", o.get("status") or "", re.I)]
 
 if "--json" in sys.argv:
@@ -116,4 +125,6 @@ print("NEW PROSPECTS LAST 7d:", ", ".join(facts["new_prospects_last_7d"]) or "no
 print("OPEN NEXT STEPS:"); [print(f"   {'OVERDUE ' if s['overdue'] else ''}{s['account']:40s} {s['step']}  (due {s['due']})  {s['owner']}") for s in facts["open_next_steps"]]
 print("PIPELINE BY STAGE:", facts["pipeline_by_stage"] or "nothing past New")
 rc = facts["recon"]; print(f"\nQBO vs TRACKER: {rc['matched']} paired · {rc['orders_without_invoice']} orders w/o invoice · {rc['invoices_without_order']} invoices w/o order · {rc['amount_differs']} amounts differ · {rc['blank_totals_fillable']} blank totals fillable · unmapped: {rc['unmapped'] or 'none'}")
+print(f"\nSPECIAL TERMS ({len(facts['special_terms'])} accounts not on Net 30):")
+for r_ in facts["special_terms"]: print(f"   {r_['account']:40s} {r_['label']:22s} since {r_['since'] or '?'}  {r_['owner']}  owes {money(r_['owes'])}{(' · %s past due' % money(r_['past_due'])) if r_['past_due'] else ''}{(' · ' + r_['reason']) if r_['reason'] else ''}{(' · NEEDS A DECISION: ' + r_['flag']) if r_['flag'] else ''}")
 print("PLACEHOLDER ROWS:", ", ".join(f"{p['account']} {p['date']} ({p['status']})" for p in facts["placeholders"]) or "none")

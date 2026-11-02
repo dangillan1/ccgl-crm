@@ -58,6 +58,11 @@ subject = f"CCGL Monday brief · {monday.strftime('%b %-d')}: {money_k(w['total'
 due_html = table("".join(row([e(r["account"]), owner(r["owner"]), ("<b style='color:%s'>due now</b>" % RED) if r["due_in"] <= 0 else f"due in {r['due_in']}d", money(r["ytd"])]) for r in due)) if due else "<div style='color:%s;font-size:13px'>Nobody on rhythm this week.</div>" % MUTED
 risk_html = table("".join(row([e(r["account"]), owner(r["owner"]), f"<span style='color:{RED}'>{r['days_since']}d</span> since last" + (f" · usually {r['avg_gap']}d" if r["avg_gap"] else ""), money(r["ytd"])]) for r in rar["rows"][:8]))
 pd_html = table("".join(row([e(r["account"]), owner(r["owner"]), f"oldest {r['oldest_days']}d · owes {money(r['owes'])}", f"<b style='color:{RED}'>{money(r['past_due'])}</b>"]) for r in pdq[:8])) if pdq else "<div style='color:%s;font-size:13px'>Nothing past due.</div>" % MUTED
+terms = F.get("special_terms") or []
+def terms_cell(r):
+    col = RED if r["plan"] == "cod" else "#B45309" if r["plan"] == "makeup" else "#3730A3"
+    return f"<b style='color:{col}'>{e(r['label'])}</b>" + (f"<br><span style='color:{RED};font-size:12px'>Needs a decision: {e(r['flag'])}</span>" if r.get("flag") else "")
+terms_html = table("".join(row([e(r["account"]), owner(r["owner"]), terms_cell(r), (f"since {datetime.date.fromisoformat(r['since']).strftime('%b %-d')}" if r.get("since") else "") + (f" · {e(r['reason'])}" if r.get("reason") else "") + (f"<br>owes {money(r['owes'])}" + (f" · <b style='color:{RED}'>{money(r['past_due'])} past due</b>" if r["past_due"] else "") if r["owes"] else "")], muted_last=True) for r in terms)) if terms else ""
 top_ins = [x for x in INS.get("assessments", []) if x["priority"] in ("critical", "high")][:CFG.get("max_assessments", 6)]
 ins_html = "".join(
     f"<div style='border-left:4px solid {RED if x['priority']=='critical' else '#D97706'};padding:6px 10px;margin:8px 0;background:#FAFAFA'>"
@@ -98,6 +103,7 @@ body = f"""
     {section("This week's reorder calls", due_html, "On their usual rhythm — call before they run out.")}
     {section("Revenue at risk", risk_html, "Past 1.5× their reorder rhythm. Biggest first.")}
     {section("Collections", pd_html, "Past due in QuickBooks. Check before the next delivery.")}
+    {section("Payment terms", terms_html, "Not on standard Net 30. COD = collect at delivery; make-up path = COD, then half/half, then a Net 30 trial — each step clears when its invoice is paid on time.") if terms else ""}
     {section("Where to focus", ins_html or "<div style='color:%s;font-size:13px'>No assessments this week.</div>" % MUTED)}
     {section("Last week", last_html)}
     {section("Housekeeping", house_html) if house else ""}
@@ -119,6 +125,7 @@ text = "\n".join([
     "", "THIS WEEK'S REORDER CALLS"] + [f"  {r['account']} — {r['owner'] or 'Unassigned'} — {'due now' if r['due_in'] <= 0 else 'due in %dd' % r['due_in']} — {money(r['ytd'])} YTD" for r in due] +
     ["", "REVENUE AT RISK"] + [f"  {r['account']} — {r['owner'] or 'Unassigned'} — {r['days_since']}d since last order — {money(r['ytd'])} YTD" for r in rar["rows"][:8]] +
     ["", "COLLECTIONS"] + [f"  {r['account']} — {money(r['past_due'])} past due, oldest {r['oldest_days']}d, owes {money(r['owes'])}" for r in pdq[:8]] +
+    (["", "PAYMENT TERMS (not Net 30)"] + [f"  {r['account']} — {r['owner'] or 'Unassigned'} — {r['label']}{(' since ' + r['since']) if r.get('since') else ''}{(' — ' + r['reason']) if r.get('reason') else ''}{(' — owes ' + money(r['owes'])) if r['owes'] else ''}{(' — NEEDS A DECISION: ' + r['flag']) if r.get('flag') else ''}" for r in terms] if terms else []) +
     ["", "WHERE TO FOCUS"] + [f"  [{x['priority'].upper()}] {x['headline']}\n    {x['assessment']}\n    Do: {x['action']}" for x in top_ins] +
     ["", "HOUSEKEEPING"] + [f"  - {h}" for h in house] + ["", f"Open the CRM: {URL}"])
 json.dump({"subject": subject, "to": CFG["to"], "cc": CFG.get("cc", []), "html": full_html, "text": text}, open(os.path.join(OUT, "weekly_email.json"), "w"), indent=1, ensure_ascii=False)
