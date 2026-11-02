@@ -97,6 +97,15 @@ Unclaimed Leads list until a person claims it.
   invoice with no ship-to address sits on the store that customer usually ships to and carries a
   *location?* pill until someone moves it with Edit. An account that is still listed as a Prospect but
   has invoices shows a *Former customer* pill on its page; its status is not changed.
+- **Star rating** — the Sheet's letter grade is gone from the app; every active account gets 1–5 stars
+  computed from its numbers on each load (nothing to type, nothing to argue about). 100 points: revenue in
+  the last 12 months as a share of the #1 account (50), orders in 12 months (25), bought within its own
+  reorder rhythm (15), nothing past due in QuickBooks (10), plus a growth bonus / decline penalty (±10, the
+  Rising / Fading thresholds). 80+ = ★★★★★, 60+ = ★★★★, 40+ = ★★★, 20+ = ★★, else ★; no orders in 12 months =
+  no rating. Weights and bands are in Settings → *Star rating* (`settings.stars`); the account page's About
+  card shows the breakdown; Active Accounts and Prospects sort and filter by stars; `tools/weekly_facts.py`
+  carries the same formula. The `grade` field still exists in `accounts.json` for the Sheet import but is
+  not shown or edited anywhere.
 - **Payment terms** — every account is Net 30 unless its profile says otherwise. Admins and managers set
   terms on the account page (*Payment terms* card): **Net 30**, **COD — no terms** (cash before or at
   delivery), the **make-up path** (order 1 COD → order 2 half at delivery / half Net 30 → order 3 full

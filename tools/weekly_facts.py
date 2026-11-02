@@ -46,8 +46,34 @@ for aid, os_ in by_acc.items():
     ytd = [o for o in os_ if (o.get("date") or "")[:4] == YEAR]
     total = sum(o.get("total") or 0 for o in ytd); total_all = sum(o.get("total") or 0 for o in os_)
     q3 = sum(o.get("total") or 0 for o in os_ if (TODAY - d(o["date"])).days < 90); q2 = sum(o.get("total") or 0 for o in os_ if 90 <= (TODAY - d(o["date"])).days < 180)
+    t12 = [o for o in os_ if (TODAY - d(o["date"])).days < 365]
     stats[aid] = {"n": len(ytd), "total": total, "n_all": len(os_), "total_all": total_all, "first": dates[0].isoformat(), "last": last.isoformat(), "since": since, "avg_gap": avg, "due_in": (avg - since) if avg else None,
-                  "quiet": since > max(30, round(avg * 1.5) if avg else 45), "lapsed": since > LAPSED_DAYS, "q3": q3, "q2": q2}
+                  "quiet": since > max(30, round(avg * 1.5) if avg else 45), "lapsed": since > LAPSED_DAYS, "q3": q3, "q2": q2, "rev12": sum(o.get("total") or 0 for o in t12), "n12": len(t12)}
+# star rating — the same formula as starIndex() in index.html (weights / bands from settings.stars)
+STAR_W = {"revenue": 50, "frequency": 25, "rhythm": 15, "payment": 10, "trend": 10}; STAR_BANDS = [80, 60, 40, 20]
+_sc = settings.get("stars") or {}
+for k in STAR_W:
+    try: v = float((_sc.get("w") or {})[k]); STAR_W[k] = v if v >= 0 else STAR_W[k]
+    except (KeyError, TypeError, ValueError): pass
+try:
+    b = [float(x) for x in _sc.get("bands")]
+    if len(b) == 4 and b[0] > b[1] > b[2] > b[3]: STAR_BANDS = b
+except (TypeError, ValueError): pass
+_qa = qbo.get("accounts", {})
+STAR_TOP = max([s["rev12"] for a_ in accounts if a_["id"] in stats for s in [stats[a_["id"]]]] + [0])
+def star_of(a):
+    s = stats.get(a["id"]);
+    if not s or s["rev12"] <= 0: return 0, None
+    pct = s["rev12"] / STAR_TOP * 100 if STAR_TOP else 0; n = s["n12"]; r = s["avg_gap"] or 45; dd = s["since"]
+    q = _qa.get(a["id"], {}); pd_ = q.get("past_due") or 0; pdd = q.get("oldest_due_days") or 0
+    rev = STAR_W["revenue"] * (1 if pct >= 50 else .8 if pct >= 25 else .6 if pct >= 12 else .4 if pct >= 6 else .2 if pct >= 3 else .1)
+    freq = STAR_W["frequency"] * (1 if n >= 12 else .8 if n >= 8 else .6 if n >= 5 else .4 if n >= 3 else .2 if n >= 2 else .08)
+    rh = STAR_W["rhythm"] * (1 if dd <= r else 2 / 3 if dd <= r * 1.5 else 1 / 3 if dd <= r * 2 else 0)
+    pay = STAR_W["payment"] * ((.5 if pdd < 30 else 0) if pd_ > 0 else 1)
+    tr = STAR_W["trend"] if (s["q3"] >= 8000 and s["q2"] > 0 and s["q3"] >= s["q2"] * 1.4) else -STAR_W["trend"] if (s["q2"] >= 8000 and s["q3"] < s["q2"] * 0.5) else 0
+    sc = max(0, min(100, round(rev + freq + rh + pay + tr)))
+    return (5 if sc >= STAR_BANDS[0] else 4 if sc >= STAR_BANDS[1] else 3 if sc >= STAR_BANDS[2] else 2 if sc >= STAR_BANDS[3] else 1), sc
+def stars_txt(a): n, sc = star_of(a); return ("★" * n + "☆" * (5 - n)) if n else "—"
 cur = [a for a in accounts if a["status"] == "Current"]
 def nm(a): return f"{a['name']} / {a.get('town') or '—'}"
 facts = {"date": TODAY.isoformat(), "week_start": week_ago.isoformat()}
@@ -58,7 +84,7 @@ facts["orders_last_7d"] = {"n": len(wk), "total": sum(o.get("total") or 0 for o 
                            "rows": sorted([{"account": nm(ALL[o["account_id"]]) if o["account_id"] in ALL else o.get("account_raw"), "date": o["date"], "total": o.get("total"), "owner": o.get("owner", ""), "source": o.get("source", "")} for o in wk], key=lambda r: r["date"], reverse=True)}
 facts["ytd"] = {"year": YEAR, "orders": len(conf_y), "tracker_total": sum(o.get("total") or 0 for o in conf_y), "orders_all_years": len(conf), "first_order": min(o["date"] for o in conf) if conf else None, "qbo_invoiced": qbo.get("totals", {}).get("invoiced_2026"), "qbo_open": qbo.get("totals", {}).get("open"), "qbo_past_due": qbo.get("totals", {}).get("past_due"), "qbo_generated": qbo.get("generated")}
 risk = sorted([(a, stats[a["id"]]) for a in cur if a["id"] in stats and stats[a["id"]]["quiet"] and not stats[a["id"]]["lapsed"]], key=lambda t: -t[1]["total"])
-facts["revenue_at_risk"] = {"total": sum(s["total"] for _, s in risk), "rows": [{"account": nm(a), "owner": a.get("owner"), "ytd": s["total"], "days_since": s["since"], "avg_gap": s["avg_gap"], "grade": a.get("grade")} for a, s in risk[:12]]}
+facts["revenue_at_risk"] = {"total": sum(s["total"] for _, s in risk), "rows": [{"account": nm(a), "owner": a.get("owner"), "ytd": s["total"], "days_since": s["since"], "avg_gap": s["avg_gap"], "stars": star_of(a)[0], "score": star_of(a)[1]} for a, s in risk[:12]]}
 due = sorted([(a, stats[a["id"]]) for a in cur if a["id"] in stats and stats[a["id"]]["n_all"] >= 2 and stats[a["id"]]["due_in"] is not None and 0 <= stats[a["id"]]["due_in"] <= 7], key=lambda t: t[1]["due_in"])
 facts["due_this_week"] = [{"account": nm(a), "owner": a.get("owner"), "due_in": s["due_in"], "avg_gap": s["avg_gap"], "ytd": s["total"]} for a, s in due]
 qa = qbo.get("accounts", {})
@@ -69,7 +95,10 @@ fading = sorted([(a, stats[a["id"]]) for a in cur if a["id"] in stats and stats[
 facts["rising"] = [{"account": nm(a), "owner": a.get("owner"), "last_90": s["q3"], "prior_90": s["q2"]} for a, s in rising[:8]]
 facts["fading"] = [{"account": nm(a), "owner": a.get("owner"), "last_90": s["q3"], "prior_90": s["q2"], "days_since": s["since"]} for a, s in fading[:8]]
 top = sorted([(a, stats[a["id"]]) for a in cur if a["id"] in stats and stats[a["id"]]["n"]], key=lambda t: -t[1]["total"])[:10]
-facts["top_accounts"] = [{"account": nm(a), "owner": a.get("owner"), "ytd": s["total"], "n": s["n"], "days_since": s["since"], "avg_gap": s["avg_gap"]} for a, s in top]
+facts["top_accounts"] = [{"account": nm(a), "owner": a.get("owner"), "ytd": s["total"], "n": s["n"], "days_since": s["since"], "avg_gap": s["avg_gap"], "stars": star_of(a)[0], "score": star_of(a)[1]} for a, s in top]
+facts["stars"] = {"top_account": next((nm(a) for a in cur if a["id"] in stats and stats[a["id"]]["rev12"] == STAR_TOP), None), "top_rev12": STAR_TOP, "bands": STAR_BANDS, "weights": STAR_W,
+                  "distribution": {str(n): sum(1 for a in cur if star_of(a)[0] == n) for n in (5, 4, 3, 2, 1, 0)},
+                  "five_star": [{"account": nm(a), "owner": a.get("owner"), "score": star_of(a)[1], "rev12": stats[a["id"]]["rev12"], "n12": stats[a["id"]]["n12"]} for a in sorted(cur, key=lambda a: -(star_of(a)[1] or 0)) if star_of(a)[0] == 5]}
 facts["unassigned_with_orders"] = [{"account": nm(a), "ytd": stats[a["id"]]["total"]} for a in cur if a.get("owner") in (None, "", "Unassigned") and a["id"] in stats and stats[a["id"]]["n"]][:10]
 facts["once_then_silent"] = [{"account": nm(a), "ytd": stats[a["id"]]["total_all"], "days_since": stats[a["id"]]["since"]} for a in cur if a["id"] in stats and stats[a["id"]]["n_all"] == 1 and stats[a["id"]]["since"] >= 45 and not stats[a["id"]]["lapsed"]][:8]
 lapsed = sorted([(a, stats[a["id"]]) for a in accounts if a["id"] in stats and stats[a["id"]]["lapsed"]], key=lambda t: -t[1]["total_all"])
@@ -114,14 +143,16 @@ w = facts["orders_last_7d"]; print(f"Orders last 7d: {w['n']} / {money(w['total'
 for r_ in w["rows"]: print(f"   {r_['date']}  {r_['account']:40s} {money(r_['total']) if r_['total'] else '—':>9}  {r_['owner']}")
 y = facts["ytd"]; print(f"{y['year']}: {y['orders']} confirmed orders, tracker {money(y['tracker_total'])} · QBO invoiced {money(y['qbo_invoiced'] or 0)} · open {money(y['qbo_open'] or 0)} · past due {money(y['qbo_past_due'] or 0)} (QBO as of {y['qbo_generated']}) · order history: {y['orders_all_years']} orders since {y['first_order']}")
 print(f"\nREVENUE AT RISK ({money(facts['revenue_at_risk']['total'])}):")
-for r_ in facts["revenue_at_risk"]["rows"]: print(f"   {r_['account']:40s} {money(r_['ytd']):>9}  {r_['days_since']}d since last{(' (usually %dd)' % r_['avg_gap']) if r_['avg_gap'] else ''}  {r_['owner']}  grade {r_['grade'] or '—'}")
+for r_ in facts["revenue_at_risk"]["rows"]: print(f"   {r_['account']:40s} {money(r_['ytd']):>9}  {r_['days_since']}d since last{(' (usually %dd)' % r_['avg_gap']) if r_['avg_gap'] else ''}  {r_['owner']}  {('★' * r_['stars'] + '☆' * (5 - r_['stars'])) if r_['stars'] else 'no stars'}")
 print("\nDUE THIS WEEK:")
 for r_ in facts["due_this_week"]: print(f"   {r_['account']:40s} due in {r_['due_in']}d (every ~{r_['avg_gap']}d)  {money(r_['ytd'])}  {r_['owner']}")
 print("\nPAST DUE (QBO):")
 for r_ in facts["past_due"]: print(f"   {r_['account']:40s} {money(r_['past_due']):>9} past due · owes {money(r_['owes'])} · oldest {r_['oldest_days']}d  {r_['owner']}")
 print("\nRISING:"); [print(f"   {r_['account']:40s} {money(r_['last_90'])} vs {money(r_['prior_90'])}  {r_['owner']}") for r_ in facts["rising"]]
 print("FADING:"); [print(f"   {r_['account']:40s} {money(r_['last_90'])} vs {money(r_['prior_90'])} · {r_['days_since']}d since last  {r_['owner']}") for r_ in facts["fading"]]
-print(f"\nTOP 10 {YEAR}:"); [print(f"   {r_['account']:40s} {money(r_['ytd']):>9}  {r_['n']} orders · {r_['days_since']}d since last (~{r_['avg_gap']}d)  {r_['owner']}") for r_ in facts["top_accounts"]]
+print(f"\nTOP 10 {YEAR}:"); [print(f"   {r_['account']:40s} {money(r_['ytd']):>9}  {r_['n']} orders · {r_['days_since']}d since last (~{r_['avg_gap']}d)  {r_['owner']}  {('★' * r_['stars'] + '☆' * (5 - r_['stars'])) if r_['stars'] else '—'} {r_['score'] or ''}") for r_ in facts["top_accounts"]]
+sd = facts["stars"]; print(f"STAR RATINGS (12-mo revenue as % of #1 {sd['top_account']} {money(sd['top_rev12'])}, orders, rhythm, pays on time, trend; bands {'/'.join(str(int(b)) for b in sd['bands'])}): " + " · ".join(f"{n}★ {c}" for n, c in sd["distribution"].items() if n != '0') + f" · no rating {sd['distribution']['0']}")
+print("   5★:", ", ".join(f"{r_['account']} ({r_['score']})" for r_ in sd["five_star"]) or "none")
 print("\nUNASSIGNED WITH ORDERS:", ", ".join(f"{r_['account']} ({money(r_['ytd'])})" for r_ in facts["unassigned_with_orders"]) or "none")
 print("ONE ORDER THEN SILENT:", ", ".join(f"{r_['account']} ({money(r_['ytd'])}, {r_['days_since']}d)" for r_ in facts["once_then_silent"]) or "none")
 lp = facts["lapsed"]; print(f"\nLAPSED — no order in {LAPSED_DAYS}+ days ({lp['n']} accounts; win-back candidates, biggest lifetime first):")
