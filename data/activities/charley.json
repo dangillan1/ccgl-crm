@@ -128,5 +128,13 @@
   "type": "Order",
   "note": "Confirmed order $4,166 · Finished Goods",
   "date": "2026-10-27"
+ },
+ {
+  "id": "Xmvzfdixyhbgt",
+  "ts": "2026-11-02T15:40:04.006Z",
+  "account_id": "Amvr4a0jdq24k",
+  "type": "Doc",
+  "note": "CCC License uploaded — expires Aug 2, 26",
+  "date": "2026-11-02"
  }
 ]
