@@ -17,7 +17,7 @@
  {
   "id": "361",
   "name": "Apex Noire",
-  "balance": 4250.0
+  "balance": 8830.0
  },
  {
   "id": "487",
@@ -27,7 +27,7 @@
  {
   "id": "528",
   "name": "Ascend Wellness Boston",
-  "balance": 0.0
+  "balance": 2430.0
  },
  {
   "id": "529",
@@ -62,17 +62,17 @@
  {
   "id": "489",
   "name": "Botera Brockton",
-  "balance": 2800.0
+  "balance": 7979.39
  },
  {
   "id": "488",
   "name": "Botera Franklin",
-  "balance": 4430.0
+  "balance": 9698.67
  },
  {
   "id": "490",
   "name": "Botera Taunton",
-  "balance": 3750.0
+  "balance": 3682.44
  },
  {
   "id": "446",
@@ -82,12 +82,12 @@
  {
   "id": "453",
   "name": "Bountiful Framingham",
-  "balance": 7915.42
+  "balance": 0.0
  },
  {
   "id": "438",
   "name": "Bountiful Rowley",
-  "balance": 5660.42
+  "balance": 0.0
  },
  {
   "id": "520",
@@ -137,12 +137,12 @@
  {
   "id": "416",
   "name": "CannaBarn",
-  "balance": 1800.0
+  "balance": 0.0
  },
  {
   "id": "508",
   "name": "Cannabis Connection",
-  "balance": 0.0
+  "balance": 3490.0
  },
  {
   "id": "509",
@@ -162,12 +162,12 @@
  {
   "id": "533",
   "name": "Capeway Cannabis - Bourne",
-  "balance": 0.0
+  "balance": 5287.5
  },
  {
   "id": "352",
   "name": "Capeway Cannabis, LLC",
-  "balance": 0.0
+  "balance": 2550.0
  },
  {
   "id": "386",
@@ -212,12 +212,12 @@
  {
   "id": "484",
   "name": "Elysian",
-  "balance": 6425.25
+  "balance": 12103.0
  },
  {
   "id": "272",
   "name": "Ember Gardens Cape Cod LLC",
-  "balance": 0.0
+  "balance": 3250.07
  },
  {
   "id": "304",
@@ -227,12 +227,12 @@
  {
   "id": "452",
   "name": "Enlite Indian Orchard",
-  "balance": -109.64
+  "balance": 3221.36
  },
  {
   "id": "451",
   "name": "Enlite Northampton",
-  "balance": 0.0
+  "balance": 3152.5
  },
  {
   "id": "500",
@@ -342,7 +342,7 @@
  {
   "id": "379",
   "name": "Greensoul Organics",
-  "balance": 0.0
+  "balance": 3425.0
  },
  {
   "id": "395",
@@ -432,7 +432,22 @@
  {
   "id": "100000021",
   "name": "J-BAM",
-  "balance": 12152.25
+  "balance": 0.0
+ },
+ {
+  "id": "100000101",
+  "name": "Joint Ops Gardner",
+  "balance": 0.0
+ },
+ {
+  "id": "100000091",
+  "name": "Joint Ops Mendon",
+  "balance": 0.0
+ },
+ {
+  "id": "100000081",
+  "name": "Joint Ops Rowley",
+  "balance": 0.0
  },
  {
   "id": "440",
@@ -467,12 +482,12 @@
  {
   "id": "515",
   "name": "Lazy River Dracut",
-  "balance": 2887.5
+  "balance": 0.0
  },
  {
   "id": "516",
   "name": "Lazy River Tewksbury",
-  "balance": 3062.5
+  "balance": 0.0
  },
  {
   "id": "402",
@@ -652,32 +667,32 @@
  {
   "id": "415",
   "name": "Resinate Merrimac",
-  "balance": 0.0
+  "balance": 4052.5
  },
  {
   "id": "414",
   "name": "Resinate Northampton",
-  "balance": 0.0
+  "balance": 3877.5
  },
  {
   "id": "413",
   "name": "Resinate Worcester",
-  "balance": 0.0
+  "balance": 4717.5
  },
  {
   "id": "385",
   "name": "Resinate, Inc.",
-  "balance": 0.0
+  "balance": 5104.0
  },
  {
   "id": "376",
   "name": "Reverie 73 Beverly",
-  "balance": 4165.0
+  "balance": 8377.5
  },
  {
   "id": "375",
   "name": "Reverie 73 Gloucester",
-  "balance": 3098.0
+  "balance": 5335.5
  },
  {
   "id": "359",
@@ -687,12 +702,12 @@
  {
   "id": "354",
   "name": "Reverie 73 Lowell",
-  "balance": 2706.0
+  "balance": 6933.5
  },
  {
   "id": "494",
   "name": "Roadtrip",
-  "balance": 0.0
+  "balance": 5925.0
  },
  {
   "id": "311",
@@ -702,7 +717,7 @@
  {
   "id": "475",
   "name": "Roslindale Cannabis Co",
-  "balance": 0.0
+  "balance": 2768.08
  },
  {
   "id": "279",
@@ -747,7 +762,7 @@
  {
   "id": "293",
   "name": "Sublime Cannabis Co.",
-  "balance": 0.0
+  "balance": 6300.0
  },
  {
   "id": "100000011",
@@ -757,7 +772,7 @@
  {
   "id": "491",
   "name": "Surfs Up",
-  "balance": 0.0
+  "balance": 4612.5
  },
  {
   "id": "407",
@@ -827,7 +842,7 @@
  {
   "id": "527",
   "name": "The Vault - Worcester",
-  "balance": 7787.75
+  "balance": 6437.75
  },
  {
   "id": "467",
