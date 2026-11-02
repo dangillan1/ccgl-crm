@@ -664,10 +664,10 @@
  {
   "id": "C794ba0f9",
   "account_id": "A0017",
-  "name": "",
+  "name": "Boston Inventory",
   "email": "fs_leadership@awholdings.com",
   "phone": "",
-  "role": "Intake",
+  "role": "Intake, Inventory",
   "source": "Customer Tracker",
   "primary": false
  },
