@@ -7143,9 +7143,7 @@
   "standing_requests": "",
   "license_number": "MR282467",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Piping Plover",
   "town": "Wellfleet",
@@ -7153,13 +7151,14 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Unassigned",
+  "owner": "Charley",
   "last_contact": "2026-01-05",
   "next_contact": "2026-01-19",
   "notes": "",
   "sheet_row": 252,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0252",
