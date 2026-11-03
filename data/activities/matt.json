@@ -463,5 +463,13 @@
   "type": "Task",
   "note": "Done: Follow up on license inspection date",
   "date": "2026-11-03"
+ },
+ {
+  "id": "Xmw14ki6quj19",
+  "ts": "2026-11-03T20:13:06.194Z",
+  "account_id": "A0002",
+  "type": "Task",
+  "note": "Next step: Follow up w/ buyers - sample feed back - how do we get an order? (due Nov 9, 26)",
+  "date": "2026-11-03"
  }
 ]
