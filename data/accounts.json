@@ -1778,7 +1778,10 @@
   "notes": "",
   "sheet_row": 63,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Send fresh samples on next order",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0063",
