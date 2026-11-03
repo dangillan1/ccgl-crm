@@ -20130,16 +20130,19 @@
   "account_id": "A0357",
   "account_raw": "Zenleaf",
   "license": "MR281552",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Alex Portillo",
   "contact_email": "alex.portillo@verano.com",
   "delivery_date": "",
-  "total": null,
+  "total": 5037.5,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "November $5k flower/pre-roll offer",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-03"
  }
 ]
