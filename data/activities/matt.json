@@ -421,5 +421,14 @@
   "type": "Task",
   "note": "Next step: Send fresh samples on next order (due Nov 16, 26)",
   "date": "2026-11-03"
+ },
+ {
+  "id": "Xmw14gwywx2p7",
+  "ts": "2026-11-03T20:10:18.728Z",
+  "account_id": "A0002",
+  "type": "Call",
+  "note": "Spoke w/ buyer - Stephanie about scheduling sample drop off",
+  "date": "2026-10-26",
+  "contact_id": null
  }
 ]
