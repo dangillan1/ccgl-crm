@@ -408,8 +408,10 @@
   "ts": "2026-11-03T20:08:11.015Z",
   "account_id": "A0062",
   "type": "Visit",
-  "note": "Stopped by and grabbed PPP 1/8",
+  "note": "Stopped by and grabbed PPP 1/8\n\nSpoke w/ Budtender, Matt - received 6 month old PPP samples and said it smelled and tasted like hay",
   "date": "2026-11-03",
-  "contact_id": null
+  "contact_id": "",
+  "edited_at": "2026-11-03",
+  "edited_by": "matt"
  }
 ]
