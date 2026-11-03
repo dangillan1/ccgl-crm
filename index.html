@@ -198,7 +198,7 @@ ol.steps{padding-left:20px;line-height:1.7;font-size:13px}
 .tk-chip{display:block;border-left:3px solid #9ca3af;background:#f3f4f6;border-radius:4px;padding:2px 5px;margin-bottom:3px;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
 .tk-more{display:block;font-size:11px;color:var(--accent);font-weight:600;text-decoration:none;padding:2px 5px}
 .tk-strip{display:flex;gap:6px;flex-wrap:wrap;align-items:flex-start;margin:0 0 10px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}.tk-strip>b,.tk-strip summary{flex:0 0 100%;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:#4b5563;cursor:pointer}.tk-strip .tk-stripbody{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.tk-strip .tk-card{flex:0 0 220px;margin:0}.tk-strip.late{background:#fff7f7;border-color:#fecaca}
-.tk-ns{border-left-color:var(--info)}.tk-re{border-left-color:var(--warn)}.tk-dl{border-left-color:var(--accent)}.tk-pw{border-left-color:#7c3aed}.tk-cc{border-left-color:#db2777}
+.tk-card.tk-ns,.tk-chip.tk-ns{border-left-color:var(--info)}.tk-card.tk-re,.tk-chip.tk-re{border-left-color:var(--warn)}.tk-card.tk-dl,.tk-chip.tk-dl{border-left-color:var(--accent)}.tk-card.tk-pw,.tk-chip.tk-pw{border-left-color:#7c3aed}.tk-card.tk-cc,.tk-chip.tk-cc{border-left-color:#db2777}
 .tk-dot.tk-ns{background:var(--info)}.tk-dot.tk-re{background:var(--warn)}.tk-dot.tk-dl{background:var(--accent)}.tk-dot.tk-pw{background:#7c3aed}.tk-dot.tk-cc{background:#db2777}
 .tk-card.late,.tk-chip.late{background:var(--danger-bg)}.tk-card.done,.tk-chip.done{opacity:.6}
 .pill.tk-ns{background:var(--info-bg);color:var(--info)}.pill.tk-re{background:var(--warn-bg);color:var(--warn)}.pill.tk-dl{background:var(--ok-bg);color:var(--ok)}.pill.tk-pw{background:#f5f3ff;color:#5b21b6}.pill.tk-cc{background:#fdf2f8;color:#9d174d}
@@ -243,6 +243,54 @@ ol.steps{padding-left:20px;line-height:1.7;font-size:13px}
 #toast.err{background:var(--danger)}
 @media (max-width:960px){ .rec-grid{grid-template-columns:1fr} .ins-grid{grid-template-columns:1fr} }
 @media (max-width:860px){ #app{grid-template-columns:1fr} aside{position:relative;height:auto} nav{display:flex;flex-wrap:wrap;gap:2px;padding:6px} nav .grp{display:none} .userbox{width:100%} .grid2{grid-template-columns:1fr} }
+/* ---- phones (≤700px): bottom tab bar, cards instead of tables, thumb-sized controls. Desktop is untouched. ---- */
+#tabbar{display:none}
+@media (max-width:700px){
+  body.phone aside{display:none} body.phone #app{display:block;min-height:100vh}
+  body.phone .topbar{padding:8px 12px;gap:8px;flex-wrap:nowrap} body.phone .topbar h2{font-size:15px;max-width:38vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap} body.phone .topbar .search{flex:1 1 auto;min-width:0} body.phone .topbar .search input{padding:9px 10px 9px 30px;font-size:16px}
+  body.phone .topbar #newAccountTop,body.phone .topbar #reloadBtn,body.phone .topbar #syncState,body.phone .topbar .sp{display:none} body.phone .topbar #newOrderTop{padding:8px 10px;white-space:nowrap}
+  body.phone .content{padding:12px 12px calc(76px + env(safe-area-inset-bottom))}
+  body.phone #tabbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:4px 0 calc(4px + env(safe-area-inset-bottom))}
+  body.phone #tabbar a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;color:#94a3b8;font-size:10.5px;font-weight:600;padding:5px 0 3px;text-decoration:none;position:relative;letter-spacing:.02em}
+  body.phone #tabbar a svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round} body.phone #tabbar a.on{color:#fff} body.phone #tabbar a .cnt{position:absolute;top:1px;right:calc(50% - 20px);background:var(--warn);color:#fff;font-size:9.5px;border-radius:999px;padding:0 5px;line-height:15px}
+  body.phone input,body.phone select,body.phone textarea{font-size:16px}   /* 16px stops iOS zooming into fields */
+  body.phone .btn{padding:9px 13px;font-size:14px} body.phone .btn.sm{padding:8px 11px;font-size:13px} body.phone .btn.xs{padding:6px 9px;font-size:12.5px} body.phone .chip{padding:7px 12px;font-size:13px}
+  body.phone .kpis{grid-template-columns:1fr 1fr;gap:8px} body.phone .kpi .v{font-size:19px}
+  body.phone .toolbar{gap:6px} body.phone .toolbar .meta{margin-left:0;flex:0 0 100%;font-size:12px}
+  body.phone .toolbar:not(.open) select,body.phone .toolbar:not(.open) input{display:none} body.phone .toolbar .ph-filters{order:-1}
+  body.phone .bulkbar{flex-wrap:wrap}
+  /* tables become cards: header labels move into each cell (set by phoneTables()) */
+  body.phone .tbl-wrap{overflow:visible;border:none;background:none;box-shadow:none}
+  body.phone .tbl-wrap table,body.phone .tbl-wrap tbody,body.phone .tbl-wrap tr,body.phone .tbl-wrap td{display:block;width:auto;max-width:none;white-space:normal}
+  body.phone .tbl-wrap thead{display:none} body.phone .tbl-wrap td.ph-hide,body.phone .tbl-wrap td.ph-empty{display:none}
+  body.phone .tbl-wrap tr{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;box-shadow:var(--shadow)} body.phone .tbl-wrap tr.row{cursor:pointer}
+  body.phone .tbl-wrap td{padding:2px 0;border:none;font-size:13.5px;text-align:left;line-height:1.4} body.phone .tbl-wrap td.tr{text-align:left}
+  body.phone .tbl-wrap td[data-label]::before{content:attr(data-label) " · ";color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+  body.phone .tbl-wrap td.ph-title{font-size:16px;font-weight:600;padding-bottom:4px} body.phone .tbl-wrap td.ph-title::before{content:none} body.phone .tbl-wrap td.ph-title .sub{font-weight:400;font-size:12px;display:inline;margin-left:6px}
+  body.phone .tbl-wrap td.ph-title b{font-weight:600} body.phone .tbl-wrap td .sub{display:inline;margin-left:4px} body.phone .tbl-wrap td .chk{width:18px;height:18px}
+  body.phone .tbl-wrap td.ph-check{position:absolute;right:12px;top:12px;padding:0} body.phone .tbl-wrap tr{position:relative}
+  /* record page */
+  body.phone .rec-head{padding:12px 14px} body.phone .rec-head h2{font-size:20px} body.phone .stat-row{grid-template-columns:1fr 1fr!important;min-width:0!important}
+  body.phone .actbar{gap:6px} body.phone .actbar .btn{padding:8px 10px;font-size:13px;flex:1 1 auto;text-align:center}
+  body.phone .ph-quick{display:flex;gap:6px;margin:10px 0 2px} body.phone .ph-quick a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 4px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font-size:12px;font-weight:600;text-decoration:none}
+  body.phone .ph-quick a svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round} body.phone .ph-quick a.off{opacity:.35;pointer-events:none}
+  body.phone .rec-grid{display:block} body.phone .rec-left,body.phone .rec-right{min-width:0}
+  body.phone details.ph-more{margin-top:10px} body.phone details.ph-more>summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--accent);padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:10px;list-style:none} body.phone details.ph-more[open]>summary{margin-bottom:10px;border-radius:10px}
+  body.phone .composer .row{flex-wrap:wrap} body.phone .composer .row .field{flex:1 1 100%!important}
+  body.phone .timeline .tl .ic{display:none}
+  /* tasks */
+  body.phone .tk-wrap{overflow:visible} body.phone .tk-grid7{min-width:0;grid-template-columns:1fr;gap:8px}
+  body.phone .tk-day{min-height:0} body.phone .tk-day:not(:has(.tk-card)){padding:4px 8px;background:#fafbfc} body.phone .tk-day:not(:has(.tk-card)) .muted{display:none}
+  body.phone .tk-day .dh{font-size:12.5px} body.phone .tk-card{font-size:13px;padding:8px 10px} body.phone .tk-card b{font-size:14px}
+  body.phone .tk-strip .tk-card{flex:1 1 100%} body.phone .tk-head .tk-legend{flex:0 0 100%;margin-left:0}
+  body.phone .tk-month .tk-grid7{grid-template-columns:repeat(7,1fr);gap:3px} body.phone .tk-month .tk-day{min-height:44px;padding:3px 4px;border-radius:6px} body.phone .tk-month .tk-chip,body.phone .tk-month .tk-more,body.phone .tk-month .dh a{display:none} body.phone .tk-month .dh{font-size:11px;margin:0}
+  body.phone .tk-month .ph-count{display:block;font-size:11px;font-weight:700;color:var(--accent);margin-top:3px} body.phone .tk-dow div{font-size:9.5px;padding:0 2px}
+  /* insights, lists, modals */
+  body.phone .ins-card{padding:12px} body.phone .opp .li{padding:10px 12px}
+  body.phone #modal{padding:0;align-items:flex-end} body.phone .modal-card{max-width:100%;max-height:94dvh;border-radius:14px 14px 0 0} body.phone .modal-card .mb{padding:10px 14px} body.phone .modal-card .mh{padding:12px 14px 0} body.phone .modal-card .mf{padding:10px 14px calc(12px + env(safe-area-inset-bottom));flex-wrap:wrap} body.phone .modal-card .mf .btn{flex:1}
+  body.phone .ph-sheet a{display:flex;justify-content:space-between;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line-2);font-size:15px;color:var(--ink);text-decoration:none} body.phone .ph-sheet a.on{color:var(--accent);font-weight:600}
+}
+.tk-month .ph-count{display:none}
 </style>
 </head>
 <body>
@@ -280,6 +328,7 @@ ol.steps{padding-left:20px;line-height:1.7;font-size:13px}
     </div>
     <div class="content" id="view"></div>
   </main>
+  <nav id="tabbar" hidden></nav>
 </div>
 <div id="modal" hidden></div>
 <div id="toast" hidden></div>
@@ -373,7 +422,7 @@ const ROLE={
 };
 const ROLES=['viewer','ops','rep','manager','admin'];   // permission levels, least to most
 const can=k=>!!(ROLE[S.user?.role]||{})[k];
-const allowedView=v=>{ const r=ROLE[S.user?.role]||{}; return !r.views||r.views.includes(v); };
+const allowedView=v=>{ const r=ROLE[S.user?.role]||{}; return v==='search'||!r.views||r.views.includes(v); };
 const homeView=()=>{ const r=ROLE[S.user?.role]||{}; return r.views?r.views[0]:'insights'; };
 
 /* ---------------- boot ---------------- */
@@ -394,7 +443,7 @@ async function boot(){
 async function signIn(e){ e.preventDefault(); $('#gErr').textContent=''; const id=$('#gUser').value, pw=$('#gPw').value; const u=S.users.find(x=>x.id===id); if(!u) return;
   if(u.pw_hash&&!PREVIEW){ if(await hashPw(id,pw)!==u.pw_hash){ $('#gErr').textContent='Wrong password.'; return; } }
   S.user=u; sessionStorage.setItem(SESSION_KEY,id); await enter(); if(!u.pw_hash&&!PREVIEW) setTimeout(()=>promptSetPassword(true),400); }
-async function enter(){ $('#gate').hidden=true; $('#app').hidden=false; $('#uName').textContent=S.user.name; $('#uRole').textContent=S.user.role; S.readOnly=PREVIEW; if(!allowedView(S.view)) S.view=homeView();
+async function enter(){ $('#gate').hidden=true; $('#app').hidden=false; document.body.classList.toggle('phone',isPhone()); $('#uName').textContent=S.user.name; $('#uRole').textContent=S.user.role; S.readOnly=PREVIEW; if(!allowedView(S.view)) S.view=homeView();
   $('#newAccountTop').hidden=!can('edit'); $('#newOrderTop').hidden=!can('order');
   if(PREVIEW){ const b=$('#banner'); b.hidden=false; b.innerHTML='<b>Preview.</b> Read-only snapshot of the import — nothing here is saved. The live app runs from GitHub Pages.'; }
   await loadAll(); routeFromHash(); }
@@ -540,6 +589,40 @@ function indexPaperwork(){
   }
 }
 
+/* ---------------- phones: tab bar, cards, quick actions ----------------
+   ≤700px gets body.phone: the sidebar is replaced by a bottom tab bar (Today · Accounts · Search · Tasks · More), every table turns into
+   cards (phoneTables: header labels become cell labels, columns outside PHONE_COLS hide), toolbar filters fold behind a Filters chip,
+   the account page leads with Call / Text / Directions and the log composer, and the Tasks week stacks day by day. */
+const PHONE_MQ=window.matchMedia('(max-width:700px)'); const isPhone=()=>PHONE_MQ.matches;
+PHONE_MQ.addEventListener('change',()=>{ document.body.classList.toggle('phone',isPhone()); if(S.user) render(); });
+document.body.classList.toggle('phone',isPhone());
+const PHONE_COLS={active:['Account','Town','Stars','Owner','Buyer','Last order','Reorder','Owes','Standing note','Orders','2026 $'],orders:['Date','Account','Status','Total','Invoice','Delivery','Owner','Notes'],people:['Account','Name','Role','Email','Phone'],prospects:['Company','Town','Best contact','People','License'],pipeline:['Account','Town','Stage','Stars','Owner','Last touch','Next step'],emails:null,paperwork:null,activity:null};
+const PH_ICON={today:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14h3"/></svg>',active:'<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5M9 11h.01M15 11h.01M12 11h.01"/></svg>',search:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',tasks:'<svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>',orders:'<svg viewBox="0 0 24 24"><path d="M3 7h18l-2 12H5L3 7zM3 7l1.5-4h15L21 7M9 11v2M15 11v2"/></svg>',more:'<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>'};
+function renderTabbar(){ const t=$('#tabbar'); if(!t) return; if(!S.user){ t.hidden=true; return; } t.hidden=false;
+  const tabs=(ROLE[S.user.role]||{}).views?[['active','Accounts'],['orders','Orders'],['search','Search'],['more','More']]:[['today','Today'],['active','Accounts'],['search','Search'],['tasks','Tasks'],['more','More']];
+  const cur=S.record?'':(S.view==='tasks'&&(S.filters.tasks||{}).today?'today':S.view);
+  const tkCount=()=>{ try{ const f=tkPrefs(); return taskItems({kinds:Object.keys(TK)}).filter(x=>x.who===S.user.id&&(x.bucket==='overdue'||x.bucket==='today')).length; }catch(_){ return 0; } };
+  t.innerHTML=tabs.map(([id,l])=>`<a data-tab="${id}" class="${cur===id?'on':''}">${PH_ICON[id]||PH_ICON.more}<span>${l}</span>${id==='today'&&tkCount()?`<span class="cnt">${tkCount()}</span>`:''}</a>`).join('');
+  $$('#tabbar a').forEach(a=>a.onclick=e=>{ e.preventDefault(); phoneTab(a.dataset.tab); }); }
+function phoneTab(id){ window.scrollTo(0,0); if(id==='more') return phoneMore(); if(id==='today'){ const f=tkPrefs(); f.today=true; f.mode='list'; f.person=S.user.id; go('tasks'); return; } if(id==='tasks'){ const f=tkPrefs(); f.today=false; if(!f._phoneInit){ f._phoneInit=true; f.mode='week'; f.person=S.user.id; } go('tasks'); return; } if(id==='search'){ S.record=null; S.view='search'; location.hash='#/search'; render(); setTimeout(()=>{ const q=$('#q'); if(q){ q.focus(); q.scrollIntoView({block:'nearest'}); } },50); return; } go(id); }
+function phoneMore(){ const vis=VIEWS.filter(v=>!v.grp&&allowedView(v.id)&&(!v.show||v.show())); const m=modal('Menu',`<div class="ph-sheet">${vis.map(v=>{ const n=v.count?v.count():null; return `<a href="#" data-pv="${v.id}" class="${S.view===v.id&&!S.record?'on':''}"><span>${esc(v.label)}</span>${n!=null?`<span class="pill ${v.cls&&n?'warn':'uns'}">${n}</span>`:''}</a>`; }).join('')}<a href="#" data-pv="__out"><span>Sign out</span><span class="muted" style="font-size:12px">${esc(S.user.name)} · ${esc(S.user.role)}</span></a></div>`);
+  $$('[data-pv]',m).forEach(a=>a.onclick=e=>{ e.preventDefault(); closeModal(); if(a.dataset.pv==='__out') $('#signOut').click(); else go(a.dataset.pv); }); }
+// after a view renders on a phone: label the cells of every table so CSS can lay each row out as a card, and fold the toolbar's filters away
+function phoneTables(v){ if(!isPhone()) return; const cols=PHONE_COLS[S.view]; 
+  $$('.tbl-wrap table',v).forEach(tb=>{ const heads=$$('thead th',tb).map(h=>h.textContent.replace(/[↕↑↓]/g,'').trim()); $$('tbody tr',tb).forEach(tr=>{ let titled=false; [...tr.children].forEach((td,i)=>{ const h=heads[i]||''; const txt=td.textContent.trim(); if(td.querySelector('input.chk')){ td.classList.add('ph-check'); return; } if(!txt&&!td.querySelector('img,svg')){ td.classList.add('ph-empty'); return; } if(cols&&h&&!cols.includes(h)){ td.classList.add('ph-hide'); return; } if(!titled&&h){ td.classList.add('ph-title'); titled=true; return; } if(h) td.setAttribute('data-label',h); }); }); });
+  $$('.toolbar',v).forEach(tbar=>{ const ctl=$$('select,input',tbar); if(!ctl.length||$('.ph-filters',tbar)) return; const key=S.view+(S.record||''); S.phoneOpen||={}; const n=ctl.filter(c=>c.value&&c.type!=='search'&&!(c.tagName==='SELECT'&&c.selectedIndex===0)).length; if(S.phoneOpen[key]) tbar.classList.add('open'); const b=document.createElement('span'); b.className='chip ph-filters'+(S.phoneOpen[key]?' on':''); b.textContent=`Filters${n?' · '+n:''}`; b.onclick=()=>{ S.phoneOpen[key]=!S.phoneOpen[key]; tbar.classList.toggle('open',S.phoneOpen[key]); b.classList.toggle('on',S.phoneOpen[key]); }; tbar.prepend(b); }); }
+const telHref=p=>'tel:'+String(p||'').replace(/[^\d+]/g,''); const smsHref=p=>'sms:'+String(p||'').replace(/[^\d+]/g,'');
+const mapsHref=a=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent([a.address,a.town,'MA'].filter(Boolean).join(', '));
+// the account page on a phone: Call / Text / Directions, then key contacts + the log composer and timeline first; the rest folds under "More"
+function phoneRecord(v,a,isLead){ if(!isPhone()) return; const who=a._buyer||(contactsByAcc[a.id]||[]).find(c=>c.phone)||null; const phone=who&&who.phone; const email=(a._buyer&&a._buyer.email)||(contactsByAcc[a.id]||[]).map(c=>c.email).find(Boolean);
+  const ic={call:'<svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',text:'<svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-8 8H8l-5 3 1.5-4.5A8 8 0 1 1 21 12z"/></svg>',map:'<svg viewBox="0 0 24 24"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg>',mail:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>'};
+  const q=document.createElement('div'); q.className='ph-quick'; q.innerHTML=`<a href="${phone?telHref(phone):'#'}" class="${phone?'':'off'}">${ic.call}Call${who&&who.name?` <span class="muted" style="font-weight:400;font-size:11px">${esc(who.name.split(' ')[0])}</span>`:''}</a><a href="${phone?smsHref(phone):'#'}" class="${phone?'':'off'}">${ic.text}Text</a><a href="${a.address||a.town?mapsHref(a):'#'}" target="_blank" rel="noopener" class="${a.address||a.town?'':'off'}">${ic.map}Directions</a><a href="${email?'mailto:'+esc(email):'#'}" class="${email?'':'off'}">${ic.mail}Email</a>`;
+  const head=$('.rec-head',v); const act=$('.actbar',v); if(head) (act||head).insertAdjacentElement(act?'beforebegin':'beforeend',q);
+  const grid=$('.rec-grid',v), left=$('.rec-left',v), right=$('.rec-right',v); if(!grid||!left||!right) return;
+  const key=$('.key-contacts',left); if(key) right.prepend(key);
+  grid.insertBefore(right,left);
+  if(left.children.length){ const d=document.createElement('details'); d.className='ph-more'; d.innerHTML=`<summary>More — ${isLead?'about this lead':'checklist, paperwork, QuickBooks, terms, about, people, edit'} ▾</summary>`; left.parentNode.insertBefore(d,left); d.appendChild(left); }
+  const w=$('#qlWho',v); if(w&&a._buyer&&!w.value) w.value=a._buyer.id; }
 /* ---------------- routing / nav ---------------- */
 const VIEWS=[
   {grp:'Sales'},
@@ -557,14 +640,15 @@ const VIEWS=[
   {id:'activity',label:'Activity Log'},
   {id:'settings',label:'Settings',show:()=>can('settings')},
 ];
-const TITLES={insights:'Insights',active:'Active Accounts',pipeline:'Prospects',prospects:'Unclaimed Leads',orders:'Orders',tasks:'Tasks',paperwork:'Paperwork',people:'People',emails:'Email List',activity:'Activity Log',settings:'Settings'};
+const TITLES={search:'Search',insights:'Insights',active:'Active Accounts',pipeline:'Prospects',prospects:'Unclaimed Leads',orders:'Orders',tasks:'Tasks',paperwork:'Paperwork',people:'People',emails:'Email List',activity:'Activity Log',settings:'Settings'};
 function go(view){ if(!allowedView(view)) view=homeView(); S.view=view; S.record=null; S.sel.clear(); location.hash='#/'+view; render(); }
 function open(id){ if(!ALL[id]) return; S.record=id; location.hash='#/account/'+id; render(); window.scrollTo(0,0); }
 function routeFromHash(){ const h=location.hash.replace(/^#\/?/,''); const m=h.match(/^account\/(.+)$/); if(m&&ALL[m[1]]){ S.record=m[1]; } else if(h&&TITLES[h]){ S.view=h; S.record=null; } if(!allowedView(S.view)) S.view=homeView(); render(); }
 function renderNav(){ const vis=VIEWS.filter(v=>v.grp||(allowedView(v.id)&&(!v.show||v.show()))); const groups=vis.filter((v,i)=>v.grp&&vis[i+1]&&!vis[i+1].grp); $('#nav').innerHTML=vis.map(v=>{ if(v.grp) return groups.includes(v)?`<div class="grp">${v.grp}</div>`:''; const n=v.count?v.count():null; return `<a class="item ${S.view===v.id&&!S.record?'on':''}" data-view="${v.id}"><span>${v.label}</span>${n!=null?`<span class="cnt ${v.cls&&n?v.cls:''}">${n}</span>`:''}</a>`; }).join(''); $$('#nav .item').forEach(el=>el.onclick=()=>go(el.dataset.view)); }
-function render(){ renderNav(); const v=$('#view'); if(S.record){ $('#viewTitle').textContent=ALL[S.record]?.name||''; renderRecord(v,S.record); return; }
+function render(){ renderNav(); renderTabbar(); const v=$('#view'); if(S.record){ $('#viewTitle').textContent=ALL[S.record]?.name||''; renderRecord(v,S.record); return; }
+  if(S.view==='search'){ $('#viewTitle').textContent='Search'; renderSearch(v); phoneTables(v); return; }
   if(S.q.trim()&&['insights','tasks','activity','settings'].includes(S.view)){ $('#viewTitle').textContent='Search'; renderSearch(v); return; }
-  $('#viewTitle').textContent=TITLES[S.view]||''; ({insights:renderInsights,active:renderActive,pipeline:renderPipeline,prospects:renderProspects,orders:renderOrders,tasks:renderTasks,paperwork:renderPaperwork,people:renderPeople,emails:renderEmails,activity:renderActivityLog,settings:renderSettings}[S.view]||renderInsights)(v); }
+  $('#viewTitle').textContent=(S.view==='tasks'&&(S.filters.tasks||{}).today)?'Today':(TITLES[S.view]||''); ({insights:renderInsights,active:renderActive,pipeline:renderPipeline,prospects:renderProspects,orders:renderOrders,tasks:renderTasks,paperwork:renderPaperwork,people:renderPeople,emails:renderEmails,activity:renderActivityLog,settings:renderSettings}[S.view]||renderInsights)(v); phoneTables(v); }
 
 /* ---------------- table helpers ---------------- */
 function sortRows(rows,key,def,getter){ const s=S.sort[key]||{col:def,dir:1}; const g=s.get||getter||((r,c)=>r[c]); return rows.slice().sort((a,b)=>{ const va=g(a,s.col),vb=g(b,s.col); if(va==null&&vb!=null) return 1; if(vb==null&&va!=null) return -1; return (typeof va==='number'&&typeof vb==='number'?va-vb:cmp(va,vb))*s.dir; }); }
@@ -668,6 +752,7 @@ const accGetter=(a,col)=>({_stars:a._score||0,_ccState:a._cc?CC_ORDER[a._cc.stat
 /* ---------------- GLOBAL SEARCH (from pages that have no list of their own) ---------------- */
 function renderSearch(v){
   const q=S.q.trim(), ql=q.toLowerCase();
+  if(!q){ v.innerHTML=`<div class="card empty" style="padding:28px 16px"><div style="font-size:15px;font-weight:600;margin-bottom:6px">Search the book</div><div class="note">Type a dispensary, a town, a person or an email in the box above — accounts, unclaimed leads and people all come up.</div></div>`; return; }
   const limited=!!(ROLE[S.user?.role]||{}).views;
   const accs=S.accounts.filter(a=>matches(a,q)&&(!limited||a.status==='Current')).sort((p,r)=>(r._orderTotal||0)-(p._orderTotal||0)||cmp(p.name,r.name));
   const leads=limited?[]:S.leads.filter(l=>matches(l,q)).sort((p,r)=>cmp(p.name,r.name));
@@ -902,7 +987,7 @@ function tkCard(x,full=true){ const a=x.a; const late=x.bucket==='overdue'; retu
     ${full?`${(x.k==='ns'||x.k==='reorder')&&a._buyer?`<div class="muted">${tkBuyer(a)}</div>`:''}${x.sub?`<div class="muted">${esc(x.sub)}</div>`:''}<div class="muted">${esc(x.whoName)}${tkFlags(a)}</div><div class="acts tk-noprint">${tkActs(x)}</div>`:''}</div>`; }
 function renderTasks(v){
   const f=tkPrefs(); const items=taskItems(f);
-  const sel=items.filter(x=>(f.person==='all'||x.who===f.person)&&(!f.q||matches(x.a,f.q)||x.text.toLowerCase().includes(f.q.toLowerCase())));
+  const sel=items.filter(x=>(f.person==='all'||x.who===f.person)&&(!f.q||matches(x.a,f.q)||x.text.toLowerCase().includes(f.q.toLowerCase()))&&(!f.today||x.bucket==='overdue'||x.bucket==='today'));
   const load={}; for(const x of items){ const l=load[x.who]||={ns:0,late:0,all:0}; l.all++; if(x.k==='ns'){ l.ns++; if(x.bucket==='overdue') l.late++; } }
   const who=[['all','Everyone'],...S.users.filter(u=>u.role!=='viewer').map(u=>[u.id,u.name]),['unassigned','Unassigned']].map(([id,n])=>{ const l=load[id]; const c=id==='all'?items.filter(x=>x.k==='ns').length:(l?l.ns:0); const late=id==='all'?items.filter(x=>x.k==='ns'&&x.bucket==='overdue').length:(l?l.late:0); return `<option value="${id}" ${f.person===id?'selected':''}>${esc(n)} — ${c} next step${c===1?'':'s'}${late?` · ${late} late`:''}</option>`; }).join('');
   const nsSel=sel.filter(x=>x.k==='ns'), lateSel=sel.filter(x=>x.bucket==='overdue');
@@ -914,6 +999,7 @@ function renderTasks(v){
       <input type="search" data-tkq placeholder="filter…" value="${esc(f.q||'')}" style="width:130px">${nav}
       ${can('log')?`<button class="btn sm" data-tkadd="${today()}">+ Next step</button>`:''}
       <span class="meta">${sel.length} item${sel.length===1?'':'s'} · ${nsSel.length} next step${nsSel.length===1?'':'s'} · <span style="${lateSel.length?'color:var(--danger);font-weight:600':''}">${lateSel.length} overdue</span></span></div>
+    ${f.today?`<div class="note" style="margin:-4px 0 8px">Today + overdue for ${esc(f.person==='all'?'everyone':userName(f.person))}. <a href="#" data-tkall>Show everything</a></div>`:''}
     ${f.mode==='list'?tkList(sel,f):f.mode==='week'?tkWeek(sel,f):tkMonth(sel,f)}
     <p class="note tk-noprint" style="margin-top:10px">Next steps drag to another day in Week and Month; +1d / +1w / Mon nudge them; <b>+</b> on a day adds one. Reorders appear on the day an account's rhythm says it's due; deliveries on the requested date; a paperwork task clears itself when the renewed license is uploaded; a contacts task clears when someone confirms.</p>`;
   bindTasks(v,f);
@@ -935,19 +1021,20 @@ function tkWeek(sel,f){
   return `<div id="weekSheet"><div class="tk-head"><b>Week of ${fmtDay(f.week)} – ${fmtDay(end)}</b> · ${esc(whoLabel)} <span class="muted">· ${inWeek.length} item${inWeek.length===1?'':'s'}${before.length?` · <span style="color:var(--danger)">${before.length} overdue from before</span>`:''}</span><span class="tk-legend">${Object.entries(TK).filter(([k])=>f.kinds.includes(k)).map(([k,t])=>`<span><i class="tk-dot ${t.cls}"></i>${t.label}</span>`).join('')}</span></div>
     ${before.length?`<details class="tk-strip late" ${before.length<=8?'open':''}><summary><b>Overdue from before this week (${before.length})</b> <span class="muted tk-noprint" style="font-size:11.5px">· click to ${before.length<=8?'fold':'show'}</span></summary><div class="tk-stripbody">${before.sort((p,q)=>cmp(p.due,q.due)).map(x=>tkCard(x,false)).join('')}</div></details>`:''}
     <div class="tk-wrap"><div class="tk-grid7">${days.map(col).join('')}</div></div>
-    ${nodate.length?`<div class="tk-strip tk-noprint"><b>No date (${nodate.length})</b>${nodate.slice(0,12).map(x=>tkCard(x,false)).join('')}${nodate.length>12?`<span class="muted" style="font-size:12px">+${nodate.length-12} more in List</span>`:''}</div>`:''}</div>`;
+    ${nodate.length?`<details class="tk-strip tk-noprint"><summary><b>No date (${nodate.length})</b> <span class="muted" style="font-size:11.5px">· next steps and contacts without a day · click to show</span></summary><div class="tk-stripbody">${nodate.slice(0,12).map(x=>tkCard(x,false)).join('')}${nodate.length>12?`<span class="muted" style="font-size:12px">+${nodate.length-12} more in List</span>`:''}</div></details>`:''}</div>`;
 }
 function tkMonth(sel,f){
   const first=f.month+'-01'; const start=mondayOf(first); const nextM=isoDay(dayNum(first)+32).slice(0,7)+'-01'; const last=addDays(nextM,-1); const end=addDays(mondayOf(last),6);
   const days=[]; for(let d=start; d<=end; d=addDays(d,1)) days.push(d);
   const title=new Date(first+'T00:00:00').toLocaleDateString(undefined,{month:'long',year:'numeric'});
   const cell=d=>{ const g=sel.filter(x=>x.due===d).sort((p,q)=>cmp(p.k,q.k)||cmp(p.a.name,q.a.name)); const other=!d.startsWith(f.month); const max=4;
-    return `<div class="tk-day ${d===today()?'today':''} ${other?'other':''}" data-day="${d}"><div class="dh"><span>${d.slice(8).replace(/^0/,'')}</span>${can('log')&&!other?`<a href="#" data-tkadd="${d}" title="Add a next step on this day">+</a>`:''}</div>${g.slice(0,max).map(x=>`<div class="tk-chip ${TK[x.k].cls} ${x.bucket==='overdue'?'late':''} ${x.bucket==='done'?'done':''}" data-open="${x.a.id}" ${x.k==='ns'&&can('log')?`draggable="true" data-dragns="${x.a.id}"`:''} title="${esc(x.text)} — ${esc(x.a.name)}${x.a.town?' · '+esc(x.a.town):''} · ${esc(x.whoName)}">${esc(x.a.name)}: ${esc(x.text)}</div>`).join('')}${g.length>max?`<a href="#" class="tk-more" data-gotoweek="${d}">+${g.length-max} more</a>`:''}</div>`; };
+    return `<div class="tk-day ${d===today()?'today':''} ${other?'other':''}" data-day="${d}"><div class="dh"><span>${d.slice(8).replace(/^0/,'')}</span>${can('log')&&!other?`<a href="#" data-tkadd="${d}" title="Add a next step on this day">+</a>`:''}</div>${g.length?`<span class="ph-count">${g.length}</span>`:''}${g.slice(0,max).map(x=>`<div class="tk-chip ${TK[x.k].cls} ${x.bucket==='overdue'?'late':''} ${x.bucket==='done'?'done':''}" data-open="${x.a.id}" ${x.k==='ns'&&can('log')?`draggable="true" data-dragns="${x.a.id}"`:''} title="${esc(x.text)} — ${esc(x.a.name)}${x.a.town?' · '+esc(x.a.town):''} · ${esc(x.whoName)}">${esc(x.a.name)}: ${esc(x.text)}</div>`).join('')}${g.length>max?`<a href="#" class="tk-more" data-gotoweek="${d}">+${g.length-max} more</a>`:''}</div>`; };
   return `<div class="tk-month"><div class="tk-head"><b>${esc(title)}</b> <span class="muted">· ${sel.filter(x=>x.due&&x.due.startsWith(f.month)).length} items this month</span><span class="tk-legend">${Object.entries(TK).filter(([k])=>f.kinds.includes(k)).map(([k,t])=>`<span><i class="tk-dot ${t.cls}"></i>${t.label}</span>`).join('')}</span></div>
     <div class="tk-wrap"><div class="tk-grid7 tk-dow">${DOW.map(d=>`<div>${d}</div>`).join('')}</div><div class="tk-grid7">${days.map(cell).join('')}</div></div></div>`;
 }
 function bindTasks(v,f){
-  $$('[data-tkmode]',v).forEach(c=>c.onclick=()=>{ f.mode=c.dataset.tkmode; tkSave(); render(); });
+  $$('[data-tkmode]',v).forEach(c=>c.onclick=()=>{ f.mode=c.dataset.tkmode; f.today=false; tkSave(); render(); }); const ta=$('[data-tkall]',v); if(ta) ta.onclick=e=>{ e.preventDefault(); f.today=false; render(); };
+  if(isPhone()) $$('.tk-month .tk-day',v).forEach(c=>c.onclick=e=>{ if(e.target.closest('a,[data-open]')) return; f.week=mondayOf(c.dataset.day); f.mode='week'; tkSave(); render(); });
   const ps=$('[data-tkperson]',v); if(ps) ps.onchange=()=>{ f.person=ps.value; S.sel.clear(); tkSave(); render(); };
   $$('[data-tkkind]',v).forEach(c=>c.onclick=()=>{ const k=c.dataset.tkkind; f.kinds=f.kinds.includes(k)?f.kinds.filter(x=>x!==k):[...f.kinds,k]; tkSave(); render(); });
   const q=$('[data-tkq]',v); if(q){ let t; q.oninput=()=>{ clearTimeout(t); t=setTimeout(()=>{ f.q=q.value.trim(); const y=window.scrollY; render(); window.scrollTo(0,y); const q2=$('[data-tkq]'); if(q2){ q2.focus(); q2.setSelectionRange(q2.value.length,q2.value.length); } },250); }; }
@@ -1135,7 +1222,8 @@ function renderRecord(v,id){
       ${can('log')?`<div class="card composer"><div class="types">${types.map(t=>`<button class="btn ghost ${S.composerType===t?'on':''}" data-ct="${t}">${t}</button>`).join('')}</div><div class="row"><div class="field" style="flex:3"><label>What happened</label><input id="qlNote" placeholder="${S.composerType==='Note'?'Add a note…':'e.g. spoke to buyer, dropping samples Thursday'}"></div><div class="field" style="flex:0 0 140px"><label>Date</label><input id="qlDate" type="date" value="${today()}"></div>${cs.length?`<div class="field" style="flex:0 0 170px"><label>With</label><select id="qlWho"><option value="">—</option>${cs.map(c=>`<option value="${c.id}">${esc(c.name||c.email)}</option>`).join('')}</select></div>`:''}<button class="btn" data-log>Log ${S.composerType.toLowerCase()}</button></div></div>`:''}
       <div class="card timeline">${tl.length?tl.map(e=>e.kind==='order'?`<div class="tl"><div class="ic order">Order</div><div class="body"><div><span class="t">${/plan/i.test(e.o.status||'')?'Planned order':/pend/i.test(e.o.status||'')?'Pending order':'Order'}</span> ${e.o.total!=null?`· <b>${fmtMoney(e.o.total)}</b>`:''}${e.o.invoice?` · <span class="muted mono" title="QuickBooks invoice${e.o.tracker_total!=null&&e.o.tracker_total!==e.o.invoiced_total?`; tracker had ${fmtMoney(e.o.tracker_total)}`:''}">inv #${esc(e.o.invoice)}</span>`:e.o.review==='no-invoice'?' <span class="pill warn" title="Confirmed in the Order Tracker, but nothing invoiced in QuickBooks">no invoice</span>':''} ${e.o.mix?`· ${esc(e.o.mix)}`:''}${e.o.special?` · <span class="muted">${linkify(e.o.special)}</span>`:''}${e.o.samples?' <span class="pill tag">samples</span>':''}${e.o.terms?' '+orderTermsPill(e.o):''}${e.o.license&&a.license_number&&!a.license_number.includes(e.o.license)?` <span class="pill warn" title="License on the order differs from this account">${esc(e.o.license)}</span>`:''}</div><div class="who">${e.o.date?fmtDate(e.o.date):'<span style="color:var(--warn)">no date</span>'}${e.o.delivery_date?` · deliver ${isISO(e.o.delivery_date)?fmtDate(e.o.delivery_date):linkify(e.o.delivery_date)}`:''}${e.o.contact_name?` · ${esc(e.o.contact_name)}`:''}${e.o.owner?` · ${esc(e.o.owner)}`:''}${e.o.source==='CRM'?' · entered in CRM':''}${e.o.source==='QBO'?((e.o.date||'')<TRACKER_START?' · from QuickBooks (before the 2026 tracker)':' · from QuickBooks, not in the tracker'):''}${e.o.review==='location'?' <span class="pill warn" title="Chain-level invoice with no ship-to address — this store is a guess; Edit order to move it">location?</span>':''}${e.o.edited_in_crm&&e.o.edited_by!=='qbo'?' · edited':''}</div></div>${can('order')?`<button class="btn ghost xs" data-editorder="${e.o.id}" style="align-self:center;margin-left:auto">Edit order</button>`:''}</div>`:tlRow(e.x)).join(''):'<div class="empty">No activity yet. Log the first call above.</div>'}</div>
     </div></div>`;
-  $('[data-back]',v).onclick=e=>{ e.preventDefault(); S.record=null; location.hash='#/'+S.view; render(); };
+  phoneRecord(v,a,isLead);
+  $('[data-back]',v).onclick=e=>{ e.preventDefault(); S.record=null; location.hash='#/'+(S.view==='search'?'search':S.view); render(); };
   $$('[data-open]',v).forEach(el=>el.onclick=e=>{ e.preventDefault(); open(el.dataset.open); });
   $$('[data-ct]',v).forEach(b=>b.onclick=()=>{ S.composerType=b.dataset.ct; render(); setTimeout(()=>$('#qlNote')?.focus(),30); });
   $$('[data-quick]',v).forEach(b=>b.onclick=()=>{ S.composerType=b.dataset.quick; render(); setTimeout(()=>$('#qlNote')?.focus(),30); });

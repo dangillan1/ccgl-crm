@@ -134,6 +134,11 @@ Unclaimed Leads list until a person claims it.
   missing, stale or flagged — at most 10 new ones per owner per week, biggest accounts first, never over a
   next step someone typed — and clears it once the account is confirmed. Stored on the account as
   `contacts_confirmed: {at, by, n, people}` and `contacts_review: {at, by, reason}`.
+- **Phones** — at 700px and under the sidebar becomes a bottom tab bar (Today · Accounts · Search · Tasks ·
+  More), every table turns into cards with the filters folded behind a *Filters* chip, the account page
+  leads with Call / Text / Directions / Email and the log composer (buyer pre-selected) with the rest under
+  *More*, and the Tasks week stacks day by day (the month shows counts; tap a day for its week). Nothing
+  changes on desktop. Open it in Safari or Chrome; there is no install step.
 - **Tasks** — three views of the same items: **List** (Overdue / Today / Upcoming / No date), **Week** (Mon–Sun
   columns with buyer, phone, owes/terms flags — the cheat sheet; *Print week* puts it on one landscape page) and
   **Month**. A person filter (Everyone / each user, with their open and overdue counts / Unassigned) and on-off
