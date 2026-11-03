@@ -1441,5 +1441,13 @@
   "type": "Order",
   "note": "Order updated: Planned · Nov 1, 26",
   "date": "2026-11-01"
+ },
+ {
+  "id": "Xmw14o1h7nl7w",
+  "ts": "2026-11-03T20:15:51.163Z",
+  "account_id": "A0045",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · 10% COD planned",
+  "date": "2026-11-03"
  }
 ]
