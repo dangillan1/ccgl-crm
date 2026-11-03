@@ -447,5 +447,13 @@
   "type": "Task",
   "note": "Next step: Drop off samples (due Nov 3, 26)",
   "date": "2026-11-03"
+ },
+ {
+  "id": "Xmw14hqaihvgj",
+  "ts": "2026-11-03T20:10:56.730Z",
+  "account_id": "A0002",
+  "type": "Task",
+  "note": "Done: Drop off samples",
+  "date": "2026-11-03"
  }
 ]
