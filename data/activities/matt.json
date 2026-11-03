@@ -413,5 +413,13 @@
   "contact_id": "",
   "edited_at": "2026-11-03",
   "edited_by": "matt"
+ },
+ {
+  "id": "Xmw14ff8s38fx",
+  "ts": "2026-11-03T20:09:09.100Z",
+  "account_id": "A0062",
+  "type": "Task",
+  "note": "Next step: Send fresh samples on next order (due Nov 16, 26)",
+  "date": "2026-11-03"
  }
 ]
