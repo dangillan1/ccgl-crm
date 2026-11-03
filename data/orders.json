@@ -19732,7 +19732,7 @@
  },
  {
   "id": "Omvld9t3qe098",
-  "date": "2026-10-23",
+  "date": "2026-11-03",
   "account_id": "A0116",
   "account_raw": "Firehouse",
   "license": "MR284535",
@@ -19746,7 +19746,10 @@
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-03"
  },
  {
   "id": "Omvldd013u17e",
