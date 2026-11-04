@@ -532,6 +532,19 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-04",
    "history": []
+  },
+  "ccc": {
+   "file": {
+    "path": "accounts/A0079/ccc/2026-11-04_mw2iggswd3ko.pdf",
+    "sha": "c16201c0854d991013c84b661364b718ccf0c396",
+    "name": "CCC License - Coastal Cultivars - Bulk (Wareham).pdf",
+    "size": 3833759,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "expires": "2026-03-11",
+   "history": []
   }
  }
 }
