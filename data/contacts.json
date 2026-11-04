@@ -10421,16 +10421,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C7eb19402",
-  "account_id": "A0297",
-  "name": "",
-  "email": "adam@tasgs.com",
-  "phone": "Phone:+1 5083644929",
-  "role": "Billing",
-  "source": "CCGL Current Accounts",
-  "primary": false
- },
- {
   "id": "C81825105",
   "account_id": "A0298",
   "name": "Echristensen",
