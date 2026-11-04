@@ -1765,7 +1765,10 @@
     "Morgan Hill|mhill@cannabarnma.com||Inventory, Asst. Manager",
     "Valerie Tarr|vtarr@cannabarnma.com|781-977-9009|Intake / Manager / Buyer"
    ]
-  }
+  },
+  "next_step": "In-Store Visit",
+  "next_step_due": "2026-11-20",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0062",
