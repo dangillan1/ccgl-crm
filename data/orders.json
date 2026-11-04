@@ -20064,17 +20064,20 @@
   "account_id": "A0189",
   "account_raw": "Joint Operations",
   "license": "",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Jill Roberts",
   "contact_email": "jillroberts@jointoperations.com",
-  "delivery_date": "",
+  "delivery_date": "2026-11-09",
   "total": 1721.25,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "15% first-time buyer",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-04"
  },
  {
   "id": "Omvvbbavnsek3",
