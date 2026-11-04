@@ -1777,5 +1777,13 @@
   "type": "Order",
   "note": "Pending order $5,613 · Finished Goods · November $6k flower/pre-roll offer applied · terms: Terms TBD",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2m36tby6g4",
+  "ts": "2026-11-04T21:11:17.567Z",
+  "account_id": "Amw2j9ctmcs0f",
+  "type": "Stage",
+  "note": "Prospect → Active",
+  "date": "2026-11-04"
  }
 ]
