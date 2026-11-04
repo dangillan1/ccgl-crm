@@ -1537,5 +1537,13 @@
   "type": "Order",
   "note": "Planned order · Bulk & FG",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2hz7ho5pk6",
+  "ts": "2026-11-04T19:16:13.356Z",
+  "account_id": "A0061",
+  "type": "Order",
+  "note": "Pending order $3,650 · Finished Goods",
+  "date": "2026-11-04"
  }
 ]
