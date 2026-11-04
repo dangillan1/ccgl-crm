@@ -1729,5 +1729,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2j1t29ln6k",
+  "ts": "2026-11-04T19:46:14.241Z",
+  "account_id": "A0297",
+  "type": "Edit",
+  "note": "Removed adam@tasgs.com (Billing) · adam@tasgs.com",
+  "date": "2026-11-04"
  }
 ]
