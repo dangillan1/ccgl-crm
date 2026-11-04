@@ -258,6 +258,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-04"
+  },
+  {
+   "id": "C7eb19402",
+   "account_id": "A0297",
+   "email": "adam@tasgs.com",
+   "name": "",
+   "source": "CCGL Current Accounts",
+   "removed_by": "joey",
+   "removed_at": "2026-11-04"
   }
  ]
 }
