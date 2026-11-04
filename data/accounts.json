@@ -2318,7 +2318,16 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 80,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-04",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Brennan Goguen|brennan@coastalcultivars.com|845-901-8723|Buyer, Finance / AP, Intake",
+    "Gabe R.|gabe@havnextracts.com|845-901-8723|Buyer"
+   ]
+  }
  },
  {
   "id": "A0080",
