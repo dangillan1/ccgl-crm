@@ -20286,10 +20286,10 @@
   "account_id": "A0205",
   "account_raw": "LowKey",
   "license": "MR284730",
-  "status": "Pending",
+  "status": "Confirmed",
   "contact_name": "Darius Monteiro",
   "contact_email": "darius@lowkeydispensary.com",
-  "delivery_date": "2026-11-09",
+  "delivery_date": "2026-11-10",
   "total": 5612.5,
   "owner": "Joey",
   "mix": "Finished Goods",
@@ -20301,7 +20301,10 @@
    "plan": "tbd",
    "step": null,
    "label": "Terms TBD"
-  }
+  },
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-04"
  },
  {
   "id": "Omw2m44iawmwk",
