@@ -520,6 +520,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-04",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0079/w9/2026-11-04_mw2ifyt1xz2y.pdf",
+    "sha": "da2e6a1eb3e85b8327f4da5ce93cfcb47dc9fb97",
+    "name": "W-9 - Coastal Cultivars - Bulk (Wareham).pdf",
+    "size": 1416841,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "history": []
   }
  }
 }
