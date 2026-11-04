@@ -20307,8 +20307,8 @@
   "account_raw": "Chief Cannabis LLC",
   "license": "MR285404",
   "status": "Confirmed",
-  "contact_name": "",
-  "contact_email": "",
+  "contact_name": "Hardik Patel",
+  "contact_email": "hpatel@boterama.com",
   "delivery_date": "2026-11-05",
   "total": 5659.12,
   "owner": "Joey",
@@ -20316,6 +20316,9 @@
   "special": "15% first-time promo applied",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-04"
  }
 ]
