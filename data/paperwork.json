@@ -491,6 +491,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-04",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0161/w9/2026-11-04_mw2ibwiq4sv1.pdf",
+    "sha": "a016032c7b1594a07ff1dd3d2f5037a225d7ce21",
+    "name": "W-9 - Herbwell (Cambridge).pdf",
+    "size": 348215,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "history": []
   }
  }
 }
