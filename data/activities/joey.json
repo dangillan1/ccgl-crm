@@ -1753,5 +1753,13 @@
   "type": "Note",
   "note": "Created as prospect — Contacted us; affiliated with Botera",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2j9xxudtkl",
+  "ts": "2026-11-04T19:52:33.810Z",
+  "account_id": "Amw2j9ctmcs0f",
+  "type": "Task",
+  "note": "Next step: Follow up with Hardik about 1st order from 11/4 conversation (due Nov 6, 26)",
+  "date": "2026-11-04"
  }
 ]
