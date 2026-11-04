@@ -1713,5 +1713,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $3,650 · Nov 4, 26",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2iuhtclbtf",
+  "ts": "2026-11-04T19:40:33.072Z",
+  "account_id": "A0297",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · Hold 2x Swampwater 3.5g & 1 Lion's Breath 3.5g - reorder aimed for Mon. 11/9",
+  "date": "2026-11-04"
  }
 ]
