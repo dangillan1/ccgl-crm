@@ -1801,5 +1801,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $5,659 · Nov 4, 26",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2mi7ctohaj",
+  "ts": "2026-11-04T21:22:58.109Z",
+  "account_id": "A0514",
+  "type": "Order",
+  "note": "Order updated: Planned $2,250 · Nov 4, 26",
+  "date": "2026-11-04"
  }
 ]
