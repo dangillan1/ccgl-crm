@@ -5712,16 +5712,6 @@
   "primary": false
  },
  {
-  "id": "Ca7e6c73e",
-  "account_id": "A0161",
-  "name": "Dianna Dixon",
-  "email": "",
-  "phone": "781-888-1135",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C1f68f8ab",
   "account_id": "A0162",
   "name": "Buyer",
