@@ -465,5 +465,20 @@
    "uploaded_at": "2026-11-02",
    "history": []
   }
+ },
+ "A0161": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0161/ccc/2026-11-04_mw2iba1l4rm5.pdf",
+    "sha": "a28dd58eeacf14e034771009e038181ac272090d",
+    "name": "CCC License - Herbwell (Cambridge).pdf",
+    "size": 3833742,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "expires": "2026-02-16",
+   "history": []
+  }
  }
 }
