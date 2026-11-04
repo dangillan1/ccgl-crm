@@ -4642,7 +4642,16 @@
   "next_contact": "2026-04-15",
   "notes": "",
   "sheet_row": 162,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-04",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "|inventory@herbwellcannabis.com||Intake, Inventory",
+    "Sareena Helani|sareena.halani@herbwellcannabis.com|(678) 790-3081|Buyer, Finance / AP, Intake, Owner"
+   ]
+  }
  },
  {
   "id": "A0162",
