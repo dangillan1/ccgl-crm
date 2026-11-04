@@ -15597,5 +15597,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-04"
+ },
+ {
+  "id": "Cmw2j9eiaui6g",
+  "account_id": "Amw2j9ctmcs0f",
+  "name": "Hardik Patel",
+  "email": "hpatel@boterama.com",
+  "phone": "",
+  "role": "Buyer, Finance / AP, Intake",
+  "source": "CRM (Joey)",
+  "primary": true,
+  "created": "2026-11-04"
  }
 ]
