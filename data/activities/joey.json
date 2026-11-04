@@ -1769,5 +1769,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 1 person (Buyer, Finance / AP, Intake)",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2jpc8hgo0k",
+  "ts": "2026-11-04T20:04:32.177Z",
+  "account_id": "A0205",
+  "type": "Order",
+  "note": "Pending order $5,613 · Finished Goods · November $6k flower/pre-roll offer applied · terms: Terms TBD",
+  "date": "2026-11-04"
  }
 ]
