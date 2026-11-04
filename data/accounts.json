@@ -6984,7 +6984,18 @@
     "source": "Master",
     "date": "2026-10-15"
    }
-  ]
+  ],
+  "contacts_confirmed": {
+   "at": "2026-11-04",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Collin Mallory|cmallory@peakcannabisco.com|845-380-4328|Buyer, Intake, Inventory",
+    "Collin Mallory|collvnm@gmail.com||Buyer",
+    "David Ross|dross@peakcannabisco.com|541-480-2002|Finance / AP, Owner, Co-Founder",
+    "Zwilson|zwilson@peakcannabisco.com||"
+   ]
+  }
  },
  {
   "id": "A0246",
