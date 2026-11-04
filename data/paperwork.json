@@ -507,5 +507,19 @@
    "uploaded_at": "2026-11-04",
    "history": []
   }
+ },
+ "A0079": {
+  "st4": {
+   "file": {
+    "path": "accounts/A0079/st4/2026-11-04_mw2ifqfix66x.pdf",
+    "sha": "05b3ae82b8510f5f9a2bf62fee310d5174828986",
+    "name": "ST-4 - Coastal Cultivars - Bulk (Wareham).pdf",
+    "size": 326569,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "history": []
+  }
  }
 }
