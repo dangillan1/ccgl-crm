@@ -5702,16 +5702,6 @@
   "primary": false
  },
  {
-  "id": "C3ecec59c",
-  "account_id": "A0161",
-  "name": "",
-  "email": "kate.haselton@herbwellcannabis.com",
-  "phone": "",
-  "role": "Billing",
-  "source": "CCGL Current Accounts",
-  "primary": false
- },
- {
   "id": "C1f68f8ab",
   "account_id": "A0162",
   "name": "Buyer",
