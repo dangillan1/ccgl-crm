@@ -20237,5 +20237,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omw2hz5n35ouy",
+  "date": "2026-11-04",
+  "account_id": "A0061",
+  "account_raw": "Cannabarn",
+  "license": "MR281304",
+  "status": "Pending",
+  "contact_name": "Valerie Tarr",
+  "contact_email": "vtarr@cannabarnma.com",
+  "delivery_date": "",
+  "total": 3650,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
