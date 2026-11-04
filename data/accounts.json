@@ -7013,7 +7013,10 @@
     "David Ross|dross@peakcannabisco.com|541-480-2002|Finance / AP, Owner, Co-Founder",
     "Zwilson|zwilson@peakcannabisco.com||"
    ]
-  }
+  },
+  "next_step": "Call and check-in on reorder status",
+  "next_step_due": "2026-11-05",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0246",
