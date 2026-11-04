@@ -1697,5 +1697,13 @@
   "type": "Task",
   "note": "Next step: Call and check-in on reorder status (due Nov 5, 26)",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2ipsq70duj",
+  "ts": "2026-11-04T19:36:53.935Z",
+  "account_id": "A0514",
+  "type": "Task",
+  "note": "Next step: In-Person visit by EOM (due Nov 20, 26)",
+  "date": "2026-11-04"
  }
 ]
