@@ -8476,7 +8476,17 @@
   "notes": "",
   "sheet_row": 298,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-04",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|adam@tasgs.com|Phone:+1 5083644929|Billing",
+    "Hannah Catania|hannah@sublimecannabis.co||Marketing/Pop-Ups",
+    "Rob Catania|rob@sublimecannabis.co|508-364-4929|Buyer, Finance / AP, Intake, Owner"
+   ]
+  }
  },
  {
   "id": "A0298",
