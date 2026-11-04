@@ -1577,5 +1577,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 4 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw2i9pljw7f4",
+  "ts": "2026-11-04T19:24:23.383Z",
+  "account_id": "A0161",
+  "type": "Edit",
+  "note": "Removed Dianna Dixon (Buyer)",
+  "date": "2026-11-04"
  }
 ]
