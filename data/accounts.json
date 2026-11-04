@@ -1754,7 +1754,18 @@
   "notes": "",
   "sheet_row": 62,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-04",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Greg|greg@cannabarnma.com||",
+    "Katie MacDonald|katie@cannabarnma.com|508-203-1763|Finance / AP, COO",
+    "Morgan Hill|mhill@cannabarnma.com||Inventory, Asst. Manager",
+    "Valerie Tarr|vtarr@cannabarnma.com|781-977-9009|Intake / Manager / Buyer"
+   ]
+  }
  },
  {
   "id": "A0062",
