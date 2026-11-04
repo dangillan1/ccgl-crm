@@ -240,6 +240,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-04"
+  },
+  {
+   "id": "Cce6d263e",
+   "account_id": "A0079",
+   "email": "purchasing@canacraftcannabis.com",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-04"
   }
  ]
 }
