@@ -10636,13 +10636,13 @@
   "town": "Bourne",
   "address": "10 Canal Street",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "",
   "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "Contacted us; affiliated with Botera",
-  "stage": "New",
+  "stage": "Customer",
   "stage_entered": "2026-11-04",
   "delivery_notes": "",
   "standing_requests": "",
@@ -10665,6 +10665,9 @@
    "people": [
     "Hardik Patel|hpatel@boterama.com||Buyer, Finance / AP, Intake"
    ]
+  },
+  "crm_edits": {
+   "status": "2026-11-04"
   }
  }
 ]
