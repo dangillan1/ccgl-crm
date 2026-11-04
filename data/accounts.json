@@ -10657,6 +10657,14 @@
   "claimed_at": "2026-11-04",
   "next_step": "Follow up with Hardik about 1st order from 11/4 conversation",
   "next_step_due": "2026-11-06",
-  "next_step_owner": "joey"
+  "next_step_owner": "joey",
+  "contacts_confirmed": {
+   "at": "2026-11-04",
+   "by": "joey",
+   "n": 1,
+   "people": [
+    "Hardik Patel|hpatel@boterama.com||Buyer, Finance / AP, Intake"
+   ]
+  }
  }
 ]
