@@ -231,6 +231,15 @@
    "source": "CCGL Current Accounts",
    "removed_by": "joey",
    "removed_at": "2026-11-04"
+  },
+  {
+   "id": "Cfaabdb92",
+   "account_id": "A0079",
+   "email": "jordan@canacraftcannabis.com",
+   "name": "Jordan B",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-04"
   }
  ]
 }
