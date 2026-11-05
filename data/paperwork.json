@@ -638,6 +638,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2027-03-07",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0188/st4/2026-11-05_mw3npxe9f1dh.pdf",
+    "sha": "838d820a71ed172ce3bb35b54f9edaf09bdcaeb7",
+    "name": "ST-4 - Joint Operations (Mendon).pdf",
+    "size": 287989,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
