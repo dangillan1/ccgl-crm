@@ -2626,8 +2626,10 @@
   "ts": "2026-11-05T18:20:38.179Z",
   "account_id": "A0250",
   "type": "Note",
-  "note": "Onboarding form and docs requested 11/5",
+  "note": "Onboarding form and docs requested 11/5 - Matt & Dan bcc'd",
   "date": "2026-11-05",
-  "contact_id": "C6b40f1c3"
+  "contact_id": "C6b40f1c3",
+  "edited_at": "2026-11-05",
+  "edited_by": "joey"
  }
 ]
