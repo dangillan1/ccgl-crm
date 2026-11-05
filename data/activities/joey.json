@@ -2500,5 +2500,13 @@
   "note": "Onboarding form & paperwork request sent 11/5 to Matt B.",
   "date": "2026-11-05",
   "contact_id": "C22bff2d6"
+ },
+ {
+  "id": "Xmw3qx98x7h02",
+  "ts": "2026-11-05T16:14:25.041Z",
+  "account_id": "A0042",
+  "type": "Note",
+  "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
+  "date": "2026-11-05"
  }
 ]
