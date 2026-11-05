@@ -15537,5 +15537,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3of1hd5b2i",
+  "account_id": "A0188",
+  "name": "Joe Rosa",
+  "role": "Inventory, Mendon Inventory",
+  "email": "joerosa@jointoperations.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
