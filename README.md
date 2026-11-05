@@ -155,6 +155,11 @@ Unclaimed Leads list until a person claims it.
   delivery dates, CCC renewals, contacts to confirm. Next steps drag to another day in Week and Month, have
   +1d / +1w / Mon / Done / Edit buttons, can be added from a day's **+**, and managers can tick several in the
   List and reassign or move them at once. View, person and chips are remembered per browser.
+- **Activity Log → Time in the CRM** (admin only) — per person, per day: keyboard time (saves closer than
+  a 15- or 30-minute cutoff form one session, counted first save to last plus 3 minutes), number of saves,
+  accounts touched, session times and what the saves were (confirmations, uploads, orders, removals, next
+  steps, calls). This week / last week / 2 weeks ago. A floor, not a timesheet: reading, calls and
+  document hunting leave no trace.
 - **Paperwork** — every active account against the three required forms: status, expiration date,
   download, profile completeness. Filter by owner / expired / expiring / missing; export to CSV.
 - **People / Email List** — the directory. Email List hides generic inboxes (accounting@, info@,

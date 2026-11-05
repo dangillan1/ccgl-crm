@@ -1147,11 +1147,33 @@ function editActivityForm(userId,actId){
     guarded(async()=>{ S.activities[userId]=await GH.update(`data/activities/${userId}.json`,l=>(l||[]).map(y=>y.id===actId?{...y,...upd}:y),`Edit ${upd.type} — ${a?a.name:''}`); index(); render(); toast('Saved'); }); };
   $('#eaDel',m).onclick=()=>{ if(!confirm('Delete this entry?')) return; closeModal(); guarded(async()=>{ S.activities[userId]=await GH.update(`data/activities/${userId}.json`,l=>(l||[]).filter(y=>y.id!==actId),`Delete ${x.type} — ${a?a.name:''}`); index(); render(); toast('Deleted'); }); };
 }
+/* ---- admin only: time in the CRM. Every save leaves a timestamped timeline entry; saves closer together than the idle cutoff are one
+   session, each session counts from its first save to its last plus three minutes. Keyboard time only — reading, phone calls and
+   hunting for a PDF leave no trace, so this is a floor. Shown in the browser's local time. ---- */
+function timeCard(){ if(S.user?.role!=='admin') return ''; const f=S.filters.activity||={}; const gap=f.gap===30?30:15; const wk=f.week||0;
+  const now=new Date(); const mon=new Date(now); mon.setHours(0,0,0,0); mon.setDate(mon.getDate()-((mon.getDay()+6)%7)-7*wk); const end=new Date(mon); end.setDate(end.getDate()+7);
+  const kind=x=>x.type==='Note'&&/^Contacts confirmed/.test(x.note||'')?'confirm':x.type==='Note'&&/^Contacts need review/.test(x.note||'')?'review':x.type;
+  const per={};
+  for(const [u,l] of Object.entries(S.activities)) for(const x of l){ if(!x.ts) continue; const t=new Date(x.ts); if(isNaN(t)||t<mon||t>=end) continue; (per[u]??=[]).push({t,k:kind(x),a:x.account_id}); }
+  const dayKey=t=>`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+  const sess=ts=>{ const out=[]; for(const t of ts){ if(out.length&&t-out[out.length-1].b<=gap*60000){ out[out.length-1].b=t; out[out.length-1].n++; } else out.push({a:t,b:t,n:1}); } return out.map(s=>({...s,min:(s.b-s.a)/60000+3})); };
+  const hm=m=>m>=60?`${(m/60).toFixed(1)} h`:`${Math.round(m)} min`; const tm=t=>t.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}).toLowerCase().replace(' ','');
+  const users=Object.keys(per).sort((p,q)=>per[q].length-per[p].length);
+  const block=u=>{ const ev=per[u].slice().sort((p,q)=>p.t-q.t); const days={}; for(const e of ev) (days[dayKey(e.t)]??=[]).push(e);
+    let total=0; const rows=Object.keys(days).sort().map(d=>{ const es=days[d]; const ss=sess(es.map(e=>e.t)); const mins=ss.reduce((t,s)=>t+s.min,0); total+=mins; const c={}; for(const e of es) c[e.k]=(c[e.k]||0)+1; const conf=new Set(es.filter(e=>e.k==='confirm').map(e=>e.a)).size;
+      const what=[conf&&`${conf} confirmed`,c.Doc&&`${c.Doc} upload${c.Doc===1?'':'s'}`,c.Order&&`${c.Order} order${c.Order===1?'':'s'}`,c.Edit&&`${c.Edit} removed`,c.Task&&`${c.Task} next step${c.Task===1?'':'s'}`,(c.Call||0)+(c.Visit||0)+(c.Text||0)+(c.Email||0)?`${(c.Call||0)+(c.Visit||0)+(c.Text||0)+(c.Email||0)} call/visit${(c.Call||0)+(c.Visit||0)+(c.Text||0)+(c.Email||0)===1?'':'s'}`:'',c.Note&&`${c.Note} note${c.Note===1?'':'s'}`].filter(Boolean).join(' · ');
+      return `<tr><td style="white-space:nowrap">${new Date(d+'T12:00:00').toLocaleDateString([],{weekday:'short',month:'short',day:'numeric'})}</td><td class="tr"><b>${hm(mins)}</b></td><td class="tr">${es.length}</td><td class="tr">${new Set(es.map(e=>e.a)).size}</td><td class="wrap" style="font-size:12px;color:var(--muted)">${ss.map(s=>`${tm(s.a)}–${tm(s.b)}`).join(', ')}</td><td class="wrap" style="font-size:12px">${what}</td></tr>`; });
+    return `<div class="card" style="padding:12px 14px;margin-bottom:10px"><div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><b style="font-size:14px">${esc(userName(u))}</b><span class="muted" style="font-size:12.5px">${hm(total)} · ${ev.length} saves · ${new Set(ev.map(e=>e.a)).size} accounts</span></div>
+      <div class="tbl-wrap" style="margin-top:6px"><table><thead><tr><th>Day</th><th class="tr">Time</th><th class="tr">Saves</th><th class="tr">Accts</th><th class="nos">Sessions</th><th class="nos">What</th></tr></thead><tbody>${rows.join('')}</tbody></table></div></div>`; };
+  return `<div class="section" style="margin-top:0" id="timeCard"><h4>Time in the CRM <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">· admin only</span></h4>
+    <div class="toolbar" style="margin-bottom:8px"><span class="chip ${wk===0?'on':''}" data-tkwk="0">This week</span><span class="chip ${wk===1?'on':''}" data-tkwk="1">Last week</span><span class="chip ${wk===2?'on':''}" data-tkwk="2">2 weeks ago</span><span class="muted">·</span><span class="chip ${gap===15?'on':''}" data-tkgap="15">15-min cutoff</span><span class="chip ${gap===30?'on':''}" data-tkgap="30">30-min cutoff</span><span class="meta">${mon.toLocaleDateString([],{month:'short',day:'numeric'})} – ${new Date(end-1).toLocaleDateString([],{month:'short',day:'numeric'})}</span></div>
+    ${users.map(block).join('')||'<div class="card empty">No saves in this week.</div>'}
+    <p class="note">Keyboard time only: saves closer than the cutoff are one session, counted first save to last plus 3 minutes. Reading, phone calls and looking for a document leave no trace, so treat the 15-minute figure as the floor and the 30-minute one as the realistic ceiling. Times are your computer's local time.</p></div>`; }
 async function renderActivityLog(v){
   const acts=Object.entries(S.activities).flatMap(([u,l])=>l.map(x=>({...x,user:u}))).sort((p,q)=>cmp(q.date,p.date)||cmp(q.ts,p.ts));
-  v.innerHTML=`<div class="grid2" style="align-items:start"><div><h4 class="section" style="margin-top:0">Activities (${acts.length})</h4><div class="card timeline">${acts.length?acts.slice(0,200).map(x=>tlRow(x,true)).join(''):'<div class="empty">Nothing logged yet.</div>'}</div></div>
+  v.innerHTML=`${timeCard()}<div class="grid2" style="align-items:start"><div><h4 class="section" style="margin-top:0">Activities (${acts.length})</h4><div class="card timeline">${acts.length?acts.slice(0,200).map(x=>tlRow(x,true)).join(''):'<div class="empty">Nothing logged yet.</div>'}</div></div>
     <div><h4 class="section" style="margin-top:0">Data changes (GitHub commits)</h4><div class="card timeline" id="commits"><div class="empty">Loading…</div></div></div></div>`;
-  bindRows(v);
+  bindRows(v); $$('[data-tkwk]',v).forEach(c=>c.onclick=()=>{ (S.filters.activity||={}).week=+c.dataset.tkwk; render(); }); $$('[data-tkgap]',v).forEach(c=>c.onclick=()=>{ (S.filters.activity||={}).gap=+c.dataset.tkgap; render(); });
   try{ if(PREVIEW) throw 0; const r=GH.repo(); const res=await fetch(`https://api.github.com/repos/${r.owner}/${r.name}/commits?path=data&sha=${r.branch}&per_page=40`,{headers:GH.hdr()}); if(!res.ok) throw 0; const cs=await res.json(); $('#commits').innerHTML=cs.length?cs.map(c=>`<div class="tl"><div class="ic">${esc((c.commit.message.match(/^\[(\w+)\]/)||[])[1]||'?').slice(0,4)}</div><div class="body"><div>${esc(c.commit.message)}</div><div class="who">${new Date(c.commit.author.date).toLocaleString()}</div></div></div>`).join(''):'<div class="empty">No commits yet.</div>'; }catch(e){ $('#commits').innerHTML=`<div class="empty">${PREVIEW?'Not available in preview.':'Needs a GitHub token (Settings).'}</div>`; }
 }
 function renderSettings(v){
@@ -1652,7 +1674,9 @@ async function selfTest(){
       console.log('SELFTEST-'+u+'-cc '+JSON.stringify(r.cc));
       r.stars=(()=>{ const cur=S.accounts.filter(a=>a.status==='Current'); const dist=Object.fromEntries([5,4,3,2,1,0].map(n=>[n,cur.filter(a=>(a._stars||0)===n).length])); const top=cur.slice().sort((p,q)=>(q._score||0)-(p._score||0))[0]; S.view='active'; (S.filters.active||={}).stars='5'; render(); const five=$$('#view tbody tr').length; S.filters.active.stars=''; S.view='settings'; render(); const st=[!!$('#stW_revenue'),!!$('#stB_5')]; S.view='insights'; return {dist,top:top&&[top.name,top._score,top._stars],fiveRows:five,pills:$$('#view .pill.stars').length,settings:st,gradeInputs:$$('#edGrade,#naGrade').length}; })();
       console.log('SELFTEST-'+u+'-tasks '+JSON.stringify(r.tk));
-      console.log('SELFTEST-'+u+'-stars '+JSON.stringify(r.stars)); }
+      r.time=(()=>{ S.view='activity'; render(); const mine=$$('#view #timeCard').length; const dan=S.users.find(x=>x.id==='dan'); const keep=S.user; S.user=dan; render(); const admin=[$$('#view #timeCard').length,$$('#view #timeCard tbody tr').length,$$('#view #timeCard .card').length]; S.user=keep; S.view='insights'; return {asThisUser:mine,asAdmin:admin}; })();
+      console.log('SELFTEST-'+u+'-stars '+JSON.stringify(r.stars));
+      console.log('SELFTEST-'+u+'-time '+JSON.stringify(r.time)); }
   }catch(e){ errs.push('selftest exception: '+(e.stack||e.message)); }
   console.log('SELFTEST-ERRORS '+JSON.stringify(errs)); console.error=oe;
   S.user=null; S.view='insights'; S.record=null; S.filters={}; sessionStorage.removeItem(SESSION_KEY); location.hash=''; $('#app').hidden=true; $('#gate').hidden=false;
