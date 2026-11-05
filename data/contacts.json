@@ -3246,16 +3246,6 @@
   "sheet_slot": 2
  },
  {
-  "id": "C01245df6",
-  "account_id": "A0105",
-  "name": "",
-  "email": "kurembrinventory@embr.us",
-  "phone": "",
-  "role": "Intake",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C6741da05",
   "account_id": "A0105",
   "name": "",
