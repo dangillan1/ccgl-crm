@@ -20244,5 +20244,23 @@
   "samples": true,
   "source": "CRM",
   "created_by": "dan"
+ },
+ {
+  "id": "Omw464rwkq7th",
+  "date": "2026-11-04",
+  "account_id": "A0435",
+  "account_raw": "Pineapple Express",
+  "license": "MD1306",
+  "status": "Confirmed",
+  "contact_name": "Kaily",
+  "contact_email": "kaily@pineappleexpressma.com",
+  "delivery_date": "2026-11-09",
+  "total": 2077.5,
+  "owner": "Matt",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "matt"
  }
 ]
