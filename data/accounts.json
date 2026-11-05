@@ -7326,23 +7326,24 @@
   "standing_requests": "",
   "license_number": "MR285301",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Pioneer Valley Trading Co",
   "town": "Southwick",
-  "address": "",
+  "address": "660 College Highway",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "A",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 251,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "address": "2026-11-05"
+  }
  },
  {
   "id": "A0249",
