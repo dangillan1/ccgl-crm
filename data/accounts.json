@@ -532,7 +532,18 @@
   "notes": "",
   "sheet_row": 19,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|maacctpayable@awholdings.com||Finance / AP",
+    "|nbinventory@letsascend.com||Intake",
+    "Gregory Harr|gharr@awholdings.com||Manager",
+    "Roger Williamson|rwilliamson@awholdings.com||Buyer"
+   ]
+  }
  },
  {
   "id": "A0016",
