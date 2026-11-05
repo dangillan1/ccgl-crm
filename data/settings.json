@@ -384,6 +384,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C944c5281",
+   "account_id": "A0017",
+   "email": "ajones@letsascend.com",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
