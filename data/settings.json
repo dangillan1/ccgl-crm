@@ -276,6 +276,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C01ae322a",
+   "account_id": "A0016",
+   "email": "bsobolewski@letsascend.com",
+   "name": "",
+   "source": "Random Data 2",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
