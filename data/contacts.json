@@ -15470,5 +15470,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3vymg69mk2",
+  "account_id": "A0044",
+  "name": "Amy Fiontis",
+  "role": "Retail/Sales Director",
+  "email": "afintonis@bountifulfarms.care",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
