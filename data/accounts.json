@@ -3565,7 +3565,17 @@
   "notes": "",
   "sheet_row": 109,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Jon M|jon@enlitecannabis.com|413-885-0617|Buyer, Intake, General Manager, Northampton",
+    "Matt Yee|matt@enlitecannabis.com||Finance / AP, Owner",
+    "Sarah Perrot|sarah@enlitecannabis.com||General Manager, Indian Orchard"
+   ]
+  }
  },
  {
   "id": "A0109",
