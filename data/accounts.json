@@ -1236,9 +1236,7 @@
   "standing_requests": "",
   "license_number": "MR283714",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "BoomX",
   "town": "Shirley",
@@ -1246,7 +1244,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "Jamie no longer there - emailed back & forth 1/5 plan to visit Anthony C. in Jan.",
