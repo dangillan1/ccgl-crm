@@ -2022,5 +2022,14 @@
   "type": "Task",
   "note": "Next step: Contact Roger Williamson about reorder and onboarding docs (due Nov 5, 26)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw2ub0via2a8",
+  "ts": "2026-11-05T01:01:20.046Z",
+  "account_id": "A0017",
+  "type": "Note",
+  "note": "Emailed 10/14/26 for updated license/onboarding docs",
+  "date": "2026-11-05",
+  "contact_id": "Cb71fbef5"
  }
 ]
