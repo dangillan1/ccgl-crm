@@ -2551,7 +2551,20 @@
   "notes": "",
   "sheet_row": 78,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "|jolene@cnastores.com||",
+    "|mwhitley@cnastores.com||",
+    "|tom@cnastores.com||",
+    "AP|ap@cnastores.com||Finance / AP",
+    "Jesse Caldwell|jcaldwell@cnastores.com|508-479-8339|Buyer, Intake",
+    "Zachary Bunnell|zbunnell@cnastores.com|978-809-1004|Wholesale"
+   ]
+  }
  },
  {
   "id": "A0078",
