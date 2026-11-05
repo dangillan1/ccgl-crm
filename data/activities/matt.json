@@ -479,5 +479,14 @@
   "type": "Note",
   "note": "Created as prospect",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3y73klffbw",
+  "ts": "2026-11-05T19:38:01.557Z",
+  "account_id": "A0023",
+  "type": "Email",
+  "note": "Reached out to info@tryredi.com",
+  "date": "2026-11-05",
+  "contact_id": null
  }
 ]
