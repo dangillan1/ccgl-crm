@@ -190,5 +190,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $5,115 · Nov 5, 26",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3z9aw0qz1m",
+  "ts": "2026-11-05T20:07:43.968Z",
+  "account_id": "A0296",
+  "type": "Order",
+  "note": "Confirmed order $5,115 · Finished Goods · November $6k promo - please send BT samples",
+  "date": "2026-11-05"
  }
 ]
