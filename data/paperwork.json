@@ -809,6 +809,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2026-02-07",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0356/st4/2026-11-05_mw3uqh22cvg7.pdf",
+    "sha": "d62398bad1aaf0d55813c6ce60b39d50cb9ceb37",
+    "name": "ST-4 - Zenleaf (Plymouth).pdf",
+    "size": 335642,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
