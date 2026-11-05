@@ -599,6 +599,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2027-08-07",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0189/st4/2026-11-05_mw3niy2evokl.pdf",
+    "sha": "8f134e82bb8667e88f67c2ca541164502af051a2",
+    "name": "ST-4 - Joint Operations (Rowley).pdf",
+    "size": 1263189,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
