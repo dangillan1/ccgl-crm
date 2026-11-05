@@ -3406,7 +3406,7 @@
   "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
-  "standing_requests": "Please send out a delivery/logistics email for each store's delivery 24 hours prior to delivery. We ask to have the final invoice, COAs and ETA of delivery mentioned in the email.  E-amils in \nintake section",
+  "standing_requests": "Please send out a delivery/logistics email for each store's delivery 24 hours prior to delivery. We ask to have the final invoice, COAs and ETA of delivery mentioned in the email.  Emails in \nintake section",
   "license_number": "MR284652",
   "tags": [
    "Not in Master Sheet"
