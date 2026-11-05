@@ -1924,5 +1924,13 @@
   "type": "Task",
   "note": "Next step: Contact Roger Williamson about reorder and onboarding docs (due Nov 5, 26)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw2shm4arba2",
+  "ts": "2026-11-05T00:10:28.282Z",
+  "account_id": "A0016",
+  "type": "Task",
+  "note": "Done: Contact Roger Williamson about reorder and onboarding docs",
+  "date": "2026-11-05"
  }
 ]
