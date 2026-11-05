@@ -1446,7 +1446,19 @@
   "notes": "Rowley soon to have med license - big for North Shore competition",
   "sheet_row": 45,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 5,
+   "people": [
+    "|accounting@bountifulfarms.care||Finance / AP",
+    "|procurement@bountifulfarms.care||Intake",
+    "Amy Fiontis|afintonis@bountifulfarms.care||Retail/Sales Director",
+    "Andrew Perrin|aperrin@bountifulfarms.care||Procurement Specialist",
+    "Sara Dukeshire|sdukeshire@bountifulfarms.care|978-979-4833|Buyer"
+   ]
+  }
  },
  {
   "id": "A0045",
