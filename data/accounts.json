@@ -3256,7 +3256,17 @@
   "notes": "",
   "sheet_row": 102,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Alex|asteproe@elysianma.com||",
+    "Devin Lightman|dlightman@myflowersoul.com|954-740-0604|Buyer / Finance / AP",
+    "Julia Crawford|jcrawford@elysianma.com||Intake, General Manager"
+   ]
+  }
  },
  {
   "id": "A0102",
