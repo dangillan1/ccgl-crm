@@ -663,5 +663,20 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0187": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0187/ccc/2026-11-05_mw3nr98j8g9v.pdf",
+    "sha": "42a7cd21ab47aab8eb3934260e3db80394e51771",
+    "name": "CCC License - Joint Operations (Gardiner).pdf",
+    "size": 1370193,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2027-03-12",
+   "history": []
+  }
  }
 }
