@@ -210,5 +210,13 @@
   "type": "Note",
   "note": "Order deleted: Jul 27, 26 (Planned)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3z5s1gnasi",
+  "ts": "2026-11-05T20:04:59.572Z",
+  "account_id": "A0042",
+  "type": "Note",
+  "note": "Order deleted: Oct 16, 26 (Planned)",
+  "date": "2026-11-05"
  }
 ]
