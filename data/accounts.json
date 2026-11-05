@@ -1185,12 +1185,12 @@
   "source": "Customer Tracker",
   "name": "Blossom Flower",
   "parent": "",
-  "town": "Holyoke",
-  "address": "1 Cabot Street",
+  "town": "",
+  "address": "",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Charley",
+  "owner": "Unassigned",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -1198,12 +1198,13 @@
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "MD1271",
+  "license_number": "MX281481",
   "tags": [
    "Not in Master Sheet"
   ],
   "flags": [
-   "not-in-master"
+   "not-in-master",
+   "unassigned"
   ],
   "dup_candidates": [],
   "created": "2026-09-25",
