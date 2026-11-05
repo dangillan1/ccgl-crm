@@ -1740,7 +1740,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 53,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Alisa Stamatopoulos|alisa@calverdenaturals.com||",
+    "Emma Thurston|emma@calverdenaturals.com||Buyer, Finance / AP, Intake, COO",
+    "Kelly Tomasello|kelly@calverdenaturals.com||CEO"
+   ]
+  }
  },
  {
   "id": "A0053",
