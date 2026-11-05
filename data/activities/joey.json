@@ -3034,5 +3034,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 4 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw42v9yev2si",
+  "ts": "2026-11-05T21:48:48.038Z",
+  "account_id": "A0080",
+  "type": "Edit",
+  "note": "Removed n · scott@coastalh.net",
+  "date": "2026-11-05"
  }
 ]
