@@ -1041,5 +1041,20 @@
    "expires": "2027-12-22",
    "history": []
   }
+ },
+ "A0078": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0078/ccc/2026-11-05_mw42ioz7ojyj.pdf",
+    "sha": "03ddde4b6873de687cf25ec021eb756f52971367",
+    "name": "CCC License - CNA Stores (Haverhill).pdf",
+    "size": 3808107,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-04-17",
+   "history": []
+  }
  }
 }
