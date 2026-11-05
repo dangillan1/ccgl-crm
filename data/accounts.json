@@ -3765,7 +3765,21 @@
   "notes": "",
   "sheet_row": 118,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 7,
+   "people": [
+    "Bailey DeBellis|bdebellis@myflowersoul.com||Marketing",
+    "Bwall|bwall@myflowersoul.com||",
+    "Devin Lightman|dlightman@myflowersoul.com|Phone:(781) 630-7685|Buyer, Finance / AP, Intake",
+    "Jenna Galvin|jgalvin@myflowersoul.com||Finance / AP, Retail/Ops Manager",
+    "Kwall|kwall@myflowersoul.com||",
+    "Rcoward|rcoward@myflowersoul.com||",
+    "Ryan Keough|rkeough@myflowersoul.com|781-630-7685|General Manager, Inventory"
+   ]
+  }
  },
  {
   "id": "A0118",
