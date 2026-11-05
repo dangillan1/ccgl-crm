@@ -2037,16 +2037,6 @@
   "sheet_slot": 2
  },
  {
-  "id": "Ca66cec3a",
-  "account_id": "A0062",
-  "name": "Tom",
-  "email": "tom@ccofwestfield.com",
-  "phone": "",
-  "role": "Owner",
-  "source": "Random Data 1926",
-  "primary": false
- },
- {
   "id": "C76e2b8b6",
   "account_id": "A0063",
   "name": "Torre Cioffi",
