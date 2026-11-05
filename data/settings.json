@@ -420,6 +420,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C74d316d6",
+   "account_id": "A0187",
+   "email": "nickbinder@jointoperations.com",
+   "name": "",
+   "source": "Random Data 2",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
