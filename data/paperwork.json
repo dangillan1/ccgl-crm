@@ -572,6 +572,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-04",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0037/w9/2026-11-04_mw2un2x6zlge.pdf",
+    "sha": "d7ba1e62d45a32939c4f3a79c928c24700be7833",
+    "name": "W-9 - Blackstone Valley Cannabis (Uxbridge).pdf",
+    "size": 166364,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "history": []
   }
  }
 }
