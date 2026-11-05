@@ -1252,7 +1252,18 @@
   "notes": "Jamie no longer there - emailed back & forth 1/5 plan to visit Anthony C. in Jan.",
   "sheet_row": 40,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Anthony Cardillo|acardillo@boomxcannabis.com||Finance / AP, Owner",
+    "AP|accounting@boomxcannabis.com||Finance / AP",
+    "Jamie Giammarino|jgiammarino@boomxcannabis.com|978-733-6237|General Manager, Inventory",
+    "Joshua St. John|jstjohn@boomxcannabis.com|978-733-4677|Buyer, Intake, Inventory, Asst. Manager"
+   ]
+  }
  },
  {
   "id": "A0040",
