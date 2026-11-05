@@ -1026,5 +1026,20 @@
    "expires": "2026-11-22",
    "history": []
   }
+ },
+ "A0063": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0063/ccc/2026-11-05_mw408qnr5ahv.pdf",
+    "sha": "a10c651326858f753ed91f19e04d11df7ed26663",
+    "name": "CCC License - Cannabis Connection (Westfield).pdf",
+    "size": 1556091,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2027-12-22",
+   "history": []
+  }
  }
 }
