@@ -1185,12 +1185,12 @@
   "source": "Customer Tracker",
   "name": "Blossom Flower",
   "parent": "",
-  "town": "",
-  "address": "",
+  "town": "Holyoke",
+  "address": "1 Cabot Street",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Charley",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -1198,7 +1198,7 @@
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MD1271",
   "tags": [
    "Not in Master Sheet"
   ],
@@ -1218,6 +1218,11 @@
     "Damaris Aponte|damaris@getblossomflower.com||Finance / AP, Owner",
     "Emmanuel (Manny)|ewestphal@getblossomflower.com|413-636-7334|Buyer, Intake"
    ]
+  },
+  "crm_edits": {
+   "town": "2026-11-05",
+   "address": "2026-11-05",
+   "license_number": "2026-11-05"
   }
  },
  {
