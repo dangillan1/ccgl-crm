@@ -15558,5 +15558,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw2sgcggle2r",
+  "account_id": "A0016",
+  "name": "Dennis Ortiz",
+  "role": "Inventory, Asst. Manager",
+  "email": "dortiz@letsascend.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
