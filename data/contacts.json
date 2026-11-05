@@ -15504,5 +15504,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3o3dl7b9zx",
+  "account_id": "A0187",
+  "name": "Liam Foley",
+  "role": "Inventory, Dist. Inventory Supervisor",
+  "email": "liamfoley@jointoperations.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
