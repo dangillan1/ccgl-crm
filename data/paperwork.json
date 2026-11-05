@@ -782,6 +782,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0039/w9/2026-11-05_mw3q9mk7dy10.pdf",
+    "sha": "26831d4344879aed696f773f26f440c23c4ae22f",
+    "name": "W-9 - BoomX (Shirley).pdf",
+    "size": 739453,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
