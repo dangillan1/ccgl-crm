@@ -551,16 +551,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C944c5281",
-  "account_id": "A0017",
-  "name": "",
-  "email": "ajones@letsascend.com",
-  "phone": "",
-  "role": "Intake",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C0cd8cf91",
   "account_id": "A0017",
   "name": "Alex Rouviere",
