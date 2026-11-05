@@ -1868,7 +1868,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 57,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|purchasing@canacraftcannabis.com||Buyer",
+    "Anuraag|ap@canacraftcannabis.com||Finance / AP",
+    "Jordan Brassard|jordan@canacraftcannabis.com|413-896-5538|Buyer, Intake"
+   ]
+  }
  },
  {
   "id": "A0057",
