@@ -983,5 +983,19 @@
    "note": "Microbusiness/CANA's co-packing partner",
    "history": []
   }
+ },
+ "A0057": {
+  "w9": {
+   "file": {
+    "path": "accounts/A0057/w9/2026-11-05_mw3zs6hnv0bx.pdf",
+    "sha": "0548c8d2bceed8bc71e87e2693eb2454ed891a6c",
+    "name": "W-9 - CANA Craft Cannabis (Norton).pdf",
+    "size": 828056,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
+  }
  }
 }
