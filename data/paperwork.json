@@ -927,5 +927,21 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0055": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0055/ccc/2026-11-05_mw3zoaoqt7v5.pdf",
+    "sha": "b1ed59ac175f50b8059870c1fe4b6047d4c9a358",
+    "name": "CCC License - CANA Craft Cannabis (Fairhaven).pdf",
+    "size": 3912515,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-02-13",
+   "note": "Microbusiness license/CANA's co-packaging partner",
+   "history": []
+  }
  }
 }
