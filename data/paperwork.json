@@ -650,6 +650,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0188/w9/2026-11-05_mw3nq4yxwml8.pdf",
+    "sha": "da556c10b72f76bb10f601ff17d4015b7265486c",
+    "name": "W-9 - Joint Operations (Mendon).pdf",
+    "size": 235692,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
