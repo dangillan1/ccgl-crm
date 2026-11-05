@@ -15597,5 +15597,16 @@
   "source": "CRM (Joey)",
   "primary": true,
   "created": "2026-11-04"
+ },
+ {
+  "id": "Cmw2sealmrmqc",
+  "account_id": "A0016",
+  "name": "Joshua Doolittle",
+  "role": "Intake, General Manager",
+  "email": "jdoolittle@letsascend.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
