@@ -7343,6 +7343,15 @@
   "in_qbo": true,
   "crm_edits": {
    "address": "2026-11-05"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Joey S.|joey@pioneervalleytradingco.com|413-657-2902|Buyer, Finance / AP, Intake, Inventory",
+    "Matthew Ryan|matt@pioneervalleytradingco.com|(413) 579-4727|Finance / AP, Westfield GM/Buyer"
+   ]
   }
  },
  {
