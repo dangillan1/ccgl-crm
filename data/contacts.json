@@ -2532,16 +2532,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C67738ddb",
-  "account_id": "A0078",
-  "name": "",
-  "email": "jluks@cnastores.com",
-  "phone": "",
-  "role": "Finance / AP",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "Ce19e4019",
   "account_id": "A0078",
   "name": "AP",
