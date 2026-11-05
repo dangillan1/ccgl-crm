@@ -130,7 +130,18 @@
   "in_qbo": true,
   "next_step": "Joey to followup with Tasha/New Contact - Boutiq? Oleg?",
   "next_step_due": "2026-11-27",
-  "next_step_owner": "joey"
+  "next_step_owner": "joey",
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Alicia Schneeberger|aschneeberger@acscompassion.com||",
+    "Kelly|accounting@acscompassion.com|(508) 470-3370|Finance / AP",
+    "Natasha Karklin|nkarklin@acscompassion.com|339-832-1296|Buyer, Intake",
+    "Stephen Werther|swerther@acscompassion.com||"
+   ]
+  }
  },
  {
   "id": "A0004",
