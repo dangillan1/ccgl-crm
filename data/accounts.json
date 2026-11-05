@@ -2345,7 +2345,18 @@
   "notes": "",
   "sheet_row": 71,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|inventory@capecodcannabis.com||inventory",
+    "|lkavaleva@capecodcannabis.com||General Manager",
+    "Jackon Simard|marketing@capecodcannabis.com|781-422-9554|Finance / AP, Intake, General Manager",
+    "Sophia Britt|sbritt@capecodcannabis.com||Inventory Manager"
+   ]
+  }
  },
  {
   "id": "A0071",
