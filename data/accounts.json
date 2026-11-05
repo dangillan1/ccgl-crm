@@ -5467,7 +5467,7 @@
   "stage_entered": "2026-10-30",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR284026",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
@@ -5484,7 +5484,8 @@
   "sheet_row": 188,
   "crm_edits": {
    "status": "2026-10-30",
-   "town": "2026-11-05"
+   "town": "2026-11-05",
+   "license_number": "2026-11-05"
   }
  },
  {
