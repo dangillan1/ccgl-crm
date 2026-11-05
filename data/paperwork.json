@@ -677,6 +677,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2027-03-12",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0187/st4/2026-11-05_mw3nrktor8h6.pdf",
+    "sha": "a4f6e7af26f01c7bd3b6a446e0749d690e7d6e41",
+    "name": "ST-4 - Joint Operations (Gardiner).pdf",
+    "size": 453452,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
