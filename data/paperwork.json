@@ -1068,5 +1068,19 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0077": {
+  "w9": {
+   "file": {
+    "path": "accounts/A0077/w9/2026-11-05_mw42kv1djfeg.pdf",
+    "sha": "22e433fcaa1e7fed98544a69c2bdb6a1f40ce187",
+    "name": "W-9 - CNA Stores (Amesbury).pdf",
+    "size": 2234331,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
+  }
  }
 }
