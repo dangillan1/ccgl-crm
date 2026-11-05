@@ -585,5 +585,20 @@
    "uploaded_at": "2026-11-04",
    "history": []
   }
+ },
+ "A0189": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0189/ccc/2026-11-05_mw3ngrcon0gz.pdf",
+    "sha": "1d2dbccceb997837671d87c3ef91f4670e5ace2a",
+    "name": "CCC License - Joint Operations (Rowley).pdf",
+    "size": 3905573,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2027-08-07",
+   "history": []
+  }
  }
 }
