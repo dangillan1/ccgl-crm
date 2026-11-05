@@ -2419,5 +2419,69 @@
   "type": "Doc",
   "note": "W-9 uploaded",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qcqtorgus",
+  "ts": "2026-11-05T15:58:28.044Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed j · stjohn@boomxcannabis.com",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qcxlaytdu",
+  "ts": "2026-11-05T15:58:36.814Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed epena@boomxcannabis.com · epena@boomxcannabis.com",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qdmz25i38",
+  "ts": "2026-11-05T15:59:09.710Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed asadowski@boomxcannabis.com · asadowski@boomxcannabis.com",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qdujoitiv",
+  "ts": "2026-11-05T15:59:19.524Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed Aknickle · aknickle@boomxcannabis.com",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qe0tfaqr0",
+  "ts": "2026-11-05T15:59:27.651Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed Kbowles · kbowles@boomxcannabis.com",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qekmkj36b",
+  "ts": "2026-11-05T15:59:53.324Z",
+  "account_id": "A0039",
+  "type": "Note",
+  "note": "Contacts confirmed — 4 people (Buyer, Finance / AP, Intake)",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qfzb91y02",
+  "ts": "2026-11-05T16:00:59.013Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed Jamie Giammarino (General Manager, Inventory) · jgiammarino@boomxcannabis.com",
+  "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qg6bedk8k",
+  "ts": "2026-11-05T16:01:08.090Z",
+  "account_id": "A0039",
+  "type": "Note",
+  "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
+  "date": "2026-11-05"
  }
 ]

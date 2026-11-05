@@ -1190,7 +1190,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Charley",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -1203,8 +1203,7 @@
    "Not in Master Sheet"
   ],
   "flags": [
-   "not-in-master",
-   "unassigned"
+   "not-in-master"
   ],
   "dup_candidates": [],
   "created": "2026-09-25",
@@ -1237,9 +1236,7 @@
   "standing_requests": "",
   "license_number": "MR283714",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "BoomX",
   "town": "Shirley",
@@ -1247,13 +1244,26 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
-  "notes": "Jamie no longer there - emailed back & forth 1/5 plan to visit Anthony C. in Jan.",
+  "notes": "",
   "sheet_row": 40,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Anthony Cardillo|acardillo@boomxcannabis.com||Finance / AP, Owner",
+    "AP|accounting@boomxcannabis.com||Finance / AP",
+    "Joshua St. John|jstjohn@boomxcannabis.com|978-733-4677|Buyer, Intake, Inventory, Asst. Manager"
+   ]
+  },
+  "crm_edits": {
+   "notes": "2026-11-05"
+  }
  },
  {
   "id": "A0040",

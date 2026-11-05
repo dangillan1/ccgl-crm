@@ -1122,56 +1122,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C73e98f85",
-  "account_id": "A0039",
-  "name": "",
-  "email": "asadowski@boomxcannabis.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 2",
-  "primary": false
- },
- {
-  "id": "C8cb9e382",
-  "account_id": "A0039",
-  "name": "",
-  "email": "epena@boomxcannabis.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 2",
-  "primary": false
- },
- {
-  "id": "C0bc8d376",
-  "account_id": "A0039",
-  "name": "Aknickle",
-  "email": "aknickle@boomxcannabis.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 31826",
-  "primary": false
- },
- {
-  "id": "C9b1d5164",
-  "account_id": "A0039",
-  "name": "j",
-  "email": "stjohn@boomxcannabis.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 51926",
-  "primary": false
- },
- {
-  "id": "C0b5dd949",
-  "account_id": "A0039",
-  "name": "Jgiammarino",
-  "email": "jgiammarino@boomxcannabis.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 31826",
-  "primary": false
- },
- {
   "id": "C112e04ef",
   "account_id": "A0039",
   "name": "Joshua St. John",
@@ -1181,16 +1131,6 @@
   "source": "Customer Tracker",
   "primary": false,
   "sheet_slot": 3
- },
- {
-  "id": "C2dff369a",
-  "account_id": "A0039",
-  "name": "Kbowles",
-  "email": "kbowles@boomxcannabis.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 31826",
-  "primary": false
  },
  {
   "id": "C22bff2d6",
@@ -15557,6 +15497,17 @@
   "name": "Julie Cafarella",
   "role": "Marketing/Pop-Ups",
   "email": "jcafarella@easterncannabisco.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3qed5wy58i",
+  "account_id": "A0039",
+  "name": "AP",
+  "role": "Finance / AP",
+  "email": "accounting@boomxcannabis.com",
   "phone": "",
   "source": "CRM (Joey)",
   "primary": false,
