@@ -1114,7 +1114,18 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 38,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|sm1@bvcannabis.com||",
+    "Andrew Gold|andrew@bvcannabis.com||Owner, CEO",
+    "Lindsay Rieger|lrieger@bvcannabis.com|609-781-3028|Finance / AP, Owner, COO",
+    "Lyndsay|purchasing@bvcannabis.com|508-779-5106|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0038",
