@@ -1116,12 +1116,13 @@
   "contacts_confirmed": {
    "at": "2026-11-05",
    "by": "joey",
-   "n": 4,
+   "n": 5,
    "people": [
-    "|sm1@bvcannabis.com||",
     "Andrew Gold|andrew@bvcannabis.com||Owner, CEO",
+    "Jeana Garcia|wholesale@bvcannabis.com||Wholesale",
+    "Jessica Dalton|sm1@bvcannabis.com||Marketing / Pop-Ups",
     "Lindsay Rieger|lrieger@bvcannabis.com|609-781-3028|Finance / AP, Owner, COO",
-    "Lyndsay|purchasing@bvcannabis.com|508-779-5106|Buyer, Intake, Inventory"
+    "Lyndsay Kelly|purchasing@bvcannabis.com|508-779-5106|Buyer, Intake, Inventory, Chief of Staff"
    ]
   },
   "crm_edits": {}
