@@ -749,6 +749,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "Cb11ec7a0",
+   "account_id": "A0105",
+   "email": "jacobb@embr.us",
+   "name": "Jacobb Us",
+   "source": "Random Data 31826",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
