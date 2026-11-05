@@ -1982,5 +1982,13 @@
   "note": "Onboarding form and license request sent 11/4 (contact confirmed via Natasha K.)",
   "date": "2026-11-04",
   "contact_id": "Cb62ab184"
+ },
+ {
+  "id": "Xmw2u2rsctpmv",
+  "ts": "2026-11-05T00:54:55.020Z",
+  "account_id": "A0003",
+  "type": "Edit",
+  "note": "Removed Tasha (Buyer)",
+  "date": "2026-11-05"
  }
 ]
