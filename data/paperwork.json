@@ -560,6 +560,18 @@
    "uploaded_at": "2026-11-04",
    "expires": "2026-06-10",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0037/st4/2026-11-04_mw2umt81ssok.pdf",
+    "sha": "0db9205f14da9c60fb5fc117336b4eef67fd980a",
+    "name": "ST-4 - Blackstone Valley Cannabis (Uxbridge).pdf",
+    "size": 105499,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "history": []
   }
  }
 }
