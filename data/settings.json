@@ -650,6 +650,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C67738ddb",
+   "account_id": "A0078",
+   "email": "jluks@cnastores.com",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
