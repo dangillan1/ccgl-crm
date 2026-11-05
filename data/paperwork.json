@@ -795,5 +795,20 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0356": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0356/ccc/2026-11-05_mw3uq4b5uw0f.pdf",
+    "sha": "28668eba167bb3e122d26af66c502ffe811cbca9",
+    "name": "CCC License - Zenleaf (Plymouth).pdf",
+    "size": 4942632,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-02-07",
+   "history": []
+  }
  }
 }
