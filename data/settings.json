@@ -366,6 +366,15 @@
    "source": "Random Data 2",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "Cde3b9588",
+   "account_id": "A0017",
+   "email": "jarabian@letsascend.com",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
