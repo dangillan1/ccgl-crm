@@ -5472,7 +5472,7 @@
   "flags": [],
   "created": "2026-09-25",
   "name": "Joint Operations",
-  "town": "Gardiner",
+  "town": "Gardner",
   "address": "320 W Broadway",
   "license_type": "Dispensary",
   "status": "Current",
@@ -5483,7 +5483,8 @@
   "notes": "",
   "sheet_row": 188,
   "crm_edits": {
-   "status": "2026-10-30"
+   "status": "2026-10-30",
+   "town": "2026-11-05"
   }
  },
  {
