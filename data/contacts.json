@@ -15466,5 +15466,16 @@
   "source": "CRM (Dan)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3zx36hfc4z",
+  "account_id": "A0062",
+  "name": "Chloe Magee",
+  "role": "Marketing",
+  "email": "cmagee@roadtripdispensary.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
