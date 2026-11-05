@@ -742,6 +742,19 @@
    "uploaded_by": "charley",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "ccc": {
+   "file": {
+    "path": "accounts/A0509/ccc/2026-11-05_mw3q8spdua1k.pdf",
+    "sha": "c3635bee4a4ac1abd7face0544f8fc77eb36485b",
+    "name": "CCC License - Blossom Flower.pdf",
+    "size": 3835144,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-07-14",
+   "history": []
   }
  },
  "A0039": {
