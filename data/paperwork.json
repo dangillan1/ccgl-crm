@@ -859,6 +859,19 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "ccc": {
+   "file": {
+    "path": "accounts/A0357/ccc/2026-11-05_mw3v4v5bu9wq.pdf",
+    "sha": "229d7d767c4ea56522d5a4812948e010c7040638",
+    "name": "CCC License - Zenleaf (Sharon).pdf",
+    "size": 3833917,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2025-12-12",
+   "history": []
   }
  }
 }
