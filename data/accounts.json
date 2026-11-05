@@ -5906,6 +5906,16 @@
      "reason": "38 days late, called multiple people, sent 6 emails now, all no response - keep an eye on them"
     }
    ]
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|sam@lowkeydispensary.com||Finance / AP, Billing",
+    "Darius Monteiro|darius@lowkeydispensary.com|(617) 774-9539|Buyer, Intake, General Manager",
+    "Jeff Simlien|jeff@lowkeydispensary.com||Finance / AP, Owner"
+   ]
   }
  },
  {
