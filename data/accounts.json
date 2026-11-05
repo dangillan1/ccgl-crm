@@ -9741,7 +9741,10 @@
   "notes": "",
   "sheet_row": 339,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Follow up on onboarding by EOW",
+  "next_step_due": "2026-11-06",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0339",
