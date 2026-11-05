@@ -2168,5 +2168,13 @@
   "note": "Onboarding form and updated license request sent 11/4",
   "date": "2026-11-04",
   "contact_id": "Cmw2v0h5tmpur"
+ },
+ {
+  "id": "Xmw2vept3hq7l",
+  "ts": "2026-11-05T01:32:11.943Z",
+  "account_id": "A0296",
+  "type": "Task",
+  "note": "Next step: Follow up with Dylan on onboarding docs by EOW (due Nov 6, 26)",
+  "date": "2026-11-05"
  }
 ]
