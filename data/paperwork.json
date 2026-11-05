@@ -624,5 +624,20 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0188": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0188/ccc/2026-11-05_mw3no77n2pre.pdf",
+    "sha": "2d38e9f27bed131c781a0eaa78caae8cf594ab49",
+    "name": "CCC License - Joint Operations (Mendon).pdf",
+    "size": 3903744,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2027-03-07",
+   "history": []
+  }
  }
 }
