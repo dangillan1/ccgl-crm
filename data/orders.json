@@ -16223,23 +16223,6 @@
   "edited_at": "2026-10-15"
  },
  {
-  "id": "O73c8ff68",
-  "date": "2026-07-27",
-  "account_id": "A0334",
-  "account_raw": "Trinity Naturals | MR282590",
-  "license": "MR282590",
-  "status": "Planned",
-  "contact_name": "Denis Pinhone",
-  "contact_email": "denis@trinitynat.com",
-  "delivery_date": "",
-  "total": null,
-  "owner": "Joey",
-  "mix": "Finished Goods",
-  "special": "",
-  "samples": false,
-  "row": 330
- },
- {
   "id": "O4f3eec88",
   "date": "2026-07-29",
   "account_id": "A0009",
