@@ -1399,7 +1399,7 @@
   "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
-  "notes": "Co-located location",
+  "notes": "Co-located location; Med & Rec",
   "sheet_row": 44,
   "in_customer_tracker": true,
   "in_qbo": true,
@@ -1416,6 +1416,9 @@
     "Leah Stevenson|lstevenson@bountifulfarms.care||General Manager, Inventory",
     "Sara Dukeshire|sdukeshire@bountifulfarms.care|978-979-4833|Buyer, Intake, Inventory"
    ]
+  },
+  "crm_edits": {
+   "notes": "2026-11-05"
   }
  },
  {
