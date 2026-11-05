@@ -2520,16 +2520,6 @@
   "sheet_slot": 3
  },
  {
-  "id": "C1c44692e",
-  "account_id": "A0077",
-  "name": "Patrick Mccauley",
-  "email": "pmccauley420@gmail.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Order Tracker 2026",
-  "primary": false
- },
- {
   "id": "C446baae1",
   "account_id": "A0077",
   "name": "Zachary Bunnell",
