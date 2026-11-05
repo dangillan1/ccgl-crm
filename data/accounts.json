@@ -1829,7 +1829,20 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 56,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "|inventory@canacraftcannabis.com||",
+    "|quinn@canacraftcannabis.com||Purchasing Specialist",
+    "|wholesale@canacraftcannabis.com||Wholesale",
+    "Anuraag|ap@canacraftcannabis.com||Finance / AP",
+    "CANA Purchasing|purchasing@canacraftcannabis.com||Purchasing / Buyer",
+    "Jordan Brassard|jordan@canacraftcannabis.com|413-896-5538|Buyer, Intake"
+   ]
+  }
  },
  {
   "id": "A0056",
