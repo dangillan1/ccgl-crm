@@ -490,5 +490,14 @@
   "contact_id": "",
   "edited_at": "2026-11-05",
   "edited_by": "matt"
+ },
+ {
+  "id": "Xmw405juz93ii",
+  "ts": "2026-11-05T20:32:48.587Z",
+  "account_id": "A0347",
+  "type": "Call",
+  "note": "Called store looking for buyer (Gary)",
+  "date": "2026-11-05",
+  "contact_id": null
  }
 ]
