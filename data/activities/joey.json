@@ -2665,5 +2665,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 5 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3w0azznjpu",
+  "ts": "2026-11-05T18:36:45.359Z",
+  "account_id": "A0045",
+  "type": "Edit",
+  "note": "Removed e · mily@primetimecap.com",
+  "date": "2026-11-05"
  }
 ]
