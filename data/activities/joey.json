@@ -1923,6 +1923,9 @@
   "account_id": "A0016",
   "type": "Task",
   "note": "Next step: Contact Roger Williamson about reorder and onboarding docs (due Nov 5, 26)",
-  "date": "2026-11-05"
+  "date": "2026-11-05",
+  "contact_id": "",
+  "edited_at": "2026-11-05",
+  "edited_by": "joey"
  }
 ]
