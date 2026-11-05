@@ -2024,13 +2024,21 @@
   "in_customer_tracker": true,
   "in_qbo": true,
   "terms": {
-   "plan": "tbd",
+   "plan": "cod",
    "step": null,
    "label": "",
-   "since": "2026-11-02",
-   "reason": "Latest invoice is late - keep an eye on. If difficult to collect then they lose terms for indefinite future.",
+   "since": "2026-11-05",
+   "reason": "Permanently lost terms - CBD for all orders",
    "set_by": "dan",
    "history": [
+    {
+     "date": "2026-11-05",
+     "by": "dan",
+     "plan": "cod",
+     "step": null,
+     "label": "COD",
+     "reason": "Permanently lost terms - CBD for all orders"
+    },
     {
      "date": "2026-11-02",
      "by": "dan",
