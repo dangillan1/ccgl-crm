@@ -716,6 +716,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2025-03-24",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0098/w9/2026-11-05_mw3q1xsb8b0f.pdf",
+    "sha": "8428c7871b7300141662141f32f63287a20b54b8",
+    "name": "W-9 - Eastern Cannabis Co. (Malden).pdf",
+    "size": 121669,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
