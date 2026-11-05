@@ -968,6 +968,20 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "ccc": {
+   "file": {
+    "path": "accounts/A0056/ccc/2026-11-05_mw3zr09sl9bu.pdf",
+    "sha": "b1ed59ac175f50b8059870c1fe4b6047d4c9a358",
+    "name": "CCC License - CANA Craft Cannabis (New Bedford).pdf",
+    "size": 3912515,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-02-13",
+   "note": "Microbusiness/CANA's co-packing partner",
+   "history": []
   }
  }
 }
