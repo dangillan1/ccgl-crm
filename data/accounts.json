@@ -1526,7 +1526,20 @@
   "notes": "",
   "sheet_row": 47,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "|accounting@budbarnma.com||Finance / AP",
+    "Emily Mount|emount@budbarnma.com||",
+    "Gustavo Perez|gperez@budbarnma.com||Inventory, Inventory Specialist",
+    "Mena Salame|msalame@budbarnma.com||Asst. General Manager/Marketing",
+    "Samantha Howard|showard@budbarnma.com|978-895-8702|GM & Purchaser / Buyer / Manager / Intake / Finance / AP",
+    "Sbombard|sbombard@budbarnma.com||"
+   ]
+  }
  },
  {
   "id": "A0047",
