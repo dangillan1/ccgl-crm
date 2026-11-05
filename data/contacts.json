@@ -15511,5 +15511,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw42bskimyyg",
+  "account_id": "A0205",
+  "name": "Rhiannon Binder",
+  "role": "Marketing",
+  "email": "rhiannon@lowkeydispensary.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
