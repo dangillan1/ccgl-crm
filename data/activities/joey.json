@@ -2580,5 +2580,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 4 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3v49ub7wmt",
+  "ts": "2026-11-05T18:11:50.867Z",
+  "account_id": "A0357",
+  "type": "Doc",
+  "note": "W-9 uploaded",
+  "date": "2026-11-05"
  }
 ]
