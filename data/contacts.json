@@ -15504,5 +15504,16 @@
   "source": "CRM (Dan)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3yg27tcwej",
+  "account_id": "A0038",
+  "name": "Kali",
+  "role": "Intake, General Manager",
+  "email": "kali@myblisscannabis.com",
+  "phone": "",
+  "source": "CRM (Dan)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
