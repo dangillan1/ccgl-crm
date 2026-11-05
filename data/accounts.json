@@ -1489,7 +1489,17 @@
   "sheet_row": 46,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|apboutiq@primetimecap.com||Finance / AP",
+    "Jess|jesso@primetimecap.com||Buyer / Manager / Intake / Inventory Manager",
+    "Sinead|sinead@primetimecap.com||Buyer / Assistant Manager / Intake"
+   ]
+  }
  },
  {
   "id": "A0046",
