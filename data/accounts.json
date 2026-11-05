@@ -1174,7 +1174,10 @@
     "Cayla|cayla@myblisscannabis.com||",
     "Dylan Woods|dylan@vvksconsulting.com|978-835-6573|Buyer, Intake, Inventory"
    ]
-  }
+  },
+  "next_step": "Follow up on onboarding by EOW",
+  "next_step_due": "2026-11-06",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0509",
