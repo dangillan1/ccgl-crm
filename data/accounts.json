@@ -520,13 +520,12 @@
   "contacts_confirmed": {
    "at": "2026-11-05",
    "by": "joey",
-   "n": 7,
+   "n": 6,
    "people": [
     "|jlamboy@letsascend.com||Intake",
     "Accounts Payable|maacctpayable@awholdings.com||Finance / AP",
     "Alex Rouviere|arouviere@letsascend.com||Intake",
     "Boston Inventory|fs_leadership@awholdings.com||Intake, Inventory",
-    "Gregory Harr|gharr@awholdings.com||Manager",
     "Roger Williamson|rwilliamson@awholdings.com||Buyer",
     "Wilmarie Navarro|wnavarro@letsascend.com||General Manager"
    ]
