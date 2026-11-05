@@ -2133,7 +2133,7 @@
   "created": "2026-09-25",
   "name": "Cannabis Healing LLC",
   "town": "East Boston",
-  "address": "",
+  "address": "4 Neptune Road",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
@@ -2169,6 +2169,9 @@
      "reason": "Latest invoice is late - keep an eye on. If difficult to collect then they lose terms for indefinite future."
     }
    ]
+  },
+  "crm_edits": {
+   "address": "2026-11-05"
   }
  },
  {
