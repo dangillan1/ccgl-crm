@@ -689,6 +689,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0187/w9/2026-11-05_mw3nrtecsnqe.pdf",
+    "sha": "9687af5b101f1cc57aba324d1ed74cd4a9a97e55",
+    "name": "W-9 - Joint Operations (Gardiner).pdf",
+    "size": 340004,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
