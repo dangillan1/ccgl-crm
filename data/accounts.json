@@ -1436,7 +1436,7 @@
   "created": "2026-09-25",
   "name": "Bountiful Farms",
   "town": "Rowley",
-  "address": "",
+  "address": "300 Newburyport Turnpike",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
@@ -1458,6 +1458,9 @@
     "Andrew Perrin|aperrin@bountifulfarms.care||Procurement Specialist",
     "Sara Dukeshire|sdukeshire@bountifulfarms.care|978-979-4833|Buyer"
    ]
+  },
+  "crm_edits": {
+   "address": "2026-11-05"
   }
  },
  {
