@@ -53,6 +53,15 @@ Remove a token any time under Settings.
 
 Reading works without a token (the Pages site serves the JSON); only saving needs it.
 
+**Bad connections.** Every read and save has a timeout, and the last good copy of each data file is kept
+in the browser (Cache API, nothing to install). If the signal drops, the sign-in page still lists the
+users, the app opens on the last copy it saw with a *No connection* banner and the time of that copy,
+saves fail fast with "nothing was saved" instead of hanging, and an upload that is still going after 15
+seconds shows a Cancel link. When the connection comes back the app reloads itself. A token that GitHub
+rejects (expired or revoked) is removed at sign-in with a message, so nobody is ever locked out of
+reading; saving needs a new token (Settings → Add token). Writes from one browser are spaced a second
+apart, which is what GitHub asks of content-creating requests on a shared token.
+
 ## Users and roles
 
 | User    | Role    | Can                                                                 |
