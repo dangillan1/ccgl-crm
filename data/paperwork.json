@@ -743,5 +743,20 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0039": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0039/ccc/2026-11-05_mw3q8vit3118.pdf",
+    "sha": "87f7e0989d8f791cc5071d6e91f4438a514f8f48",
+    "name": "CCC License - BoomX (Shirley).pdf",
+    "size": 3887286,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-11-05",
+   "history": []
+  }
  }
 }
