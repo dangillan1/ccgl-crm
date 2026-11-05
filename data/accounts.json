@@ -2078,7 +2078,18 @@
   "notes": "",
   "sheet_row": 64,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Chloe Magee|cmagee@roadtripdispensary.com||Marketing",
+    "Emily Robinson|erobinson@roadtripdispensary.com||Retail Director/Marketing",
+    "Eric|orders@ccofwestfield.com||Finance / AP, Intake",
+    "Torre Cioffi|tcioffi@roadtripdispensary.com|7814625812|Buyer, Inventory"
+   ]
+  }
  },
  {
   "id": "A0064",
