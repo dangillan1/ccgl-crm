@@ -1167,12 +1167,13 @@
   "in_qbo": true,
   "contacts_confirmed": {
    "at": "2026-11-05",
-   "by": "joey",
-   "n": 3,
+   "by": "dan",
+   "n": 4,
    "people": [
     "Billing/AP|billing@umaflowers.co||Finance / AP",
     "Cayla|cayla@myblisscannabis.com||",
-    "Dylan Woods|dylan@vvksconsulting.com|978-835-6573|Buyer, Intake, Inventory"
+    "Dylan Woods|dylan@vvksconsulting.com|978-835-6573|Buyer, Intake, Inventory",
+    "Kali|kali@myblisscannabis.com||Intake, General Manager"
    ]
   },
   "next_step": "Follow up on onboarding by EOW",
