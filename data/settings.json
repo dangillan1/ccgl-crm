@@ -402,6 +402,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C38dbd07d",
+   "account_id": "A0004",
+   "email": "",
+   "name": "Tasha",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
