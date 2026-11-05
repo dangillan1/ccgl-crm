@@ -785,6 +785,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "Cf5ba1ef8",
+   "account_id": "A0511",
+   "email": "marcog@embr.us",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
