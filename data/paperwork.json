@@ -1081,6 +1081,19 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "ccc": {
+   "file": {
+    "path": "accounts/A0077/ccc/2026-11-05_mw42l8z54nxl.pdf",
+    "sha": "e979e90b454961b4496f432e73263d31044bcbb7",
+    "name": "CCC License - CNA Stores (Amesbury).pdf",
+    "size": 3808111,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-04-17",
+   "history": []
   }
  }
 }
