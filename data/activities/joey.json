@@ -2890,5 +2890,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw42a9e9aszj",
+  "ts": "2026-11-05T21:32:27.537Z",
+  "account_id": "A0205",
+  "type": "Edit",
+  "note": "Removed sam@lowkeydispensary.com (Finance / AP, Billing) · sam@lowkeydispensary.com",
+  "date": "2026-11-05"
  }
 ]
