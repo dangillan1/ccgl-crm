@@ -3071,9 +3071,11 @@
   "id": "Xmw43basbciqz",
   "ts": "2026-11-05T22:01:15.611Z",
   "account_id": "A0117",
-  "type": "Call",
+  "type": "Email",
   "note": "Onboarding form and docs request sent 11/5 - Matt & Dan bcc'd",
   "date": "2026-11-05",
-  "contact_id": "C2f17fa8d"
+  "contact_id": "C2f17fa8d",
+  "edited_at": "2026-11-05",
+  "edited_by": "joey"
  }
 ]
