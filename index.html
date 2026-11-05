@@ -368,25 +368,37 @@ const GH={
   repo(){ return S.settings.repo||{owner:'dangillan1',name:'ccgl-crm',branch:'main'}; },
   api(p){ const r=this.repo(); return `https://api.github.com/repos/${r.owner}/${r.name}/contents/${p}`; },
   hdr(){ const h={'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}; if(this.pat) h['Authorization']='Bearer '+this.pat; return h; },
+  /* --- the last good copy of every data file is kept in the browser's Cache API (no service worker, nothing to install). When the connection
+         drops — a store with no signal, a flaky hotspot — reads fall back to it, the app shows a banner with the copy's time, and saving waits. --- */
+  cacheKey(p){ return 'ccgl-crm:'+p; },
+  async cachePut(p,data){ try{ if(!('caches' in window)) return; const c=await caches.open('ccgl-crm-data'); await c.put(new Request(location.origin+'/'+this.cacheKey(p)),new Response(JSON.stringify({at:Date.now(),data}),{headers:{'Content-Type':'application/json'}})); }catch(_){} },
+  async cacheGet(p){ try{ if(!('caches' in window)) return null; const c=await caches.open('ccgl-crm-data'); const r=await c.match(new Request(location.origin+'/'+this.cacheKey(p))); return r?await r.json():null; }catch(_){ return null; } },
+  isNet(e){ return !!e&&(e.name==='TypeError'||e.name==='AbortError'||e.name==='TimeoutError'||/Failed to fetch|Load failed|NetworkError|network/i.test(e.message||'')); },
+  rateLimited(r){ if(r.status===429) return true; if(r.status!==403) return false; return r.headers.get('x-ratelimit-remaining')==='0'||!!r.headers.get('retry-after'); },
   async read(p,forSave=false){
     if(PREVIEW){ const d=window.CCGL_PREVIEW_DATA[p]; return {data: d===undefined?null:JSON.parse(JSON.stringify(d)), sha:null}; }
-    if(this.pat){ try{ const r=await fetch(this.api(p)+`?ref=${this.repo().branch}&t=${Date.now()}`,{headers:this.hdr(),cache:'no-store'}); if(r.status===404) return {data:null,sha:null}; if(!r.ok) throw new Error(`GitHub read ${p}: ${r.status}`); const j=await r.json(); if(j.content!=null&&j.encoding==='base64') return {data:JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,''))))),sha:j.sha}; throw new Error('no content'); }
-      catch(e){ if(/GitHub read .* 401/.test(e.message)) throw e; if(forSave&&!/no content$| 403$/.test(e.message)) throw e; console.warn('API read failed for',p,e.message,'— falling back to the site copy'); } }   // rate limit / blip / >1MB file: use the published copy
-    const r=await fetch(`./${p}?t=${Date.now()}`,{cache:'no-store'}); if(r.status===404) return {data:null,sha:null}; if(!r.ok) throw new Error(`read ${p}: ${r.status}`); return {data:await r.json(),sha:null};
+    let netErr=null;
+    if(this.pat){ try{ const r=await fetch(this.api(p)+`?ref=${this.repo().branch}&t=${Date.now()}`,{headers:this.hdr(),cache:'no-store',...this.giveUp(30000)}); if(r.status===404) return {data:null,sha:null}; if(r.status===401) throw new Error('BAD_PAT'); if(this.rateLimited(r)) throw new Error('RATE_LIMIT'); if(!r.ok) throw new Error(`GitHub read ${p}: ${r.status}`); const j=await r.json(); if(j.content!=null&&j.encoding==='base64'){ const data=JSON.parse(decodeURIComponent(escape(atob(j.content.replace(/\n/g,''))))); this.cachePut(p,data); S.offline=false; return {data,sha:j.sha}; } throw new Error('no content'); }
+      catch(e){ if(e.message==='BAD_PAT') throw e; if(forSave&&!this.isNet(e)&&!/no content$|RATE_LIMIT| 403$/.test(e.message)) throw e; if(forSave&&this.isNet(e)) throw new Error('OFFLINE'); if(forSave&&e.message==='RATE_LIMIT') throw e; if(this.isNet(e)) netErr=e; else console.warn('API read failed for',p,e.message,'— falling back to the site copy'); } }   // rate limit / blip / >1MB file: use the published copy
+    if(!netErr){ try{ const r=await fetch(`./${p}?t=${Date.now()}`,{cache:'no-store',...this.giveUp(30000)}); if(r.status===404) return {data:null,sha:null}; if(!r.ok) throw new Error(`read ${p}: ${r.status}`); const data=await r.json(); this.cachePut(p,data); S.offline=false; return {data,sha:null}; }catch(e){ if(!this.isNet(e)) throw e; netErr=e; } }
+    const c=await this.cacheGet(p); if(c){ S.offline=true; S.offlineAt=S.offlineAt||c.at; return {data:c.data,sha:null,stale:c.at}; }   // no connection: the last copy this browser saw
+    throw new Error('OFFLINE');
   },
-  async sha(p){ const r=await fetch(this.api(p)+`?ref=${this.repo().branch}&t=${Date.now()}`,{headers:this.hdr(),cache:'no-store'}); if(r.status===404) return null; if(!r.ok) throw new Error(`GitHub sha ${p}: ${r.status}`); return (await r.json()).sha; },
+  async sha(p){ let r; try{ r=await fetch(this.api(p)+`?ref=${this.repo().branch}&t=${Date.now()}`,{headers:this.hdr(),cache:'no-store',...this.giveUp(30000)}); }catch(e){ if(this.isNet(e)) throw new Error('OFFLINE'); throw e; } if(r.status===404) return null; if(r.status===401) throw new Error('BAD_PAT'); if(this.rateLimited(r)) throw new Error('RATE_LIMIT'); if(!r.ok) throw new Error(`GitHub sha ${p}: ${r.status}`); return (await r.json()).sha; },
   async write(p,obj,message,sha){
     if(PREVIEW) throw new Error('PREVIEW'); if(!this.pat) throw new Error('NO_PAT');
     const body={message,content:btoa(unescape(encodeURIComponent(JSON.stringify(obj,null,1)))),branch:this.repo().branch}; if(sha) body.sha=sha;
-    const r=await fetch(this.api(p),{method:'PUT',headers:{...this.hdr(),'Content-Type':'application/json'},body:JSON.stringify(body)});
-    if(r.status===409||r.status===422) throw new Error('CONFLICT'); if(r.status===401) throw new Error('BAD_PAT'); if(!r.ok) throw new Error(`GitHub write ${p}: ${r.status}`);
-    return (await r.json()).content.sha;
+    let r; try{ r=await fetch(this.api(p),{method:'PUT',headers:{...this.hdr(),'Content-Type':'application/json'},body:JSON.stringify(body),...this.giveUp(60000)}); }catch(e){ if(this.isNet(e)) throw new Error('OFFLINE'); throw e; }
+    if(r.status===409||r.status===422) throw new Error('CONFLICT'); if(r.status===401) throw new Error('BAD_PAT'); if(this.rateLimited(r)) throw new Error('RATE_LIMIT'); if(!r.ok) throw new Error(`GitHub write ${p}: ${r.status}`);
+    const j=await r.json(); this.cachePut(p,obj); S.offline=false; return j.content.sha;
   },
-  async update(p,mutate,message){ for(let i=0;i<2;i++){ const {data,sha:readSha}=await this.read(p,true); const sha=this.pat?(readSha||await this.sha(p)):null; const next=mutate(data??[]); try{ await this.write(p,next,`[${S.user?.id||'system'}] ${message}`,sha); return next; }catch(e){ if(e.message==='CONFLICT'&&i===0) continue; throw e; } } },
+  _q:Promise.resolve(), _lastWrite:0,
+  async update(p,mutate,message){ const run=this._q.then(()=>this._update(p,mutate,message)); this._q=run.catch(()=>{}); return run; },
+  async _update(p,mutate,message){ const gap=1100-(Date.now()-this._lastWrite); if(gap>0) await new Promise(r=>setTimeout(r,gap)); this._lastWrite=Date.now(); for(let i=0;i<2;i++){ const {data,sha:readSha}=await this.read(p,true); const sha=this.pat?(readSha||await this.sha(p)):null; const next=mutate(data??[]); try{ await this.write(p,next,`[${S.user?.id||'system'}] ${message}`,sha); return next; }catch(e){ if(e.message==='CONFLICT'&&i===0) continue; throw e; } } },
   /* --- paperwork file store: a separate PRIVATE repo (this one is published by GitHub Pages). Same token, reached only through the API. --- */
   docsRepo(){ const d=S.settings.docs_repo||{}, r=this.repo(); return {owner:String(d.owner||r.owner),name:String(d.name||r.name+'-docs'),branch:String(d.branch||'')}; },
   limited(r){ return r.status===429||(r.status===403&&r.headers.get('x-ratelimit-remaining')==='0'); },
-  giveUp(ms){ return typeof AbortSignal!=='undefined'&&AbortSignal.timeout?{signal:AbortSignal.timeout(ms)}:{}; },   // so a stalled connection can't leave an upload dialog locked forever
+  giveUp(ms,ctrl){ if(typeof AbortSignal==='undefined'||!AbortSignal.timeout) return ctrl?{signal:ctrl.signal}:{}; const t=AbortSignal.timeout(ms); if(!ctrl) return {signal:t}; if(AbortSignal.any) return {signal:AbortSignal.any([t,ctrl.signal])}; setTimeout(()=>ctrl.abort(),ms); return {signal:ctrl.signal}; },   // so a stalled connection can't leave an upload dialog locked forever
   docsApi(p){ const r=this.docsRepo(); return `https://api.github.com/repos/${r.owner}/${r.name}${p?'/'+p:''}`; },
   docsPath(p){ return 'contents/'+String(p).split('/').map(encodeURIComponent).join('/'); },
   // Asked fresh before EVERY upload, never cached: the store must be a different repo from this one, reachable, private, and not published by Pages.
@@ -399,8 +411,8 @@ const GH={
     if(r.status===401) throw new Error('BAD_PAT'); if(this.limited(r)) throw new Error('RATE_LIMIT'); if(r.status===404||r.status===403) throw new Error('DOCS_NO_ACCESS'); if(!r.ok) throw new Error(`File store check failed: ${r.status}`);
     const j=await r.json(); if(String(j.full_name||'').toLowerCase()!==`${d.owner}/${d.name}`.toLowerCase()) throw new Error('DOCS_MOVED');
     if(j.private!==true) throw new Error('DOCS_PUBLIC'); if(j.has_pages) throw new Error('DOCS_PAGES'); return true; },
-  async docsPut(path,b64,message){ await this.docsCheck(); const body={message,content:b64}; const br=this.docsRepo().branch; if(br) body.branch=br; let r;
-    for(let i=0;i<3;i++){ r=await fetch(this.docsApi(this.docsPath(path)),{method:'PUT',headers:{...this.hdr(),'Content-Type':'application/json'},body:JSON.stringify(body),...this.giveUp(300000)}); if(r.status!==409) break; await new Promise(res=>setTimeout(res,700*(i+1))); }   // 409 = another upload to the store landed first; GitHub takes them one at a time
+  async docsPut(path,b64,message,ctrl){ await this.docsCheck(); const body={message,content:b64}; const br=this.docsRepo().branch; if(br) body.branch=br; let r;
+    for(let i=0;i<3;i++){ r=await fetch(this.docsApi(this.docsPath(path)),{method:'PUT',headers:{...this.hdr(),'Content-Type':'application/json'},body:JSON.stringify(body),...this.giveUp(180000,ctrl)}); if(r.status!==409) break; await new Promise(res=>setTimeout(res,700*(i+1))); }   // 409 = another upload to the store landed first; GitHub takes them one at a time
     if(r.status===401) throw new Error('BAD_PAT'); if(this.limited(r)) throw new Error('RATE_LIMIT'); if(r.status===404) throw new Error('DOCS_NO_ACCESS'); if(r.status===403) throw new Error('DOCS_READONLY'); if(!r.ok) throw new Error(`Upload failed: ${r.status}`);
     return (await r.json()).content.sha; },
   async docsGet(file){ if(PREVIEW) throw new Error('PREVIEW'); if(!this.pat) throw new Error('NO_PAT'); if(!file||!file.path) throw new Error('No file on record.');
@@ -429,7 +441,10 @@ const homeView=()=>{ const r=ROLE[S.user?.role]||{}; return r.views?r.views[0]:'
 async function boot(){
   if(window.CCGL_SELFTEST) sessionStorage.removeItem(SESSION_KEY);
   for(const id of ['gateLogo','brandLogo']){ const im=$('#'+id); im.onerror=function(){ if(this.src!==FALLBACK_LOGO){ this.onerror=()=>{this.style.display='none';}; this.src=FALLBACK_LOGO; } else this.style.display='none'; }; im.src=LOGO_URL; }
-  try{ const [{data:users},{data:settings}]=await Promise.all([GH.read(F.users),GH.read(F.settings)]); S.users=users||[]; S.settings=settings||{}; }catch(e){ $('#gErr').textContent='Could not load users/settings: '+e.message; }
+  try{ const [u,s]=await Promise.all([GH.read(F.users),GH.read(F.settings)]); S.users=u.data||[]; S.settings=s.data||{}; if(u.stale) $('#gErr').innerHTML=`No connection right now — you can still sign in; the app shows the data it last saw (${new Date(u.stale).toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}) until the signal is back.`; }
+  catch(e){ if(e.message==='BAD_PAT'){ try{ GH.pat=''; const [u,s]=await Promise.all([GH.read(F.users),GH.read(F.settings)]); S.users=u.data||[]; S.settings=s.data||{}; }catch(_){} $('#gErr').innerHTML='The GitHub token saved in this browser was rejected (expired or revoked), so it has been removed. You can sign in and read everything; saving needs a new token — ask Dan, then Settings → Add token.'; }
+    else $('#gErr').innerHTML=`Could not load the user list (${esc(e.message==='OFFLINE'?'no connection':e.message)}). <button type="button" class="btn sm" id="gRetry" style="margin-left:6px">Try again</button>`; }
+  const gr=$('#gRetry'); if(gr) gr.onclick=()=>location.reload();
   $('#gUser').innerHTML=S.users.map(u=>`<option value="${esc(u.id)}">${esc(u.name)}</option>`).join('');
   $('#gNote').textContent=PREVIEW?'Preview — any password signs in; nothing is saved.':'First time? Any password works until you set one — you\'ll be asked right after signing in.';
   const rem=sessionStorage.getItem(SESSION_KEY); if(rem&&S.users.find(u=>u.id===rem)){ S.user=S.users.find(u=>u.id===rem); await enter(); }
@@ -453,11 +468,11 @@ async function loadAll(manual=false){ setSync('loading…'); try{
   if(failed.length){ const keep=[S.accounts,S.leads,S.contacts,S.orders]; if(r[0].data==null&&keep[0].length) r[0].data=keep[0]; if(r[1].data==null&&keep[1].length) r[1].data=keep[1]; if(r[2].data==null&&keep[2].length) r[2].data=keep[2]; if(r[3].data==null&&keep[3].length) r[3].data=keep[3]; }
   S.accounts=r[0].data||[]; S.leads=r[1].data||[]; S.contacts=r[2].data||[]; S.orders=r[3].data||[]; S.settings=r[4].data||S.settings; S.users=r[5].data||S.users; S.insights=r[6].data||{assessments:[]}; S.qbo=r[7].data||{accounts:{},invoices:[],recon:{},unmapped:[],totals:{}};
   S.paperwork=r[8].data!=null?pwObj(r[8].data):(failed.some(x=>x.startsWith('paperwork.json'))?S.paperwork:{});   // on a failed read keep what we had rather than show every form as missing
-  const fl=failed.filter(x=>!x.startsWith('qbo.json')); if(fl.length) toast('Could not load: '+fl.join(', ')+' — click Reload',true);
+  const fl=failed.filter(x=>!x.startsWith('qbo.json')&&!/OFFLINE/.test(x)); if(fl.length) toast('Could not load: '+fl.join(', ')+' — click Reload',true);
   S.activities={}; await Promise.all(S.users.map(async u=>{ try{ S.activities[u.id]=(await GH.read(`data/activities/${u.id}.json`)).data||[]; }catch(_){ S.activities[u.id]=[]; } }));
-  S.loadedAt=new Date(); index(); render(); if(manual) toast('Reloaded'); setSync(GH.pat||PREVIEW?'live':'read-only (no token)'); }catch(e){ setSync('error'); toast('Load failed: '+e.message,true); console.error(e); } }
+  S.offline=r.some(x=>x&&x.stale); if(!S.offline) S.offlineAt=null; S.loadedAt=new Date(); index(); render(); if(manual) toast(S.offline?'Still no connection — showing the last copy':'Reloaded'); setSync(S.offline?'no connection':GH.pat||PREVIEW?'live':'read-only (no token)'); }catch(e){ setSync('error'); toast((e.message==='OFFLINE'?'No connection and no saved copy yet — connect once to load the book.':'Load failed: '+e.message),true); console.error(e); } }
 function setSync(t){ const cls=t==='live'?'live':t.startsWith('read')?'ro':''; const el=$('#syncState'); el.innerHTML=`<span class="status-dot ${cls}"></span>${esc(t)}${S.loadedAt?` · ${S.loadedAt.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}`:''}`; el.style.cursor=cls==='ro'?'pointer':''; el.title=cls==='ro'?'Click to add your GitHub token':''; el.onclick=cls==='ro'?()=>promptPat():null;
-  const b=$('#banner'); if(!PREVIEW){ if(!GH.pat){ b.hidden=false; b.innerHTML=`<b>Read-only.</b> Nothing you do will save until you add the GitHub token Dan sent you. <button class="btn sm" id="bannerPat" style="margin-left:10px">Add token</button>`; $('#bannerPat').onclick=()=>promptPat(); } else b.hidden=true; } }
+  const b=$('#banner'); if(!PREVIEW){ if(S.offline){ b.hidden=false; b.innerHTML=`<b>No connection.</b> Showing the data this browser last saw${S.offlineAt?' at '+new Date(S.offlineAt).toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}):''}. Nothing saves until the signal is back. <button class="btn sm" id="bannerRetry" style="margin-left:10px">Retry</button>`; $('#bannerRetry').onclick=()=>loadAll(true); } else if(!GH.pat){ b.hidden=false; b.innerHTML=`<b>Read-only.</b> Nothing you do will save until you add the GitHub token Dan sent you. <button class="btn sm" id="bannerPat" style="margin-left:10px">Add token</button>`; $('#bannerPat').onclick=()=>promptPat(); } else b.hidden=true; } }
 
 /* ---------------- indexes ---------------- */
 let A={},L={},ALL={},C={},contactsByAcc={},ordersByAcc={},actsByAcc={};
@@ -595,6 +610,7 @@ function indexPaperwork(){
    the account page leads with Call / Text / Directions and the log composer, and the Tasks week stacks day by day. */
 const PHONE_MQ=window.matchMedia('(max-width:700px)'); const isPhone=()=>PHONE_MQ.matches;
 PHONE_MQ.addEventListener('change',()=>{ document.body.classList.toggle('phone',isPhone()); if(S.user) render(); });
+window.addEventListener('online',()=>{ if(S.user&&S.offline) loadAll(true); });
 document.body.classList.toggle('phone',isPhone());
 const PHONE_COLS={active:['Account','Town','Stars','Owner','Buyer','Last order','Reorder','Owes','Standing note','Orders','2026 $'],orders:['Date','Account','Status','Total','Invoice','Delivery','Owner','Notes'],people:['Account','Name','Role','Email','Phone'],prospects:['Company','Town','Best contact','People','License'],pipeline:['Account','Town','Stage','Stars','Owner','Last touch','Next step'],emails:null,paperwork:null,activity:null};
 const PH_ICON={today:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14h3"/></svg>',active:'<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5M9 11h.01M15 11h.01M12 11h.01"/></svg>',search:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',tasks:'<svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>',orders:'<svg viewBox="0 0 24 24"><path d="M3 7h18l-2 12H5L3 7zM3 7l1.5-4h15L21 7M9 11v2M15 11v2"/></svg>',more:'<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>'};
@@ -1305,7 +1321,7 @@ function pwError(e,errEl){ const msg=(e&&(e.name==='TimeoutError'||e.name==='Abo
     DOCS_BADNAME:'Blocked: the file store name in settings.json isn\'t a valid owner/repo.',
     DOCS_MOVED:'Blocked: the file store repo has been renamed or moved. Check docs_repo in settings.json.',
     RATE_LIMIT:'GitHub is rate-limiting this token. Wait a few minutes and try again.',
-    TIMEOUT:'That took too long and was stopped. Check the connection and try again.',
+    TIMEOUT:'That took too long and was stopped — nothing was saved. Check the connection and try again.',OFFLINE:'No connection — nothing was saved. Try again when you have signal.',
     PREVIEW:'Preview is read-only.',CONFLICT:'Someone else saved at the same moment — try again.'})[msg]||msg;
   if(errEl){ errEl.textContent=text; } else toast(text,true); if(text===msg) console.error(e); }
 function pwSetupHelp(lead=''){ const r=GH.docsRepo();
@@ -1347,14 +1363,15 @@ function pwUploadForm(accId,type){ const a=A[accId], t=DOC[type]; if(!a||!t||!ca
     const where=a.town&&!a.name.toLowerCase().includes(a.town.toLowerCase())?' ('+a.town+')':'';   // skip the town when the account name already says it
     const nice=`${t.label} - ${also.length?a.parent.trim():a.name+where}`.replace(/[\/\\:*?"<>|\u0000-\u001f]+/g,'-').replace(/\s+/g,' ').trim().slice(0,120)+'.'+ext;
     const btn=$('#pwSave',m), closers=$$('[data-close]',m); const busy=on=>{ if(on) m.dataset.busy='1'; else delete m.dataset.busy; btn.disabled=on; btn.textContent=on?'Uploading…':'Upload'; closers.forEach(b=>b.disabled=on); };
-    busy(true);   // the dialog can't be closed mid-upload, so "cancel" can never leave a half-saved document behind
-    try{ if(!stored||stored.file!==file){ const path=`accounts/${accId}/${type}/${localDay()}_${uid('')}.${ext}`; const sha=await GH.docsPut(path,await fileB64(file),`[${S.user.id}] ${t.label} — ${a.name}${a.town?' ('+a.town+')':''} · original file: ${file.name}`); stored={file,path,sha}; }   // a retry after a failed save reuses the upload instead of storing a second copy
+    busy(true);   // the dialog can't be closed mid-upload, so "cancel" can never leave a half-saved document behind — but a slow connection gets a Cancel after 15 s
+    const ctrl=typeof AbortController!=='undefined'?new AbortController():null; const slow=setTimeout(()=>{ err.innerHTML='Still uploading — slow connection? <a href="#" id="pwAbort">Cancel this upload</a> (nothing is saved until it finishes).'; const ab=$('#pwAbort',m); if(ab) ab.onclick=ev=>{ ev.preventDefault(); if(ctrl) ctrl.abort(); }; },15000);
+    try{ if(!stored||stored.file!==file){ const path=`accounts/${accId}/${type}/${localDay()}_${uid('')}.${ext}`; const sha=await GH.docsPut(path,await fileB64(file),`[${S.user.id}] ${t.label} — ${a.name}${a.town?' ('+a.town+')':''} · original file: ${file.name}`,ctrl); stored={file,path,sha}; }   // a retry after a failed save reuses the upload instead of storing a second copy
       const rec={file:{path:stored.path,sha:stored.sha,name:nice,size:file.size,type:file.type||''},uploaded_by:S.user.id,uploaded_at:localDay()}; if(t.expires) rec.expires=exp; if(note) rec.note=note;
       S.paperwork=pwObj(await GH.update(F.paperwork,pw=>pwSet(pw,[accId,...also],type,rec,also),`${t.label} on file — ${a.name}${also.length?` (+${also.length} location${also.length>1?'s':''})`:''}`));
       const n=also.filter(id=>{ const r=pwRec((pwRec(S.paperwork[id])||{})[type]); return r&&r.file&&r.file.path===stored.path; }).length;
       try{ await appendActivity({account_id:accId,type:'Doc',note:`${t.label} ${cur&&cur.file?'replaced':'uploaded'}${t.expires?` — expires ${fmtDate(exp)}`:''}`,date:localDay()},`Paperwork note — ${a.name}`); }catch(_){ /* the file and its record are saved; the timeline note is a nicety */ }
-      busy(false); closeModal(); index(); render(); toast(`${t.label} saved${n?` for ${n+1} locations`:''}`);
-    }catch(e){ busy(false); pwError(e,err); } };
+      clearTimeout(slow); busy(false); closeModal(); index(); render(); toast(`${t.label} saved${n?` for ${n+1} locations`:''}`);
+    }catch(e){ clearTimeout(slow); busy(false); pwError(e,err); } };
 }
 function pwEditForm(accId,type){ const a=A[accId], t=DOC[type]; if(!a||!t||!can('docs')) return; const cur=pwRec((pwRec(S.paperwork[accId])||{})[type])||{}; const has=recHas(type,cur); if(!t.expires&&!cur.file) return;   // nothing to edit on a form with no date and no file
   const m=modal(`${t.label} — ${a.name}`,`${t.expires?`<div class="field"><label for="pwExp">Expiration date</label><input id="pwExp" type="date" value="${esc(dayNum(cur.expires)!=null?cur.expires:'')}"></div>`:''}
@@ -1451,7 +1468,7 @@ function bindPwSettings(v){ const st=$('#pwStoreState',v); if(!st) return;
 }
 
 /* ---------------- write actions ---------------- */
-async function guarded(fn){ if(S.readOnly){ toast('Preview is read-only — this would save in the live app.',true); return; } if(!GH.pat){ promptPat(); return; } try{ await fn(); }catch(e){ if(['NO_PAT','BAD_PAT'].includes(e.message)){ GH.pat=''; promptPat(); } else if(e.message==='CONFLICT'){ toast('Someone else saved at the same moment — reloaded, please retry.',true); await loadAll(); } else { toast('Save failed: '+e.message,true); console.error(e); } } }
+async function guarded(fn){ if(S.readOnly){ toast('Preview is read-only — this would save in the live app.',true); return; } if(!GH.pat){ promptPat(); return; } if(navigator.onLine===false){ toast('No connection — nothing was saved. Try again when you have signal.',true); return; } setSync('saving…'); try{ await fn(); setSync(S.offline?'no connection':'live'); }catch(e){ setSync(GH.pat?'live':'read-only (no token)'); if(['NO_PAT','BAD_PAT'].includes(e.message)){ GH.pat=''; promptPat(); } else if(e.message==='CONFLICT'){ toast('Someone else saved at the same moment — reloaded, please retry.',true); await loadAll(); } else if(e.message==='OFFLINE'){ S.offline=true; render(); toast('No connection — nothing was saved. Try again when you have signal.',true); } else if(e.message==='RATE_LIMIT'){ toast('GitHub is asking the team\'s token to slow down — wait a minute and try again. Nothing was saved.',true); } else { toast('Save failed: '+e.message,true); console.error(e); } } }
 async function saveAccounts(mutate,msg){ await guarded(async()=>{ S.accounts=await GH.update(F.accounts,mutate,msg); index(); render(); toast('Saved'); }); }
 async function saveLeads(mutate,msg){ await guarded(async()=>{ S.leads=await GH.update(F.leads,mutate,msg); index(); render(); toast('Saved'); }); }
 async function saveAny(id,fn,msg){ if(L[id]) return saveLeads(ls=>{ const x=ls.find(y=>y.id===id); if(x) fn(x); return ls; },msg); return saveAccounts(as=>{ const x=as.find(y=>y.id===id); if(x) fn(x); return as; },msg); }
