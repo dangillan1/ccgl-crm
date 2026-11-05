@@ -167,7 +167,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 5,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Alicia Schneeberger|aschneeberger@acscompassion.com||",
+    "Kelly|accounting@acscompassion.com||Finance / AP",
+    "Natasha Karklin|nkarklin@acscompassion.com|339-832-1296|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0005",
