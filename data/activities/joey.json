@@ -1941,5 +1941,13 @@
   "note": "Onboarding form and onboarding docs request sent 11/4",
   "date": "2026-11-04",
   "contact_id": "C7d85dcfc"
+ },
+ {
+  "id": "Xmw2swszcebpc",
+  "ts": "2026-11-05T00:22:17.016Z",
+  "account_id": "A0205",
+  "type": "Edit",
+  "note": "Removed d · arius@lowkeydispensary.com",
+  "date": "2026-11-05"
  }
 ]
