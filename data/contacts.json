@@ -3246,16 +3246,6 @@
   "sheet_slot": 2
  },
  {
-  "id": "C6741da05",
-  "account_id": "A0105",
-  "name": "",
-  "email": "marcog@embr.us",
-  "phone": "",
-  "role": "Intake",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C3e829d84",
   "account_id": "A0105",
   "name": "",
