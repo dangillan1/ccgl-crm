@@ -2039,7 +2039,19 @@
   "in_qbo": true,
   "next_step": "Send fresh samples on next order",
   "next_step_due": "2026-11-16",
-  "next_step_owner": "joey"
+  "next_step_owner": "joey",
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 5,
+   "people": [
+    "|orders@ccofwestfield.com||Finance / AP, Intake, AR / Accounting",
+    "Chloe Magee|cmagee@roadtripdispensary.com||Marketing",
+    "Emily Robinson|erobinson@roadtripdispensary.com||Retail Director/Marketing",
+    "Eric|orders@ccofwestfield.com||",
+    "Torre Cioffi|tcioffi@roadtripdispensary.com|7814625812|Buyer, Intake"
+   ]
+  }
  },
  {
   "id": "A0063",
