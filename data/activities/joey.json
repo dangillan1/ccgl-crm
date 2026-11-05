@@ -2339,5 +2339,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 5 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3pecccj0vg",
+  "ts": "2026-11-05T15:31:42.972Z",
+  "account_id": "A0514",
+  "type": "Order",
+  "note": "Order updated: Confirmed $4,250 · Nov 4, 26",
+  "date": "2026-11-04"
  }
 ]
