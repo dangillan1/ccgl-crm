@@ -821,6 +821,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0356/w9/2026-11-05_mw3uqpi271zx.pdf",
+    "sha": "56bcd9026ed3c3c1ad55324916e05e1af1acc2a6",
+    "name": "W-9 - Zenleaf (Plymouth).pdf",
+    "size": 61534,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
