@@ -3158,5 +3158,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 4 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw43ykcx2vub",
+  "ts": "2026-11-05T22:19:21.105Z",
+  "account_id": "A0511",
+  "type": "Edit",
+  "note": "Removed ryanw@embr.us (Intake) · ryanw@embr.us",
+  "date": "2026-11-05"
  }
 ]
