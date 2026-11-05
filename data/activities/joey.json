@@ -2467,5 +2467,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 4 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3qfzb91y02",
+  "ts": "2026-11-05T16:00:59.013Z",
+  "account_id": "A0039",
+  "type": "Edit",
+  "note": "Removed Jamie Giammarino (General Manager, Inventory) · jgiammarino@boomxcannabis.com",
+  "date": "2026-11-05"
  }
 ]
