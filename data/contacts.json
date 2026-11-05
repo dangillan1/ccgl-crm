@@ -15559,5 +15559,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3p7vqtzc06",
+  "account_id": "A0188",
+  "name": "Accounts Payable",
+  "role": "Finance / AP",
+  "email": "ap@jointoperations.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
