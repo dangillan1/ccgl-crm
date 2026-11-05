@@ -873,5 +873,20 @@
    "expires": "2025-12-12",
    "history": []
   }
+ },
+ "A0250": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0250/ccc/2026-11-05_mw3v917mokb7.pdf",
+    "sha": "f2be41ddc981ad651424043543cf6391475f70ec",
+    "name": "CCC License - Pioneer Valley Trading Co (Southwick).pdf",
+    "size": 3923196,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-04-15",
+   "history": []
+  }
  }
 }
