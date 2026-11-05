@@ -499,5 +499,14 @@
   "note": "Called store looking for buyer (Gary)",
   "date": "2026-11-05",
   "contact_id": null
+ },
+ {
+  "id": "Xmw406gflt68t",
+  "ts": "2026-11-05T20:33:30.801Z",
+  "account_id": "A0347",
+  "type": "Email",
+  "note": "Sent menu and promos - $6k promo",
+  "date": "2026-11-05",
+  "contact_id": null
  }
 ]
