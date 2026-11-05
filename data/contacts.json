@@ -550,16 +550,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C01ae322a",
-  "account_id": "A0016",
-  "name": "",
-  "email": "bsobolewski@letsascend.com",
-  "phone": "",
-  "role": "Manager",
-  "source": "Random Data 2",
-  "primary": false
- },
- {
   "id": "Cd63c0a3c",
   "account_id": "A0016",
   "name": "",
