@@ -1149,8 +1149,7 @@
   "license_number": "MR284693",
   "tags": [],
   "flags": [
-   "order-license-mismatch",
-   "unassigned"
+   "order-license-mismatch"
   ],
   "created": "2026-09-25",
   "name": "Bliss Cannabis",
@@ -1159,7 +1158,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "A",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "(same group as Stories Dispensary & Uma Flowers)",
@@ -1178,7 +1177,8 @@
   },
   "next_step": "Follow up on onboarding by EOW",
   "next_step_due": "2026-11-06",
-  "next_step_owner": "joey"
+  "next_step_owner": "joey",
+  "crm_edits": {}
  },
  {
   "id": "A0509",
