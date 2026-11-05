@@ -10325,7 +10325,19 @@
   "notes": "Affiliated with Verano",
   "sheet_row": 357,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 5,
+   "people": [
+    "|ap@verano.com||Finance / AP",
+    "|invoices-noreply@verano.com|312-428-7677 ex. 1010|Finance / AP",
+    "|sovita.thapamagar@verano.com||Finance / AP",
+    "Alex Portillo|alex.portillo@verano.com|571-217-8520|Buyer, Intake, Inventory",
+    "Elizabeth Bazarko|elizabeth.bazarko@verano.com|312-428-7677 ext. 1010|AP Contractor"
+   ]
+  }
  },
  {
   "id": "A0357",
