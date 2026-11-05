@@ -702,5 +702,20 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0098": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0098/ccc/2026-11-05_mw3q1poapqxh.pdf",
+    "sha": "f462c1d7165b34d984049a50c20da05678ff6074",
+    "name": "CCC License - Eastern Cannabis Co. (Malden).pdf",
+    "size": 3912441,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2025-03-24",
+   "history": []
+  }
  }
 }
