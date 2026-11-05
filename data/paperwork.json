@@ -888,5 +888,20 @@
    "expires": "2026-04-15",
    "history": []
   }
+ },
+ "A0052": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0052/ccc/2026-11-05_mw3ziwwjrenx.pdf",
+    "sha": "7e76f079b23bae36582c3308f8be90c4bc6d2df4",
+    "name": "CCC License - Cal Verde Naturals (Belmont).pdf",
+    "size": 3825989,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2027-04-01",
+   "history": []
+  }
  }
 }
