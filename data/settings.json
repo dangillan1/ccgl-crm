@@ -731,6 +731,15 @@
    "source": "Random Data 5",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C01245df6",
+   "account_id": "A0105",
+   "email": "kurembrinventory@embr.us",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
