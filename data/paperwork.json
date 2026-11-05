@@ -1011,5 +1011,20 @@
    "note": "Microbusiness/CANA's co-packing partner",
    "history": []
   }
+ },
+ "A0062": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0062/ccc/2026-11-05_mw400tzef614.pdf",
+    "sha": "35a4e5409a52b4bc848dc547aecfb8633c357caa",
+    "name": "CCC License - Cannabis Connection (West Springfield).pdf",
+    "size": 1465186,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "expires": "2026-11-22",
+   "history": []
+  }
  }
 }
