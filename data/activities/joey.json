@@ -2689,5 +2689,14 @@
   "type": "Note",
   "note": "Contacts confirmed — 6 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3z5z5hfiq6",
+  "ts": "2026-11-05T20:05:08.789Z",
+  "account_id": "A0046",
+  "type": "Note",
+  "note": "Called Samantha 11/5 no answer - onboarding form & docs request sent",
+  "date": "2026-11-05",
+  "contact_id": "C6310b3c2"
  }
 ]
