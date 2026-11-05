@@ -15499,5 +15499,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw407nro8f8r",
+  "account_id": "A0063",
+  "name": "Emily Robinson",
+  "role": "Retail Director/Marketing",
+  "email": "erobinson@roadtripdispensary.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
