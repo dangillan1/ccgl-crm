@@ -601,16 +601,6 @@
   "primary": false
  },
  {
-  "id": "Cc276336e",
-  "account_id": "A0017",
-  "name": "",
-  "email": "mosario@letsascend.com",
-  "phone": "",
-  "role": "Intake",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "Cc7c7066e",
   "account_id": "A0017",
   "name": "Gregory Harr",
