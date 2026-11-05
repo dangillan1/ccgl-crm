@@ -2698,5 +2698,13 @@
   "note": "Called Samantha 11/5 no answer - onboarding form & docs request sent",
   "date": "2026-11-05",
   "contact_id": "C6310b3c2"
+ },
+ {
+  "id": "Xmw3ziiq8rjaq",
+  "ts": "2026-11-05T20:14:54.032Z",
+  "account_id": "A0052",
+  "type": "Note",
+  "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
+  "date": "2026-11-05"
  }
 ]
