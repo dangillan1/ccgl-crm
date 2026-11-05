@@ -188,16 +188,6 @@
   "sheet_slot": 2
  },
  {
-  "id": "C38dbd07d",
-  "account_id": "A0004",
-  "name": "Tasha",
-  "email": "",
-  "phone": "339-832-1296",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C90970cd7",
   "account_id": "A0005",
   "name": "Founder/CEO",
