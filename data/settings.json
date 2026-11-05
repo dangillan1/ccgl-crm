@@ -339,6 +339,15 @@
    "source": "CCGL Prospect List",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "Cfd0c8b88",
+   "account_id": "A0003",
+   "email": "",
+   "name": "Tasha",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
