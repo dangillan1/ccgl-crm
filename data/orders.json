@@ -20213,8 +20213,8 @@
   "account_raw": "UMA Flowers",
   "license": "MR283143",
   "status": "Confirmed",
-  "contact_name": "",
-  "contact_email": "",
+  "contact_name": "Brianna",
+  "contact_email": "brianna@umaflowers.co",
   "delivery_date": "",
   "total": 5115,
   "owner": "Matt",
@@ -20222,6 +20222,9 @@
   "special": "November $6k promo - please send BT samples",
   "samples": true,
   "source": "CRM",
-  "created_by": "dan"
+  "created_by": "dan",
+  "edited_in_crm": true,
+  "edited_by": "dan",
+  "edited_at": "2026-11-05"
  }
 ]
