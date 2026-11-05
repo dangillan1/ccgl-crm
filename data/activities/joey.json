@@ -2930,5 +2930,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 6 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw42e47abkp9",
+  "ts": "2026-11-05T21:35:27.430Z",
+  "account_id": "A0078",
+  "type": "Edit",
+  "note": "Removed jluks@cnastores.com (Finance / AP) · jluks@cnastores.com",
+  "date": "2026-11-05"
  }
 ]
