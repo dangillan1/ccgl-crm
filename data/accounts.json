@@ -1290,7 +1290,18 @@
   "notes": "",
   "sheet_row": 41,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|accounting@boterama.com||Finance / AP",
+    "Ckrause|ckrause@boterama.com||",
+    "Dwebster|dwebster@boterama.com||Intake",
+    "Matthew B|mbehymer@boterama.com||Purchasing Manager / Buyer / Intake"
+   ]
+  }
  },
  {
   "id": "A0041",
