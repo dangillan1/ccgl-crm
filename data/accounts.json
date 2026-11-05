@@ -3374,7 +3374,17 @@
   "sheet_row": 106,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Brett Durgan|brettd@growopfarms.com||Finance / AP, Retail Accountant",
+    "Jeff Edinger|jeffreye@embr.us|413-244-5926|Manager / Buyer / Intake",
+    "Ryan Warren|ryanw@embr.us||Intake"
+   ]
+  }
  },
  {
   "id": "A0511",
