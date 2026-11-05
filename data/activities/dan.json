@@ -174,5 +174,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3z7kybyxm7",
+  "ts": "2026-11-05T20:06:23.699Z",
+  "account_id": "A0338",
+  "type": "Order",
+  "note": "Confirmed order $5,115 · Finished Goods · November $6k promo - please send BT samples",
+  "date": "2026-11-05"
  }
 ]
