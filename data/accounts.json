@@ -8553,7 +8553,10 @@
   },
   "crm_edits": {
    "license_number": "2026-11-05"
-  }
+  },
+  "next_step": "Follow up with Dylan on onboarding docs by EOW",
+  "next_step_due": "2026-11-06",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0297",
