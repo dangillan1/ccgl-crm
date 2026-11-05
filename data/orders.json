@@ -20226,5 +20226,23 @@
   "edited_in_crm": true,
   "edited_by": "dan",
   "edited_at": "2026-11-05"
+ },
+ {
+  "id": "Omw3z98mulu9k",
+  "date": "2026-11-05",
+  "account_id": "A0296",
+  "account_raw": "Stories Cannabis",
+  "license": "MR284693",
+  "status": "Confirmed",
+  "contact_name": "Christina",
+  "contact_email": "christina@vvksconsulting.com",
+  "delivery_date": "",
+  "total": 5115,
+  "owner": "Matt",
+  "mix": "Finished Goods",
+  "special": "November $6k promo - please send BT samples",
+  "samples": true,
+  "source": "CRM",
+  "created_by": "dan"
  }
 ]
