@@ -3527,7 +3527,18 @@
   "notes": "",
   "sheet_row": 108,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|peter@enlitecannabis.com||",
+    "Jon Mcmahon|jon@enlitecannabis.com|413-885-0617|General Manager, Northampton",
+    "Matt Yee|matt@enlitecannabis.com||Finance / AP, Owner",
+    "Sarah P|sarah@enlitecannabis.com|413-204-2479|Buyer, Intake, General Manager, Indian Orchard"
+   ]
+  }
  },
  {
   "id": "A0108",
