@@ -1055,6 +1055,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2026-04-17",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0078/w9/2026-11-05_mw42kc3rlv6q.pdf",
+    "sha": "22e433fcaa1e7fed98544a69c2bdb6a1f40ce187",
+    "name": "W-9 - CNA Stores (Haverhill).pdf",
+    "size": 2234331,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
