@@ -1122,16 +1122,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C0b5dd949",
-  "account_id": "A0039",
-  "name": "Jamie Giammarino",
-  "email": "jgiammarino@boomxcannabis.com",
-  "phone": "978-733-6237",
-  "role": "General Manager, Inventory",
-  "source": "Random Data 31826",
-  "primary": false
- },
- {
   "id": "C112e04ef",
   "account_id": "A0039",
   "name": "Joshua St. John",
