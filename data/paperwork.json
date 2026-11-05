@@ -770,6 +770,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2026-11-05",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0039/st4/2026-11-05_mw3q9damsc2w.pdf",
+    "sha": "2a90d819cb8a29f41fa23ca48a6c5ed3b0f65d0c",
+    "name": "ST-4 - BoomX (Shirley).pdf",
+    "size": 669067,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
