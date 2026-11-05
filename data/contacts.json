@@ -591,17 +591,6 @@
   "primary": false
  },
  {
-  "id": "Cc7c7066e",
-  "account_id": "A0017",
-  "name": "Gregory Harr",
-  "email": "gharr@awholdings.com",
-  "phone": "",
-  "role": "Manager",
-  "source": "Master",
-  "primary": false,
-  "sheet_slot": 2
- },
- {
   "id": "C1b7b1895",
   "account_id": "A0018",
   "name": "Roger Williamson",
