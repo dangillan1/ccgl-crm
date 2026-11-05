@@ -485,8 +485,10 @@
   "ts": "2026-11-05T19:38:01.557Z",
   "account_id": "A0023",
   "type": "Email",
-  "note": "Reached out to info@tryredi.com",
+  "note": "They were purchased by Redi - still operating under the AYR name\n\nSent menu to info@tryredi.com",
   "date": "2026-11-05",
-  "contact_id": null
+  "contact_id": "",
+  "edited_at": "2026-11-05",
+  "edited_by": "matt"
  }
 ]
