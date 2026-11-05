@@ -514,8 +514,8 @@
   "sheet_row": 18,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "In-person visit by EOM",
-  "next_step_due": "2026-11-27",
+  "next_step": "Contact Roger Williamson about reorder and onboarding docs",
+  "next_step_due": "2026-11-05",
   "next_step_owner": "joey"
  },
  {
