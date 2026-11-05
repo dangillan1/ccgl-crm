@@ -411,6 +411,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "C8b7ab33e",
+   "account_id": "A0038",
+   "email": "emerald@umaflowers.co",
+   "name": "Emerald Hardiman",
+   "source": "Master",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
