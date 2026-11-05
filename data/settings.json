@@ -375,6 +375,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "Cc276336e",
+   "account_id": "A0017",
+   "email": "mosario@letsascend.com",
+   "name": "",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
