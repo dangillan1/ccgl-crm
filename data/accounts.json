@@ -1164,7 +1164,17 @@
   "next_contact": "2026-08-10",
   "notes": "(same group as Stories Dispensary & Uma Flowers)",
   "sheet_row": 39,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Billing/AP|billing@umaflowers.co||Finance / AP",
+    "Cayla|cayla@myblisscannabis.com||",
+    "Dylan Woods|dylan@vvksconsulting.com|978-835-6573|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0509",
