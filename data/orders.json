@@ -18082,23 +18082,6 @@
   "row": 319
  },
  {
-  "id": "Occ43f7cb",
-  "date": "2026-09-21",
-  "account_id": "A0016",
-  "account_raw": "Ascend Newton | MR282837",
-  "license": "MR282837",
-  "status": "Planned",
-  "contact_name": "Roger Williamson",
-  "contact_email": "rwilliamson@awholdings.com",
-  "delivery_date": "",
-  "total": null,
-  "owner": "Joey",
-  "mix": "Bulk & FG",
-  "special": "",
-  "samples": false,
-  "row": 322
- },
- {
   "id": "O01c060e6",
   "date": "2026-09-23",
   "account_id": "A0299",
