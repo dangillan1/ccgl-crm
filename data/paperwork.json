@@ -902,6 +902,18 @@
    "uploaded_at": "2026-11-05",
    "expires": "2027-04-01",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0052/st4/2026-11-05_mw3zjan06uy7.pdf",
+    "sha": "676357741da0f945bfef1d626a311dd4cbf6f5b6",
+    "name": "ST-4 - Cal Verde Naturals (Belmont).pdf",
+    "size": 381407,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
