@@ -10791,5 +10791,34 @@
   "crm_edits": {
    "status": "2026-11-04"
   }
+ },
+ {
+  "id": "Amw3n6fp4wz7v",
+  "sheet_key": "",
+  "source": "CRM (Matt)",
+  "name": "Deezle Cannabis",
+  "parent": "",
+  "town": "Brookline",
+  "address": "1351 Beacon Street",
+  "license_type": "Dispensary",
+  "status": "Prospect",
+  "grade": "",
+  "owner": "Matt",
+  "last_contact": "",
+  "next_contact": "",
+  "notes": "",
+  "stage": "New",
+  "stage_entered": "2026-11-05",
+  "delivery_notes": "",
+  "standing_requests": "",
+  "license_number": "MR281950",
+  "tags": [],
+  "flags": [],
+  "dup_candidates": [],
+  "created": "2026-11-05",
+  "created_by": "matt",
+  "claimed": true,
+  "claimed_by": "matt",
+  "claimed_at": "2026-11-05"
  }
 ]
