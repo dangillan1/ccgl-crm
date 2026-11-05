@@ -508,5 +508,13 @@
   "note": "Sent menu and promos - $6k promo",
   "date": "2026-11-05",
   "contact_id": null
+ },
+ {
+  "id": "Xmw464tryy3ca",
+  "ts": "2026-11-05T23:20:12.478Z",
+  "account_id": "A0435",
+  "type": "Order",
+  "note": "Confirmed order $2,078 · Finished Goods",
+  "date": "2026-11-04"
  }
 ]
