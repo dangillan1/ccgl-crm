@@ -1190,7 +1190,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Charley",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -1203,8 +1203,7 @@
    "Not in Master Sheet"
   ],
   "flags": [
-   "not-in-master",
-   "unassigned"
+   "not-in-master"
   ],
   "dup_candidates": [],
   "created": "2026-09-25",
