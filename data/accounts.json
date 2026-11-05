@@ -588,9 +588,9 @@
     "Roger Williamson|rwilliamson@awholdings.com||Buyer"
    ]
   },
-  "next_step": "",
-  "next_step_due": "",
-  "next_step_owner": ""
+  "next_step": "Contact Roger Williamson about reorder and onboarding docs",
+  "next_step_due": "2026-11-05",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0019",
