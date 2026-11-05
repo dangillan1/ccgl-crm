@@ -611,6 +611,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-05",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0189/w9/2026-11-05_mw3njvxtlp5o.pdf",
+    "sha": "56c732f8352758529287eb151f896bc2feb69490",
+    "name": "W-9 - Joint Operations (Rowley).pdf",
+    "size": 137410,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
   }
  }
 }
