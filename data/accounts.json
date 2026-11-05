@@ -2173,6 +2173,16 @@
   },
   "crm_edits": {
    "address": "2026-11-05"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Brian|brian@cannabishealingllc.com|313-570-1105|Buyer, Finance / AP, Intake, General Manager",
+    "Miguel|miguel@cannabishealingllc.com||Inventory, Asst. Manager",
+    "Mike Washington|mike@cannabishealingllc.com||"
+   ]
   }
  },
  {
