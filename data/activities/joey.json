@@ -2906,5 +2906,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw42cqgfswg5",
+  "ts": "2026-11-05T21:34:22.959Z",
+  "account_id": "A0077",
+  "type": "Edit",
+  "note": "Removed Patrick Mccauley (Buyer) · pmccauley420@gmail.com",
+  "date": "2026-11-05"
  }
 ]
