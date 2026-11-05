@@ -15511,5 +15511,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-05"
+ },
+ {
+  "id": "Cmw3qed5wy58i",
+  "account_id": "A0039",
+  "name": "AP",
+  "role": "Finance / AP",
+  "email": "accounting@boomxcannabis.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-05"
  }
 ]
