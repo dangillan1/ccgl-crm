@@ -546,5 +546,20 @@
    "expires": "2026-03-11",
    "history": []
   }
+ },
+ "A0037": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0037/ccc/2026-11-04_mw2umjpdbij3.pdf",
+    "sha": "8daef36d949484fd0321adf299d4daffdd572ccf",
+    "name": "CCC License - Blackstone Valley Cannabis (Uxbridge).pdf",
+    "size": 3934364,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-04",
+   "expires": "2026-06-10",
+   "history": []
+  }
  }
 }
