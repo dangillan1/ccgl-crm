@@ -1402,7 +1402,21 @@
   "notes": "Co-located location",
   "sheet_row": 44,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 7,
+   "people": [
+    "|accounting@bountifulfarms.care||Finance / AP",
+    "|procurement@bountifulfarms.care||Procurement",
+    "Amy Fintonis|afintonis@bountifulfarms.care||Retail/Sales Director",
+    "Andrew Perrin|aperrin@bountifulfarms.care||",
+    "Jsutherland|jsutherland@bountifulfarms.care||",
+    "Leah Stevenson|lstevenson@bountifulfarms.care||General Manager, Inventory",
+    "Sara Dukeshire|sdukeshire@bountifulfarms.care|978-979-4833|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0044",
