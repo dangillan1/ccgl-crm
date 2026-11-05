@@ -1209,7 +1209,16 @@
   "created": "2026-09-25",
   "sheet_row": null,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Damaris Aponte|damaris@getblossomflower.com||Finance / AP, Owner",
+    "Emmanuel (Manny)|ewestphal@getblossomflower.com|413-636-7334|Buyer, Intake"
+   ]
+  }
  },
  {
   "id": "A0039",
