@@ -659,6 +659,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-05"
+  },
+  {
+   "id": "Cff243abb",
+   "account_id": "A0070",
+   "email": "js@capecodcannabis.com",
+   "name": "Jackson Simard",
+   "source": "Random Data 31826",
+   "removed_by": "joey",
+   "removed_at": "2026-11-05"
   }
  ]
 }
