@@ -218,5 +218,13 @@
   "type": "Note",
   "note": "Order deleted: Oct 16, 26 (Planned)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3z5u7fpq7q",
+  "ts": "2026-11-05T20:05:02.379Z",
+  "account_id": "A0062",
+  "type": "Note",
+  "note": "Order deleted: Sep 28, 26 · $5,625 (Planned)",
+  "date": "2026-11-05"
  }
 ]
