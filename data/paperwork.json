@@ -729,5 +729,19 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0509": {
+  "w9": {
+   "file": {
+    "path": "accounts/A0509/w9/2026-11-05_mw3q85d4gtar.pdf",
+    "sha": "1aead855711fa4e02ca8fc114a5555d270ad9c24",
+    "name": "W-9 - Blossom Flower.pdf",
+    "size": 124086,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "charley",
+   "uploaded_at": "2026-11-05",
+   "history": []
+  }
  }
 }
