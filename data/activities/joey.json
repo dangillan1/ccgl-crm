@@ -2556,5 +2556,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 5 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-05"
+ },
+ {
+  "id": "Xmw3v3mhixfuo",
+  "ts": "2026-11-05T18:11:20.598Z",
+  "account_id": "A0357",
+  "type": "Edit",
+  "note": "Removed sovita.thapamagar@verano.com (Finance / AP) · sovita.thapamagar@verano.com",
+  "date": "2026-11-05"
  }
 ]
