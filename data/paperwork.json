@@ -834,5 +834,19 @@
    "uploaded_at": "2026-11-05",
    "history": []
   }
+ },
+ "A0357": {
+  "w9": {
+   "file": {
+    "path": "accounts/A0357/w9/2026-11-05_mw3v47bahpzu.pdf",
+    "sha": "fce50d464d20bfb4177cc67f6e9744df5c917c35",
+    "name": "W-9 - Zenleaf (Sharon).pdf",
+    "size": 61406,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-05",
+   "history": []
+  }
  }
 }
