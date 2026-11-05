@@ -516,7 +516,21 @@
   "in_qbo": true,
   "next_step": "Contact Roger Williamson about reorder and onboarding docs",
   "next_step_due": "2026-11-05",
-  "next_step_owner": "joey"
+  "next_step_owner": "joey",
+  "contacts_confirmed": {
+   "at": "2026-11-05",
+   "by": "joey",
+   "n": 7,
+   "people": [
+    "|jlamboy@letsascend.com||Intake",
+    "Accounts Payable|maacctpayable@awholdings.com||Finance / AP",
+    "Alex Rouviere|arouviere@letsascend.com||Intake",
+    "Boston Inventory|fs_leadership@awholdings.com||Intake, Inventory",
+    "Gregory Harr|gharr@awholdings.com||Manager",
+    "Roger Williamson|rwilliamson@awholdings.com||Buyer",
+    "Wilmarie Navarro|wnavarro@letsascend.com||General Manager"
+   ]
+  }
  },
  {
   "id": "A0018",
