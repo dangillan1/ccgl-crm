@@ -1095,5 +1095,20 @@
    "expires": "2026-04-17",
    "history": []
   }
+ },
+ "A0327": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0327/ccc/2026-11-06_mw51s77z74lg.pdf",
+    "sha": "40533c1db90d259c31e3c6e379a54922f6067933",
+    "name": "CCC License - Thrive Dispensary (Beverly).pdf",
+    "size": 3934406,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-12-15",
+   "history": []
+  }
  }
 }
