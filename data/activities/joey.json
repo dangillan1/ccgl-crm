@@ -3399,5 +3399,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5c5047deii",
+  "ts": "2026-11-06T18:56:04.567Z",
+  "account_id": "A0118",
+  "type": "Doc",
+  "note": "CCC License uploaded — expires Nov 9, 26",
+  "date": "2026-11-06"
  }
 ]
