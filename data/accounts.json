@@ -3469,7 +3469,7 @@
   "parent": "Embr/Fyre Ants",
   "town": "Worcester",
   "address": "",
-  "license_type": "Dispensary",
+  "license_type": "Production",
   "status": "Current",
   "grade": "",
   "owner": "Joey",
@@ -3496,7 +3496,9 @@
   "created": "2026-09-25",
   "sheet_row": null,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {
+   "license_type": "2026-11-06"
+  }
  },
  {
   "id": "A0106",
