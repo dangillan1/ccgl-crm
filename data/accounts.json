@@ -2637,7 +2637,9 @@
   "standing_requests": "",
   "license_number": "MB281797 / MC282052",
   "tags": [],
-  "flags": [],
+  "flags": [
+   "unassigned"
+  ],
   "created": "2026-09-25",
   "name": "Coastal Cultivars - Bulk",
   "town": "Wareham",
@@ -2645,7 +2647,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Joey",
+  "owner": "Unassigned",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -2659,7 +2661,8 @@
     "Brennan Goguen|brennan@coastalcultivars.com|845-901-8723|Buyer, Finance / AP, Intake",
     "Gabe R.|gabe@havnextracts.com|845-901-8723|Buyer"
    ]
-  }
+  },
+  "crm_edits": {}
  },
  {
   "id": "A0080",
