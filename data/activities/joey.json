@@ -3706,5 +3706,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5lu0hiaybn",
+  "ts": "2026-11-06T23:27:27.990Z",
+  "account_id": "A0151",
+  "type": "Task",
+  "note": "Next step: Check in with Gabe about HAVN - are they still operating? (due Nov 13, 26)",
+  "date": "2026-11-06"
  }
 ]
