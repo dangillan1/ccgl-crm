@@ -8642,7 +8642,18 @@
   "notes": "",
   "sheet_row": 284,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|mike@seasidecannabis.com||",
+    "Brianna Cassidy|brianna@seasidecannabis.com||Buyer, Intake, Inventory",
+    "ryan@seasidecannabis.com|ryan@seasidecannabis.com||Owner",
+    "Spencer Knowles|spencer@seasidecannabis.com||Finance / AP, Owner, Inventory"
+   ]
+  }
  },
  {
   "id": "A0284",
