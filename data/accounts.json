@@ -3988,7 +3988,7 @@
   "created": "2026-09-25",
   "name": "Fresh Connection - Somerville",
   "town": "Somerville",
-  "address": "",
+  "address": "690 Broadway",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
@@ -3998,7 +3998,10 @@
   "notes": "",
   "sheet_row": 120,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "address": "2026-11-06"
+  }
  },
  {
   "id": "A0120",
