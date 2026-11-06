@@ -3458,7 +3458,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -3481,7 +3481,8 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "crm_edits": {}
  },
  {
   "id": "A0106",
