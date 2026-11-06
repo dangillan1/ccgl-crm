@@ -2680,7 +2680,9 @@
   "standing_requests": "Revert back to prospect - Revisit Jan. 2027",
   "license_number": "",
   "tags": [],
-  "flags": [],
+  "flags": [
+   "unassigned"
+  ],
   "created": "2026-09-25",
   "name": "Coastal Healing",
   "town": "Westport",
@@ -2688,11 +2690,12 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
-  "owner": "Joey",
+  "owner": "Unassigned",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 81
+  "sheet_row": 81,
+  "crm_edits": {}
  },
  {
   "id": "A0081",
