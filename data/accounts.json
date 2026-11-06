@@ -3526,7 +3526,18 @@
   "sheet_row": 107,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|info@emeraldgrove.cc||",
+    "Alex Jamoulis|alex@emeraldgrove.cc|Phone:(774) 722-4128|Buyer, Finance / AP, Intake",
+    "Kayla|kayla@emeraldgrove.cc||",
+    "Rachael|rachael@emeraldgrove.cc||"
+   ]
+  }
  },
  {
   "id": "A0107",
