@@ -1125,5 +1125,20 @@
    "expires": "2026-12-05",
    "history": []
   }
+ },
+ "A0116": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0116/ccc/2026-11-06_mw5blzr7eu5l.pdf",
+    "sha": "16d066719b58b5b66fb280a3d1a1bf5a2cbf008f",
+    "name": "CCC License - Firehouse (Hyde Park).pdf",
+    "size": 3923108,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-10-14",
+   "history": []
+  }
  }
 }
