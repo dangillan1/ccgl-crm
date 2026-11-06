@@ -902,6 +902,18 @@
      "replaced_by": "joey"
     }
    ]
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0250/st4/2026-11-06_mw5byvaypwkc.png",
+    "sha": "0b0de543d7ac24b23cc113363bdb920d691310a7",
+    "name": "ST-4 - Pioneer Valley Trading Co (Southwick).png",
+    "size": 2454365,
+    "type": "image/png"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  },
  "A0052": {
