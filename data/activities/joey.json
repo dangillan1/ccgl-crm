@@ -3358,5 +3358,14 @@
   "type": "Doc",
   "note": "W-9 uploaded",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5bw5ngpfqb",
+  "ts": "2026-11-06T18:49:11.836Z",
+  "account_id": "A0116",
+  "type": "Email",
+  "note": "Onboarding form & updated license request sent - Matt & Dan bcc'd",
+  "date": "2026-11-06",
+  "contact_id": "Cf7b99c53"
  }
 ]
