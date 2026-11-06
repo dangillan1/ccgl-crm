@@ -4036,7 +4036,17 @@
   "next_contact": "2026-08-10",
   "notes": "Last ordered December 2025 - voiced he needed flower variety; 6 strains min",
   "sheet_row": 121,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|evan@fullharvestmoonz.com||Asst. General Manager",
+    "Alexandra Brennan|alexandra.brennan@fullharvestmoonz.com||",
+    "Riley Ruth|riley@fullharvestmoonz.com|603-799-2136|Buyer, Finance / AP, Intake, General Manager"
+   ]
+  }
  },
  {
   "id": "A0121",
