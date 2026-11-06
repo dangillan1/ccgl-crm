@@ -4001,6 +4001,15 @@
   "in_qbo": true,
   "crm_edits": {
    "address": "2026-11-06"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Samantha Seagaard|samantha@freshconnectionboston.com||Intake, Owner, Co-Founder",
+    "Will Seagaard|will@freshconnectionboston.com|201-783-2949|Buyer, Finance / AP, Intake, Owner, Founder"
+   ]
   }
  },
  {
