@@ -20280,5 +20280,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omw5e436wu3ca",
+  "date": "2026-11-06",
+  "account_id": "A0297",
+  "account_raw": "Sublime Cannabis",
+  "license": "MR284871",
+  "status": "Pending",
+  "contact_name": "Rob Catania",
+  "contact_email": "rob@sublimecannabis.co",
+  "delivery_date": "",
+  "total": 3100,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
