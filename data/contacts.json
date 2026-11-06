@@ -5033,16 +5033,6 @@
   "primary": false
  },
  {
-  "id": "C9a606468",
-  "account_id": "A0159",
-  "name": "Jack H.",
-  "email": "jack@hennep.com",
-  "phone": "401-479-0190",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "Ce8e1d459",
   "account_id": "A0159",
   "name": "Lamato",
