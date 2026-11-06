@@ -5280,7 +5280,21 @@
   "notes": "",
   "sheet_row": 160,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 7,
+   "people": [
+    "|billing@hennep.com||Finance / AP",
+    "|ptown-ap@hennep.com||Finance / AP",
+    "Andrew Koudijs|akoudijs@hennep.com||Buyer, Intake, Owner, Inventory",
+    "Colin Noel|cnoel@hennep.com||Intake, Operations",
+    "Eric Halpern|eric@thehalpcenter.com||Buyer, Purchasing Consultant - The Halp Group",
+    "Laura Amato|lamato@hennep.com||",
+    "Natalie Benson|nbenson@hennep.com||Owner, Co-Founder / Garden Mother Founder"
+   ]
+  }
  },
  {
   "id": "A0161",
