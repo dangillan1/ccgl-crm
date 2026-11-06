@@ -5050,9 +5050,7 @@
   "standing_requests": "",
   "license_number": "MR283193",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Healing Center",
   "town": "Fitchburg",
@@ -5060,7 +5058,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -5076,7 +5074,8 @@
     "Casey Baker|cbaker@thehealingcenterma.com|978-906-3908|Intake, Owner",
     "Kelly Gallagher|kgallagher@thehealingcenterma.com|978-906-3908|Buyer, Intake, Inventory"
    ]
-  }
+  },
+  "crm_edits": {}
  },
  {
   "id": "A0155",
