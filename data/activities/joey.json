@@ -3739,5 +3739,14 @@
   "contact_id": "Cf8cd16f6",
   "edited_at": "2026-11-06",
   "edited_by": "joey"
+ },
+ {
+  "id": "Xmw5m35giy8gx",
+  "ts": "2026-11-06T23:34:34.338Z",
+  "account_id": "A0157",
+  "type": "Email",
+  "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM - Matt/Dan bcc'd",
+  "date": "2026-11-06",
+  "contact_id": "Cfcef7ea9"
  }
 ]
