@@ -4318,7 +4318,17 @@
   "notes": "",
   "sheet_row": 131,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|accounting@gbdma.com||Finance / AP",
+    "|management@gbdma.com||Intake, General Manager, Management",
+    "Marie Fonseca|marie@gbdma.com|786-414-4409|Buyer, Intake, Inventory, Operations Director"
+   ]
+  }
  },
  {
   "id": "A0132",
