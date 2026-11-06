@@ -9818,7 +9818,22 @@
   "notes": "Vertically integrated; push for Recip's hard",
   "sheet_row": 328,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 8,
+   "people": [
+    "|accountspayable@marimedinc.com|617-592-0657|Finance / AP",
+    "|jdavies@thrivedispensaries.com||Intake",
+    "Brian Kundrot|bkundrot@thrivedispensaries.com||Intake",
+    "Christian Bodell|cbodell@thrivedispensaries.com||Intake, Inventory",
+    "Linnea Sherman|lsherman@arlhealthcare.com||",
+    "Luke Schepter|lshepter@marimedinc.com|781-915-8060|Buyer",
+    "Mike Silvestri|msilvestri@panaceawellness.com||",
+    "Todd Freeman|tfreeman@arlhealthcare.com||Intake, Inventory, Thrive Middleboro"
+   ]
+  }
  },
  {
   "id": "A0328",
