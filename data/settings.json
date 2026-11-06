@@ -821,6 +821,15 @@
    "source": "Master",
    "removed_by": "joey",
    "removed_at": "2026-11-06"
+  },
+  {
+   "id": "C3b4bdf1d",
+   "account_id": "A0114",
+   "email": "ehalpern@finefettle.com",
+   "name": "Eric H.",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-06"
   }
  ]
 }
