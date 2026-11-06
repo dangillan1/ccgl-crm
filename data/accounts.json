@@ -5066,7 +5066,17 @@
   "notes": "",
   "sheet_row": 154,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|accounting@thehealingcenterma.com|617-962-4444|Finance / AP",
+    "Casey Baker|cbaker@thehealingcenterma.com|978-906-3908|Intake, Owner",
+    "Kelly Gallagher|kgallagher@thehealingcenterma.com|978-906-3908|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0155",
