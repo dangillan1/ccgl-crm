@@ -3731,7 +3731,9 @@
   "account_id": "A0153",
   "type": "Email",
   "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM - Matt/Dan bcc'd",
-  "date": "2026-11-09",
-  "contact_id": "Cf8cd16f6"
+  "date": "2026-11-06",
+  "contact_id": "Cf8cd16f6",
+  "edited_at": "2026-11-06",
+  "edited_by": "joey"
  }
 ]
