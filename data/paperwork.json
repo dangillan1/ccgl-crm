@@ -1259,6 +1259,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-06",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0173/w9/2026-11-06_mw5mvvz57ypb.pdf",
+    "sha": "5076617bb6558c52bbbcd06ef7f3c9864368475f",
+    "name": "W-9 - House Premium Cannabis (Tyngsboro).pdf",
+    "size": 700262,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  }
 }
