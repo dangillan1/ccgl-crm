@@ -3278,5 +3278,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 8 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5bef7i3nio",
+  "ts": "2026-11-06T18:35:24.414Z",
+  "account_id": "A0113",
+  "type": "Edit",
+  "note": "Removed Eric H. (Buyer) · ehalpern@finefettle.com",
+  "date": "2026-11-06"
  }
 ]
