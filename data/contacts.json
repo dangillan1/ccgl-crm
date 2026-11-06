@@ -4993,16 +4993,6 @@
   "sheet_slot": 1
  },
  {
-  "id": "C06b9cb0f",
-  "account_id": "A0159",
-  "name": "a",
-  "email": "koudijs@hennep.com",
-  "phone": "",
-  "role": "",
-  "source": "Random Data 5",
-  "primary": false
- },
- {
   "id": "C2cae867d",
   "account_id": "A0159",
   "name": "Andrew Koudijs",
