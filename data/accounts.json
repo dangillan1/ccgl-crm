@@ -3665,7 +3665,20 @@
   "notes": "",
   "sheet_row": 112,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "|emily@farnsworthfinecannabis.com||",
+    "|intake@farnsworthfinecannabis.com||Intake",
+    "Alex Farnsworth|alexander@farnsworthfinecannabis.com||Owner, General Manager, Co-Founder",
+    "Brayden Farnsworth|brayden@farnsworthfinecannabis.com|801-419-7358|Buyer, Finance / AP, Intake, Owner, Inventory, Founder",
+    "Isabella|isabella@farnsworthfinecannabis.com||",
+    "Lacy|lacy@farnsworthfinecannabis.com||"
+   ]
+  }
  },
  {
   "id": "A0112",
