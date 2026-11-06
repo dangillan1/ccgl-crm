@@ -5547,7 +5547,17 @@
   "notes": "",
   "sheet_row": 170,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|higginssolutions@icloud.com|Phone:9782573586|Billing",
+    "Eric B.|eric@highhawkfarm.com||Buyer, Intake, Inventory",
+    "Meg P.|meg@highhawkfarm.com|Phone:(978) 257-3586|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0170",
