@@ -4688,7 +4688,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 145,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|bcarney@greenngo.com||AR / Accounting",
+    "Bcarney|bcarney@greenngo.co||Finance / AP",
+    "Jake|jake@greenngo.co|774-688-0000|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0145",
