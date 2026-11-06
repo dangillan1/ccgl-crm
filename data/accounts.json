@@ -3910,7 +3910,7 @@
   "created": "2026-09-25",
   "name": "Fresh Connection - Cambridge",
   "town": "Cambridge",
-  "address": "",
+  "address": "966 Cambridge Street",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
@@ -3930,6 +3930,9 @@
     "Samantha Seagaard|samantha@freshconnectionboston.com||Intake, Owner, Co-Founder",
     "Will Seagaard|will@freshconnectionboston.com|201-783-2949|Buyer, Finance / AP, Intake, Owner, Founder"
    ]
+  },
+  "crm_edits": {
+   "address": "2026-11-06"
   }
  },
  {
