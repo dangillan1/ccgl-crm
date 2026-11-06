@@ -3568,9 +3568,11 @@
   "ts": "2026-11-06T23:06:30.830Z",
   "account_id": "A0129",
   "type": "Email",
-  "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM",
+  "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM - Matt/Dan bcc'd",
   "date": "2026-11-09",
-  "contact_id": "Cf6b3ebbd"
+  "contact_id": "Cf6b3ebbd",
+  "edited_at": "2026-11-06",
+  "edited_by": "joey"
  },
  {
   "id": "Xmw5l3g59ucz4",
