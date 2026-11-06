@@ -4930,7 +4930,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 151,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|chris@havencenter.me||",
+    "|havencenter@talk2cc.com|352.274.4466|Finance / AP",
+    "Quinton|quinton@havencenter.me||Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "Amuh9w8nbbe0a",
