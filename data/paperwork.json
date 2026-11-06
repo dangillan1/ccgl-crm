@@ -1151,6 +1151,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-06",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0116/w9/2026-11-06_mw5bmnl3c9ns.pdf",
+    "sha": "f2f7f847748a9f6dfd6f7c58935ed224cd1531f0",
+    "name": "W-9 - Firehouse (Hyde Park).pdf",
+    "size": 245783,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  }
 }
