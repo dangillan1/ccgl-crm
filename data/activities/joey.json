@@ -3829,5 +3829,14 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5mgcuimpwg",
+  "ts": "2026-11-06T23:44:50.442Z",
+  "account_id": "A0169",
+  "type": "Email",
+  "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM - Matt/Dan bcc'd",
+  "date": "2026-11-06",
+  "contact_id": "C111b8232"
  }
 ]
