@@ -4434,7 +4434,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 135,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|hailey@seybothteam.com||Finance / AP",
+    "Alicia Medeiros|alicia@seybothteam.com||Finance / AP",
+    "Jared Benson|greenchoicedispensary@gmail.com||Buyer, Intake"
+   ]
+  }
  },
  {
   "id": "A0137",
