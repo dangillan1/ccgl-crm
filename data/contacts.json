@@ -5013,16 +5013,6 @@
   "primary": false
  },
  {
-  "id": "C9f50abff",
-  "account_id": "A0159",
-  "name": "Andrew K.",
-  "email": "andrew@hennep.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C348e2b64",
   "account_id": "A0159",
   "name": "Colin Noel",
