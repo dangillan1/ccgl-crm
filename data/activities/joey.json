@@ -3773,5 +3773,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 5 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5maj99rp5y",
+  "ts": "2026-11-06T23:40:18.813Z",
+  "account_id": "A0159",
+  "type": "Edit",
+  "note": "Removed l · amato@hennep.com",
+  "date": "2026-11-06"
  }
 ]
