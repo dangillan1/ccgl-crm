@@ -5245,9 +5245,10 @@
   "contacts_confirmed": {
    "at": "2026-11-06",
    "by": "joey",
-   "n": 5,
+   "n": 6,
    "people": [
     "|billing@hennep.com||Finance / AP",
+    "|ptown-ap@hennep.com||Finance / AP",
     "|ptown-inventory@hennep.com||Inventory",
     "Andrew Koudijs|akoudijs@hennep.com||Buyer, Finance / AP, Intake, Owner",
     "Colin Noel|cnoel@hennep.com||Intake, Operations",
