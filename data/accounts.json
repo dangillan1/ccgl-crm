@@ -5578,7 +5578,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Joey",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -5592,7 +5592,8 @@
     "Ann Marie|annmarie@himalayanhighllc.com|Mobile:(860) 301-8022|Buyer, Finance / AP, Intake, Owner",
     "Gokul|gokul@himalayanhighllc.com||"
    ]
-  }
+  },
+  "crm_edits": {}
  },
  {
   "id": "A0171",
