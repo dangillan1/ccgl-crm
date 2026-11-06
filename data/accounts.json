@@ -2710,7 +2710,17 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 82,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|christine@commavecanna.com||",
+    "JB Hauck|jb@commavecanna.com|617-592-0657|Buyer, Finance / AP, Intake, CEO / Buyer",
+    "Natalie Mitchell|natalie@commavecanna.com||"
+   ]
+  }
  },
  {
   "id": "A0082",
