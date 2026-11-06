@@ -4049,9 +4049,7 @@
   "standing_requests": "Please send out a delivery/logistics email for each store's delivery 24 hours prior to delivery. We ask to have the final invoice, COAs and ETA of delivery mentioned in the email.  E-amils in \nintake section",
   "license_number": "MR281246",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Fyre Ants",
   "town": "Easthampton",
@@ -4059,7 +4057,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "A+",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -4077,7 +4075,8 @@
     "Brett Durgan|brettd@growopfarms.com||Finance / AP",
     "Jeff Edinger|jeffreye@embr.us|413-244-5926|Buyer / Intake"
    ]
-  }
+  },
+  "crm_edits": {}
  },
  {
   "id": "A0122",
