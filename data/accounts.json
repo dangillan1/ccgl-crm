@@ -5583,7 +5583,16 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 171,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Ann Marie|annmarie@himalayanhighllc.com|Mobile:(860) 301-8022|Buyer, Finance / AP, Intake, Owner",
+    "Gokul|gokul@himalayanhighllc.com||"
+   ]
+  }
  },
  {
   "id": "A0171",
