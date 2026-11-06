@@ -5533,9 +5533,7 @@
   "standing_requests": "",
   "license_number": "MR283968 MC282412",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "HighHawk Farm",
   "town": "Rutland MA",
@@ -5543,12 +5541,13 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 170,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "crm_edits": {}
  },
  {
   "id": "A0170",
