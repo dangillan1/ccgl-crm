@@ -154,7 +154,9 @@
   "standing_requests": "Dont email Tasha on finance requests - Tasha out on maternity start of Sep. 2026",
   "license_number": "MR285029",
   "tags": [],
-  "flags": [],
+  "flags": [
+   "unassigned"
+  ],
   "created": "2026-09-25",
   "name": "ACS Alternative Compassion Services",
   "town": "Hull",
@@ -162,7 +164,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Joey",
+  "owner": "Unassigned",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -177,7 +179,8 @@
     "Kelly|accounting@acscompassion.com||Finance / AP",
     "Natasha Karklin|nkarklin@acscompassion.com|339-832-1296|Buyer, Intake, Inventory"
    ]
-  }
+  },
+  "crm_edits": {}
  },
  {
   "id": "A0005",
