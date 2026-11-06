@@ -516,5 +516,14 @@
   "type": "Order",
   "note": "Confirmed order $2,078 · Finished Goods",
   "date": "2026-11-04"
+ },
+ {
+  "id": "Xmw5d4n83xhsy",
+  "ts": "2026-11-06T19:23:47.475Z",
+  "account_id": "A0186",
+  "type": "Email",
+  "note": "Sent menu to info and Corey",
+  "date": "2026-11-06",
+  "contact_id": "C43ce81b7"
  }
 ]
