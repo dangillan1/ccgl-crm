@@ -1203,5 +1203,20 @@
    "uploaded_at": "2026-11-06",
    "history": []
   }
+ },
+ "A0118": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0118/ccc/2026-11-06_mw5c4ujb2vvd.pdf",
+    "sha": "4956c40a13c0410ab3938cb145d21b51b1a3be00",
+    "name": "CCC License - Fresh Connection - Cambridge.pdf",
+    "size": 3903763,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-11-09",
+   "history": []
+  }
  }
 }
