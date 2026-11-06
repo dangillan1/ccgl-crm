@@ -3829,7 +3829,7 @@
   "created": "2026-09-25",
   "name": "Firehouse",
   "town": "Hyde Park",
-  "address": "",
+  "address": "883 Hyde Park Avenue",
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
@@ -3849,6 +3849,9 @@
     "Emiliano Duran|emiliano@shopfirehouse.com|857-206-9015|Buyer, Intake, Inventory",
     "Sean Berte|sean@shopfirehouse.com||Buyer / Operations / Finance / AP"
    ]
+  },
+  "crm_edits": {
+   "address": "2026-11-06"
   }
  },
  {
