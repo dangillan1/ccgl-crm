@@ -15371,5 +15371,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-06"
+ },
+ {
+  "id": "Cmw5m8ttwz6vo",
+  "account_id": "A0160",
+  "name": "Eric Halpern",
+  "role": "Purchasing Consultant - The Halp Group",
+  "email": "eric@thehalpcenter.com",
+  "phone": "860-803-9271",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-06"
  }
 ]
