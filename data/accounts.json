@@ -4065,7 +4065,19 @@
   "notes": "",
   "sheet_row": 122,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 5,
+   "people": [
+    "|fyreantsinventory@pandasolutions.co||Intake, Inventory",
+    "|marcog@embr.us||",
+    "|ryanw@embr.us||",
+    "Brett Durgan|brettd@growopfarms.com||Finance / AP",
+    "Jeff Edinger|jeffreye@embr.us|413-244-5926|Buyer / Intake"
+   ]
+  }
  },
  {
   "id": "A0122",
