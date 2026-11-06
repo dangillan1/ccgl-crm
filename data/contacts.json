@@ -3616,16 +3616,6 @@
   "sheet_slot": 2
  },
  {
-  "id": "C6106974f",
-  "account_id": "A0113",
-  "name": "Eric H.",
-  "email": "ehalpern@finefettle.com",
-  "phone": "Phone:(860) 803-9271",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C52873b8d",
   "account_id": "A0114",
   "name": "Dylan Shaeffer",
