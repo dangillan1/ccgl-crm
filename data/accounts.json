@@ -3479,7 +3479,7 @@
   "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
-  "standing_requests": "DELETE - ERROR",
+  "standing_requests": "DELETE ACCT - ERROR; EMBR Worcester non-existent.",
   "license_number": "RMD705-P",
   "tags": [
    "Not in Master Sheet"
