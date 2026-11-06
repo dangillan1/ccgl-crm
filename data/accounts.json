@@ -4738,7 +4738,9 @@
   "standing_requests": "",
   "license_number": "MR284583",
   "tags": [],
-  "flags": [],
+  "flags": [
+   "unassigned"
+  ],
   "created": "2026-09-25",
   "name": "Greene Street Cananbis",
   "town": "Cambridge",
@@ -4746,13 +4748,14 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Joey",
+  "owner": "Unassigned",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 136,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0146",
