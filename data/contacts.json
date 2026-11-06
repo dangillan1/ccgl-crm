@@ -3647,16 +3647,6 @@
   "sheet_slot": 2
  },
  {
-  "id": "C3b4bdf1d",
-  "account_id": "A0114",
-  "name": "Eric H.",
-  "email": "ehalpern@finefettle.com",
-  "phone": "",
-  "role": "Buyer",
-  "source": "Customer Tracker",
-  "primary": false
- },
- {
   "id": "C10c985c0",
   "account_id": "A0115",
   "name": "Albie Montegomery",
