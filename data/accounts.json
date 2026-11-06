@@ -3511,9 +3511,7 @@
   "standing_requests": "",
   "license_number": "MR282808",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Emerald Grove",
   "town": "Eastham",
@@ -3521,13 +3519,14 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 107,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {}
  },
  {
   "id": "A0107",
