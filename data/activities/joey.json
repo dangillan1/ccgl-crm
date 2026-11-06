@@ -3423,5 +3423,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods · Save 2x Lion's Breath & Swampwater - call Monday 11/9 for reorder",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5dyfgi8vpz",
+  "ts": "2026-11-06T19:46:57.090Z",
+  "account_id": "A0283",
+  "type": "Edit",
+  "note": "Removed s · pencer@seasidecannabis.com",
+  "date": "2026-11-06"
  }
 ]
