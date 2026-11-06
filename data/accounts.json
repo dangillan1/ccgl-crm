@@ -4998,7 +4998,16 @@
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 152
+  "sheet_row": 152,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "|daniel@havnextracts.com||Finance / AP, AR / Accounting",
+    "Gabe Rzek|gabe@havnextracts.com||Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0152",
