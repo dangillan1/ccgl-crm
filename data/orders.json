@@ -20262,5 +20262,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "matt"
+ },
+ {
+  "id": "Omw5dwf5e26kt",
+  "date": "2026-11-06",
+  "account_id": "A0283",
+  "account_raw": "Seaside",
+  "license": "MR284549",
+  "status": "Planned",
+  "contact_name": "Spencer Knowles",
+  "contact_email": "spencer@seasidecannabis.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "Save 2x Lion's Breath & Swampwater - call Monday 11/9 for reorder",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
