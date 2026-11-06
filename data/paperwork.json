@@ -1110,5 +1110,20 @@
    "expires": "2026-12-15",
    "history": []
   }
+ },
+ "A0328": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0328/ccc/2026-11-06_mw520k99zn04.pdf",
+    "sha": "8f357f3451642a5e92a09fae111647548260865a",
+    "name": "CCC License - Thrive Dispensary (Middleboro).pdf",
+    "size": 3833725,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-12-05",
+   "history": []
+  }
  }
 }
