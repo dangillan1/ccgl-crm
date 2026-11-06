@@ -3920,7 +3920,17 @@
   "notes": "",
   "sheet_row": 119,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Inventory|cambridge.inventory@shopfreshconnection.com||Intake, Inventory",
+    "Samantha Seagaard|samantha@freshconnectionboston.com||Intake, Owner, Co-Founder",
+    "Will Seagaard|will@freshconnectionboston.com|201-783-2949|Buyer, Finance / AP, Intake, Owner, Founder"
+   ]
+  }
  },
  {
   "id": "A0119",
