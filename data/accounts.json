@@ -3765,7 +3765,17 @@
   "notes": "",
   "sheet_row": 116,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Albie Montegomery|albie@firebrandboston.com|404-936-4618|Buyer / Finance / AP",
+    "Juan M|juan@firebrandboston.com|857-333-8596|Buyer, Intake, Inventory",
+    "Michael Ortoll|michael@firebrandboston.com|617-997-8542|Buyer / Finance / AP"
+   ]
+  }
  },
  {
   "id": "A0116",
