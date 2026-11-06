@@ -3302,5 +3302,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 8 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5bh7llfirq",
+  "ts": "2026-11-06T18:37:34.521Z",
+  "account_id": "A0114",
+  "type": "Edit",
+  "note": "Removed Dylan Shaeffer (Buyer)",
+  "date": "2026-11-06"
  }
 ]
