@@ -1247,6 +1247,18 @@
    "uploaded_at": "2026-11-06",
    "expires": "2025-12-15",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0173/st4/2026-11-06_mw5mvoyo5lih.pdf",
+    "sha": "43538b95d064d9dea2f3482b3cbe8c43da799c68",
+    "name": "ST-4 - House Premium Cannabis (Tyngsboro).pdf",
+    "size": 111129,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  }
 }
