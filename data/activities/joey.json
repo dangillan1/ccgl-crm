@@ -3415,5 +3415,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 6 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5dwgutqy91",
+  "ts": "2026-11-06T19:45:25.589Z",
+  "account_id": "A0283",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · Save 2x Lion's Breath & Swampwater - call Monday 11/9 for reorder",
+  "date": "2026-11-06"
  }
 ]
