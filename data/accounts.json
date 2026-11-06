@@ -3721,7 +3721,22 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 114,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 8,
+   "people": [
+    "|ap@finefettle.com|860-803-9271|Finance / AP",
+    "|cnolette@finefettle.com||",
+    "|kbrandes@finefettle.com||",
+    "|orders_rowley@finefettle.com||Intake",
+    "|sdereptigny@finefettle.com||",
+    "Aclairmont|aclairmont@finefettle.com||",
+    "Cornell Mills|cornell.mills@gmail.com||",
+    "Dylan Shaeffer|dschaefer@finefettle.com|860-221-5804|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0114",
