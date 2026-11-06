@@ -4893,7 +4893,18 @@
   "notes": "",
   "sheet_row": 150,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "|havencenter@talk2cc.com|352.274.4466|Finance / AP",
+    "Bryan P|bryan.p@havencenter.me||",
+    "Chris|chris@havencenter.me||",
+    "Quinton|quinton@havencenter.me||Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0150",
