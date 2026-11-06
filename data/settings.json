@@ -920,6 +920,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-06"
+  },
+  {
+   "id": "C9f50abff",
+   "account_id": "A0159",
+   "email": "andrew@hennep.com",
+   "name": "Andrew K.",
+   "source": "Customer Tracker",
+   "removed_by": "joey",
+   "removed_at": "2026-11-06"
   }
  ]
 }
