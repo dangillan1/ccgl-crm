@@ -3524,17 +3524,6 @@
   "primary": false
  },
  {
-  "id": "C4ec294ee",
-  "account_id": "A0113",
-  "name": "Dylan Shaeffer",
-  "email": "",
-  "phone": "860-221-5804",
-  "role": "Buyer",
-  "source": "Master",
-  "primary": true,
-  "sheet_slot": 1
- },
- {
   "id": "Cec0a82a2",
   "account_id": "A0113",
   "name": "",
