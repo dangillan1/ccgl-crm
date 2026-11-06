@@ -3839,7 +3839,17 @@
   "notes": "",
   "sheet_row": 117,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|accounting@shopfirehouse.com||Finance / AP",
+    "Emiliano Duran|emiliano@shopfirehouse.com|857-206-9015|Buyer, Intake, Inventory",
+    "Sean Berte|sean@shopfirehouse.com||Buyer / Operations / Finance / AP"
+   ]
+  }
  },
  {
   "id": "A0117",
