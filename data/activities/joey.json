@@ -3463,5 +3463,13 @@
   "type": "Note",
   "note": "Created as active account",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5f4q2omti9",
+  "ts": "2026-11-06T20:19:50.400Z",
+  "account_id": "A0106",
+  "type": "Edit",
+  "note": "Removed veronica@emeraldgrove.cc · veronica@emeraldgrove.cc",
+  "date": "2026-11-06"
  }
 ]
