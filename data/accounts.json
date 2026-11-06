@@ -5007,7 +5007,10 @@
     "|daniel@havnextracts.com||Finance / AP, AR / Accounting",
     "Gabe Rzek|gabe@havnextracts.com||Buyer, Intake, Inventory"
    ]
-  }
+  },
+  "next_step": "Check in with Gabe about HAVN - are they still operating?",
+  "next_step_due": "2026-11-13",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0152",
