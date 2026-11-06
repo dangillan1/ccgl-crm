@@ -3447,5 +3447,13 @@
   "type": "Order",
   "note": "Pending order $3,100 · Finished Goods",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5e4rnuaasi",
+  "ts": "2026-11-06T19:51:52.842Z",
+  "account_id": "A0297",
+  "type": "Note",
+  "note": "Order deleted: Nov 4, 26 (Planned)",
+  "date": "2026-11-06"
  }
 ]
