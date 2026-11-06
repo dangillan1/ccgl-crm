@@ -1218,5 +1218,20 @@
    "expires": "2026-11-09",
    "history": []
   }
+ },
+ "A0119": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0119/ccc/2026-11-06_mw5fcindy5a6.pdf",
+    "sha": "e4f56408de1ff6bbc0e0b4cbf0cc1a68351e760a",
+    "name": "CCC License - Fresh Connection - Somerville.pdf",
+    "size": 3903732,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-11-09",
+   "history": []
+  }
  }
 }
