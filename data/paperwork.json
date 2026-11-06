@@ -1233,5 +1233,20 @@
    "expires": "2026-11-09",
    "history": []
   }
+ },
+ "A0173": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0173/ccc/2026-11-06_mw5mvfljuaao.pdf",
+    "sha": "a6e191b057cc8424d8638c2eac949e37f88ccd46",
+    "name": "CCC License - House Premium Cannabis (Tyngsboro).pdf",
+    "size": 3912515,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2025-12-15",
+   "history": []
+  }
  }
 }
