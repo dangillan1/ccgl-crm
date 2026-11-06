@@ -3571,5 +3571,13 @@
   "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM",
   "date": "2026-11-09",
   "contact_id": "Cf6b3ebbd"
+ },
+ {
+  "id": "Xmw5l3g59ucz4",
+  "ts": "2026-11-06T23:06:48.573Z",
+  "account_id": "A0129",
+  "type": "Edit",
+  "note": "Removed j · asonrobicheau@netscape.net",
+  "date": "2026-11-06"
  }
 ]
