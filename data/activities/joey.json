@@ -3598,5 +3598,13 @@
   "note": "Onboarding form/docs request & email scheduled Monday 11/9 8AM - Matt/Dan bcc'd",
   "date": "2026-11-09",
   "contact_id": "C87dbdb25"
+ },
+ {
+  "id": "Xmw5l8dlutx8v",
+  "ts": "2026-11-06T23:10:38.562Z",
+  "account_id": "A0144",
+  "type": "Edit",
+  "note": "Removed Dave Monte · dave@greenngo.co",
+  "date": "2026-11-06"
  }
 ]
