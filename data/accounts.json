@@ -5674,7 +5674,20 @@
   "notes": "",
   "sheet_row": 174,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-06",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "Adele Marschetti|amarchetti@housepremiumcannabis.com||Buyer, Finance / AP, General Manager, Inventory",
+    "Katie Theberge|ktheberge@housepremiumcannabis.com||Marketing",
+    "Kyle Brown|kbrown@housepremiumcannabis.com||Finance / AP, Intake",
+    "Matthew Perkins|mperkins@housepremiumcannabis.com||",
+    "Mike Allen|mallen@housepremiumcannabis.com||Owner",
+    "Paige Paquette|ppaquette@housepremiumcannabis.com||Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0174",
