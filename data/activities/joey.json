@@ -3503,5 +3503,14 @@
   "type": "Note",
   "note": "Contacts confirmed — 5 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmw5fg29b2kfs",
+  "ts": "2026-11-06T20:28:39.407Z",
+  "account_id": "A0105",
+  "type": "Email",
+  "note": "Onboarding doc & updated license request sent - Matt & Dan bcc'd",
+  "date": "2026-11-06",
+  "contact_id": "C9f37b790"
  }
 ]
