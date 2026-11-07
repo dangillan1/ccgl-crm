@@ -10520,9 +10520,7 @@
   "standing_requests": "",
   "license_number": "MR284983",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "UMA Flowers",
   "town": "Waltham",
@@ -10530,7 +10528,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "A",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -10546,7 +10544,8 @@
     "Nidhi - Billing|billing@umaflowers.co||Finance / AP",
     "Patrick|patrick@umaflowers.co||Intake, General Manager"
    ]
-  }
+  },
+  "crm_edits": {}
  },
  {
   "id": "A0340",
