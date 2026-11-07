@@ -6687,7 +6687,18 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 207,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Andie|andie@majorbloom.com||Finance / AP",
+    "Angelica|angelica@majorbloom.com||",
+    "Ravon Williams|ravon@themajorbloom.com||Buyer, Intake, Inventory",
+    "Ulysses Youngblood|ulysses@majorbloom.com||Owner"
+   ]
+  }
  },
  {
   "id": "A0207",
