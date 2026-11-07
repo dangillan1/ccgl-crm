@@ -11117,7 +11117,15 @@
    "notes": "2026-10-15",
    "license_type": "2026-10-15"
   },
-  "notes": "Bulk-only biomass vendor"
+  "notes": "Bulk-only biomass vendor",
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 1,
+   "people": [
+    "Patrick Mccauley|pmccauley420@gmail.com|781-521-6959|Buyer, Finance / AP, Intake, Owner"
+   ]
+  }
  },
  {
   "id": "A0365",
