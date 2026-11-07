@@ -1325,6 +1325,18 @@
    "uploaded_at": "2026-11-06",
    "expires": "2026-01-19",
    "history": []
+  },
+  "st4": {
+   "file": {
+    "path": "accounts/A0334/st4/2026-11-06_mw5nqq6q3n1m.pdf",
+    "sha": "1338d1835ba065a7f777818928ed48e3a6c5e20c",
+    "name": "ST-4 - Trinity Naturals (Chelsea).pdf",
+    "size": 163418,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  }
 }
