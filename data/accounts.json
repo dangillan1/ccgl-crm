@@ -10002,7 +10002,21 @@
   "sheet_row": 322,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 7,
+   "people": [
+    "|accountspayable@thevaultma.com||Finance / AP",
+    "|brie-ann.cintron@thevaultma.com||Intake",
+    "|philip.canty@thevaultma.com||Intake",
+    "|purchasing@thevaultma.com||Finance / AP",
+    "Jack Cyr|jack.cyr@thevaultma.com|508-916-8468|VP of Operations",
+    "Jeremy Kay|jeremy.kay@thevaultma.com||Inventory",
+    "Stephen Rice|steve.rice@thevaultma.com|978-856-5930|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0322",
