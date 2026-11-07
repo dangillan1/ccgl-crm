@@ -9931,7 +9931,9 @@
   "standing_requests": "Revert to prospect - revisit Dec. 2026/Jan. 2027",
   "license_number": "",
   "tags": [],
-  "flags": [],
+  "flags": [
+   "unassigned"
+  ],
   "created": "2026-09-25",
   "name": "The Pass",
   "town": "Sheffield",
@@ -9939,7 +9941,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "C",
-  "owner": "Joey",
+  "owner": "Unassigned",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "Spoke w/ Blake in person in July '25 - lots of good things to say, no reply on emails",
