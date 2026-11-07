@@ -1272,5 +1272,20 @@
    "uploaded_at": "2026-11-06",
    "history": []
   }
+ },
+ "A0192": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0192/ccc/2026-11-06_mw5n6aiuv4pj.pdf",
+    "sha": "71381c89eb91a79c8c36be12bcbc65f491b36628",
+    "name": "CCC License - Kosa (Marlboro).pdf",
+    "size": 3912602,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-03-10",
+   "history": []
+  }
  }
 }
