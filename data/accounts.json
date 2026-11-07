@@ -6154,6 +6154,18 @@
   "crm_edits": {
    "status": "2026-10-30",
    "license_number": "2026-11-05"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 5,
+   "people": [
+    "Accounts Payable|ap@jointoperations.com||Finance / AP",
+    "Jill Roberts|jillroberts@jointoperations.com||Buyer, Intake, Inventory",
+    "Joe Rosa|joerosa@jointoperations.com||Inventory, Mendon Inventory",
+    "Liam Foley|liamfoley@jointoperations.com||Inventory, Dist. Inventory Manager",
+    "Stephen Tretheway|stretheway@jointoperations.com||General Manager"
+   ]
   }
  },
  {
