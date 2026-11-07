@@ -1298,6 +1298,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-06",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0192/w9/2026-11-06_mw5n6ywujp28.pdf",
+    "sha": "20c4fddebe59ba452a27fb0c6d6b1120010436de",
+    "name": "W-9 - Kosa (Marlboro).pdf",
+    "size": 674062,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  }
 }
