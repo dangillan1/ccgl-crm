@@ -5714,7 +5714,18 @@
   "notes": "",
   "sheet_row": 175,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 4,
+   "people": [
+    "Ed Daly|ed@idealcraftcannabis.com||Buyer, Finance / AP, Owner",
+    "Nick S.|nick@idealcraftcannabis.com||Buyer, Intake, Inventory, CEO/Buyer",
+    "Sophia El-Masri|sophia@idealcraftcannabis.com||Intake, Inventory",
+    "Steven 'Stenny' Stentiford|djstenny@idealcraftcannabis.com||Director Of Sales"
+   ]
+  }
  },
  {
   "id": "A0175",
