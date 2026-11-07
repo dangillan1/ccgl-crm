@@ -6232,9 +6232,7 @@
   "standing_requests": "",
   "license_number": "MR283056",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Kosa",
   "town": "Marlboro",
@@ -6242,12 +6240,13 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "Hot lead - draft sent 9/5/2025",
   "sheet_row": 193,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "crm_edits": {}
  },
  {
   "id": "A0193",
