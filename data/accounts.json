@@ -10488,9 +10488,7 @@
   "standing_requests": "",
   "license_number": "MR283143",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "UMA Flowers",
   "town": "Pepperell",
@@ -10498,7 +10496,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "A",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
@@ -10507,7 +10505,8 @@
   "in_qbo": true,
   "next_step": "Follow up on onboarding by EOW",
   "next_step_due": "2026-11-06",
-  "next_step_owner": "joey"
+  "next_step_owner": "joey",
+  "crm_edits": {}
  },
  {
   "id": "A0339",
