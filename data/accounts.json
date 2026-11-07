@@ -6295,7 +6295,19 @@
   "notes": "",
   "sheet_row": 194,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 5,
+   "people": [
+    "|accounting@kushgroove.com||Finance / AP",
+    "Dahlia|dahlia@kushgroove.com||",
+    "Kush Groove|wholesale@kushgroove.com||Wholesale",
+    "Mike Pires|mike@kushgroove.com|(857) 437-3171|Buyer, Intake",
+    "Sam G.|sam@kushgroove.com||Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0194",
