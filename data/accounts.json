@@ -6182,6 +6182,16 @@
   "sheet_row": 190,
   "crm_edits": {
    "status": "2026-10-30"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|ap@jointoperations.com||Finance / AP",
+    "Jill Roberts|jillroberts@jointoperations.com||Buyer, Intake, Inventory",
+    "Sharissa Stanford|sstanford@jointoperations.com||"
+   ]
   }
  },
  {
