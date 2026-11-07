@@ -1311,5 +1311,20 @@
    "uploaded_at": "2026-11-06",
    "history": []
   }
+ },
+ "A0334": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0334/ccc/2026-11-06_mw5nqcy21fgw.pdf",
+    "sha": "4bc376bd3694dce85afb2dc415170b7cfff98c5f",
+    "name": "CCC License - Trinity Naturals (Chelsea).pdf",
+    "size": 3903753,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "expires": "2026-01-19",
+   "history": []
+  }
  }
 }
