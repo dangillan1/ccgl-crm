@@ -11180,6 +11180,14 @@
    "address": "2026-10-15",
    "license_number": "2026-10-15",
    "license_type": "2026-10-15"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 1,
+   "people": [
+    "Anthony Palazzi|anthony@palazzi-inc.com||Buyer, Finance / AP, Intake, Owner, Inventory"
+   ]
   }
  },
  {
