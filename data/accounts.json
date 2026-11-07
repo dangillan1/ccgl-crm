@@ -9942,7 +9942,7 @@
   "owner": "Joey",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
-  "notes": "Spoke w/ Blake in person in July - lots of good things to say, no reply on emails",
+  "notes": "Spoke w/ Blake in person in July '25 - lots of good things to say, no reply on emails",
   "sheet_row": 320,
   "contacts_confirmed": {
    "at": "2026-11-07",
@@ -9952,6 +9952,9 @@
     "|purchasing@thepass.co||Purchasing",
     "Blake Gurgul|blake@thepass.co||Buyer, Finance / AP, Intake, Inventory"
    ]
+  },
+  "crm_edits": {
+   "notes": "2026-11-07"
   }
  },
  {
