@@ -6246,7 +6246,16 @@
   "notes": "Hot lead - draft sent 9/5/2025",
   "sheet_row": 193,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "|tom@kosa.com||Inventory Manager",
+    "Jigar Patel|jigar@kosa.co|774-777-0202|Buyer, Finance / AP, Intake"
+   ]
+  }
  },
  {
   "id": "A0193",
