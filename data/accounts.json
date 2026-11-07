@@ -10394,7 +10394,16 @@
   "notes": "Visited in person 1/9/26 spoke with Nick new GM/Inventory - planning reorder for 2026",
   "sheet_row": 335,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-07",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Denis Pinhone|denis@trinitynat.com|857-225-0072|Buyer, Finance / AP, Intake, Owner",
+    "Nicholas Chang|nick@trinitynat.com|978-751-4099|General Manager, Inventory"
+   ]
+  }
  },
  {
   "id": "A0335",
