@@ -10648,12 +10648,13 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "B",
-  "owner": "Joey",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 344,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "crm_edits": {}
  },
  {
   "id": "A0344",
