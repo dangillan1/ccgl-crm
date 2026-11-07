@@ -6177,7 +6177,7 @@
   "stage_entered": "2026-10-30",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR283689",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
@@ -6193,7 +6193,8 @@
   "notes": "",
   "sheet_row": 190,
   "crm_edits": {
-   "status": "2026-10-30"
+   "status": "2026-10-30",
+   "license_number": "2026-11-07"
   },
   "contacts_confirmed": {
    "at": "2026-11-07",
