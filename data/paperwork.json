@@ -1337,6 +1337,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-06",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0334/w9/2026-11-06_mw5nqxxv2mbj.pdf",
+    "sha": "226b2c4af016ec34a1c684feafda29d8b0b81168",
+    "name": "W-9 - Trinity Naturals (Chelsea).pdf",
+    "size": 142298,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-06",
+   "history": []
   }
  }
 }
