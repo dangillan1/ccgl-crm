@@ -7255,7 +7255,16 @@
   "crm_edits": {
    "license_number": "2026-10-21"
   },
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Chris Ashe|chris@nativesuncannabis.com||Buyer, Finance / AP, Intake",
+    "Nikki Hanley|nikki@nativesuncannabis.com||Marketing"
+   ]
+  }
  },
  {
   "id": "A0222",
