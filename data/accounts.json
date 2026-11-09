@@ -7508,9 +7508,25 @@
   "sheet_row": 231,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
-  "next_step_due": "2026-11-23",
-  "next_step_owner": "joey"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 9,
+   "people": [
+    "|accounting@newdiafenway.co||Finance / AP",
+    "|amanda@newdia.co|Phone:6177635159|Billing",
+    "|hugh@newdiafenway.co||Finance / AP",
+    "|procurement@newdia.co||",
+    "|worcestermanagers@newdia.co||AR / Accounting",
+    "Mike Whittaker|mike@newdiafenway.co|857-939-1150|Buyer, Finance / AP, Retail Operations Director",
+    "Rick|rtb@newdiafenway.co||Buyer, Intake, Inventory",
+    "Ross Bradshaw|ross@newdiafenway.co||Owner",
+    "Worcestergm|worcestergm@newdia.co||"
+   ]
+  }
  },
  {
   "id": "A0231",
