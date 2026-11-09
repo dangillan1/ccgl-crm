@@ -7123,17 +7123,6 @@
   "primary": false
  },
  {
-  "id": "Cb8256588",
-  "account_id": "A0230",
-  "name": "Rick",
-  "email": "",
-  "phone": "",
-  "role": "",
-  "source": "Master",
-  "primary": false,
-  "sheet_slot": 2
- },
- {
   "id": "C0e3dc626",
   "account_id": "A0230",
   "name": "Ross",
