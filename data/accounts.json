@@ -1102,7 +1102,10 @@
   "crm_edits": {
    "name": "2026-11-02",
    "notes": "2026-11-02"
-  }
+  },
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0037",
@@ -2525,7 +2528,10 @@
     "source": "Customer Tracker",
     "date": "2026-11-02"
    }
-  ]
+  ],
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0076",
@@ -3166,7 +3172,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 98,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Buyer, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0098",
@@ -3317,7 +3326,10 @@
   "notes": "",
   "sheet_row": 103,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0103",
@@ -3343,7 +3355,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 104,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0104",
@@ -3370,7 +3385,10 @@
   "notes": "",
   "sheet_row": 105,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0105",
@@ -4290,7 +4308,10 @@
   "notes": "",
   "sheet_row": 130,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0130",
@@ -4755,7 +4776,10 @@
   "sheet_row": 136,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0146",
@@ -4866,7 +4890,10 @@
   "sheet_row": 149,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0149",
@@ -5106,7 +5133,10 @@
   "sheet_row": 156,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0154",
@@ -5134,7 +5164,10 @@
   "sheet_row": 155,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0156",
@@ -6362,7 +6395,10 @@
   "sheet_row": 196,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0196",
@@ -6388,7 +6424,10 @@
   "next_contact": "2026-08-07",
   "notes": "",
   "sheet_row": 197,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0197",
@@ -7382,7 +7421,10 @@
   "notes": "",
   "sheet_row": 231,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0231",
@@ -7866,7 +7908,10 @@
   "created": "2026-09-25",
   "sheet_row": null,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Buyer, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0247",
@@ -7988,7 +8033,10 @@
   "notes": "",
   "sheet_row": 250,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0251",
@@ -8016,7 +8064,10 @@
   "sheet_row": 252,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0252",
@@ -8069,7 +8120,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 254,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0254",
@@ -8121,7 +8175,10 @@
   "notes": "",
   "sheet_row": 256,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0256",
@@ -8204,7 +8261,10 @@
   "notes": "Selling to Thrive Quincy and Pinnacle also Elysian soon",
   "sheet_row": 259,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0259",
@@ -8395,7 +8455,10 @@
   "in_qbo": true,
   "crm_edits": {
    "address": "2026-10-15"
-  }
+  },
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0265",
@@ -8424,7 +8487,10 @@
   "notes": "",
   "sheet_row": 266,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0266",
@@ -8451,7 +8517,10 @@
   "notes": "",
   "sheet_row": 267,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0267",
@@ -8693,7 +8762,10 @@
   "notes": "",
   "sheet_row": 276,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0276",
@@ -8746,7 +8818,10 @@
   "next_contact": "2025-10-06",
   "notes": "",
   "sheet_row": 278,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "A0278",
@@ -9369,7 +9444,10 @@
   "notes": "",
   "sheet_row": 300,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0300",
@@ -9676,7 +9754,10 @@
   "notes": "",
   "sheet_row": 310,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0310",
@@ -11222,7 +11303,10 @@
   "claimed": true,
   "claimed_by": "dan",
   "claimed_at": "2026-09-28",
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "matt"
  },
  {
   "id": "Amultik1baa7p",
@@ -11610,7 +11694,10 @@
   "claimed": true,
   "claimed_by": "charley",
   "claimed_at": "2026-10-27",
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-16",
+  "next_step_owner": "charley"
  },
  {
   "id": "Amw2j9ctmcs0f",
@@ -11653,7 +11740,8 @@
   },
   "crm_edits": {
    "status": "2026-11-04"
-  }
+  },
+  "in_qbo": true
  },
  {
   "id": "Amw3n6fp4wz7v",
@@ -11711,6 +11799,9 @@
   "created_by": "joey",
   "claimed": true,
   "claimed_by": "joey",
-  "claimed_at": "2026-11-06"
+  "claimed_at": "2026-11-06",
+  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  }
 ]

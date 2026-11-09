@@ -3,6 +3,371 @@
     {
       "AllowOnlineAffirmPayment": false,
       "sparse": true,
+      "Id": "8059",
+      "DocNumber": "1821",
+      "TxnDate": "2026-11-10",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "478",
+        "name": "Low Key West Roxbury"
+      },
+      "BillAddr": {
+        "Id": "3861"
+      },
+      "ShipAddr": {
+        "Id": "3887",
+        "Line1": "Low Key West Roxbury",
+        "Line2": "5268 Washington St",
+        "Line3": "West Roxbury, MA  02132"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-10",
+      "TotalAmt": 5712.5,
+      "Balance": 5712.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8064",
+      "DocNumber": "1826",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "463",
+        "name": "Peak Cannabis Co"
+      },
+      "BillAddr": {
+        "Id": "2926"
+      },
+      "ShipAddr": {
+        "Id": "3892",
+        "Line1": "Peak Cannabis Co",
+        "Line2": "325 Stockbridge Rd",
+        "Line3": "Great Barrington, MA  01230"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 4250.0,
+      "Balance": 4250.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8063",
+      "DocNumber": "1825",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000131",
+        "name": "Chief Cannabis"
+      },
+      "BillAddr": {
+        "Id": "3875"
+      },
+      "ShipAddr": {
+        "Id": "3891",
+        "Line1": "Chief Cannabis",
+        "Line2": "10 Canal St",
+        "Line3": "Bourne, MA  02532"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 5659.12,
+      "Balance": 5659.12
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8062",
+      "DocNumber": "1824",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "416",
+        "name": "CannaBarn"
+      },
+      "BillAddr": {
+        "Id": "1577"
+      },
+      "ShipAddr": {
+        "Id": "3890",
+        "Line1": "CannaBarn",
+        "Line2": "678 Adams St",
+        "Line3": "Abington, MA  02351"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 3650.0,
+      "Balance": 3650.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8061",
+      "DocNumber": "1823",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "405",
+        "name": "Pineapple Express, LLC"
+      },
+      "BillAddr": {
+        "Id": "1445"
+      },
+      "ShipAddr": {
+        "Id": "3889",
+        "Line1": "Pineapple Express, LLC",
+        "Line2": "124 C West Street",
+        "Line3": "Ware, MA  01082"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 2077.5,
+      "Balance": 2077.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8060",
+      "DocNumber": "1822",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "444",
+        "name": "BOUTIQ"
+      },
+      "BillAddr": {
+        "Id": "1823"
+      },
+      "ShipAddr": {
+        "Id": "3888",
+        "Line1": "BOUTIQ",
+        "Line2": "71 Maverick Square",
+        "Line3": "East Boston, MA  02128"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 2880.0,
+      "Balance": 2880.0
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8058",
+      "DocNumber": "1820",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "411",
+        "name": "Pioneer Valley Trading Southwick"
+      },
+      "BillAddr": {
+        "Id": "1498"
+      },
+      "ShipAddr": {
+        "Id": "3886",
+        "Line1": "Pioneer Valley Trading Southwick",
+        "Line2": "660 College Highway",
+        "Line3": "Southwick, MA  01077"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 5972.5,
+      "Balance": 5972.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8057",
+      "DocNumber": "1819",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "434",
+        "name": "Zen Leaf"
+      },
+      "BillAddr": {
+        "Id": "1729"
+      },
+      "ShipAddr": {
+        "Id": "3885",
+        "Line1": "Zen Leaf",
+        "Line2": "2 Merchant St ",
+        "Line3": "Suite 1",
+        "Line4": "Sharon, MA  02067"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 5037.5,
+      "Balance": 5037.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8056",
+      "DocNumber": "1818",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "435",
+        "name": "Zen Leaf Plymouth"
+      },
+      "BillAddr": {
+        "Id": "1731"
+      },
+      "ShipAddr": {
+        "Id": "3884",
+        "Line1": "Zen Leaf Plymouth",
+        "Line2": "11 Richards Rd",
+        "Line3": "Plymouth, MA  02360"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 5412.5,
+      "Balance": 5412.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8055",
+      "DocNumber": "1817",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "535",
+        "name": "Health Circle Rockland"
+      },
+      "BillAddr": {
+        "Id": "3586"
+      },
+      "ShipAddr": {
+        "Id": "3883",
+        "Line1": "Health Circle Rockland",
+        "Line2": "21 Commerce Rd",
+        "Line3": "Rockland, MA  02370"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 5787.5,
+      "Balance": 5787.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8054",
+      "DocNumber": "1816",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "360",
+        "name": "Health Circle, Inc."
+      },
+      "BillAddr": {
+        "Id": "975"
+      },
+      "ShipAddr": {
+        "Id": "3882",
+        "Line1": "Health Circle, Inc.",
+        "Line2": "120 Enterprise Drive",
+        "Line3": "Marshfield, MA  02050"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 5412.5,
+      "Balance": 5412.5
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8053",
+      "DocNumber": "1815",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000101",
+        "name": "Joint Ops Gardner"
+      },
+      "BillAddr": {
+        "Id": "3850"
+      },
+      "ShipAddr": {
+        "Id": "3881",
+        "Line1": "Joint Ops Gardner",
+        "Line2": "320 W Broadway",
+        "Line3": "Gardner, MA  01440"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 3421.25,
+      "Balance": 3421.25
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8052",
+      "DocNumber": "1814",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000091",
+        "name": "Joint Ops Mendon"
+      },
+      "BillAddr": {
+        "Id": "3848"
+      },
+      "ShipAddr": {
+        "Id": "3880",
+        "Line1": "Joint Ops Mendon",
+        "Line2": "47 Milford St",
+        "Line3": "Mendon, MA  01758"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 2358.75,
+      "Balance": 2358.75
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
+      "Id": "8051",
+      "DocNumber": "1813",
+      "TxnDate": "2026-11-09",
+      "LinkedTxn": [],
+      "Line": [],
+      "CustomerRef": {
+        "value": "100000081",
+        "name": "Joint Ops Rowley"
+      },
+      "BillAddr": {
+        "Id": "3846"
+      },
+      "ShipAddr": {
+        "Id": "3879",
+        "Line1": "Joint Ops Rowley",
+        "Line2": "264 Newburyport Turnpike",
+        "Line3": "Rowley, MA  01969"
+      },
+      "FreeFormAddress": true,
+      "DueDate": "2026-12-09",
+      "TotalAmt": 1721.37,
+      "Balance": 1721.37
+    },
+    {
+      "AllowOnlineAffirmPayment": false,
+      "sparse": true,
       "Id": "7960",
       "DocNumber": "1807",
       "TxnDate": "2026-10-30",
@@ -23,8 +388,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-12-02",
-      "TotalAmt": 3655.0,
-      "Balance": 3331.0
+      "TotalAmt": 3611.0,
+      "Balance": 3287.0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -75,8 +440,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-12-03",
-      "TotalAmt": 6300.0,
-      "Balance": 6300.0
+      "TotalAmt": 5670.0,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -153,8 +518,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-12-02",
-      "TotalAmt": 2550.0,
-      "Balance": 2550.0
+      "TotalAmt": 3870.0,
+      "Balance": 3870.0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -205,8 +570,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-12-02",
-      "TotalAmt": 5925.0,
-      "Balance": 5925.0
+      "TotalAmt": 5332.5,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -231,8 +596,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-12-02",
-      "TotalAmt": 3490.0,
-      "Balance": 3490.0
+      "TotalAmt": 3141.0,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -363,7 +728,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-11-03",
       "TotalAmt": 3750.07,
-      "Balance": 3250.07
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -831,8 +1196,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-11-21",
-      "TotalAmt": 5500.3,
-      "Balance": 5500.3
+      "TotalAmt": 5225.28,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1173,8 +1538,8 @@
       },
       "FreeFormAddress": true,
       "DueDate": "2026-11-01",
-      "TotalAmt": 2800.0,
-      "Balance": 2800.0
+      "TotalAmt": 2525.0,
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1200,7 +1565,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-11-01",
       "TotalAmt": 3750.0,
-      "Balance": 3750.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -1278,7 +1643,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-11-01",
       "TotalAmt": 3475.0,
-      "Balance": 3375.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2242,7 +2607,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-30",
       "TotalAmt": 1997.81,
-      "Balance": 1997.81
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2268,7 +2633,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-30",
       "TotalAmt": 1997.81,
-      "Balance": 1997.81
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -2503,7 +2868,7 @@
       "FreeFormAddress": true,
       "DueDate": "2026-09-25",
       "TotalAmt": 3775.0,
-      "Balance": 3775.0
+      "Balance": 0
     },
     {
       "AllowOnlineAffirmPayment": false,
@@ -9788,6 +10153,6 @@
     }
   ],
   "startPosition": 1,
-  "maxResults": 375,
-  "totalCount": 375
+  "maxResults": 389,
+  "totalCount": 389
 }

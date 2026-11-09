@@ -37,7 +37,7 @@
  {
   "id": "444",
   "name": "BOUTIQ",
-  "balance": 0.0
+  "balance": 2880.0
  },
  {
   "id": "410",
@@ -62,7 +62,7 @@
  {
   "id": "489",
   "name": "Botera Brockton",
-  "balance": 7979.39
+  "balance": 5179.39
  },
  {
   "id": "488",
@@ -72,7 +72,7 @@
  {
   "id": "490",
   "name": "Botera Taunton",
-  "balance": 3682.44
+  "balance": -67.56
  },
  {
   "id": "446",
@@ -137,12 +137,12 @@
  {
   "id": "416",
   "name": "CannaBarn",
-  "balance": 0.0
+  "balance": 3650.0
  },
  {
   "id": "508",
   "name": "Cannabis Connection",
-  "balance": 3490.0
+  "balance": 0.0
  },
  {
   "id": "509",
@@ -167,11 +167,21 @@
  {
   "id": "352",
   "name": "Capeway Cannabis, LLC",
-  "balance": 2550.0
+  "balance": 3870.0
+ },
+ {
+  "id": "100000131",
+  "name": "Chief Cannabis",
+  "balance": 5659.12
  },
  {
   "id": "386",
   "name": "Coastal Cultivars, Inc.",
+  "balance": 0.0
+ },
+ {
+  "id": "100000121",
+  "name": "Collective Cannabis Billerica",
   "balance": 0.0
  },
  {
@@ -217,7 +227,7 @@
  {
   "id": "272",
   "name": "Ember Gardens Cape Cod LLC",
-  "balance": 3250.07
+  "balance": 0.0
  },
  {
   "id": "304",
@@ -227,7 +237,7 @@
  {
   "id": "452",
   "name": "Enlite Indian Orchard",
-  "balance": 3221.36
+  "balance": 3177.36
  },
  {
   "id": "451",
@@ -372,12 +382,12 @@
  {
   "id": "535",
   "name": "Health Circle Rockland",
-  "balance": 1997.81
+  "balance": 5787.5
  },
  {
   "id": "360",
   "name": "Health Circle, Inc.",
-  "balance": 1997.81
+  "balance": 5412.5
  },
  {
   "id": "348",
@@ -387,6 +397,11 @@
  {
   "id": "372",
   "name": "Herbwell",
+  "balance": 0.0
+ },
+ {
+  "id": "100000111",
+  "name": "Hidden Wonders",
   "balance": 0.0
  },
  {
@@ -417,7 +432,7 @@
  {
   "id": "448",
   "name": "House Premium",
-  "balance": 5500.3
+  "balance": 0.0
  },
  {
   "id": "406",
@@ -437,17 +452,17 @@
  {
   "id": "100000101",
   "name": "Joint Ops Gardner",
-  "balance": 0.0
+  "balance": 3421.25
  },
  {
   "id": "100000091",
   "name": "Joint Ops Mendon",
-  "balance": 0.0
+  "balance": 2358.75
  },
  {
   "id": "100000081",
   "name": "Joint Ops Rowley",
-  "balance": 0.0
+  "balance": 1721.37
  },
  {
   "id": "440",
@@ -497,7 +512,7 @@
  {
   "id": "478",
   "name": "Low Key West Roxbury",
-  "balance": 0.0
+  "balance": 5712.5
  },
  {
   "id": "374",
@@ -507,7 +522,7 @@
  {
   "id": "477",
   "name": "Lowkey West Roxbury",
-  "balance": 3775.0
+  "balance": 0.0
  },
  {
   "id": "495",
@@ -597,7 +612,7 @@
  {
   "id": "463",
   "name": "Peak Cannabis Co",
-  "balance": -70.17
+  "balance": 4179.83
  },
  {
   "id": "476",
@@ -607,12 +622,12 @@
  {
   "id": "405",
   "name": "Pineapple Express, LLC",
-  "balance": 0.0
+  "balance": 2077.5
  },
  {
   "id": "447",
   "name": "Pinnacle Dispensary",
-  "balance": 3375.0
+  "balance": 0.0
  },
  {
   "id": "277",
@@ -627,7 +642,7 @@
  {
   "id": "411",
   "name": "Pioneer Valley Trading Southwick",
-  "balance": 0.0
+  "balance": 5972.5
  },
  {
   "id": "496",
@@ -707,7 +722,7 @@
  {
   "id": "494",
   "name": "Roadtrip",
-  "balance": 5925.0
+  "balance": 0.0
  },
  {
   "id": "311",
@@ -762,7 +777,7 @@
  {
   "id": "293",
   "name": "Sublime Cannabis Co.",
-  "balance": 6300.0
+  "balance": 0.0
  },
  {
   "id": "100000011",
@@ -892,12 +907,12 @@
  {
   "id": "434",
   "name": "Zen Leaf",
-  "balance": 0.0
+  "balance": 5037.5
  },
  {
   "id": "435",
   "name": "Zen Leaf Plymouth",
-  "balance": 0.0
+  "balance": 5412.5
  },
  {
   "id": "100000031",

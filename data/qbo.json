@@ -1,20 +1,185 @@
 {
- "generated": "2026-11-02",
+ "generated": "2026-11-09",
  "invoices": [
+  {
+   "id": "8059",
+   "doc": "1821",
+   "date": "2026-11-10",
+   "due": "2026-12-10",
+   "total": 5712.5,
+   "balance": 5712.5,
+   "customer": "Low Key West Roxbury",
+   "ship_town": "West Roxbury",
+   "account_id": "A0205",
+   "share": 1.0,
+   "split": false,
+   "amount": 5712.5,
+   "open": 5712.5
+  },
+  {
+   "id": "8064",
+   "doc": "1826",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 4250.0,
+   "balance": 4250.0,
+   "customer": "Peak Cannabis Co",
+   "ship_town": "Great Barrington",
+   "account_id": "A0514",
+   "share": 1.0,
+   "split": false,
+   "amount": 4250.0,
+   "open": 4250.0
+  },
+  {
+   "id": "8063",
+   "doc": "1825",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 5659.12,
+   "balance": 5659.12,
+   "customer": "Chief Cannabis",
+   "ship_town": "Bourne",
+   "account_id": "Amw2j9ctmcs0f",
+   "share": 1.0,
+   "split": false,
+   "amount": 5659.12,
+   "open": 5659.12
+  },
+  {
+   "id": "8062",
+   "doc": "1824",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 3650.0,
+   "balance": 3650.0,
+   "customer": "CannaBarn",
+   "ship_town": "Abington",
+   "account_id": "A0061",
+   "share": 1.0,
+   "split": false,
+   "amount": 3650.0,
+   "open": 3650.0
+  },
+  {
+   "id": "8061",
+   "doc": "1823",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 2077.5,
+   "balance": 2077.5,
+   "customer": "Pineapple Express, LLC",
+   "ship_town": "Ware",
+   "account_id": "A0435",
+   "share": 1.0,
+   "split": false,
+   "amount": 2077.5,
+   "open": 2077.5
+  },
+  {
+   "id": "8060",
+   "doc": "1822",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 2880.0,
+   "balance": 2880.0,
+   "customer": "BOUTIQ",
+   "ship_town": "East Boston",
+   "account_id": "A0045",
+   "share": 1.0,
+   "split": false,
+   "amount": 2880.0,
+   "open": 2880.0
+  },
+  {
+   "id": "8058",
+   "doc": "1820",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 5972.5,
+   "balance": 5972.5,
+   "customer": "Pioneer Valley Trading Southwick",
+   "ship_town": "Southwick",
+   "account_id": "A0250",
+   "share": 1.0,
+   "split": false,
+   "amount": 5972.5,
+   "open": 5972.5
+  },
+  {
+   "id": "8057",
+   "doc": "1819",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 5037.5,
+   "balance": 5037.5,
+   "customer": "Zen Leaf",
+   "ship_town": "Sharon",
+   "account_id": "A0357",
+   "share": 1.0,
+   "split": false,
+   "amount": 5037.5,
+   "open": 5037.5
+  },
+  {
+   "id": "8056",
+   "doc": "1818",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 5412.5,
+   "balance": 5412.5,
+   "customer": "Zen Leaf Plymouth",
+   "ship_town": "Plymouth",
+   "account_id": "A0356",
+   "share": 1.0,
+   "split": false,
+   "amount": 5412.5,
+   "open": 5412.5
+  },
+  {
+   "id": "8055",
+   "doc": "1817",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 5787.5,
+   "balance": 5787.5,
+   "customer": "Health Circle Rockland",
+   "ship_town": "Rockland",
+   "account_id": "A0154",
+   "share": 1.0,
+   "split": false,
+   "amount": 5787.5,
+   "open": 5787.5
+  },
+  {
+   "id": "8054",
+   "doc": "1816",
+   "date": "2026-11-09",
+   "due": "2026-12-09",
+   "total": 5412.5,
+   "balance": 5412.5,
+   "customer": "Health Circle, Inc.",
+   "ship_town": "Marshfield",
+   "account_id": "A0155",
+   "share": 1.0,
+   "split": false,
+   "amount": 5412.5,
+   "open": 5412.5
+  },
   {
    "id": "7960",
    "doc": "1807",
    "date": "2026-10-30",
    "due": "2026-12-02",
-   "total": 3655.0,
-   "balance": 3331.0,
+   "total": 3611.0,
+   "balance": 3287.0,
    "customer": "Enlite Indian Orchard",
    "ship_town": "Indian Orchard",
    "account_id": "A0107",
    "share": 1.0,
    "split": false,
-   "amount": 3655.0,
-   "open": 3331.0
+   "amount": 3611.0,
+   "open": 3287.0
   },
   {
    "id": "7959",
@@ -36,15 +201,15 @@
    "doc": "1805",
    "date": "2026-10-30",
    "due": "2026-12-03",
-   "total": 6300.0,
-   "balance": 6300.0,
+   "total": 5670.0,
+   "balance": 0,
    "customer": "Sublime Cannabis Co.",
    "ship_town": "Mashpee",
    "account_id": "A0297",
    "share": 1.0,
    "split": false,
-   "amount": 6300.0,
-   "open": 6300.0
+   "amount": 5670.0,
+   "open": 0.0
   },
   {
    "id": "7947",
@@ -81,15 +246,15 @@
    "doc": "1802",
    "date": "2026-10-29",
    "due": "2026-12-02",
-   "total": 2550.0,
-   "balance": 2550.0,
+   "total": 3870.0,
+   "balance": 3870.0,
    "customer": "Capeway Cannabis, LLC",
    "ship_town": "Carver",
    "account_id": "A0071",
    "share": 1.0,
    "split": false,
-   "amount": 2550.0,
-   "open": 2550.0
+   "amount": 3870.0,
+   "open": 3870.0
   },
   {
    "id": "7944",
@@ -111,30 +276,30 @@
    "doc": "1800",
    "date": "2026-10-29",
    "due": "2026-12-02",
-   "total": 5925.0,
-   "balance": 5925.0,
+   "total": 5332.5,
+   "balance": 0,
    "customer": "Roadtrip",
    "ship_town": "Salisbury",
    "account_id": "A0275",
    "share": 1.0,
    "split": false,
-   "amount": 5925.0,
-   "open": 5925.0
+   "amount": 5332.5,
+   "open": 0.0
   },
   {
    "id": "7942",
    "doc": "1799",
    "date": "2026-10-29",
    "due": "2026-12-02",
-   "total": 3490.0,
-   "balance": 3490.0,
+   "total": 3141.0,
+   "balance": 0,
    "customer": "Cannabis Connection",
    "ship_town": "Westfield",
    "account_id": "A0063",
    "share": 1.0,
    "split": false,
-   "amount": 3490.0,
-   "open": 3490.0
+   "amount": 3141.0,
+   "open": 0.0
   },
   {
    "id": "7941",
@@ -202,14 +367,14 @@
    "date": "2026-10-29",
    "due": "2026-11-03",
    "total": 3750.07,
-   "balance": 3250.07,
+   "balance": 0,
    "customer": "Ember Gardens Cape Cod LLC",
    "ship_town": "Orleans",
    "account_id": "A0104",
    "share": 1.0,
    "split": false,
    "amount": 3750.07,
-   "open": 3250.07
+   "open": 0.0
   },
   {
    "id": "7923",
@@ -471,15 +636,15 @@
    "doc": "1775",
    "date": "2026-10-22",
    "due": "2026-11-21",
-   "total": 5500.3,
-   "balance": 5500.3,
+   "total": 5225.28,
+   "balance": 0,
    "customer": "House Premium",
    "ship_town": "Tyngsborough",
    "account_id": "A0173",
    "share": 1.0,
    "split": false,
-   "amount": 5500.3,
-   "open": 5500.3
+   "amount": 5225.28,
+   "open": 0.0
   },
   {
    "id": "7850",
@@ -666,15 +831,15 @@
    "doc": "1762",
    "date": "2026-09-30",
    "due": "2026-11-01",
-   "total": 2800.0,
-   "balance": 2800.0,
+   "total": 2525.0,
+   "balance": 0,
    "customer": "Botera Brockton",
    "ship_town": "Brockton",
    "account_id": "A0040",
    "share": 1.0,
    "split": false,
-   "amount": 2800.0,
-   "open": 2800.0
+   "amount": 2525.0,
+   "open": 0.0
   },
   {
    "id": "7681",
@@ -682,14 +847,14 @@
    "date": "2026-09-30",
    "due": "2026-11-01",
    "total": 3750.0,
-   "balance": 3750.0,
+   "balance": 0,
    "customer": "Botera Taunton",
    "ship_town": "Taunton",
    "account_id": "A0042",
    "share": 1.0,
    "split": false,
    "amount": 3750.0,
-   "open": 3750.0
+   "open": 0.0
   },
   {
    "id": "7675",
@@ -727,14 +892,14 @@
    "date": "2026-09-30",
    "due": "2026-11-01",
    "total": 3475.0,
-   "balance": 3375.0,
+   "balance": 0,
    "customer": "Pinnacle Dispensary",
    "ship_town": "Quincy",
    "account_id": "A0247",
    "share": 1.0,
    "split": false,
    "amount": 3475.0,
-   "open": 3375.0
+   "open": 0.0
   },
   {
    "id": "7671",
@@ -1282,14 +1447,14 @@
    "date": "2026-08-31",
    "due": "2026-09-30",
    "total": 1997.81,
-   "balance": 1997.81,
+   "balance": 0,
    "customer": "Health Circle Rockland",
    "ship_town": "Rockland",
    "account_id": "A0154",
    "share": 1.0,
    "split": false,
    "amount": 1997.81,
-   "open": 1997.81
+   "open": 0.0
   },
   {
    "id": "7396",
@@ -1297,14 +1462,14 @@
    "date": "2026-08-31",
    "due": "2026-09-30",
    "total": 1997.81,
-   "balance": 1997.81,
+   "balance": 0,
    "customer": "Health Circle, Inc.",
    "ship_town": "Marshfield",
    "account_id": "A0155",
    "share": 1.0,
    "split": false,
    "amount": 1997.81,
-   "open": 1997.81
+   "open": 0.0
   },
   {
    "id": "7402",
@@ -1432,14 +1597,14 @@
    "date": "2026-08-26",
    "due": "2026-09-25",
    "total": 3775.0,
-   "balance": 3775.0,
+   "balance": 0,
    "customer": "Lowkey West Roxbury",
    "ship_town": "West Roxbury",
    "account_id": "A0205",
    "share": 1.0,
    "split": false,
    "amount": 3775.0,
-   "open": 3775.0
+   "open": 0.0
   },
   {
    "id": "7371",
@@ -5658,10 +5823,166 @@
   }
  ],
  "accounts": {
-  "A0107": {
-   "invoiced_2026": 20875.0,
+  "A0205": {
+   "invoiced_2026": 19665.05,
+   "n": 4.0,
+   "open": 5712.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-10",
+   "first_invoice": "2026-04-21",
+   "split_share": 0.0,
+   "customers": [
+    "Low Key West Roxbury",
+    "Low Key, LLC",
+    "Lowkey West Roxbury"
+   ],
+   "open_alltime": 5712.5
+  },
+  "A0514": {
+   "invoiced_2026": 10452.5,
+   "n": 3.0,
+   "open": 4250.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-03-31",
+   "split_share": 0.0,
+   "customers": [
+    "Peak Cannabis Co"
+   ],
+   "open_alltime": 4179.83
+  },
+  "Amw2j9ctmcs0f": {
+   "invoiced_2026": 5659.12,
+   "n": 1.0,
+   "open": 5659.12,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-11-09",
+   "split_share": 0.0,
+   "customers": [
+    "Chief Cannabis"
+   ],
+   "open_alltime": 5659.12
+  },
+  "A0061": {
+   "invoiced_2026": 16700.06,
    "n": 5.0,
-   "open": 3331.0,
+   "open": 3650.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-01-30",
+   "split_share": 0.0,
+   "customers": [
+    "CannaBarn"
+   ],
+   "open_alltime": 3650.0
+  },
+  "A0435": {
+   "invoiced_2026": 5165.0,
+   "n": 2.0,
+   "open": 2077.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-03-25",
+   "split_share": 0.0,
+   "customers": [
+    "Pineapple Express, LLC"
+   ],
+   "open_alltime": 2077.5
+  },
+  "A0045": {
+   "invoiced_2026": 15385.45,
+   "n": 4.0,
+   "open": 2880.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-01-28",
+   "split_share": 0.0,
+   "customers": [
+    "BOUTIQ"
+   ],
+   "open_alltime": 2880.0
+  },
+  "A0250": {
+   "invoiced_2026": 18182.75,
+   "n": 3.0,
+   "open": 5972.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-02-27",
+   "split_share": 0.0,
+   "customers": [
+    "Pioneer Valley Trading Southwick"
+   ],
+   "open_alltime": 5972.5
+  },
+  "A0357": {
+   "invoiced_2026": 27972.75,
+   "n": 5.0,
+   "open": 5037.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-03-11",
+   "split_share": 0.0,
+   "customers": [
+    "Zen Leaf"
+   ],
+   "open_alltime": 5037.5
+  },
+  "A0356": {
+   "invoiced_2026": 20442.5,
+   "n": 5.0,
+   "open": 5412.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-03-11",
+   "split_share": 0.0,
+   "customers": [
+    "Zen Leaf Plymouth"
+   ],
+   "open_alltime": 5412.5
+  },
+  "A0154": {
+   "invoiced_2026": 7785.31,
+   "n": 2.0,
+   "open": 5787.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-08-31",
+   "split_share": 0.0,
+   "customers": [
+    "Health Circle Rockland"
+   ],
+   "open_alltime": 5787.5
+  },
+  "A0155": {
+   "invoiced_2026": 7410.31,
+   "n": 2.0,
+   "open": 5412.5,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
+   "last_invoice": "2026-11-09",
+   "first_invoice": "2026-08-31",
+   "split_share": 0.0,
+   "customers": [
+    "Health Circle, Inc."
+   ],
+   "open_alltime": 5412.5
+  },
+  "A0107": {
+   "invoiced_2026": 20831.0,
+   "n": 5.0,
+   "open": 3287.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-30",
@@ -5670,7 +5991,7 @@
    "customers": [
     "Enlite Indian Orchard"
    ],
-   "open_alltime": 3221.36
+   "open_alltime": 3177.36
   },
   "A0304": {
    "invoiced_2026": 34370.49,
@@ -5687,9 +6008,9 @@
    "open_alltime": 4612.5
   },
   "A0297": {
-   "invoiced_2026": 74821.16,
+   "invoiced_2026": 74191.16,
    "n": 13.0,
-   "open": 6300.0,
+   "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-30",
@@ -5698,7 +6019,7 @@
    "customers": [
     "Sublime Cannabis Co."
    ],
-   "open_alltime": 6300.0
+   "open_alltime": 0.0
   },
   "A0146": {
    "invoiced_2026": 7760.0,
@@ -5729,9 +6050,9 @@
    "open_alltime": 3152.5
   },
   "A0071": {
-   "invoiced_2026": 25077.25,
+   "invoiced_2026": 26397.25,
    "n": 7.0,
-   "open": 2550.0,
+   "open": 3870.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-29",
@@ -5740,7 +6061,7 @@
    "customers": [
     "Capeway Cannabis, LLC"
    ],
-   "open_alltime": 2550.0
+   "open_alltime": 3870.0
   },
   "Amvl1fzydti30": {
    "invoiced_2026": 16602.5,
@@ -5757,9 +6078,9 @@
    "open_alltime": 5287.5
   },
   "A0275": {
-   "invoiced_2026": 25681.16,
+   "invoiced_2026": 25088.66,
    "n": 6.0,
-   "open": 5925.0,
+   "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-29",
@@ -5768,12 +6089,12 @@
    "customers": [
     "Roadtrip"
    ],
-   "open_alltime": 5925.0
+   "open_alltime": 0.0
   },
   "A0063": {
-   "invoiced_2026": 12261.53,
+   "invoiced_2026": 11912.53,
    "n": 3.0,
-   "open": 3490.0,
+   "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-29",
@@ -5782,14 +6103,14 @@
    "customers": [
     "Cannabis Connection"
    ],
-   "open_alltime": 3490.0
+   "open_alltime": 0.0
   },
   "A0041": {
    "invoiced_2026": 28595.61,
    "n": 8.0,
    "open": 9698.67,
    "past_due": 4430.0,
-   "oldest_due_days": 1,
+   "oldest_due_days": 8,
    "last_invoice": "2026-10-29",
    "first_invoice": "2026-03-09",
    "split_share": 0.0,
@@ -5799,18 +6120,18 @@
    "open_alltime": 9698.67
   },
   "A0040": {
-   "invoiced_2026": 26736.55,
+   "invoiced_2026": 26461.55,
    "n": 7.0,
-   "open": 7979.39,
-   "past_due": 2800.0,
-   "oldest_due_days": 1,
+   "open": 5179.39,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-10-29",
    "first_invoice": "2026-03-09",
    "split_share": 0.0,
    "customers": [
     "Botera Brockton"
    ],
-   "open_alltime": 7979.39
+   "open_alltime": 5179.39
   },
   "Amvr4a0jdq24k": {
    "invoiced_2026": 9651.83,
@@ -5843,7 +6164,7 @@
   "A0104": {
    "invoiced_2026": 53692.02,
    "n": 16.0,
-   "open": 3250.07,
+   "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-29",
@@ -5852,7 +6173,7 @@
    "customers": [
     "Ember Gardens Cape Cod LLC"
    ],
-   "open_alltime": 3250.07
+   "open_alltime": 0.0
   },
   "A0268": {
    "invoiced_2026": 47915.8,
@@ -5901,7 +6222,7 @@
    "n": 5.0,
    "open": 12103.0,
    "past_due": 6425.25,
-   "oldest_due_days": 9,
+   "oldest_due_days": 16,
    "last_invoice": "2026-10-28",
    "first_invoice": "2026-01-30",
    "split_share": 0.0,
@@ -5943,7 +6264,7 @@
    "n": 7.0,
    "open": 8830.0,
    "past_due": 4250.0,
-   "oldest_due_days": 1,
+   "oldest_due_days": 8,
    "last_invoice": "2026-10-28",
    "first_invoice": "2026-01-07",
    "split_share": 0.0,
@@ -6093,9 +6414,9 @@
    "open_alltime": 0.0
   },
   "A0173": {
-   "invoiced_2026": 35430.28,
+   "invoiced_2026": 35155.26,
    "n": 4.0,
-   "open": 5500.3,
+   "open": 0.0,
    "past_due": 0.0,
    "oldest_due_days": 0,
    "last_invoice": "2026-10-22",
@@ -6104,7 +6425,7 @@
    "customers": [
     "House Premium"
    ],
-   "open_alltime": 5500.3
+   "open_alltime": 0.0
   },
   "A0098": {
    "invoiced_2026": 82321.83,
@@ -6162,20 +6483,6 @@
    ],
    "open_alltime": 0.0
   },
-  "A0250": {
-   "invoiced_2026": 12210.25,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-30",
-   "first_invoice": "2026-02-27",
-   "split_share": 0.0,
-   "customers": [
-    "Pioneer Valley Trading Southwick"
-   ],
-   "open_alltime": 0.0
-  },
   "A0118": {
    "invoiced_2026": 20940.52,
    "n": 4.5,
@@ -6194,16 +6501,16 @@
   "A0042": {
    "invoiced_2026": 18222.78,
    "n": 6.0,
-   "open": 3750.0,
-   "past_due": 3750.0,
-   "oldest_due_days": 1,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-09-30",
    "first_invoice": "2026-03-09",
    "split_share": 0.0,
    "customers": [
     "Botera Taunton"
    ],
-   "open_alltime": 3682.44
+   "open_alltime": -67.56
   },
   "A0116": {
    "invoiced_2026": 42152.05,
@@ -6224,7 +6531,7 @@
    "n": 3.0,
    "open": 3640.0,
    "past_due": 3640.0,
-   "oldest_due_days": 1,
+   "oldest_due_days": 8,
    "last_invoice": "2026-09-30",
    "first_invoice": "2026-02-27",
    "split_share": 0.0,
@@ -6236,16 +6543,16 @@
   "A0247": {
    "invoiced_2026": 17641.25,
    "n": 3.0,
-   "open": 3375.0,
-   "past_due": 3375.0,
-   "oldest_due_days": 1,
+   "open": 0.0,
+   "past_due": 0.0,
+   "oldest_due_days": 0,
    "last_invoice": "2026-09-30",
    "first_invoice": "2026-02-27",
    "split_share": 0.0,
    "customers": [
     "Pinnacle Dispensary"
    ],
-   "open_alltime": 3375.0
+   "open_alltime": 0.0
   },
   "A0503": {
    "invoiced_2026": 12152.25,
@@ -6266,7 +6573,7 @@
    "n": 4.0,
    "open": 3000.0,
    "past_due": 3000.0,
-   "oldest_due_days": 3,
+   "oldest_due_days": 10,
    "last_invoice": "2026-09-30",
    "first_invoice": "2026-04-20",
    "split_share": 0.0,
@@ -6337,7 +6644,7 @@
    "n": 7.0,
    "open": 4400.0,
    "past_due": 4400.0,
-   "oldest_due_days": 3,
+   "oldest_due_days": 10,
    "last_invoice": "2026-09-23",
    "first_invoice": "2026-01-30",
    "split_share": 0.0,
@@ -6345,34 +6652,6 @@
     "Cannabis Healing"
    ],
    "open_alltime": 4400.0
-  },
-  "A0356": {
-   "invoiced_2026": 15030.0,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-03-11",
-   "split_share": 0.0,
-   "customers": [
-    "Zen Leaf Plymouth"
-   ],
-   "open_alltime": 0.0
-  },
-  "A0357": {
-   "invoiced_2026": 22935.25,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-09-23",
-   "first_invoice": "2026-03-11",
-   "split_share": 0.0,
-   "customers": [
-    "Zen Leaf"
-   ],
-   "open_alltime": 0.0
   },
   "A0299": {
    "invoiced_2026": 3271.75,
@@ -6444,20 +6723,6 @@
    ],
    "open_alltime": 0.0
   },
-  "A0061": {
-   "invoiced_2026": 13050.06,
-   "n": 4.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-01-30",
-   "split_share": 0.0,
-   "customers": [
-    "CannaBarn"
-   ],
-   "open_alltime": 0.0
-  },
   "A0016": {
    "invoiced_2026": 17641.44,
    "n": 5.0,
@@ -6500,34 +6765,6 @@
    ],
    "open_alltime": 0.0
   },
-  "A0154": {
-   "invoiced_2026": 1997.81,
-   "n": 1.0,
-   "open": 1997.81,
-   "past_due": 1997.81,
-   "oldest_due_days": 33,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-08-31",
-   "split_share": 0.0,
-   "customers": [
-    "Health Circle Rockland"
-   ],
-   "open_alltime": 1997.81
-  },
-  "A0155": {
-   "invoiced_2026": 1997.81,
-   "n": 1.0,
-   "open": 1997.81,
-   "past_due": 1997.81,
-   "oldest_due_days": 33,
-   "last_invoice": "2026-08-31",
-   "first_invoice": "2026-08-31",
-   "split_share": 0.0,
-   "customers": [
-    "Health Circle, Inc."
-   ],
-   "open_alltime": 1997.81
-  },
   "A0105": {
    "invoiced_2026": 17515.0,
    "n": 4.0,
@@ -6569,22 +6806,6 @@
     "EMBR (Kur Retail)"
    ],
    "open_alltime": 0.0
-  },
-  "A0205": {
-   "invoiced_2026": 13952.55,
-   "n": 3.0,
-   "open": 3775.0,
-   "past_due": 3775.0,
-   "oldest_due_days": 38,
-   "last_invoice": "2026-08-26",
-   "first_invoice": "2026-04-21",
-   "split_share": 0.0,
-   "customers": [
-    "Low Key West Roxbury",
-    "Low Key, LLC",
-    "Lowkey West Roxbury"
-   ],
-   "open_alltime": 3775.0
   },
   "A0153": {
    "invoiced_2026": 14208.9,
@@ -6710,20 +6931,6 @@
    ],
    "open_alltime": 0.0
   },
-  "A0514": {
-   "invoiced_2026": 6202.5,
-   "n": 2.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-06-30",
-   "first_invoice": "2026-03-31",
-   "split_share": 0.0,
-   "customers": [
-    "Peak Cannabis Co"
-   ],
-   "open_alltime": -70.17
-  },
   "A0194": {
    "invoiced_2026": 18511.5,
    "n": 3.0,
@@ -6737,20 +6944,6 @@
     "Kush Groove Cambridge"
    ],
    "open_alltime": -58.5
-  },
-  "A0045": {
-   "invoiced_2026": 12505.45,
-   "n": 3.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-05-29",
-   "first_invoice": "2026-01-28",
-   "split_share": 0.0,
-   "customers": [
-    "BOUTIQ"
-   ],
-   "open_alltime": 0.0
   },
   "A0052": {
    "invoiced_2026": 4738.42,
@@ -6975,20 +7168,6 @@
    ],
    "open_alltime": 0.0
   },
-  "A0435": {
-   "invoiced_2026": 3087.5,
-   "n": 1.0,
-   "open": 0.0,
-   "past_due": 0.0,
-   "oldest_due_days": 0,
-   "last_invoice": "2026-03-25",
-   "first_invoice": "2026-03-25",
-   "split_share": 0.0,
-   "customers": [
-    "Pineapple Express, LLC"
-   ],
-   "open_alltime": 0.0
-  },
   "A0135": {
    "invoiced_2026": 2613.91,
    "n": 1.0,
@@ -7186,22 +7365,81 @@
    "open_alltime": 0.0
   }
  },
- "unmapped": [],
+ "unmapped": [
+  {
+   "customer": "Joint Ops Gardner",
+   "n": 1,
+   "total": 3421.25,
+   "open": 3421.25,
+   "ship_towns": [
+    "Gardner"
+   ]
+  },
+  {
+   "customer": "Joint Ops Mendon",
+   "n": 1,
+   "total": 2358.75,
+   "open": 2358.75,
+   "ship_towns": [
+    "Mendon"
+   ]
+  },
+  {
+   "customer": "Joint Ops Rowley",
+   "n": 1,
+   "total": 1721.37,
+   "open": 1721.37,
+   "ship_towns": [
+    "Rowley"
+   ]
+  }
+ ],
  "recon": {
-  "matched": 374,
-  "orders_without_invoice": [],
+  "matched": 385,
+  "orders_without_invoice": [
+   {
+    "order_id": "Omvvbal4rka1a",
+    "account_id": "A0189",
+    "date": "2026-11-02",
+    "total": 1721.25
+   },
+   {
+    "order_id": "Omvvbbavnsek3",
+    "account_id": "A0188",
+    "date": "2026-11-02",
+    "total": 2358.75
+   },
+   {
+    "order_id": "Omvvbbwhazo5o",
+    "account_id": "A0187",
+    "date": "2026-11-02",
+    "total": 3421.25
+   },
+   {
+    "order_id": "Omw3z7iqqf6cm",
+    "account_id": "A0338",
+    "date": "2026-11-05",
+    "total": 5115
+   },
+   {
+    "order_id": "Omw3z98mulu9k",
+    "account_id": "A0296",
+    "date": "2026-11-05",
+    "total": 5115
+   }
+  ],
   "invoices_without_order": [],
   "orders_total_from_qbo": [],
   "amount_differs": [],
   "chain_pairs": []
  },
  "totals": {
-  "invoiced_2026": 1763024.67,
-  "open": 195295.6,
-  "past_due": 43840.87,
-  "invoices": 375,
-  "customers": 111,
-  "mapped_customers": 111,
-  "unmapped_customers": 0
+  "invoiced_2026": 1821532.14,
+  "open": 213763.6,
+  "past_due": 26145.25,
+  "invoices": 389,
+  "customers": 115,
+  "mapped_customers": 112,
+  "unmapped_customers": 3
  }
 }
