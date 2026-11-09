@@ -1103,9 +1103,23 @@
    "name": "2026-11-02",
    "notes": "2026-11-02"
   },
-  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
-  "next_step_due": "2026-11-23",
-  "next_step_owner": "joey"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 7,
+   "people": [
+    "|jtiar@bewell420.com||Store Manager",
+    "|rwhittaker@iresinate.com||Intake, Inventory",
+    "|zblanchard@iresinate.com||Inventory",
+    "Jared Fontana|jfontana@iresinate.com|774-239-1215|Intake, Wholesale/Purchasing",
+    "Julia|julia@bewell420.com||Former Owner (?)",
+    "Peter Decaro|pdecaro@iresinate.com|508-864-8150|Buyer, Finance / AP, Intake, Owner",
+    "Sammone Ricuarte|sricaurte@iresinate.com|774-261-0962|Marketing"
+   ]
+  }
  },
  {
   "id": "A0037",
