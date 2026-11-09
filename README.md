@@ -96,10 +96,19 @@ Unclaimed Leads list until a person claims it.
   nothing in 180+ days reads *lapsed*. Health filter: quiet / due / on rhythm / no orders this year /
   lapsed / never ordered. Managers can multi-select and bulk-assign owners.
 - **Prospects** — Master accounts not yet active (Sheet status Prospect / Non-prospect), with stages
-  (table or drag-and-drop board).
+  (table or drag-and-drop board). An Active account goes back here with **Move to Prospects…** (account
+  page, or the multi-select bar on Active Accounts; reps can do it too) — a reason is required (dormant /
+  closed / lost to a competitor / never actually bought / other + note), it is logged on the timeline, and the
+  account then shows a *Former customer · dormant* or *Never bought · …* pill on the Prospects list, its page
+  and in search (hover for who, when, why and the lifetime). The *history* filter on Prospects splits former
+  customers, accounts moved back, never-bought ones and never-customers. **Mark Active** brings one back
+  (the revert record moves to `revert_history`).
 - **Unclaimed Leads** — the pool. **Claim** moves one into Prospects under your name at stage New and
   logs it. Domain-named leads ask for the real company name when claimed.
 - **Orders** — every order since Aug 2024, with year chips (this year by default · 2025 · 2024 · All
+  years); each row's Notes column opens with what was on the invoice (first four items, the rest on
+  hover), and the account timeline shows every item as a chip under the order; the Active Accounts
+  *Last order* cell carries the same blurb (this year by default · 2025 · 2024 · All
   years); the KPI cards follow the year. **+ New order** (also in the top bar and on every account
   page). A confirmed first order moves a Prospect — or an unclaimed lead — to Active automatically.
   Pre-2026 orders all come from QuickBooks invoices (the Order Tracker started in 2026); a chain-level
@@ -268,6 +277,8 @@ through Dan's QBO connection and writes two raw files, then `tools/build_qbo.py`
 
 ```
 tools/qbo_raw/invoices_2026.json   one row per invoice (id, doc, date, due, total, balance, customer, ship-to town)
+data/items.json                    what was on each invoice: QuickBooks line items per invoice id — [item, category, qty, unit price, amount]
+                                   (written by qbo_ingest.py from a SELECT * invoice pull; backfilled to Aug 2024 on Nov 9, 2026)
 tools/qbo_raw/invoices_pre2026.json the same for every invoice before 2026 (one-off pull, Aug 2024 – Dec 2025; qbo_ingest.py --out)
 tools/qbo_raw/customers.json       one row per customer (id, name, all-time balance)
 tools/qbo_map.json                 QBO customer name -> CRM account id; only the exceptions (chains, spellings)
