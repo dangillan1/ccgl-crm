@@ -8313,9 +8313,19 @@
   "sheet_row": 256,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
-  "next_step_due": "2026-11-23",
-  "next_step_owner": "joey"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Eric Lawrence|elawrence@prolificcannabis.com||Buyer, Finance / AP, Intake, Owner",
+    "Eric Lawrence|ericlaw3@yahoo.com||",
+    "Wig Santiago|wsantiago@prolificcannabis.com||Intake"
+   ]
+  }
  },
  {
   "id": "A0256",
