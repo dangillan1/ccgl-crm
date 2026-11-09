@@ -1350,5 +1350,20 @@
    "uploaded_at": "2026-11-06",
    "history": []
   }
+ },
+ "A0233": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0233/ccc/2026-11-09_mw9bqqqoz7up.pdf",
+    "sha": "1bbac589932c1be5646a14dffbc53ee657ce2220",
+    "name": "CCC License - New Leaf (Fall River).pdf",
+    "size": 1381571,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-09",
+   "expires": "2026-02-13",
+   "history": []
+  }
  }
 }
