@@ -4188,5 +4188,14 @@
   "type": "Note",
   "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-09"
+ },
+ {
+  "id": "Xmw9bk47f495b",
+  "ts": "2026-11-09T13:50:54.795Z",
+  "account_id": "A0221",
+  "type": "Call",
+  "note": "Onboarding form and license request sent 11/9 - Matt & Dan bcc'd",
+  "date": "2026-11-06",
+  "contact_id": "C5264098e"
  }
 ]
