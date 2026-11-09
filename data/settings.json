@@ -1001,6 +1001,15 @@
    "source": "Random Data 31826",
    "removed_by": "joey",
    "removed_at": "2026-11-09"
+  },
+  {
+   "id": "Cb8256588",
+   "account_id": "A0230",
+   "email": "",
+   "name": "Rick",
+   "source": "Master",
+   "removed_by": "joey",
+   "removed_at": "2026-11-09"
   }
  ]
 }
