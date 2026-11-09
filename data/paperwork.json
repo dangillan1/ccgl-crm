@@ -1376,6 +1376,18 @@
    "uploaded_by": "joey",
    "uploaded_at": "2026-11-09",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0233/w9/2026-11-09_mw9brgciz9lr.pdf",
+    "sha": "7a1792b1eb1d222b33e546ca7ee6022155fc2ead",
+    "name": "W-9 - New Leaf (Fall River).pdf",
+    "size": 753228,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "joey",
+   "uploaded_at": "2026-11-09",
+   "history": []
   }
  }
 }
