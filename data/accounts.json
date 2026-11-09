@@ -7198,7 +7198,7 @@
   "stage_entered": "2026-10-23",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR283288",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
@@ -7214,7 +7214,8 @@
   "notes": "",
   "sheet_row": 221,
   "crm_edits": {
-   "status": "2026-10-23"
+   "status": "2026-10-23",
+   "license_number": "2026-11-09"
   },
   "in_qbo": true,
   "contacts_confirmed": {
