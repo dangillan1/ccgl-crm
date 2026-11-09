@@ -9749,7 +9749,20 @@
   "next_contact": "2026-07-24",
   "notes": "",
   "sheet_row": 306,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "|accounting@temescalwellness.com||Finance / AP",
+    "|framingham.inventory@temescalwellness.com||",
+    "|hudson.inventory@temescalwellness.com||",
+    "|inventory@temescalwellness.com||",
+    "|megan.wendling@temescalwellness.com||",
+    "Julio Vasquez|julio.vasquez@temescalwellness.com|Phone:(401) 450-7489|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0306",
