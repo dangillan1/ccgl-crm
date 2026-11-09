@@ -4255,5 +4255,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 9 people (Buyer, Finance / AP, Intake) · next step cleared",
   "date": "2026-11-09"
+ },
+ {
+  "id": "Xmw9bon6u9ufd",
+  "ts": "2026-11-09T13:54:26.022Z",
+  "account_id": "A0233",
+  "type": "Edit",
+  "note": "Removed Evan Darmody (AR / Accounting) · evan@newleafcanna.com",
+  "date": "2026-11-09"
  }
 ]
