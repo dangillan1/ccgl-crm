@@ -109,6 +109,8 @@ by_user = defaultdict(lambda: defaultdict(int))
 for x in wk_acts: by_user[uname.get(x["user"], x["user"])][x.get("type", "?")] += 1
 facts["activity_last_7d"] = {u: dict(v) for u, v in by_user.items()}
 facts["new_prospects_last_7d"] = [nm(a) for a in accounts if a.get("claimed_at") and d(a["claimed_at"]) and d(a["claimed_at"]) >= week_ago]
+facts["moved_to_prospects_7d"] = [{"account": nm(a), "by": uname.get(a["reverted"].get("by"), a["reverted"].get("by")), "reason": a["reverted"].get("reason", ""), "note": a["reverted"].get("note", ""), "had_orders": bool(a["reverted"].get("had_orders"))}
+                                  for a in accounts if a.get("reverted") and d(a["reverted"].get("date")) and d(a["reverted"]["date"]) >= week_ago]
 facts["open_next_steps"] = [{"account": nm(a), "owner": a.get("owner"), "step": a.get("next_step"), "due": a.get("next_step_due"), "overdue": bool(a.get("next_step_due") and a["next_step_due"] < TODAY.isoformat())} for a in accounts if a.get("next_step")]
 stages = defaultdict(int)
 for a in accounts:
@@ -160,6 +162,7 @@ for r_ in lp["rows"]: print(f"   {r_['account']:40s} {money(r_['lifetime']):>9} 
 print(f"NEVER ORDERED ({len(facts['never_ordered'])} \"Active\" accounts with no invoice ever):", ", ".join(facts["never_ordered"]) or "none")
 print("\nACTIVITY LAST 7d:", {u: v for u, v in facts["activity_last_7d"].items()} or "none logged")
 print("NEW PROSPECTS LAST 7d:", ", ".join(facts["new_prospects_last_7d"]) or "none")
+print("MOVED BACK TO PROSPECTS LAST 7d:", "; ".join(f"{r_['account']} — {r_['reason']}{' (' + r_['note'] + ')' if r_['note'] else ''} by {r_['by']}{'' if r_['had_orders'] else ' [never bought]'}" for r_ in facts["moved_to_prospects_7d"]) or "none")
 print("OPEN NEXT STEPS:"); [print(f"   {'OVERDUE ' if s['overdue'] else ''}{s['account']:40s} {s['step']}  (due {s['due']})  {s['owner']}") for s in facts["open_next_steps"]]
 print("PIPELINE BY STAGE:", facts["pipeline_by_stage"] or "nothing past New")
 rc = facts["recon"]; print(f"\nQBO vs TRACKER: {rc['matched']} paired · {rc['orders_without_invoice']} orders w/o invoice · {rc['invoices_without_order']} invoices w/o order · {rc['amount_differs']} amounts differ · {rc['blank_totals_fillable']} blank totals fillable · unmapped: {rc['unmapped'] or 'none'}")

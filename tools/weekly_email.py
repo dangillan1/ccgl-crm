@@ -80,6 +80,8 @@ house = []
 if F["book"]["unassigned_active"]: house.append(f"{F['book']['unassigned_active']} active accounts have no owner" + (f" — including {', '.join(r['account'].split(' / ')[0] for r in F['unassigned_with_orders'][:4])} with 2026 orders" if F["unassigned_with_orders"] else ""))
 if ns: house.append(f"{len(ns)} overdue next step{'s' if len(ns) != 1 else ''}: " + "; ".join(f"{s['account'].split(' / ')[0]} — {s['step']} ({s['owner']})" for s in ns[:4]))
 if F["placeholders"]: house.append(f"{len(F['placeholders'])} placeholder order rows still need a total or a delete: " + ", ".join(f"{p['account'].split(' / ')[0]} {p['date'][5:] if p['date'] else ''}".strip() for p in F["placeholders"][:6]))
+mv = F.get("moved_to_prospects_7d") or []
+if mv: house.append(f"{len(mv)} account{'s' if len(mv) != 1 else ''} moved back to Prospects this week: " + "; ".join(f"{r['account'].split(' / ')[0]} ({r['reason'].split(' — ')[0].lower()}, {r['by']})" for r in mv[:5]))
 lp = F.get("lapsed") or {}
 if lp.get("n"): house.append(f"{lp['n']} former customers have gone 180+ days without an order (win-back list on Insights) — biggest: " + ", ".join(f"{r['account'].split(' / ')[0]} ({money_k(r['lifetime'])} lifetime, last {r['last']})" for r in lp["rows"][:4]))
 ccf = F.get("contacts_confirmed")
