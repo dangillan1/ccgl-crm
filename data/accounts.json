@@ -7216,7 +7216,16 @@
   "crm_edits": {
    "status": "2026-10-23"
   },
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Chris Ashe|chris@nativesuncannabis.com||Buyer, Finance / AP, Intake, Inventory",
+    "Nikki Hanley|nikki@nativesuncannabis.com||Marketing"
+   ]
+  }
  },
  {
   "id": "A0221",
