@@ -9447,7 +9447,23 @@
   "notes": "",
   "sheet_row": 296,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 9,
+   "people": [
+    "|allison@stemhaverhill.com||AR / Accounting",
+    "|jonathan@stemhaverhill.com||Inventory Manager",
+    "|lisa@stemhaverhill.com||",
+    "Adam/Caroline Pineau|adam@stemhaverhill.com||Owner, AR",
+    "Alison Polanco|alison.polanco@stemhaverhill.com|978-416-3523|Buyer, Intake, Inventory",
+    "Caroline Pineau|caroline@stemhaverhill.com|Phone:+19782129760|Owner",
+    "Maritza Spindler|maritza@stemhaverhill.com|978-416-3523|Buyer, Intake, Inventory",
+    "Marta|marta@stemhaverhill.com||Inventory, Asst Manager",
+    "Tyrique|tyrique@stemhaverhill.com||"
+   ]
+  }
  },
  {
   "id": "A0296",
