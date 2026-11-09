@@ -8162,9 +8162,17 @@
   "sheet_row": 250,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
-  "next_step_due": "2026-11-16",
-  "next_step_owner": "matt"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 1,
+   "people": [
+    "Matthew Ryan|matt@pioneervalleytradingco.com|Phone:(413) 579-4727|Buyer, Finance / AP, Intake"
+   ]
+  }
  },
  {
   "id": "A0251",
