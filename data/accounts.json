@@ -8030,9 +8030,17 @@
   "sheet_row": null,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts — first add: Buyer, Intake",
-  "next_step_due": "2026-11-16",
-  "next_step_owner": "matt"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 1,
+   "people": [
+    "Kaily Hepburn|kaily@pineappleexpressma.com||Buyer, Finance / AP, Intake, Owner"
+   ]
+  }
  },
  {
   "id": "A0247",
