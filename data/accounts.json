@@ -7607,7 +7607,15 @@
   "notes": "",
   "sheet_row": 234,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 1,
+   "people": [
+    "Nelson Adolfo|nelson@newleafcanna.com|401-641-8237|Buyer, Finance / AP, Intake"
+   ]
+  }
  },
  {
   "id": "A0234",
