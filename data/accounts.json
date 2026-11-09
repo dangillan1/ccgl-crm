@@ -9788,7 +9788,17 @@
   "next_contact": "2026-07-24",
   "notes": "",
   "sheet_row": 307,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "|accounting@temescalwellness.com||Finance / AP",
+    "|hudson.inventory@temescalwellness.com||Inventory",
+    "Julio Vasquez|julio.vasquez@temescalwellness.com|Phone:(401) 450-7489|Buyer, Intake, Inventory"
+   ]
+  }
  },
  {
   "id": "A0307",
