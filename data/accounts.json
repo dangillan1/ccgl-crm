@@ -8665,9 +8665,22 @@
   "sheet_row": 267,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
-  "next_step_due": "2026-11-23",
-  "next_step_owner": "joey"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 6,
+   "people": [
+    "|rwhittaker@iresinate.com||Inventory",
+    "|zblanchard@iresinate.com||",
+    "Jared Fontana|jfontana@iresinate.com||Intake, Wholesale/Purchasing",
+    "Joe Livingstone|jlivingston@iresinate.com||Finance / AP",
+    "Peter Decaro|pdecaro@iresinate.com|508-864-8150|Buyer, Finance / AP, Intake, Owner",
+    "Sammone Ricaurte|sricaurte@iresinate.com|774-261-0962|Marketing"
+   ]
+  }
  },
  {
   "id": "A0267",
