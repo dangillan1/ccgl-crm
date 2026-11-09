@@ -8012,7 +8012,7 @@
   "license_type": "Dispensary",
   "status": "Current",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -8022,9 +8022,7 @@
   "standing_requests": "",
   "license_number": "MD1306",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
