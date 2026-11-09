@@ -7054,7 +7054,22 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 216,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 8,
+   "people": [
+    "|accounting@mellowfellowsco.com||Finance / AP",
+    "|antonio@mellowfellows.com||Inventory Manager",
+    "|kayla@mellowfellowsco.com||AR / Accounting",
+    "Antonio Rozzi|antonio@mellowfellowsco.com|978-476-3537|Buyer, Intake",
+    "Devin Broo|devin@mellowfellowsco.com||Buyer",
+    "Erica|erica@mellowfellowsco.com||Inventory Manager",
+    "Kyle|kyle@mellowfellowsco.com||Finance / AP",
+    "Tom Curtin|tomcurtin@mellowfellowsco.com||"
+   ]
+  }
  },
  {
   "id": "A0216",
