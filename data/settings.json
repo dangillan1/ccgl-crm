@@ -1028,6 +1028,15 @@
    "source": "Customer Tracker",
    "removed_by": "joey",
    "removed_at": "2026-11-09"
+  },
+  {
+   "id": "Caac0da8a",
+   "account_id": "A0233",
+   "email": "evan@newleafcanna.com",
+   "name": "Evan Darmody",
+   "source": "Random Data 1",
+   "removed_by": "joey",
+   "removed_at": "2026-11-09"
   }
  ]
 }
