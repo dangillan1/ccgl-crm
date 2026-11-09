@@ -7626,7 +7626,7 @@
   "stage_entered": "",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR283204",
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
@@ -7641,7 +7641,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 235,
-  "in_qbo": true
+  "in_qbo": true,
+  "crm_edits": {
+   "license_number": "2026-11-09"
+  }
  },
  {
   "id": "A0235",
