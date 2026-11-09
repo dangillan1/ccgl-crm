@@ -9873,6 +9873,15 @@
   "in_customer_tracker": true,
   "crm_edits": {
    "license_type": "2026-11-09"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "|accounting@temescalwellness.com||Finance / AP",
+    "Julio V.|julio.vasquez@temescalwellness.com|401-450-7489|Buyer, Intake, Inventory"
+   ]
   }
  },
  {
