@@ -6396,9 +6396,26 @@
   "in_customer_tracker": true,
   "in_qbo": true,
   "crm_edits": {},
-  "next_step": "Confirm contacts (Buyer / Finance / Intake)",
-  "next_step_due": "2026-11-23",
-  "next_step_owner": "joey"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-09",
+   "by": "joey",
+   "n": 10,
+   "people": [
+    "|info@lazyriverproducts.com||info",
+    "Aturco|aturco@lazyriverproducts.com||",
+    "Billing/Payment|billing@lazyriverproducts.com||Finance / AP",
+    "Cdelatorre|cdelatorre@lazyriverproducts.com||",
+    "Gabe|gstewart@lazyriverproducts.com||",
+    "Inventory Team|dracut-inventory-team@lazyriverproducts.com||Inventory",
+    "James Barquerizo|jbaquerizo@lazyriverproducts.com||Intake",
+    "Jayce Bauer|jbauer@lazyriverproducts.com||Buyer",
+    "Mike Luppold|mluppold@lazyriverproducts.com||General Manager",
+    "Procurement|procurement@lazyriverproducts.com||Intake"
+   ]
+  }
  },
  {
   "id": "A0196",
