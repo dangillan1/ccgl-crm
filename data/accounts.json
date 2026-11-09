@@ -9844,10 +9844,10 @@
   "parent": "Temescal Wellness",
   "town": "Worcester",
   "address": "",
-  "license_type": "Dispensary",
+  "license_type": "Production",
   "status": "Current",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "",
   "notes": "",
@@ -9870,7 +9870,10 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "crm_edits": {
+   "license_type": "2026-11-09"
+  }
  },
  {
   "id": "A0308",
