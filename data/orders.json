@@ -20403,5 +20403,23 @@
   "edited_by": "qbo",
   "edited_at": "2026-11-09",
   "note": "Created from QuickBooks invoice; not in the Order Tracker"
+ },
+ {
+  "id": "Omwaujn2q20p4",
+  "date": "2026-11-10",
+  "account_id": "A0304",
+  "account_raw": "Surf's Up",
+  "license": "MR285057",
+  "status": "Planned",
+  "contact_name": "Nathan Schaeffer",
+  "contact_email": "nschaeffer@surfsupcannabis.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "HOLD 1X SWAMPWATER FUMEZ & 1X RAINBOW GUAVA",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
