@@ -4431,5 +4431,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods · HOLD 1X SWAMPWATER FUMEZ & 1X RAINBOW GUAVA",
   "date": "2026-11-10"
+ },
+ {
+  "id": "Xmwaus89voo60",
+  "ts": "2026-11-10T15:36:52.195Z",
+  "account_id": "A0009",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · terms: Terms TBD",
+  "date": "2026-11-10"
  }
 ]
