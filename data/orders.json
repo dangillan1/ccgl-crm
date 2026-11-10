@@ -20439,5 +20439,28 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwaus697vf3y",
+  "date": "2026-11-10",
+  "account_id": "A0009",
+  "account_raw": "Apex Noire",
+  "license": "MR282752",
+  "status": "Planned",
+  "contact_name": "Nate Hall",
+  "contact_email": "nate@apexnoire.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey",
+  "terms": {
+   "plan": "tbd",
+   "step": null,
+   "label": "Terms TBD"
+  }
  }
 ]
