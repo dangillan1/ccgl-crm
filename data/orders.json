@@ -20483,23 +20483,5 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
- },
- {
-  "id": "Omwauubew5z5b",
-  "date": "2026-11-06",
-  "account_id": "A0283",
-  "account_raw": "Seaside",
-  "license": "MR284549",
-  "status": "Planned",
-  "contact_name": "Brianna Cassidy",
-  "contact_email": "brianna@seasidecannabis.com",
-  "delivery_date": "",
-  "total": null,
-  "owner": "Joey",
-  "mix": "Bulk & FG",
-  "special": "",
-  "samples": false,
-  "source": "CRM",
-  "created_by": "joey"
  }
 ]
