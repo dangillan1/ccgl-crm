@@ -4415,5 +4415,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 7 people (Buyer, Finance / AP, Intake) · next step cleared",
   "date": "2026-11-09"
+ },
+ {
+  "id": "Xmwatzdpjwq6q",
+  "ts": "2026-11-10T15:14:26.215Z",
+  "account_id": "A0297",
+  "type": "Order",
+  "note": "Order updated: Confirmed $3,100 · Nov 6, 26",
+  "date": "2026-11-06"
  }
 ]
