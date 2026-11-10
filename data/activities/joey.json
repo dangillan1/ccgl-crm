@@ -4479,5 +4479,13 @@
   "type": "Note",
   "note": "Order deleted: Nov 3, 26 (Planned)",
   "date": "2026-11-10"
+ },
+ {
+  "id": "Xmwauxbxce86c",
+  "ts": "2026-11-10T15:40:50.208Z",
+  "account_id": "A0268",
+  "type": "Order",
+  "note": "Planned order · Finished Goods",
+  "date": "2026-11-10"
  }
 ]
