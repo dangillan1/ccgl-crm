@@ -4423,5 +4423,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $3,100 · Nov 6, 26",
   "date": "2026-11-06"
+ },
+ {
+  "id": "Xmwaujp86zpt2",
+  "ts": "2026-11-10T15:30:14.262Z",
+  "account_id": "A0304",
+  "type": "Order",
+  "note": "Planned order · Finished Goods · HOLD 1X SWAMPWATER FUMEZ & 1X RAINBOW GUAVA",
+  "date": "2026-11-10"
  }
 ]
