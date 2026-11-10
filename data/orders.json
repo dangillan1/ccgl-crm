@@ -20540,5 +20540,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwav3ur86tc3",
+  "date": "2026-11-10",
+  "account_id": "A0036",
+  "account_raw": "Resinate",
+  "license": "MR284729",
+  "status": "Planned",
+  "contact_name": "Peter Decaro",
+  "contact_email": "pdecaro@iresinate.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
