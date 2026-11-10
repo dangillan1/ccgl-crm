@@ -20421,5 +20421,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwauozsh9xko",
+  "date": "2026-11-10",
+  "account_id": "A0098",
+  "account_raw": "Eastern Cannabis Co.",
+  "license": "MR282696",
+  "status": "Planned",
+  "contact_name": "Phil Mateescu",
+  "contact_email": "pmateescu@easterncannabisco.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
