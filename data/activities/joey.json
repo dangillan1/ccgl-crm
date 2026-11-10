@@ -4543,5 +4543,13 @@
   "type": "Order",
   "note": "Confirmed order · Bulk & FG",
   "date": "2026-11-10"
+ },
+ {
+  "id": "Xmwav4xikhajq",
+  "ts": "2026-11-10T15:46:44.780Z",
+  "account_id": "A0077",
+  "type": "Order",
+  "note": "Planned order · Finished Goods",
+  "date": "2026-11-10"
  }
 ]
