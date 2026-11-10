@@ -20594,5 +20594,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwav58fb1m2a",
+  "date": "2026-11-10",
+  "account_id": "A0078",
+  "account_raw": "CNA Stores",
+  "license": "MR281744",
+  "status": "Planned",
+  "contact_name": "Jesse Caldwell",
+  "contact_email": "jcaldwell@cnastores.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Bulk & FG",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
