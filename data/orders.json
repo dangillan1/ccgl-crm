@@ -20462,5 +20462,23 @@
    "step": null,
    "label": "Terms TBD"
   }
+ },
+ {
+  "id": "Omwausn5f7ntk",
+  "date": "2026-11-10",
+  "account_id": "A0116",
+  "account_raw": "Firehouse",
+  "license": "MR284535",
+  "status": "Planned",
+  "contact_name": "Emiliano Duran",
+  "contact_email": "emiliano@shopfirehouse.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Bulk & FG",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
