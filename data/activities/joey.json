@@ -4495,5 +4495,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods",
   "date": "2026-11-10"
+ },
+ {
+  "id": "Xmwauy2pw82pp",
+  "ts": "2026-11-10T15:41:24.932Z",
+  "account_id": "A0270",
+  "type": "Order",
+  "note": "Planned order · Finished Goods",
+  "date": "2026-11-10"
  }
 ]
