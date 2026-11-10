@@ -20576,5 +20576,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwav4vjrz8wd",
+  "date": "2026-11-10",
+  "account_id": "A0077",
+  "account_raw": "CNA Stores",
+  "license": "MR282576 | MC282190 | MP281691",
+  "status": "Planned",
+  "contact_name": "Jesse Caldwell",
+  "contact_email": "jcaldwell@cnastores.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
