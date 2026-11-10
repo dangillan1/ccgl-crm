@@ -4439,5 +4439,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods · terms: Terms TBD",
   "date": "2026-11-10"
+ },
+ {
+  "id": "Xmwausptj7fgs",
+  "ts": "2026-11-10T15:37:14.935Z",
+  "account_id": "A0116",
+  "type": "Order",
+  "note": "Planned order · Bulk & FG",
+  "date": "2026-11-10"
  }
 ]
