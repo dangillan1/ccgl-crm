@@ -20612,5 +20612,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwdjjr3g34jb",
+  "date": "2026-11-12",
+  "account_id": "A0052",
+  "account_raw": "Cal Verde Naturals",
+  "license": "MR283258",
+  "status": "Confirmed",
+  "contact_name": "Alisa Stamatopoulos",
+  "contact_email": "alisa@calverdenaturals.com",
+  "delivery_date": "2026-11-17",
+  "total": 4652,
+  "owner": "Matt",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": true,
+  "source": "CRM",
+  "created_by": "matt"
  }
 ]
