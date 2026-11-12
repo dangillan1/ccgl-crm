@@ -525,5 +525,13 @@
   "note": "Sent menu to info and Corey",
   "date": "2026-11-06",
   "contact_id": "C43ce81b7"
+ },
+ {
+  "id": "Xmwdjjt77het0",
+  "ts": "2026-11-12T12:45:42.163Z",
+  "account_id": "A0052",
+  "type": "Order",
+  "note": "Confirmed order $4,652 · Finished Goods",
+  "date": "2026-11-12"
  }
 ]
