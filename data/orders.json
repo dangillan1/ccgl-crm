@@ -20604,17 +20604,20 @@
   "account_id": "A0078",
   "account_raw": "CNA Stores",
   "license": "MR281744",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Jesse Caldwell",
   "contact_email": "jcaldwell@cnastores.com",
   "delivery_date": "",
   "total": null,
   "owner": "Joey",
   "mix": "Bulk & FG",
-  "special": "",
+  "special": "Check in Mon. 11/16 for reorder",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-12"
  },
  {
   "id": "Omwdjjr3g34jb",
