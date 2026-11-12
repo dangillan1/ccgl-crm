@@ -531,7 +531,10 @@
   "ts": "2026-11-12T12:45:42.163Z",
   "account_id": "A0052",
   "type": "Order",
-  "note": "Confirmed order $4,652 · Finished Goods",
-  "date": "2026-11-12"
+  "note": "Confirmed order $4,652 · Finished Goods\n\nDelivery Dates Requested:\n11/17: 10-3\n11/18: 10-3\n11/20: 10-3",
+  "date": "2026-11-12",
+  "contact_id": "C64b5635b",
+  "edited_at": "2026-11-12",
+  "edited_by": "matt"
  }
 ]
