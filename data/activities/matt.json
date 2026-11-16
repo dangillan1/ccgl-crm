@@ -593,8 +593,10 @@
   "ts": "2026-11-16T19:17:34.412Z",
   "account_id": "A0339",
   "type": "Text",
-  "note": "Working through current inventory - Green Wednesday promo - splitting promo - Dylan will provide the report prior to next order",
+  "note": "Working through current inventory - \n\nGreen Wednesday promo - splitting promo \nDylan will provide the report prior to next order",
   "date": "2026-11-16",
-  "contact_id": "Cc03225e1"
+  "contact_id": "Cc03225e1",
+  "edited_at": "2026-11-16",
+  "edited_by": "matt"
  }
 ]
