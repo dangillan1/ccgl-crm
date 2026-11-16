@@ -1591,7 +1591,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 48,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0510",
@@ -1622,7 +1625,10 @@
   "dup_candidates": [],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0048",
@@ -1650,7 +1656,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 49,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0049",
@@ -1678,7 +1687,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 50,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0050",
@@ -2715,7 +2727,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 81,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Buyer, Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0081",
@@ -2835,7 +2850,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 85,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0085",
@@ -2861,7 +2879,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 86,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0086",
@@ -5208,7 +5229,10 @@
   "notes": "",
   "sheet_row": 157,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0157",
@@ -5235,7 +5259,10 @@
   "notes": "",
   "sheet_row": 158,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0158",
@@ -5411,7 +5438,7 @@
   "sheet_key": "hiddenwonders|plymouth",
   "source": "Master",
   "parent": "",
-  "stage": "New",
+  "stage": "Customer",
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
@@ -5425,13 +5452,17 @@
   "town": "Plymouth",
   "address": "",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "",
   "owner": "Team",
   "last_contact": "2026-05-10",
   "next_contact": "2026-05-24",
   "notes": "",
-  "sheet_row": 164
+  "sheet_row": 164,
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0164",
@@ -5938,7 +5969,10 @@
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 181,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0181",
@@ -6381,7 +6415,10 @@
   "notes": "",
   "sheet_row": 195,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0195",
@@ -8080,7 +8117,10 @@
   "notes": "",
   "sheet_row": 248,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0248",
@@ -8107,7 +8147,10 @@
   "notes": "",
   "sheet_row": 249,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0250",
@@ -8748,7 +8791,10 @@
   "notes": "",
   "sheet_row": 269,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0269",
@@ -8775,7 +8821,10 @@
   "notes": "",
   "sheet_row": 270,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0270",
@@ -8802,7 +8851,10 @@
   "notes": "",
   "sheet_row": 271,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0271",
@@ -9193,7 +9245,10 @@
   "notes": "",
   "sheet_row": 285,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0285",
@@ -9220,7 +9275,10 @@
   "notes": "",
   "sheet_row": 286,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0286",
@@ -9776,7 +9834,10 @@
   "notes": "",
   "sheet_row": 305,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-23",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0305",
