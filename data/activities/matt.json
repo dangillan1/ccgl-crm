@@ -607,5 +607,14 @@
   "note": "Missed call from Jeff Motta",
   "date": "2026-11-13",
   "contact_id": "C98b44ee8"
+ },
+ {
+  "id": "Xmwjrgnf08zsb",
+  "ts": "2026-11-16T21:13:48.684Z",
+  "account_id": "A0001",
+  "type": "Email",
+  "note": "Sent menu and 1st time buyer promo information along",
+  "date": "2026-11-16",
+  "contact_id": "C98b44ee8"
  }
 ]
