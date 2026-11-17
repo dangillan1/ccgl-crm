@@ -1428,5 +1428,21 @@
    "uploaded_at": "2026-11-09",
    "history": []
   }
+ },
+ "Amuh9w8nbbe0a": {
+  "ccc": {
+   "file": {
+    "path": "accounts/Amuh9w8nbbe0a/ccc/2026-11-17_mwlc2cf4gkgx.pdf",
+    "sha": "384fb04b648714d28491483d364435bec3a889f4",
+    "name": "CCC License - Haven Southwick.pdf",
+    "size": 319247,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-17",
+   "expires": "2027-07-28",
+   "note": "Final License",
+   "history": []
+  }
  }
 }
