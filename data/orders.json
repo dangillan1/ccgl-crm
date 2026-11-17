@@ -20711,7 +20711,7 @@
   "account_id": "A0195",
   "account_raw": "Lazy River - Dracut",
   "license": "MR282562",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Jayce Bauer",
   "contact_email": "jbauer@lazyriverproducts.com",
   "delivery_date": "",
@@ -20721,7 +20721,10 @@
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-17"
  },
  {
   "id": "Omwjgz93wtakg",
