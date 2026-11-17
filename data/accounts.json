@@ -5035,7 +5035,25 @@
   "claimed_at": "2026-09-25",
   "next_step": "",
   "next_step_due": "",
-  "next_step_owner": ""
+  "next_step_owner": "",
+  "terms": {
+   "plan": "custom",
+   "step": null,
+   "label": "45 Day Terms - 1st time order - will revisit",
+   "since": "2026-11-17",
+   "reason": "",
+   "set_by": "matt",
+   "history": [
+    {
+     "date": "2026-11-17",
+     "by": "matt",
+     "plan": "custom",
+     "step": null,
+     "label": "45 Day Terms - 1st time order - will revisit",
+     "reason": ""
+    }
+   ]
+  }
  },
  {
   "id": "A0151",
