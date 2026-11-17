@@ -4607,5 +4607,13 @@
   "type": "Order",
   "note": "Planned order · Finished Goods",
   "date": "2026-11-16"
+ },
+ {
+  "id": "Xmwkpszmj5teo",
+  "ts": "2026-11-17T13:15:11.323Z",
+  "account_id": "A0121",
+  "type": "Order",
+  "note": "Order updated: Planned · Nov 17, 26",
+  "date": "2026-11-17"
  }
 ]
