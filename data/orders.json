@@ -19558,11 +19558,11 @@
   "account_id": "A0105",
   "account_raw": "Embr/Fyre Ants",
   "license": "MR283720",
-  "status": "Planned",
+  "status": "Pending",
   "contact_name": "Jeff Edinger",
   "contact_email": "jeffreye@embr.us",
-  "delivery_date": "",
-  "total": null,
+  "delivery_date": "2026-11-20",
+  "total": 3690,
   "owner": "Joey",
   "mix": "Finished Goods",
   "special": "",
@@ -19571,7 +19571,7 @@
   "created_by": "joey",
   "edited_in_crm": true,
   "edited_by": "joey",
-  "edited_at": "2026-11-17"
+  "edited_at": "2026-11-18"
  },
  {
   "id": "Omvlbyu4ws0qx",
