@@ -4671,5 +4671,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 7 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-18"
+ },
+ {
+  "id": "Xmwm8znxuv9t3",
+  "ts": "2026-11-18T15:00:01.650Z",
+  "account_id": "A0098",
+  "type": "Order",
+  "note": "Order updated: Pending · Nov 10, 26",
+  "date": "2026-11-10"
  }
 ]
