@@ -1455,6 +1455,18 @@
    "uploaded_by": "matt",
    "uploaded_at": "2026-11-18",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/Amuh9w8nbbe0a/w9/2026-11-18_mwm67om2ogz4.pdf",
+    "sha": "2c4f878684097f24c7a1788d770074486cfe257c",
+    "name": "W-9 - Haven Southwick.pdf",
+    "size": 1010048,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-18",
+   "history": []
   }
  }
 }
