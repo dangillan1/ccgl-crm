@@ -4711,5 +4711,13 @@
   "type": "Order",
   "note": "Order updated: Pending $3,550 · Nov 16, 26",
   "date": "2026-11-16"
+ },
+ {
+  "id": "Xmwm9ykegw62u",
+  "ts": "2026-11-18T15:27:10.024Z",
+  "account_id": "A0117",
+  "type": "Order",
+  "note": "Pending order $6,585 · Finished Goods · November $6k offer",
+  "date": "2026-11-18"
  }
 ]
