@@ -4647,5 +4647,13 @@
   "type": "Order",
   "note": "Order updated: Pending · Nov 16, 26",
   "date": "2026-11-16"
+ },
+ {
+  "id": "Xmwm61td67bom",
+  "ts": "2026-11-18T13:37:43.146Z",
+  "account_id": "A0356",
+  "type": "Note",
+  "note": "Contacts confirmed — 7 people (Buyer, Finance / AP, Intake)",
+  "date": "2026-11-18"
  }
 ]
