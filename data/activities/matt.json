@@ -673,5 +673,13 @@
   "note": "Sent onboarding doc - No response",
   "date": "2026-11-09",
   "contact_id": "C4c311959"
+ },
+ {
+  "id": "Xmwm86ixlhigu",
+  "ts": "2026-11-18T14:37:22.137Z",
+  "account_id": "Amuh9w8nbbe0a",
+  "type": "Order",
+  "note": "Confirmed order $2,873 · Finished Goods · 15% FIRST TIME ORDER · terms: 45 Day Terms - 1st time order - will revisit",
+  "date": "2026-11-17"
  }
 ]
