@@ -15342,5 +15342,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-09"
+ },
+ {
+  "id": "Cmwm613isi3p1",
+  "account_id": "A0356",
+  "name": "Gideon Striar",
+  "role": "Intake, General Manager, Inventory",
+  "email": "gideon.striar@verano.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-18"
  }
 ]
