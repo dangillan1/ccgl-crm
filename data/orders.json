@@ -20790,23 +20790,5 @@
    "step": null,
    "label": "45 Day Terms - 1st time order - will revisit"
   }
- },
- {
-  "id": "Omwm9yikckjb3",
-  "date": "2026-11-18",
-  "account_id": "A0117",
-  "account_raw": "Flower & Soul",
-  "license": "MR284326",
-  "status": "Pending",
-  "contact_name": "Devin Lightman",
-  "contact_email": "dlightman@myflowersoul.com",
-  "delivery_date": "",
-  "total": 6585,
-  "owner": "Joey",
-  "mix": "Finished Goods",
-  "special": "November $6k offer",
-  "samples": false,
-  "source": "CRM",
-  "created_by": "joey"
  }
 ]
