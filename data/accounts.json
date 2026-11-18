@@ -8,11 +8,9 @@
   "stage_entered": "2026-09-25",
   "delivery_notes": "",
   "standing_requests": "",
-  "license_number": "",
+  "license_number": "MR282401",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "1Connection",
   "town": "Dighton",
@@ -20,11 +18,14 @@
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "C",
-  "owner": "Unassigned",
+  "owner": "Matt",
   "last_contact": "2026-07-27",
   "next_contact": "2026-08-10",
   "notes": "",
-  "sheet_row": 2
+  "sheet_row": 2,
+  "crm_edits": {
+   "license_number": "2026-11-18"
+  }
  },
  {
   "id": "A0002",
