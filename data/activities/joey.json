@@ -4727,5 +4727,13 @@
   "type": "Note",
   "note": "Order deleted: Nov 18, 26 · $6,585 (Pending)",
   "date": "2026-11-18"
+ },
+ {
+  "id": "Xmwmiwfpwbcej",
+  "ts": "2026-11-18T19:37:27.188Z",
+  "account_id": "A0101",
+  "type": "Order",
+  "note": "Confirmed order $6,585 · Finished Goods · November $6k offer",
+  "date": "2026-11-12"
  }
 ]
