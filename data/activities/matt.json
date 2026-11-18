@@ -681,5 +681,13 @@
   "type": "Order",
   "note": "Confirmed order $2,873 · Finished Goods · 15% FIRST TIME ORDER · terms: 45 Day Terms - 1st time order - will revisit",
   "date": "2026-11-17"
+ },
+ {
+  "id": "Xmwm87bu96zx9",
+  "ts": "2026-11-18T14:37:59.601Z",
+  "account_id": "Amuh9w8nbbe0a",
+  "type": "Note",
+  "note": "Contacts confirmed — 1 person (Buyer, Finance / AP, Intake)",
+  "date": "2026-11-18"
  }
 ]
