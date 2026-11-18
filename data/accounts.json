@@ -9720,9 +9720,9 @@
   "sheet_row": 300,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts — first add: Finance / AP",
-  "next_step_due": "2026-11-16",
-  "next_step_owner": "matt"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": ""
  },
  {
   "id": "A0300",
