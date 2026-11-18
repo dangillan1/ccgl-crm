@@ -716,5 +716,13 @@
   "contact_id": "C98b44ee8",
   "edited_at": "2026-11-18",
   "edited_by": "matt"
+ },
+ {
+  "id": "Xmwmnsiky10gi",
+  "ts": "2026-11-18T21:54:22.354Z",
+  "account_id": "A0299",
+  "type": "Task",
+  "note": "Done: Confirm contacts — first add: Finance / AP",
+  "date": "2026-11-18"
  }
 ]
