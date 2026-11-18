@@ -711,8 +711,10 @@
   "ts": "2026-11-18T21:49:40.039Z",
   "account_id": "A0001",
   "type": "Call",
-  "note": "Great talk w/ Jeff Motta - taking a look at the menu and putting an order together",
+  "note": "Great talk w/ Jeff Motta -\n- Taking a look at the menu and putting an order together\n- Sent over License and W9",
   "date": "2026-11-18",
-  "contact_id": "C98b44ee8"
+  "contact_id": "C98b44ee8",
+  "edited_at": "2026-11-18",
+  "edited_by": "matt"
  }
 ]
