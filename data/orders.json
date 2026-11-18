@@ -20764,5 +20764,28 @@
   "edited_in_crm": true,
   "edited_by": "joey",
   "edited_at": "2026-11-17"
+ },
+ {
+  "id": "Omwm86fre7ypf",
+  "date": "2026-11-17",
+  "account_id": "Amuh9w8nbbe0a",
+  "account_raw": "Haven Southwick",
+  "license": "MR285245",
+  "status": "Confirmed",
+  "contact_name": "Michelle Hildebrant",
+  "contact_email": "michele.h@myhavenstores.com",
+  "delivery_date": "2026-11-23",
+  "total": 2873,
+  "owner": "Matt",
+  "mix": "Finished Goods",
+  "special": "15% FIRST TIME ORDER",
+  "samples": true,
+  "source": "CRM",
+  "created_by": "matt",
+  "terms": {
+   "plan": "custom",
+   "step": null,
+   "label": "45 Day Terms - 1st time order - will revisit"
+  }
  }
 ]
