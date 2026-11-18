@@ -697,5 +697,13 @@
   "type": "Note",
   "note": "Created as active account",
   "date": "2026-11-18"
+ },
+ {
+  "id": "Xmwmmxtag22my",
+  "ts": "2026-11-18T21:30:29.896Z",
+  "account_id": "Amwmllvmypk5a",
+  "type": "Order",
+  "note": "Confirmed order $3,028 · Finished Goods · 15% First time order",
+  "date": "2026-11-18"
  }
 ]
