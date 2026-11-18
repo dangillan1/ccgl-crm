@@ -20790,5 +20790,23 @@
    "step": null,
    "label": "45 Day Terms - 1st time order - will revisit"
   }
+ },
+ {
+  "id": "Omwmiwcoshqbk",
+  "date": "2026-11-12",
+  "account_id": "A0101",
+  "account_raw": "Elysian",
+  "license": "MR285090",
+  "status": "Confirmed",
+  "contact_name": "Devin Lightman",
+  "contact_email": "dlightman@myflowersoul.com",
+  "delivery_date": "2026-11-23",
+  "total": 6585,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "November $6k offer",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
