@@ -689,5 +689,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 1 person (Buyer, Finance / AP, Intake)",
   "date": "2026-11-18"
+ },
+ {
+  "id": "Xmwmllywrlcb5",
+  "ts": "2026-11-18T20:53:17.691Z",
+  "account_id": "Amwmllvmypk5a",
+  "type": "Note",
+  "note": "Created as active account",
+  "date": "2026-11-18"
  }
 ]
