@@ -20808,5 +20808,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwmmxranq560",
+  "date": "2026-11-18",
+  "account_id": "Amwmllvmypk5a",
+  "account_raw": "Lowell Cannabis",
+  "license": "MR283351",
+  "status": "Confirmed",
+  "contact_name": "Justin Smith",
+  "contact_email": "packitupsupply@gmail.com",
+  "delivery_date": "",
+  "total": 3027.5,
+  "owner": "Matt",
+  "mix": "Finished Goods",
+  "special": "15% First time order",
+  "samples": true,
+  "source": "CRM",
+  "created_by": "matt"
  }
 ]
