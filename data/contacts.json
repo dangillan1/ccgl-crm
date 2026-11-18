@@ -15375,5 +15375,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-18"
+ },
+ {
+  "id": "Cmwm63b8ij0p5",
+  "account_id": "A0357",
+  "name": "Jose Acevedo",
+  "role": "Intake, Inventory, Asst. Manager",
+  "email": "jose.acevedo@verano.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-18"
  }
 ]
