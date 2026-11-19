@@ -1468,5 +1468,21 @@
    "uploaded_at": "2026-11-18",
    "history": []
   }
+ },
+ "A0163": {
+  "ccc": {
+   "file": {
+    "path": "accounts/A0163/ccc/2026-11-19_mwnv2b5frg5c.pdf",
+    "sha": "b787c7373b2fad577bd5020e7398c0b6ef4557e5",
+    "name": "CCC License - Hidden Wonders (Plymouth).pdf",
+    "size": 1373763,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-19",
+   "expires": "2027-09-03",
+   "note": "Final",
+   "history": []
+  }
  }
 }
