@@ -1495,6 +1495,18 @@
    "uploaded_by": "matt",
    "uploaded_at": "2026-11-19",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0163/w9/2026-11-19_mwnv2v11k5l3.pdf",
+    "sha": "07f12a006f496b18267307731985ef0af764a46c",
+    "name": "W-9 - Hidden Wonders (Plymouth).pdf",
+    "size": 554750,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-19",
+   "history": []
   }
  }
 }
