@@ -20829,5 +20829,23 @@
   "samples": true,
   "source": "CRM",
   "created_by": "matt"
+ },
+ {
+  "id": "Omwnyycwjhbma",
+  "date": "2026-11-19",
+  "account_id": "A0202",
+  "account_raw": "Local Cannabis Co.",
+  "license": "MR283842",
+  "status": "Pending",
+  "contact_name": "Justin Avery",
+  "contact_email": "javery@calyxpeak.com",
+  "delivery_date": "",
+  "total": 6925,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "November $6k offer",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
