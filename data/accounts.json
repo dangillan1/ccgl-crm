@@ -5485,12 +5485,21 @@
   "notes": "",
   "sheet_row": 164,
   "in_qbo": true,
-  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
-  "next_step_due": "2026-11-23",
-  "next_step_owner": "matt",
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
   "crm_edits": {
    "address": "2026-11-19",
    "license_number": "2026-11-19"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-19",
+   "by": "matt",
+   "n": 2,
+   "people": [
+    "Megan|megan@myhiddenwonders.com||Buyer, Intake, General Manager, Inventory",
+    "Paul|paul@myhiddenwonders.com||Finance / AP"
+   ]
   }
  },
  {
