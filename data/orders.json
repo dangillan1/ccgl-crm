@@ -20821,14 +20821,17 @@
   "status": "Confirmed",
   "contact_name": "Justin Smith",
   "contact_email": "packitupsupply@gmail.com",
-  "delivery_date": "",
+  "delivery_date": "2026-11-23",
   "total": 3027.5,
   "owner": "Matt",
   "mix": "Finished Goods",
   "special": "15% First time order",
   "samples": true,
   "source": "CRM",
-  "created_by": "matt"
+  "created_by": "matt",
+  "edited_in_crm": true,
+  "edited_by": "matt",
+  "edited_at": "2026-11-19"
  },
  {
   "id": "Omwnyycwjhbma",
