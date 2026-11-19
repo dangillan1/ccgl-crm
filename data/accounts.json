@@ -4815,9 +4815,9 @@
   "crm_edits": {
    "status": "2026-11-19"
   },
-  "next_step": "Confirm contacts — first add: Finance / AP, Intake - MG moved back to prospects - will confirm contacts once I've connected with them again",
-  "next_step_due": "2026-11-16",
-  "next_step_owner": "matt",
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
   "reverted": {
    "date": "2026-11-19",
    "by": "matt",
