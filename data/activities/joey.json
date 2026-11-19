@@ -4743,5 +4743,13 @@
   "type": "Order",
   "note": "Pending order $6,925 · Finished Goods · November $6k offer",
   "date": "2026-11-19"
+ },
+ {
+  "id": "Xmwo3006ampyh",
+  "ts": "2026-11-19T21:47:52.162Z",
+  "account_id": "A0195",
+  "type": "Order",
+  "note": "Order updated: Confirmed $3,550 · Nov 16, 26",
+  "date": "2026-11-16"
  }
 ]
