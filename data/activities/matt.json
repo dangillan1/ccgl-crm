@@ -727,5 +727,13 @@
   "type": "Task",
   "note": "Done: Confirm contacts — first add: Finance / AP",
   "date": "2026-11-18"
+ },
+ {
+  "id": "Xmwnmufm3cqo5",
+  "ts": "2026-11-19T14:15:38.379Z",
+  "account_id": "Amuh9w8nbbe0a",
+  "type": "Order",
+  "note": "Order updated: Confirmed $2,873 · Nov 17, 26",
+  "date": "2026-11-17"
  }
 ]
