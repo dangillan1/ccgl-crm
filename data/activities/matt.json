@@ -783,5 +783,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-19"
+ },
+ {
+  "id": "Xmwnv4cmo8taw",
+  "ts": "2026-11-19T18:07:18.000Z",
+  "account_id": "A0135",
+  "type": "Stage",
+  "note": "Active → Prospect — Dormant — stopped ordering",
+  "date": "2026-11-19"
  }
 ]
