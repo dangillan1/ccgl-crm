@@ -4735,5 +4735,13 @@
   "type": "Order",
   "note": "Confirmed order $6,585 · Finished Goods · November $6k offer",
   "date": "2026-11-12"
+ },
+ {
+  "id": "Xmwnyyenmsjoz",
+  "ts": "2026-11-19T19:54:39.154Z",
+  "account_id": "A0202",
+  "type": "Order",
+  "note": "Pending order $6,925 · Finished Goods · November $6k offer",
+  "date": "2026-11-19"
  }
 ]
