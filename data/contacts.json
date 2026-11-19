@@ -15408,5 +15408,16 @@
   "source": "CRM (Matt)",
   "primary": true,
   "created": "2026-11-18"
+ },
+ {
+  "id": "Cmwnrga6va19i",
+  "account_id": "Amwmllvmypk5a",
+  "name": "Rosey Danh",
+  "role": "Intake, Inventory",
+  "email": "rosey@lowellcannabis.com",
+  "phone": "",
+  "source": "CRM (Matt)",
+  "primary": false,
+  "created": "2026-11-19"
  }
 ]
