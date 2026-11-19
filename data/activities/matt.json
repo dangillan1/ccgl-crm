@@ -797,7 +797,10 @@
   "ts": "2026-11-19T18:08:31.247Z",
   "account_id": "A0135",
   "type": "Task",
-  "note": "Next step: Confirm contacts — first add: Finance / AP, Intake - MG moved back to prospects - will confirm contacts once I've connected with them again (due Nov 16, 26)",
-  "date": "2026-11-19"
+  "note": "Next step: Confirm contacts — first add: Finance / AP, Intake - \n- MG moved back to prospects - will confirm contacts once I've connected with them again (due Nov 16, 26)",
+  "date": "2026-11-19",
+  "contact_id": "",
+  "edited_at": "2026-11-19",
+  "edited_by": "matt"
  }
 ]
