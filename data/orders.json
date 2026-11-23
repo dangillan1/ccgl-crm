@@ -20607,7 +20607,7 @@
   "account_id": "A0265",
   "account_raw": "Resinate",
   "license": "MTC/RMD4121",
-  "status": "Confirmed",
+  "status": "Planned",
   "contact_name": "Peter Decaro",
   "contact_email": "pdecaro@iresinate.com",
   "delivery_date": "",
@@ -20617,7 +20617,10 @@
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-23"
  },
  {
   "id": "Omwav4vjrz8wd",
