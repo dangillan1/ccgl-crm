@@ -37,7 +37,7 @@
  {
   "id": "444",
   "name": "BOUTIQ",
-  "balance": 2880.0
+  "balance": 0.0
  },
  {
   "id": "410",
@@ -127,7 +127,7 @@
  {
   "id": "521",
   "name": "Cal Verde Naturals",
-  "balance": 4667.62
+  "balance": 4292.62
  },
  {
   "id": "332",
@@ -212,7 +212,7 @@
  {
   "id": "358",
   "name": "Eastern Cannabis Co.",
-  "balance": 7995.0
+  "balance": 0.0
  },
  {
   "id": "100000071",
@@ -222,7 +222,7 @@
  {
   "id": "484",
   "name": "Elysian",
-  "balance": 12103.0
+  "balance": 5677.75
  },
  {
   "id": "272",
@@ -370,6 +370,11 @@
   "balance": 0.0
  },
  {
+  "id": "100000151",
+  "name": "Haven Southwick",
+  "balance": 0.0
+ },
+ {
   "id": "343",
   "name": "Haverhill Stem LLC",
   "balance": 0.0
@@ -387,7 +392,7 @@
  {
   "id": "360",
   "name": "Health Circle, Inc.",
-  "balance": 5412.5
+  "balance": 5252.5
  },
  {
   "id": "348",
@@ -497,7 +502,7 @@
  {
   "id": "515",
   "name": "Lazy River Dracut",
-  "balance": -239.2
+  "balance": 3293.8
  },
  {
   "id": "516",
@@ -517,6 +522,11 @@
  {
   "id": "374",
   "name": "Low Key, LLC",
+  "balance": 0.0
+ },
+ {
+  "id": "100000141",
+  "name": "Lowell Cannabis Co",
   "balance": 0.0
  },
  {
@@ -682,32 +692,32 @@
  {
   "id": "415",
   "name": "Resinate Merrimac",
-  "balance": 4052.5
+  "balance": 0.0
  },
  {
   "id": "414",
   "name": "Resinate Northampton",
-  "balance": 3877.5
+  "balance": 0.0
  },
  {
   "id": "413",
   "name": "Resinate Worcester",
-  "balance": 4717.5
+  "balance": 0.0
  },
  {
   "id": "385",
   "name": "Resinate, Inc.",
-  "balance": 5104.0
+  "balance": 0.0
  },
  {
   "id": "376",
   "name": "Reverie 73 Beverly",
-  "balance": 8377.5
+  "balance": 4212.5
  },
  {
   "id": "375",
   "name": "Reverie 73 Gloucester",
-  "balance": 5335.5
+  "balance": 2237.5
  },
  {
   "id": "359",
@@ -717,7 +727,7 @@
  {
   "id": "354",
   "name": "Reverie 73 Lowell",
-  "balance": 6933.5
+  "balance": 4227.5
  },
  {
   "id": "494",
@@ -737,7 +747,7 @@
  {
   "id": "279",
   "name": "Seaside Joint Ventures Inc.",
-  "balance": -75.0
+  "balance": 6941.25
  },
  {
   "id": "455",
@@ -777,7 +787,7 @@
  {
   "id": "293",
   "name": "Sublime Cannabis Co.",
-  "balance": 3100.0
+  "balance": 4559.25
  },
  {
   "id": "100000011",
@@ -907,12 +917,12 @@
  {
   "id": "434",
   "name": "Zen Leaf",
-  "balance": 5037.5
+  "balance": 5212.5
  },
  {
   "id": "435",
   "name": "Zen Leaf Plymouth",
-  "balance": 5412.5
+  "balance": 5787.5
  },
  {
   "id": "100000031",

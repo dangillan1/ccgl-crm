@@ -3552,7 +3552,10 @@
   "in_customer_tracker": true,
   "crm_edits": {
    "license_type": "2026-11-06"
-  }
+  },
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0106",
@@ -4789,7 +4792,7 @@
   "sheet_key": "greenestreetcananbis|",
   "source": "Master",
   "parent": "",
-  "stage": "",
+  "stage": "Customer",
   "stage_entered": "",
   "delivery_notes": "",
   "standing_requests": "Not doing good per Mike Ortoll.  Revert to prospect - revisit Dec. 2026/Jan. 2027",
@@ -4803,7 +4806,7 @@
   "town": "Cambridge",
   "address": "",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "C",
   "owner": "Unassigned",
   "last_contact": "2026-07-27",
@@ -4815,9 +4818,9 @@
   "crm_edits": {
    "status": "2026-11-19"
   },
-  "next_step": "",
-  "next_step_due": "",
-  "next_step_owner": "",
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt",
   "reverted": {
    "date": "2026-11-19",
    "by": "matt",
@@ -5539,7 +5542,10 @@
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 165
+  "sheet_row": 165,
+  "next_step": "Confirm contacts — first add: Buyer, Finance / AP, Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0165",
@@ -5567,7 +5573,10 @@
   "next_contact": "2025-10-06",
   "notes": "",
   "sheet_row": 166,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Buyer, Finance / AP, Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0166",
@@ -6214,7 +6223,10 @@
    "address": "2026-10-30",
    "license_number": "2026-10-30",
    "status": "2026-10-30"
-  }
+  },
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0187",
@@ -7012,7 +7024,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 212,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0513",
@@ -7048,7 +7063,10 @@
   ],
   "created": "2026-09-25",
   "sheet_row": null,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0212",
@@ -7074,7 +7092,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 213,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0213",
@@ -7100,7 +7121,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 214,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0214",
@@ -7127,7 +7151,10 @@
   "notes": "",
   "sheet_row": 215,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0215",
@@ -8932,7 +8959,10 @@
   "next_contact": "2026-08-10",
   "notes": "",
   "sheet_row": 272,
-  "in_customer_tracker": true
+  "in_customer_tracker": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0273",
@@ -8959,7 +8989,10 @@
   "notes": "",
   "sheet_row": 274,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0272",
@@ -8986,7 +9019,10 @@
   "notes": "",
   "sheet_row": 273,
   "in_customer_tracker": true,
-  "in_qbo": true
+  "in_qbo": true,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "joey"
  },
  {
   "id": "A0274",
@@ -9538,7 +9574,10 @@
   "last_contact": "2026-04-02",
   "next_contact": "2026-04-16",
   "notes": "",
-  "sheet_row": 294
+  "sheet_row": 294,
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0294",
@@ -9743,9 +9782,9 @@
   "sheet_row": 300,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "",
-  "next_step_due": "",
-  "next_step_owner": ""
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0300",
@@ -10267,7 +10306,10 @@
   "notes": "",
   "sheet_row": 316,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0316",
@@ -10294,7 +10336,10 @@
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 317
+  "sheet_row": 317,
+  "next_step": "Confirm contacts — first add: Finance / AP, Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0317",
@@ -11107,7 +11152,10 @@
   "notes": "",
   "sheet_row": 343,
   "in_customer_tracker": true,
-  "crm_edits": {}
+  "crm_edits": {},
+  "next_step": "Confirm contacts — first add: Intake",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  },
  {
   "id": "A0343",
@@ -12185,6 +12233,9 @@
   "created_by": "matt",
   "claimed": true,
   "claimed_by": "matt",
-  "claimed_at": "2026-11-18"
+  "claimed_at": "2026-11-18",
+  "next_step": "Confirm contacts — first add: Finance / AP",
+  "next_step_due": "2026-11-30",
+  "next_step_owner": "matt"
  }
 ]

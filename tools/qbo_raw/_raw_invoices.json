@@ -9,18 +9,1053 @@
       "AllowOnlineAffirmPayment": false,
       "domain": "QBO",
       "sparse": false,
-      "Id": "8111",
+      "Id": "8172",
       "SyncToken": "0",
+      "MetaData": {
+        "CreateTime": "2026-11-20T11:23:29-08:00",
+        "LastModifiedByRef": {
+          "value": "9341453343535402"
+        },
+        "LastUpdatedTime": "2026-11-20T11:23:29-08:00"
+      },
+      "CustomField": [],
+      "DocNumber": "1843",
+      "TxnDate": "2026-11-24",
+      "CurrencyRef": {
+        "value": "USD",
+        "name": "United States Dollar"
+      },
+      "LinkedTxn": [
+        {
+          "TxnId": "8132",
+          "TxnType": "Estimate"
+        }
+      ],
+      "Line": [
+        {
+          "Id": "1",
+          "LineNum": 1,
+          "Description": "Rainbow Guava 3.5g (25 per case)",
+          "Amount": 850.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "1"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "209",
+              "name": "Packaged Goods:3.5g Flower:Rainbow Guava - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "2",
+          "LineNum": 2,
+          "Description": "Purple Push Pop 3.5g (25 per case)",
+          "Amount": 850.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "2"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "159",
+              "name": "Packaged Goods:3.5g Flower:Purple Push Pop - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "3",
+          "LineNum": 3,
+          "Description": "Black Maple 3.5g (25 per case)",
+          "Amount": 425.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "3"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "199",
+              "name": "Packaged Goods:3.5g Flower:Black Maple - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "4",
+          "LineNum": 4,
+          "Description": "Swampwater Fumez 3.5g (25 per case)",
+          "Amount": 1275.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "4"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "208",
+              "name": "Packaged Goods:3.5g Flower:Swampwater Fumez - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 3,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "5",
+          "LineNum": 5,
+          "Description": "Lions Breath 1g Preroll (50 per case)",
+          "Amount": 250.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "5"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000521",
+              "name": "Packaged Goods:1g PreRoll:Lions Breath - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "6",
+          "LineNum": 6,
+          "Description": "Alchemy - Lions Breath Smalls 14g (20 Per Case)",
+          "Amount": 650.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "6"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "106",
+              "name": "Packaged Goods:14g Flower:Alchemy - Lions Breath Smalls 14g"
+            },
+            "UnitPrice": 650,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040001",
+              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 14g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "7",
+          "LineNum": 7,
+          "Description": "Alchemy - Alien Marker Smalls 14g (20 Per Case)",
+          "Amount": 650.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "7"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "104",
+              "name": "Packaged Goods:14g Flower:Alchemy - Alien Marker Smalls 14g"
+            },
+            "UnitPrice": 650,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040001",
+              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 14g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "8",
+          "LineNum": 8,
+          "Description": "*EXT - Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)",
+          "Amount": 0.25,
+          "LinkedTxn": [
+            {
+              "TxnId": "8132",
+              "TxnType": "Estimate",
+              "TxnLineId": "8"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "201",
+              "name": "Packaged Goods:Vape:Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)"
+            },
+            "UnitPrice": 0.25,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040005",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Amount": 4950.25,
+          "DetailType": "SubTotalLineDetail",
+          "SubTotalLineDetail": {}
+        }
+      ],
+      "CustomerRef": {
+        "value": "293",
+        "name": "Sublime Cannabis Co."
+      },
+      "CustomerMemo": {
+        "value": "Invoice reflects Net 30 terms\nCOD price: $4,455.22\n*Payment for COD must be received within 48 hours of delivery\nNet 14 price: $4,702.74\nInvoice will be updated once payments are received in agreed upon timeframes."
+      },
+      "BillAddr": {
+        "Id": "596",
+        "Line1": "800 Falmouth Rd STE 102A",
+        "City": "Mashpee",
+        "CountrySubDivisionCode": "02649"
+      },
+      "ShipAddr": {
+        "Id": "3935",
+        "Line1": "Sublime Cannabis Co.",
+        "Line2": "800 Falmouth Rd STE 102A",
+        "Line3": "Mashpee, 02649"
+      },
+      "FreeFormAddress": true,
+      "SalesTermRef": {
+        "value": "3",
+        "name": "Net 30"
+      },
+      "DueDate": "2026-12-24",
+      "TotalAmt": 4950.25,
+      "ApplyTaxAfterDiscount": false,
+      "PrintStatus": "NotSet",
+      "EmailStatus": "NotSet",
+      "Balance": 4950.25
+    },
+    {
+      "AllowIPNPayment": false,
+      "AllowOnlinePayment": false,
+      "AllowOnlineCreditCardPayment": false,
+      "AllowOnlineACHPayment": false,
+      "AllowOnlinePayPalPayment": false,
+      "AllowOnlineAffirmPayment": false,
+      "domain": "QBO",
+      "sparse": false,
+      "Id": "8169",
+      "SyncToken": "2",
+      "MetaData": {
+        "CreateTime": "2026-11-19T09:50:52-08:00",
+        "LastModifiedByRef": {
+          "value": "9341453343535402"
+        },
+        "LastUpdatedTime": "2026-11-20T10:19:44-08:00"
+      },
+      "CustomField": [],
+      "DocNumber": "1842",
+      "TxnDate": "2026-11-19",
+      "CurrencyRef": {
+        "value": "USD",
+        "name": "United States Dollar"
+      },
+      "LinkedTxn": [
+        {
+          "TxnId": "8099",
+          "TxnType": "Estimate"
+        }
+      ],
+      "Line": [
+        {
+          "Id": "8",
+          "LineNum": 1,
+          "Description": "Lions Breath 3.5g (24 per case)",
+          "Amount": 408.0,
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000101",
+              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
+            },
+            "UnitPrice": 408,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "9",
+          "LineNum": 2,
+          "Description": "Lions Breath 3.5g (25 per case)",
+          "Amount": 425.0,
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000101",
+              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "2",
+          "LineNum": 3,
+          "Description": "Purple Push Pop 3.5g (25 per case)",
+          "Amount": 425.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8099",
+              "TxnType": "Estimate",
+              "TxnLineId": "1"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "159",
+              "name": "Packaged Goods:3.5g Flower:Purple Push Pop - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "3",
+          "LineNum": 4,
+          "Description": "Black Maple 3.5g (25 per case)",
+          "Amount": 425.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8099",
+              "TxnType": "Estimate",
+              "TxnLineId": "2"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "199",
+              "name": "Packaged Goods:3.5g Flower:Black Maple - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "4",
+          "LineNum": 5,
+          "Description": "Rainbow Guava 3.5g (25 per case)",
+          "Amount": 425.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8099",
+              "TxnType": "Estimate",
+              "TxnLineId": "3"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "209",
+              "name": "Packaged Goods:3.5g Flower:Rainbow Guava - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "5",
+          "LineNum": 6,
+          "Description": "Swampwater Fumez 3.5g (25 per case)",
+          "Amount": 425.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8099",
+              "TxnType": "Estimate",
+              "TxnLineId": "4"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "208",
+              "name": "Packaged Goods:3.5g Flower:Swampwater Fumez - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "6",
+          "LineNum": 7,
+          "Description": "Lions Breath 1g Preroll (50 per case)",
+          "Amount": 500.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8099",
+              "TxnType": "Estimate",
+              "TxnLineId": "5"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000521",
+              "name": "Packaged Goods:1g PreRoll:Lions Breath - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "7",
+          "LineNum": 8,
+          "Description": "Blue Andeze 1g Preroll (50 per case)",
+          "Amount": 500.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8099",
+              "TxnType": "Estimate",
+              "TxnLineId": "7"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "147",
+              "name": "Packaged Goods:1g PreRoll:Blue Andeze - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Amount": 3533.0,
+          "DetailType": "SubTotalLineDetail",
+          "SubTotalLineDetail": {}
+        }
+      ],
+      "CustomerRef": {
+        "value": "515",
+        "name": "Lazy River Dracut"
+      },
+      "CustomerMemo": {
+        "value": "Invoice reflects Net 30 terms\nCOD price: $3,179.70\n*Payment for COD must be received within 48 hours of delivery\nNet 14 price: $3,356.35\nInvoice will be updated once payments are received in agreed upon timeframes."
+      },
+      "BillAddr": {
+        "Id": "3156",
+        "Line1": "149 Broadway Rd",
+        "City": "Dracut",
+        "CountrySubDivisionCode": "Ma",
+        "PostalCode": "01826"
+      },
+      "ShipAddr": {
+        "Id": "3933",
+        "Line1": "Lazy River Dracut",
+        "Line2": "149 Broadway Rd",
+        "Line3": "Dracut, Ma  01826"
+      },
+      "FreeFormAddress": true,
+      "SalesTermRef": {
+        "value": "3",
+        "name": "Net 30"
+      },
+      "DueDate": "2026-12-19",
+      "TotalAmt": 3533.0,
+      "ApplyTaxAfterDiscount": false,
+      "PrintStatus": "NotSet",
+      "EmailStatus": "NotSet",
+      "Balance": 3533.0
+    },
+    {
+      "AllowIPNPayment": false,
+      "AllowOnlinePayment": false,
+      "AllowOnlineCreditCardPayment": false,
+      "AllowOnlineACHPayment": false,
+      "AllowOnlinePayPalPayment": false,
+      "AllowOnlineAffirmPayment": false,
+      "domain": "QBO",
+      "sparse": false,
+      "Id": "8168",
+      "SyncToken": "1",
+      "MetaData": {
+        "CreateTime": "2026-11-19T09:36:09-08:00",
+        "LastModifiedByRef": {
+          "value": "9341453343535402"
+        },
+        "LastUpdatedTime": "2026-11-20T10:03:51-08:00"
+      },
+      "CustomField": [],
+      "DocNumber": "1841",
+      "TxnDate": "2026-11-19",
+      "CurrencyRef": {
+        "value": "USD",
+        "name": "United States Dollar"
+      },
+      "LinkedTxn": [
+        {
+          "TxnId": "8087",
+          "TxnType": "Estimate"
+        }
+      ],
+      "Line": [
+        {
+          "Id": "1",
+          "LineNum": 1,
+          "Description": "Purple Push Pop Bulk Flower - 1lb",
+          "Amount": 1200.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "1"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000421",
+              "name": "Bulk Flower:Bulk Flower"
+            },
+            "UnitPrice": 1200,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "166",
+              "name": "Product Sales:Bulk Sales:Bulk Flower"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "2",
+          "LineNum": 2,
+          "Description": "Lions Breath 3.5g (25 per case)",
+          "Amount": 850.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "2"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000101",
+              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "3",
+          "LineNum": 3,
+          "Description": "Swampwater Fumez 3.5g (25 per case)",
+          "Amount": 850.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "3"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "208",
+              "name": "Packaged Goods:3.5g Flower:Swampwater Fumez - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "4",
+          "LineNum": 4,
+          "Description": "Rainbow Guava 3.5g (25 per case)",
+          "Amount": 425.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "4"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "209",
+              "name": "Packaged Goods:3.5g Flower:Rainbow Guava - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "5",
+          "LineNum": 5,
+          "Description": "Blue Andeze 1g Preroll (50 per case)",
+          "Amount": 250.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "5"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "147",
+              "name": "Packaged Goods:1g PreRoll:Blue Andeze - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "6",
+          "LineNum": 6,
+          "Description": "Lions Breath 1g Preroll (50 per case)",
+          "Amount": 250.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "6"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000521",
+              "name": "Packaged Goods:1g PreRoll:Lions Breath - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "7",
+          "LineNum": 7,
+          "Description": "*EXT - Rainbow Guava Live Rosin - 1g (8 Per Case)",
+          "Amount": 240.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "7"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "197",
+              "name": "Packaged Goods:Rosin:Rainbow Guava Live Rosin - 1g (8 Per Case)"
+            },
+            "UnitPrice": 240,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "169",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Rosin"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "8",
+          "LineNum": 8,
+          "Description": "*EXT - Black Maple & Swampwater Fumez Live Rosin - 1g (8 Per Case)",
+          "Amount": 240.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "8"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "198",
+              "name": "Packaged Goods:Rosin:Black Maple & Swampwater Fumez Live Rosin - 1g (8 Per Case)"
+            },
+            "UnitPrice": 240,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "169",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Rosin"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "9",
+          "LineNum": 9,
+          "Description": "*EXT - Cape White Shark Live Resin 1g Disposable Vape (25 Per Case)",
+          "Amount": 531.25,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "9"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "210",
+              "name": "Packaged Goods:Vape:Cape White Shark Live Resin 1g Disposable Vape (25 Per Case) - copy"
+            },
+            "UnitPrice": 531.25,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040005",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "10",
+          "LineNum": 10,
+          "Description": "Alchemy - Swampwater Fumez Preground 14g (20 Per Case)",
+          "Amount": 880.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "10"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "205",
+              "name": "Packaged Goods:14g Preground Flower:Alchemy - Lions Breath Preground 14g"
+            },
+            "UnitPrice": 440,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "1150040001",
+              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 14g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "11",
+          "LineNum": 11,
+          "Description": "Alchemy - Lions Breath Smalls 14g (20 Per Case)",
+          "Amount": 650.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "11"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "106",
+              "name": "Packaged Goods:14g Flower:Alchemy - Lions Breath Smalls 14g"
+            },
+            "UnitPrice": 650,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040001",
+              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 14g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "12",
+          "LineNum": 12,
+          "Description": "Alchemy - Cape White Shark 14g (20 Per Case)",
+          "Amount": 650.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "8087",
+              "TxnType": "Estimate",
+              "TxnLineId": "12"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "105",
+              "name": "Packaged Goods:14g Flower:Alchemy - Cape White Shark Smalls 14g"
+            },
+            "UnitPrice": 650,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040001",
+              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 14g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Amount": 7016.25,
+          "DetailType": "SubTotalLineDetail",
+          "SubTotalLineDetail": {}
+        }
+      ],
+      "CustomerRef": {
+        "value": "279",
+        "name": "Seaside Joint Ventures Inc."
+      },
+      "CustomerMemo": {
+        "value": "Invoice reflects Net 30 terms\nCOD price: $6,314.62\n*Payment for COD must be received within 48 hours of delivery\nNet 14 price: $6,665.44\nInvoice will be updated once payments are received in agreed upon timeframes."
+      },
+      "BillAddr": {
+        "Id": "516",
+        "Line1": "14 Lots Hollow Road",
+        "City": "Orleans",
+        "CountrySubDivisionCode": "MA",
+        "PostalCode": "02653"
+      },
+      "ShipAddr": {
+        "Id": "3932",
+        "Line1": "Seaside Joint Ventures Inc.",
+        "Line2": "14 Lots Hollow Road",
+        "Line3": "Orleans, MA  02653"
+      },
+      "FreeFormAddress": true,
+      "SalesTermRef": {
+        "value": "3",
+        "name": "Net 30"
+      },
+      "DueDate": "2026-12-20",
+      "TotalAmt": 7016.25,
+      "ApplyTaxAfterDiscount": false,
+      "PrintStatus": "NotSet",
+      "EmailStatus": "NotSet",
+      "Balance": 7016.25
+    },
+    {
+      "AllowIPNPayment": false,
+      "AllowOnlinePayment": false,
+      "AllowOnlineCreditCardPayment": false,
+      "AllowOnlineACHPayment": false,
+      "AllowOnlinePayPalPayment": false,
+      "AllowOnlineAffirmPayment": false,
+      "domain": "QBO",
+      "sparse": false,
+      "Id": "8111",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-11-13T09:18:30-08:00",
         "LastModifiedByRef": {
           "value": "9341453343535402"
         },
-        "LastUpdatedTime": "2026-11-13T09:18:30-08:00"
+        "LastUpdatedTime": "2026-11-20T11:10:16-08:00"
       },
       "CustomField": [],
       "DocNumber": "1838",
-      "TxnDate": "2026-11-13",
+      "TxnDate": "2026-11-17",
       "CurrencyRef": {
         "value": "USD",
         "name": "United States Dollar"
@@ -393,7 +1428,7 @@
         "value": "3",
         "name": "Net 30"
       },
-      "DueDate": "2026-12-13",
+      "DueDate": "2026-12-17",
       "TotalAmt": 5745.0,
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
@@ -410,17 +1445,17 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "8110",
-      "SyncToken": "0",
+      "SyncToken": "2",
       "MetaData": {
         "CreateTime": "2026-11-13T09:15:51-08:00",
         "LastModifiedByRef": {
           "value": "9341453343535402"
         },
-        "LastUpdatedTime": "2026-11-13T09:15:51-08:00"
+        "LastUpdatedTime": "2026-11-17T09:05:39-08:00"
       },
       "CustomField": [],
       "DocNumber": "1837",
-      "TxnDate": "2026-11-13",
+      "TxnDate": "2026-11-17",
       "CurrencyRef": {
         "value": "USD",
         "name": "United States Dollar"
@@ -493,17 +1528,10 @@
           "CustomExtensions": []
         },
         {
-          "Id": "3",
+          "Id": "12",
           "LineNum": 3,
           "Description": "Swampwater Fumez 3.5g (25 per case)",
-          "Amount": 750.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "8094",
-              "TxnType": "Estimate",
-              "TxnLineId": "3"
-            }
-          ],
+          "Amount": 375.0,
           "DetailType": "SalesItemLineDetail",
           "SalesItemLineDetail": {
             "ItemRef": {
@@ -511,7 +1539,7 @@
               "name": "Packaged Goods:3.5g Flower:Swampwater Fumez - 3.5g"
             },
             "UnitPrice": 375,
-            "Qty": 2,
+            "Qty": 1,
             "ItemAccountRef": {
               "value": "164",
               "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
@@ -763,7 +1791,7 @@
           "CustomExtensions": []
         },
         {
-          "Amount": 4667.62,
+          "Amount": 4292.62,
           "DetailType": "SubTotalLineDetail",
           "SubTotalLineDetail": {}
         }
@@ -790,12 +1818,697 @@
         "value": "3",
         "name": "Net 30"
       },
-      "DueDate": "2026-12-13",
-      "TotalAmt": 4667.62,
+      "DueDate": "2026-12-17",
+      "TotalAmt": 4292.62,
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 4667.62
+      "Balance": 4292.62
+    },
+    {
+      "AllowIPNPayment": false,
+      "AllowOnlinePayment": false,
+      "AllowOnlineCreditCardPayment": false,
+      "AllowOnlineACHPayment": false,
+      "AllowOnlinePayPalPayment": false,
+      "AllowOnlineAffirmPayment": false,
+      "domain": "QBO",
+      "sparse": false,
+      "Id": "8060",
+      "SyncToken": "6",
+      "MetaData": {
+        "CreateTime": "2026-11-05T11:55:10-08:00",
+        "LastModifiedByRef": {
+          "value": "9341453382031739"
+        },
+        "LastUpdatedTime": "2026-11-18T12:41:53-08:00"
+      },
+      "CustomField": [],
+      "DocNumber": "1822",
+      "TxnDate": "2026-11-17",
+      "CurrencyRef": {
+        "value": "USD",
+        "name": "United States Dollar"
+      },
+      "LinkedTxn": [
+        {
+          "TxnId": "7994",
+          "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8160",
+          "TxnType": "Payment"
+        },
+        {
+          "TxnId": "8141",
+          "TxnType": "Payment"
+        }
+      ],
+      "Line": [
+        {
+          "Id": "1",
+          "LineNum": 1,
+          "Description": "Lions Breath 3.5g (25 per case)",
+          "Amount": 850.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7994",
+              "TxnType": "Estimate",
+              "TxnLineId": "1"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000101",
+              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
+            },
+            "UnitPrice": 425,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "2",
+          "LineNum": 2,
+          "Description": "Blue Andeze 1g Preroll (50 per case)",
+          "Amount": 250.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7994",
+              "TxnType": "Estimate",
+              "TxnLineId": "2"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "147",
+              "name": "Packaged Goods:1g PreRoll:Blue Andeze - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "3",
+          "LineNum": 3,
+          "Description": "Black Maple 1g Preroll (50 per case)",
+          "Amount": 500.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7994",
+              "TxnType": "Estimate",
+              "TxnLineId": "3"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "204",
+              "name": "Packaged Goods:1g PreRoll:Black Maple - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "4",
+          "LineNum": 4,
+          "Description": "Lions Breath 1g Preroll (50 per case)",
+          "Amount": 500.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7994",
+              "TxnType": "Estimate",
+              "TxnLineId": "4"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000521",
+              "name": "Packaged Goods:1g PreRoll:Lions Breath - Preroll"
+            },
+            "UnitPrice": 250,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "5",
+          "LineNum": 5,
+          "Description": "*EXT - Black Maple & Swampwater Fumez Live Rosin - 1g (8 Per Case)",
+          "Amount": 480.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7994",
+              "TxnType": "Estimate",
+              "TxnLineId": "5"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "198",
+              "name": "Packaged Goods:Rosin:Black Maple & Swampwater Fumez Live Rosin - 1g (8 Per Case)"
+            },
+            "UnitPrice": 240,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "169",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Rosin"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "6",
+          "LineNum": 6,
+          "Description": "Alchemy - Lions Breath Preground 7g (25 Per Case)",
+          "Amount": 300.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7994",
+              "TxnType": "Estimate",
+              "TxnLineId": "7"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "206",
+              "name": "Packaged Goods:7g Preground Flower:Alchemy - Lions Breath Preground 7g"
+            },
+            "UnitPrice": 300,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040004",
+              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 7g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Amount": 2880.0,
+          "DetailType": "SubTotalLineDetail",
+          "SubTotalLineDetail": {}
+        },
+        {
+          "Amount": 288.0,
+          "DetailType": "DiscountLineDetail",
+          "DiscountLineDetail": {
+            "PercentBased": true,
+            "DiscountPercent": 10,
+            "DiscountAccountRef": {
+              "value": "172",
+              "name": "Product Sales:Total Discounts"
+            }
+          }
+        }
+      ],
+      "CustomerRef": {
+        "value": "444",
+        "name": "BOUTIQ"
+      },
+      "CustomerMemo": {
+        "value": "Invoice reflects Net 30 terms\nCOD price: $2,352.00\n*Payment for COD must be received within 48 hours of delivery\nNet 14 price: $2,496.00\nInvoice will be updated once payments are received in agreed upon timeframes."
+      },
+      "BillAddr": {
+        "Id": "1823",
+        "Line1": "71 Maverick Square",
+        "City": "East Boston",
+        "CountrySubDivisionCode": "MA",
+        "PostalCode": "02128"
+      },
+      "ShipAddr": {
+        "Id": "3888",
+        "Line1": "BOUTIQ",
+        "Line2": "71 Maverick Square",
+        "Line3": "East Boston, MA  02128"
+      },
+      "FreeFormAddress": true,
+      "SalesTermRef": {
+        "value": "3",
+        "name": "Net 30"
+      },
+      "DueDate": "2026-12-17",
+      "TotalAmt": 2592.0,
+      "ApplyTaxAfterDiscount": false,
+      "PrintStatus": "NotSet",
+      "EmailStatus": "NotSet",
+      "Balance": 0
+    },
+    {
+      "AllowIPNPayment": false,
+      "AllowOnlinePayment": false,
+      "AllowOnlineCreditCardPayment": false,
+      "AllowOnlineACHPayment": false,
+      "AllowOnlinePayPalPayment": false,
+      "AllowOnlineAffirmPayment": false,
+      "domain": "QBO",
+      "sparse": false,
+      "Id": "8057",
+      "SyncToken": "2",
+      "MetaData": {
+        "CreateTime": "2026-11-05T11:51:09-08:00",
+        "LastModifiedByRef": {
+          "value": "9341453343535402"
+        },
+        "LastUpdatedTime": "2026-11-19T09:29:02-08:00"
+      },
+      "CustomField": [],
+      "DocNumber": "1819",
+      "TxnDate": "2026-11-16",
+      "CurrencyRef": {
+        "value": "USD",
+        "name": "United States Dollar"
+      },
+      "LinkedTxn": [
+        {
+          "TxnId": "7987",
+          "TxnType": "Estimate"
+        }
+      ],
+      "Line": [
+        {
+          "Id": "1",
+          "LineNum": 1,
+          "Description": "Purple Push Pop 3.5g (25 per case)",
+          "Amount": 375.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "1"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "159",
+              "name": "Packaged Goods:3.5g Flower:Purple Push Pop - 3.5g"
+            },
+            "UnitPrice": 375,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "2",
+          "LineNum": 2,
+          "Description": "Black Maple 3.5g (25 per case)",
+          "Amount": 375.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "2"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "199",
+              "name": "Packaged Goods:3.5g Flower:Black Maple - 3.5g"
+            },
+            "UnitPrice": 375,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "3",
+          "LineNum": 3,
+          "Description": "Lions Breath 3.5g (25 per case)",
+          "Amount": 375.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "3"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "1010000101",
+              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
+            },
+            "UnitPrice": 375,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "12",
+          "LineNum": 4,
+          "Description": "Rainbow Guava 3.5g (25 per case)",
+          "Amount": 375.0,
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "209",
+              "name": "Packaged Goods:3.5g Flower:Rainbow Guava - 3.5g"
+            },
+            "UnitPrice": 375,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "13",
+          "LineNum": 5,
+          "Description": "Golden Lemons 1g Preroll (50 per case)",
+          "Amount": 200.0,
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "207",
+              "name": "Packaged Goods:1g PreRoll:Golden Lemons - Preroll"
+            },
+            "UnitPrice": 200,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "4",
+          "LineNum": 6,
+          "Description": "Lions Breath 1g Preroll (50 per case)",
+          "Amount": 400.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "4"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "204",
+              "name": "Packaged Goods:1g PreRoll:Black Maple - Preroll"
+            },
+            "UnitPrice": 200,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "5",
+          "LineNum": 7,
+          "Description": "Black Maple 1g Preroll (50 per case)",
+          "Amount": 400.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "5"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "204",
+              "name": "Packaged Goods:1g PreRoll:Black Maple - Preroll"
+            },
+            "UnitPrice": 200,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "7",
+          "LineNum": 8,
+          "Description": "Blue Andeze 1g Preroll (50 per case)",
+          "Amount": 400.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "7"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "147",
+              "name": "Packaged Goods:1g PreRoll:Blue Andeze - Preroll"
+            },
+            "UnitPrice": 200,
+            "Qty": 2,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "8",
+          "LineNum": 9,
+          "Description": "*EXT - Lions Breath .5g Live Rosin Vape (25 Per Case)",
+          "Amount": 437.5,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "8"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "160",
+              "name": "Packaged Goods:Vape:Lions Breath .5g Live Rosin Vape (25 Per Case)"
+            },
+            "UnitPrice": 437.5,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040005",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "9",
+          "LineNum": 10,
+          "Description": "*EXT - Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)",
+          "Amount": 625.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "9"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "201",
+              "name": "Packaged Goods:Vape:Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)"
+            },
+            "UnitPrice": 625,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040005",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "10",
+          "LineNum": 11,
+          "Description": "*EXT - Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)",
+          "Amount": 625.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "10"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "200",
+              "name": "Packaged Goods:Vape:Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)"
+            },
+            "UnitPrice": 625,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040005",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "11",
+          "LineNum": 12,
+          "Description": "*EXT - Cape White Shark Live Resin 1g Disposable Vape (25 Per Case)",
+          "Amount": 625.0,
+          "LinkedTxn": [
+            {
+              "TxnId": "7987",
+              "TxnType": "Estimate",
+              "TxnLineId": "11"
+            }
+          ],
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "200",
+              "name": "Packaged Goods:Vape:Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)"
+            },
+            "UnitPrice": 625,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "1150040005",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Amount": 5212.5,
+          "DetailType": "SubTotalLineDetail",
+          "SubTotalLineDetail": {}
+        }
+      ],
+      "CustomerRef": {
+        "value": "434",
+        "name": "Zen Leaf"
+      },
+      "BillAddr": {
+        "Id": "1729",
+        "Line1": "2 Merchant St ",
+        "Line2": "Suite 1",
+        "City": "Sharon",
+        "CountrySubDivisionCode": "MA",
+        "PostalCode": "02067"
+      },
+      "ShipAddr": {
+        "Id": "3885",
+        "Line1": "Zen Leaf",
+        "Line2": "2 Merchant St ",
+        "Line3": "Suite 1",
+        "Line4": "Sharon, MA  02067"
+      },
+      "FreeFormAddress": true,
+      "SalesTermRef": {
+        "value": "3",
+        "name": "Net 30"
+      },
+      "DueDate": "2026-12-19",
+      "TotalAmt": 5212.5,
+      "ApplyTaxAfterDiscount": false,
+      "PrintStatus": "NotSet",
+      "EmailStatus": "NotSet",
+      "Balance": 5212.5
     },
     {
       "AllowIPNPayment": false,
@@ -1857,13 +3570,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "8095",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-11-10T13:08:00-08:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-11-10T13:08:00-08:00"
+        "LastUpdatedTime": "2026-11-16T05:56:30-08:00"
       },
       "CustomField": [],
       "DocNumber": "1828",
@@ -1876,6 +3589,10 @@
         {
           "TxnId": "8065",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8116",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -2004,7 +3721,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 3100.0
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -3732,253 +5449,6 @@
       "AllowOnlineAffirmPayment": false,
       "domain": "QBO",
       "sparse": false,
-      "Id": "8060",
-      "SyncToken": "0",
-      "MetaData": {
-        "CreateTime": "2026-11-05T11:55:10-08:00",
-        "LastModifiedByRef": {
-          "value": "9341453343535402"
-        },
-        "LastUpdatedTime": "2026-11-05T11:55:10-08:00"
-      },
-      "CustomField": [],
-      "DocNumber": "1822",
-      "TxnDate": "2026-11-09",
-      "CurrencyRef": {
-        "value": "USD",
-        "name": "United States Dollar"
-      },
-      "LinkedTxn": [
-        {
-          "TxnId": "7994",
-          "TxnType": "Estimate"
-        }
-      ],
-      "Line": [
-        {
-          "Id": "1",
-          "LineNum": 1,
-          "Description": "Lions Breath 3.5g (25 per case)",
-          "Amount": 850.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7994",
-              "TxnType": "Estimate",
-              "TxnLineId": "1"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "1010000101",
-              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
-            },
-            "UnitPrice": 425,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "164",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "2",
-          "LineNum": 2,
-          "Description": "Blue Andeze 1g Preroll (50 per case)",
-          "Amount": 250.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7994",
-              "TxnType": "Estimate",
-              "TxnLineId": "2"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "147",
-              "name": "Packaged Goods:1g PreRoll:Blue Andeze - Preroll"
-            },
-            "UnitPrice": 250,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "3",
-          "LineNum": 3,
-          "Description": "Black Maple 1g Preroll (50 per case)",
-          "Amount": 500.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7994",
-              "TxnType": "Estimate",
-              "TxnLineId": "3"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "204",
-              "name": "Packaged Goods:1g PreRoll:Black Maple - Preroll"
-            },
-            "UnitPrice": 250,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "4",
-          "LineNum": 4,
-          "Description": "Lions Breath 1g Preroll (50 per case)",
-          "Amount": 500.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7994",
-              "TxnType": "Estimate",
-              "TxnLineId": "4"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "1010000521",
-              "name": "Packaged Goods:1g PreRoll:Lions Breath - Preroll"
-            },
-            "UnitPrice": 250,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "5",
-          "LineNum": 5,
-          "Description": "*EXT - Black Maple & Swampwater Fumez Live Rosin - 1g (8 Per Case)",
-          "Amount": 480.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7994",
-              "TxnType": "Estimate",
-              "TxnLineId": "5"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "198",
-              "name": "Packaged Goods:Rosin:Black Maple & Swampwater Fumez Live Rosin - 1g (8 Per Case)"
-            },
-            "UnitPrice": 240,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "169",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - Rosin"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "6",
-          "LineNum": 6,
-          "Description": "Alchemy - Lions Breath Preground 7g (25 Per Case)",
-          "Amount": 300.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7994",
-              "TxnType": "Estimate",
-              "TxnLineId": "7"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "206",
-              "name": "Packaged Goods:7g Preground Flower:Alchemy - Lions Breath Preground 7g"
-            },
-            "UnitPrice": 300,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "1150040004",
-              "name": "Product Sales:Alchemy Sales:Packaged Goods - Alchemy - 7g"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Amount": 2880.0,
-          "DetailType": "SubTotalLineDetail",
-          "SubTotalLineDetail": {}
-        }
-      ],
-      "CustomerRef": {
-        "value": "444",
-        "name": "BOUTIQ"
-      },
-      "BillAddr": {
-        "Id": "1823",
-        "Line1": "71 Maverick Square",
-        "City": "East Boston",
-        "CountrySubDivisionCode": "MA",
-        "PostalCode": "02128"
-      },
-      "ShipAddr": {
-        "Id": "3888",
-        "Line1": "BOUTIQ",
-        "Line2": "71 Maverick Square",
-        "Line3": "East Boston, MA  02128"
-      },
-      "FreeFormAddress": true,
-      "SalesTermRef": {
-        "value": "3",
-        "name": "Net 30"
-      },
-      "DueDate": "2026-12-09",
-      "TotalAmt": 2880.0,
-      "ApplyTaxAfterDiscount": false,
-      "PrintStatus": "NotSet",
-      "EmailStatus": "NotSet",
-      "Balance": 2880.0
-    },
-    {
-      "AllowIPNPayment": false,
-      "AllowOnlinePayment": false,
-      "AllowOnlineCreditCardPayment": false,
-      "AllowOnlineACHPayment": false,
-      "AllowOnlinePayPalPayment": false,
-      "AllowOnlineAffirmPayment": false,
-      "domain": "QBO",
-      "sparse": false,
       "Id": "8058",
       "SyncToken": "2",
       "MetaData": {
@@ -4452,413 +5922,14 @@
       "AllowOnlineAffirmPayment": false,
       "domain": "QBO",
       "sparse": false,
-      "Id": "8057",
-      "SyncToken": "0",
-      "MetaData": {
-        "CreateTime": "2026-11-05T11:51:09-08:00",
-        "LastModifiedByRef": {
-          "value": "9341453343535402"
-        },
-        "LastUpdatedTime": "2026-11-05T11:51:09-08:00"
-      },
-      "CustomField": [],
-      "DocNumber": "1819",
-      "TxnDate": "2026-11-09",
-      "CurrencyRef": {
-        "value": "USD",
-        "name": "United States Dollar"
-      },
-      "LinkedTxn": [
-        {
-          "TxnId": "7987",
-          "TxnType": "Estimate"
-        }
-      ],
-      "Line": [
-        {
-          "Id": "1",
-          "LineNum": 1,
-          "Description": "Purple Push Pop 3.5g (25 per case)",
-          "Amount": 375.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "1"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "159",
-              "name": "Packaged Goods:3.5g Flower:Purple Push Pop - 3.5g"
-            },
-            "UnitPrice": 375,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "164",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "2",
-          "LineNum": 2,
-          "Description": "Black Maple 3.5g (25 per case)",
-          "Amount": 375.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "2"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "199",
-              "name": "Packaged Goods:3.5g Flower:Black Maple - 3.5g"
-            },
-            "UnitPrice": 375,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "164",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "3",
-          "LineNum": 3,
-          "Description": "Lions Breath 3.5g (25 per case)",
-          "Amount": 375.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "3"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "1010000101",
-              "name": "Packaged Goods:3.5g Flower:Lions Breath - 3.5g"
-            },
-            "UnitPrice": 375,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "164",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "4",
-          "LineNum": 4,
-          "Description": "Black Maple 1g Preroll (50 per case)",
-          "Amount": 400.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "4"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "204",
-              "name": "Packaged Goods:1g PreRoll:Black Maple - Preroll"
-            },
-            "UnitPrice": 200,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "5",
-          "LineNum": 5,
-          "Description": "Black Maple 1g Preroll (50 per case)",
-          "Amount": 400.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "5"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "204",
-              "name": "Packaged Goods:1g PreRoll:Black Maple - Preroll"
-            },
-            "UnitPrice": 200,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "6",
-          "LineNum": 6,
-          "Description": "Golden Lemons 1g Preroll (50 per case)",
-          "Amount": 400.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "6"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "207",
-              "name": "Packaged Goods:1g PreRoll:Golden Lemons - Preroll"
-            },
-            "UnitPrice": 200,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "7",
-          "LineNum": 7,
-          "Description": "Blue Andeze 1g Preroll (50 per case)",
-          "Amount": 400.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "7"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "147",
-              "name": "Packaged Goods:1g PreRoll:Blue Andeze - Preroll"
-            },
-            "UnitPrice": 200,
-            "Qty": 2,
-            "ItemAccountRef": {
-              "value": "165",
-              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "8",
-          "LineNum": 8,
-          "Description": "*EXT - Lions Breath .5g Live Rosin Vape (25 Per Case)",
-          "Amount": 437.5,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "8"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "160",
-              "name": "Packaged Goods:Vape:Lions Breath .5g Live Rosin Vape (25 Per Case)"
-            },
-            "UnitPrice": 437.5,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "1150040005",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "9",
-          "LineNum": 9,
-          "Description": "*EXT - Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)",
-          "Amount": 625.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "9"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "201",
-              "name": "Packaged Goods:Vape:Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)"
-            },
-            "UnitPrice": 625,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "1150040005",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "10",
-          "LineNum": 10,
-          "Description": "*EXT - Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)",
-          "Amount": 625.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "10"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "200",
-              "name": "Packaged Goods:Vape:Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)"
-            },
-            "UnitPrice": 625,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "1150040005",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Id": "11",
-          "LineNum": 11,
-          "Description": "*EXT - Cape White Shark Live Resin 1g Disposable Vape (25 Per Case)",
-          "Amount": 625.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7987",
-              "TxnType": "Estimate",
-              "TxnLineId": "11"
-            }
-          ],
-          "DetailType": "SalesItemLineDetail",
-          "SalesItemLineDetail": {
-            "ItemRef": {
-              "value": "200",
-              "name": "Packaged Goods:Vape:Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)"
-            },
-            "UnitPrice": 625,
-            "Qty": 1,
-            "ItemAccountRef": {
-              "value": "1150040005",
-              "name": "Product Sales:CCGL Sales:Packaged Goods - Vape"
-            },
-            "TaxCodeRef": {
-              "value": "NON"
-            }
-          },
-          "CustomExtensions": []
-        },
-        {
-          "Amount": 5037.5,
-          "DetailType": "SubTotalLineDetail",
-          "SubTotalLineDetail": {}
-        }
-      ],
-      "CustomerRef": {
-        "value": "434",
-        "name": "Zen Leaf"
-      },
-      "BillAddr": {
-        "Id": "1729",
-        "Line1": "2 Merchant St ",
-        "Line2": "Suite 1",
-        "City": "Sharon",
-        "CountrySubDivisionCode": "MA",
-        "PostalCode": "02067"
-      },
-      "ShipAddr": {
-        "Id": "3885",
-        "Line1": "Zen Leaf",
-        "Line2": "2 Merchant St ",
-        "Line3": "Suite 1",
-        "Line4": "Sharon, MA  02067"
-      },
-      "FreeFormAddress": true,
-      "SalesTermRef": {
-        "value": "3",
-        "name": "Net 30"
-      },
-      "DueDate": "2026-12-09",
-      "TotalAmt": 5037.5,
-      "ApplyTaxAfterDiscount": false,
-      "PrintStatus": "NotSet",
-      "EmailStatus": "NotSet",
-      "Balance": 5037.5
-    },
-    {
-      "AllowIPNPayment": false,
-      "AllowOnlinePayment": false,
-      "AllowOnlineCreditCardPayment": false,
-      "AllowOnlineACHPayment": false,
-      "AllowOnlinePayPalPayment": false,
-      "AllowOnlineAffirmPayment": false,
-      "domain": "QBO",
-      "sparse": false,
       "Id": "8056",
-      "SyncToken": "0",
+      "SyncToken": "2",
       "MetaData": {
         "CreateTime": "2026-11-05T11:50:39-08:00",
         "LastModifiedByRef": {
           "value": "9341453343535402"
         },
-        "LastUpdatedTime": "2026-11-05T11:50:39-08:00"
+        "LastUpdatedTime": "2026-11-19T09:30:06-08:00"
       },
       "CustomField": [],
       "DocNumber": "1818",
@@ -4935,8 +6006,31 @@
           "CustomExtensions": []
         },
         {
-          "Id": "3",
+          "Id": "12",
           "LineNum": 3,
+          "Description": "Rainbow Guava 3.5g (25 per case)",
+          "Amount": 375.0,
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "209",
+              "name": "Packaged Goods:3.5g Flower:Rainbow Guava - 3.5g"
+            },
+            "UnitPrice": 375,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "164",
+              "name": "Product Sales:CCGL Sales:Packaged Goods - CCGL - 3.5g"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "3",
+          "LineNum": 4,
           "Description": "Lions Breath 3.5g (25 per case)",
           "Amount": 750.0,
           "LinkedTxn": [
@@ -4966,7 +6060,7 @@
         },
         {
           "Id": "4",
-          "LineNum": 4,
+          "LineNum": 5,
           "Description": "Lions Breath 1g Preroll (50 per case)",
           "Amount": 400.0,
           "LinkedTxn": [
@@ -4996,7 +6090,7 @@
         },
         {
           "Id": "5",
-          "LineNum": 5,
+          "LineNum": 6,
           "Description": "Black Maple 1g Preroll (50 per case)",
           "Amount": 400.0,
           "LinkedTxn": [
@@ -5026,7 +6120,7 @@
         },
         {
           "Id": "6",
-          "LineNum": 6,
+          "LineNum": 7,
           "Description": "Golden Lemons 1g Preroll (50 per case)",
           "Amount": 400.0,
           "LinkedTxn": [
@@ -5056,7 +6150,7 @@
         },
         {
           "Id": "7",
-          "LineNum": 7,
+          "LineNum": 8,
           "Description": "Blue Andeze 1g Preroll (50 per case)",
           "Amount": 400.0,
           "LinkedTxn": [
@@ -5086,7 +6180,7 @@
         },
         {
           "Id": "8",
-          "LineNum": 8,
+          "LineNum": 9,
           "Description": "*EXT - Lions Breath .5g Live Rosin Vape (25 Per Case)",
           "Amount": 437.5,
           "LinkedTxn": [
@@ -5116,7 +6210,7 @@
         },
         {
           "Id": "9",
-          "LineNum": 9,
+          "LineNum": 10,
           "Description": "*EXT - Blue Andeze Live Resin 1g Disposable Vape (25 Per Case)",
           "Amount": 625.0,
           "LinkedTxn": [
@@ -5146,7 +6240,7 @@
         },
         {
           "Id": "10",
-          "LineNum": 10,
+          "LineNum": 11,
           "Description": "*EXT - Galactic Banana Live Resin 1g Disposable Vape (25 Per Case)",
           "Amount": 625.0,
           "LinkedTxn": [
@@ -5176,7 +6270,7 @@
         },
         {
           "Id": "11",
-          "LineNum": 11,
+          "LineNum": 12,
           "Description": "*EXT - Cape White Shark Live Resin 1g Disposable Vape (25 Per Case)",
           "Amount": 625.0,
           "LinkedTxn": [
@@ -5205,7 +6299,7 @@
           "CustomExtensions": []
         },
         {
-          "Amount": 5412.5,
+          "Amount": 5787.5,
           "DetailType": "SubTotalLineDetail",
           "SubTotalLineDetail": {}
         }
@@ -5233,11 +6327,11 @@
         "name": "Net 30"
       },
       "DueDate": "2026-12-09",
-      "TotalAmt": 5412.5,
+      "TotalAmt": 5787.5,
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 5412.5
+      "Balance": 5787.5
     },
     {
       "AllowIPNPayment": false,
@@ -5526,13 +6620,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "8054",
-      "SyncToken": "1",
+      "SyncToken": "2",
       "MetaData": {
         "CreateTime": "2026-11-05T11:47:49-08:00",
         "LastModifiedByRef": {
           "value": "9341453343535402"
         },
-        "LastUpdatedTime": "2026-11-10T05:55:55-08:00"
+        "LastUpdatedTime": "2026-11-19T09:25:09-08:00"
       },
       "CustomField": [],
       "DocNumber": "1816",
@@ -5639,17 +6733,10 @@
           "CustomExtensions": []
         },
         {
-          "Id": "5",
+          "Id": "10",
           "LineNum": 4,
           "Description": "Golden Lemons 1g Preroll (50 per case)",
-          "Amount": 400.0,
-          "LinkedTxn": [
-            {
-              "TxnId": "7984",
-              "TxnType": "Estimate",
-              "TxnLineId": "5"
-            }
-          ],
+          "Amount": 200.0,
           "DetailType": "SalesItemLineDetail",
           "SalesItemLineDetail": {
             "ItemRef": {
@@ -5657,7 +6744,30 @@
               "name": "Packaged Goods:1g PreRoll:Golden Lemons - Preroll"
             },
             "UnitPrice": 200,
-            "Qty": 2,
+            "Qty": 1,
+            "ItemAccountRef": {
+              "value": "165",
+              "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
+            },
+            "TaxCodeRef": {
+              "value": "NON"
+            }
+          },
+          "CustomExtensions": []
+        },
+        {
+          "Id": "11",
+          "LineNum": 5,
+          "Description": "Golden Lemons 1g Preroll (40 per case)",
+          "Amount": 40.0,
+          "DetailType": "SalesItemLineDetail",
+          "SalesItemLineDetail": {
+            "ItemRef": {
+              "value": "207",
+              "name": "Packaged Goods:1g PreRoll:Golden Lemons - Preroll"
+            },
+            "UnitPrice": 40,
+            "Qty": 1,
             "ItemAccountRef": {
               "value": "165",
               "name": "Product Sales:CCGL Sales:Packaged Goods -  CCGL - PreRolls"
@@ -5670,7 +6780,7 @@
         },
         {
           "Id": "6",
-          "LineNum": 5,
+          "LineNum": 6,
           "Description": "Blue Andeze 1g Preroll (50 per case)",
           "Amount": 400.0,
           "LinkedTxn": [
@@ -5700,7 +6810,7 @@
         },
         {
           "Id": "7",
-          "LineNum": 6,
+          "LineNum": 7,
           "Description": "*EXT - Lions Breath .5g Live Rosin Vape (25 Per Case)",
           "Amount": 437.5,
           "LinkedTxn": [
@@ -5730,7 +6840,7 @@
         },
         {
           "Id": "8",
-          "LineNum": 7,
+          "LineNum": 8,
           "Description": "Lions Breath 1g Preroll (50 per case)",
           "Amount": 600.0,
           "DetailType": "SalesItemLineDetail",
@@ -5753,7 +6863,7 @@
         },
         {
           "Id": "9",
-          "LineNum": 8,
+          "LineNum": 9,
           "Description": "Lions Breath 1g Preroll (60 per case)",
           "Amount": 200.0,
           "DetailType": "SalesItemLineDetail",
@@ -5775,7 +6885,7 @@
           "CustomExtensions": []
         },
         {
-          "Amount": 5412.5,
+          "Amount": 5252.5,
           "DetailType": "SubTotalLineDetail",
           "SubTotalLineDetail": {}
         }
@@ -5803,14 +6913,14 @@
         "name": "Net 30"
       },
       "DueDate": "2026-12-09",
-      "TotalAmt": 5412.5,
+      "TotalAmt": 5252.5,
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
       "BillEmail": {
         "Address": "chris_y@healthcirclema.com"
       },
-      "Balance": 5412.5
+      "Balance": 5252.5
     },
     {
       "AllowIPNPayment": false,
@@ -12533,13 +13643,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7919",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-10-27T12:35:36-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-27T12:35:36-07:00"
+        "LastUpdatedTime": "2026-11-18T05:31:38-08:00"
       },
       "CustomField": [],
       "DocNumber": "1788",
@@ -12552,6 +13662,10 @@
         {
           "TxnId": "7860",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8150",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -12861,7 +13975,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 4052.5
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -12873,13 +13987,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7918",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-10-27T12:34:37-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-27T12:34:37-07:00"
+        "LastUpdatedTime": "2026-11-18T05:31:37-08:00"
       },
       "CustomField": [],
       "DocNumber": "1787",
@@ -12892,6 +14006,10 @@
         {
           "TxnId": "7859",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8149",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -13231,7 +14349,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 3877.5
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -13613,13 +14731,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7916",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-10-27T12:31:44-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-27T12:31:44-07:00"
+        "LastUpdatedTime": "2026-11-18T05:31:36-08:00"
       },
       "CustomField": [],
       "DocNumber": "1785",
@@ -13632,6 +14750,10 @@
         {
           "TxnId": "7722",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8148",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -13728,7 +14850,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 5104.0
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -13740,13 +14862,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7915",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-10-27T12:30:35-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-27T12:30:35-07:00"
+        "LastUpdatedTime": "2026-11-18T05:31:35-08:00"
       },
       "CustomField": [],
       "DocNumber": "1784",
@@ -13759,6 +14881,10 @@
         {
           "TxnId": "7721",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8147",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -14098,7 +15224,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 4717.5
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -17067,13 +18193,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7850",
-      "SyncToken": "1",
+      "SyncToken": "2",
       "MetaData": {
         "CreateTime": "2026-10-21T06:05:56-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-22T12:19:29-07:00"
+        "LastUpdatedTime": "2026-11-16T06:34:56-08:00"
       },
       "CustomField": [],
       "DocNumber": "1774",
@@ -17086,6 +18212,10 @@
         {
           "TxnId": "7814",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8125",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -17397,7 +18527,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 7995.0
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -17409,13 +18539,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7803",
-      "SyncToken": "2",
+      "SyncToken": "3",
       "MetaData": {
         "CreateTime": "2026-10-14T07:54:58-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-14T07:57:52-07:00"
+        "LastUpdatedTime": "2026-11-16T05:55:17-08:00"
       },
       "CustomField": [],
       "DocNumber": "1773",
@@ -17428,6 +18558,10 @@
         {
           "TxnId": "7716",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8114",
+          "TxnType": "Payment"
         },
         {
           "TxnId": "7804",
@@ -17681,7 +18815,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 2706.0
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -17693,13 +18827,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7802",
-      "SyncToken": "2",
+      "SyncToken": "3",
       "MetaData": {
         "CreateTime": "2026-10-14T07:53:49-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-14T07:58:41-07:00"
+        "LastUpdatedTime": "2026-11-16T05:55:16-08:00"
       },
       "CustomField": [],
       "DocNumber": "1772",
@@ -17712,6 +18846,10 @@
         {
           "TxnId": "7715",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8113",
+          "TxnType": "Payment"
         },
         {
           "TxnId": "7805",
@@ -17995,7 +19133,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 3098.0
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -18007,13 +19145,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7801",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-10-14T07:52:29-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-10-14T07:52:29-07:00"
+        "LastUpdatedTime": "2026-11-16T05:55:15-08:00"
       },
       "CustomField": [],
       "DocNumber": "1771",
@@ -18026,6 +19164,10 @@
         {
           "TxnId": "7714",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8112",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -18245,7 +19387,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 4165.0
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -24821,13 +25963,13 @@
       "domain": "QBO",
       "sparse": false,
       "Id": "7634",
-      "SyncToken": "0",
+      "SyncToken": "1",
       "MetaData": {
         "CreateTime": "2026-09-24T12:24:31-07:00",
         "LastModifiedByRef": {
-          "value": "9341453343535402"
+          "value": "9341453382031739"
         },
-        "LastUpdatedTime": "2026-09-24T12:24:31-07:00"
+        "LastUpdatedTime": "2026-11-16T06:34:43-08:00"
       },
       "CustomField": [],
       "DocNumber": "1751",
@@ -24840,6 +25982,10 @@
         {
           "TxnId": "7611",
           "TxnType": "Estimate"
+        },
+        {
+          "TxnId": "8124",
+          "TxnType": "Payment"
         }
       ],
       "Line": [
@@ -25209,7 +26355,7 @@
       "ApplyTaxAfterDiscount": false,
       "PrintStatus": "NotSet",
       "EmailStatus": "NotSet",
-      "Balance": 6425.25
+      "Balance": 0
     },
     {
       "AllowIPNPayment": false,
@@ -126124,6 +127270,6 @@
     }
   ],
   "startPosition": 1,
-  "maxResults": 395,
-  "totalCount": 395
+  "maxResults": 398,
+  "totalCount": 398
 }
