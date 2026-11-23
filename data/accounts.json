@@ -3472,7 +3472,7 @@
   "id": "A0511",
   "sheet_key": "",
   "source": "Customer Tracker",
-  "name": "Embr/Fyre Ants",
+  "name": "Embr Springfield",
   "parent": "Embr/Fyre Ants",
   "town": "Springfield",
   "address": "",
@@ -3504,7 +3504,9 @@
   "sheet_row": null,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {},
+  "crm_edits": {
+   "name": "2026-11-23"
+  },
   "contacts_confirmed": {
    "at": "2026-11-05",
    "by": "joey",
