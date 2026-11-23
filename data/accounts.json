@@ -3439,7 +3439,7 @@
   "tags": [],
   "flags": [],
   "created": "2026-09-25",
-  "name": "Embr/Fyre Ants",
+  "name": "Embr Noho",
   "town": "Northampton",
   "address": "144 King St",
   "license_type": "Dispensary",
@@ -3452,7 +3452,9 @@
   "sheet_row": 106,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "crm_edits": {},
+  "crm_edits": {
+   "name": "2026-11-23"
+  },
   "contacts_confirmed": {
    "at": "2026-11-05",
    "by": "joey",
