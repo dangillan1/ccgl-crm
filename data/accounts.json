@@ -9765,11 +9765,9 @@
   "tags": [
    "New License 2026"
   ],
-  "flags": [
-   "shared-owner"
-  ],
+  "flags": [],
   "created": "2026-09-25",
-  "name": "Sunny Dayze",
+  "name": "Sunny Dayz",
   "town": "Deerfield",
   "address": "",
   "license_type": "Dispensary",
@@ -9793,6 +9791,9 @@
     "Brian Hajdarovic|brian@sunnydayzcannabis.com||Intake, General Manager, Inventory",
     "Ken Bouquillon|kenb@sunnydayzcannabis.com|860-656-4624|Finance / AP, Buyer / Intake"
    ]
+  },
+  "crm_edits": {
+   "name": "2026-11-23"
   }
  },
  {
