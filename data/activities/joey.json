@@ -4839,5 +4839,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $4,945 · Nov 19, 26",
   "date": "2026-11-19"
+ },
+ {
+  "id": "Xmwtgr87in7y9",
+  "ts": "2026-11-23T16:11:48.174Z",
+  "account_id": "A0265",
+  "type": "Order",
+  "note": "Order updated: Planned · Nov 10, 26",
+  "date": "2026-11-10"
  }
 ]
