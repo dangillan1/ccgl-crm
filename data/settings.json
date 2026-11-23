@@ -1055,6 +1055,15 @@
    "source": "Master",
    "removed_by": "matt",
    "removed_at": "2026-11-19"
+  },
+  {
+   "id": "C61ad468c",
+   "account_id": "A0315",
+   "email": "beth@thegoodscannabisco.com",
+   "name": "Beth",
+   "source": "Random Data 1926",
+   "removed_by": "joey",
+   "removed_at": "2026-11-23"
   }
  ]
 }
