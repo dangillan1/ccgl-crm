@@ -4791,5 +4791,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake) · next step cleared",
   "date": "2026-11-23"
+ },
+ {
+  "id": "Xmwtglwmm23e7",
+  "ts": "2026-11-23T16:07:39.886Z",
+  "account_id": "A0315",
+  "type": "Edit",
+  "note": "Removed Beth · beth@thegoodscannabisco.com",
+  "date": "2026-11-23"
  }
 ]
