@@ -15441,5 +15441,16 @@
   "source": "CRM (Matt)",
   "primary": false,
   "created": "2026-11-19"
+ },
+ {
+  "id": "Cmwtgll9s0g4t",
+  "account_id": "A0315",
+  "name": "Max Myers",
+  "role": "Intake, General Manager, Inventory",
+  "email": "maxmyers@thegoodscannabisco.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-23"
  }
 ]
