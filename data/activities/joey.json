@@ -4855,5 +4855,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 5 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-23"
+ },
+ {
+  "id": "Xmwtj68h8kid9",
+  "ts": "2026-11-23T17:19:27.596Z",
+  "account_id": "A0219",
+  "type": "Edit",
+  "note": "Removed zachary@nativesuncannabis.com · zachary@nativesuncannabis.com",
+  "date": "2026-11-23"
  }
 ]
