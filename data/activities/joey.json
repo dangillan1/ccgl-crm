@@ -4783,5 +4783,13 @@
   "type": "Order",
   "note": "Order updated: Confirmed $6,645 · Nov 17, 26",
   "date": "2026-11-17"
+ },
+ {
+  "id": "Xmwtfcyr4psl8",
+  "ts": "2026-11-23T15:32:43.120Z",
+  "account_id": "A0299",
+  "type": "Note",
+  "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake) · next step cleared",
+  "date": "2026-11-23"
  }
 ]
