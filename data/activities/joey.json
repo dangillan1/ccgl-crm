@@ -4831,5 +4831,13 @@
   "type": "Order",
   "note": "Confirmed order $4,570 · Finished Goods",
   "date": "2026-11-23"
+ },
+ {
+  "id": "Xmwtgqnkvi2vf",
+  "ts": "2026-11-23T16:11:21.439Z",
+  "account_id": "A0202",
+  "type": "Order",
+  "note": "Order updated: Confirmed $4,945 · Nov 19, 26",
+  "date": "2026-11-19"
  }
 ]
