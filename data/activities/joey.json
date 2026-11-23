@@ -4823,5 +4823,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake) · next step cleared",
   "date": "2026-11-23"
+ },
+ {
+  "id": "Xmwtgncn9nvx4",
+  "ts": "2026-11-23T16:08:47.301Z",
+  "account_id": "A0315",
+  "type": "Order",
+  "note": "Confirmed order $4,570 · Finished Goods",
+  "date": "2026-11-23"
  }
 ]
