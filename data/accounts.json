@@ -9782,9 +9782,18 @@
   "sheet_row": 300,
   "in_customer_tracker": true,
   "in_qbo": true,
-  "next_step": "Confirm contacts — first add: Finance / AP",
-  "next_step_due": "2026-11-30",
-  "next_step_owner": "matt"
+  "next_step": "",
+  "next_step_due": "",
+  "next_step_owner": "",
+  "contacts_confirmed": {
+   "at": "2026-11-23",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Brian Hajdarovic|brian@sunnydayzcannabis.com||Intake, General Manager, Inventory",
+    "Ken Bouquillon|kenb@sunnydayzcannabis.com|860-656-4624|Finance / AP, Buyer / Intake"
+   ]
+  }
  },
  {
   "id": "A0300",
