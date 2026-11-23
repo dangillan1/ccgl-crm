@@ -15422,5 +15422,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-23"
+ },
+ {
+  "id": "Cmwtj4e02sbs5",
+  "account_id": "A0220",
+  "name": "Sorcha O'regan",
+  "role": "Intake, Inventory",
+  "email": "sorcha@nativesuncannabis.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-23"
  }
 ]
