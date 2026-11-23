@@ -7351,12 +7351,15 @@
   },
   "in_qbo": true,
   "contacts_confirmed": {
-   "at": "2026-11-09",
+   "at": "2026-11-23",
    "by": "joey",
-   "n": 2,
+   "n": 5,
    "people": [
+    "|ap@nativesuncannabis.com||Finance / AP",
     "Chris Ashe|chris@nativesuncannabis.com||Buyer, Finance / AP, Intake, Inventory",
-    "Nikki Hanley|nikki@nativesuncannabis.com||Marketing"
+    "Kelly Joseph|kellyj@nativesuncannabis.com||Intake, Inventory",
+    "Nikki Hanley|nikki@nativesuncannabis.com||Intake, Inventory, Marketing",
+    "Sorcha O'regan|sorcha@nativesuncannabis.com||Intake, Inventory"
    ]
   }
  },
