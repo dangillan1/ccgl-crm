@@ -12320,6 +12320,15 @@
   "created_by": "joey",
   "claimed": true,
   "claimed_by": "joey",
-  "claimed_at": "2026-11-24"
+  "claimed_at": "2026-11-24",
+  "contacts_confirmed": {
+   "at": "2026-11-24",
+   "by": "joey",
+   "n": 2,
+   "people": [
+    "Max Myers|inventory.arlington@eskarma.com|781.777.2879|Buyer, Intake, Inventory",
+    "Spencer|inventory.northbridge@eskarma.com||Finance / AP, Intake, Inventory"
+   ]
+  }
  }
 ]
