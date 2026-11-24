@@ -5015,5 +5015,13 @@
   "type": "Order",
   "note": "Pending order $2,515 · Finished Goods",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwv4vso149yc",
+  "ts": "2026-11-24T20:14:58.273Z",
+  "account_id": "A0515",
+  "type": "Order",
+  "note": "Order updated: Planned · Nov 20, 26",
+  "date": "2026-11-20"
  }
 ]
