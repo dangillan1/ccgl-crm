@@ -4919,5 +4919,13 @@
   "type": "Order",
   "note": "Planned order · Bulk",
   "date": "2026-11-20"
+ },
+ {
+  "id": "Xmwv3b9jh5gyd",
+  "ts": "2026-11-24T19:31:00.749Z",
+  "account_id": "A0265",
+  "type": "Order",
+  "note": "Order updated: Planned · Nov 20, 26",
+  "date": "2026-11-20"
  }
 ]
