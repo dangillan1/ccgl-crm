@@ -824,8 +824,10 @@
   "ts": "2026-11-24T14:10:07.867Z",
   "account_id": "A0002",
   "type": "Call",
-  "note": "Good feedback on flower - looking to bring new brands on shelves 1/1/27:",
+  "note": "Good feedback on flower - looking to bring new brands on shelves 1/1/27:\n- Looking for white label partnerships\n- Asked about EMBR MSRP of CCGL 1/8s at $25/unit",
   "date": "2026-11-19",
-  "contact_id": "C5684f4ca"
+  "contact_id": "C5684f4ca",
+  "edited_at": "2026-11-24",
+  "edited_by": "matt"
  }
 ]
