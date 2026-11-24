@@ -853,5 +853,13 @@
   "type": "Stage",
   "note": "Active → Prospect — Other: Store was purchased - new ownership",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwurzgwspks6",
+  "ts": "2026-11-24T14:13:54.652Z",
+  "account_id": "A0309",
+  "type": "Task",
+  "note": "Done: Confirm contacts — first add: Intake",
+  "date": "2026-11-24"
  }
 ]
