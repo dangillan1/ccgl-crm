@@ -10163,7 +10163,7 @@
   "town": "Fall River",
   "address": "1 Lewiston St",
   "license_type": "Dispensary",
-  "status": "Current",
+  "status": "Prospect",
   "grade": "B",
   "owner": "Unassigned",
   "last_contact": "2026-07-27",
@@ -10174,7 +10174,20 @@
   "in_qbo": true,
   "next_step": "Confirm contacts — first add: Intake",
   "next_step_due": "2026-11-16",
-  "next_step_owner": "matt"
+  "next_step_owner": "matt",
+  "crm_edits": {
+   "status": "2026-11-24"
+  },
+  "reverted": {
+   "date": "2026-11-24",
+   "by": "matt",
+   "reason": "Other",
+   "note": "Store was purchased - new ownership",
+   "had_orders": true,
+   "last_order": "2026-04-08",
+   "orders": 2,
+   "lifetime": 5502
+  }
  },
  {
   "id": "A0310",
