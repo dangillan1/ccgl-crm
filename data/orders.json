@@ -20588,7 +20588,7 @@
  },
  {
   "id": "Omwav3ur86tc3",
-  "date": "2026-11-10",
+  "date": "2026-11-20",
   "account_id": "A0036",
   "account_raw": "Resinate",
   "license": "MR284729",
@@ -20602,7 +20602,10 @@
   "special": "",
   "samples": false,
   "source": "CRM",
-  "created_by": "joey"
+  "created_by": "joey",
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-24"
  },
  {
   "id": "Omwav4b5o63di",
