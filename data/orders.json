@@ -20472,7 +20472,7 @@
  },
  {
   "id": "Omwaus697vf3y",
-  "date": "2026-11-10",
+  "date": "2026-11-24",
   "account_id": "A0009",
   "account_raw": "Apex Noire",
   "license": "MR282752",
@@ -20491,7 +20491,10 @@
    "plan": "tbd",
    "step": null,
    "label": "Terms TBD"
-  }
+  },
+  "edited_in_crm": true,
+  "edited_by": "joey",
+  "edited_at": "2026-11-24"
  },
  {
   "id": "Omwausn5f7ntk",
