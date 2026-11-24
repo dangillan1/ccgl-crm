@@ -4887,5 +4887,13 @@
   "type": "Order",
   "note": "Planned order · Bulk & FG",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwv39l1sgc0h",
+  "ts": "2026-11-24T19:29:42.352Z",
+  "account_id": "A0266",
+  "type": "Order",
+  "note": "Order updated: Planned · Nov 20, 26",
+  "date": "2026-11-20"
  }
 ]
