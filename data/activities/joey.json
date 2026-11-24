@@ -4967,5 +4967,13 @@
   "type": "Stage",
   "note": "Prospect → Active",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwv4ozaydaoi",
+  "ts": "2026-11-24T20:09:40.282Z",
+  "account_id": "Amwv4ow18hcaq",
+  "type": "Note",
+  "note": "Created as active account",
+  "date": "2026-11-24"
  }
 ]
