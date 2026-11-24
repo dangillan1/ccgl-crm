@@ -3701,6 +3701,16 @@
   "sheet_row": 110,
   "crm_edits": {
    "status": "2026-11-24"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-24",
+   "by": "joey",
+   "n": 3,
+   "people": [
+    "Max Myers|inventory.arlington@eskarma.com||Buyer, Intake, Inventory",
+    "Michael|michael.hunnewell@eskarma.com||AR / Accounting",
+    "Spencer|inventory.northbridge@eskarma.com||Intake, Inventory"
+   ]
   }
  },
  {
