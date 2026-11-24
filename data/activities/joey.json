@@ -4999,5 +4999,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwv4t7xrbbak",
+  "ts": "2026-11-24T20:12:58.095Z",
+  "account_id": "A0109",
+  "type": "Order",
+  "note": "Pending order $2,515 · Finished Goods",
+  "date": "2026-11-24"
  }
 ]
