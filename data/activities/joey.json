@@ -4959,5 +4959,13 @@
   "type": "Order",
   "note": "Order updated: Pending $2,985 · Nov 24, 26",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwv4nc5zinoz",
+  "ts": "2026-11-24T20:08:23.639Z",
+  "account_id": "A0109",
+  "type": "Stage",
+  "note": "Prospect → Active",
+  "date": "2026-11-24"
  }
 ]
