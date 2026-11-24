@@ -837,5 +837,13 @@
   "type": "Stage",
   "note": "Active → Prospect — Dormant — stopped ordering",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwuryp543v1g",
+  "ts": "2026-11-24T14:13:18.664Z",
+  "account_id": "A0253",
+  "type": "Task",
+  "note": "Done: Confirm contacts — first add: Intake",
+  "date": "2026-11-24"
  }
 ]
