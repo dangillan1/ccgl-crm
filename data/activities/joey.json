@@ -4879,5 +4879,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 3 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-23"
+ },
+ {
+  "id": "Xmwv38y1x32ju",
+  "ts": "2026-11-24T19:29:12.549Z",
+  "account_id": "A0514",
+  "type": "Order",
+  "note": "Planned order · Bulk & FG",
+  "date": "2026-11-24"
  }
 ]
