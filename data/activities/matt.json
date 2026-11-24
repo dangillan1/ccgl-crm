@@ -818,5 +818,14 @@
   "type": "Order",
   "note": "Order updated: Confirmed $3,028 · Nov 18, 26",
   "date": "2026-11-18"
+ },
+ {
+  "id": "Xmwurulx77elt",
+  "ts": "2026-11-24T14:10:07.867Z",
+  "account_id": "A0002",
+  "type": "Call",
+  "note": "Good feedback on flower - looking to bring new brands on shelves 1/1/27:",
+  "date": "2026-11-19",
+  "contact_id": "C5684f4ca"
  }
 ]
