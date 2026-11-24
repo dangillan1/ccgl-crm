@@ -8393,7 +8393,7 @@
   "town": "Pittsfield",
   "address": "1450 East St #1",
   "license_type": "Dispensary",
-  "status": "Current",
+  "status": "Prospect",
   "grade": "C",
   "owner": "Unassigned",
   "last_contact": "2026-07-27",
@@ -8403,7 +8403,20 @@
   "in_qbo": true,
   "next_step": "Confirm contacts — first add: Intake",
   "next_step_due": "2026-11-16",
-  "next_step_owner": "matt"
+  "next_step_owner": "matt",
+  "crm_edits": {
+   "status": "2026-11-24"
+  },
+  "reverted": {
+   "date": "2026-11-24",
+   "by": "matt",
+   "reason": "Dormant — stopped ordering",
+   "note": "",
+   "had_orders": true,
+   "last_order": "2026-03-25",
+   "orders": 1,
+   "lifetime": 3634
+  }
  },
  {
   "id": "A0254",
