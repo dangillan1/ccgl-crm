@@ -15489,5 +15489,16 @@
   "source": "CRM (Joey)",
   "primary": true,
   "created": "2026-11-24"
+ },
+ {
+  "id": "Cmwv4pjon0xt0",
+  "account_id": "Amwv4ow18hcaq",
+  "name": "Spencer",
+  "role": "Finance / AP, Intake, Inventory",
+  "email": "inventory.northbridge@eskarma.com",
+  "phone": "",
+  "source": "CRM (Joey)",
+  "primary": false,
+  "created": "2026-11-24"
  }
 ]
