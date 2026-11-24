@@ -20999,5 +20999,23 @@
   "edited_in_crm": true,
   "edited_by": "joey",
   "edited_at": "2026-11-24"
+ },
+ {
+  "id": "Omwv5zfdsx6yx",
+  "date": "2026-11-24",
+  "account_id": "A0249",
+  "account_raw": "Pioneer Valley Trading Co",
+  "license": "MR284022",
+  "status": "Planned",
+  "contact_name": "Matthew Ryan",
+  "contact_email": "matt@pioneervalleytradingco.com",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Finished Goods",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
