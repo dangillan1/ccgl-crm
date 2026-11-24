@@ -3686,9 +3686,7 @@
   "standing_requests": "",
   "license_number": "",
   "tags": [],
-  "flags": [
-   "unassigned"
-  ],
+  "flags": [],
   "created": "2026-09-25",
   "name": "Eskar",
   "town": "Arlington",
@@ -3696,11 +3694,12 @@
   "license_type": "Dispensary",
   "status": "Prospect",
   "grade": "",
-  "owner": "Unassigned",
+  "owner": "Joey",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
-  "sheet_row": 110
+  "sheet_row": 110,
+  "crm_edits": {}
  },
  {
   "id": "A0110",
