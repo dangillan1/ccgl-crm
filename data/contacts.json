@@ -15478,5 +15478,16 @@
   "source": "CRM (Joey)",
   "primary": false,
   "created": "2026-11-23"
+ },
+ {
+  "id": "Cmwv4oxqluppk",
+  "account_id": "Amwv4ow18hcaq",
+  "name": "Max Myers",
+  "email": "inventory.arlington@eskarma.com",
+  "phone": "",
+  "role": "Buyer, Intake, Inventory",
+  "source": "CRM (Joey)",
+  "primary": true,
+  "created": "2026-11-24"
  }
 ]
