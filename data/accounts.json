@@ -3680,8 +3680,8 @@
   "sheet_key": "eskar|arlington",
   "source": "Master",
   "parent": "",
-  "stage": "New",
-  "stage_entered": "2026-09-25",
+  "stage": "Customer",
+  "stage_entered": "2026-11-24",
   "delivery_notes": "",
   "standing_requests": "",
   "license_number": "",
@@ -3692,14 +3692,16 @@
   "town": "Arlington",
   "address": "21 Broadway",
   "license_type": "Dispensary",
-  "status": "Prospect",
+  "status": "Current",
   "grade": "",
   "owner": "Joey",
   "last_contact": "",
   "next_contact": "1900-01-14",
   "notes": "",
   "sheet_row": 110,
-  "crm_edits": {}
+  "crm_edits": {
+   "status": "2026-11-24"
+  }
  },
  {
   "id": "A0110",
