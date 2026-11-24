@@ -20927,5 +20927,23 @@
   "samples": false,
   "source": "CRM",
   "created_by": "joey"
+ },
+ {
+  "id": "Omwv3axlrzfl2",
+  "date": "2026-11-20",
+  "account_id": "A0515",
+  "account_raw": "Resinate",
+  "license": "MTC1345/RMD1345-P/MC281259",
+  "status": "Planned",
+  "contact_name": "",
+  "contact_email": "",
+  "delivery_date": "",
+  "total": null,
+  "owner": "Joey",
+  "mix": "Bulk",
+  "special": "",
+  "samples": false,
+  "source": "CRM",
+  "created_by": "joey"
  }
 ]
