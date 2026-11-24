@@ -4983,5 +4983,13 @@
   "type": "Note",
   "note": "Contacts confirmed — 2 people (Buyer, Finance / AP, Intake)",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmwv4s297kqml",
+  "ts": "2026-11-24T20:12:04.075Z",
+  "account_id": "A0109",
+  "type": "Edit",
+  "note": "Removed norma@eskarma.com · norma@eskarma.com",
+  "date": "2026-11-24"
  }
 ]
