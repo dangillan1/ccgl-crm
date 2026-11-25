@@ -1109,6 +1109,15 @@
    "source": "Master",
    "removed_by": "matt",
    "removed_at": "2026-11-25"
+  },
+  {
+   "id": "C25d7d749",
+   "account_id": "A0001",
+   "email": "jpietrefesa@1connectionllc.com",
+   "name": "Jeff Pietrefesa",
+   "source": "Random Data 31826",
+   "removed_by": "matt",
+   "removed_at": "2026-11-25"
   }
  ]
 }
