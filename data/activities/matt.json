@@ -861,5 +861,14 @@
   "type": "Task",
   "note": "Done: Confirm contacts — first add: Intake",
   "date": "2026-11-24"
+ },
+ {
+  "id": "Xmww9uwwcwxbr",
+  "ts": "2026-11-25T15:22:01.357Z",
+  "account_id": "A0001",
+  "type": "Visit",
+  "note": "Dropped in to exchange samples - super stoked on flower",
+  "date": "2026-11-24",
+  "contact_id": "C98b44ee8"
  }
 ]
