@@ -879,5 +879,13 @@
   "note": "Confirmed order for Monday - 12/30 delivery",
   "date": "2026-11-24",
   "contact_id": "C98b44ee8"
+ },
+ {
+  "id": "Xmww9xyuggq5o",
+  "ts": "2026-11-25T15:24:23.848Z",
+  "account_id": "A0001",
+  "type": "Order",
+  "note": "Confirmed order $4,135 · Finished Goods · 15% FIRST TIME ORDER",
+  "date": "2026-11-25"
  }
 ]
