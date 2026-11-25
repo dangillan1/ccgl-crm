@@ -21034,6 +21034,9 @@
   "special": "15% FIRST TIME ORDER",
   "samples": true,
   "source": "CRM",
-  "created_by": "matt"
+  "created_by": "matt",
+  "edited_in_crm": true,
+  "edited_by": "matt",
+  "edited_at": "2026-11-25"
  }
 ]
