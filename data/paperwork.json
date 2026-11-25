@@ -1521,6 +1521,18 @@
    "uploaded_by": "matt",
    "uploaded_at": "2026-11-25",
    "history": []
+  },
+  "w9": {
+   "file": {
+    "path": "accounts/A0001/w9/2026-11-25_mwwbmabnjs5o.pdf",
+    "sha": "320f0560fc332a06df991222c983cfe68f90d852",
+    "name": "W-9 - 1Connection (Dighton).pdf",
+    "size": 685629,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-25",
+   "history": []
   }
  }
 }
