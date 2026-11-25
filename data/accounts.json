@@ -25,6 +25,15 @@
   "sheet_row": 2,
   "crm_edits": {
    "license_number": "2026-11-18"
+  },
+  "contacts_confirmed": {
+   "at": "2026-11-25",
+   "by": "matt",
+   "n": 2,
+   "people": [
+    "Jeffrey Motta|jmotta@1connectionllc.com||Buyer, Intake",
+    "Michelle Fonseca|mmfonesca@1connectionllc.com||Finance / AP, AR / Accounting"
+   ]
   }
  },
  {
