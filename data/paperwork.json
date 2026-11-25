@@ -1508,5 +1508,19 @@
    "uploaded_at": "2026-11-19",
    "history": []
   }
+ },
+ "A0001": {
+  "st4": {
+   "file": {
+    "path": "accounts/A0001/st4/2026-11-25_mwwbkxb9wqdb.pdf",
+    "sha": "8ab16e194ea51d360a607186f636c9927bd5c874",
+    "name": "ST-4 - 1Connection (Dighton).pdf",
+    "size": 626333,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-25",
+   "history": []
+  }
  }
 }
