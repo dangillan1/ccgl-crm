@@ -887,5 +887,13 @@
   "type": "Order",
   "note": "Confirmed order $4,135 · Finished Goods · 15% FIRST TIME ORDER",
   "date": "2026-11-25"
+ },
+ {
+  "id": "Xmww9yygmtxoo",
+  "ts": "2026-11-25T15:25:10.006Z",
+  "account_id": "A0001",
+  "type": "Order",
+  "note": "Order updated: Confirmed $4,135 · Nov 25, 26",
+  "date": "2026-11-25"
  }
 ]
