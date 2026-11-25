@@ -1533,6 +1533,19 @@
    "uploaded_by": "matt",
    "uploaded_at": "2026-11-25",
    "history": []
+  },
+  "ccc": {
+   "file": {
+    "path": "accounts/A0001/ccc/2026-11-25_mwwbnv235to7.pdf",
+    "sha": "8cff666c72aff88589bb3f47155012d40f71b7ca",
+    "name": "CCC License - 1Connection (Dighton).pdf",
+    "size": 3807985,
+    "type": "application/pdf"
+   },
+   "uploaded_by": "matt",
+   "uploaded_at": "2026-11-25",
+   "expires": "2027-04-17",
+   "history": []
   }
  }
 }
