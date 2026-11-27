@@ -28,5 +28,11 @@
   "name": "Drew",
   "role": "viewer",
   "pw_hash": ""
+ },
+ {
+  "id": "michele",
+  "name": "Michele",
+  "role": "ops",
+  "pw_hash": ""
  }
 ]
